@@ -1,0 +1,67 @@
+# VerLog-style TextRank Release Note
+
+- Repository: zstd
+- Version pair: v1.5.1 -> v1.5.2
+- Pair id: zstd-v1.5.1-v1.5.2
+- Input commits: 75
+- Candidate sentences: 55
+- GT-length budget: 20
+- Extracted entries: 55
+
+## Extracted Entries
+
+- change ZSTD_storeSeq() interface to accept matchLength
+- Add Test Validating Stack is not Executable in playTests.sh
+- Makefiles: Add noexecstack Options to Compilation and Linking
+- Improve Module Map File
+- Fixup MSVC source file inclusion for cmake builds
+- Update the Swift Package Definition to Reflect Move
+- POOL_sizeof() only needs a const read-only reference
+- regroup all mentions of ZSTD_REP_MOVE within zstd_compress_internal.h
+- Add a compile option to explicitely disable assembly
+- library optimization flag can be selected on command line again
+- found a few more places which were dependent on seqStore offcode sumtype numeric representation
+- fix performance issue in scenario (part 1)
+- use ZSTD_memcpy(), for proper redirection within Linux Kernel
+- x86-64: Hide internal assembly functions
+- Clean Up Debugging Statements
+- Remove Dependencies to Allow the Zstd Binary to Dynamically Link to the Library
+- meson: fix MSVC support
+- Fix zstd-static output name with MINGW/Clang
+- Documentation and minor refactor to clarify MT memory management.
+- Write GNU-stack Section on All ELF Architectures
+- Avoid updating timestamps when the destination is stdout
+- Remove Unused Include
+- [build][asm] Pass ASFLAGS to the assembler instead of CFLAGS
+- fixed minor conversion warnings
+- Updated expression for better readability
+- fixed fullbench freshCCtx scenario
+- abstracted usage of offBase sumtype within zstd_lazy.c
+- fixed regression test assert
+- fullbench: added compress_freshCCtx scenario
+- fixed backup prototype for POOL_sizeof()
+- updated manual
+- introduce macros STORE_OFFSET() and STORE_REPCODE()
+- Mark Huffman Decoder Assembly noexecstack on All Architectures
+- Fix tar test cases
+- created STORED_*() macros
+- Fix stderr progress logging for decompression
+- separate newRep() from updateRep()
+- [opt] Fix oss-fuzz bug in optimal parser
+- [license] Fix license header of huf_decompress_amd64.S
+- storeSeq & mlBase : clarity refactoring
+- abstracted storeSeq() sumtype numeric representation from zstd_opt.c
+- fixed minor typecast warnings
+- Update CI documentation
+- Prepare v1.5.2
+- Restrict GNU-stack Note to GNU Assemblers
+- abstracted storeSeq() sumtype numeric representation from zstd_lazy.c
+- abstracted storeSeq() sumtype numeric representation from decodecorpus.c
+- Fix mini typo
+- [meson] Explicitly disable assembly for non clang/gcc copmilers
+- change seqDef.offset into seqDef.offBase
+- Avoid xxHash Dependency by Inlining
+- changed seqDef.matchLength into seqDef.mlBase
+- Refactor offset+repcode sumtype
+- Update Docs
+- Zstandard v1.5.2

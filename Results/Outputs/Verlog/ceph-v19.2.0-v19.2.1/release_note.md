@@ -1,0 +1,44 @@
+- Added support for configuring individual stretch pools.
+- BlueStore now logs warnings for slow operations and stalled reads with configurable thresholds.
+- Fixed a potential crash in BlueStore's `submit_batch` due to integer overflow.
+- Fixed an uninitialized variable in KernelDevice that could cause crashes.
+- Fixed a space leak in BlueStore when asynchronous discard is enabled.
+- KernelDevice now supports dynamically adjusting the number of async discard threads.
+- Client operations now check MDS down status before attempting to retrieve MDS GID.
+- Added S3 Select usage data logging for bytes processed and bytes returned.
+- Dashboard now provides an option to enable pool-based mirroring mode when creating a pool.
+- Fixed `cls_user_reset_stats2` to only update the marker when the result is truncated.
+- Dashboard now supports mTLS.
+- Ceph-volume now supports TPM2 token enrollment for dm-crypt LUKS2 encrypted OSDs.
+- Added end-to-end data protection with checksum offload and CRC support for NVMe block devices in Crimson OSD.
+- Fixed data corruption during RBD flatten when the object map is inconsistent.
+- Improved RBD migration with encryption format cloning, decryption support, native format migration, and support for non-native formats like QCOW with encryption.
+- Added thread name to log entries for better debugging.
+- MDS `fs auth` command now supports updating `root_squash` and adding multiple caps without removing existing ones.
+- The `session evict` and `client evict` admin socket commands now require a filters argument and return an error if no matching clients are found.
+- Fixed the ConnectionTracker dump to display correct connection tracking information.
+- Improved stretch cluster election logic so the tiebreaker ignores proposals from marked-down monitors.
+- Fast authentication failures now correctly reject connections instead of accepting them.
+- Added a `force-remove-snap` monitor command and commands to set, unset, and display stretch pool settings.
+- Added a performance counter for active connections in AsyncMessenger.
+- Added configurable health alerts for slow operations and stalled reads in BlueStore.
+- Added support for multiple BlueStore block device labels for improved reliability, along with a `zap-device` command in ceph-bluestore-tool.
+- Enabled asynchronous manual compaction in BlueStore with improved error handling and status reporting.
+- Added performance counters for mClock scheduler queue lengths and changed default mClock configurations for HDD OSDs.
+- Added retry configuration for zone creation in the RGW service.
+- Updated the `delete_object` method to support additional parameters for version tracking.
+- Fixed notification topic listing logic and added support for v2 topics with fallback to v1.
+- Fixed lifecycle expiration not working when bucket versioning is suspended.
+- Fixed a race condition between part upload and multipart upload completion.
+- Improved bucket listing performance and stability with empty namespace.
+- Added conditional object deletion based on version check.
+- Improved multipart upload abort reliability with retry on conflicts and orphaned part cleanup.
+- Fixed crashes during pool listing with improved error handling.
+- Improved metadata sync polling reliability by fixing race conditions and avoiding unnecessary waits.
+- Added `radosgw-admin realm default rm` command; realm create now requires `--default` to set as default.
+- Improved RGW Asio frontend connection handling with exponential backoff and configurable maximum wait time.
+- Preserved the default value of `active` when decoding an RGW access key from JSON.
+- Fixed a typo in the XML output for the lifecycle filter's `ObjectSizeGreaterThan` tag.
+- Added incremental snapshot syncing using the snapdiff API in cephfs-mirror for faster directory synchronization.
+- Added support for synchronizing file attributes, symbolic links, and ownership in cephfs mirroring.
+- Removed the `--pool` option from `rbd group image add` and `rm` commands; added `--group-namespace` and `--image-namespace` options.

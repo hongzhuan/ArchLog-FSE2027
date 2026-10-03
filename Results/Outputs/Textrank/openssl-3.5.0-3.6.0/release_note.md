@@ -1,0 +1,1119 @@
+# VerLog-style TextRank Release Note
+
+- Repository: openssl
+- Version pair: openssl-3.5.0 -> openssl-3.6.0
+- Pair id: openssl-3.5.0-3.6.0
+- Input commits: 1115
+- Candidate sentences: 1107
+- GT-length budget: 400
+- Extracted entries: 1107
+
+## Extracted Entries
+
+- Test that using the QUIC TLS API does not require BIOs to be set
+- params: update generated decoder based implementations to handle return code
+- crypto/evp/signature.c: add more specific diagnostic data in case provider does not implement functions needed
+- Update to use BIO_get_line() with support for multiple primes per in file
+- Add test for using KRB5KDF with erroneous key size
+- Fix EVP_PKEY_can_sign() handling of NULL from query_operation_name()
+- crypto/evp/signature.c: add checks for consistent presence of 'update' and 'final' functions
+- Update ERR lib to use new thread-local storage api
+- Add -in option to prime function to allow input from file for primality testing.
+- Ensure SSL_get_app_data() continues to work even in SSL_free()
+- Add test to check SKEYMGMT interfaces
+- ccm: update to use improved parameter handling
+- check-format.pl: allow block for switch case/default
+- evp_pkey_type: Make base_id_conversion table static
+- Add a test for calling SSL_get_app_data() from QUIC TLS callbacks
+- provider-signature.pod: add missing doc of OSSL_FUNC_signature_query_key_types(), fix doc of return types, etc.
+- Document that FIPS provider cannot be used by multiple libcryptos
+- Fix more quic_multistream test formatting
+- Check SSL_get_app_data() from QUIC cb in a failure situation
+- dh: add security category checks to evp_test data
+- Fix a memory order issue with weakly ordered systems
+- apps/asn1parse.c: correct help text order for -genstr option
+- store_result.c: add to error queue which provider failed to load credential and hint on using default provider
+- test/evp_extra_test.c: Add OPENSSL_free() to avoid memory leak if EVP_PKEY_CTX_set0_rsa_oaep_label() fails
+- fixed multiline output bug in crl command, ensuring use of global variable to set changes
+- test/bioprinttest.c: use the whole buffer for checks
+- crypto/ec: use array memory (re)allocation routines
+- test: use array memory (re)allocation routines
+- tls1-prf: process multiple seed parameters with a single realloc call
+- changes: add a CHANGES.md entry covering the generated parameter name decoding
+- Always use NULL BIOs when using the QUIC TLS API
+- update RCU to use the new thread-local key mgmt api
+- test/build.info: minimize use of static libcrypto.a and libssl.a
+- ec: add security category checks to evp_test data
+- Fix SSL_{set1,add1}_host() handling of host name/IP address and related documentation
+- crypto/evp/signature.c: compensate for providers not adding error queue entries on operation failure
+- chacha20: update to use improved parameter handling
+- test/bioprinttest.c: fix sloppy length modifier usage in int_data
+- Fix winstore provider to work with recent decoder changes
+- dsa: add security category checks to evp_test data
+- params: add support for 'hidden' parameters
+- Fix return value of the i2d_ASN1_bio_stream() call
+- ml-dsa: add security category checks to evp_test data
+- Fix OPENSSL_VERSION_NUMBER to always have zero status bits
+- Add a daily memory allocation failure test
+- test/testutil/testutil_init.c: Add OPENSSL_free() to avoid memory leak
+- 25-test_verify.t: fix partly case-sensitive matching for Windows OS: s/MsWin32/MSWin32/
+- Fix SSL_new() with QUIC_server_method and improve formatting (Fixes )
+- APPS/x509: add -multi option for outputting all certs found in input
+- Fix quic_multistream_test: correct more frame types
+- ASN1_item_sign.pod: fix description of the algor1, algor2, and signature in/out-parameters
+- the rpki-client external test should use relase version not a master branch on github
+- macsig: call updated ossl_prov_set_macctx function
+- crypto/bio/bss_file.c: add missing cast in format arg in ERR_raise_data()
+- ecx: add security category checks to evp_test data
+- test: use EVP_PKEY_get_security_category function in tests
+- rsa: add security category checks to evp_test data
+- Move the async-job api to use the new thread-local api
+- Add a helper function to delete the extension list
+- app/s_client.c: clean up and broaden use of ERR_print_errors()
+- apps/cms.c: add failure handling for I/O errors of 'BIO_printf(out, ...)'
+- prov: rework cipher include files to support improved parameter handling
+- crypto/bio/bio_print.c: no prefix for zero value in alternative form
+- fix: Better documentation on DTLS_set_timer_cb()
+- evp_test: add a new global "Test-Entropy" line to allow deterministic random input.
+- Remove unused data from self test.
+- crypto/bn: use array memory (re)allocation routines
+- Fix use after free bugs for public_keys and private_keys in evp_test
+- Fix failure checking on thread_local storage assignment in rand_lib
+- file_store_any: convert to using generated param decoder
+- ml-kem: add security category checks to evp_test data
+- add rpki-client external test
+- check-format.pl: prevent false positive on typedef with space and '(' after type name
+- crypto/threads_lock_contention: condition file suffix on FIPS_MODULE and not fopen() call
+- gcm: update to use improved parameter handling
+- check-format.pl: prevent reporting "{ 1 stmt }" on "else if" branch unless -1 or --1-stmt option is given
+- ml-kem: update to use improved parameter handling
+- ml-dsa: update to use improved parameter handling
+- Ensure we pass the user SSL object for the SSL_set_verify callback
+- krb5kdf.c.in: Check the key size before applying the key
+- paramnames: add new function to handle names and types.
+- ssl/quic/quic_port.c: Fix endianness of supported versions in sent version negotiation packets
+- ecdsa: update to use generated param decoders for signature operations
+- crngt: update to use generated param handling
+- encode_key2any: convert to use generated parameter parsing
+- Add new CRYPTO_THREAD_[get|set]_local_ex api
+- crypto: use array memory (re)allocation routines
+- Test that SSL_poll does not report a stream as writable if it isn't
+- Add test for SSL_accept_stream
+- test/bio_pw_callback_test.c: Add BIO_free() to avoid memory leak
+- test/ml_kem_internal_test.c: Add EVP_MD_free() in the error path to avoid memory leak
+- Fix the abnormal branch memory leak in ssl_set_cert_and_key function
+- Restore use of crypto_thread_default_context
+- apps/x509.c: Fix the -addreject option adding trust instead of rejection
+- Fix null pointer check in pkey_dh_derive to ensure both keys are set
+- We use evp_skey_alloc from several source files
+- params: generated decoder functions return an error state on failure
+- Updated Windows notes on the use of “no-makedepend” for new builds
+- Ensure client read app data secret change occurs after write for QUIC
+- test/tls-provider.c: Remove redundant check
+- hmac: stop using secure memory for the HMAC key
+- crypto/ml_dsa: fix public_from_private() error path to return failure
+- encode_key2ms: convert to use generated parameter parsing
+- Make the lock in CRYPTO_secure_actual_size a read lock
+- Fix a reference in the OpenSSL guide to QUIC for servers
+- ssl: use array memory (re)allocation routines
+- apps/pkeyutl.c: Add OPENSSL_free() to avoid a memory leak
+- slh-dsa: add security category checks to evp_test data
+- doc: document EVP_PKEY_get_security_category function
+- test/quic_multistream_test.c: Add OPENSSL_free() to avoid memory leak
+- Fix aesv8 arm assembler code not working on 32 bit Android
+- ssl/quic/quic_channel.c: Fix endianness of supported versions from received version negotiation packets
+- test/bioprinttest.c: add some checks for integer and string printing
+- fix: msg callback in dtls1_do_write that incorrectly shows message (like a certificate) that spans over multiple fragments.
+- demos/cms/cms_ddec.c: Replace "in" with "dcont" to correctly check the success of BIO_new_file()
+- Fix trace output for provider algorithm names
+- Add key_type to the derive_skey function
+- Add a test for SSL_set_verify with QUIC
+- test_tlsext_status_type(): Avoid leaking of previously allocated data
+- OSSL_CALLBACK.pod: add missing info on required return values of callback functions
+- params: add additional error checking to generated param name parsers
+- apps, fuzz, providers: use array memory (re)allocation routines
+- crypto/bio/bio_print.c: reset max to zero if empty precision string is provided
+- sm2: update to use generated param decoders for signature operations
+- Fix issue where file is not read correctly with Windows line endings
+- Fix the return value of OBJ_create
+- SMIME_write_ASN1_ex() used for CMS: add error checking for calls to BIO_printf(), BIO_puts(), and asn1_write_micalg()
+- shake: update to use generated param decoders
+- Make error checks on RSA_public_decrypt() consistent
+- Add OSSL_SELF_TEST_TYPE_PCT_IMPORT transient error state
+- demos: use array memory (re)allocation routines
+- Document EVP_CIPHER failure for missing provider function
+- Add a CHANGES.md entry regarding no_renegotiation alert
+- Add generated cipher implementation files to gitignore
+- Fix some conversion from size_t to const int errors
+- Add a test for app data received too early
+- test: add a sanity test for memory allocation functions
+- Fix NULL check in bring_oscp_resp_in_correct_order
+- Fix up external pyca test
+- rsa: update to use generated param decoders for signature operations
+- Document the OSSL_SELF_TEST_TYPE_PCT_IMPORT failure state
+- Ensure we properly release DTLS buffered app data records
+- Fix exit code for s_time when -new command line switch specified
+- statem_srvr.c: Add check for empty ecdhe encoded key
+- sm2 test: remove unnecessary available in lines
+- Update IMPL_*_SIGALG to not have to stringify parameter
+- Make SSL_poll() and SSL_shutdown() better friends
+- update build instructions for mlx key management
+- Add return check to BIO_new, SSL_CTX_new and EVP_PKEY_new
+- Fix another memory order issue
+- file_store.c: give detail on file_set_ctx_params() error
+- asym cipher: make the pad type decoding more straightforward
+- CI: cross-compile: riscv: enable more tests on extensions
+- Add base code to load a LMS public key.
+- Test that there is no silent error in EVP_CIPHER_CTX_get_updated_iv in evp_test
+- Add lock contention checking to our pthreads implementation
+- check-format-test-negatives.c: add 2nd macro indent test and hint on how known false positives are marked
+- add --no-check-certificate option to wget, pointed out by
+- init_master_key(): Check return of CRYPTO_THREAD_init_local()
+- apps/cmp.c: Free bio on error to avoid memory leak
+- fix: Apply cascade-disables before showing status
+- Correct fixed cert validity end date in oqsprovider testing
+- use_proxy(): Add missing terminating NUL byte
+- key management: rename key management files in anticipations of generated decoding
+- Document the state of the object you get from SSL_accept_connection()
+- crypto/bio/bio_print.c: bring back the length modifier support for %n
+- changes: add note about PCT on key import to the FIPS provider
+- Add a test for sending an empty app data record in DTLS
+- by_store.c: suppress in cache_objects() likely non-relevant error queue entries calling OSSL_STORE_find()
+- apps/speed.c: Support more signature algorithms
+- Fix errors on SSL_accept() and SSL_get_error()
+- crypto/evp/ctrl_params_translate.c: prevent clashes of generic names NONE, GET, SET
+- Check for OBJ_create() conflicts after write lock.
+- crypto/mem.c: factor out memory allocation failure reporting
+- test/helpers/quictestlib.c: Use goto instead of return to avoid memory leak
+- Fix ML-KEM key equality check when either unset
+- check-format-test-positives.c slightly improve comment describing the '*@' tags
+- test/timing_load_creds.c: Free contents in error handling to avoid memory leak
+- dsa: update to use generated param decoders for signature operations
+- Update rpki-client-portable to fix build
+- Avoid potential double-free with duplicated hybrid ML-KEM keys
+- provider-signature.pod: fix doc of OSSL_SIGNATURE_PARAM_ALGORITHM_ID, describing its relevance
+- Raise an error if PBKDF2 iteration count set to zero on check disabled in default provider
+- Use secure memory allocation for ML-KEM and ML-DSA private key storage areas
+- Add NULL check in ossl_quic_get_peer_token
+- Add SSL_CTX_set_ec_point_formats() and SSL_set_ec_point_formats()
+- SSL_set1_host.pod: add recommendation to use SSL_{set1,add1}_host() and SSL_set_tlsext_host_name()
+- Fix: Add free to avoid memory leak.
+- added use IO::File; 15-test_ml_dsa_codecs.t
+- Updated the change log to include SSLv3 being disabled by default.
+- util/perl/OpenSSL/Test.pm: consistently use 4 spaces for indentation
+- Add a test for calling SSL_accept() on a listener
+- Avoid shell commandline processing in CA.pl
+- decode_pvk2key: convert to use generated parameter parsing
+- 80-test_cms.t: Add test case for verification of multiple signatures
+- crypto/evp: compensate for providers not adding error queue entries for keymgmt, sigver, and asymcipher
+- Add changes entry for LMS verification
+- Add test coverage for PKCS7_TEXT mode
+- Update build infrastructure for generated hkdf.c file
+- test/evp_test.c: Free fetched_digest on error to avoid memory leak
+- Address and add tests for edge cases involving short or empty files
+- Fix a segfault in the pkeyutl command line app
+- Test failure of rsa_encrypt when buffer too short
+- Cleanup - this constant and functions are no longer in use
+- tls_common.c: Handle inner content type properly on Big Endian
+- dh: convert key exchange to using generated param decoder
+- Make ERR_count_to_mark() available to providers via 'in' dispatch array
+- crypto/bio/bio_print.c: make %n in line with other libc implementations
+- openssl rand command should use the loaded library context
+- hkdf: make the mode decoding more straightforward
+- Relax absolut path checking in our 'file' scheme implementation
+- Add a test for calling SSL_accept() on an accepted connection
+- Add a test for multi-threaded OBJ_create
+- ecdh: convert key exchange to using generated param decoder
+- Add a test to confirm that we can repeatedly create and destroy keys
+- Adjust rand_lib to use new thread-local mgmt api
+- packet: add new utility function PACKET_get_4_len()
+- Implement explicit storing of the server_finished_hash
+- Fix memory leaks after failure of PKCS7_add_signed_attribute()
+- Add LMS public key decoder.
+- seed: update to use generated param handling
+- Fix memory management in port_make_channel
+- Serialize install process to avoid multiple make depend operations
+- evp: add EVP_PKEY_get_security_category function
+- crypto/bio/bio_print.c: avoid integer overflow when reading width/precision
+- test/sanitytest.c: fix setitimer usage in timer disarmament
+- asn_mime.c multi_split(): add missing I/O error checking
+- Add fixed-digest HKDF documentation
+- build infrastructure changes for KBKDF and SSKDF to use generated param parsers
+- doc/man3/RAND_load_file.pod: RAND_load_file on non-regular files with bytes=-1
+- doc: Fix function name in example code
+- quicapitest: Check if we can handle HRR
+- Extend create_accept_stream test
+- reduce memory overhead of CTX_TABLE_ENTRY
+- ec: convert to transient error state on import failure in FIPS provider
+- skey: update build infrastructure for generate param name parsing
+- Add DetECDSA self test, signature is one byte shorter somehow
+- Update README-QUIC.md with server-side QUIC support information
+- drbg: move drbg_local.h to somewhere it can be found by generated files
+- doc/man7/openssl-env: document which variables are considered security-sensitive
+- test/timing_load_creds.c: Add fclose() if error occurs
+- Clean up thread_local function names in initthread.c
+- 80-test_cms.t: Fix indentation by replacing tabs with spaces
+- chacha20_poly1305: use the new name/type code generator
+- convert master_key to use a top level fixed array
+- update build.info with new .in files
+- fix: difference between parameter name between doc and header file.
+- apps/openssl.c: Add OPENSSL_free() to avoid memory leak
+- fips: add self test CAST for LMS verify
+- Fix OSSL_FUNC_keymgmt_load declaration in man7/provider-keymgmt
+- speed: Increase MAX_SIG_NUM and fix its usage in loopargs_t fields
+- doc/man7/openssl-env: document HOME environment variable usage
+- demos/bio/sconnect.c: Free ssl_bio on error to avoid memory leak
+- add new error
+- Check setting of master key value
+- ssl/t1_lib.c: Free gix if sk_TLS_GROUP_IX_push() fails to avoid memory leak
+- kdfs: make the 'engine' parameter hidden
+- Ensure that our fips internal provider is always loaded
+- Fix PKCS7_sign and CMS_sign default hash documentation
+- Make the Unix build process more repeatable
+- Add note about use of EVP_PKEY in different libctxs
+- crypto/bio/bio_print.c: handle negative width argument
+- test/stack_test.c: check sk_sint_push result in test_int_stack
+- fips: make PROV_NAMES_HMAC_DRBG_KDF internal only
+- ml-dsa: convert to transient error state on import failure in FIPS provider
+- Use text compare for PEM and text files
+- jitter: update to use generated param handling
+- ci: run all non-external tests on fedora:latest
+- add EVP_PKEY_get_security_category to exported symbols
+- CMS KEMRecipientInfo support requires HKDF with fixed digests
+- Add stream type flags to SSL_accept_stream
+- Add a test for using CCM ciphersuites with QUIC TLS API
+- Only report generic error if provider did not put an error on the error queue
+- Make update
+- test rand: update to use generated param handling
+- Move thread-event handlers to the new thread-local api
+- apps/cms.c: add missing error messages in various error cases
+- decode_der2key: convert to use generated parameter parsing
+- Updated SSL Trace to display the name for all MLKEM-based groups
+- kek_unwrap_key(): Fix incorrect check of unwrapped key size
+- Test setting a client to send a key share not allowed in TLSv1.3
+- Add a test for accessing an X509_STORE from multiple threads
+- crypto/x509/v3_lib.c: Free tmpext if X509V3_EXT_add() fails to avoid memory leak
+- Fix logic errors in torture_rw_high/low test
+- cipher: use the new name/type code generator for ciphers
+- crypto/threads_pthread: rewrite contention data storage to per-tid
+- fix: add parsing check in TLS compress_certificate extension handler
+- Remove unnecessary fetch-depth in GitHub Actions workflow
+- blake2: update to use generated param decoders
+- bio_ok.c: Integer Overflow in BIO_f_reliable record parser leads to Out-of-Bounds Read
+- rsa: convert to transient error state on import failure in FIPS provider
+- file_store: convert to using generated param decoder
+- NOTES-WINDOWS.md: correct the Windows context macro name
+- Handle 0 return values from DH key computations as errors
+- Add strlen to symbols allowed on Windows
+- Fix failure checking on rcu_read_lock
+- Use value barrier for constant_time_cond_swap_*
+- Introduce cms kekcipher option to select cipher for pwri
+- The check-ansi job is failing in the openssl-3.5 branch as a result of commit 60775e3.
+- Fix: Check for wrong object.
+- Add LMS evp_test using NIST ACVP test data.
+- Fix cipher protocol ID type in docs
+- Do some more cleanup in the RCU code
+- PEM_write_bio_ASN1_stream(): complete I/O error checking
+- Add missing unlock to ossl_provider_new
+- LoongArch: Add SHA-512 assembly implementation for better performance on small-size data
+- Remove redundant space in effective address
+- Re-enable the ssl_trace_test()
+- Fix silent error in EVP_CIPHER_CTX_get_updated_iv.
+- test/sslapitest.c: tfix in row allocation in create_new_vfile
+- apps/cms.c: add missing error message on error writing CMS output (ret == 6)
+- apps/x509.c: re-add ERR queue printing on errors
+- reduce lock contention when adding objects to ADDED_OBJ hash table
+- Add one more trace message to the torture_rcu_high test
+- ci: re-enable pkcs11-provider external test
+- Check NASM version for {vex} prefix support
+- sslapitest.c: Skip test_ssl_trace() with FIPS providers older than 3.5
+- ciphercommon: rework to support improved parameter handling
+- Correct the synthetisized OPENSSL_VERSION_NUMBER
+- Fix code style in quicapitest.c
+- doc/man3/OPENSSL_malloc.pod: explicitly document freeptr value on failures
+- Do not use RW mutexes on RISC-V arch
+- Extend backoff period in noisydgram BIO users
+- Add a helper function to copy custom extensions with old style arguments
+- doc: document the additional LMS self test description
+- test/bioprinttest.c: check the output against libc's one as well
+- Refactor init_get_thread_local to be more understandable
+- set SSLfatal if tls1_set_shared_sigalgs has a malloc failure
+- Return ML-DSA public key when requested
+- Fix internal documentation of ossl_namemap_num2name()
+- Avoid erroneous legacy code path when provided
+- SMIME_text(): add missing I/O error checking
+- Factor out the lock contention reporting facility implementation
+- Add NULL check
+- sslapitest: Add failing test for quic double free
+- Test+fix handling "wrong" downgrade signals
+- include/crypto/md32_common.h: optimize ossl_(un)likely
+- Correct the documentation for OPENSSL_sk_find
+- evp_kdf_test: skip "engine" parameters when checking for updatability.
+- crypto/x509/t_x509.c: check i2d_X509_NAME() return value in X509_ocspid_print()
+- d2i_X509.pod: add missing doc of return value of i2d_ASN1_bio_stream()
+- params: add conditional params to the generation script
+- add a handshake memory failure test
+- Allow for reuse of thread_local keys in threads_none
+- Allow ECDSA signing with digests without a NID in default provider
+- ml-kem: convert to transient error state on import failure in FIPS provider
+- crypto/pkcs7/pk7_smime.c: Add BIO_free() to avoid memory leak
+- CI: Enable strict warnings on all Windows CI builds
+- Call ctags on *.inc files as well
+- crypto/rand/randfile.c: avoid signed integer overflow in RAND_load_file
+- Fix use of SHAKE as a digest in CMS
+- Allow SHA256-192 to be used internally in the FIPS provider.
+- crypto/threads_lock_contention: factor out obtaining the stack traces data pointer
+- demos/cms/cms_denc.c: Add check for BIO_new_file()
+- Add ml_dsa msg_update functions to provider code
+- paramnams: add new line to break long function declaration
+- Fix SKEYMGMT enumeration, add tests
+- fix asn1_write_micalg() in asn_mime.c on GostR3411 and SHAKE, also return 0 on I/O errors
+- pbkdf1: rename C file for conversion to generated param name decoding
+- Fix DTLS handling when receiving a no_renegotiation alert
+- s3_lib.c: Handle weak x keys as illegal_parameter alert
+- Change documentation to point to new wiki location
+- Add array memory allocation routines
+- util/analyze-contention-log.sh: print status output to stderr
+- crypto/property/property.c: Free impl->method to avoid memory leak
+- fips: update FIPS indicator functions so non-locating flavours are available
+- rand: avoid unused function warning for FreeBSD and NetBSD.
+- Add workflow to check perl core modules for 5.10.1
+- params: produce an error if a parameter is repeated
+- genpkey.c: Fix filename copy & paste bug in error output
+- error: add new repeated parameter error
+- 80-test_cms.t: Fix Provider compatibility CI failures
+- dsa: add security category support
+- commands: fix parameter value output
+- Fixed chacha20 get updated IV
+- ml-dsa: add security category support
+- ec: add security category support
+- apps/cms.c: remove needless ERR_print_errors() calls
+- Drop empty app data records in DTLS
+- doc/man7/openssl-env: sort *_PROXY environment variables, add lowercase variants
+- doc/man3/SSL_CTX_set_domain_flags: fix version in HISTORY section
+- apps/cms.c: clarify treatment of 'ret' variable in cms_main()
+- cmp_client_test.c: relax tight timeout value in test_exec_IR_ses_poll_no_timeout()
+- Rework the "by store" X509_LOOKUP method to open the given URI early
+- crypto/ui/ui_lib.c: Add OPENSSL_free to avoid memory leaks
+- Add more instructions in HACKING.md
+- crypto/bio/bio_print.c: handle the case of 0 with zero precision
+- test: reduce the scope of pkcs11-provider external test
+- scrypt: rename C file for conversion to generated param name decodering
+- win store: convert to using generated param decoder
+- Update FIPS provider doc to match the current code.
+- dh: convert to transient error state on import failure in FIPS provider
+- Test that a no_renegotiation alert is handled correctly
+- Add targets to skip build of non-installable programs
+- apps/speed.c: Disable testing of composite signature algorithms
+- prime.c: Remove uneeded if check for NULL value
+- ossl_prov_drbg_generate(): Move syscalls out of the write locked section
+- Fix OSSL_STORE to consider cached info in the EOF check.
+- lms_test: add key gen negative test
+- crypto/threads_pthread.c optimize ossl_(un)likely
+- ecx: convert to transient error state on import failure in FIPS provider
+- Allow our *_gen_cleanup functions to tolerate a NULL ctx
+- Add security-category param name
+- skey: include extra error header file
+- ecx: convert key exchange to using generated param decoder
+- adapt check-format-test-positives.c for too long lines after limit was relaxed from 80 to 100
+- Add target for local coverage report generation
+- test/testutil/main.c: move global_init before test_open_streams
+- s390x: Add new machine generation z17
+- docs(provider-base): Add HISTORY note for OSSL_CAPABILITY_TLS_SIGALG_MIN_DTLS (and MAX)
+- slh_dsa: update to use generated param decoders for signature operations
+- Fix hanging of test_external_cf_quiche
+- Add a test for calling RAND_get0_primary()
+- Fix c++ comment in ec code.
+- crypto/bio/bio_print.c: always terminate output with \0
+- Begin incorporating stdbool usage when json encoding
+- Fix S390 ECDSA Deterministic mode fails tests in FIPS mode.
+- fips: add news & changes entry for DetECDSA
+- Fixup non-optional use of IO::Socket::IP
+- Add a target to generate local coverage reports
+- Add CODEOWNERS file
+- Fix P-384 curve on lower-than-P9 PPC64 targets
+- Fix a visual glitch in test_cmp_http.t
+- rsa: made the padding and salt length parameter decoding more straightforward
+- SMIME_crlf_copy(): add missing I/O error checking
+- Fix mldsa'a msg_inits operation type
+- slh-dsa: add a PCT for key import when in FIPS mode
+- Attempt to fix occasional failure of quicapi test in ci
+- Update documentation regarding no_renegotiation handling
+- demos/guide/tls-client-block.c Spelling correction
+- dh: add security category support
+- Ensure client read handshake secret change occurs after write for QUIC
+- rsa: add security category support
+- Fix RSA key size validation in EVP_PKEY_RSA_keygen demo
+- params: add helper functions that don't locate the parameters
+- added use IO::File; to 15-test_ml_kem_codecs.t
+- Fix cpp comment in windows build
+- test/wpackettest.c: remove bogus cleanup() in test_WPACKET_quic_vlint_random()
+- Design document of using opaque object as symmetric key
+- Clarify how s_client -ign_eof and -quiet impact command processing
+- test/bio_comp_test.c: Initialize pointer to avoid undefined behavior
+- Add test for yielding of write secrets before read
+- openssl-enc.pod.in: We actually use PKCS padding
+- Fix AIX build in test/radix/quic_tests.c
+- Fix EVP_PKEY_verify man page
+- kdf: put back argument null checks
+- doc/man7/openssl-env: document OPENSSL_TEST_LIBCTX environment variable
+- evp_extra_test2.c: Fix doublefree of PKEY and leak of RSA
+- doc: clarify SSL_SESSION_get0_hostname() DESCRIPTION
+- kdf: use generated param name alias handling
+- Improved error message for X509_V_ERR_CERT_NOT_YET_VALID
+- ecdh: make parameters conditional on FIPS
+- hmac: make parameters conditional on FIPS
+- kmac: make parameters conditional on FIPS
+- Fix use of IO::Socket::IP on windows 2025
+- Ignore generated assembler files for cpuid functions
+- Update provider compatibility CI to run on 3.5 branch
+- initial implementation of http/1.0 server to benchmark OpenSSL QUIC
+- params: update generation script to support multiple TRIE output
+- hmacdrbg_kdf: rename C file for conversion to generated param name decoding
+- krb5kdf: rename C file for conversion to generated param name decoding
+- Wrap use of poll.h to prevent including on NonStop.
+- Fix a visual glitch in test_cms.t
+- slh-dsa: enter FIPS error state if pairwise test fails
+- pbkdf2: remove second compiled file
+- Only unlock in rsa_get_blinding when locking was successful
+- Add SKEYMGMT support to the FIPS provider
+- Add params precondition in ASN1_STRING_TABLE_add, ASN1_STRING_TABLE_get
+- Move the Handshake read secret change earlier in the process for QUIC 0-RTT
+- crypto/{cmp,crmf}/: clean up unneeded #include directives
+- Try to fix endless loops in quic_multistream_test
+- crypto: windows: use LPCTSTR for the temp registry buffer
+- Add lock contention log analyzer
+- evp_test: support security-category for public key operations
+- Reset qtls->local_transport_params_consumed to 0 on SSL_clear()
+- test: get the LMS test recipe run non-FIPS tests
+- crypto/bio/bio_print.c: correctly print 0X prefix for X conversion
+- Exchange no-sm2 and no-ssl-trace between on PR and daily jobs
+- Fix URL parsing to handle missing ports and ISO 8601 timestamps in paths
+- update build infrastructure to support generated eddsa_sig.c
+- s390x: Fix HMAC to fail update or final call when already finalized
+- Fix BIO_printf formatting for negative numbers formatted with %e
+- provider-compatibility.yml: Update the branches
+- test/quic-openssl-docker/hq-interop/quic-hq-interop.c: Move BIO_free() to err label to avoid memory leak
+- Link SSL_get_negotiated_group() and SSL_get0_group_name() in the docs
+- configutl.c: Resolve possible resource leak of config file
+- test-ec: Skip SM2 key import test if SM2 is disabled
+- decode_spki2typespki: convert to use generated parameter parsing
+- Add GENERIC SKEYMGMT to the legacy provider
+- added deprecated note to OPENSSL_instrument_bus docs
+- adding a missing file
+- Document OPENSSL_MALLOC_SEED environment variable
+- docs: Be case specific with links to man headers
+- ecx: add security category support
+- ci: run pkcs11-provider external test on Fedora
+- drbg: convert DRBGs to use generated ctx get param decoders
+- Move to error state if ML-DSA / SLH-DSA PCT fails
+- crypto/provider_conf.c: Fix possible memory leak
+- Allow for differentiating between default and NULL context
+- Avoid potential double close of client_skt in sslecho
+- Nit: macro parameters should always be parenthesised in expressions
+- lms: add signing negative test
+- import pct: remove import PCTs for most algorithms
+- Upload artifacts despite possible test failures
+- Try to fix reported qlog issues
+- paramnames: factor out common code after successful match
+- doc/man7/openssl-env.pod: document HARNESS_OSSL_PREFIX environment variable
+- Add a target config for MINGW on ARM64
+- build: build struct based param files
+- Align PBKDF2 indicator behavior with other implementations
+- Fix Minerva timing side-channel signal for P-384 curve on PPC
+- rename CCM and GCM mode common code files
+- slh-dsa: add security category support
+- sm2: add some signing tests.
+- Add OSSL_ prefix back onto param names
+- The comment should refer ossl_quic_stream_has_recv_buffer()
+- replace GitHub Actions in Windows jobs
+- Implement explicit storing of the handshake_traffic_hash
+- Add test_verify tests
+- argon2: rename C file for conversion to generated param name decoding
+- Fail immediately if we have no key shares to send
+- rand: add unit test exhibiting memory overrun
+- test/mem_alloc_test.c: avoid referencing potentially freed old_ret
+- crypto/threads_lock_contention: typo: s/stack_info/stack_traces/ in ossl_init_rwlock_contention_data
+- Fixed , now the behavior with an empty IDN is the same as with
+- drbg: convert DRBGs to use generated ctx set param decoders
+- QUIC receiver may accidentally ACK packet it fails to process
+- Fix msquic-openssl workflow to build container correctly
+- Fix fips cleanup of master key
+- Add 20-test_prime unit test
+- crypto/threads_lock_contention: Remove duplicating code
+- crng test: make indicator parameter conditional on FIPS
+- crypto: evp: fix potential null pointer dereference in EVP_DigestSignUpdate in m_sigver.c
+- Prevent SSL_poll from reporting a stream as writeable if it isn't
+- [design] Functions for explicitly fetched signature algorithms
+- test: get provider compatibily tests working
+- OPENSSL_secure_malloc.pod: articulate possibly non-secure pointer being returned
+- change _ettable to _list
+- Update our CI jobs to cover the 3.6 stable branch
+- Remove unused assembly function OPENSSL_wipe_cpu
+- Add LMS Signature verification.
+- Add CRYPTO_FREE_REF to ossl_quic_free_token_store
+- params: update param parser generator script to support duplicated parameters
+- apps/prime.c: Remove dead code
+- util/other.syms: sort OPENSSL_*cap lexicographically, add missing variables
+- crypto/bn/bn_lib.c: optimize - seems to bring not much benefit
+- lms: convert to using generated parameter decoding
+- Fix Strict c issue in aes_gcm for armv8
+- ml-kem: add security category support
+- Fix a deadlock while attempting to get the Primary EVP_RAND_CTX
+- Add pgo build type
+- return NULL if gctx allocation fails.
+- move added creation to happen outside of write lock
+- NEWS.md: remove PCT on key import for SLH-DSA mention
+- Document SSL_CIPHER environment variable
+- crypto/bio/bio_print.c: '-' flag has priority over '0'
+- Return SLH-DSA public key when requested
+- crypto/mem.c: check the alignment for being a power of 2 in CRYPTO_aligned_alloc
+- params: remove obsolete functionality from param generator script
+- configutl.c: Remove dead code
+- Don't decrement the unreleased counter if we failed to release a record
+- rsa: make parameters conditional on FIPS
+- Print PowerPC CPUINFO
+- decode_epki2pki: convert to use generated parameter parsing
+- Fix probing the registry for configuration
+- Introduce SSL_OP_SERVER_PREFERENCE to replace SSL_OP_CIPHER_SERVER_PREFERENCE misnomer
+- We should not remove symlinks in submodules
+- BIO_dump_indent_cb(): Check for negative return from BIO_snprintf()
+- Add CI for backports to be run when respective branch label is set
+- doc/man3: Document missing macro function history
+- lms: add negative tests
+- Fix test failures on big endian ARMv9 target
+- Remove accidentally left debug statements from ec.c
+- crypto/mem.c: bump alignment to sizeof(void *) when posix_memaling() is used
+- Tolerate PKCS V2 with optional public keys
+- rpki external test
+- Improve documentation for -cipher option in openssl genpkey
+- crypto/bio/bio_print.c: fix space padding calculation
+- Fix a race in by_store_subject
+- sshkdf: introduce conditionals on the FIPS only parameters
+- pbkdf2: introduce conditionals on the FIPS only parameters
+- sskdf: introduce conditionals on the FIPS only parameters
+- hkdf: introduce conditionals on the FIPS only parameters
+- kbkdf: introduce conditionals on the FIPS only parameters
+- README: Remove client only restriction for QUIC.
+- params: don't build removed file
+- Provide X509_CRL_get0_tbs_sigalg()
+- crypto/bio/bio_print.c: avoid signed int overow in padlen calculation in fmtstr
+- util: add helper functions that don't locate the parameters
+- fix SM2 privatekey decode(PEM format, ECPrivateKey).
+- apps/prime.c: Fix memory leak of a BIGNUM
+- cipher: declare common OSSL_PARAM structures and helper functions
+- Add HKDF algorithms with fixed digests.
+- Remove HARNESS_OSSL_PREFIX manipulation in the test harness
+- RISC-V: Provide optimized SM3 implementation using Zbb extension
+- decoders: Fix prioritization of decoders via property query
+- hkdf: allow salt to be set to null
+- ci: remove unnecessary -Wall and -Werror options
+- crypto/bio/bio_print.c: improve handling of unreasonably large widths/precisions
+- ecx: convert to using generated parameter decoding
+- params: refactor some of the param helper code
+- Adding winstore open test
+- Fix sigalg corner cases
+- rebase to master fixing some missing group references
+- doc/man7/openssl-env: sort the capability envvars/links lexicographically
+- eddsa: remove impossible parameters from gettable array
+- Fix SSL_accept()
+- Clear the extension list when removing the last extension
+- doc/man7/openssl-env: document PROVIDER OPENSSL_TRACE category
+- util/find-doc-nits: do not check files in submodules in check_env_vars
+- Increment sleep time in quic_tserver_test less
+- Fix missing OSSL_FUNC_DIGEST_GET_PARAMS in provider-digest.pod
+- Update workflows to test msquic with OpenSSL
+- fips: upgrade self-test KATs to reduce SHA-1/SHA-224 usage
+- Fix potential NULL pointer dereference in final_maxfragmentlen()
+- ci: enable LMS in a number of different builds
+- poll builder: add dummy field
+- update pyca-cryptography to latest master
+- Fix duplicate cipher definition in ssl/t1_trce.c
+- OSSL_CMP_MSG_http_perform(): Remove extraneous %s from debug log print
+- crypto/bio/bio_print.c: consolidating print arguments in a structure
+- Adds the concept of thunks to OPENSSL_sk interface
+- Remove need for BN_BLINDING lock
+- Stop a TLSv1.3 server emitting an unsolicited PSK extension
+- Add unsupported features in NOTES-C99.md: complex.h and variable length array
+- Check rand_meth_lock existence before trying to lock it
+- util/find-doc-nits: Check function macros in history
+- Update test/ossl_store_test.c
+- qlog_event_helpers.c: Fix inverted condition
+- fix: restore missing --help in Configure
+- apps/lib/apps.c: Add check for BIO_new()
+- RISC-V: Provide optimized SHA-512 implementation using Zbb extension
+- RISC-V: Provide optimized SHA-256 implementation using Zbb extension
+- doc/man1/openssl-rehash.pod.in: document PATH environment variable
+- cipher: use table based param decoding for ciphers
+- bn_mul_words.pod: Fix failures in doc-nits check
+- build infrastructure updates for ml_dsa signatures
+- SM2: Use constant time modular inversion
+- CHANGES/NEWS entries for configutl
+- Add branch coverage to our coveralls run
+- crypto/bio/bio_print.c: avoid superfluous zero padding in %#o
+- crypto/bio/bio_print.c: add 't' (ptrdiff_t) length modifier
+- test/bioprinttest.c: move the %n result to the field that is later checked
+- adding rpki test to ci workflow
+- apps/prime.c: Remove unused assignment
+- hashfunc: add stddef.h include
+- Disable unterminated-string-initialization in strict-warnings
+- digest: convert algorithm gettable parameters to use struct based TRIE decoding
+- crypto/params.c optimize ossl_(un)likely
+- Note finished state in cipher BIO EOF
+- Fix some typos in the man pages
+- crypto/evp/digest.c: optimize ossl_(un)likely
+- apps/lib/apps.c: remove HARNESS_OSSL_PREFIX envvar handling
+- Add design doc for rfc4514 DN output format
+- quic_channel: Handle HRR and the second transport params extension
+- Added quotes to mask spaces in the path when building
+- Pairwise check for DH keys import as part of FIPS
+- crypto/threads_lock_contention: factor out lock contention recording
+- crypto/bio/bio_print.c: support hh length modifier in _dopr
+- Update dead links and e-mails our sources
+- cmac: make parameters conditional on FIPS
+- Remove assert in core_namemap.c
+- Make cpuid_setup non-constructor
+- Revert "Pairwise check for DH keys import as part of FIPS"
+- Keep the provided peer EVP_PKEY in the EVP_PKEY_CTX too
+- Update FIPS-README.md to reflect latest versions
+- In s_client report 'long' certificate sigalg name
+- Regression test for incorrect HMAC API usage
+- Test EVP_DigestSignInit() with ECDSA and KECCAK-256 hash
+- ecx/ml-kem: add security category support
+- crypto/ec/ecp_nistp256.c: use OPENSSL_zalloc instead of malloc+memset
+- ACK manager must avoid infinite probe time when waiting handshake confirmation
+- test_rng: make indicator parameter conditional on FIPS
+- Fix fips provider compatibility regression
+- dh: add FIPS 140-3 PCT on key generation
+- DH private key size was one bit too large
+- hmac drbg: make indicator parameter conditional on FIPS
+- Add known issues to NEWS.md for 3.5.0
+- ssl: drop multiplication by sizeof(char) in allocation size calculations
+- Fix build failure on AIX
+- Fix default pkey(1) DER output
+- Add verbose output to 'openssl list -store-loaders'
+- doc: Update documentation of SSL_CTX_set_dh_auto()
+- Fix the use of CCM ciphersuites with QUIC TLS API
+- keymgmt: update template
+- RISC-V: Use address for vlenb CSR
+- exchange: rename files for generated param decoders
+- LMS: Coverity Fix 1659010 (Unused Value)
+- Ensure that the largest_pn values are migrated to our channel qrx
+- tls1_prf: update build infrastructure for generated param parsers
+- port_init(): Security hardening for token key
+- Point to new docs location
+- Add .[ch].in files to ctags
+- x942kdf: introduce conditionals on the FIPS only parameters
+- Use OPENSSL_strdup() for strings freed by OPENSSL_free()
+- Test randomly selected client port for availabilty in sslrecords test
+- pkcs12kdf: rename C file for conversion to generated param name decoding
+- params: emit an error if a parameter array overflows
+- fix copyright years
+- crypto/init.c optimize ossl_(un)likely
+- Fixes for build failures on OS X 10.4 Tiger
+- update to latest version of gost-engine
+- Update pkeyutl documentation for PQC algorithms (Fixes )
+- provider-signature.pod: fix typos (digeset -> digest)
+- pin GitHub Actions revisions from untrusted vendors
+- crypto/slh_dsa/slh_hash.c: Add check for EVP_MD_get_size()
+- Allow keygen after dup of minimal PKEY ctx
+- Assert that we successfully obtained a lock
+- Fix CI Pipeline by Disabling SSL_TRACE_TEST
+- blake2: use generated param decoder
+- Prevent CI jobs with secrets from running in forks
+- check gctx for NULL before cleanup.
+- hkdf: changes to incorporate the fixed digest HkDF flavours
+- Utility for dumping OpenSSL config file
+- Fix perl warnings on various scripts
+- Fix VC-WIN64-CLANGASM-ARM target
+- adding rpki-client-portable repository as submodule
+- params: revert error checking when params are duplicated
+- s3_lib.c: Use illegal_parameter for failing encapsulation in ml_kem
+- Harden property put_str() helper corner case
+- crypto/sleep.c: avoid returning early due to signal
+- test: test for setting hkdf salt to null
+- x509: Accept 'contentCommitment' as alias
+- tls1prf: update to use generated param decoders
+- rand: fix memory overrun bug
+- eddsa: convert to using struct based TRIE decoder for params processing
+- Document SSL_CTX_set_min_proto_version defaults
+- x509: fix mem leak on error path
+- apps: lib: Prevent potential NULL dereference in init_client()
+- changes suggested by
+- Split the ML-DSA internal sigver functions
+- crypto/bio/bio_print.c: improve the precision handling in fmtint
+- pbkdf2: build infrastructure changes
+- dh: make parameters conditional on FIPS
+- Removed references to vxworks because it is an unsupported platform
+- providers/implementations/digests/sha3_prov.c optimize ossl_(un)likely
+- sm2: sm2_sign.c: check EC_KEY_get0_private_key() for NULL in sm2_sig_gen()
+- ml-dsa: update to use TRIE decoder
+- Removed duplicates in some man pages
+- Fix goto label indents to match style
+- Revert "rsa: expose pairwise consistency test API"
+- scrypt: update build infrastructure
+- pbkdf1: update build infrastructure
+- update build infrastructure for digestcommon.c.in
+- hash drbg: make indicator parameter conditional on FIPS
+- util/analyze-contention-log: call the bash interpreter with -eu flags
+- Remove unnecessary OPENSSL_NO_RSA remnants
+- Update X509_VERIFY_PARAM_set_flags.pod
+- Skip LMS tests if fetch for the LMS algorithm fails
+- ci: remove windows-2019 runner images
+- require GNU assembler 2.30 or higher to build aesni-xtx-avx512.pl
+- Implement i2d_PKCS8PrivateKey
+- PEM_read_CMS.pod: Correct the deprecation notice
+- Add test for ML-DSA sig/ver message update
+- slh-dsa: convert to using a generated decoder
+- Add CHANGES.md and NEWS.md updates
+- doc/man7/openssl-env: document QUERY OPENSSL_TRACE category
+- decode_pem2der: convert to use generated parameter parsing
+- Add a test of 'openssl storeutl' with a BER-encoded PKCS file
+- Split arguments taking quotes into account
+- argon2: avoid searching for "size" parameter
+- ossl_json_f64() seems to be unused, remove it to avoid libm dependency
+- Report s_client chain cert pkey alg correctly
+- quic_channel.c: NULL check SSL_CONNECTION
+- crypto/mem.c: check for overflow in size calculation in CRYPTO_aligned_alloc
+- ecdsa sig: make indicator parameter conditional on FIPS
+- ec (fips): add PCT for key import
+- sec_mem: add note about the perf implications
+- Preserve connection custom extensions in SSL_set_SSL_CTX()
+- Add retry capability to apt commands in quic interop
+- doc/man3/SSL_poll.pod: mention SSL_POLL_EVENT_{EL,IC} in SYNOPSIS
+- Remove DAYS argument
+- ctr drbg: make indicator parameter conditional on FIPS
+- doc/man3: Change formulation to let the script to catch it
+- fix RFC reference and indentation
+- Fix missing unlock in decoder_pkey.c
+- Fix NIST ACVP server URLs in SLH-DSA test files
+- fuzz/dtlsserver.c: Remove incorrect ifdef guard
+- Fix typo in BN_generate_prime docs
+- Fix NULL check in get_ocsp_resp_from_responder
+- veirfy downloaded package
+- Document update for keys.txt
+- ossl_rio_poll_builder_add_fd(): Fixup pfds after reallocation
+- Add LMS documentation
+- Revert "Temporarily disable gost-engine tests in ci"
+- doc: document the security category param for pkeys
+- ecx: make parameters conditional on FIPS
+- LoongArch: Add SHA-256 assembly implementation for better performance
+- Close small race condition on error raising in QUIC
+- Android: Enable 16 KB ELF alignment for arm64-v8a and x86_64 platforms
+- Do not wrap the python3 in ../../util/wrap.pl
+- Add a SBOM template in CycloneDX format
+- hmac: remove two unsupported params
+- doc/man3/OPENSSL_malloc: improve OPENSSL_MALLOC_FAILURES documentation
+- Fix doublefree after failure in ossl_siv128_init()
+- rio: add RIO_POLL_METHOD_NONE
+- providers: Silence warnings on Win64 builds
+- quic_tls.c: Precede double free on EVP_MD variable
+- doc/man7/openssl-env: update REF_COUNT OPENSSL_TRACE category description
+- CHANGES.md, NEWS.md: sync 3.5 changes/news with 3.5.3
+- Eliminate indentation tabs from *.c and *.h files
+- ec kem: convert to using generated param decoders
+- sskdf: conversion to use generated param parsers
+- kbkdf: conversion to use generated param parsers
+- hkdf: conversion to use generated param parsers
+- ci: enable lms only on master
+- rand: add argument error checking to EVP_RAND_nonce()
+- crypto\cms\cms_kem.c: Add ASN1_TYPE_free when EVP_CIPHER_param_to_asn1() fails
+- Fix also BIO_printf formatting for INF and NAN
+- build infrastructure changes for X9.42 KDF
+- ecp_sm2p256.c: Remove unused code
+- rsa sig: make indicator parameter conditional on FIPS
+- dh: add FIPS 140-3 PCT on key import.
+- rsa: update sm asymmetric cipher to use generated param parser
+- update wycheproof submodule to latest master
+- Update NEWS.md and CHANGES.md for the 3.5 release
+- Fix SHAKE AlgorithmIdentifier encodings
+- Make LMS disabled by default
+- crypto/bio/bio_print.c: avoid signed int overflow in desc->pos in doapr_outch
+- ssl/ssl_lib.c: Avoid crash when SSL_CONNECTION is NULL
+- argon2: update build infrastructure
+- Document LEGACY_GOST_PKCS12 environment variable
+- dh: add extra argument to ossl_dh_check_pairwise
+- Document transition from ANSI-C towards C-99
+- params: sort structure fields for repeatability
+- Fix POD indentation in OSSL_CMP_CTX_new
+- Fix EVP_PKEY_CTX_dup() so that it copies the keymanager.
+- ML_DSA - Fix bug in OSSL_PKEY_PARAM_SECURITY_BITS getter.
+- Memory leak fix ktls_meth.c
+- rsa kem: make parameters conditional on FIPS
+- Address coverity issue 1655294
+- Address coverity issue 1655295
+- Temporarily disable gost-engine tests in ci
+- rand: produce correct return from EVP_RAND_nonce
+- doc/man7/openssl-env: sort the variables in lexicographical order
+- tls1_prf: introduce conditionals on the FIPS only parameters
+- rsa (fips): add PCT for key import
+- Remove workaround for an old ppc64le compiler bug
+- hkdf: rename file for Perl processing
+- kmac: convert KMAC to use param decoder
+- hmac: convert HMAC to use param decoder
+- siphash: convert siphash to use param decoder
+- signatures: rename files in anticipation of generated param decoding
+- Add Configurable "lms" option
+- sm2: update sm asymmetric cipher to use generated param parser
+- test: seperate the integer and string fetches of the 'mode' parameter
+- Detect segfault in the pkeyutl test
+- crypto/evp/ctrl_params_translate.c: fix a typo in the error message
+- In doc/man7/provider-{en,de}coder.pod, clarify where properties are defined
+- CHANGES.md / NEWS.md fixups ahead of release
+- Copyright year updates
+- move BIO_err_is_non_fatal() to bio_lib.c
+- Prepare for release of 3.6 beta 1
+- crypto/mem.c optimize ossl_(un)likely
+- rsa: expose pairwise consistency test API
+- openssl: Add option to init sec mem at startup
+- armv*-mont.pl: Correct a carry flag comment
+- other.syms: These functions were deprecated
+- Raise PROV_R_NULL_OUTPUT_BUFFER if shsec is NULL in ml_kem_encapsulate()
+- Add support for TLS 1.3 OCSP multi-stapling for server certs
+- Repair downgrade tests
+- Avoid leaking duplicated EVP_PKEY_CTX in case of error
+- dsa sig: make indicator parameter conditional on FIPS
+- Update util/analyze-contention-log.sh
+- Enable LMS on provider compat fips build for 3.6
+- Fix memory leak on EVP_CIPHER_param_to_asn1 failure
+- LMS code review fixups
+- Update container images in OS Zoo CI workflow
+- Deprecate EVP_PKEY_ASN1_METHOD related function declarations and definitions
+- Prepare for release of 3.6.0
+- fix typo in github action
+- apps: Silence warnings on Win64 builds
+- APPS/cmp.c: fix char encoding of subject, issuer, sender, and recipient DN
+- Drop "by store"'s by_store_subject_ex()
+- params: add features to param parser generator
+- Release news and changelog for version 3.6
+- ci: strict warnings the default
+- 3des: remove redundant OSSL_PARAMs from settable list
+- [RISC-V] Further optimization for AES-128-CBC decryption performance
+- blake2: rename files for generated param decoding
+- crypto/mem.c: simplify OPENSSL_SMALL_FOOTPRINT handling in CRYPTO_aligned_alloc
+- Make public ml_dsa_mu_..
+- unix-Makefile.tmpl: Run find-doc-nits with env var checker too
+- blake2: add generated param decoder
+- build infrastructure changes for SSH KDF
+- rsa kem: convert to using generated param decoders
+- Improve english in endian comment
+- CHANGES.md, NEWS.md: update for 3.6.0-beta1
+- Fix buggy stringop-overflow error on s390
+- Prepare for release of 3.6 alpha 1
+- The condition that is never checked has been removed.
+- krb5kdf: update build infrastructure
+- hmacdrbg_kdf: update build infrastructure
+- ecx (fips): add PCT for key import
+- Pick up {vex} in x86_64 assembler translator
+- DOC: update references to obsolete RFC 2459 (updated by RFC 5280 and DSA parts taken over by RFC 3370)
+- engines: Silence warnings on Win64 builds
+- ml-kem: update to use TRIE decoder
+- gcm: use TRIE based param name decoder
+- Exclude retry test with msquic server from interop
+- Set *sk_resp to NULL when freeing.
+- Update documentation on EVP_PKEY_ASN1_METHOD deprecation
+- test: Silence warnings on Win64 builds
+- test: skip tlsfuzzer tests pkcs11-provider test
+- correctly mark the release as prerelease
+- fips: enabled deterministic ecdsa tests
+- CHANGES.md, NEWS.md: various ffixes
+- Fix reallocation failure condition in qtx_resize_txe()
+- sha3: rename files for generated param decoding
+- test/bioprinttest.c: constify test vectors
+- RISC-V: Provide generic optimized SHA-256 implementation for rv64gc
+- Separate public and private ML-KEM allocations
+- apps/storeutl.c: avoid signed integer overflow in indent_printf()
+- fips: add DH PCT name
+- ccm: update CCM mode ciphers to use the TRIE param name decoder for AEAD ciphers
+- apps/cms.c, apps/ocsp.c: Added NULL pointer checks
+- doc/man7/openssl-env: sort OPENSSL_TRACE categories lexicographically
+- ml-dsa: use TRIE & struct based param name decoders
+- crypto/mem.c: report posix_memalign() errors in CRYPTO_aligned_alloc
+- aes-s390x.pl: Initialize reserved and unused memory
+- Don't keep the store open in by_store_ctrl_ex
+- gmac: convert GMAC to use param decoder
+- fips: update provider-signature docs for DetECDSA
+- rand: document the EVP_RAND_nonce() return correctly
+- statem: always save sigalgs during PHA
+- CHANGES.md, NEWS.md: update for 3.5.4
+- CHANGES.md, NEWS.md: update for 3.6.0
+- storemgmt: rename files for generate param decoders
+- bio_b64.c: Replace OPENSSL_assert() calls with ossl_assert()
+- params: allow param name aliases
+- README.md: Improve links to GH workflow badges
+- Fix nullpointer dereference in OSSL_PARAM_merge
+- Workaround for issue with assembler on OS X 10.4
+- skey: convert generic SKEY to use generated param parser
+- RISC-V: Add Zbb orn and its pseudo instruction opcode to rv64gc in riscv.pm
+- find-doc-nits: Check env var documentation
+- util/ctags.sh: tfix in a "set --" call
+- Prepare for 3.6 beta 2
+- Remove _strlen31
+- params: fix conditionals in param parser generation script
+- apps/lib/apps.c: Add a check for OPENSSL_strdup()
+- test/mem_alloc_test.c: tfix in test_xaligned_alloc
+- Fix typo in SHA256 RISC-V64 Zbb comments: Sigma0 -> Sum0
+- providers/implementations/keymgmt/ecx_kmgmt.c.in: remove PCT on ECX import
+- cms_kemri.c: Fix Coverity issues
+- Add mdebug config for coveralls on master branch
+- fips: add LMS description
+- include/openssl/crypto.h.in: fix alignment for OPENSSL_*alloc macros
+- Fix a typo in evpciph_des3_common.txt
+- Better lookup for openssl executable
+- Moved crypto/bn/README.pod to internal manpages
+- AEAD params: generate a TRIE to decode AEAD cipher parameter names
+- doc: Add missing commas
+- demos: Silence warnings on Win64 builds
+- encode_decode: rename files for generated param parsing
+- cipher_chacha20_poly1305.c: Remove unneeded check
+- const up ERR_str_libraries
+- slh-dsa: omit test of import PCT
+- Report errors in ML-KEM pkey hash
+- test/radix/terp.c: avoid accessing uninitialised terp on error
+- DOC: Fixup FIPS provider documentation.
+- doc/man7/openssl-env: document OPENSSL_DEBUG_DECC_INIT environment variable
+- doc: fix misspellings of certificate(s)
+- Add LMS to the fips provider.
+- libcrypto.num: Deprecate EVP_PKEY_ASN1_METHOD related functions
+- Deprecate ASN1_METH internal usage
+- Report IANA sigalg name in s_client
+- pkcs12kdf: update build infrastructure
+- params: update TRIE builder script to emit structs of param pointers
+- Run tests nightly on riscv64 runner
+- install libtls
+- Remove param_names.h
+- Added test suggested by Shane Lontis
+- Fix indentation
+- Properly zeroize ML-KEM z and d values
+- libssl: Silence warnings on Win64 builds
+- libapps + libcrypto: Silence warnings on Win64 builds
+- fuzz: Silence warnings on Win64 builds
+- Update ssl/quic/quic_ackm.c
+- Remove OSSL_CRYPTO_ALLOC attribute from CRYPTO_*dup routines
+- Pick libcrypto.num/libssl.num number assignments from 3.5
+- Assert SSLFatal on keylog failure
+- crypto/mem.c: report realloc failures
+- crypto/mem.c: report realloc_impl failures
+- Implement KEMRecipientInfo (RFC9629) in CMS
+- crypto/bn/bn_gf2m.c: optimize ossl_(un)likely
+- Advertize signature setting in settable_ctx fn
+- ecx kem: convert to using generated param decoders
+- Fix length of digestinfo_sm3_der
+- Update cms_pwri.c
+- configutl documentation
+- chacha_poly: use TRIE based param name decoder
+- Fixes : Decreased NAMEMAP_HT_BUCKETS to 512.
+- Disable stringop-overflow warnings on s390
+- Configutl tests
+- Facilitate corruption in ML-DSA PCT
+- Prepare for 3.6 alpha 2
+- Skip CI jobs for custom runners in forks
+- Deprecate ASN1_METH related tests
+- sslecho: Rename bool to flag to avoid C23 conflict
+- doc/man3/OPENSSL_malloc.pod: document OPENSSL_aligned_alloc peculiarity
+- Prepare for 3.6
+- Missing .gitignore entries
+- BIO_dgram: Fix BIO_CTRL_DGRAM_QUERY_MTU for IPv4-mapped IPv6 addresses
+- RISC-V: Add MD5 assembly implementation with rv64gc and Zbb
+- Revert "fips: remove redundant RSA encrypt/decrypt KAT"
+- CI: Remove -Wno-stringop-overflow for s390x builds
+- CHANGES.md, NEWS.md: ffix
+- poly1305: convert poly1305 to use param decoder
+- Harden RSA public encrypt
+- fips: implement deterministic ECDSA
+- ml_kem kem: convert to using generated param decoders
+- pkcs12: increase macsaltlen from 8 to 16 as per NIST SP 800-132
+- params: don't build global param name TRIE
+- bn: save space in bn_mont_ctx_st by reordering elements
+- crypto/mem.c: don't use aligned_alloc in CRYPTO_aligned_alloc
+- Enable x86-64 SHA-512 family optimizations with SHA512 ISA extension
+- FIPS: Don't allow SHA512-224 and SHA512-256 for ECDSA/DSA signatures
+- kdf: remove max argument to the param concatenation helper
+- Add deprecation macros for 3.6.0
+- rename tls1 PRF C file
+- HKDF updates
+- SHA512/x86_64: Fix SIGSEGV on $avx=0 path
+- build infrastructure for PVK KDF
+- update rust toolchain
+- mlx: use TRIE & struct based param decoding
+- Update pkcs11-provider submodule
+- Enable AES and SHA3 optimisations on Qualcomm Snapdragon X systems
+- Silence -Wstringop-overflow warnings with gcc 14 on s390x
+- docs: update OSSL_PARAM_int documentation
+- s/veirfy/verify
+- crypto/params_dup.c: add overflow check to ossl_param_buf_alloc
+- asym: rename RSA and SM2 asymmetric cipher files
+- scrypt: convert to generated OSSL_PARAM parser
+- pbkdf2: convert to generated OSSL_PARAM parser
+- pvkkdf: convert to generated OSSL_PARAM parser
+- sshkdf: convert to generated OSSL_PARAM parser
+- pbkdf1: convert to generated OSSL_PARAM parser
+- Rename MAC files for autogeneration of param parsers
+- Typo in TLS introduction
+- Enable x86-64 SM4 optimizations with SM4 ISA extension
+- Enable x86-64 SM3 optimizations with SM3 ISA extension
+- doc: OSSL_PROV_PARAM_STATUS is signed integer
+- Implementation of EVP_SKEY_import_SKEYMGMT
+- fix OOB issue in AVX-512 XTS decryption
+- Doc fix in EVP_PKEY-ML-DSA/KEM.pod files
+- crypto: disable OSSL_PARAM_REAL on UEFI
+- drop s/-ansi/-std=c99
+- Update doc on CRYPTO_MEM_SEC(_MINSIZE)
+- docs: fix typos
+- LMS Coverity fix 1659009
+- Correctly dealing with refcount in EVP_SKEY
+- Replace ilammy/setup-nasm with nasm install from choco
+- Enforce permissions 0600 for SSLKEYLOGFILE
+- crypto: fix preprocessor concatenation
+- test/quic-openssl-docker/hq-interop/quic-hq-interop.c: Add check for OPENSSL_zalloc()
+- cmac: convert CMAC to use param decoder
+- Update dh_pub to be pairwise consistent with dh_priv
+- Fix NULL pointer dereference in asn1_ex_i2c() , crypto/asn1/tasn_enc.c
+- doc/man7/openssl-env: reword the description
+- Implement EVP_PKEY_derive_SKEY
+- rename sshkdf for autogeneration of param name parsing
+- pbkdf2: rename for autogeneration of param name parsing
+- argon2: convert to generated OSSL_PARAM parser
+- chacha_poly: fix settable ctx param list
+- Avoid doublefree of OCSP_SINGLERESP
+- install libtls-dev
+- krb5kdf: convert to generated OSSL_PARAM parser
+- x9.42kdf: convert to generated OSSL_PARAM parser
+- hmacdrbg_kdf: convert to generated OSSL_PARAM parser
+- Fix typos and whitespace
+- Implement AES-CBC-HMAC-SHA512 on aarch64
+- .github/workflows/run_quic_interop.yml: remove superfluous docker-compose.yml patching
+- Implement interleaving aes-cbc-hmac-sha on aarch64
+- SKEYMGMT: Expose settable params
+- git: add x942kdf.c to gitignore
+- OPENSSL_malloc.pod: tfix, wfix in OPENSSL_aligned_alloc description
+- quic-interop-ci: Fix docker install
+- quic-interop-ci: Fix failing CI
+- Implement EVP_KDF_CTX_set_SKEY
+- Add AES-CFB128 optimizations with Intel AVX-512 and VAES
+- fix(pkcs12): prevent PKCS7 memleak in p12_npas.c
+- RISC-V: Add Zbb rori opcode in riscv.pm
+- doc/man7/openssl-env: OPENSSL_TRACE: tfix
+- Expand gettable params for HKDF
+- Test ML-DSA, SLH-DSA, and ML-KEM PCT implementations
+- pkcs12kdf: convert to generated OSSL_PARAM parser
+- Fix RCU TODOs
+- rename X9.42 KDF for autogeneration of param name parsing
+- rands: rename files for autogeneration of param parser
+- Added 3.5 to coveralls.yml
+- kem: rename files for autogeneration of param parsing
+- Implement EVP_KDF_derive_SKEY
+- Extract AES CFB implementation to cipher_aes_cfb*
+- Enable AES-GCM unroll8/unroll12 for Neoverse N3/V3
+- kdf: rename SSKDF and KBKDF for param parser generation
+- Fix gettable_params() for ECX
+- Fix interop ci yaml
+- ECX/ED keymanager param getter fixes.
+- rename ml_dsa_sig.c to ml_dsa_sig.c.in
+- rename ciphercommon.c
+- crypto/mem.c: tfix in CRYPTO_aligned_alloc
+- rename ml_dsa_kmgmt.c & ml_kem_kmgmt.c to ml_dsa_kmgmt.c.in & ml_kem_kmgmt.c.in
+- rename eddsa_sig.c for autogeneration
+- Coverity nits
+- rename mlx_kmgmt.c to mlx_kmgmt.c.in
+- s/libtls/libretls

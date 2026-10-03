@@ -1,0 +1,43 @@
+- Added safety checks to detect double-free and sized deallocation size mismatches for large allocations, aborting on errors.
+- Fixed transparent huge pages (THP) still being used for metadata when the `opt.thp` option was set to `never`.
+- Changed the default JSON output format for statistics to compact, and added a buffered writer for improved stats output performance.
+- Redesigned the Huge Page Allocator (HPA) with hysteresis to reduce thrashing, and added configurable purge intervals (`min_purge_interval_ms`) and per-slab-type statistics.
+- Allowed `dallocx` and `sdallocx` to be called after thread-specific data destruction.
+- Added configurable behavior for `realloc(ptr, 0)` with "alloc", "free", and "abort" options; the default now matches the system allocator.
+- Added support for setting custom dump and backtrace hooks via the control interface.
+- Added use-after-free detection using guard pages, junk filling, and stash mechanisms, with configurable alignment (`opt_lg_san_uaf_align`).
+- Added a general-purpose thread event handler for improved event scheduling and performance.
+- Added support for C++17 over-aligned allocation.
+- Added support for the LoongArch architecture.
+- Added CPU affinity support on BSD platforms.
+- Added the `prof_leak_error` option to treat memory leaks as errors.
+- Added per-background-thread mutex statistics (`max_per_bg_thd`) via mallctl.
+- Added configurable options for tcache sizing and garbage collection, including `tcache_max`, `tcache_nslots_small_min`, `tcache_nslots_small_max`, and `tcache_nslots_large` replacing the previous `opt.lg_tcache_max` option.
+- Added the `opt.stats_interval` option for periodic statistics printing with configurable formatting.
+- Added the `experimental_infallible_new` option for C++ to enable infallible `new`.
+- Added a batch allocation API via the `experimental.batch_alloc` mallctl.
+- Added peak memory usage tracking, read and reset via mallctl.
+- Added `narenas_ratio` option to configure the number of arenas as a fraction instead of a fixed multiplier.
+- Fixed a bug on FreeBSD where TSD cleanup could be called on an invalid key.
+- Fixed a crash when calling allocation functions after TSD destruction or during early initialization.
+- Added support for DragonFlyBSD and improved thread name retrieval on BSD platforms.
+- Added runtime detection for `MADV_DONTNEED` zeroing pages (primarily for QEMU compatibility).
+- Added support for `make uninstall`.
+- Added `opt.cache_oblivious` to optionally disable cache-oblivious allocation layout.
+- Added a script (`jeprof --collapse`) for flamegraph generation.
+- Added `experimental.arenas_create_ext` mallctl for configurable arena creation with custom extent hooks.
+- Added profiling configuration options: `prof_recent_alloc_max`, `prof_stats`, `prof_sys_thread_name`, and `prof_time_res`.
+- Profiling cannot be enabled via `prof.active` if profiling was not enabled at startup (`opt_prof`), and dump operations now respect `opt_prof`.
+- Renamed the profiling dump prefix control from `prof.dump_prefix` to `prof.prefix` for customizing dump filenames.
+- `prof.reset` now respects the runtime profiling setting and returns an error if profiling is disabled.
+- Added control interfaces to retrieve accumulated and live profiling statistics for bins and large extents.
+- Added statistics for stashed bytes in tcache and HPA SEC bytes to arena statistics.
+- Added detailed HPA shard statistics (purge passes, purges, hugifications, dehugifications, per-slab-type counts).
+- Thread allocated/deallocated statistics are now always available via mallctl, regardless of the `config_stats` build option.
+- Added a thread idle control interface to flush thread-local caches and trigger memory decay.
+- Added validation for the `decay_ms` parameter to ensure it falls within a valid range.
+- Added support for transparent huge pages via memcntl on compatible systems.
+- Added support for marking pages as non-dumpable on FreeBSD systems.
+- Added a count of `realloc(non-null-ptr, 0)` calls to stats output.
+- Added a configurable option to control the delay between tcache garbage collection events.
+- Made the mutex spin count configurable via `opt.mutex_max_spin`.

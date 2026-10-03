@@ -1,0 +1,108 @@
+# Role
+You are a C/C++ software release-note expert. You will analyze the information about
+1. an **Entry** function and its reachable functions/context on the call graph in two release versions (marked as `v1` and `v2`) of a C/C++ project,
+or
+2. multiple changed functions in one source file/module,
+or
+3. non-function/file-level changes.
+
+# Input Content
+1. App Description: [will be provided]
+2. Function Signature: [will be provided]
+3. Commit Messages Between Two Versions: [will be provided]
+4. Changed Statements: [will be provided. The diff hunks of the changed user-defined function]
+5. Partial Call Graph [optional]
+   - Nodes: [will be provided. A node is represented in the format `number. function_signature`]
+   - Edges: [will be provided. An edge is represented in the format `<a, b>`, which means there is a directed edge from a to b]
+   ( "-" prefix means that node or edge only exists in the call graph/context of `v1`, whereas "+" means that node or edge only exists in the call graph/context of `v2`)
+
+# Task
+Summarize the functionality changes as a concise release note entry, focusing on **end-user-perceivable** features between `v1` and `v2` based on the code changes, context, and other information provided above.
+
+# Guidelines
+1. **Concise Sentences**: Capture the essence of the change in a single, brief sentence.
+2. **User-Friendly Language**: Use clear, non-technical language that end-users can understand.
+3. **User Experience Focus**: Focus on how the change affects the user experience or project functionality.
+4. **Ignore Technical Details**: Ignore purely technical changes or refactoring that doesn't affect the project's behavior from a user's perspective.
+5. **Align with Commit Messages**: If a commit message and your summarization can be aligned, even the wording is different but you infer they are talking about the same change, merge them into one entry, using the commit message as the base and adding more details from the summarization if available.
+6. **Active Voice and Present Tense**: Use active voice and present tense, as typically used in release notes.
+
+# Output Requirement
+- If the changes represent a/multiple significant, end-user-perceivable functionality feature(s), provide a/multiple **single-sentence release note entry(ies)**: `{<summarization-result>}`.
+- If the changes are purely refactoring or not end-user-perceivable, output an empty JSON object: `{}`
+Your output should look like Example Output below,
+- no explaination
+- no analysis
+
+
+# Examples:
+## Example 1
+### Input
+**App Description**: Command-line tool for transferring data with URLs
+**Entry Function Signature**: <src/tool_getparam.c: getparameter>
+**Function Line Number(start,end)**: (2940, 2960)
+**Commit Messages between two versions**:
+        1. add option to fail on HTTP errors
+        2. update tests
+**Partial call graph**:
+        **Nodes(Reachable functions(and their changes) from entry function)**:
+                0. <src/tool_getparam.c: getparameter>
+                        Changed code in this function:
+                                @@ -2940,6 +2940,9 @@
+                                +    case C_FAIL_WITH_BODY:
+                                +      config->failwithbody = toggle;
+                                +      break;
+                1. + <src/tool_operate.c: single_transfer>
+        **Edges(Calling relationship between reachable functions)**:
+                + <0, 1>
+### Ground Truth:
+Added an option to fail on HTTP errors while preserving the response body.
+
+### Example Output:
+{Added an option to fail on HTTP errors while preserving the response body.}
+
+## Example 2
+### Input
+**App Description**: A portable C library
+**Entry Function Signature**: <lib/cache.c: cache_entry_cleanup>
+**Function Line Number(start,end)**: (53, 58)
+**Commit Messages between two versions**:
+        1. tidy cache cleanup path
+**Partial call graph**:
+        **Nodes(Reachable functions(and their changes) from entry function)**:
+                0. <lib/cache.c: cache_entry_cleanup>
+                        Changed code in this function:
+                                @@ -53,7 +53,7 @@
+                                -  free(entry->name);
+                                +  Curl_safefree(entry->name);
+        **Edges(Calling relationship between reachable functions)**:
+
+### Ground Truth:
+{} (Since this change described is purely technical and doesn't introduce any end-user-perceivable functionality improvement, it will not be put into release note)
+
+### Example Output:
+{}
+
+## Example 3
+### Input
+**App Description**: Command-line HTTP client and transfer library
+**Entry Function Signature**: <lib/url.c: parseurl>
+**Function Line Number(start,end)**: (102, 112)
+**Commit Messages between two versions**:
+        1. accept IPv6 zone identifiers in URLs
+**Partial call graph**:
+        **Nodes(Reachable functions(and their changes) from entry function)**:
+                0. <lib/url.c: parseurl>
+                        Changed code in this function:
+                                @@ -102,6 +102,10 @@
+                                +  if(zoneid)
+                                +    normalize_zoneid(zoneid);
+                1. + <lib/url.c: normalize_zoneid>
+        **Edges(Calling relationship between reachable functions)**:
+                + <0, 1>
+
+### Ground Truth:
+Added support for IPv6 zone identifiers in URLs.
+
+### Example Output:
+{Added support for IPv6 zone identifiers in URLs.}

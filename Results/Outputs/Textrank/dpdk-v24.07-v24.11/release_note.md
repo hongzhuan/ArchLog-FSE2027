@@ -1,0 +1,1333 @@
+# VerLog-style TextRank Release Note
+
+- Repository: dpdk
+- Version pair: v24.07 -> v24.11
+- Pair id: dpdk-v24.07-v24.11
+- Input commits: 1329
+- Candidate sentences: 1321
+- GT-length budget: 716
+- Extracted entries: 1321
+
+## Extracted Entries
+
+- net/nfp: add helper function to check link speed
+- net/mlx5: fix Tx tracing to use single clock source
+- net: add function to check IPv6 version
+- net/hns3: fix fully use hardware flow director table
+- net/mlx5: fix non full word sample fields in flex item
+- net/i40e/base: fix setting flags in init function
+- net/i40e/base: fix setting MAC type for X722
+- net/ntnic: add basic queue operations
+- net/i40e/base: add X722 defines for input set mask
+- net/nfp: support device packet type settings
+- app/dumpcap: check return value from adding interface
+- net/ntnic: fix flow action modify field DSCP
+- net/ntnic: add internal flow async create/delete
+- net/cpfl: add checks for flow action types
+- net/ntnic: add internal flow action update
+- net/nfp: support Ethernet type flow item
+- net/ntnic: add flow dev configuration
+- vhost: fix offset while mapping log base address
+- net/r8169: add link status and interrupt management
+- net/af_packet: specify no protocol on socket creation
+- net/ntnic: add internal async flow template
+- net/ntnic: add flow action update
+- net/hns3: support filtering registers by module names
+- net/ice: support traffic management node query
+- net/cnxk: add PMD API to retrieve the model string
+- build: remove version check on compiler links function
+- net/mvpp2: fix build with IPv6 address structure
+- net/mlx5: add flex item query for tunnel mode
+- net: fix out-of-bound access in IPv6 address mask
+- net/tap: use new kvargs process API
+- net/gve: add IO memory barriers before reading descriptors
+- net/nfp: modify level of speed update log
+- net/ntnic: add flow action modify field
+- net/i40e/base: add device ID to 25G device list
+- net/e1000: initialize PTP to system time
+- net/ixgbe: initialize PTP to system time
+- net/i40e: initialize PTP to system time
+- net/r8169: support hardware configuration
+- net/mlx5: fix shared Rx queue control release
+- net/i40e/base: fix DDP loading with reserved track ID
+- net/ixgbe/base: fix media type handling for E610
+- net/e1000: fix use after free in filter flush
+- net/r8169: add hardware registers access routines
+- net/nfp: add helper function to update VF link speed
+- net/mlx5: fix next protocol validation after flex item
+- net: use IPv6 address structure for packet headers
+- net: add more ICMP types and codes
+- net/nfp: extract function to check physical representor
+- net/ntnic: add info flow module
+- net/mlx5: add checking if unicast flow rule exists
+- net/nfp: add more failure logs
+- net/mlx5: fix non-template flow action validation
+- net/nfp: fix double free in flow destroy
+- net/pcap: set live interface as non-blocking
+- net/bnxt: add check to validate TSO segment size
+- net/e1000/base: fix fallthrough in switch
+- net: add utilities for well known IPv6 address types
+- net/ntnic: add queue setup operations
+- net/dpaa2: add API to get endpoint name
+- net/cnxk: fix use after free in mempool create
+- net/ntnic: add flow actions update for inline profile
+- net/dpaa2: update DPNI link status method
+- net/sfc: fix use after free in debug logs
+- buildtools/chkincs: check headers with stable API only
+- net/memif: fix buffer overflow in zero copy Rx
+- net/ntnic: add internal functions for create/destroy
+- net/nfp: fix potential problem on certain version BSP
+- net/ntnic: add async flow template
+- net: fix IPv4 cksum simple function
+- net/mlx5: fix GRE flow item translation for root table
+- net/ntnic: add categorizer (CAT) flow module
+- net/i40e/base: add DDP package type
+- net: use common AVX512 build checks
+- net/nfp: fix link change return value
+- net/nfp: fix type declaration of some variables
+- net/ntnic: add management functions for flow profile
+- net/ntnic: add flow action queue
+- net/virtio-user: reset used index counter
+- net/ice: support custom search path for DDP package
+- net/zxdh: support device configure operation
+- net/ntnic: add flow item port ID
+- net/ixgbe/base: remove FW API version check
+- net/ntnic: add availability monitor management
+- net/r8169: support hardware initialization
+- build: enable warning for zero-length array
+- net/ixgbe: add PCI IDs for new E610 variants
+- net/ixgbe: fix link status delay on FreeBSD
+- net/nfp: modify level of some logs
+- net/nfp: support different flow steering rules limit
+- net/ntnic: add flow action VLAN
+- net/sfc: use new kvargs process API
+- net/nfp: do not set IPv6 flag in transport mode
+- net/igc: fix Rx buffers when timestamping enabled
+- net/mlx5: update flex parser arc types support
+- net/i40e/base: add shadow RAM pointer definition
+- eal/windows: define standard file numbers
+- net/mlx5: add dynamic unicast flow rule management
+- net/dpaa2: add proper MTU log
+- net/ixgbe/base: fix speed autonegotiation on E610
+- net/ntnic: add flow action TCP
+- net/hns3: fix error code for repeatedly create counter
+- net/ice: add option to download scheduler topology
+- net/ice: add option to choose DDP package file
+- net/i40e/base: fix invalid log format characters
+- net/cnxk: move functions
+- net/ice/base: make context alloc function non-static
+- net/netvsc: fix using Tx queue higher than Rx queues
+- test/crypto: fix TLS zero length record check
+- net/bnx2x: fix possible infinite loop at startup
+- net/ntnic: add receive MAC converter (RMC) core module
+- mldev: introduce data type conversion functions
+- common/idpf: fix use after free in mailbox init
+- net/i40e/base: add missing X710TL device check
+- net/bnxt/tf_core: remove code to choose TCAM allocation
+- net/hns3: remove some basic address dump
+- net/hns3: remove separators between register module
+- net/r8169: add PHY registers access routines
+- dma/dpaa: add option for error checks
+- net/nfp: support different configuration BAR size
+- net/txgbe: fix a mass of interrupts
+- net/mlx5: add legacy unicast flow rules management
+- net/ntnic: add flow info and flow configure
+- net/ixgbe/base: add missing legacy mailbox functions
+- net/tap: do not use opaque parameter in convert
+- baseband/la12xx: fix use after free in modem config
+- net/cpfl: fix parsing protocol ID mask field
+- net/mlx5: fix real time counter reading from PCI BAR
+- net/i40e/base: add definitions for Rx error register
+- net/ntnic: add checksum update (CSU) flow module
+- net/tap: do not use rte_malloc for process private data
+- rawdev: get device structure using ID
+- net/mlx5: fix log on non-template rule destroy
+- net/mlx5: rename control flow rules types
+- net/nfp: standardize use of port index in some functions
+- net/mlx5: add legacy unicast flow rule registration
+- net/ngbe: fix interrupt lost in legacy or MSI mode
+- net/mlx5: fix shared queue port number in vector Rx
+- examples/pipeline: check info query return
+- net/bnxt: add check for number of segments
+- examples/l3fwd: add option to set Rx burst size
+- test/kvargs: add processing optional value
+- net/gve: fix queue setup and stop
+- net/tap: copy MAC addresses without memcpy
+- net/ntnic: add HFU module registers
+- net: add IPv6 traffic class and flow label fields
+- common/cnxk: update timer base support
+- net/ntnic: add base init and deinit of flow API
+- net/ixgbe: fix loopback support for E610
+- net/ntnic: add descriptor reader data handling
+- net/nfp: add missing return value check
+- net/ntnic: add queue select (QSL) flow module
+- net/i40e/base: add register definitions for FLU
+- net/nfp: fix representor port link speed update
+- common/cnxk: fix base log level
+- net/nfb: fix use after free
+- net/ice: provide parameter to limit scheduler layers
+- net/dpaa2: support multiple flow rules extractions
+- net/mlx5/hws: allow vport action to wire in Rx flow
+- net/ntnic: add header field update (HFU) flow module
+- net/r8169: support promisc and allmulti modes
+- net/cnxk: add CN20K base control path support
+- net/af_packet: support link status update
+- net/ice/base: re-enable bypass mode for E822
+- net/mlx5/hws: add logs for flow rule failures
+- net/mlx5: fix counter query loop getting stuck
+- net/vmxnet3: fix potential out of bounds stats access
+- net: add IPv4 cksum function for simple cases
+- bbdev: add available enqueue depth counter
+- net/ntnic: add insert (Tx INS) flow module
+- config/arm: fix warning for native build with meson >= 0.55
+- net/ntnic: add flow profile management
+- net/ntnic: add flow item void
+- eal: improve exit output log
+- examples/ethtool: handle drivers without registers info
+- net/mlx5: fix miniCQEs number calculation
+- net/ntnic: add infrastructure for flow actions and items
+- net/ixgbe/base: handle 5G link speed for E610
+- net/ntnic: add flow backend deinitialization
+- common/cnxk: fix double free of flow aging resources
+- net/ice/base: allow init without TC class sched nodes
+- dts: allow to get multiple expected packets
+- event/cnxk: fix free function mismatch in port config
+- net/octeon_ep: replace use of word segregate
+- net/ntnic: fix log messages
+- net/dpaa2: support PTP packet one-step timestamp
+- net/nfp: fix pause frame setting check
+- net/ntnic: add flow item UDP
+- net/ntnic: add base init and deinit flow backend
+- net/ntnic: add flow item IPv4
+- net/cnxk: fix eswitch multi-segment
+- net/mlx5: fix flex item header length field translation
+- net/ngbe: fix driver load bit to inform firmware
+- net/txgbe: fix driver load bit to inform firmware
+- net/i40e/base: reduce size of time variables
+- net/i40e/base: add VLAN field for input set
+- net/ice/base: fix link speed for 200G
+- net/e1000: fix link status crash in secondary process
+- net/mlx5: fix default RSS flows creation order
+- ethdev: add flow rule insertion mode by index with pattern
+- net/cnxk: add option to enable custom inbound SA
+- examples/l3fwd: add option to set mbuf cache size
+- dma/idxd: fix free function mismatch in device probe
+- dma/dpaa2: change DMA copy return value
+- net/ice: enhance Tx scheduler hierarchy support
+- bitops: add new bit manipulation API
+- net/ice: initialize PHC time with current time
+- net/i40e/base: strip all tags from code
+- net/ice: enable 200G link speed
+- build: use version file support from meson
+- random: keep PRNG state in lcore variable
+- net/ntnic: add key match (KM) flow module
+- eventdev: do not use zero length arrays
+- net/bnxt/tf_ulp: support a few generic template items
+- net/i40e/base: add PHY debug register dump
+- net/ntnic: add minimal create/destroy flow operations
+- common/cnxk: remove restriction to clear RPM stats
+- net/bnxt/tf_core: fix slice count in case of HA entry move
+- net/nfp: add two functions of the NSP module
+- test/cfgfile: add check for file removal
+- net/nfp: add field into representor port structure
+- net/ixgbe/base: add missing E610 definitions
+- net/bnxt/tf_core: support flow scale query
+- net/ice/base: update E830 50G branding strings
+- net/mlx5: fix indirect list flow action callback invocation
+- net/ice: support frequency adjustment for PTP
+- net/ixgbe/base: add missing ACI definitions
+- net/mlx5: validate HWS context in meter operations
+- net/mlx5: support transport mode ESP packet type
+- net/mlx5: fix trace script for multiple burst completion
+- net/ntnic: add flow item ICMP
+- ethdev: make TM profile add parameters constant
+- ethdev: require checking result of query functions
+- net/ice/base: add new tag definitions
+- net/ntnic: add flow create/destroy
+- net/ntnic: add flow async create/destroy
+- vhost: fix VDUSE device creation error handling
+- net/nfp: modify comment of some control messages
+- net/nfp: fix FEC setting return value
+- net/ntnic: add used writer data handling
+- common/iavf: add RefSync support
+- net/ntnic: fix Toeplitz key and log with mask
+- net/dpaa2: add API to check driver of a port
+- net/nfp: modify Rx buffer size setting
+- net/dpaa2: support tunnel inner protocol flow matching
+- net/zxdh: get device backend infos
+- build: output source and build dirs at end of config
+- net/ntnic: add flow action drop
+- devtools: fix check of multiple commits fixed at once
+- common/qat: fix use after free in device probe
+- net/mlx5: fix flex item tunnel mode
+- net/octeon_ep: handle device removal on probe
+- net/ntnic: add split-queue support
+- net/mlx5: add flow rule insertion by index with pattern
+- net/nfp: simplify some function parameters
+- net/bnxt/tf_ulp: add track type feature to tables
+- net/memif: check info query return
+- common/nfp: use new kvargs process API
+- net/i40e/base: remove unused variables
+- net/ntnic: add CAT module
+- net/tap: check maximum queues is less than FD limit
+- net/nfp: refactor flow item calculate function
+- net: improve IPv6 header types alignment
+- net/ntnic: add minimal flow inline profile
+- net/bnxt: register for and handle RSS change event
+- net/nfp: add new operations for multiple PF
+- drivers: use branch prediction macros
+- net/ice: fix handling empty DDP search path
+- service: keep per-lcore state in lcore variable
+- raw/ifpga/base: fix use after free
+- net/dpaa2: change miss flow ID
+- net/bnxt/tf_ulp: convert recipe table to dynamic memory
+- net/ntnic: add flow action jump
+- net/i40e/base: fix misleading debug logs and comments
+- net/dpaa2: support software taildrop
+- eal: add static per-lcore memory allocation facility
+- net/cpfl: fix forwarding to physical port
+- net/cnxk: append flow mark ID action
+- net/ntnic: learn flow queue handling
+- vhost: fix possible TOCTOU in VDUSE device creation
+- net/mlx5: support configuration without host PF
+- net/i40e/base: update version info
+- net/ixgbe/base: update version info
+- net/nfp: fix representor port link status update
+- app/testpmd: fix flow update
+- net/ice/base: update version info
+- dts: fix testpmd port device error handling mode
+- net/zxdh: get device infos
+- bpf: fix free function mismatch if convert fails
+- net/ntnic: add flow items IPv6 and ICMPv6
+- eal/x86: fix 32-bit write combining store
+- net/ixgbe/base: remove min security revision function
+- net/i40e/base: add NVM acquire with custom timeout
+- net/ixgbe/base: fix NVM access for EEPROM writes on E610
+- net/bnxt/tf_ulp: modify return values as C coding standard
+- bitset: fix build for GCC without experimental API
+- bitops: fix build for GCC without experimental API
+- net/ntnic: add flow filter deinitialization
+- net/mlx5: share init of control flow rules
+- net/gve: fix mbuf allocation memory leak for DQ Rx
+- net/mlx5: track unicast DMAC control flow rules
+- net/cnxk: support single flow dump
+- net/i40e/base: fix repeated register dumps
+- net/ice/base: support FEC auto-detect for E830
+- net/dpaa: support mempool debug
+- net/mlx5/hws: fix detection of queue full in polling
+- event/cnxk: add CN20K specific device probe
+- net/gve: fix refill logic causing memory corruption
+- net/zxdh: support device close operation
+- net/nfp: remove restrictions on port queue number
+- net/ena: restructure LLQ policy user setting
+- common/idpf: add missing newline at end of file
+- common/iavf: add commands for HQOS management
+- net/gve: add packet type parsing to DQ format
+- ethdev: make TM node add parameters constant
+- net/ntnic: add MAC Rx module registers
+- bus/fslmc: create DPAA2 device with its object
+- dts: enforce one DPDK build per test run
+- net/nfp: notify flower firmware about PF speed
+- test/bonding: remove redundant info query
+- dmadev: add strict priority configuration
+- net/ntnic: add flow statistics
+- net/dpaa2: fix memory corruption in TM
+- net/ntnic: add flow aging event
+- net/cnxk: fix build on Ubuntu 24.04
+- net/bnxt/tf_ulp: support TruFlow feature configuration
+- net/mlx5: fix SQ flow item size
+- net/nfp: support loading firmware from flash
+- net/cnxk: support Rx function select for CN20K
+- event/cnxk: add CN20K device stop and close
+- crypto/dpaa_sec: enhance IPsec extended sequence number
+- test/crypto: enable larger packets with TLS
+- power: keep per-lcore state in lcore variable
+- examples/vhost: fix free function mismatch
+- net/ice/base: fix PTP init in E825C
+- net/bnxt/tf_ulp: enable recipe ID generation
+- use C linkage where appropriate in headers
+- net/ixgbe/base: fix unchecked return value
+- net/i40e/base: fix unchecked return value
+- raw/gdtc: support queue setup operation
+- app/testpmd: avoid potential outside of array reference
+- test/bonding: fix MAC address comparison
+- net: add IPv6 address structure and utils
+- cryptodev: add queue pair priority
+- bitops: add atomic bit operations in new API
+- net/ice/base: avoid implicit type conversions
+- examples/l2fwd-macsec: enable extended packet number
+- app/testpmd: display TM parameters when adding nodes
+- dts: add ability to start/stop testpmd ports
+- net/ntnic: add flow item eth
+- event/cnxk: fix getwork write data on reconfig
+- net/ice: allow stopping port to apply TM topology
+- net/enic: add speed capabilities for newer models
+- net/nfp: use strlcpy for copying string
+- net/i40e/base: allow reading LED blink setting
+- mldev: add scale and zero point to I/O info struct
+- dts: add ability to send/receive multiple packets
+- net/ntnic: add packet descriptor builder (PDB) flow module
+- net/ntnic: add match and action DB attributes
+- cryptodev: add queue pair reset API
+- net/r8169: support PHY configuration
+- net/bnxt/tf_core: cleanup external EM support
+- net/ice: fix AVX-512 pointer copy on 32-bit
+- net/ntnic: add virtqueue setup managed packed-ring
+- net/ntnic: add key match (KM) FPGA module
+- net/r8169: support hardware operations
+- net/cnxk: handle common mbox for representor events
+- net/ice/base: remove flag checks before topology upload
+- net/ntnic: remove extra release port call
+- net/hns3: support general tunnel flow match
+- net/ntnic: extend and fix logging
+- net/ntnic: add flow filter initialization
+- memzone: fix use after free in tracing
+- power: rename files for CPU frequency management
+- bus/fslmc: make IOVA mode configuration dynamic
+- net/mlx5: add metadata split for compatibility
+- build: increase minimum meson version to 0.57
+- net/octeon_ep: fix init failure handling
+- net/bnxt/tf_ulp: add mask defaults when not specified
+- net/enic: allow multicast in MAC address add callback
+- build: add common checks for AVX512
+- ethdev: add link speed lanes configuration
+- net/hns3: register VLAN flow match mode parameter
+- net/mlx5: support jump to flow table index action
+- net/ntnic: enhance Ethernet device configuration
+- net/bnxt: fix reading SFF-8436 SFP EEPROMs
+- event/cnxk: add CN20K device start
+- devtools: fix forbidden token check with multiple files
+- net/ntnic: add termination thread
+- net/mvneta: fix possible out-of-bounds write
+- net/bnx2x: fix duplicate branch
+- power: introduce PM QoS API on CPU wide
+- common/cnxk: fix MAC address change with active VF
+- net/i40e/base: add trace buffer reading dependencies
+- net/i40e/base: remove non-inclusive language
+- doc: correct definition of stats per queue feature
+- service: extend service function call statistics
+- net/octeon_ep: extend mailbox functionality
+- net/ice/base: update PTP init
+- net/nfp: clear errors status of AER after soft reset
+- net/ntnic: add flow backend initialization
+- bus/fslmc: fix non-required bus scan return
+- net/dpaa2: support eCPRI flow matching
+- net/dpaa2: support VXLAN flow matching
+- net/ice: limit number of queues to sched capabilities
+- net/dpaa2: improve DPDMUX error behavior settings
+- net/ntnic: add meter module
+- ipc: increase file descriptor maximum number
+- net/ntnic: add high-level flow aging
+- net/mlx5: workaround list management of Rx queue control
+- net/cnxk: handle RSS action for representees
+- net/bnxt/tf_core: remove dead AFM code
+- pipeline: use IPv6 address structure
+- raw/cnxk_rvu_lf: set message ID range
+- devtools: use cross compilation for x86 32-bit build
+- net/zxdh: enable message channel
+- net/mlx5: fix release order of compatible matcher
+- app/testpmd: show output of commands read from file
+- dts: add mechanism to skip test cases or suites
+- net/iavf: fix AVX-512 pointer copy on 32-bit
+- net/i40e: fix AVX-512 pointer copy on 32-bit
+- net/nfp: add checks for port up/down
+- net/ntnic: add hash module
+- vhost: restrict set max queue pair API to VDUSE
+- net/dpaa2: fix build with GCC 15
+- test/security: fix IPv6 extension loop
+- net/cnxk: support Tx function select for CN20K
+- dts: fix verify argument in set forward mode
+- net/bnxt: support link speed lanes
+- net/mlx5: fix Rx queue reference count in flushing flows
+- event/cnxk: support CN20K Rx adapter fast path
+- common/cnxk: support bandwidth profile for CN20K
+- net/dpaa2: remove unnecessary check for null before free
+- net/ntnic: remove unnecessary check for null before free
+- net/ntnic: add flow flush
+- test/crypto: fix synchronous API calls
+- net: split raw checksum functions in separate header
+- dts: use test suite specification class imports
+- bus/fslmc: replace system call with file I/O
+- net/mlx5: fix Rx queue control management
+- net/ntnic: add flow items GTP and actions raw encap/decap
+- net/ntnic: add FLM module registers
+- net/ice/base: optimize subtree searches
+- net/ntnic: add flow meter
+- build: skip driver symlinks without sub-directory
+- net/ntnic: add flow item SCTP
+- net/dpaa2: support GTP flow matching
+- net/ntnic: add releasing virtqueues
+- net/dpaa: implement detailed packet parsing
+- net/i40e/base: fix blinking X722 with X557 PHY
+- net/bnxt: fix bad action offset in Tx BD
+- net/ntnic: add flow action mark
+- net/ntnic: add MAC Tx module registers
+- net/nfp: enhance flower service framework
+- common/mlx5: fix error CQE handling for 128 bytes CQE
+- net/bnxt/tf_core: fix WC TCAM multi-slice delete
+- net: fix overflowed array index in IPv6 address utils
+- mbuf: add transport mode ESP packet type
+- net/dpaa2: check soft parser is loaded
+- net/bnxt/tf_ulp: support a few feature extensions
+- net/hns3: support reporting names of registers
+- drivers/net: support single queue per port
+- net/ice/base: fix log format for unsigned int
+- net/ice: improve Tx scheduler graph output
+- net/ntnic: add flow dump
+- net/bnxt/tf_core: fix TCAM manager data corruption
+- net/ntnic: move API header file
+- net/ntnic: add TSM module registers
+- net/ntnic: add FLM module
+- drivers: use common AVX512 build checks
+- net/octeon_ep: avoid warning on uninitialized variable
+- dts: improve test run result statistics
+- net/ntnic: add CSU module registers
+- net/hns3: support flow rule priority
+- cmdline: use IPv6 address structure
+- net/nfp: reserve BAR for expansion ROM
+- net/dpaa: fix typecasting channel ID
+- dts: add basic capability support
+- eal/x86: keep power intrinsics state in lcore variable
+- net/ice/base: remove 255 limit on sched child nodes
+- net/ntnic: add STA module
+- maintainers: update for next-net-intel tree
+- net/ice/base: fix VLAN replay after reset
+- net/ntnic: add IP fragmenter (IFR) flow module
+- ethdev: use IPv6 address structure in flows
+- net/ntnic: add Tx INS module registers
+- ethdev: add traffic manager query
+- net/bnxt/tf_ulp: support flow scale query
+- build: remove unnecessary version checks
+- drivers: use bitops API instead of compiler builtins
+- eal: do not log init failure twice
+- ethdev: add flow rule by index with pattern
+- net/ice/base: support optional flags in signature segment
+- raw/ifpga: fix free function mismatch in interrupt config
+- net/dpaa: enhance DPAA frame display
+- net/ice: add check for null-pointer dereference
+- examples/ptpclient: add frequency adjustment
+- net/i40e/base: align registers to the specification
+- net: improve VLAN header type alignment
+- event/cnxk: support CN20K Tx adapter fast path
+- net/mlx5: support destroying unicast flow rules
+- examples/eventdev: fix queue crash with generic pipeline
+- net/cnxk: add PMD API to retrieve CPT queue statistics
+- net/pcap: fix blocking Rx
+- security: use IPv6 address structure
+- net/nfp: add missing period in logs
+- net/txgbe: enable Tx descriptor error interrupt
+- net/txgbe: fix SWFW mbox
+- raw/cnxk_rvu_lf: support getting BAR addresses
+- baseband/acc: fix soft output bypass RM
+- dts: add dynamic queue test suite
+- devtools: exclude common EAL header from attribute check
+- net/ntnic: add flow matcher (FLM) flow module
+- net/zxdh: add logging
+- mem: add total memory size in dumps
+- dts: add random generation seed setting
+- common/cnxk: allow enabling IOVA field in mbuf
+- net/sfc: use indirect counter in tunnel offload
+- net/bnxt/tf_core: fix Thor TF EM key size check
+- event/cnxk: use stdatomic API
+- net/bnxt: remove some unnecessary logs
+- net/ngbe: reconfigure more MAC Rx registers
+- net/r8169: add logging macros
+- net/mlx5: set errno for ipool allocation failures
+- net/ice: fix reading invalid PHY timestamp
+- net/vmxnet3: fix crash after configuration failure
+- net/bnxt: add check for invalid mbuf in Tx
+- net/mlx5: optimize MAC address and VLAN filter handling
+- eal/arm: add WFET in power management intrinsics
+- dma/idxd: set GRPCFG traffic class for better performance
+- net/dpaa2: validate soft parser flow
+- net/ixgbe/base: fix mailbox ack handling
+- net/r8169: add driver start and stop
+- net/i40e/base: improve typecasting
+- dmadev: fix potential null pointer access
+- bbdev: removing inline functions from version map
+- ethdev: add report of register names and filter
+- test/crypto: allow retries for getting stats
+- dma/cnxk: support queue priority configuration
+- net/dpaa2: refactor flow engine
+- dts: add MAC filter test suite
+- doc: update DTS options for external DPDK build
+- app/testpmd: support switching LED on/off
+- app/eventdev: add pre-scheduling
+- net/ntnic: add QSL module
+- net/hns3: support outer VLAN flow match
+- net/bnxt: disable VLAN filter when TF is enabled
+- baseband/acc: remove check on HARQ memory
+- examples/flow_filtering: introduce use cases snippets
+- net/ixgbe: fix queue interrupt for E610
+- net/bnx2x: fix always true expression
+- baseband/acc: fix ring memory allocation
+- net/ntnic: add TSM module
+- common/cnxk: fix CPT HW word size for outbound SA
+- net/tap: remove unnecessary checks in configure
+- net/ice/base: add bounds check
+- net/mlx5: increase number of supported DV sub-flows to 64
+- net/mlx5/hws: fix range definer error recovery
+- crypto/bcmfs: fix free function mismatch
+- test/hash: add test for RSS key generation
+- ethdev: check info query return
+- devtools: handle multiple pattern for skipping files
+- bitops: support volatile pointers in new API
+- common/cnxk: fix build on Ubuntu 24.04
+- net/r8169: add core logic for Rx/Tx
+- test/bonding: fix loop on members
+- buildtools: add helper to convert text file to header
+- dts: replace the or operator in third party types
+- net/cnxk: support Rx burst vector for CN20K
+- net/dpaa: support Tx confirmation to enable PTP
+- net/i40e/base: fix loop bounds
+- net/hns3: fix dump counter of registers
+- ethdev: add frequency adjustment
+- net/mlx5: fix number of supported flex parsers
+- config/x86: add 32-bit cross compilation for Arch Linux
+- usertools/devbind: support VFIO non-IOMMU mode
+- net/txgbe: move wrapper to base driver
+- common/idpf: fix AVX-512 pointer copy on 32-bit
+- net/ntnic: support flow offload
+- app/testpmd: remove redundant policy action condition
+- net/cnxk: support vector Tx multi-segment for CN20K
+- net/iavf: add segment-length check to Tx prep
+- net/bnxt/tf_core: improve flow scale
+- net/dpaa2: support VLAN traffic splitting
+- test/power: remove function pointer validations
+- app/testpmd: fix aged flow destroy
+- event/cnxk: add CN20K SSO enqueue fast path
+- event/cnxk: add CN20K SSO dequeue fast path
+- net/bnxt/tf_ulp: support action read and clear
+- net/ntnic: add categorizer (CAT) FPGA module
+- net/ice/base: clear Tx scheduler AQ command RD bit for E825C
+- net/ntnic: add supplementary macros
+- rcu: fix implicit conversion in bit shift
+- baseband/acc: reset ring data valid bit
+- net/bnxt: support buffer split Rx offload
+- net/ixgbe: support per-queue stats for fewer queues
+- examples/l3fwd-power: fix options parsing overflow
+- bus/fslmc: enhance QBMAN DQ storage logic
+- common/iavf: add RSS hash configuration function
+- net/ntnic: add GMF module
+- doc: add tested Intel platforms to release notes
+- dma/dpaa2: limit max descriptor number
+- dma/dpaa2: move QDMA header to common driver
+- bus/ifpga: use C linkage where appropriate in driver header
+- net/ntnic: add xstats
+- net/vmxnet3: support larger MTU with version 6
+- net/i40e: check register read for outer VLAN
+- net/ice/base: set VSI index on newly created nodes
+- test/kvargs: extract basic token count
+- net/hns3: restrict tunnel flow rule to one header
+- net/nfp: ignore useless message for multiple PF
+- ethdev: restore config only when requested
+- net/ntnic: add IFR module registers
+- test: remove unused resource API
+- net/ice/base: remove warning disable flag
+- net/nfp: rename PF speed update function
+- buildtools/chkincs: check driver specific headers
+- ci: run more checks in private repositories
+- net/i40e/base: make semaphore timeout 32-bit
+- net/ntnic: add statistics
+- eal: fix lcore variables cleanup on Windows
+- raw/gdtc: support basic operations
+- hash: separate creation parameters checks
+- net/ntnic: add RPF module
+- net/bnxt/tf_ulp: support feature bit
+- net/nfp: support EEPROM functions
+- eal: initialize log before everything else
+- net/mlx5: fix SWS meter state initialization
+- vhost: move VDUSE reconnection after device is created
+- net/dpaa2: store drop priority in mbuf
+- eal/arm: expand availability of WFE related instructions
+- bus/fslmc: free VFIO group FD on group add failure
+- common/iavf: support GNSS over VF
+- net/tap: avoid memcpy with null argument
+- net/mlx5: fix NVGRE item validation for template API
+- drivers: use per line logging in helpers
+- cryptodev: move RSA padding information into xform
+- net/cnxk: add PMD API to submit CPT instruction
+- graph: add more infos to node dump
+- config/arm: add Arm Neoverse N3 SoC
+- net/iavf: remove warning disable flag
+- eventdev: add independent enqueue API
+- examples/l3fwd-power: add PM QoS configuration
+- test/kvargs: extract parsing without keys
+- common/iavf: update version info
+- net/iavf: delay VF reset command
+- test/eal: fix loop coverage for alignment macros
+- net/ntnic: add KM module
+- net/mlx5: fix MAC address initialization with GCC 15
+- test/hash: replace use of term segregate
+- net/gve/base: fix build with Fedora Rawhide
+- net/ntnic: added FLM stat interface
+- net/bnxt/tf_ulp: support dynamic tunnel ports
+- dts: add blocked ports to EAL parameters
+- examples: use eventdev pre-scheduling
+- power: fix mapped lcore ID
+- common/iavf: support SyncE over VF
+- net/i40e/base: remove warning disable flags
+- net/e1000/base: remove warning disable flags
+- test/alarm: make the test more reliable
+- net/ntnic: add TPE module
+- net/txgbe: add Tx descriptor error statistics
+- net/ngbe: add Tx descriptor error statistics
+- net/ntnic: add MTU configuration
+- net/nfp: extract function to allocate VF
+- net/bnxt/tf_ulp: support tunnel flow stats
+- net/cnxk: fix mbuf rearm data for Rx inject packets
+- net/bnxt/tf_ulp: support flow scale query for Thor2
+- dts: add testpmd set ports queues
+- net/mlx5: fix error notifications in counter initialization
+- vhost: add reconnection support to VDUSE
+- net/ntnic: add retrieving and managing packets
+- net/mlx5/hws: fix flex item as tunnel header
+- ethdev: add trace points to flow insertion by index
+- net/ntnic: sort FPGA registers alphanumerically
+- bus/dpaa: fix lock condition during error handling
+- net/dpaa2: support link state
+- test/eal: fix lcore check
+- hash: use IPv6 address structure
+- app/testpmd: add L4 port to verbose output
+- bus/fslmc: remove unnecessary check for null before free
+- dts: add setting MAC and multicast addresses
+- net/cnxk: support Tx burst vector for CN20K
+- graph: make graphviz export more readable
+- dts: add capability check for multicast filtering
+- eventdev: add event port pre-schedule modify
+- net/ntnic: remove unnecessary casting and macro
+- net/nfp: extract function to allocate PHY
+- examples/l3fwd: fix read beyond boundaries in ACL mode
+- net/ntnic: add SLC LR module registers
+- net/ntnic: add slicer (SLC LR) flow module
+- app/graph: check info query return
+- examples/qos_sched: check link query return
+- eal: promote more power intrinsics API as stable
+- net/tap: restrict maximum number of MP FDs
+- app/dma-perf: support config per device
+- net/ntnic: fix Coverity warnings
+- net/bnx2x: remove dead conditional
+- net/nfp: add a new flag to indicate PF
+- net/dpaa: fix reallocate mbuf handling
+- event/cnxk: add CN20K xstats and self test
+- app/dumpcap: fix handling of jumbo frames
+- ethdev: add telemetry command for registers
+- net/dpaa2: check IOVA before sending MC command
+- ethdev: add jump to table index action
+- net/ntnic: add scrub registers
+- event/cnxk: add CN20K device config
+- net/ngbe: check length of Tx packets
+- net/txgbe: check length of Tx packets
+- net/dpaa: improve errata A010022 handling
+- app/bbdev: add capture of queue dump
+- net/ntnic: update FPGA version
+- test/red: remove use of word master
+- net/ntnic: report link status feature in doc
+- net/ntnic: add PDB module
+- net/sfc: fix driver logtype token
+- net/ntnic: update FPGA registers related to DBS
+- common/cnxk: accommodate change in aura field width
+- test/event: fix device stop
+- eal: add bitset type
+- net/ntnic: add aging to inline profile
+- crypto/dpaa2_sec: remove prefetching in event mode
+- net/nfp: fix RSS on VXLAN inner layer
+- net/mlx5: fix memory leak in metering
+- common/cnxk: define platform configuration
+- doc: add new driver guidelines
+- crypto/cnxk: add PMD API to get queue stats
+- event/dsw: add support for larger port count
+- net/txgbe: remove outer UDP checksum capability
+- log: add hook for printing log messages
+- net/cnxk: support Tx multi-segment in CN20K
+- drivers: move log wrappers to Intel base drivers
+- build: replace deprecated function for cross compilation
+- net/r8169: support getting FW version
+- app/testpmd: support setting device EEPROM
+- crypto/cnxk: remove delay in stats
+- net/ice: detect stopping a flow director queue twice
+- power: detect supported driver in init
+- net/bnxt: update HWRM API
+- baseband/acc: configure max queues per device
+- net/mana: support rdma-core via pkg-config
+- net/ixgbe/base: update FW API version
+- net/ice/base: fix iteration of TLVs in Preserved Fields Area
+- net/hns3: fix pointer offset for registers
+- dts: add testpmd port information caching
+- net/zxdh: init message channel and hwlock
+- net/zxdh: add driver skeleton
+- net/r8169: add driver skeleton
+- crypto/scheduler: fix session size computation
+- net/i40e/base: adjust whitespace
+- net/ixgbe/base: disable thermal sensor ops for E610
+- app/dumpcap: use bitops API instead of compiler builtins
+- log: add timestamp option
+- member: fix choice of bucket for displacement
+- net/ntnic: add Tx Packet Editor (TPE) flow module
+- examples/ntb: check info query return
+- net/hns3: verify reset type from firmware
+- net/hns3: fix error log
+- net/ixgbe: fix missing VF PCI ID
+- examples/ipsec-secgw: free the actual mbuf pointer
+- examples/fips_validation: fix EdDSA signature size
+- net/ixgbe: fix RSS redirection table config for E610
+- power: fix build with libvirt
+- doc: explain including hugepages in Linux core dump
+- net/iavf: fix crash when link is unstable
+- usertools/devbind: support all VFIO no-IOMMU sysfs values
+- net/dpaa2: support CVLAN DPDMUX
+- vhost: promote max queue setting API to stable
+- crypto/cnxk: add CPTR read and write API
+- dts: add testpmd port queue modification
+- net/zxdh: add PCI init
+- test/crypto: add asymmetric EdDSA cases
+- common/iavf: introduce QGRP to replace ADQ capabilities
+- event/cnxk: fix Rx timestamp handling
+- baseband/acc: do cosmetic changes
+- crypto/cnxk: support queue pair reset
+- event/octeontx: fix possible integer overflow
+- net/nfp: fix memory leak in VF initialization
+- net/ntnic: add RPP LR module registers
+- net/cnxk: support Rx burst scalar for CN20K
+- event/dlb2: fix base driver logs
+- net/r8169: support statistics
+- net/ngbe: restrict configuration of VLAN strip offload
+- net/cxgbe: replace may_alias attribute
+- bus/fslmc: improve BMAN buffer acquire
+- net/bnxt/tf_ulp: support flow priority
+- net/gve: always attempt Rx refill on DQ
+- net/dpaa: remove broken debug macros
+- net/bnxt: free and account a bad Tx mbuf
+- net/mlx5: fix reported Rx/Tx descriptor limits
+- config/x86: add 32-bit cross compilation for Debian
+- net/mlx5: rework creation of unicast flow rules
+- common/cnxk: add CN20K NIX register definitions
+- net/dpaa2: enhance raw flow extract
+- net/bnxt/tf_ulp: support custom L2 etype tunnel
+- common/iavf: define maximum MSIX index
+- ethdev: add restore flags as driver callback
+- test/bitops: check worker lcore availability
+- power: enable CPPC
+- net/ntnic: add replacer (Tx RPL) flow module
+- eal/arm: describe CPU features in comments
+- common/cnxk: replace deprecated function for cross compilation
+- ethdev: fix link with C++
+- net/ntnic: add packet handler for virtio queues
+- common/cnxk: support NIX debug for CN20K
+- bus/dpaa: enable clang thread safety check for FQ locks
+- net/fm10k/base: remove warning disable flags
+- dts: send packets without capture
+- net/nfp: increase representor Tx queue number
+- bus/fslmc: enhance MC VFIO multi-process support
+- net/bonding: promote experimental API stable
+- net/bnxt: support Rx profile selection
+- bus/dpaa: add ONIC port mode
+- argparse: fix argument flags size
+- net/nfp: increase representor Rx queue number
+- bus/dpaa: fix the fman details status
+- baseband/acc: fix access to deallocated mem
+- dma/dpaa: support burst capacity API
+- devtools: report all warnings in forbidden token check
+- net/iavf: preserve MAC address with i40e PF Linux driver
+- dts: add test suite specification and discovery
+- net/ntnic: add queue select (QSL) FPGA module
+- dts: remove redundant test suite
+- vhost: fix VDUSE reconnect device start
+- net/ntnic: add copier (Tx CPY) flow module
+- net/ntnic: add SLC LR module
+- dts: add test case decorators
+- common/cnxk: add CN20KA mbox support
+- test/event: fix schedule type
+- net/bnxt: fix mbuf offload flags
+- common/dpaax/caamflib: enable fallthrough warnings
+- power: refactor core power management
+- net/cnxk: support Tx burst scalar for CN20K
+- net/bnxt: remove VNIC async event handler
+- event/cnxk: add CN20K timer adapter
+- timer: override CPU TSC frequency with OS value
+- vhost-user: optimize stats counters performance
+- test/lcore_var: add lcore variable performance test
+- examples/l3fwd: check info query return
+- ethdev: fix race on ports in telemetry endpoints
+- test/crypto: start opening brace in new line
+- bitset: add atomic functions
+- fib: fix error code for rule reclamation
+- build: limit packed member warning disabling to drivers
+- dma/dpaa2: support short FD
+- net/bnxt: remove unnecessary ifdefs
+- net/cnxk: add SA info telemetry
+- vhost: remove internal symbol from vDPA public header
+- net/ntnic: enable RSS
+- raw/cnxk_rvu_lf: add message handler registration
+- service: use bitset to represent service flags
+- test/security: skip IPsec post-process for negative tests
+- net/ntnic: add flow matcher (FLM) FPGA module
+- net/hns3: dump queue head and tail pointer info
+- eal: promote memzone segments configuration API as stable
+- dts: add random packet generator
+- net/ntnic: add Tx CPY module registers
+- net/ena: upgrade driver version to 2.11.0
+- vhost: use imported VDUSE uAPI header
+- ci: fix unit tests with Fedora 37
+- dts: refactor build and node info classes
+- net/ntnic: add Tx RPL module registers
+- node: use IPv6 address structure and utils
+- net/mlx5/hws: fix allocation of STCs
+- net/bnxt/tf_core: allocate TCAM entries dynamically
+- test/kvargs: extract parsing empty elements
+- doc: fix grammar and phrasing in multi-process app guide
+- net/cnxk: add PMD API for IPsec SA base and flush
+- app/testpmd: remove flex item init command leftover
+- drivers: split multilines log messages
+- net/ntnic: update alignment for virt queue structs
+- event/cnxk: add CN20K event port profile switch
+- telemetry: register command with private argument
+- net/nfp: improve logic readability
+- ml/cnxk: update to CN10K error handling
+- net/cnxk: fix Rx offloads to handle timestamp
+- hash: add RSS hash key generation
+- doc: update mlx5 limitations for match with compare item
+- bus/fslmc: hide DPCON close as internal symbol
+- drivers: remove more redundant newline in Marvell drivers
+- event/dsw: add capability for independent enqueue
+- event/cnxk: fix CN9K template macros
+- common/mlx5: reduce HCA attribute type sizes
+- cryptodev: add asymmetric operational capability
+- net/ena: remove unused abort macro
+- net/ixgbe: fix PTP initialization for E610
+- config: limit lcore variable maximum size to 128k
+- eal: promote applications lcore usage API as stable
+- net/nfp: extract function to allocate PF
+- ethdev: make TM shaper parameters constant
+- vdpa/nfp: recover ring index on new host
+- net/af_packet: support timestamp offload
+- bus/dpaa: add port buffer manager stats
+- bus/pci: enhance hotplug for VFIO bound devices
+- doc: modernize build instructions on Windows
+- bitset: fix build with MSVC
+- examples/l2fwd-event: fix spinlock handling
+- net/mlx5: fix flow matcher mask translation
+- event/cnxk: add CN20k event queue configuration
+- dts: add VLAN methods to testpmd shell
+- mempool/cnxk: add CN20K PCI device IDs
+- net/tap: increase maximum allowable queues
+- net/ntnic: add RPP local retransmit (RPP LR) flow module
+- examples/l3fwd: fix read beyond boundaries
+- test/crypto: verify error recovery
+- net/nfp: revise number of PF representor port
+- net/ixgbe/base: add E610 VF HV macro
+- cryptodev: remove unnecessary list ends
+- net/bnxt/tf_ulp: fix F1F2 VXLAN counter accumulation
+- common/idpf/base: remove warning disable flags
+- net/hns3: fix integer overflow
+- test/lcore_var: add lcore variable functional tests
+- net/bnxt/tf_ulp: update template files
+- net/mlx5: fix dangling pointer to flow params
+- test/alarm: test on FreeBSD
+- app/testpmd: move offload update in SSE MAC swap
+- event/cnxk: add CN20K event port configuration
+- dts: add NIC capability support
+- vhost: add logging mechanism for reconnection
+- dts: change remote and local paths objects
+- test/kvargs: extract list parsing
+- test: rearrange config files tree
+- crypto/qat: fix ECDSA session handling
+- doc: describe send scheduling counters in mlx5 guide
+- bus/fslmc: get MC VFIO group FD directly
+- net/nfp: fix port index
+- crypto/cnxk: add PMD API for getting CPTR
+- doc: fix Sphinx build without RTD theme
+- net/dpaa2: dump Rx parser result
+- dts: fix runner target in the Dockerfile
+- net/bnxt: fix LRO offload capability
+- common/cnxk: support NIX queue config for CN20K
+- ethdev: optimize activation of fast path tracepoints
+- net/i40e/base: add named and raw structs to Rx desc
+- net/dpaa: support separating Tx conf queues
+- net/cnxk: fix Rx timestamp handling for VF
+- raw/cnxk_rvu_lf: add self test
+- bus/dpaa: add OH port mode
+- app/testpmd: add register keyword in SSE MAC swap
+- dts: add brief sleep to async sniffer callback function
+- event/dsw: use a dynamic logtype
+- devtools: deduplicate function to mark fixes
+- common/iavf: add flex descriptor fields enum
+- doc: update Arm IPsec-MB dependency version
+- eal: introduce log options parser
+- test/fib: enhance coverage of RCU rule reclamation
+- dts: use Pydantic in the configuration
+- net/r8169: support Rx
+- config/x86: set maximum lcores for AMD EPYC Zen5
+- eal/windows: check expiry parameter
+- net/mlx5: show incomplete records in Tx trace script
+- net/dpaa: share MAC FMC scheme and CC parse
+- dts: add topology capability
+- net/cnxk: fix OOP handling for inbound packets
+- net/bnxt/tf_ulp: support RSS flow query
+- dma/dpaa: support silent mode
+- baseband/acc: support queue debug dump
+- app/testpmd: remove unnecessary cast
+- mldev: add queue pair count
+- config/x86: add 32-bit cross compilation for Fedora
+- net/dpaa: support Rx/Tx timestamp read
+- dts: add blocklist test suite
+- test/event: fix target event queue
+- net/mlx5/hws: log syndrome and info on CQE error
+- net/nfp: support LED operations
+- net/ntnic: add FLM RCP module
+- net/ntnic: add statistics poll
+- common/cnxk: use new NPA aq enq mbox for CN20K
+- net/ena: support malformed Rx descriptor error
+- node: add some xstats in IPv4 nodes
+- event/cnxk: fix OOP handling in event mode
+- common/cnxk: add CN20KA A0 model
+- vdpa: update used flags in used ring relay
+- net/txgbe: fix VF-PF mbox interrupt
+- devtools: fix false positive from checkpatch
+- pcapng: avoid potential unaligned data
+- common/cnxk: share mbox for multiple representor events
+- raw/gdtc: support dequeue operation
+- raw/gdtc: support enqueue operation
+- net/ice: increase max Rx/Tx descriptors
+- test/bitops: fix 32-bit atomic test spurious failure
+- dts: add poetry package mode config
+- app/crypto-perf: test queue pair priority
+- app/testpmd: add hairpin map parameter
+- net/dpaa/fmlib: remove newline from debug logs
+- common/cnxk: fix inline CTX write
+- test/crypto: add asserts to validate test lengths
+- examples/ptpclient: revert frequency adjustment
+- common/cnxk: update representee RSS rule via PF
+- doc: add lcore variables guide
+- vdpa/nfp: add live migration
+- app/dumpcap: remove unused struct array
+- net/ena: remove outdated devarg documentation
+- ml/cnxk: fix handling of TVM model I/O
+- eventdev: remove single event enqueue and dequeue
+- doc: remove confusing command to send patch
+- dts: fix adjusting L2/L3 addresses
+- fib: lookup IPv4 address in network order
+- net/dpaa2: support IPsec AH and ESP flow matching
+- baseband/acc: extend FFT support in VRB2 PRQ device
+- net/nfp: refactor firmware version logic
+- net/mlx5/hws: fix TC to TOS fields mapping in NAT64
+- test/service: reintroduce delay
+- power: refactor uncore power management
+- eventdev: fix possible array underflow/overflow
+- test/kvargs: extract parsing with keys
+- app/procinfo: fix leak on exit
+- net: split IPv4 and IPv6 symbols in separate headers
+- net/r8169: support Tx
+- event/cnxk: support CN20K Rx adapter
+- net/enic: support SR-IOV VF using admin channel
+- net/zxdh: configure interrupt
+- dts: add checksum offload test suite
+- ipsec: use IPv6 address structure
+- rib6: use IPv6 address structure and utils
+- common/dpaax/caamflib: fix PDCP SNOW-ZUC watchdog
+- dmadev: clean parameter verification
+- net/ntnic: add hasher (HSH) flow module
+- net/gve: fix Tx for chained mbuf
+- net/netvsc: optimize stats counters performance
+- bus/fslmc: introduce VFIO DMA mapping API
+- net/mana: support arm64
+- raw/cnxk_rvu_lf: add device PF func get
+- dts: remove leftover node methods
+- bus/dpaa: fix PFDRs leaks due to FQRNIs
+- common/cnxk: define PF VF bit encoding
+- argparse: remove dead code
+- eal/windows: align getopt to FreeBSD
+- common/cnxk: enable PF VF mailbox
+- bbdev: add queue debug dump
+- pipeline: remove packed attribute
+- test/event: avoid duplicate initialization
+- common/cnxk: add SSO event aggregator
+- net/dpaa2: enhance Tx scatter-gather mempool
+- net/bnxt/tf_ulp: support jump action
+- crypto/dpaa2_sec: fix memory leak
+- net/dpaa: improve port cleanup
+- net/dpaa2: frame attribute flags parser
+- doc: update recommended versions for ice
+- net/ntnic: add packet descriptor builder (PDB) FPGA module
+- net/hns3: remove ROH devices
+- net/bnxt/tf_ulp: fix parent child DB counters
+- argparse: enable with MSVC
+- mempool: enable with MSVC
+- dts: correct PCI addresses in user config comments
+- net/bnxt/tf_ulp: use optimized CRC32 hash
+- gro: use IPv6 address structure
+- dts: add VLAN test suite
+- vhost: fix and refactor VDUSE reconnect log check
+- bus/fslmc: remove VFIO IRQ mapping
+- net/mlx5: fix raw encap validation
+- graph: fix memory leak in node clone
+- bus/fslmc: support close operation
+- examples/ipsec-secgw: fix dequeue count from cryptodev
+- net/ntnic: add init for virtqueues in DBS
+- usertools/cpu_layout: update coding style
+- graph: improve node layout
+- fib6: use IPv6 address structure and utils
+- dts: add NIC capabilities from port info
+- crypto/cnxk: support multi-segment Rx inject
+- usertools/hugepages: update coding style
+- baseband/acc: remove VRB1 interrupt capability
+- net/r8169: support MTU
+- common/cnxk: ensure CPTR is 128B aligned
+- timer: improve TSC estimation accuracy
+- test/kvargs: introduce test suite
+- net/cpfl: fix invalid free in JSON parser
+- eventdev: add event pre-schedule hint
+- doc: describe security protocols in a dedicated guide
+- event/cnxk: support CN20K Tx adapter
+- power: enable cast qualifier warnings
+- test/crypto: remove unused macros
+- efd: remove packed attributes
+- net/nfp: extract function to initialize PF
+- vdpa/nfp: add interrupt logic of vring relay
+- app/bbdev: add interrupt disabling
+- test/crypto: free pools in teardown
+- net/hns3: refactor register dump
+- common/iavf: enhance PTP virtchnl support
+- git: show hidden tracked files
+- net/nfp: rename flower service flag
+- net/bnxt/tf_core: support Thor2
+- net/netvsc: force Tx VLAN offload on 801.2Q packet
+- common/cnxk: remove abort from flush
+- graph: support node xstats
+- net/ntnic: add scatter-gather HW deallocation
+- power/amd_uncore: add uncore for AMD EPYC processors
+- crypto/openssl: remove unnecessary null free checks
+- crypto/openssl: fix potential string overflow
+- ethdev: verify queue ID in Tx done cleanup
+- net/ixgbe: increase max Rx/Tx descriptors
+- doc: reword some sample app guides
+- test/cksum: add performance test in perf suite
+- drivers: reuse default logtype for SFC drivers
+- eal: fix lcore variables documentation
+- usertools/devbind: restore active marker
+- examples/fips_validation: support EdDSA
+- dev: fix callback lookup when unregistering device
+- dts: fix API doc directory and Doxygen link
+- net/dpaa: support IEEE 1588 PTP
+- net/mlx5/hws: introduce jump to matcher action
+- dts: add MTU config methods to testpmd shell
+- raw/gdtc: introduce driver skeleton
+- crypto/cnxk: use opaque queue pointer for PMD API
+- dts: add admin privileges to hugepage mounting
+- dts: use Python shell for Scapy instead of XML-RPC
+- common/dpaax: use prefetch macros
+- event/cnkx: support pre-schedule
+- drivers/baseband: intialize queues numbers
+- bus/fslmc: upgrade MC to version 10.37
+- net/bnxt: fix TCP and UDP checksum flags
+- baseband/acc: support k0 parameter
+- kernel/freebsd: include mapped buffers in core dump
+- lpm6: use IPv6 address structure and utils
+- dts: add NIC capabilities from Rx queue info
+- bus/ifpga: remove packed attribute
+- bus/fslmc: rename variable in QBMAN
+- eal/unix: optimize thread creation
+- drivers: remove redundant newline from logs
+- hash: add dynamic polynomial calculation
+- net/ice/base: read VSI layer info from VSI struct
+- maintainers: update for Windows
+- net/ntnic: add Tx Packet Editor (TPE) FPGA module
+- eventdev: introduce event pre-scheduling
+- raw/cnxk_rvu_lf: add interrupt callback registration
+- bus/fslmc: fix Coverity warnings in QBMAN
+- net/tap: rename struct nlmsg
+- net/bnxt/tf_ulp: support overlapping flows
+- event/dlb2: remove single event enqueue and dequeue
+- log: support systemd journal
+- baseband/acc: explicit size constants
+- vdpa/nfp: enable live migration
+- doc: clarify PCI Virtual Function MTU behavior in mlx5
+- common/cnxk: fix IRQ reconfiguration
+- doc: add DTS capability doc sources
+- raw/cnxk_rvu_lf: add mailbox processing
+- doc: update recommended versions for i40e
+- common/cnxk: support RSS for CN20K
+- usertools/devbind: fix NUMA node display
+- net/bnxt/tf_ulp: tune performance for Thor2 stats cache
+- argparse: clarify error logs
+- examples/ptp: replace terms master and slave
+- vhost: fix deadlock in Rx async path
+- net/nfp: correct misspellings
+- ethdev: fix overflow in descriptor count
+- alarm: fix alarm cancel
+- dts: support externally compiled DPDK
+- dts: improve configuration API doc
+- buildtools/cmdline: fix use in Meson subproject
+- pcapng: fix handling of chained mbufs
+- devtools: forbid more builtin helpers for bit count
+- vdpa/nfp: fix hardware initialization
+- event/opdl: remove single event enqueue and dequeue
+- event/octeontx: remove single event enqueue and dequeue
+- event/dpaa: remove single event enqueue and dequeue
+- event/dpaa2: remove single event enqueue and dequeue
+- event/cnxk: remove single event enqueue and dequeue
+- event/cnxk: support CN20K Rx/Tx event vector
+- event/cnxk: add CN20K event port preschedule
+- event/cnxk: add CN20K event port quiesce
+- common/cnxk: rearrange struct to remove hole
+- dts: rename build target to DPDK build
+- app/eventdev: measure DMA adapter latency
+- app/graph: replace strtok with reentrant version
+- net/nfp: update Tx and Rx for multiple PF
+- dts: add l2fwd test suite
+- virtio: optimize stats counters performance
+- dts: add API doc sources
+- event/sw: remove single event enqueue and dequeue
+- dma/dpaa: support scatter-gather
+- net/bnxt/tf_ulp: add stats cache for Thor2
+- test/mempool_perf: test with larger bursts
+- dts: add text parser for testpmd verbose output
+- crypto/dpaa2_sec: enhance IPsec RFLC handling
+- cryptodev: add EdDSA asymmetric algorithm
+- eal: factorize parser for log level
+- dma/dpaa: add QDMA stall workaround for ERR050265
+- doc: update supported firmware version for CPFL
+- dts: add API doc generation
+- event/dlb2: support independent enqueue
+- examples/fips_validation: prehash input for RSA
+- net/gve: support TSO in DQO RDA
+- dts: support simpler topologies
+- net/mlx5: disable config restore
+- baseband/acc: enhance SW ring alignment
+- log: colorize log output
+- dts: enable copying directories to and from nodes
+- ethdev: convert string initialization
+- test/argparse: rework test cases
+- test/fib: fix RCU tests
+- graph: expose node context as pointers
+- test: restore cfgfile tests
+- maintainers: update for log library
+- kvargs: rework process API
+- net/dpaa2: dump DPDMUX counters
+- net/bnxt/tf_ulp: support VF to VF flow offload
+- app/procinfo: dump memory heap
+- baseband/fpga_5gnr_fec: remove useless cast
+- eal/linux: fix VFIO hotplug with multiprocess
+- dts: add Rx offload capabilities
+- dts: add checksum offload to testpmd shell
+- doc: update release notes for 24.11
+- event/dsw: remove single event enqueue and dequeue
+- dts: remove external dependency on Python doc
+- uapi: import Linux kernel uAPI headers
+- net/bnxt/tf_ulp: support metering for Thor2
+- baseband/acc: refactor resources freeing
+- bus/dpaa: fix VSP for 1G fm1-mac9 and 10
+- common/cnxk: move algo enums
+- ip_frag: remove unaligned variable
+- net/mlx5: create STE array matcher
+- usertools/devbind: print device NUMA node
+- maintainers: update for Intel NIC drivers
+- baseband/acc: refactor queue stats update
+- common/cnxk: implement SSO HW info
+- net/nfp: reformat header of logs
+- event/skeleton: remove single event enqueue and dequeue
+- crypto/openssl: add SM2 capabilities
+- net/nfp: reformat abbreviations in logs
+- doc: remove crypto event callback deprecation
+- dts: rework packet addressing
+- crypto/ipsec_mb: bump minimum IPsec MB version
+- dts: add Pydantic dependency
+- dts: add aenum dependency
+- net/ntnic: add slicer (SLC LR) FPGA module
+- uapi: import VDUSE header
+- net/bnxt/tf_ulp: support Thor2 ULP layer
+- net/dpaa2: support FLC stashing
+- dts: fix custom enum behaviour with doc
+- dts: add doc generation dependencies
+- net/ntnic: migrate to DPDK spinlock
+- dma/dpaa: add workaround for ERR050757
+- dts: remove git ref option
+- baseband/acc: refactor queue allocation
+- eal: annotate allocation functions
+- crypto/qat: fix modexp/inv length
+- usertools/cpu_layout: print CPU NUMA node
+- rcu: refactor thread register and unregister
+- maintainers: fix prog guide paths
+- net/nfp: initialize PF representor port
+- vdpa/nfp: setup vring relay thread
+- vhost: revert VDUSE uAPI header
+- net/bnxt/tf_ulp: optimize with inline and prediction
+- fib6: add runtime checks in AVX512 lookup
+- dts: remove nested html directory for API doc
+- maintainers: update for Intel IPU drivers
+- bbdev: add k0 parameter for LDPC decoder
+- baseband/acc: saturate input to 6 bits for VRB decoder
+- power: fix typo in PM QoS doc
+- net/bnxt/tf_ulp: fix VFR cleanup and stats lockup
+- drivers: replace logging helpers
+- dts: add autodoc Pydantic
+- raw/cnxk_rvu_lf: introduce RVU LF device driver
+- eal: add unreachable and precondition hints
+- version: 24.11.0
+- log: rework syslog handling
+- net/mlx5/hws: introduce STE array matcher
+- crypto/dpaa_sec: support IPsec diffserv and ECN
+- app/testpmd: reuse RSS config when configuring DCB
+- crypto/dpaa2_sec: enhance PDCP FLC handling
+- doc: allow warnings in Sphinx for DTS
+- crypto/cnxk: align passthrough data for SM ciphers
+- vhost: refactor VDUSE reconnection log mapping
+- common/mlx5: fix misalignment
+- crypto/ipsec_mb: support HMAC SM3 algorithm
+- crypto/ipsec_mb: support SM4 algorithm
+- crypto/ipsec_mb: support SM3 algorithm
+- argparse: replace flag enum with macros
+- maintainers: update for DLB driver
+- app/crypto-perf: support EdDSA
+- crypto/cnxk: support EdDSA
+- cryptodev: reorder structures in asym crypto header
+- crypto/cnxk: add PMD API to flush CTX
+- net/bnxt/tf_ulp: miscellaneous fixes
+- crypto/dpaa_sec: support UDP-encapsulated ESP
+- raw/cnxk_rvu_lf: add NPA/SSO PF func get
+- net/bnxt/tf_ulp: support VXLAN-GPE
+- eal/x86: cache queried CPU flags
+- net/bnxt/tf_ulp: support Wh+ mirroring
+- trace: disable traces at compilation
+- net/ntnic: add hasher (HSH) FPGA module
+- hash: fix thash LFSR initialization
+- crypto/openssl: fix 3DES-CTR with big endian CPUs
+- crypto/dpaa2_sec: rework debug logs
+- devtools: forbid use of builtin helpers
+- crypto/dpaa2_sec: support IPv6 UDP encapsulation
+- fib: implement RCU rule reclamation
+- baseband/acc: tune LDPC decoder algorithm
+- app/testpmd: interleave SSE SIMD in MAC swap
+- net/ena: revert redefining memcpy
+- mbuf: fix strict aliasing in allocator
+- ci: install libvirt
+- dma/dpaa: refactor driver
+- dma/dpaa2: refactor driver
+- dma/dpaa2: configure route by port by PCIe port param
+- net/bnxt/tf_ulp: update VFR for Thor 2
+- ipsec: allow stateless IPsec processing
+- crypto/openssl: support EdDSA
+- version: 24.11-rc4
+- version: 24.11-rc0
+- version: 24.11-rc1
+- version: 24.11-rc3
+- version: 24.11-rc2
+- vdpa/nfp: fix reconfiguration
+- fib: rename configuration flag for IPv4 lookup
+- dts: remove warlock dependency
+- cryptodev: update RSA xform for ASN.1 syntax
+- argparse: fix hyphens in doc
+- maintainers: update for crypto/bcmfs
+- test/crypto: remove bool redefinition
+- cryptodev: add SM4-XTS
+- ci: remove workaround for ASan in Ubuntu GHA images
+- vdpa/nfp: setup VF configure
+- ethdev: rework config restore
+- maintainers: update for DTS
+- dts: update params and parser docstrings
+- maintainers: update for hns3
+- doc: reorganize prog guide
+- app/dma-perf: clarify incorrect NUMA config
+- vdpa/nfp: refactor datapath update
+- fib: fix AVX512 lookup
+- mempool/cnxk: initialize mempool ops for CN20K

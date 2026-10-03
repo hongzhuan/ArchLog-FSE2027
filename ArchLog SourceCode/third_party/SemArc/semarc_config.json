@@ -1,0 +1,20 @@
+{
+  "LLM_MODEL": "deepseek-v4-flash",
+  "AVAIL_LLM_MODELS": [
+    "deepseek-v4-flash",
+    "deepseek-coder",
+    "deepseek-reasoner",
+    "deepseek-ai/DeepSeek-R1",
+    "qwen-max",
+    "gpt-4o",
+    "gpt-4o-mini"
+  ],
+  "EMBEDDING_MODEL": "text-embedding-3-small",
+  "USE_PROXY": false,
+  "proxies": {},
+  "API_URL_REDIRECT": {},
+  "DASHSCOPE_BASE_URL": "",
+  "DEFAULT_WORKER_NUM": 8,
+  "TIMEOUT_SECONDS": 300,
+  "MAX_RETRY": 2
+}

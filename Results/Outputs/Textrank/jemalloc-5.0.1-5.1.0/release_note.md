@@ -1,0 +1,172 @@
+# VerLog-style TextRank Release Note
+
+- Repository: jemalloc
+- Version pair: 5.0.1 -> 5.1.0
+- Pair id: jemalloc-5.0.1-5.1.0
+- Input commits: 166
+- Candidate sentences: 160
+- GT-length budget: 94
+- Extracted entries: 160
+
+## Extracted Entries
+
+- Add entry and exit logging to all core functions.
+- Tweak the ticker paths to help GCC generate better code.
+- Stack address should not be used for ordering mutexes
+- Use tsd offset_state instead of atomic
+- Remove unused code in test/thread_tcache_enabled.
+- Pull out caching for a bin into its own file.
+- Add configure-time detection for madvise(..., MADV_DO[NT]DUMP)
+- Change mutable option output in stats to avoid stringify issues.
+- Put static keyword first.
+- Add opt.thp which allows explicit hugepage usage.
+- ARM: Don't extend bit LG_VADDR to compute high address bits.
+- Add the div module, which allows fast division by dynamic values.
+- Bypass extent_alloc_wrapper_hard for no_move_expand.
+- Filter out "newImpl" from profiling output.
+- Split up and standardize naming of stats code.
+- Try to use sysctl(3) instead of sysctlbyname(3).
+- Emitter: Add support for row-based output in table mode.
+- Filter out "void *newImpl" in prof output.
+- Add a test of behavior under multi-threaded forking.
+- Add more tests for extent hooks failure paths.
+- Use extent_heap_first for best fit.
+- Stats printing: Move emitter -> manual cutoff point.
+- Fix include path order for out-of-tree builds.
+- Avoid setting zero and commit if split fails in extent_recycle.
+- Define MADV_FREE on our own when needed.
+- Modify configure to determine return value of strerror_r.
+- Document the potential issues about opt.background_thread.
+- Add UNUSED to avoid compiler warnings.
+- Fix type warning on Windows.
+- Make generated headers usable in both x86 and x64 mode in Visual Studio
+- Consolidate the two memory loads in rtree_szind_slab_read().
+- Fix huge page test in test/unit/pages.
+- Fix test/unit/pages.
+- Fix test/integration/extent.
+- Stats printing: Move global mutex stats to use emitter.
+- Fix a background_thread shutdown issue.
+- Document some of the internal extent functions.
+- Skip test_alignment_and_size if percpu_arena is enabled.
+- Define JEMALLOC_NO_PRIVATE_NAMESPACE also in Visual Studio x86 targets
+- Split out cold code path in newImpl
+- Avoid a resource leak down extent split failure paths.
+- Check tsdn_null before reading reentrancy level.
+- Stats printing: move stats_print_helper to use emitter.
+- Output opt.lg_extent_max_active_fit in stats.
+- Make sure JE_CXXFLAGS_ADD uses CPP compiler
+- Factor out extent-splitting core from extent lifetime management.
+- Add opt.lg_extent_max_active_fit
+- Delay background_thread_ctl_init to right before thread creation.
+- Only run test/integration/sdallocx non-reentrantly.
+- In iallocztm, check lock rank only when not in reentrancy.
+- Stats printing: convert most per-arena stats to use the emitter.
+- Change opt.metadata_thp to [disabled,auto,always].
+- Add a "dumpable" bit to the extent state.
+- Add "falls through" comment explicitly.
+- Make arena stats collection go through cache bins.
+- Update ChangeLog for 5.1.0.
+- Implement arena regind computation using div_info_t.
+- Stats printing: Make arena mutex stats use the emitter.
+- Skip test/unit/pack when profiling is enabled.
+- Stats printing: Convert arena large stats to use emitter.
+- Fix MSVC 2015 project and add a VS 2017 solution
+- Disable JEMALLOC_HAVE_MADVISE_HUGE for arm* CPUs.
+- Stats printing: convert config and opt output to use emitter.
+- Allow setting extent hooks on uninitialized auto arenas.
+- Fix arguments passed to extent_init.
+- Fix a link for dirty_decay_ms in manual.
+- Stats printing: Convert general arena stats to use the emitter.
+- Avoid left shift by negative values.
+- Improve the fit for aligned allocation.
+- Add runtime detection of lazy purging support.
+- Stats printing: Move emitter cutoff point into stats_arena_print.
+- Fix MSVC build
+- Only read szind if ptr is not paged aligned in sdallocx.
+- Remove documentation for --disable-thp which was removed.
+- Also use __riscv to detect builds for RISC-V CPUs.
+- Pull out arena_bin_info_t and arena_bin_t into their own file.
+- Remove config.thp which wasn't in use.
+- Stats printing: Remove explicit callback passing to stats_print_helper.
+- Stats printing: convert decay stats to use the emitter.
+- Logging: log using the log var names directly.
+- Stats printing: Convert profiling stats to use the emitter.
+- Use getpagesize(3) under FreeBSD.
+- Add arena.i.retain_grow_limit
+- Remove external linkage for spin_adaptive
+- Stats printing: convert paging and alloc counts to use the emitter.
+- Stats printing: convert arena bin stats to use emitter.
+- Remove the default value for JEMALLOC_PURGE_MADVISE_DONTNEED_ZEROS.
+- Set isthreaded manually.
+- Fix base allocator THP auto mode locking and stats.
+- Over purge by 1 extent always.
+- Stats printing: move non-mutex arena stats to the emitter.
+- Document liveness requirements for extent_hooks_t structures.
+- run_tests.sh: Don't test large vaddr with -m32.
+- Move bin stats code from arena to bin module.
+- Use ph instead of rb tree for extents_avail_
+- Background threads: fix an indexing bug.
+- Reformat the version number in jemalloc.pc.in.
+- Add the --disable-initial-exec-tls configure option.
+- Add missing mallctl unit test for abort_conf.
+- Output all counters for bin mutex stats.
+- Add missing deregister before extents_leak.
+- Add a logging facility.
+- Use hugepage alignment for base allocator.
+- handle 32 bit mutex counters
+- Allow toolchain to determine nm
+- Fall back to FD_CLOEXEC when O_CLOEXEC is unavailable.
+- Stats printing: Convert header and footer to use emitter.
+- Fix an extent coalesce bug.
+- Fix extent deregister on the leak path.
+- Fix support for GNU/kFreeBSD
+- Document the ialloc function abbreviations.
+- Relax constraints on reentrancy for extent hooks.
+- Power: disable the CPU_SPINWAIT macro.
+- Remove a redundant '--with-malloc-conf=tcache:false' from gen_run_tests.py
+- Move bin forking code from arena to bin module.
+- Add missing field in initializer for rtree cache.
+- Rename cache_alloc_easy to cache_bin_alloc_easy.
+- background_thread: add max thread count config
+- Avoid a printf format specifier warning.
+- configure: Add --with-lg-vaddr configure option.
+- Stats printing: remove a spurious newline.
+- aarch64: Add ILP32 support.
+- Enable a0 metadata thp on the 3rd base block.
+- extents: Remove preserve_lru feature.
+- Fix unbounded increase in stash_decayed.
+- Force Ubuntu "precise" for Travis CI builds.
+- Invoke dlsym() on demand.
+- Adding install_lib_pc
+- Logging: capitalize log macro.
+- run_tests.sh: Test --with-lg-vaddr.
+- Silence a compiler warning.
+- Validates fd before calling fcntl
+- Logging: allow logging with empty varargs.
+- Add support for m68k, nios2, SH3 architectures
+- metadata_thp: auto mode adjustment for a0.
+- Remove an incorrect assertion.
+- Move bin initialization from arena module to bin module.
+- Update copyright dates.
+- Fix deadlock in multithreaded fork in OS X.
+- Control idump and gdump with prof_active.
+- Add pages_dontdump and pages_dodump.
+- extent_t bitpacking logic refactoring
+- Add TUNING.md.
+- jemalloc_mangle.sh: set sh in strict mode
+- Fix abort_conf processing.
+- INSTALL.md: Clarify --with-lg-vaddr.
+- Implement opt.metadata_thp
+- Revert "CI: Remove "catgets" dependency on appveyor."
+- Fix a typo in INSTALL.md.
+- Introduce the emitter module.
+- Add stats for metadata_thp.
+- dumpbin doesn't exist in mingw
+- Clear cache bin ql postfork.
+- CI: Remove "catgets" dependency on appveyor.
+- Mallctl: Add arenas.lookup
+- Fix a typo in stats.
+- Eagerly coalesce large extents.
+- Fix const qualifier warnings.
+- Fix a typo.
+- whitespace

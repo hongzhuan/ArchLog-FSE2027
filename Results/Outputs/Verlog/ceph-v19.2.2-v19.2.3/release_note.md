@@ -1,0 +1,132 @@
+- Added CephFS charmap support for file/directory names with alternate character sets and configurable case sensitivity, encoding, and Unicode normalization.
+- Added block-level differential synchronization (blockdiff) for CephFS mirroring to efficiently transfer only changed blocks.
+- Added NBD stream support for RBD live migration, enabling imports from NBD sources.
+- Added support for external clusters in RBD live migration.
+- Added `rbd_diff_iterate3()` API to specify source snapshot by ID.
+- Fixed a deadlock in RBD mirror image disable and a crash in `get_rollback_snap_id`.
+- Fixed potential recursive lock in `ImageReplayer` and lock release order in rbd-mirror.
+- Fixed RBD mirror state display and status writing during image creation.
+- Disallowed `rbd trash mv` for images in a group and improved error messages.
+- RBD group snapshot creation now respects `rbd_default_snapshot_quiesce_mode`.
+- Made RGW ETag format consistent with AWS S3 (values now quoted).
+- Added `--force` option to `radosgw-admin object rm` for forced removal.
+- Added `rgw_s3select_disable` option to reject S3 Select requests.
+- Fixed CVE-2024-48916 by disallowing unsupported JWT algorithms in `AssumeRoleWithWebIdentity`.
+- Added support for enabling Object Lock on existing S3 buckets via `PutObjectLockConfiguration`.
+- Fixed RGW multisite bucket creation forwarding, location constraint handling, and stale index entries.
+- Allowed RGW bucket creation in secondary zonegroups and fixed bucket deletion there.
+- Added policy evaluation for ARN-based conditions in IAM.
+- Improved RGW Kafka notification connection pooling with user credentials.
+- Fixed `rgw-gap-list` bugs and improved `radoslist` for gap detection.
+- Added `radosgw-admin account rm --purge-data` command.
+- Lowered default thread pool size in `radosgw-admin`.
+- Mapped RGW `ENOSPC` errors to HTTP 507 InsufficientCapacity.
+- Fixed RGW shutdown crash with ops-log enabled and unwatch error handling.
+- Fixed RGW URL decoding in copy source and added empty string check.
+- Fixed RGW cloud-restore internal headers and lifecycle non-current object handling.
+- Removed deprecated options `pubsub_event_triggered` and `pubsub_event_lost`; added `persistent_topic_size`.
+- Fixed RGW STS role creation after sync, OIDC provider caps, and JWT validation improvements.
+- Fixed `merge_and_store_attrs` when recreating RGW buckets and deleting bucket attributes.
+- Fixed RGW `CreateBucket` race condition with racing `DeleteBucket`.
+- Fixed RGW versioning to allow multiple stacked delete markers.
+- Fixed RGW `InitMultipart` permissions to use object ARN.
+- Fixed `rgw_transport_is_secure` to correctly determine domain URI prefix.
+- Added RGW prefetch of data from versioned object instance head for performance.
+- Added health check for RGW pubsub push topics and fixed Lua health checks.
+- Fixed RGW `radosgw-admin` bucket deletion error codes and pool full handling.
+- Fixed RGW `s3select` error flow and broken connections.
+- Fixed RGW `d4n` filter unit tests and valgrind invalid read.
+- Fixed `radoslist` with SLO manifests.
+- Fixed RGW `PutObjectLockConfiguration` enabling object lock on existing buckets.
+- Fixed `CreateBucketConfiguration` XML forwarding in RGW multisite.
+- Fixed RGW `bilog_flags` for null version in multisite.
+- Fixed `cls_rgw_bucket_unlink_instance` with bilog_flags.
+- Fixed RGW sync fairness watcher reconnections on any error.
+- Fixed RGW data sync retry on any error.
+- Fixed RGW `account rm` to properly handle negative values.
+- Fixed RGW `request payer` logging exclusion for 403 requests.
+- Fixed RGW `url_decode` revert and removal of double decode.
+- Fixed RGW `D3N` invalid read on exit.
+- Added `x-amz-replication-status` header for pending and completed RGW replication.
+- Added SASL authentication for RGW notification topics with Kafka brokers.
+- Added RGW bucket link/unlink support for accounts.
+- Added validation to reject RGW user creation with UIDs matching the account ID format.
+- Fixed RGW lifecycle transition action check.
+- Fixed RGW redirect URL not appending query string.
+- Fixed data corruption in RGW when RADOS operations return ETIMEDOUT.
+- Fixed RGW AbortMultipartUpload to correctly map NoSuchKey to NoSuchUpload.
+- Fixed race condition in RGW AbortMultipartUpload by adding lock.
+- Fixed tag checking logic in RGW bucket exports.
+- Fixed expired delete-marker deletion in RGW lifecycle expiration.
+- Fixed RGW Swift bucket listing to include the `last_modified` field.
+- Fixed S3 Delete Bucket Policy to return HTTP 204 status on success.
+- Added chunked transfer encoding support for RGW S3 Select responses.
+- Added `ceph auth rotate` command to rotate authentication keys.
+- Added `ceph mgr status` command to query manager status.
+- Added `ceph orch hardware status` command (node-proxy) to view hardware status.
+- Added command to remove invalid pg-upmap-primary entries.
+- Added `ceph-bluestore-tool` commands: `bluefs-super-dump`, `show-label-at`.
+- Added `ceph-kvstore-tool` read-only DB open mode.
+- Added `ceph-objectstore-tool` read-only DB mode and `--no-superblock` option for PG export.
+- Added BlueStore fragmentation health warning.
+- Introduced hybrid_btree2 allocator for BlueStore, improving allocation performance.
+- Fixed BlueStore race condition between `truncate()` and `unlink()`.
+- Fixed BlueStore bdev label validation and expansion issues.
+- Fixed BlueStore estimate of log size and `ExtentDecoderPartial` blob consumption.
+- Fixed BlueFS reserved space handling.
+- Added config options: `osd_recovery_sleep_degraded`, `osd_recovery_sleep_degraded_ssd`, `osd_recovery_sleep_degraded_hdd`.
+- Added health check `NONEXISTENT_MON_CRUSH_LOC_STRETCH_MODE` for stretch mode.
+- Improved Grafana dashboards with TimeSeries panels and added `ceph_daemon` filter for RGW.
+- Dashboard: Added `--force` flag for listeners to force configuration.
+- Dashboard: Enabled HA by default on subsystem POST API.
+- Dashboard: Added confirmation textbox for resource name on delete actions.
+- Dashboard: Allowed FQDN for RGW Multisite endpoints configuration.
+- Dashboard: Added prometheus read permission to `cluster_mgr` role.
+- Dashboard: Allowed dot(`.`) in user_id and alphanumeric/underscore in tenant in user form.
+- Dashboard: Fixed empty ceph version in GET api/hosts.
+- Dashboard: Fixed image size in NVMe-oF namespace API.
+- Dashboard: Fixed lifecycle get request by adding `xmltodict` import.
+- Dashboard: Disabled deleting buckets with objects.
+- Dashboard: Fixed subuser creation.
+- Dashboard: Fixed NVMe-oF upgrade not updating configuration.
+- Dashboard: Fixed `rbd-details` Grafana panel image filter query.
+- Dashboard: Added additional CLI endpoints for NVMe-oF.
+- Dashboard: Renamed critical-confirmation-modal to delete-confirmation-modal.
+- Dashboard: Fixed variable capitalization in embedded rbd-details panel.
+- Fixed RGW total objects and average object size in Dashboard Overview page.
+- Fixed RGW latency chart data units in Dashboard overview page.
+- Fixed configuration options not updatable at runtime in Dashboard.
+- Fixed zonegroup delete notification in Dashboard.
+- Cephadm: Fixed cert-store `save_cert` method logic.
+- Cephadm: Fixed zap devices by checking `ceph_device_lvm` field.
+- NFS: Fixed mgr not ignoring NFS clusters from rados pool conf objects and prevented crash.
+- Fixed CephFS client privilege escalation vulnerability allowing unprivileged users to escalate root privileges.
+- Fixed CephFS race condition when printing Inode in `ll_sync_inode`.
+- CephFS mirror avoids latest changes on source FS to enable mirroring.
+- Added CephFS charmap support for subvolumes/subvolgroups.
+- Added `mds_command2` for asynchronous commands.
+- CephFS now returns POSIX/system error codes instead of CephFS-specific codes.
+- Added `mds_allow_async_dirops` configuration option in CephFS.
+- Added admin socket command to dump MDS export states.
+- Added support for removing CephFS virtual extended attributes (vxattrs).
+- Fixed CephFS client read operation hang when caps are revoked.
+- Fixed CephFS file cache cap leak that could stall async read calls.
+- Fixed CephFS symlink open with O_PATH and O_NOFOLLOW.
+- Fixed CephFS full-object read CRC mismatch after truncate.
+- Fixed cephfs-top exceptions on small and large window sizes.
+- Fixed CephFS directory reset missing file descriptor reset.
+- Fixed path generation for unlinked snapped files in MDS.
+- Fixed CephFS client fallocate to return EOPNOTSUPP for mode 0.
+- ceph-volume: Added support for zapping partitions on multipath devices.
+- ceph-volume: Supported splitting DB even in collocated scenarios.
+- ceph-volume: Improved wipefs retry logic in zap.
+- ceph-volume: Fixed splitting with too many parts.
+- ceph-volume: Added support for zapping RAW OSDs by OSD ID.
+- Added systemd unit file and Debian package for ceph-exporter.
+- Added `disable_stretch_mode` command to exit stretch mode in monitors.
+- Added generic cluster log level configuration in LogMonitor.
+- Added `ceph` label back to container images.
+- Exclude destroyed OSDs from `ceph node ls` output.
+- Fixed buffer out-of-bounds in HTMLFormatter and formatter.
+- Fixed loop device support in ceph-volume.
+- Added documentation for new `ceph auth rotate` command, `rgw-gap-list` tool, OAuth2 SSO in dashboard, and NFS cluster availability.

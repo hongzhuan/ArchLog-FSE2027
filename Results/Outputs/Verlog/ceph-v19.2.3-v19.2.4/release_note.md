@@ -1,0 +1,34 @@
+- Added periodic SSL certificate hot-reload for RGW Beast frontends
+- New CephFS commands: `ceph fs snapshot getpath` and `ceph fs snapshot mirror ls`
+- OSD creation supports running a benchmark test with `--run-benchmark` to measure performance
+- Introduced RBD exclusive transient lock mode for more flexible lock acquisition
+- `radosgw-admin` now allows specifying an SSL certificate for operations
+- CephFS statfs now accepts a path argument to retrieve per-directory filesystem statistics
+- CephFS subvolume info now shows clone source information
+- CephFS MDS now includes fragment tree and system info in status output
+- Monitor added topology-aware netsplit detection and warning
+- RGW bucket listing now supports pagination with `--max-entries` and `--marker`
+- RGW added configurable JWKS URL verification and checks all JWKS keys for STS
+- RGW added metrics for Kafka and AMQP message sends
+- Dashboard now uses persistent volume for Loki database
+- Cephadm added `--continue-on-failure` option when applying multiple specs
+- Cephadm allows disabling RGW sync thread via service spec
+- Cephadm now opens ceph-exporter port when firewalld is enabled
+- OSD added `clear_shards_repaired` admin command
+- Monitoring upgraded Grafana to version 12.3.1
+- Added warning when ISA-L compression is enabled but not supported on the platform
+- Documentation added for snapshot getpath, snapshot mirror ls, dump stray, RBD clone settings, CephFS quotas, mclock QoS, telemetry stretch_mode, and RGW lifecycle/cache functions
+- Fixed asynchronous fsync request reference counting in CephFS client
+- Fixed zero-byte file reads, metadata corruption, and memory leaks in async I/O in CephFS client
+- Fixed premature MON_DOWN warning for freshly added monitors
+- Fixed incomplete demote snapshot sync in RBD mirror after daemon restart
+- Fixed ENOSPC errors in bucket notifications due to reserved size drift in RGW
+- Fixed empty storage class display for multipart uploads in RGW
+- Fixed service creation failure when service name matches service type in Dashboard
+- Fixed health popover not displaying in Dashboard
+- Fixed NFS export editor rejecting IPv6 addresses in Dashboard
+- Fixed crash on `raw list` with non-existent loop devices in Ceph-volume
+- Fixed incorrect allowed connection modes in msgr2 responses for authentication
+- Fixed shutdown hang in AsyncMessenger by draining stack before stopping processors
+- Fixed CephPgImbalance, MTU Mismatch, and OSD Advanced panel alerts in Monitoring
+- Fixed RGW sync overview filtering and cluster matcher backward compatibility in Monitoring

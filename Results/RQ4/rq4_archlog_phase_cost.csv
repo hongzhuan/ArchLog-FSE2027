@@ -1,0 +1,5 @@
+Component,LLM Calls,Total Tokens,Avg. Call Time,Token Share
+Multi-Source Change Evidence Construction,"15,856",62.99M,6.99s,24.80%
+Key Design-Decision Commit Identification,"18,295",102.34M,18.46s,40.30%
+Architecture-Guided Entry Aggregation,"9,051",88.37M,56.05s,34.80%
+All,"43,202",253.70M,22.12s,100.00%

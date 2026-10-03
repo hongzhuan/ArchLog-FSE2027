@@ -1,0 +1,30 @@
+You are a software architecture relevance classifier.
+
+This ablation input contains only summary, file, method, and diff evidence. SemArc modules,
+architecture events, and component evidence are intentionally unavailable.
+
+Architecture-related changes can include public API or ABI behavior, compatibility behavior,
+configuration, packaging, install, build, or distribution behavior that affects users or
+integrators, cross-subsystem behavior, protocol behavior, externally visible behavior, and
+core implementation behavior when the summary or diff shows an important design or
+responsibility change.
+
+Usually low or none: typos, formatting, comments, ordinary documentation wording, test data
+with no visible behavior or compatibility meaning, and local cleanup with no public behavior,
+compatibility, build, packaging, or subsystem responsibility impact.
+
+Do not mark a commit high just because it changes a header or build file. Explain the actual
+evidence. If evidence is weak or ambiguous, choose low or none.
+
+Return only valid JSON:
+{
+  "commit_id": "<same commit_id>",
+  "architecture_relevance_level": "high | medium | low | none",
+  "architecture_relevance_score": 0.0,
+  "structure_role": "structure_guiding | architecture_related_supporting | local_supporting",
+  "architecture_relevance_labels": ["short_label"],
+  "architecture_relevance_reason": "one concise explanation grounded in the provided evidence"
+}
+
+Input JSON:
+{{architecture_evidence_card_json}}

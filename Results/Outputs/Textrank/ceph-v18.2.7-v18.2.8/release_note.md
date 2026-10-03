@@ -1,0 +1,1000 @@
+# VerLog-style TextRank Release Note
+
+- Repository: ceph
+- Version pair: v18.2.7 -> v18.2.8
+- Pair id: ceph-v18.2.7-v18.2.8
+- Input commits: 1063
+- Candidate sentences: 988
+- GT-length budget: 342
+- Extracted entries: 988
+
+## Extracted Entries
+
+- reef: doc/rgw: document Admin and System Users
+- reef: mgr/dashboard: fix zone update API forcing STANDARD storage class
+- reef: os/bluestore: Fix ExtentDecoderPartial::_consume_new_blob
+- qa/cephfs: test that user created pool is not deleted by...
+- reef: ceph-volume: fix regex usage in set_dmcrypt_no_workqueue
+- os/bluestore: Fix ExtentDecoderPartial::_consume_new_blob
+- reef: bluestore/BlueFS: fix bytes_written_slow counter with aio_write
+- reef: mds: Fix readdir when osd is full.
+- tools/ceph-kvstore-tool: open DB in read-only whenever sufficient
+- reef: rgw: make incomplete multipart upload part of bucket check efficient
+- reef: mgr/dashboard: use system packages when running tox
+- doc/rgw: remove metrics.rst which did not apply to reef
+- tools/ceph-objectstore-tool: permit --no-superblock switch for pg export
+- ceph-volume: fix regex usage in set_dmcrypt_no_workqueue
+- reef: tools/ceph-objectstore-tool: tricks to tolerate disk errors for "pg export" command
+- reef: doc: Fix links to mClock config reference
+- tools/ceph-objectstore-tool: open object store's DB in read-only mode
+- mgr/dashboard: fix zone update API forcing STANDARD storage class
+- reef: suites/rados: cache tier deprecated, no need to keep the tests for it
+- reef: doc/monitoring: correct list formatting
+- reef: mgr/vol: print proper message when subvolume metadata filename is too long
+- reef: mgr/dashboard: add .nvmrc so ci can pick the node version
+- script/build-with-container: optionally source WITH_CRIMSON from env file
+- rgw: allow multisite specification used w/ rgw-restore-bucket-index script
+- reef: mgr/dashboard: Fix empty ceph version in GET api/hosts
+- reef: rgw: allow bucket notification send message to kafka with multiple br…
+- doc: Fix links to mClock config reference
+- mgr/dashboard: use system packages when running tox
+- suites/rados: cache tier deprecated, no need to keep the tests for it
+- os/bluestore: Add csum_type to WriteContext
+- reef: mgr/dashboard: fix make check tests
+- script/build-with-container: fix rpm build step when using an overlay
+- reef: mds: use SimpleLock::WAIT_ALL for wait mask
+- reef: mds: add more debug logs and log events
+- qa/.../osd-scrub-test.sh: don't use /etc/fstab to corrupt the data
+- reef: mgr/vol: don't delete user-created pool in "volume create" command
+- reef: doc/rados/operations: Address suggestions for stretch-mode.rst
+- reef: scrub: use a generic interface for scheduling timer based events
+- mds: print the path depth to help debug mds issue
+- script/build-with-container: fix incorrect build invocation for tests
+- rgw: make incomplete multipart upload part of bucket check efficient
+- install-deps.sh: let FOR_MAKE_CHECK variable take precedence
+- reef: mds: do not process client metrics message with fast dispatch
+- doc/rgw: document Admin and System Users
+- rgw/cloud-restore: Do not send internal headers to cloud-endpoint
+- [reef] rgw/dbstore: Update bucket attrs as part of put_info()
+- reef: doc/rgw: remove metrics.rst which did not apply to reef
+- reef: PendingReleaseNotes; doc/rados/operations: document "rm-pg-upmap-primary-{all}" commands
+- reef: doc/rgw: use 'confval' directive to render sts config options
+- reef: doc/rgw: add man documentation for the rgw-gap-list tool
+- reef: LogMonitor: set no_reply for forward MLog commands
+- os/bluestore: do not call allocator's release on empty set
+- reef: doc: Clarify the status of MS Windows client support
+- tool/ceph_objectstore_tool: ignore read errors during pg export
+- script/build-with-container: handle failure to find source rpm better
+- script: ensure curl is always available in build containers
+- reef: src/common: add guidance for deep-scrubbing ratio warning
+- reef: qa/rgw: bump maven version in hadoop task to resolve 404 Not Found
+- reef: TEST_backfill_grow fails after finding "num_bytes mismatch" in osd log
+- qa/cephfs: test passing pool names to "fs volume create" cmd
+- reef: doc/cephadm/services: Add mention of --zap for OSD removal
+- reef: doc/mgr/crash.rst: remove outdated module enabling instructions
+- reef: monitoring: add user-agent headers to the urllib
+- reef: doc/radosgw: Improve and more consistent formatting
+- reef: mgr/snap_schedule: handle volume delete
+- reef: doc/radosgw/s3: Document delete-if-unmodified-since
+- reef: doc/dev/release-process.rst: release builds cannot build containers
+- rgw/rados: use set_pool_full_try() when deleting tail objects
+- bluestore/BlueFS: fix bytes_written_slow counter with aio_write
+- reef: rgw: make keystone work without admin token(service ac requirement)
+- mon/MgrMontitor: add log entry to support debugging
+- rgw: add doc & doc testing for force option on radosgw-admin object rm ...
+- src/common: add guidance for deep-scrubbing ratio warning
+- rgw/sts: fix to pick jwk which is of type
+- mgr/vol: allow passing pool names to "fs volume create" cmd
+- mgr/dashboard: add .nvmrc so ci can pick the node version
+- reef: doc/dev/release-process.rst: document new Jenkins job for containers
+- fix:Add empty string check after url_decode
+- os/bluestore: do not log undecodable bdev label as an error
+- reef: mgr/vol: add command to get snapshot path
+- reef: src/common: add guidance for mon_warn_pg_not_scrubbed
+- doc/monitoring: correct list formatting
+- mgr/dashboard: fix make check tests
+- ceph-volume: do not convert LVs's symlink to real path
+- qa: use a larger timeout for kernel_untar_build workunit
+- reef: ceph-volume: do not convert LVs's symlink to real path
+- script/build-with-container: fix rpmbuild when no rpm build args are set
+- qa/rgw: bump maven version in hadoop task to resolve 404 Not Found
+- reef: pybind/mgr/dashboard: Use teuthology's actual requirements
+- reef: rgw: PutObjectLockConfiguration can enable object lock on existing buckets
+- os/bluestore: update main bdev label when expanding device.
+- doc/dev/release-process.rst: release builds cannot build containers
+- Revert "mgr/dashboard: pin lxml to fix run-dashboard-tox-make-check failure"
+- mgr/vol: don't delete user-created pool in "volume create" command
+- reef: doc/dev/config: Document how to use :confval: directive for config op…
+- doc/cephfs: Improve mount-using-fuse.rst
+- doc/rados/operations: Address suggestions for stretch-mode.rst
+- rgw: PutObjectLockConfiguration can enable object lock on existing buckets
+- reef: doc: update mgr modules notify_types
+- reef: osd_types: Restore new_object marking for delete missing entries
+- reef: auth: msgr2 can return incorrect allowed_modes through AuthBadMethodFrame
+- mgr/dashboard: Fix empty ceph version in GET api/hosts
+- doc/rados/operations: add kernel client procedure to read balancer documentation
+- reef: common/options: fix the description of osd_max_scrubs
+- os/bluestore: test _extend_log sequence advance
+- doc/dev/config: Document how to use :confval: directive for config options
+- TEST_backfill_grow fails after finding "num_bytes mismatch" in osd log
+- reef: mgr/dashboard: fix access control permissions for roles
+- mgr/vol: print proper message when subvolume metadata filename is too...
+- reef: mgr/rbd_support: always parse interval and start_time in Schedules::remove()
+- reef: doc/cephfs: Update deprecation notice in experimental-features.rst
+- reef: qa: use a larger timeout for kernel_untar_build workunit
+- reef: doc/cephadm: Add admonition re restarting an OSD service
+- rgw/dbstore: Update bucket attrs as part of put_info()
+- LogMonitor: set no_reply for forward MLog commands
+- reef: os/bluestore: fix bdev expansion and more
+- reef: common/pick_address: Add IPv6 support to is_addr_in_subnet
+- reef: blk/KernelDevice: Introduce a cap on the number of pending discards
+- qa/tasks/workunit: fix no module named 'pipes'
+- doc/mgr/crash.rst: remove outdated module enabling instructions
+- reef: mgr/snap_schedule: fix typo in error message during retention add
+- qa/tasks/cephfs/mount: introduce _default_gateway method
+- doc/rgw: add man documentation for the rgw-gap-list tool
+- doc/cephfs: mention new options for "fs volume create" cmd
+- src/common: add guidance for mon_warn_pg_not_scrubbed
+- qa/cephfs: add tests for "fs subvolume create" command when...
+- os/bluestore: fix edge case for bitmap alloc's claim_free_to_left(0)
+- qa: add test checking 'journal import' from empty dump file
+- reef: rgw: add force option to radosgw-admin object rm ...
+- qa/cephfs: mark file system joinable for fs rename tests before unmounting clients
+- reef: doc/radosgw/cloud-transition: fix details
+- qa/cephfs: use wait_for_daemon() instead of sleep()-ing
+- reef: doc: add note admonitions in two files
+- script/build-with-container: add log line with time taken
+- script/build-with-container: add more detailed variants
+- librbd: Clean up usage of IoCtx
+- rgw: rgw-restore-bucket-index -- sort uses specified temp dir
+- PendingReleaseNotes; doc/rados/operations: document "rm-pg-upmap-primary-{all}" commands
+- test/osd/TestMClockScheduler: create_item should pass prio < cutoff
+- reef: qa: increase the http.maxRequestBuffer to 100MB and enable the git debug logs
+- doc/radosgw/cloud-transition: fix details
+- doc/cephfs: note about volume deletion affecting snap-schedule Manager module
+- rgw: clean-up of some code
+- script/build-with-container: detect when cached build images need rebuilding
+- script/build-with-container: add build image variants
+- monitoring: add user-agent headers to the urllib
+- rgw/rados: use set_pool_full_try() when deleting head objects
+- rgw/rados: fix list_objects_ordered() detection of "forward progress"
+- reef: qa/tasks/workunit: fix no module named 'pipes'
+- reef: rgw: fix to correctly store updated attrs in backend store after erasing an attr/attrs for delete ops on a bucket.
+- reef: doc/rados/operations: Additional improvements to placement-groups.rst
+- mds: do not process client metrics message with fast dispatch
+- reef: os/bluestore: do cache locally compressor engines ever used
+- script/build-with-container: add ubuntu 20.04 (focal)
+- mgr/vol: add command to get snapshot path
+- reef: mgr/dashboard: show non default realm sync status in rgw overview page
+- run-make-check: Enable ctest resource allocation
+- reef: doc/cephfs: correct reference structure in fs-volumes.rst
+- script/build-with-container: cache git branch result
+- auth: msgr2 can return incorrect allowed_modes through AuthBadMethodFrame
+- reef: qa/tasks/ceph_manager: population must be a sequence
+- reef: doc/cephadm: Correct formatting in upgrade.rst
+- doc: Clarify the status of MS Windows client support
+- reef: cephfs-journal-tool: fix segfault during 'journal import' from invalid dump file
+- Reef: OSDMonitor: Make sure pcm is initialised
+- doc/dev/release-process.rst: document new Jenkins job for containers
+- reef: doc/rados/operations: Actually mention upmap_max_deviation setting …
+- mds: Fix readdir when osd is full.
+- reef: librbd/cache/pwl: fix memory leak in SyncPoint persist context cleanup
+- fix: remove double url_decode from the copy_source and fix url_decode
+- test/client: add ll_walk test with cwd and root path
+- script/build-with-container: improve error handling for invalid distros
+- reef: qa/cephfs: ignore warning that pg is stuck peering for upgrade jobs
+- reef: rbd-mirror: prevent image deletion if remote image is not primary
+- qa/tasks/ceph_manager: population must be a sequence
+- reef: cephfs,mon: fs rename must require FS to be offline and refuse_client_session to be set
+- osd_types: Restore new_object marking for delete missing entries
+- reef: common/options: fix typo in description
+- qa/tasks/cephfs/mount: use 'ip r' instead 'route'
+- rbd-mirror: prevent image deletion if remote image is not primary
+- script/build-with-container: be consistent with naming in distro kinds
+- reef: librbd: respect rbd_default_snapshot_quiesce_mode in group_snap_create()
+- os/bluestore: passing device type name parameter to kernel device
+- dashboard: ensure nodeenv downloaded content is owned by current user
+- dmclock/.../dmclock_server: do not clean clients with requests
+- qa: test cases to make sure invalid paths don't get updated
+- reef: pybind/mgr: pin cheroot version in requirements-required.txt
+- install-deps: Add Rocky 9, combine if statements
+- reef: doc/radosgw /notifications: fix topic details
+- mgr/dashboard: fix access control permissions for roles
+- reef: doc/cephadm: Add PG autoscaler advice to upgrade.rst
+- mgr/rbd_support: always parse interval and start_time in Schedules::remove()
+- doc/radosgw: Improve and more consistent formatting
+- librbd/cache/pwl: fix memory leak in SyncPoint persist context cleanup
+- reef: mon [stretch mode]: support disable_stretch_mode & qa/workunits/mon: ensure election strategy is "connectivity" for stretch mode
+- doc/cephfs: Update deprecation notice in experimental-features.rst
+- pybind/mgr/dashboard: Use teuthology's actual requirements
+- doc/rgw: use 'confval' directive to render sts config options
+- blk/KernelDevice: Introduce a cap on the number of pending discards
+- reef: doc/cephadm: improve "Maintenance Mode"
+- reef: doc/cephfs: Improve mount-using-fuse.rst
+- qa/rgw: fix ignorelist entry for 'HEALTH_WARN 1 pool(s) full'
+- script/build-with-container: add workarounds for older python versions
+- reef: cls/rbd: write image mirror status if state is CREATING
+- osd/scrubber: use schedule_timer_event_after for range block alarm
+- rbd: display correct mirror state when creating
+- run-make-check.sh: handle sudo and command that may not run in container
+- reef: rgw: bring rgw-restore-bucket-index up to current version
+- make-debs.sh: Optionally take debian version
+- rgw: make keystone work without admin token(service ac requirement)
+- rgw: rgw_init_ioctx() adds set_pool_full_try()
+- rgw: set modification time to sal::Bucket from RGWBucketEnt
+- OSDMonitor: Make sure pcm is initialised
+- reef: ceph.spec.in: add man/rgw-gap-list
+- reef: doc/radosgw: Improve formatting in layout.rst
+- reef: rgw: add missing last_modified field to swift API
+- [reef] os/bluestore: fix _extend_log seq advance
+- qa/suites/krbd: use a standard fixed-1 cluster in unmap subsuite
+- rgw/rados: remove get_obj_state() overload for follow_olh=true
+- reef: doc: do not depend on typed-ast
+- doc/cephadm: improve "Maintenance Mode"
+- doc/cephadm/services: Add mention of --zap for OSD removal
+- reef: doc/cephfs: Cosmetic changes and small fixes in cephfs-mirroring.rst
+- reef: doc/radosgw: improve "pubsub_push_pending" info
+- mds: rollback the snapdiff fragment entries with the same name if needed.
+- build-with-container: improve source rpm detection
+- reef: rgw: fix empty storage class on display of multipart uploads
+- reef: client: return EOPNOTSUPP for fallocate with mode 0
+- reef: blk/kerneldevice: notify_all only required when discard_drain wait for condition
+- qa/suites: Make fixed-4 an option for verify tests
+- reef: mgr/volumes: allow disabling async job threads
+- cephfs-journal-tool: check the headers in dump file after journal recovery
+- reef: mgr/DaemonState: Minimise time we hold the DaemonStateIndex lock
+- rgw: modify radoslist to better support the rgw-gap-list tool
+- doc/radosgw/s3: Document delete-if-unmodified-since
+- common/options: fix the description of osd_max_scrubs
+- tools/ceph-bluestore-tool: aliases for --path and --command options.
+- doc/radosgw: Cosmetic improvements in cloud-transition.rst
+- rgw: make error message more friendly on rgw-restore-bucket-index
+- doc: Remove sphinxcontrib-seqdiag Python package from RTD builds
+- reef: doc/rados/operations: Improve erasure-code.rst
+- reef: monitoring: fix MTU Mismatch alert rule and expr
+- doc/rados/operations: Additional improvements to placement-groups.rst
+- build-with-container: ensure npm dir is set up before configure
+- container: stop deleting python generated files
+- container: avoid installing docs using the dnf configuration
+- reef: doc/rados/operations: Improve placement-groups.rst
+- rgw: add missing last_modified field to swift api
+- reef: crush: use std::vector instead of variable length arrays
+- tool/ceph-bluestore-tool: Make bluefs-bdev-expand command output nicer.
+- librbd: respect rbd_default_snapshot_quiesce_mode in group_snap_create()
+- rgw: allow bucket notification send message to kafka with multiple brokers
+- debian/control: add iproute2 to build dependencies
+- rgw/lc: Fix issues with non-current objects with instance empty
+- reef: rgw: fix bug with rgw-gap-list
+- reef: doc/rados/operations: Add settings advice to balancer.rst
+- reef: qa/suites/krbd: use a standard fixed-1 cluster in unmap subsuite
+- mgr/snap_schedule: handle volume delete
+- reef: doc/radosgw: update aws specification link
+- doc/rados/operations/stretch-mode.rst: Added Exitting Stretch Mode
+- qa/workunits/rbd: moving mirror_image_snapshot to wait_for_replay_complete
+- os/bluestore: fix valgrind's "Invalid read" error in hybrid btree2
+- doc: update mgr modules notify_types
+- script/build-with-container: support --build-arg arguments
+- qa/cephfs: ignore warning that pg is stuck peering for upgrade jobs
+- cephfs-journal-tool: fix segfault during 'journal import' from invalid dump file
+- qa/rgw: suppress "pool(s) full" cluster warning for rados-pool-quota
+- rgw/s3: add part param and response to GetObj
+- common/interval_set: erase() func should be return an iterator
+- buildcontainer-setup.sh: allow testing with various ELish bases
+- mgr/DaemonState: Minimise time we hold the DaemonStateIndex lock
+- osd/scrubber: add generic interface for scheduling a future event
+- reef: mds: prevent duplicate wrlock acquisition for a single request
+- doc/rados/operations: Improve stretch-mode.rst
+- reef: doc/rados/operations: Improve stretch-mode.rst
+- test/allocator_replay_test: proper command line options setup
+- qa/workunits/mon: ensure election strategy is "connectivity" for stretch mode
+- script/build-with-container: add debian 13 (trixie)
+- mgr/dashboard: show non default realm sync status in rgw overview page
+- mon/MgrMonitor: improve a log message
+- reef: test/rbd: remove unit tests about cache tiering
+- os/bluestore: fix _extend_log seq advance
+- doc/cephfs: correct reference structure in fs-volumes.rst
+- script/build-with-container: remove unused build arg
+- mgr/dashboard: disable saml2 tests when the dep is not there
+- test: remove unit tests about cache tiering
+- reef: doc/radosgw: Cosmetic improvements in cloud-transition.rst
+- reef: pybind/mgr: attempt to fix mypy importing from python-common
+- common/pick_address: Add IPv6 support to is_addr_in_subnet
+- qa: Restrict rados api tests to large clusters and increase timeout
+- reef: doc/dev: update link to backporter manual
+- reef: osd/scrub: allow longer waits for replicas to respond
+- qa/tests: added initial test for client-upgrade-reef-tentacle
+- PendingReleaseNotes: add note about fallocate mode 0
+- rgw: fix bug with rgw-gap-list
+- reef: doc/radosgw: Improve layout.rst
+- pybind/mgr: attempt to fix mypy importing from python-common
+- rgw: add force option to radosgw-admin object rm ...
+- reef: monitor: Enhance historic ops command output and error handling
+- doc/radosgw: edit cloud-transition (1 of x)
+- reef: qa: workaround pacific OSDs sending SERVER_REEF feature bits
+- doc/radosgw: Improve layout.rst
+- PendingReleaseNote: add release note that mgr/volumes plugin can be...
+- reef: mgr: process map before notifying clients
+- test/rbd-mirror: eliminate a race in ResyncRequestedRemoteNotPrimary
+- test/osd/TestMClockScheduler: TestMultiClientOrderedEnqueueDequeue use client class
+- rbd: write image mirror status if state is CREATING
+- reef: doc/radosgw: add "persistent_topic_size"
+- blk/kerneldevice: notify_all only required when discard_drain wait for condition
+- reef: rgw: radoslist improvements primarily to better support gap list tool
+- doc: add note admonitions in two files
+- make-debs.sh: Don't use ccache if using sccache
+- reef: client: fixed a bug that read operation hung
+- make-debs.sh: make "skip debug packages" conditional
+- common/options: fix typo in description
+- doc/rados/operations: Actually mention upmap_max_deviation setting name
+- script/build-with-container: Add Rocky 9
+- test/objecstore/store_test: be more specific with the desired allocator.
+- reef: doc/radosgw: edit cloud-transition (1 of x)
+- build-with-container.py: Add --ceph-version
+- reef: rgw: check all JWKS for STS
+- doc/radosgw: improve "pubsub_push_pending" info
+- reef: cephfs-shell: add option to remove xattr
+- qa: add test case for remove xattr
+- os/bluestore: move and rename ExtentCache to Allocator class.
+- osd_recovery_sleep_degraded, osd_recovery_sleep_degraded_ssd, osd_recovery_sleep_degraded_hdd added in the configuration to throttle the data movement while recovery when pg is degraded
+- mgr/dashboard: add types for mgr-module list
+- reef: doc/cephadm/services: Fix formatting in osd.rst
+- buildcontainer-setup.sh: Fix curl package conflict
+- mgr/snap_schedule: fix message format error
+- script/build-with-container: lightly organize the distro kind aliases
+- reef: rgw: don't use merge_and_store_attrs() when recreating a bucket
+- qa: add test to validate periodic checks by async threads
+- script/build-with-container: add a pair of fedora distro versions
+- reef: doc/rgw: clarify path-style vs virtual-hosted-style access
+- reef: rgw: optimize bucket listing to skip past regions of namespaced entries
+- rgw: radolist clean up, calculate obj info slightly earlier
+- qa/workunits/fs/misc: remove data pool cleanup
+- fix: Revert url_decode to old behaviour
+- reef: mds: nudge log for unstable locks after early reply
+- reef: rgw: correctly set worker thread names
+- rados/valgrind-leaks: add timeout value for stop command
+- rbd: don't print "image will expire at" message when trash_move() fails
+- reef: build-with-container: add argument groups to organize options
+- doc/rados/operations: Improve erasure-code.rst
+- reef: <rgw> Ensure the ETag format is consistent with AWS S3 API
+- test/libcephfs: use more entries to reproduce snapdiff fragmentation
+- ceph.spec.in: add man/rgw-gap-list
+- reef: doc/cephfs: add a note about estimated replay completion time
+- qa/cephfs: test enable/disable of volumes plugin
+- reef: mgr: allow disabling always-on modules
+- mon/MgrMonitor: allow disabling always-on MGR modules
+- reef: qa: fix test_cephfs_mirror_stats failure
+- reef: OSD: Split osd_recovery_sleep into settings applied to degraded or clean PGs
+- test/allocator_replay_test: add assess_free command.
+- reef: test/common: unittest_fault_injector omits unit-main target
+- mgr/dashboard: adapt service creation form to support nvmeof creation
+- osd/scrubber: use schedule_timer_event_after for scrub sleep
+- reef: rgw: make rgw-restore-bucket-index more robust
+- qa: reconfigure only the appropriate client auth caps
+- client: return EOPNOTSUPP for fallocate with mode 0
+- reef: doc/rados: edit ops/user-management.rst
+- doc/cephfs: Cosmetic changes and small fixes in cephfs-mirroring.rst
+- qa/.../test_rgw_rados_pool_quota: add test for deleting objects with pool at quota
+- reef: os/bluestore: make BlueFS an exclusive selector for volume reserved
+- doc/radosgw: update aws specification link
+- reef: mds: drop client metrics during recovery
+- doc/rados/operations: Improve placement-groups.rst
+- reef: mgr/dashboard: Dashboard not showing Object/Overview correctly.
+- doc/rados/operations/health-checks: Added NONEXISTENT_MON_CRUSH_LOC_STRETCH_MODE
+- test/common: unittest_fault_injector omits unit-main target
+- mds: nudge log for unstable locks after early_reply
+- install-deps.sh: add a temporary repo for missing el10 deps
+- mds: add the event when creating the batch head
+- reef: blk/kerneldevice: some fix for device discard
+- librbd/migration/QCOWFormat: rename handle_read_cluster()
+- blk/kernel: New perf counter to view amount of discard threads.
+- rgw: fix empty storage class on display of multipart uploads
+- reef: doc: Document ceph-mgr module configuration options
+- reef: backports variants improvements and Dockerfile.build changes
+- reef: doc/src/common/options: mgr.yaml.in edit
+- reef: mgr/nfs: validate path when modifying cephfs export
+- reef: debian/control: add iproute2 to build dependencies
+- osd/scrub: allow longer waits for replicas to respond
+- mgr/volumes: Add test for mon caps if auth key has remaining mds/osd caps
+- reef: run-make-check.sh backports
+- reef: doc/cephfs: correct ill-formatted command
+- Dockerfile.build: make FOR_MAKE_CHECK a build argument
+- qa: ignore variant of down fs
+- reef: mgr/dashboard: add prometheus read permission to cluster_mgr role
+- test/osd/TestMClockScheduler: add test for very slow dequeue
+- qa: test fallocate fails in mode 0
+- mon [stretch mode]: support disable_stretch_mode
+- reef: os/bluestore: Fix race in BlueFS truncate / remove
+- run-make.sh: Typo in argument addition
+- reef: doc: Fix missing blank line Sphinx warnings
+- monitoring: fix MTU Mismatch alert rule and expr
+- qa/cephfs: separate the tests for "ceph fs volume create" cmd
+- reef: test/librbd/test_notify.py: force line-buffered output
+- qa: add test for mgr status command
+- qa: Added tests for disabling stretch mode
+- PendingReleaseNotes: add note for new auth rotate
+- librbd: don't use public API flags in Group::snap_create()
+- doc/rgw: clarify path-style vs virtual-hosted-style access
+- reef: rgw: Head/GetObject support partNumber
+- doc/cephadm: Add PG autoscaler advice to upgrade.rst
+- reef: cls/rgw: non-versioned listings skip past version suffix
+- qa/rgw: fix perl tests missing Amazon::S3 module
+- doc/radosgw: Improve cloud-restore and cloud-transition
+- reef: client: ll_walk will process absolute paths as relative
+- tasks/cephfs/mount: use 192.168.144.0.0/20 for brxnet
+- qa: fix test_cephfs_mirror_stats failure
+- monitor: Enhance historic ops command output and error handling
+- rgw: check all JWKS for STS
+- cls/rgw: log input arguments to rgw_bucket_list()
+- reef: install-deps.sh: install proper compiler version on Debian/Ubuntu
+- pybind/mgr: pin cheroot version in requirements-required.txt
+- reef: fix: the RGW crash caused by special characters
+- reef: client: fix d_reclen for readdir
+- reef: rgw: keep the tails when copying object to itself
+- doc: do not depend on typed-ast
+- cephfs-shell: Add the option to remove xattr
+- reef: build-with-container: two small fixes
+- cephfs: allow FS fail only if client_refuse_session is set
+- doc: Fix missing blank line Sphinx warnings
+- doc: Revert "doc/radosgw: add "persistent_topic_size""
+- reef: mgr/volumes: Keep mon caps if auth key has remaining mds/osd caps
+- test/allocator_replay: print elapsed time for try_alloc command
+- rgw: make rgw-restore-bucket-index more robust
+- reef: qa/tasks/cephfs/mount: use 'ip route' instead 'route'
+- reef: mgr/volumes: periodically check for async work
+- reef: qa: use only ubuntu 20.04 for pacific-x
+- rgw: add options to rgw-restore-bucket-index
+- reef: cephfs-top: exception when terminal size greater than PAD_WIDTH
+- mgr/nfs: validate path before updating a cephfs export
+- rgw: fix multipart get part when count==1
+- reef: doc/radosgw: add rgw_enable_lc_threads & rgw_enable_gc_threads
+- rgw/rados: RadosReadOp::prepare only updates object instance
+- reef: mgr/dashboard: Fix inline markup warning in API documentation
+- reef: qa/rgw: fix perl tests missing Amazon::S3 module
+- osd/scheduler/mClockScheduler: add constructor to specify idle/erase/check times
+- cephfs-top: exception when terminal size greater than PAD_WIDTH
+- reef: mds: dump next_snap when checking dentry corruption
+- rgw/sts: Use client_id for assumerolewithwebidentityresponse
+- test/librbd/test_notify.py: force line-buffered output
+- reef: rbd-mirror: allow incomplete demote snapshot to sync after rbd-mirror daemon restart
+- rgw/rados: part support for RGWRados::Object::Read
+- reef: doc/rados/operations: Improve health-checks.rst
+- reef: sync build-with-container patches from main
+- doc/cephadm: Add admonition re restarting an OSD service
+- rgw: don't use merge_and_store_attrs() when recreating a bucket
+- rgw/rados: add get_obj_state() overload for RGWObjStateManifest
+- rgw: optimize bucket listing to skip past regions of namespaced entries
+- rgw/rados: add obj_find_part() to RGWObjManifest
+- reef: doc/cephadm/services: Correct indentation in osd.rst
+- reef: rbd-mirror: add cluster fsid to remote meta cache key
+- doc/rados/operations: Add settings advice to balancer.rst
+- reef: doc/rados: document section absent in release < T
+- reef: qa/cephfs: switch to ubuntu 22.04 for stock kernel testing
+- rgw: enhances rgw-restore-bucket-index script
+- reef: doc/radosgw: Promptify CLI commands and fix formatting in layout.rst
+- build-with-container: add argument groups to organize options
+- os/bluestore: make BlueFS an exclusive selector for volume reserved
+- reef: cephfs-top, qa: Remove unnecessary global statements in tests
+- script/build-with-container: add rocky10 to built-in distros
+- mgr/volumes: warn about active snap-schedules when volume is deleted
+- reef: qa: ignore variant of down fs
+- rbd-mirror: add cluster fsid to remote meta cache key
+- osd/scrubber: use schedule_timer_event_after for reservation timeout
+- reef: doc/rados/operations/stretch-mode: Improve doc
+- reef: doc/radosgw: Improve cloud-restore and cloud-transition
+- rgw: RGWRadosRemoveCR uses rgw_init_ioctx()
+- install-deps.sh: install proper compiler version on Debian/Ubuntu
+- mgr/vol: add pause/resume mechanism for async jobs
+- test/pybind: update to test_fallocate for mode 0
+- pybind/mgr: Fix missing empty lines in mgr_module.py
+- doc/cephfs: edit disaster-recovery.rst
+- doc/radosgw: add "persistent_topic_size"
+- reef: doc/cephfs: edit disaster-recovery.rst
+- doc/cephadm: Correct formatting in upgrade.rst
+- doc/dev: update link to backporter manual
+- reef: doc: Fixed a spelling error.
+- reef: ceph.spec.in: Remove rgw-restore-bucket-index.8* from packaging
+- reef: mds: Fix invalid access of mdr->dn[0].back()
+- rgw/iam: simplify match_policy() for colon-delimited use only
+- qa: test failure for duplicate retention spec
+- doc/cephfs: add a note about estimated replay completion time
+- reef: qa/workunits/fs/misc: remove data pool cleanup
+- rgw: keep the tails when copying object to itself
+- <rgw> Ensure the ETag format is consistent with AWS S3 API
+- reef: doc/rados: Update mClock doc on steps to override OSD IOPS capacity config
+- reef: rbd-mirror: release lock before calling m_async_op_tracker.finish_op()
+- qa: test 'journal import' recognizes invalid headers post journal recovery
+- rgw: correctly set worker thread names
+- doc/radosgw /notifications: fix topic details
+- rgw: non-multipart uploads serve entire range on partNumber=1
+- reef: qa/suites: wait longer before stopping OSDs with valgrind
+- reef: tasks/cephfs/mount: use 192.168.144.0.0/20 for brxnet
+- mds: the assert should be before the journal entry submit otherwise it's racy
+- reef: doc/radosgw: Fix RST syntax rendeded as text in oidc.rst
+- reef: install-deps: Replace apt-mirror
+- qa/suites: wait longer before stopping OSDs with valgrind
+- doc/rados/operations/stretch-mode: Improve doc
+- make-srpm.sh: Skip make-dist if tarball is present
+- doc/radosgw: Improve formatting in layout.rst
+- qa/.../test_rgw_rados_pool_quota: ignore cluster warnings
+- rgw: remove keep_tail from RGWObjState
+- reef: rgw: Changed discard buffer size
+- test/store_test: wait for collection removal before going forward with
+- reef: mds: add an asok command to dump export states
+- install-deps.sh: enable crb repository for centos 10 stream
+- cephfs,mon: allow FS rename only if FS is offline
+- rgw: Changed discard buffer size
+- reef: build-with-container: build image variants
+- reef: memory lock issues causing hangs during connection shutdown
+- ReleaseNotes: document support for partNumber
+- mds: drop client metrics during recovery
+- reef: doc/radosgw: Improve rgw-cache.rst
+- qa: add test for 'dump_export_states'
+- reef: mon/test_mon_osdmap_prune: Use first_pinned instead of first_committed
+- reef: pybind/mgr: Fix missing empty lines in mgr_module.py
+- make-srpm.sh: don't shell out redundantly to pwd
+- mds/Beacon: wake up the thread in shutdown()
+- build-with-container.py: Add --env-file
+- reef: ceph-fuse: Improve fuse mount usage message
+- mgr/volumes: Keep mon caps if auth key has remaining mds/osd caps
+- script/build-with-container: fix building on docker
+- build-with-container.py: Pass version to make-debs
+- test/hybrid_allocator_test: a couple broken cases
+- src/script: add bookworm to build-with-container.py
+- doc/radosgw: Improve rgw-cache.rst
+- reef: mds/Beacon: wake up the thread in shutdown()
+- qa/cephfs: don't strip any whitespace for get_shell_stdout
+- reef: mgr/dashboard: Add ceph_daemon filter to rgw overview grafana panel queries
+- test/store_test: add tests for deferred ops replay in
+- reef: src/common/options: Clarify scope of scrub intervals in osd.yaml.in
+- os/bluestore/bluefs: Fix race condition between truncate() and unlink()
+- mgr/dashboard: Dashboard not showing Object/Overview correctly.
+- doc: Document ceph-mgr module configuration options
+- qa/cephfs: remove duplicate tests that were backported by mistake...
+- rbd-mirror: allow incomplete demote snapshot to sync after rbd-mirror daemon restart
+- script/buildcontainer-setup: set JENKINS_HOME while building image
+- doc/rados/operations: Improve health-checks.rst
+- rgw: make jwks url verification configurable
+- qa: Add test for subvolume_ls on osd full
+- reef: doc/radosgw: Cosmetic and formatting improvements in vault.rst
+- os/bluestore: remove unnecessary std::hex in dout
+- qa/rgw: run verify tests with garbage collection disabled
+- qa/cephfs: add tests for config option pause_purging
+- reef: PGMap: remove pool max_avail scale factor
+- reef: doc/cephfs: edit troubleshooting.rst (Slow MDS)
+- mds: dump next_snap when checking dentry corruption
+- reef: doc/radosgw: edit "Lifecycle Settings"
+- reef: qa/rgw: run verify tests with garbage collection disabled
+- qa: add test for importer's unexpected client eviction after an export subtree task is interrupted
+- reef: qa: use tagged versions of quincy/pacific
+- cephfs-top: Removes unused global statements
+- reef: doc/rados/ops: add caps restore command
+- qa: increase the http.maxRequestBuffer to 100MB
+- reef: Handle failures in metric parsing
+- doc/radosgw: add rgw_enable_lc_threads & rgw_enable_gc_threads
+- make-debs.sh: Optionally avoid make-dist
+- reef: blk/kernel: improve DiscardThread life cycle.
+- install-deps.sh: enable crb for rocky 10
+- ceph.spec.in: Remove rgw-restore-bucket-index.8* from packaging
+- reef: librbd/migration/QCOWFormat: don't complete read_clusters() inline
+- script/buildcontainer-setup: set WITH_CRIMSON to support crimson builds
+- qa: Disable OSD benchmark from running for tests.
+- rgw: fix 'bucket rm --bypass-gc' for copied objects
+- qa/suites/rados/verify: Allow selection of 2 or 4 node cluster
+- cephfs-journal-tool:: Don't reset the journal trim position
+- qa: add test for importer's session cleanup after an export subtree task is interrupted
+- reef: doc/radosgw: edit sentence in metrics.rst
+- rbd-mirror: release lock before calling m_async_op_tracker.finish_op()
+- mgr: process map before notifying clients
+- install-deps: Replace apt-mirror
+- reef: doc: update cephfs-journal-tool docs
+- client: fix d_reclen for readdir
+- reef: mgr: add status command
+- doc/cephfs: document first-damage.py
+- rgw: for delete ops for a bucket, where an attr/attrs are erased
+- qa: Remove unnecessary global statements in tests
+- rgw: add release note for newly-quoted ETag values
+- doc/cephfs: add note for config option pause_purging and pause_cloning
+- release note: add a note for "snapshot getpath" command
+- mgr/dashboard: add prometheus read permission to cluster_mgr role
+- ceph-fuse: Improve fuse mount usage message
+- rgw/sts: adding code for JWT signature validation
+- doc/cephfs: correct ill-formatted command
+- qa: Validate cephfs-journal-tool reset trim
+- client: process path without inode anchor
+- reef: test/librbd/test_notify.py: conditionally ignore some errors
+- mon/test_mon_osdmap_prune: Use first_pinned instead of first_committed
+- install-deps: extract SUDO variable logic into a reusable function
+- reef: rbd: display mirror state creating
+- reef: qa: allow deploying previous releases with reef cephadm
+- reef: doc/start: edit documenting-ceph.rst
+- src/mon/HealthMonitor.cc: Add NONEXISTENT_MON_CRUSH_LOC_STRETCH_MODE
+- reef: doc/rados: repair short underline
+- src/script: add seastar deps to ubuntu container image
+- rgw/s3: map ENOSPC to 507 InsufficientCapacity
+- doc/rados: document section absent in release < T
+- mgr/volumes: Fix json.loads for test on mon caps
+- reef: rgw: fix 'bucket rm --bypass-gc' for copied objects
+- reef: mds: fix snapdiff result fragmentation
+- reef: mds: session in the importing state cannot be cleared if an export subtree task is interrupted while the state of importer is acking
+- cls/rgw: non-versioned listings skip past version suffix
+- reef: doc/dev/cephfs-mirroring: edit file 1 of x
+- reef: doc/dev/cephfs-mirroring: edit file 2 of x
+- reef: doc/dev/cephfs-mirroring: edit file 4 of x
+- reef: doc/dev/cephfs-mirroring: edit file 3 of x
+- cephfs: Fixed a bug that read operation hung in Client::get_caps when the Fc caps is wanted but revoked by the mds, and the Fc cap refs is no-zero
+- doc/rgw: Admin Capabilities section links to Admin Ops API
+- reef: rgw/iam: add policy evaluation for Arn-based Conditions
+- mds: avoid acquiring the wrlock twice for a single request
+- blk/kernel: improve DiscardThread life cycle.
+- mgr/volumes: periodically check for async work
+- doc/mgr: Small improvements in rgw.rst
+- reef: doc/architecture: remove sentence
+- rados/test_crash.sh: add PG_DEGRADED to ignorelist
+- script/buildcontainer-setup: add dependency for llvm.sh to buildcontainer script
+- os/bluestore: uniform allocator's error handling
+- mds: add 'mds_allow_async_dirops' opt to allow/disable async dirop
+- doc/rados: edit ops/user-management.rst
+- doc/radosgw: remove cloud-restore from reef
+- make-debs.sh: Optionally rm version from build dir
+- src/dmclock: remove superfluous license files
+- PGMap: remove pool max_avail scale factor
+- doc: Fixed a spelling error.
+- reef: rgw: Try to handle unwatch errors sensibly
+- mds: add an asok command to dump export states
+- reef: osd: add clear_shards_repaired command
+- os/bluestore: make hybrid allocator implementation reusable
+- reef: client: prohibit unprivileged users from setting sgid/suid bits
+- dashboard: fix the workaround for unpacking node sources
+- reef: doc/cephadm: clarify "Monitoring OSD State"
+- reef: doc/cephfs: document first-damage.py
+- doc: add documentation for ceph auth rotate
+- rados/test: Remove cls_remote_reade since gather deprecated
+- build-with-container.py: Add --rpmbuild-extra-args
+- reef: rados/test_crash.sh: add PG_DEGRADED to ignorelist
+- Dockerfile.build: make WITH_CRIMSON a build arg
+- mgr/dashboard: Fix inline markup warning in API documentation
+- os/bluestore: introduce new allocator hybrid_btree2
+- librbd/migration/QCOWFormat: don't complete read_clusters() inline
+- reef: osd/scheduler/OpSchedulerItem: Fix calculation of recovery latency counters
+- mds: Fix invalid access of mdr->dn[0].back()
+- rgw/sts: fixing compilation error caused due to conflict in
+- mgr/vol: move reusable parts from async_cloner
+- test/librbd/test_notify.py: conditionally ignore some errors
+- doc/cephfs: link section for pausing async threads in section for...
+- make-debs.sh: invoke tar with --no-same-owner
+- reef: doc: fix formatting in cephfs_mirror dev doc
+- reef: ceph-volume: allow zapping partitions on multipath devices
+- osd/scrubber: return a duration from ScrubQueue::scrub_sleep_time
+- qa/cephfs: extend wait for trash empty
+- reef: doc/cephadm/services: improve rgw.rst and snmp-gateway.rst
+- mgr/nfs: use helper to validate cephfs path
+- reef: container: small container image improvements
+- mds: session in the importing state cannot be cleared if an export subtree task is interrupted while the state of importer is acking
+- reef: doc/cephfs: link section for pausing async threads in section for...
+- test/libcephfs: Polisihing SnapdiffDeletionRecreation case
+- doc/cephadm/services: Fix formatting in osd.rst
+- Dockerfile.build: Make sccache repo configurable
+- doc/cephadm/services: Correct indentation in osd.rst
+- doc/src/common/options: mgr.yaml.in edit
+- reef: backport build-with-container patches from main
+- src/common/options: Clarify scope of scrub intervals in osd.yaml.in
+- msg/async: race condition between reset_recv_state and shutdown_connections
+- doc/radosgw: Cosmetic and formatting improvements in vault.rst
+- libcephfs.h: Fix API documentation for ceph_statxat
+- doc/rados/ops: add caps restore command
+- doc/man/8: Improve mount.ceph.rst
+- reef: mon: Track and process pending pings after election
+- reef: doc/mgr: Small improvements in rgw.rst
+- doc/architecture: remove sentence
+- mgr/dashboard: add a cobertura xml file workaround variable
+- reef: doc/rbd/rbd-config-ref: add clone settings section
+- reef: doc/rados/configuration: Mention show-with-defaults and ceph-conf
+- doc/cephadm/services: improve rgw.rst and snmp-gateway.rst
+- reef: doc/rados/configuration: Small improvements in ceph-conf.rst
+- os/bluestore: Hybrid Allocator might unexpectedly returned ENOSPC
+- doc/rados: repair short underline
+- qa: add tests for fixing dangling symlink
+- mgr: add status command
+- reef: client: Handle empty pathnames for ceph_chownat() and ceph_statxat()
+- doc/radosgw: Promptify CLI commands and fix formatting in layout.rst
+- reef: qa: restore non-container distros for upgrade suites
+- doc: Support to retrigger docs/readthedocs.org:ceph PR build
+- ceph-volume: allow zapping partitions on multipath devices
+- reef: doc/cephfs: Update quota.rst
+- mgr/dashboard: Add ceph_daemon filter to rgw overview grafana panel
+- reef: doc/rbd: add mirroring troubleshooting info
+- src/mon/OSDMonitor.cc: ignore non-exist CRUSH bucket
+- os/bluestore: refactor allocator histogram to use ExtentCollectionTraits
+- reef: mgr/volumes: fix dangling symlink in clone index
+- reef: qa: fix multi-fs tests in test_mds_metrics.py
+- reef: doc/cephadm: correct markup in rgw.rst
+- reef: doc/mgr: edit progress.rst
+- osd: add clear_shards_repaired command
+- reef: librbd: images aren't closed in group_snap_*_by_record() on error
+- doc: update cephfs-journal-tool docs
+- osd/scrubber/pg_scrubber: remove m_needs_sleep
+- doc/rados: Update mClock doc on steps to override OSD IOPS capacity config
+- doc/radosgw: Fix RST syntax rendeded as text in oidc.rst
+- librbd: disallow "rbd trash mv" if image is in a group
+- reef: osd: fix osd mclock queue item leak
+- os/bluestore: preload all the compressor plugins on mount.
+- reef: doc/radosgw: remove "pubsub_event_lost"
+- PendingReleaseNote: add note for pause_purging and pause_cloninig
+- qa/rgw: test_rgw_rados_pool_quota expects InsufficientCapacity
+- Handle failures in metric parsing
+- client: Gracefully handle empty pathname for statxat()
+- client: Gracefully handle empty pathname for chownat()
+- doc/radosgw: remove "pubsub_event_lost"
+- reef: librbd: disallow "rbd trash mv" if image is in a group
+- Dockerfile.build: improve docker compatibility
+- reef: doc/mgr: edit telemetry.rst (lines 300-400)
+- mds: add importing_count to session dump
+- doc/radosgw: remove "pubsub_event_triggered"
+- doc/radosgw: edit "Lifecycle Settings"
+- reef: OSDMonitor: exclude destroyed OSDs from "ceph node ls" output
+- mgr/nfs: add a helper to validate cephfs path
+- qa: fix multi-fs tests in test_mds_metrics.py
+- rgw/iam: add policy evaluation for Arn-based Conditions
+- qa/cephfs: add tests for mgr/vol config pause_cloning
+- blk/kernel: bring "bdev_async_discard" config parameter back.
+- doc/cephadm: clarify "Monitoring OSD State"
+- doc/rbd/rbd-config-ref: add clone settings section
+- reef: cephfs-journal-tool: Journal trimming issue
+- rgw: handle instances w/ leading hyphens correctly
+- mon: Track and process pending pings after election
+- reef: os/bluestore: In BlueFS::truncate accept wierd alloc_unit
+- reef: doc: mgr/dashboard: add OAuth2 SSO documentation
+- pybind/rbd: add ImageMemberOfGroup exception
+- reef: doc/man/8: Improve mount.ceph.rst
+- librbd: images aren't closed in group_snap_*_by_record() on error
+- reef: doc/radosgw: remove "pubsub_event_triggered"
+- reef: qa: ignore pg availability/degraded warnings
+- qa: ignore pg availability/degraded warnings
+- reef: doc/rados/operations: edit cache-tiering.rst
+- include/intarith: introduce p2aligned()
+- doc/start: edit documenting-ceph.rst
+- client: prohibit unprivileged users from setting sgid/suid bits
+- doc/rados/configuration: Small improvements in ceph-conf.rst
+- reef: os/bluestore: Disable invoking unittest_deferred
+- .github: Fix RTD build retrigger
+- mds: client is evicted when an export subtree task is interrupted
+- doc/cephfs: edit troubleshooting.rst (Slow MDS)
+- rgw: Try to handle unwatch errors sensibly
+- reef: rgw/rados: enable object deletion at rados pool quota
+- qa: enable the git clone debug logs
+- rgw: prevent crash in radosgw-admin bucket object shard ...
+- Dockerfile.build: Install sccache
+- reef: .github: Fix RTD build retrigger
+- osd: remove unnecessary return statements
+- qa/rbd/iscsi: ignore MON_DOWN warning in logs
+- common/options: chomp whitespace
+- doc: fix formatting in cephfs_mirror dev doc
+- reef: rgw: prevent crash in radosgw-admin bucket object shard ...
+- build-with-container.py: Pass distro to make-debs
+- mds: allow disabling batch ops
+- blk/kerneldevice: count ops not bytes in discard_op perf counter
+- osd/scheduler/OpSchedulerItem: Fix calculation of recovery latency counters
+- doc/cephfs: add mds_allow_batched_ops to conf ref
+- reef: src/mon/OSDMonitor.cc: [Stretch Mode] WRN non-existent CRUSH location assigned to MON
+- reef: doc/radosgw: Cosmetic improvements in dynamicresharding.rst
+- osd/scrubber: add whoami, cct, clog to ScrubMachineListener
+- qa/cephfs: add tests for "subvolume snapshot getpath" cmd
+- doc/dev/cephfs-mirroring: edit file 4 of x
+- doc/dev/cephfs-mirroring: edit file 2 of x
+- doc/dev/cephfs-mirroring: edit file 3 of x
+- doc/dev/cephfs-mirroring: edit file 1 of x
+- doc/radosgw: edit sentence in metrics.rst
+- reef: doc/radosgw: remove cloud-restore from reef
+- reef: qa/multisite: add extra checkpoints in datalog_autotrim testcase
+- reef: qa/rbd/iscsi: ignore MON_DOWN warning in logs
+- doc/rbd: add mirroring troubleshooting info
+- reef: doc/radosgw: Promptify CLI, cosmetic fixes
+- reef: doc: Fixes a typo in balancer operations
+- qa: suppress OpenSSL valgrind leaks
+- rgw: fix rados bucket merge and store attrs
+- reef: osd: don't send stale hb msgr's addresses in MOSDBoot
+- OSDMonitor: exclude destroyed OSDs from "ceph node ls" output
+- reef: qa: suppress OpenSSL valgrind leaks
+- reef: doc/radosgw/admin.rst: explain bucket and uid flags for bucket quota
+- reef: doc/radosgw: edit metrics.rst
+- Remove git clean -fdx
+- reef: doc/rados: remove clonedata command
+- qa: add missing .qa links
+- doc/cephfs: Update quota.rst
+- doc/rados/configuration: Mention show-with-defaults and ceph-conf
+- reef: qa: enable debug mds/client for fs/nfs suite
+- blk/kerneldevice: fix invalid iterator usage after erase in discard_queued traversal
+- os/bluestore: In BlueFS::truncate accept wierd alloc_unit
+- reef: doc/rados: improve markup in cache-tiering.rst
+- doc/mgr: edit telemetry.rst (lines 300-400)
+- reef: doc/cephfs: edit troubleshooting.rst
+- doc: Revert "doc: mgr/dashboard: add OAuth2 SSO documentation"
+- reef: rgw: update keystone repo stable branch to 2024.2
+- doc/radosgw: Cosmetic improvements in dynamicresharding.rst
+- pybind/mgr/dashboard/frontend: add NPM_CACHEDIR envvar, use in bwc
+- reef: mgr/cephadm: Fix unfound progress events
+- qa: simplify postmerge construction
+- doc/mgr: edit progress.rst
+- reef: doc/radosgw: Use ref for hyperlinking to multisite
+- doc/rados/operations: edit cache-tiering.rst
+- os/bluestore: Disable invoking unittest_deferred
+- doc: Revert doc/cephadm: correct markup in rgw.rst
+- reef: rgw/sts: Implementation of validating JWT using modulus and exponent
+- src/mon/MonMap: modify dump function
+- os/bluestore: assert on improper releases in AvlAllocator
+- Test failure: LibCephFS.SnapdiffDeletionRecreation
+- reef: rgw: trigger resharding of versioned buckets sooner
+- doc/cephadm: correct markup in rgw.rst
+- reef: doc/dev:update blkin.rst doc for lttng trace
+- reef: cephfs: session tracker accounts for killing sessions
+- rgw: update keystone repo stable branch to 2024.2
+- reef: doc/mgr/dashboard_plugins: edit feature_toggles.inc.rst
+- os/bluestore: Allocator's cosmetic cleanup/improvement.
+- reef: doc/src: edit osd.yaml.in (osd_deep_scrub_interval_cv)
+- mon/AuthMonitor: add ceph auth rotate command
+- fix: typo remove whitespace
+- reef: doc/mgr: edit modules.rst.
+- doc/rados: remove clonedata command
+- rgw/dbstore: correcting merge_and_store_attrs to store attrs
+- os/bluestore: refactor allocator's ExtentCollectionTraits
+- rgw/iam: match_policy() treats MATCH_POLICY_ARN as case-sensitive
+- doc/radosgw/admin.rst: explain bucket and uid flags for bucket quota
+- qa: enable debug mds/client for fs/nfs suite
+- qa/multisite: add extra checkpoints in datalog_autotrim testcase
+- reef: doc/mgr: edit feature_toggles.inc.rst
+- doc: mgr/dashboard: add OAuth2 SSO documentation
+- doc/radosgw: Use ref for hyperlinking to multisite
+- doc: Fixes a typo in balancer operations
+- reef: doc/rados/configuration/bluestore-config-ref: Fix lowcase typo
+- reef: doc: Pin pip to <25.3 for RTD as a workaround for pybind in admin/doc-read-the-docs.txt
+- rgw: trigger resharding of versioned buckets sooner
+- reef: doc/mgr: edit crash.rst
+- mon: emit warning during fs rm
+- reef: doc/mgr: edit telemetry (4 of x)
+- reef: doc/mgr: edit telemetry (3 of x)
+- reef: doc/mgr: edit telemetry (1 of x)
+- reef: doc/mgr: edit telemetry (2 of x)
+- doc/dev:update blkin.rst doc for lttng trace
+- reef: doc: Fix unterminated inline literal in ceph-conf.rst
+- mgr/cephadm: Fix unfound progress events
+- cephfs: session tracker accounts for killing sessions
+- doc/radosgw: Promptify CLI, cosmetic fixes
+- rgw/sts: adding validation of jwks_uri cert according
+- doc/rados: improve markup in cache-tiering.rst
+- doc/src: edit osd.yaml.in (osd_deep_scrub_interval_cv)
+- reef: mgr/alerts: enforce ssl context to SMTP_SSL
+- reef: doc/rados/configuration/bluestore-config-ref: Fix lowercase typos
+- reef: doc/mgr: edit cli_api
+- reef: Rocky 9/10 support backports
+- doc/radosgw: edit metrics.rst
+- os/bluestore: log values in hex in AvlAllocator
+- reef: Recent pipeline backports
+- osd/scheduler/mClockScheduler: move constructor to header
+- refs/pull/67657/head:
+- refs/pull/57874/head:
+- refs/pull/58236/head:
+- refs/pull/65759/head:
+- refs/pull/66796/head:
+- refs/pull/66690/head:
+- refs/pull/66971/head:
+- refs/pull/65440/head:
+- refs/pull/67067/head:
+- refs/pull/67529/head:
+- refs/pull/67495/head:
+- refs/pull/67528/head:
+- doc/mgr/dashboard_plugins: edit feature_toggles.inc.rst
+- debian: package mgr/rgw in ceph-mgr-modules-core
+- reef: doc/mgr/ceph_api: edit index.rst
+- doc/cephfs: add doc for "snapshot getpath" cmd
+- reef: doc/rados/configuration: Improve ceph-conf.rst
+- reef: doc/mgr: edit influx.rst.
+- reef: build backports
+- reef: doc/mgr: edit alerts.rst
+- blk/kerneldevice: add perfcounter for block async discard
+- qa: test auth rotate
+- reef: doc/mgr: edit insights.rst
+- reef: doc/rados: enhance "pools.rst"
+- reef: qa: ignore spurious warnings
+- reef: qa/suites/orch/cephadm: add PG_DEGRADED to ignorelist
+- reef: qa/cephfs: update ignorelist
+- doc/rados: enhance "pools.rst"
+- reef: doc/mgr: edit debug.inc.rst
+- reef: doc/mgr: edit dashboard.rst
+- doc/cephfs: edit troubleshooting.rst
+- reef: osd/scrub: discard repair_oinfo_oid()
+- doc/mgr: edit modules.rst.
+- qa/suites/orch/cephadm: add PG_DEGRADED to ignorelist
+- reef: doc: src/pybind/mgr/dashboard: edit HACKING.rst
+- rgw: fix regression in radoslist with SLO manifests
+- reef: doc/radosgw: edit config-ref.rst
+- doc/mgr: edit feature_toggles.inc.rst
+- doc/rados/configuration/bluestore-config-ref: Fix lowcase typo
+- doc/mgr: edit crash.rst
+- reef: doc/rados/ops: edit cache-tiering.rst
+- reef: doc/mgr: edit telemetry.rst
+- osd/scrub: discard repair_oinfo_oid()
+- reef: doc/mgr: edit cli_api.rst
+- reef: doc/mgr: edit administrator.rst
+- reef: doc/mgr: Improve prometheus.rst
+- mgr/alerts: enforce ssl context to SMTP_SSL
+- reef: qa/rgw: remove hadoop-s3a subsuite
+- reef: doc/rados/configuration: Correct admonition in ceph-conf.rst
+- qa/cephfs: update ignorelist
+- doc: Fix unterminated inline literal in ceph-conf.rst
+- reef: src: modernize sample.ceph.conf
+- doc/mgr/ceph_api: edit index.rst
+- mgr/dashboard: sitepackages only for py3
+- doc/mgr: edit telemetry (3 of x)
+- doc/mgr: edit telemetry (4 of x)
+- doc/mgr: edit telemetry (1 of x)
+- doc/mgr: edit telemetry (2 of x)
+- doc: src: modernize sample.ceph.conf
+- osd: don't send stale hb msgr's addresses in MOSDBoot
+- doc/rados/configuration/bluestore-config-ref: Fix lowercase typos
+- reef: doc/mgr: edit motd.inc.rst
+- doc/rados/configuration: Improve ceph-conf.rst
+- qa/rgw: remove hadoop-s3a subsuite
+- doc/mgr: edit cli_api
+- build dependencies: centos9
+- reef: doc/mgr: edit hello.rst
+- doc/mgr: edit debug.inc.rst
+- doc/mgr: Improve prometheus.rst
+- doc/mgr: edit alerts.rst
+- reef: doc/mgr: edit localpool.rst
+- reef: doc/mgr: edit iostat.rst
+- reef: doc/mgr: edit diskpredictor.rst
+- reef: doc/mgr: edit rgw.rst
+- mgr/volumes: handling dangling symlinks gracefully
+- doc/mgr: edit influx.rst.
+- doc/mgr: edit insights.rst
+- doc/mgr: edit dashboard.rst
+- doc: src/pybind/mgr/dashboard: edit HACKING.rst
+- .github: pin GH Actions to SHA-1 commit
+- reef: doc/mgr: edit mds_autoscaler.rst
+- doc/mgr: edit telemetry.rst
+- doc/rados/ops: edit cache-tiering.rst
+- doc/mgr: edit cli_api.rst
+- doc: Pin pip to <25.3 for RTD as a workaround for pybind
+- doc/radosgw: edit config-ref.rst
+- doc/rados/configuration: Correct admonition in ceph-conf.rst
+- reef: doc/cephfs: edit ceph-dokan.rst (3 of x)
+- reef: doc/cephfs: edit ceph-dokan.rst (1 of x)
+- reef: doc/cephfs: edit ceph-dokan.rst (2 of x)
+- reef: doc/mgr: edit nfs.rst
+- doc/mgr: edit administrator.rst
+- reef: doc/rados: edit balancer.rst
+- reef: doc/rados: s/enpty/empty/ in pgcalc doc
+- reef: Backport the hybrid_btree2 allocator and prereqs
+- doc/mgr: edit motd.inc.rst
+- reef: doc/mgr: edit prometheus.rst
+- doc/mgr: edit hello.rst
+- reef: doc/cephadm: s/confg/config/
+- reef: doc/mgr: edit orchestrator.rst
+- doc/mgr: edit localpool.rst
+- doc/mgr: edit rgw.rst
+- doc/mgr: edit iostat.rst
+- doc/mgr: edit diskpredictor.rst
+- doc/cephfs: edit ceph-dokan.rst (3 of x)
+- doc/cephfs: edit ceph-dokan.rst (2 of x)
+- doc/cephfs: edit ceph-dokan.rst (1 of x)
+- doc/rados: s/enpty/empty/ in pgcalc doc
+- src/dmclock: copy dmclock submodule into ceph.git
+- doc/mgr: edit mds_autoscaler.rst
+- doc/mgr: edit nfs.rst
+- doc/rados: edit balancer.rst
+- reef: doc/mgr: edit telegraf.rst
+- doc/mgr: edit prometheus.rst
+- reef: objclass: deprecate cls_cxx_gather
+- reef: qa/cephfs: randomize configs in fs:thrash:workloads
+- doc/mgr: edit orchestrator.rst
+- reef: doc/glossary: s/OMAP/omap/
+- [reef] RGW backports
+- reef: doc/dev: Debuggging with gdb
+- doc/cephadm: s/confg/config/
+- doc/mgr: edit telegraf.rst
+- mgr/dashboard: bump cheroot to > 10.0
+- doc/glossary: s/OMAP/omap/
+- reef: Wip trackers 50371 67352 67489 69639 reef
+- qa/cephfs: s/prefetch_dirfrags/prefetch_oft_dirfrags
+- objclass: deprecate cls_cxx_gather
+- doc/dev: Debuggging with gdb

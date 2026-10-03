@@ -1,0 +1,26 @@
+Generate an English summary for one release-note section from the evidence below.
+
+Project:
+- repository: {{repo_name}}
+- version_range: {{base_ref}} -> {{new_ref}}
+- output_language: English
+
+Section Plan:
+{{section_plan_json}}
+
+Architecture Evidence:
+{{arch_evidence_json}}
+
+Representative A-type Commits:
+{{a_type_commits_json}}
+
+Supporting L-type Commits:
+{{l_type_commits_json}}
+
+Return only JSON:
+{
+  "section_id": "same section_id from input",
+  "title": "section title",
+  "summary": "2 to 4 English sentences",
+  "key_points": ["English key point"]
+}

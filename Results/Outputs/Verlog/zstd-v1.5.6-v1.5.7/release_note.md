@@ -1,0 +1,30 @@
+- Added `--max` command-line option to enable the highest compression level.
+- `--ultra` is now automatically enabled when using `--long` or `--patch-from`.
+- Renamed compression parameters: `ZSTD_c_useBlockSplitter` → `ZSTD_c_splitAfterSequences`, `ZSTD_c_searchForExternalRepcodes` → `ZSTD_c_repcodeResolution`, and added a new parameter `ZSTD_c_blockSplitterLevel` for controlling block splitter aggressiveness.
+- Exposed `ZSTD_compressSequencesAndLiterals()` to allow direct compression of precomputed sequences and literals.
+- Added support for building Zstd as an Apple Framework.
+- Enabled x86_64 assembly implementation for Windows builds, improving performance.
+- Added BMI2 acceleration support for 32-bit x86 platforms, boosting decompression speed.
+- Added AVX2 acceleration for block summary computation, improving compression speed.
+- Added support for benchmarking a range of compression levels (e.g., `--benchmark=1-10`).
+- Added `-D` option to specify a dictionary for benchmark runs.
+- `ZSTD_getFrameHeader()` now correctly returns information on skippable frames.
+- Decompression errors now always display the full origin filename instead of a truncated path.
+- Added a new fast block-splitting heuristic that improves compression ratio at levels 3 and 4.
+- Improved dictionary compression speed and ratio, including minor improvements at level 3.
+- Dynamically adjust Long Distance Matching (LDM) parameters (hash rate log, minimum match length, bucket size) based on compression strategy for better compression and speed.
+- Improved multi-threaded compression fluidity and reduced memory usage.
+- Optimized branch elimination using conditional moves to speed up compression, especially at fast levels and with small window sizes.
+- Improved file loading in benchmark mode to limit loading when buffers are small.
+- Updated optimal parser hints for `--patch-from` mode: now displayed at verbosity 4, removes `--single-thread` suggestion.
+- Fixed a memory leak in `ZSTD_generateSequence` when called with empty output.
+- Fixed a potential segmentation fault when creating a seek table.
+- Fixed removal of symbolic link input files when the `--no-follow-links` option is enabled.
+- Fixed a hang in `pzstd` when decompression errors occur.
+- Fixed missing newline when output file exceeds 128KB.
+- Fixed compilation issues with QNX, Android NDK r27, IAR compiler, and MinGW.
+- Fixed warnings treated as errors in Visual Studio builds.
+- Fixed CMake builds with spaces in source directory.
+- Updated man page entries for `--max`, `--patch-from`, and benchmark usage.
+- Updated documentation for skippable frames, dictionary and benchmark mode.
+- Updated FreeBSD CI to version 14.2 and deprecated Ubuntu 20.04 testing.

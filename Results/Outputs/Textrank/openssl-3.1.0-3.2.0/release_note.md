@@ -1,0 +1,3984 @@
+# VerLog-style TextRank Release Note
+
+- Repository: openssl
+- Version pair: openssl-3.1.0 -> openssl-3.2.0
+- Pair id: openssl-3.1.0-3.2.0
+- Input commits: 4037
+- Candidate sentences: 3972
+- GT-length budget: 1776
+- Extracted entries: 3972
+
+## Extracted Entries
+
+- Enable the ability to query the COMP_METHOD being used in the record layer
+- check-format.pl: fix detection of function body start
+- QUIC Dispatch: Add simple way to determine if SSL object is QUIC-related
+- Allow to *just* print key and IV of unstreamable modes when no input files
+- Fix EVP_PKEY_eq() to be possible to use with strictly private keys
+- Ensure pkey_set_type handles ENGINE references correctly
+- parse_http_line1(): Fix diagnostic output on error and return code
+- Fix the check of UI_method_set_ex_data
+- djgpp: Fix unused-but-set-variable warning
+- http_client.c: check expected content type only if HTTP status code is 200 (OK)
+- QUIC Front-End I/O API: Fix implementation of SSL_get_error
+- Use a record layer specific message callback
+- Add return value check of EVP_PKEY_copy_parameters () in ssl_set_cert_and_key()
+- Write SSL_R alerts to error state to keep updated strings
+- ossl_cmp_msg_check_update(): fix two wrong error return values (-1 instead of 0)
+- uint_set: convert uint_set to use the list data type
+- X509_STORE_CTX_set_default(): improve error handling, also in its use
+- Update documentation, standard input is expected to be in binary format too
+- Fix 80-test_cmp_http.t to be more flexible regarding IP versions
+- Make sure we can query the SSL object for version info when using QUIC
+- Fix a HPKE API to put libctx, propq as last (optional parameters).
+- Makefile: Add check-format target, operating on all .c sources and crypto+ssl headers
+- aes: make the no-asm constant time code path not the default
+- Do not raise CMS_R_CONTENT_TYPE_NOT_ENVELOPED_DATA error in CMS_ContentInfo_free
+- ossl_cmp_mock_srv_new.pod: correct/update names of internal test support functions
+- crypto/x509/{x509_req,x_all}.c: add some NULL parameter checks, improve coding style
+- test/certs/setup.sh: add missing comment on CA cert variant without basic constraints
+- ssl: modify libssl so that it uses OSSL_TIME
+- Add changes entry indicating that the OBJ_* calls are now thread safe
+- Pre-declare all core dispatch table functions, and fix the internal ones
+- QUIC CHANNEL: Add basic server support for testing
+- no-engine: fix signing with legacy app method based keys
+- Fix int_ctx_new() error when use 1.1.1n sm2 key and ec method engine
+- Avoid another copy of key schedule pointer in PROV_GCM_CTX
+- 80-test_cmp_http.t: Remove -certout option where not needed
+- Add some documentation for the new QUIC mode in s_client
+- Do not check definition of a macro and use it in a single condition
+- Add Test to verify open_ex password checking works
+- Implement OSSL_PROVIDER_get0_default_search_path, add docs and tests.
+- stack.c: add missing direct error reporting and improve coding style
+- Add minimal handling of NEW_CONNECTION_ID frames
+- openssl list: Fix help text about -cipher-algorithms option
+- BIO_f_ssl.pod: Make clear where an SSL BIOs are expected as an argument
+- add missing CRMF API function OSSL_CRMF_CERTTEMPLATE_get0_publicKey()
+- BIO_set_accept_name(): To accept from any interface, use *
+- Fix the check of BIO_set_write_buffer_size and BIO_set_read_buffer_size
+- Extend the RX Depacketizer frame table with what packet types they are valid in
+- x509: fix -Wunused-but-set-variable
+- add_provider_groups: Clean up algorithm pointer on failure
+- Do not create DSA keys without parameters by decoder
+- punycode: update to use WPACKET instead of using custom range checking
+- QUIC: Add internal APIs for white-box testing of key update
+- Enable QUIC test server to find out the termination reason
+- Convert the TLSv1.0/1.1/1.2 crypto code to use the new write record layer
+- Add an option to specify number of bits in the subprime (q) when generating DSA keys
+- APPS load_key_certs_crls(): Make file access errors much more readable
+- QUIC APL: Tick on SSL_read failure in non-blocking mode
+- Fix test cases using NEW_CONNECTION_ID frame
+- Modify ENGINE_pkey_asn1_find_str() to use a read lock instead of a write
+- Update some links within the guide to not use crypto(7)
+- Fix range_should_be_prefix() to actually return the correct result
+- check-format.pl: fix detection of missing/extra blank lines in local decls
+- APPS/cmp: fix -rspin option such that it works again without -reqin
+- BIO_set_prefix: fix return check
+- Ensure various record layer options can be updated
+- Re-enable the multiblock code and move it into the record layer
+- fix memory allocation and reference counting issues
+- QUIC Front End I/O API: Remove unnecessary code from SSL_get_tick_timeout
+- Move initial TLS write record layer code into new structure
+- providers: Allow possible reinitialization in all signature algorithms
+- Fix incomplete error check on BIO_set_accept_name()
+- Add test for handling NEW_CONNECTION_ID frame
+- check-format.pl: extend checking into macro bodies; small further improvements
+- Fix infinite verification loops due to has_san_id
+- Fix coverity alert on use of uninitialised data
+- Add changes entry for RIPEMD160 being added to the default provider
+- Remove some redundant code from test helper BIOs
+- QUIC Congestion Control: API to determine deadline at which more credit will be available
+- Convert dtls_write_records to use standard record layer functions
+- QUIC: Move string conversion functions into a source file
+- Update KDFs to use shared functions.
+- Make it possible to remove methods by the provider that provides them
+- Regexp modifier "r" needs perl 5.14; OpenSSL should build with 5.11, so do not use the "r" shortcut.
+- tolower: refine the tolower code to avoid a memory access
+- Use correct function to wait for condvar
+- BIO_new_from_core_bio: Check for NULL pointer after calling get_globals
+- Use '[option...]' not '[[ options ]]' in text
+- check-format.pl: Fix report on missing space before +/-: allow, e.g., '1e-6'
+- X509: add tests for purpose code signing in verify application
+- OSSL_CMP_CTX_new.pod: make references to private key consistent with OSSL_CMP_MSG_get0_header.pod
+- Fix the SSL_CIPHER_find() function when used with a QCSO
+- HTTP client: Work around the 'gets' method not being supported by SSL BIOs
+- document additional stack push error code
+- OSSL_HTTP_REQ_CTX_nbio: add support for partial content-type string matching
+- init: fix defined but unused warning/error
+- Drop ossl_provider_clear_all_operation_bits() and all uses of it
+- run-checker: add CI to test safe_math without compiler support.
+- OSSL_HTTP_open(): improve use of use_ssl and its documentation
+- CMP client: fix error response on -csr without private key, also in docs
+- QUIC Test Server: Exercise end-of-stream condition on read and write
+- Add system guessing for linux64-loongarch64 target
+- ci: add additional operating system specific builds
+- Add a test for no initialisation of the default config file
+- remove EdDSA from changes entry about non-fips algorithms
+- Use $config{build_file} instead of $target{build_file}
+- http_client.c: 2nd fix for calculation of Content-Length in set1_content()
+- CMS_decrypt_set1_password(): prevent mem leak on any previously set decryption key
+- Move Record layer methods code into a sub-directory
+- http_client.c: fix calculation of Content-Length in set1_content()
+- Avoid issues with endianness when type is used in SSL_trace()
+- x509_vpm.c: add missing direct error reporting and improve coding style
+- Fix a mem leak when the FIPS provider is used in a different thread
+- async_posix: raise a memory allocation error if we fail to allocate stack memory
+- Add test case to verify that the use after free issue is fixed.
+- BIO_push.pod: fix confusing text and add details on corner cases
+- SSL_CTX_set_verify.pod: move a note further down where it fits better
+- Fix the build file templates where uplink matters
+- APPS/ca: remove spurious errors when certain config file entries are not provided
+- Makefile: Update but disable 'lint' target, using splint with some quirks
+- Add a very simple blocking TLS client demo
+- Add a test for a server that doesn't provide transport params
+- Correct NEWS entry about required security level for old versions of TLS, DTLS and SSL
+- Configure: do not check for an absolute prefix in cross-builds
+- Use correct version of 3.1 build for FIPS provider.
+- Fix the checks of EVP_PKEY_CTX_set/get_* functions
+- Fix documented function return types
+- quic_tserver: Add possibility to change the connection id
+- Fix VMS installation - consistent program names with version info
+- check-format.pl: Fix report on space before ';' and allow it after ')'
+- TEST: Check property query support of apps/pkey
+- APPS load_key_certs_crls(): improve error string macro FAIL_NAME
+- Move protocol version specific code into separate files
+- QUIC DISPATCH/APL: Implement SSL_get_stream_type
+- Convert SSLv3 code to use the new read side record layer
+- Convert TLSv1.3 code to use the new read side record layer
+- Check CMS failure during BIO setup with -stream is handled correctly
+- apps/spkac.c: Check result of ASN1_STRING_set()
+- QUIC APL: Add support for querying frame type causing closure
+- VC++ 2008 or earlier x86 compilers do not have an inline implementation of InterlockedOr64 for 32bit and will fail to run on Windows XP 32bit.
+- GH action workflows: Add cpu report before 'make test'
+- Add missing CRYPTO_THREAD_cleanup_local of default_context_thread_local
+- evp_test: Add the missing check after calling OPENSSL_strdup and sk_OPENSSL_STRING_new_null
+- quic_impl.c: Add QUIC_RAISE_NON_IO_ERROR() and use it
+- Implement KTLS in the new read record layer code
+- Windows CI: Add some non-default options to check they are working
+- Fix the return type for the rlayer_skip_early_data callback
+- HTTP client: Work around HTTPS proxy use bug due to callback design flaw
+- QUIC APL: Add internal call to allow changing send buffer size
+- Add DTLS support to the large app data test
+- QUIC: Note that SSL_set_shutdown is not supported
+- Add test from "Fix re-signing certificates with different key sizes"
+- CMS_decrypt_set1_*(): remove misleading error queue entry when recipient mismatch was not the issue
+- Add some documentation for the new advanced s_client command mode
+- QUIC APL: Fix stream backpressure conditions to use non-I/O errors
+- Fix stack use-after-free in QUIC
+- Always use uint8_t for TLS record type
+- Fix ossl_x509v3_cache_extensions(): EXFLAG_NO_FINGERPRINT should not be an error
+- providers/common/der/oids_to_c.pm: Remove use of Data::Dumper
+- OSSL_HTTP_set1_request(): Fix check for presence of port option and its documentation
+- Ensure s_client sends SNI data when used with -proxy
+- Fix unused variable in QUIC send stream test
+- Enforce a size check in EVP_MAC_final()
+- Add missing check according to SM2 Digital Signature generation algorithm
+- Add a simple QUIC test for blocking mode
+- CONF_modules_load_file_ex(): Do not try to load an empty file name
+- Fix a possible use-after-free in custom_exts_free
+- Allow qtestlib to use a "fake_now" implementation
+- Add missing define to enable AES-NI usage on x86 platform
+- Allow cipher strings to be given using its standard name
+- EVP_PKEY_get_{bits,security_bits,size}(): add missing error queue entry on failure
+- Add a test case for the short password
+- QUIC TXP: Add a function to query if the TXP wants to generate a packet
+- Use the configured max_send_fragment value in the write record layer
+- Handle SMIME_crlf_copy return code
+- set_trace_data(): prevent double free on OPENSSL_strdup() failure
+- openssl : Fixed use after free bug
+- APPS load_key_certs_crls(): improve diagnostics on not finding expected types of contents
+- check the return value of BIO_new_file()
+- APPS/cmp.c: Move warning on overlong section name to make it effective again
+- check-format.pl: report #if and #elif with constant condition; improve checks on '/*'
+- Fix the OSSL_TIME fallback in include/internal/e_os.h
+- fips: use correct field names when generating fipsmodule.cnf
+- QUIC MULTISTREAM TEST: Ensure frames are only injected into correct packet types
+- check-format.pl: improve preprocessor directive handling; re-order state variables
+- document the safe_div_round_up_TYPE functions
+- check-format.pl: improve wording: 'no' -> 'missing'; further minor improvements
+- Clarify what SSL_get_session() does on the server side in TLSv1.3
+- Do not ignore empty associated data with AES-SIV mode
+- check return value of functions that call BIO_new()
+- Add missing mention of mandatory function OSSL_FUNC_keymgmt_has
+- KTLS: Add using_ktls helper variable in ssl3_get_record().
+- Enable the record layer to call the ssl_security callback
+- crypto/provider_core.c: Avoid calling unlock two times
+- gcm: use the new faster param location mechanism.
+- check-format.pl: fix false positive on 'for(;; stmt)'
+- libcrypto refactoring: make more use of ASN1_STRING_set0()
+- RSA Keygen update - When using the default provider fallback to default multiprime keygen if e is < 65537
+- Add a test for SSL_CIPHER_find() when used with a QUIC SSL object
+- Move types.h #undefs for wincrypt.h compatibility
+- timing_load_creds: Add timersub macro for platforms where it is missing
+- Remove most of the DTLS special casing from the write record code
+- DECODER: check the first decoded structure name against user given structure
+- Fix memory leak in EVP_PKEY_get1_encoded_public_key.
+- Ensure that prefix records use a small buffer
+- Add a new Name Constraints test cert
+- Create the write record layer method and object and use it
+- APPS: Add check for multiple 'unknown' options
+- Fix builds on Armv8 systems without AArch64
+- doc: note that these KDFs require the legacy provider to be available
+- QUIC Front-End I/O API: Fix WANT_READ signalling for SSL_read
+- test/ssl_old_test.c: Do NULL pointer check before its use
+- Add const to some test tserver functions
+- Fix HTTP server port output and allow dynamic verbosity setting
+- QUIC: Update faults test to use streams correctly
+- test: add failure testing for property parsing
+- Fix 32-bit Windows issues related to QUIC Wire functions
+- Use common tls_write_records() even for DTLS
+- QUIC TLS: Better error message when ALPN not used
+- Ensure that the SSL_rstate_string*() API works as they used to
+- Add and use HAS_PREFIX() and CHECK_AND_SKIP_PREFIX() for checking if string has literal prefix
+- CMP add: fix -reqin option, which requires adding OSSL_CMP_MSG_update_recipNonce()
+- testutil: allow a failure return from setup_tests that doesn't print help
+- Remove some unused 4bit GCM code
+- stack: Do not add error if pop/shift/value accesses outside of the stack
+- txt_db: fix -Wunused-but-set-variable
+- doc: note that the stack find functions no longer modify the stack
+- REGRESSION: CMS_final: do not ignore CMS_dataFinal result
+- Rename the "timing" program to "timing_load_creds" and integrate it with test/build.info
+- Ensure SSL_connect() actually blocks if we are in blocking mode
+- obj: make new NIDs use tsan if possible
+- Change TLS RC4 cipher strength check to be data driven.
+- s_server: Do not use SSL_sendfile when KTLS is not being used
+- Document the fact that setting a BIO create function means the BIO will no longer be marked as initialised
+- QUIC: Base client/server identity on SSL method, not SSL_set_connect/accept_state
+- Add option for in-place cipher testing in evp_test
+- list: add an option to list all available algorithms
+- Fix a memory leak in ec_key_simple_oct2priv
+- check the return value of OPENSSL_strdup(CRYPTO_strdup) to prevent potential memory access error
+- stream_frame_new(): Add missing allocation check
+- Add a post encryption processing step
+- Document that the openssl fipsinstall self test callback may not be used.
+- Fix test_cms if DSA is not supported
+- x509/v3_purp.c: rename 'require_ca' parameters to the more adequate 'non_leaf'
+- Fix typo in base provider example code
+- internal/sockets.h: Ensure errno.h included when necessary
+- BIO_set_indent: fix return check
+- QUIC CHANNEL: Transport params: Offer reason text and add server support
+- Clean away the test code implementation of bio_addr_copy
+- Update documentation to reflect new Windows on Arm configurations
+- Add more fixes for WebAssembly/WASI build
+- Fix decoders so that they use the passed in propq.
+- Add command line option for setting provider in evp_test
+- doc: add note to indicate that the OBJ_ functions were not thread safe in 3.0
+- Fix 32-bit Windows issues related to QUIC_STREAM
+- libcrypto refactoring: introduce and use ossl_asn1_string_set_bits_left()
+- APPS/cmp: Fix use of OPENSSL_NO_SOCK: options like -server do not make sense with no-sock
+- Fix VMS installation - deassign the same logical names that were defined
+- Add basic test for thread assisted mode
+- doc/man3/SSL_set_fd.pod: add note about Windows compiler warning
+- Prevent creating DSA and DH keys without parameters through import
+- 70-test_tls13hrr.t: Use P-521 instead of X25519 for invalid group test
+- Add test for query invalidation after new provider added
+- check-format.pl: further fixes for whitespace reporting within 'for (...)'
+- Extend the nosiy datagram test to send more data
+- QUIC API: Revise SSL_get_conn_close_info to use a flags field
+- dhparam_test: Test that we add private key length on generation and print it
+- Fix tests to check for negative results when calling EVP_PKEY_fromdata_init
+- CMP: add subject of any provided CSR as default message sender
+- X509_REQ_get_extensions: add error queue entry on ill-formed extensions attribute
+- Convert the TLSv1.3 crypto code to the new write record layer
+- Remove unneccesary KTLS code from non-KTLS specific files
+- Only call OPENSSL_init_crypto on fetch if using the default libctx
+- Fix variable name mis-match in example code
+- add a check for the return of sk_SRP_gN_new_null() so that capture the potential memory error in time
+- Remove some unused OSSL_RECORD_METHOD functions
+- Do not dereference PKCS7 object data if not set
+- Configurations/descrip.mms.tmpl: Add another inclusion hack
+- apps/x509: Fix self-signed check to happen before setting issuer name
+- Move e_os2.h up in quictestlib.c to allow symbol definition consistency.
+- doc: Clarify that calling SSL_set_session(ssl, NULL) is a correct use case.
+- internal/sockets.h: Add support for testing EINTR portably
+- apps/x509: add warnings for options ignored when -CA is not specified
+- Configurations/windows-makefile.tmpl: obj2bin(): use the resource file too
+- x509: add ASN1_STRING_set() check result
+- Fix documentation for some i2d return values.
+- check the return value of OPENSSL_strdup to prevent potential memory access error
+- Add design document for the QUIC Stream Receive Buffers module
+- Move the SSLv3 crypto code into the new record layer
+- Remove some unnecessary function pointers from OSSL_RECORD_METHOD
+- fips: use memory ordering rather than locks
+- Add testcases for EVP_PKEY_get1_encoded_public_key
+- Move early data counting out of the SSL object and into the record layer
+- Keep track of connection credit as we add stream data
+- Enhance the srctop, bldtop, data and result functions to check the result
+- Add a test for large app data
+- Add a test for TLSv1.3 only client sending a correct key_share
+- Add documentation for key validation that indicates the difference between the
+- put_str: Use memcpy instead of strncpy
+- Add a test case for the name constraints bug
+- quic_tls.c: Fix wrong format string when raising error
+- QUIC CHANNEL: Optimise key update using ACKs
+- x509: Handle ossl_policy_level_add_node errors
+- Fix the code used to detect aarch64 capabilities when we don't have getauxval()
+- cmp_server.c: Log received request type before checking details
+- test/timing_load_creds.c: fix coding style and other (mostly minor) issues
+- APPS: replace awkward and error-prone pattern by calls to new app_conf_try_number()
+- Update Stream Receive Buffers design document with implementation details
+- OSSL_CMP_MSG_get0_header.pod: re-phrase two lenthy otherwise clauses as lists
+- Add command line option for setting propquery in evp_test
+- QUIC MULTISTREAM TEST: Better failure logging with failing script ID
+- Ensure we use a non-zero time for tickets in early data
+- Fix a use after free in error handling of hmac_dup
+- test/smime-certs/ca.cnf: clean up comments, simplify settings using SKID and AKID defaults
+- Fix the checks of BIO_get_cipher_status
+- Use a write lock during ossl_provider_find()
+- Fix build when configured with -DOPENSSL_USE_IPV6=0
+- Ensure QUIC-TLS errors raised during channel start are available to caller
+- QUIC: Document how blocking mode is automatically turned off
+- test_external_oqsprovider: Use working checkout of liboqs
+- Transfer the functionality from ssl3_read_n to the new record layer
+- QUIC WIRE: When peeking at number of ACK ranges, ensure enough data is available
+- QUIC: Add handling of SSL_get_shutdown()
+- fix building failure when using -Wconditional-uninitialized
+- Fix no-ec enable-ktls build
+- Fix Coverity 1503325 use after free
+- Fix Coverity 1503329 use after free
+- Fix coverity 1503330 use after free
+- qtest: Use fake time on both client and server
+- providers: Set the size of EC signature on s390.
+- Add the ability for tserver to use a pre-existing SSL_CTX
+- Update quicserver to be able to handle multiple streams
+- Remove FIPS cross version check of 3.0.0 provider against current
+- Make running individual ssl-test easier
+- VMS: For executables, process the use of /INCLUDE=main a bit differently
+- time: add some additional utilities and document everything
+- TLS KeyUpdate messages are not allowed in QUIC
+- test: cmp_vfy_test: fix defined but unused
+- Add the ability to add a custom extension on an SSL object
+- ssl3_mac(): Fix possible divide by zero bug
+- Fix checking return code of EVP_PKEY_get_int_param at check_curve
+- Fix the incorrect checks of EVP_CIPHER_CTX_set_key_length
+- Don't run the ssl trace test if no-ecx
+- Fix test/recipes/01-test_symbol_presence.t to allow for stripped libraries
+- QUIC CHANNEL: Send correct alert code if no TPARAMs received
+- DH_check_pub_key() should not fail when setting result code
+- Fix compile error when building with no-asm
+- Add a test for retries when sending app data
+- Move the pipelining code into the record layer
+- rand: trust user supplied entropy when configured without a random source
+- Start using WPACKET in the dtls write records code
+- x509_print_ex:Use correct constant for nmflag comparison
+- Skip the QUIC ssltrace test under certain config options
+- EVP: Reverse the fetch logic in all pkey using functionality
+- Fix tests when configured with -DOPENSSL_USE_IPV6=0
+- Replace size check with more meaningful pubkey check
+- apps/cmp.c: fix bug not allowing to reset -csr and -serial option values
+- check_format.pl: Add checks for blank lines within/after local decls
+- Design document of the run-time parameters activation
+- Revert "Run-checker merge CI: Replace no-shared with no-modules"
+- http proxy handling: Use ossl_safe_getenv() instead of getenv()
+- Fix PKCS creation error when certificate contains auxiliary data
+- 80-test_cmp_http_data/test_commands.csv: fix minor glitch in column alignment
+- QUIC QSM: Model final sizes and handle STOP_SENDING correctly
+- Fix some documentation errors related to return values
+- Ensure various SSL options are passed down to the record layer
+- Fix compilation error when using clang-cl 16 or higher
+- pem: fix -Wunused-but-set-variable
+- Configuration: only produce a new configdata.pm if it has changed contents
+- compute_pqueue_growth(): Fix the return type
+- Add channel-only tick mode and use it for thread assisted mode
+- Use separate function to get GCM functions
+- Add support for setting a custom TLS Record Layer
+- Remove some use of SSL object from record layer
+- Add link to EBNF definition
+- check-format.pl: fix detection of '#ifdef __cplusplus'
+- Ensure struct timeval is defined when including ssl.h
+- test: note that a default property query must be included for FIPS validity
+- apps/cmp.c: -tls_used may be implied by -server https:...; improve related checks and doc
+- Check return of BIO_new() and always free pkey from evp_pkey_copy_downgraded()
+- Fix Coverity 1547856: memset() uses only the lowest byte of c
+- Add support for rstream get/release record in the QUIC TLS layer
+- Add testcases for EVP_PKEY_set1_encoded_public_key()
+- Add a test for creating ECX private keys that are too short
+- Update provider_util.c to correctly handle ENGINE references
+- QUIC CHANNEL: Handle key updates correctly
+- QUIC APL: Fix logic of SSL_get_stream_type
+- Fix detection of ktls support in cross-compile environment on Linux
+- Fix documentation around AAD and return values in EVP_Cipher*
+- QUIC CHANNEL: Remove stream 0-specific code
+- Remove ktls specific code from tls_setup_write_buffers
+- install_fips: Create the OPENSSLDIR as it might not exist
+- Fix failure to check result of bn_rshift_fixed_top
+- QUIC TEST: Coverity - Ensure stream names are non-NULL
+- Fix tests for new default security level
+- Fix EC_KEY_set_private_key() NULL priv_key docs
+- Fix minor issues in the demo/man pages for TLS client/blocking
+- Ensure our buffer allocation allows for the Explicit IV
+- Fix the check of EC_GROUP_check_named_curve
+- Fix parameter names for RSA private key example
+- Fix a failure in bio_dgram_test on the NonStop platform
+- Add a -trace option to quicserver to enable tracing of the communication
+- d2i_X509.pod: Better document using the reuse capability for libctx setup
+- Test that signatures using hash name commands work properly
+- Add external testing with oqsprovider
+- namemap: handle a NULL return when looking for a non-legacy cipher/MD
+- BIO_s_connect: Make internal functions static
+- Test that there are no errors on the stack for rejected early data
+- test: Add testing of reinitialization via EVP_DigestSignInit()
+- Fix a use-after-free in quic_tls.c
+- ossl_cmp_msg_check_update(): align recipNone check with improved transactionID check
+- CORE: add a provider argument to ossl_method_construct()
+- Add test for try_key_ref() fallback handling
+- Always automatically add -DPEDANTIC with enable-ubsan
+- bn2binpad: Use memset as the buffer will be used later
+- QUIC QRX: (Server support) Add support for manual URXE injection
+- Remove reliance on the SSL object from the DTLS read record layer code
+- Run-checker merge CI: Replace no-shared with no-modules
+- Add a new guide page on writing a non-blocking TLS client
+- QUIC: Update no-TPARAM test for correct error code
+- Add a link to the multi-stream QUIC client tutorial from the introduction
+- Add changes entry for RIPEMD160 in 3.0.7
+- QUIC TXP: Make TXP use time callback correctly
+- When using PEM_read_bio_PrivateKey_ex() the public key is optional
+- Fix documentation errors, mainly caused by return values of BIO_ctrl
+- Add a CMS test for a bad encryption algorithm
+- apps/x509 etc.: allow private key input when public key is expected
+- Move the description of the core types into their own pages
+- cmp_client_test.c: add tests for end_time being initialized for RR/GENM
+- Updates documentation of RC4_CHAR and RC4_INT: Should not be used for new configuration targets
+- BIO_s_dgram_pair: Correct implementation of BIO_CTRL_DGRAM_GET_LOCAL_ADDR_ENABLE
+- print SSL session, fix build warnings on OpenBSD.
+- Updated return value of PEM_write_TYPE() and PEM_write_bio_TYPE() in man-pages.
+- Ensure there's only one copy of OPENSSL_armcap_P in libcrypto.a
+- Partially revert (Add support for Windows CA certificate store)
+- Add a test for the new QUIC tracing capability
+- Minimal test checking we can get public key in Turkish locale
+- Permit no/empty digest in core_obj_add_sigid
+- util/wrap.pl.in: Use parentheses so kill gets all its arguments
+- QUIC Front End I/O API: Correct implementation of SSL_tick, SSL_get_tick_timeout
+- test: evp_extra: test signing with legacy app method based keys
+- objects.txt: Add newly registered OIDs according to CMP Updates, for use in extended CMPv2
+- QUIC MSST: Test that SSL_free works in either order
+- apps/s_server: Correct s_server to return the correct file path
+- evp_test: Add the missing check after calling OPENSSL_malloc
+- changes entry about non-approved FIPS algorithms
+- QUIC TXP: Allow next PN to be used to be queried
+- asn1: sort stacks before using find
+- QUIC: Add documentation for stream and connection shutdown functions
+- CTLOG_new_ex: Fix copy&paste error when setting propq
+- CI: cross-compile: Allow to set CPU capabilities
+- Convert the write record layer to supply proper return values
+- Fix check of dtls1_process_record
+- Fix EC_KEY_set_private_key() priv_key regression
+- Fix SSKDF to not claim a buffer size that is too small for the MAC
+- OSSL_CRMF_CERTTEMPLATE_get0_publicKey(): fix return type and doc
+- Add unit tests for weak key and key parity checks
+- Fix an enginetest failure when compiled with no-deprecated --api=1.1.1
+- no-module should not imply disabling DSO loading support
+- d2i_PublicKey: Make it work with EC parameters in a provided key
+- add SSL_get0_iana_groups() & SSL_client_hello_get_extension_order()
+- Test that we send multiple datagrams in one go if appropriate
+- Add some CHANGES.md entries for the 3.0.1 release
+- Add negative integer check when using ASN1_BIT_STRING
+- openssl.cnf: split option value and comment and remove leading space
+- doc: Fix some function signature errors
+- QUIC APL: Fix a bug where avail could be used uninitialized
+- Add test case for uniform random generators
+- Make OSSL_provider_init() OPENSSL_EXPORT, not just extern
+- QUIC MULTISTREAM TEST: Fix script 38 stochastic failure on Windows
+- APPS/x509: With -CA but both -CAserial and -CAcreateserial not given, use random serial.
+- Fix incomplete check on X509V3_add1_i2d()
+- Fix bn_gcd code to check return value when calling BN_one()
+- Drop explicit check for engines in opt_legacy_okay
+- Fix a build failure where recvmmsg is available but not sendmmsg
+- apps: silent warning when loading CSR files with vfyopt option
+- QUIC APL: Change SSL_get_event_timeout API design
+- Add a test for read_ahead data crossing a key change
+- QUIC Front End I/O API: Add support for signalling and detecting end-of-stream
+- ECDSA with SHA3 verification does not depend on FIPS provider version
+- lhash: use lock when TSAN not available for statistics gathering
+- APPS/cmp: prevent HTTP client failure on -rspin option with too few filenames
+- fix some code with obvious wrong coding style
+- Windows: use srand() instead of srandom()
+- Move SSL_MODE_RELEASE_BUFFERS into the read record layer
+- Fix arm64 asm code back compatible issue with gcc 4.9.4
+- cmp: add null pointer check in tear_down test function
+- QUIC TXP: Do not generate full-size packets when sending CC-excess probes
+- remove files under test directory from coverage report
+- Use -nameopt utf8 by default
+- Fixes wrong return type in BIO_do_connect man page.
+- OSSL_HTTP_REQ_CTX.pod: clarify that resulting BIO must not be freed
+- Remove duplicated BIO_get_ktls_send calls in do_ssl3_write
+- ssl: expose the get time function internally
+- MacOS prior to 10.12 does not support random API correctly
+- Tidy up aarch64 feature detection code in armcap.c
+- QUIC CONFORMANCE: Handle RESET_STREAM final size correctly
+- test/evp_test.c: Check too big output buffer sizes in PKEYKDF tests
+- QUIC: Allow application to trigger TXKU
+- internal/numbers.h: Add fallback implementation for UINT32_C and UINT64_C
+- Clear md_data only when necessary
+- Don't check whether we are using KTLS before calling the cipher function
+- Move some DTLS read code into the read record layer
+- 80-test_ssl_new.t: make dependencies on CTLOG_FILE and TEST_CERTS_DIR explicit
+- OSSL_STORE 'file:' scheme: Set input structure for certificates and CRLs
+- Fix some Windows issues in the quic_reactor
+- apps/ocsp.c: Add missing test if make_ocsp_response failed
+- threadstest: use locking for tsan operations if required
+- Raise a protocol error if we have not received transport params from peer
+- X509{,_CRL,_REVOKED}_{set,sign}*(): fix 'modified' field and return values
+- apps/s_server: Add missing check for BIO_new
+- test: add some unit tests for the property to string functions
+- Raise SSL_R_QUIC_PROTOCOL_ERROR on any QUIC protocol error
+- Fix the erroneous checks of EVP_PKEY_CTX_set_group_name
+- Fix a possible NULL pointer dereference in create_cert_store()
+- X509V3_set_ctx(): Clarify use of subject/req parameter for constructing SKID by hash of pubkey
+- apps/cmp.c: make sure that last -reqin argument is actually used
+- BIO_gets: fix the incomplete return check
+- Add sm2 encryption test case from GM/T 0003.5-2012
+- Ensure we call the cleanup() function when cleaning an EVP_CIPHER_CTX
+- QUIC Front-End I/O API: Ensure BIOs are reffed and freed correctly
+- Introduce [HAVE_/NO_]MADVISE defines
+- evp_test.c: There are now 3 parameters possible for digests
+- QUIC APL: Make SSL_get_error per-stream, error raising refactor
+- Ensure ossl_cms_EncryptedContent_init_bio() reports an error on no OID
+- Configurations/gentemplate.pm: Generate generators too, when necessary
+- OSSL_HTTP_REQ_CTX_nbio(): use OSSL_TRACE_STRING() for msg body where it makes sense
+- Run-checker merge CI: Memleak test does not work without ubsan
+- rand uniform: fix likely usage
+- Fix: some patches related to error exiting
+- Fix BIO_set_indent() check
+- Add a CHANGES.md entry for the record layer changes
+- [design] Make it possible to use explicitly fetched signature implementation
+- Add OSSL_FUNC_keymgmt_im/export_types function that gets the provider context
+- Fix data race setting default_DSO_meth
+- If an error occurs constructing the quic record layer, free it properly
+- Move record padding out of tls_common.c
+- Add VERSIONINFO resource to legacy provider if it is not builtin
+- fix SSL_get_wbio may return rbio on quic
+- Add a test case for the password prompt on garbage PKCS file
+- Add limited support for WebAssembly WASI target
+- QUIC APL: Report that we do not support SSL_clear correctly
+- QUIC Wire Format Encoding: Fix handling of zero-length parameters
+- CMP test_commands.csv: improve test for -reqin, adding -reqin_new_tid
+- test/mdc2test.c: Add check for OSSL_PROVIDER_load
+- X509: Add "code sign" as purpose for verification of certificates
+- ossl_dh_check_priv_key: Do not fail on private keys without q
+- Remove a redundant point mul from ossl_ec_key_public_check()
+- s_serve: Report an error if init-connection fails without an attempt to read.
+- APPS/{storeutl,gendsa}: give error on extra arguments, improve doc
+- APPS: replace awkward and error-prone pattern by calls to new app_conf_try_string()
+- test: condition out code that relies on CHACHA.
+- Ensure we use a dgram mem BIO for the DTLS record layer
+- Test importing EC key parameters with a bad curve
+- Use safe pattern for buffer size determining in case of GOST key exchange
+- remove extra define for __NR_getrandom and add some comments
+- CMP test_enrollment.csv: clean up test cases regarding (non-existing) directories
+- Always try to construct methods as new provider might be added
+- CMS_ContentInfo_free(): fix mem leak on encrypted content key
+- Add some test_ssl_new tests for the ffdhe groups
+- Avoid resource leaks in do_ssl3_write
+- SHAKE documentation updates for default output length.
+- remove duplicate defines, add comment
+- add no-docs option
+- Add two new build targets to enable the possibility of using clang-cl as
+- param build set: add errors to failure returns
+- Move write buffer management into the write record layer
+- apps.c: improve warning texts of parse_name() when skipping RDN input
+- Fix ssl3_do_write() to correctly handle retries
+- fix: LINEAR search doesn't work properly (if CHARSET_EBCDIC is defined)
+- The PEM_read_bio_Parameters() function should not ask for a password
+- Add an initial QUIC Technical requirements document
+- Fix documentation for tlsext_ticket_key
+- add dependabot to keep actions versions up-to-date
+- EVP_PKEY_get_size.pod and provider-keymgmt.pod: document their relation
+- evp: address a use after free state when using HMAC and MD copy.
+- Testing the EVP_PKEY_CTX_new_from_name without preliminary init
+- Fix EVP todata and fromdata when used with selection of EVP_PKEY_PUBLIC_KEY.
+- Fix visual glitch in non-verbose test output
+- apps/progs.pl: use SOURCE_DATE_EPOCH if defined for copyright year
+- Check that UnsafeLegacyServerConnect option exists
+- Fix return value of BIO_free
+- The -no_legacy_server_connect option applies to client
+- Make CHANGES.md header more appropriate
+- Move dlts_write_records() function in the record layer
+- Test we correctly handle missing ALPN from the server
+- add OSSL_STACK_OF_X509_free() for commonly used pattern
+- Fix a memory leak in EC_GROUP_new_from_ecparameters
+- Add a test case for duplicate engine loading
+- Fix error check on default_check() helper function
+- OSSL_HTTP_transfer.pod: clarify that resulting BIO must be freed
+- Add CHANGES.md entry for support for KMAC in KBKDF
+- Remove use of ossl_statem_in_error() from the record layer
+- Fix VMS installation - use platform->shlib_version_as_filename() consistently
+- Remove some redundant code
+- Fix test/recipes/90-test_fipsload.t to use bldtop_file for the FIPS module
+- Fix a possible memory leak in custom_ext_add
+- QUIC: test fixes for WPACKET use
+- EVP: For all operations that use an EVP_PKEY, check that there is one
+- APPS/cmp: Fix logic and doc of mutually exclusive -server/-use_mock_srv/-port/-rspin options
+- ossl_param_build_set_multi_key_bn(): Do not set NULL BIGNUMs
+- QUIC Test Server: Basic echo server test
+- provider test: don't run configuration based tests if configuration isn't loaded
+- openssl list: add an empty row at the end of each printed list of commands and algorithms
+- apps/smime: Point out that the six operations are mutually exclusive and add check
+- Fix the same BIO_FLAGS macro definition
+- ssl_old_test.c: Check inconsistent values from SSL_get0_alpn_selected()
+- Add the ability to do client side tracing in quictestlib.c
+- apps/speed.c: add verifying if fdopen returns NULL
+- Avoid taking a write lock in ossl_provider_doall_activated()
+- Add a NEWS entry covering the FIPS related changes.
+- Implement a new flag for running s_client in a non-interactive mode
+- Test that a thread blocking in SSL_read_ex() will wake up on FIN
+- Make OSSL_PARAM_BLD_push_BN{,_pad}() return an error on negative numbers
+- Fix treatment of BUILD_METADATA
+- Replace some boldened types with a corresponding man page link
+- cmac_set_ctx_params(): Fail if cipher mode is not CBC
+- providers/implementations/kdfs/pvkkdf.c: Ensure SIZE_MAX is defined
+- QUIC Documentation: update man(7) for multi-stream
+- speed: range check the argument given to -multi
+- openssl-kdf.pod.in: add text on 'salt' and 'info' parameters; small further improvements
+- Update the fuzz README to provide info about the stdc++ requirements
+- OpenSSL::config: determine the MSVC target architecture by asking cl
+- Add test cases for verification of time stamping certificates
+- Fix a possible memleak in CMS_sign_receipt
+- restrict rsaBITS algorithm name check in speed
+- Update document for default security level change
+- BIO_read_filename: fix return check
+- cmp_client_test.c: add tests for errors reported by server on subsequent requests in a transaction
+- SSL_export_keying_material: fix return check
+- Test that a key is usable after an EVP_PKEY_fromdata call
+- Add additional internal HPKE hardening checks resulting from code audit.
+- Fix detection of ARMv7 and ARM64 CPU features on FreeBSD
+- quicserver.c: Fix build with no-ssl-trace
+- ocspapitest: properly check the return of memory-allocating functions
+- QUIC APL: Handle reference for multiple streams counting correctly
+- app_http_tls_cb: Fix double-free in case TLS not used
+- Revert "Fix an occasional CI failure due to unaligned access"
+- QUIC UINT_SET: Fix regression after list refactor
+- CMP: add support for genm with rootCaCert and genp with rootCaKeyUpdate
+- test-rand: return failure on not enough data, allow parent
+- speed: Also measure RSA encrypt/decrypt, not only RSA sign/verify
+- doc/man3/X509_STORE_CTX_get_error.pod: make order consistent, add some missing entries
+- Change the TLS handshake keys early if we're not doing early data
+- provider-compatibility.yml: Correct the directory where opensslwrap.sh is being run
+- Prefer GNU library initialization mechanism over platform one
+- Remove use of SSL_CONNECTION_TREAT_AS_TLS13() from the record layer
+- Make sure we call get_max_records() in the record layer code
+- Fix the ceiling on how much encryption growth we can have
+- Fix possible memleak in PKCS7_add0_attrib_signing_time
+- Add functions supporting thread pool only when it is enabled
+- QUIC err handling: Add multi-stream test
+- Move e_os.h to include/internal
+- Add a test for where a client sends a non-TLSv1.3 key share
+- Fix examples related to BIO_do_accept
+- OSSL_trace_set_channel(): add important statement that it takes BIO ownership
+- QUIC DEMUX: (Server support) Add support for default handler
+- test: add two comparision options to fips version test utility code
+- QUIC: Control SSL option setting
+- 80-test_cmp_http.t: some generalizations and minor improvements of diagnostic output
+- Add a test to confirm that legacy rsa keys work
+- rand: avoid using the derivation function for the public and private DRBGs
+- Update the SSL_rstate_string*() return value for QUIC
+- siphash: Properly set mac size in sipcopy
+- 25-test_x509.t: test dots in CA file path
+- speed: Unify output messages regarding number of ops per time
+- Replace handling of negative verification result with SSL_set_retry_verify()
+- EVP: Add internal functions to fetch type specific EVP methods from provider
+- Fix error handling in CRYPTO_get_ex_new_index
+- OSSL_CMP_CTX_new.pod: remove overlap with OSSL_HTTP_transfer.pod; improve the latter
+- APPS/x509: Fix generation of AKID via v2i_AUTHORITY_KEYID()
+- no_autoload: make the no-autoload-config option work again.
+- Windows CI: explicitly use windows-2019 instead of using windows-latest
+- aes: avoid accessing key length field directly
+- Add X509_STORE_CTX_set_get_crl and X509_STORE_CTX_set_current_reasons
+- QUIC CHANNEL: Only handle the first protocol error raised
+- apps/cmp.c: improve warnings on option use
+- Edit question template to direct users to GH Discussions
+- Fix memory leak in X509V3_add1_i2d when flag is X509V3_ADD_DELETE
+- Fix an occasional CI failure due to unaligned access
+- OpenSSL::Ordinals::set_version() should only be given the short version
+- Make RSA_generate_multi_prime_key() not segfault if e is NULL.
+- doc: Fix RSA public key parameters
+- QUIC: Update ping deadline when we receive a packet
+- Fix error return values from BIO_ctrl_(w)pending()
+- pbe: sort stack before using find
+- ParseC.pm: gracefully handle DOS-style end-of-line in source files
+- Fix no-dtls and no-tls in combination
+- QUIC Dummy Handshake Layer: Allow transport parameters to be set later
+- doc: suggestions for OSSL_PROVIDER_load_ex design document
+- QUIC RX: Do not handle auto-discard of Initial EL inside the QRX
+- sslapitest: add cast to avoid compiler error
+- tags: fix make tags target for out of tree builds
+- QUIC QRX: Fix a list usage bug
+- doc: document the new internal time API
+- add a check for the return of OBJ_new_nid()
+- Add additional messages to the DTLS dropped records test
+- Add a stand-alone "timing" program
+- Add a new guide page on writing a non-blocking QUIC client
+- make clean should clean up fips provider shared object.
+- Avoid exporting bogus (empty) data if empty selection is used
+- Move the TLS1.0/1.1/1.2 record crypto code into the new record layer
+- Fix bug in priority queue remove function
+- QUIC Front-End I/O API: Determine read completion correctly
+- rand: add extra error code
+- Use safe math to computer sizes.
+- apps.c: fix various coding style nits found by check-format.pl
+- Prepare NonStop for fixed-size integer types.
+- Remove extra comma in man page example code
+- test_provider_ex(): Add missing call failure checks
+- Add the check after calling OPENSSL_strdup
+- Update fips version check to be more robust
+- Make testutil text output functions thread safe (tsan)
+- Fix incomplete error check on BIO_set_md()
+- In OSSL_PARAM_set_BN(), make sure that the data_size field is at least 1
+- ec_kmgmt.c: Do not crash when getting OSSL_PKEY_PARAM_ENCODED_PUBLIC_KEY
+- QUIC TXP: Fix bug where TXPIM PKT could be used after free
+- CMP app: improve doc and help output on -{req,rsp}{in,out} options
+- Clarify how to return string data
+- doc: add not that DTLS 1.0, TLS 1.1 and before are disabled at security level 1
+- QUIC Thread Assisted Mode: Add design document
+- Fix a lock in provider_remove_store_methods()
+- Add test for X509 sign TBS cache regression.
+- Add an additional note to EVP_DigestSign() documentation
+- Add test for context duplication failure
+- Move sequence increment to post encryption processing
+- check-format.pl: Fix report on constant on LHS of comparison/assignment
+- check-format.pl: Fix report on constant on LHS of comparison or assignment
+- test: driver: fix -Wunused-but-set-variable
+- Fix build failure on freebsd due to missing data declaration
+- Add testcase for missing return check of BIO_set_md() calls
+- Ensure we initialized the locale before evp_pkey_name2type
+- fipsinstall: add -self_test_oninstall option.
+- Fix a memory leak in ssl_create_cipher_list
+- endecode_test: Handle expected failures for non-fips ec keys
+- Create a dlts_write_records() function
+- Extend the new_record_layer function
+- Add a tutorial on writing a simple blocking TLS client
+- Always add a suitable error if we fail to decode
+- http_client.c: Dump response on error when tracing is enabled
+- Fix the checks of UI_add_input_string
+- apps/ca: replace ;; with ; as statement separator
+- Update the record layer design based on implementation experience
+- Fix aarch64 signed bit shift issue found by UBSAN
+- update changes entry to note EdDSA is not FIPS approved
+- CMS_decrypt_set1_*(): fix NULL deref on unsuitable content type
+- evp: Use functions instead of direct structure field references
+- Add a non-blocking QUIC client demo
+- speed.c: remove unused num print_message args
+- ssl_local.h: Define SSL_OP_CISCO_ANYCONNECT if undefined in public headers
+- Add a test for BIO_s_mem() when using datagrams
+- Use <openssl/e_os2.h> rather than <stdint.h>
+- x509_vfy.c: Revert the core of regarding chain_build() error reporting
+- APPS: generated certs bear X.509 V3, unless -x509v1 option of req app is given
+- QUIC: Test key update works correctly
+- OSSL_STORE: Fix error flag clearing and setting (provider path only)
+- Added info on change to HISTORY of SSL_CTX_set_msg_callback()
+- Added a NEWS entry about the enhanced 'openssl list'
+- Add action to cross validate FIPS providers
+- Cleanup : directly include of internal/nelem.h when required.
+- doc: document that prediction resistance comes with a hidden cost
+- Add support for loading root CAs from Windows crypto API
+- X509V3_get_d2i.pod: use I<> for arguments and remove B<> around NULL
+- test: add priority queue unit test
+- OSSL_CMP_validate_msg(): make sure to reject protection type mismatch
+- ocspapitest: use TEST_true to report the exact failure
+- Test that a client that does not supply ALPN fails as expected
+- apps: several return value checks for BIO_new()
+- QUIC ackm: use list.h
+- QUIC: use list.h
+- Release the drbg in the global default context before engines
+- Make ossltest engine use in test/recipes/20-test_dgst.t platform agnostic
+- Fix seg fault when calling SSL_shutdown() for a QUIC connection
+- Ensure that the key share group is allowed for our protocol version
+- check the return value of BIO_new() in t_x509.c:471 & cmp_vfy.c:36
+- Delete unused param about get_construct_message_f
+- apps/list.c: Check the result of inserting a provider into provider's stack
+- OSSL_HTTP_{REQ_CTX_set_request_line(),_set1_request()}: backward compat w.r.t.
+- Enhance code safety and readability in SSL_get_shared_ciphers()
+- Add and use HAS_CASE_PREFIX(), CHECK_AND_SKIP_CASE_PREFIX(), and HAS_CASE_SUFFIX()
+- Fix the checks in rsautl_main
+- QUIC RXDP: Ensure all stream-related frames autocreate a stream
+- Add negative test for key length change
+- test_pkey_check: Positive testcase for private key with unknown parameters
+- update overview with a note about many to one connection ID cache
+- Fix test/recipes/01-test_symbol_presence.t to disregard version info
+- Add design requirements for QUIC packet demuxer
+- Use as small dh key size as possible to support the security
+- Put X25519 and X448 back as approved algorithms
+- Implement a public BIO_ADDR_copy() function
+- EVP: fix evp_keymgmt_util_match so that it actually tries cross export the other way if the first attempt fails
+- Fix AIX build when no-shared is passed to Configure.
+- Add return value check of X509V3_add_value() in X509V3_parse_list()
+- do_sigver_init: Allow reinitialization of an existing operation.
+- Add documentation for some of the missing environment variables.
+- Correct order of ossl_condvar_signal in quic_multistream_test
+- Add support into qtest_shutdown for blocking mode
+- Add CHANGES.md entry for ess_cert_id_alg default change
+- Remove some final references to the SSL object in the record layer
+- Fix malloc failure handling of X509_ALGOR_set0()
+- QUIC MULTISTREAM TEST: Output connection closure reason info on failure
+- ossl_provider_add_to_store: Avoid use-after-free
+- Add changes logs caption for the next release 1.1.1n
+- NewSessionTickets with an early_data extension must have a valid max value
+- x509: Return a nonzero exit code on error when checking ip/email/host
+- Fix calling pthread_key_delete on uninitialized data
+- Fix a memory leak in ossl_method_store_add()
+- Fix VMS installation - Check the presence of providers in the IVP script
+- apps/speed.c: fix the wrong checks
+- Correct the "Out of memory" EVP tests
+- core namemap: use updated tsan lock detection capabilities
+- run-checker-daily.yml: If the openssl app is not built do not run it
+- OSSL_HTTP_open(): clarify doc of 'server' arg and its use of BIO_new_connect()
+- Implements Hybrid Public Key Encryption (HPKE) as per RFC9180.
+- Make parsing of piped data in speed.c more robust
+- openssl-x509.pod.in: Reflect better that -signkey is an alias for -key option
+- fips.module.sources: Add missing cpuid and related .c sources for other architectures
+- Add test for EC_KEY_set_private_key()
+- Add manpages for SSL_get_certificate, SSL_get_private_key
+- Add sensitive memory clean in priv encode
+- Add help for pkeyopt values for the genpkey commandline app.
+- riscv.pm: Add improved error messages to read_reg code
+- QUIC: make update
+- make update
+- QUIC MSST: make update
+- QUIC: Update documentation for SSL_get_[rw]poll_descriptor, SSL_net_(read|write)_desired
+- Add support for moving data from one epoch to the next
+- apps/x509: Fix -CAfile option being neglected with -new or -in
+- Prefix output to avoid random ok to confuse test parser
+- Add back check for the DH public key size
+- Add testing of OBJ_find_sigid_by_algs()
+- Fixed state transitions for the HTML version of the life_cycle-kdf.pod.
+- doc: change name of OSSL_PROVIDER_load_ex design document
+- Add a test for using a PSK with QUIC
+- Update FIPS related build instructions.
+- ossl_qrl_enc_level_set_provide_secret(): Avoid leaking keyslot in error condition
+- tls: reduce the strength of CCM_8 ciphers due to their short IV.
+- Attempt to fix CI Daily build error
+- QUIC DISPATCH/APL: Implement SSL_get_stream_id
+- Make evp_test skip mac tests if digest or ciphers are disabled.
+- CMP: fix handling of unset or missing failInfo PKI status information
+- Remove supurious set of the record type
+- 80-test_cmp_http.t: fix adaption of plan on 'certstatus' aspect of Mock server
+- QUIC MULTISTREAM TEST: Run all scripts in both blocking and non-blocking modes
+- Document limits on static and dynamic linking for HPE NonStop platforms.
+- Fix EVP_PKEY_CTX_get_rsa_pss_saltlen() not returning a value
+- X509_STORE_CTX_purpose_inherit(): add missing details to its documentation
+- doc: Document that the OBJ creation functions are now thread safe.
+- Add an initial guide page for writing a multi-stream QUIC client
+- Fix an assertion in the DTLS server code
+- Coverity 1531836: Check return value of CRYPTO_atomic_add()
+- Add method store cache flush and method removal to non-EVP operations
+- cmsapitest.c: add test case for CMS_EnvelopedData_decrypt()
+- Revert dropped usage of var thiswr in do_ssl3_write()
+- Document return value of OSSL_DECODER_from_data
+- CMS_add0_cert: if cert already present, do not throw error but ignore it
+- Fix SIZE_MAX not defined on z/OS etc
+- Fix error in example.
+- Make DH_check set some error bits in recently added error
+- OSSL_trace_set_channel.pod and openssl.pod: fix missing/inconsistent category items
+- Add a new advanced command mode to s_client
+- Fix occasional assertion failure when storing properties
+- Fix function signature error
+- GCM: record limit counter gets reset on AAD changes
+- s_server: correctly handle 2^14 byte long records
+- crypto/x509/v3_addr.c: fix style nits reported by check-format.pl
+- QUIC MULTISTREAM TEST: Test SSL_want for consistency with SSL_get_error
+- QUIC RXDP: Record STOP_SENDING/RESET_STREAM event AEC codes consistently
+- Add a test for X509_STORE_CTX_set_purpose()
+- riscv: Clean up extension test macros
+- Add documentation for the BIO_ADDR_copy() function
+- Use test_random() to introduce better noise into the noisy dgram BIO
+- Fix make update
+- Properly document deprecation of DH_new() and related functions
+- Do not use stitched AES-GCM implementation on PPC32
+- Fix failing cms test when no-des is used
+- Move some fields out of the SSL object and into the record layer object
+- EVP_Cipher: fix the incomplete return check
+- Add a test_ssl_new testcase
+- asn1: add ASN1_STRING_set() check result
+- OSSL_PROVIDER_set_default_search_path() return value
+- OBJ_obj2txt(): fix off-by-one documentation of the result
+- evp: make all _is_a functions accept and handle a NULL argument
+- New extensions can be sent in a certificate request
+- X509: Fix handling of AKID and SKID extensions according to configuration
+- QUIC CHANNEL: Do not copy terminate cause as it is not modified after termination
+- Standardise some DTLS record layer naming
+- QUIC Front End I/O API: Wire up SSL_CTX ctrls and remove unneeded functions
+- Update the oqs-provider submodule to a more recent commit
+- asn1_item_embed_d2i: fix th return check
+- provider: return error if buf too small when getting ec pubkey param
+- Added 'saltlen' option to the OpenSSL enc command line app.
+- test/sslapitest.c: Add check for SSL_CTX_new
+- QUIC DISPATCH/APL: Implement SSL_set_default_stream_mode, default XSO refactor
+- QUIC APL: Fix locking in XSO code and fix tests
+- Do not include crypto/asn1.h from internal/cryptlib.h
+- test: skip FIPS config auto loading based tests if feature is disabled
+- test/ct_test.c: Add the missing check after calling sk_SCT_new_null
+- Remove an unneeded OSSL_RECORD_METHOD function
+- Drop ossl_namemap_add_name_n() and simplify ossl_namemap_add_names()
+- test/evp_test: Test if EVP_DigestSign() set signature's length.
+- Use fake time rather than real time in the noisy dgram test
+- Add config option for speed command
+- test: add threading test for object creation
+- Fix 32-bit Windows issues related to QUIC_ACKM / QUIC_CC
+- Add testcase for OSSL_trace_set_callback()
+- Add a prepare for encryption step
+- param build: add errors to failure returns
+- BIO: Allow third parties to use integers instead of pointers for poll descriptors
+- Remove unused 8bit GCM implementation
+- Remove unused 1bit GCM implementation
+- Move checking for alerts to dispatch out of the record layer
+- Replace ssl3_get_message() with tls_get_message_header() and/or tls_get_message_body()
+- pkey: Imply public check if -pubin is specified
+- Update demos/tutorial to distinguish between stream and connection errors
+- Add define guards to avoid multi-inclusion
+- object: use updated tsan lock detection capabilities
+- OSSL_STORE and PKCS : Check if there is a MAC to verify before prompting
+- Remove changes entry for RIPEMD160 in 3.2
+- x509/v3_purp.c etc.: improve doc/comments on codesign and timestamp purpose checks
+- Add a test for an app data record appearing before epoch change in DTLS
+- Return NULL if we fail to create a BIO in the demos/quicserver
+- fix compile error (SIZE_MAX not found) on HP-UX
+- trivial change: optionally suppress include lines
+- Fix a use-after-free in qrx_proces_pkt
+- Add a Certificate Policies Test
+- KTLS: Enable KTLS for receiving as well in TLS 1.3
+- README: add missing link to OpenSSL 3.0 manual pages
+- Windows: use the basename of the product (.dll) for definition files
+- test: make unit tests FIPS provider version aware
+- cmp_client_test.c: add tests for OSSL_CMP_CTX_get_status
+- Add some API tests for TLSv1.3 record padding
+- QUIC Thread Assisted Mode: Fix typos and use of CRYPTO_RWLOCK type
+- Timeout in the tserver test using real time
+- Fix incorrect error return value in i2r_ADMISSION_SYNTAX()
+- Avoid using gets as an argument name in a prototype
+- Declare FIPS option functions in their own header
+- x509: use safe maths calls for overflow detection
+- Improved detection of engine-provided private "classic" keys
+- Added ability to pass additional ASFLAGS to Configure
+- apps/ca.c: Handle EVP_PKEY_get_default_digest_name() returning 1 with "UNDEF"
+- Check for private key existence before calling eddsa sign functions
+- pem: avoid segfault if PKEY is NULL in PEM_write_bio_PrivateKey
+- key_to_type_specific_pem_bio_cb: Use passphrase callback from the arguments
+- APPS: make sure the -CAfile argument can be in DER format
+- use OSSL_PARAM_construct_uint32 for max_early_data
+- get_cert_by_subject_ex(): Check result of X509_STORE_lock()
+- Ensure we free all the BIOs in a chain for QUIC like we do in TLS
+- apps.c: Remove a redundant error print-out
+- Use an enum for the return value from a construction function
+- quic_record, quicapi, and quicfaults tests do not support fuzzing builds
+- Add an EVP demo for key encoding using EC
+- Implement a human readable state function for the record layer
+- Fix a bad merge in quic-multi-stream.c demo
+- Fix broken link to coding-style.html
+- ssl: add a zero time macro
+- configure: introduce no-ecx to remove ECX related feature
+- X509{,_LOOKUP}: Improve distinction between not found and fatal/internal error
+- Add a divide rounding up safe math function.
+- Missing changes entry about OPENSSL_str[n]casecmp
+- Update the default value for the -nameopt option - documentation
+- apps/ocsp: Tweak some places to make clear they refer to *lists* of certs
+- Add empty implementations of quic method functions
+- Raise error when invalid digest used with SM2
+- Add thread pool design document (phase 1)
+- Make s_client -quic -debug work
+- Fix quicserver binding when duplicate entries exist
+- Enable obtaining certain DRBG params without a lock
+- Removes unused parameter 'sending' from derive_secret_key_and_iv()
+- Fix RSA OAEP set/get label for legacy engine
+- Fix BIO_get_ktls_send/recv to return 0 or 1 only
+- Fix documentation regarding KMAC sizes
+- QUIC TXP: Remove TX key update handling from TXP
+- rand: remove the ossl_rand_pool_add_additional_data() function.
+- Fix a bug in signature self tests in the FIPS module
+- Add support for new release commit review requirement bypass
+- Fix no-dsa in combination with no-err
+- Fix test_quic_multistream to allow multiple concurrent tests
+- CORE: Encure that cached fetches can be done per provider
+- QUIC TXP: Fix use of implicit-length STREAM frames in presence of PATH_REPSONSE frames
+- Modify the dkeyform type to support engine
+- Add missing documentation of OSSL_FUNC_store_export_object()
+- QUIC TX: Do not have QTX handle refcount of BIOs
+- Store: API for deletion - make update
+- CMP docs: clarify behavior on message/total timeout values given
+- Replace use of the Dummy Handshake Layer with the real one
+- Fix type confusion in nc_match_single()
+- Fix a few tests that fail on VMS
+- Change all references to OpenSSL 3.1 to OpenSSL 3.2 in the master branch
+- Remove the old buffer management code
+- Remove the _fetch_by_number functions
+- Add link to nghttp3
+- QUIC RXFC: Don't emit a MAX_STREAM_DATA frame if we have a final size
+- Add more SRTP protection profiles
+- Fix sigsize usage in apps/speed.c
+- QUIC ACKM: Clean up max_ack_delay tracking and separate TX and RX values
+- Treat unknown frames as a protocol error
+- Split the blocking TLS client guide page into two
+- Additional testcase for missing return check of BIO_set_md() calls
+- TEST: Add a test of the new BN_signed set of functions in test/bntest.c
+- Add design document for the QUIC connection ID cache.
+- Fix ssl_free() and thus BIO_free() to respect BIO_NOCLOSE
+- CRMF: make create_popo_signature() check that pubkey and pkey match
+- build.info changes for priority queue
+- APPS: remove duplicate definition of trace_data_stack
+- threadstest: add write check to lock checking
+- doc: document the change to the security level of CCM8 cipher suites
+- http_client.c: fix comment and documentation of the memory BIOs used
+- formatting: shift one space to right
+- QUIC ACKM: Add function to get PTO
+- Add null digest implementation to the default provider
+- QUIC: Check block_until_pred return value in shutdown (coverity)
+- Add a test for SSL_version(), SSL_get_version() etc
+- Pass the dtls record version to the record layer msg_callback function.
+- update/final: Return error if key is not set
+- Fix a memory leak in tls_new_record_layer
+- ssl_get_min_max_version(): Remove unused variable single
+- Fix SSL_has_pending() for QUIC connections
+- Add the ability to send FIN on a QUIC stream from s_client
+- Cleansing all the temporary data for s390x
+- build_wincrypt_test.c: Fix compilation with MSVC
+- QUIC APL: Ensure tick inhibition is not used during blocking
+- Always back off on the first packet noise from client to server
+- Add X509_PUBKEY_set0_public_key(), extracted from X509_PUBKEY_set0_param()
+- Rename some functions to be more consistent
+- Fix BIO_f_asn1() to properly report some errors
+- Provide an introductory page to the whole OpenSSL guide
+- test: update ssl_new tests in line with pedantic FIPS policy
+- Correct tag len check when determining how much space we have in the pkt
+- Remove SSL_USE_EXPLICT_IV() from the record layer methods
+- Cleanse data in send and receive ring buffers on release
+- Add notes on use of strdup
+- Tests adjustments for default output change
+- Fix infinite loops in DSA sign code.
+- Make the data field for get_record() const
+- test/v3nametest.c: Add check for OPENSSL_malloc
+- Add a tutorial on writing a simple blocking QUIC client
+- With fips provider 3.0.0 skip tests related to explicit curves handling
+- speed: Correct handling of async_jobs for KEM and signature algos
+- PEM to DER decoder: Specify object type and data structure more consistently
+- Ensure we test fetching encoder/decoder/store loader with a query string
+- Don't add the msblob/pvk decoders if they're not suitable
+- Fixed conditional statement testing 64 and 256 bytes
+- QUIC APL: Refactor blocking configuration to allow late blocking support detection
+- Support multibin to allow multiple binary models to co-exist.
+- Always use FORMAT_BINARY for infile
+- Add more punycode tests and remove ossl_a2ucompare()
+- Check the return value of ossl_bio_new_from_core_bio()
+- Consistency: "Authors" after "The OpenSSL Project"
+- migration_guide: Mention ERR_GET_FUNC() and function code removal
+- CHANGES.md: document BLAKE2b's "size"-setting support
+- Remove spurious error queue entries on early data
+- Fix endianness problem in params_api_test
+- Ensure SSL_has_pending() always works even before a connection
+- Clarify documentation of X509_STORE_CTX_get_current_cert()
+- SSL_handle_events(): Minor fixes to documentation
+- Use record layer buffers for DTLS rather than the buffers in s->rlayer
+- Add some CHANGES entries for 3.0.1
+- QUIC TEST: Test repeated HANDSHAKE_DONE, non-minimal encoding
+- Fix return value checking of BN_check_prime invocations
+- Prevent crash with engine using different openssl runtime
+- Expand the explanation of how to go and do useful work in non-blocking
+- QUIC Front-End I/O API: Wire up the SSL API functions
+- EVP_RAND_generate: fix return check
+- ripemd: document as being present in the default provider
+- Remove use of SSL object for fragment length checking in record layer
+- Fix incomplete check on CMS_SharedInfo_encode
+- Ignore a bad signature in a CertificateVerify message while fuzzing
+- Move the record block_padding capability fully into the record layer
+- Add a test where an unknown frame type is received
+- cmp_client.c: add comment on certConf and add 'ossl_unused' to two functions
+- Update the README with information about how to run the QUIC demos
+- test/trace_api_test.c: fix gcc error on -Werror=strict-prototypes
+- QUIC WIRE: Utility function to determine if PN is in an ACK frame
+- test_get_libctx(): prevent crash when called with NULL provider arg
+- 19607 No need to link explicitly with libpthread on Solaris
+- Add a test for an invalid group in the HRR
+- Update hkdf.c to avoid potentially vulnerable code pattern
+- Add more trace details for the remaining frame types
+- Fix docs related to EVP_RAND_CTX_new() that were not passing the parent
+- CMP: fix crash in check_transactionID_or_nonce() on 'actual' being NULL
+- Update with ARMV8_HAVE_SHA3_AND_WORTH_USING
+- Honor OSSL_PKEY_PARAM_EC_POINT_CONVERSION_FORMAT as set and default to UNCOMPRESSED
+- QUIC_CHANNEL: Handle deferred packet processing after yielding of secrets correctly
+- X509: clean up doc and implementation of X509{,_REQ}_check_private_key()
+- Don't crash encoding a public key with no public key value
+- Enable the fault injector to add faults to post-encryption packets
+- quic: using #defined constant rather than a magic number
+- Documentation update for EVP_set_default_properties
+- Make OSSL_TIME a structure
+- Per other commands, make progress dots in req only w/ -verbose
+- Add a test for QUIC non IO retry errors
+- Handle app data records from the next epoch
+- Add a testcase for OSSL_PROVIDER_unload() being fully effective
+- QUIC QTEST_FAULT: Allow deleted TLS extension to be output
+- X509V3_get_d2i.pod: Fix glitch on X509V3_get{,_ext}_d2i and align order
+- Fix incomplete error check on RSA_public_decrypt()
+- Remove some unneeded usage of the SSL_CONNECTION object
+- QUIC Transport Parameters: Add CID encoder/decoder, make ID optional
+- Coverity 1531872: j is not used anywhere later, remove the assignment
+- test: add some PVK KDF unit test cases
+- quic_multistream_test: Output info about connection close reason
+- drbg: add handling for cases where TSAN isn't available
+- Exclude include of poll.h from NonStop builds - not defined on platform.
+- Fix no-srtp build failure
+- Fix SMIME_crlf_copy() to properly report an error
+- asn1_string_to_time_t: Use timegm on FreeBSD.
+- Remove some remaining SSL object references from DTLS record layer
+- QUIC CHANNEL: Ensure new packets aren't enforced with old keys
+- Note that EVP_CIPHER_get_iv_length returns negative values on error
+- EVP_DigestVerifyFinal: fix test function and invocation
+- X509 x_all.c: Set 'modified' flag when ASN1_item_sign{,_ctx} call was successful
+- 02-test_errstr.t: print errorcodes in hex (rather than decimal) format
+- Add missing HISTORY sections for OpenSSL 3.0 related documents.
+- Include #include "internal/numbers.h" in ssl/quic/quic_cfq.c
+- Prefer .inst rather than .long for probe instructions in arm64cpuid.pl
+- OpenSSL::paramnames: Use less magic perl
+- Docs: Move deprecated ECDSA_ functions into a separate file.
+- QUIC Receive Stream Management: Call QUIC flow control
+- Make settings and options parameters const in recordmethod.h
+- quicapitest: Fix SSL_trace() test on big endian platforms
+- Update the EVP_PKEY_get_id documentation
+- Do a prelimary check for numbers in openssl prime command.
+- 25-test_pkcs8.t: Make text comparison ignore extra CR characters
+- CMS and PKCS7: fix handlling of EVP_PKEY_get_size() failure
+- Add the ability to mutate TLS handshake messages before they are written
+- Convert the weak key and key parity tests to be constant time.
+- Fix version mistake in some HISTORY sections
+- Correct the fixed size handling for dgram_pair and dgram_mem
+- Remove create_empty_fragment from do_dtls1_write()
+- req: Do not warn about using stdin when generating new request
+- Add a QUIC multi-stream client demo
+- Provider cross version checks warning
+- Document that the RSA e value is mandatory when importing.
+- PBE test: load providers if auto config load is turned off
+- Clear unused variables in X509_print_ex()
+- Fix invalid malloc failures in PEM_write_bio_PKCS8PrivateKey()
+- Add a record layer design document
+- After a stream has implicit length don't add more stream related frames
+- QUIC DEMUX: Allow BIO to be changed
+- Make the record layer directly aware of EtM
+- NEWS and CHANGES are updated about switching to utf8
+- BIO_s_connect: Support configuration of non-blocking mode in datagram mode
+- Fix VMS installation - Document in CHANGES.md
+- apps/openssl-vms.cnf: reflect latest changes by 'make update'
+- apps: Add option -no_ems to s_client/s_server apps
+- Add a skeleton TLS record method
+- QUIC MULTISTREAM TEST: Fix connect-or-fail
+- Use libctx when generating DH parameters
+- QUIC TSERVER: Handle return value correctly (coverity)
+- SSL: Test SSL_get_[rw]poll_descriptor, SSL_net_(read|write)_desired
+- timing_load_creds requires POSIX1.2001 due to rusage
+- test: add test cases for the policy resource overuse
+- EVP_DigestSignFinal: *siglen should not be read if sigret == NULL
+- QUIC APL: Revise I/O error setting so that the last error is set on success
+- fuzz/asn1.c: Add missing check for BIO_new
+- Push unprocessed DTLS records from one record layer object to next
+- Clarify SSL_accept_stream/SSL_new_stream behaviour with a default stream
+- QUIC CHANNEL: Allow time source to be overridden
+- 80-test_cmp_http.t: Fix handling of empty HTTP proxy string
+- QUIC MSST: Add documentation for new APIs
+- list: add an is empty function
+- Convert dtls_write_records() to return the correct return values
+- Add testcases for empty associated data entries with AES-SIV
+- Fix a return value in tls_default_read_n
+- Add a test for BIO_ADDR_copy()
+- QUIC RXDP: Different error messages for stream conditions
+- Provide better errors for some QUIC failures
+- QUIC CHANNEL: Make ping deadline and idle deadline calculation consistent
+- Fix a memory leak in crl_set_issuers
+- QUIC TSERVER: Fix probable nondeterminism in some OS network stacks
+- Add an extra reduction step to RSAZ mod_exp implementations
+- issue-21718: remove setting of PTHREAD_MUTEX_NORMAL
+- QUIC TSERVER: Handle FINs correctly if ossl_quic_tserver_read is not called first
+- CMS_add0_cert.pod: add missing man section numbers in recently added L<fun()> refs
+- test: test -drbg_allow_truncated_digests option
+- Add support for BSD-riscv64 target
+- test/recipes/25-test_verify.t: Add a couple of tests of mixed PEM files
+- Don't use C++ reserved word template for function arguments
+- add missing doc of X509_REQ_get_extensions() and X509_REQ_add_extensions{,_nid}()
+- evp_test: add thread support
+- Increase test coverage by enabling more build options
+- Fix OSSL_PROVIDER_try_load() retain_fallbacks doc
+- BIO_s_connect: Add support for datagram mode
+- DOCS: Update the page for 'openssl passwd' to not duplicate some info
+- Fix the export routines to not return success if param alloc failed
+- Add default provider support for Keccak 224, 256, 384 and 512
+- Add tests for do_updatedb
+- Add missing CHANGES.md entries
+- QUIC APL: Create QUIC CHANNEL up front rather than deferring creation
+- Fix VMS installation - Define the logical name OSSL$MODULES
+- Revert "Adding Control Flow guard to Windows Builds"
+- Fix incomplete BIO_dup_state() error check
+- OSSL_CMP_ITAV_set0.pod: fix formatting nits, update example
+- QUIC TXP: Fix generation of CONNECTION_CLOSE
+- Checking the return of BIO_new_fp().
+- Add negative test for iv length change
+- Extend the noisy dgram test so that packets are also affected by noise
+- 25-test_req.t: Add systematic SKID+AKID tests for self-issued (incl.
+- Correctly keep track of where we are in the quicserver request buffer
+- rsa: add implicit rejection CHANGES entry
+- CMP client: fix checking new cert enrolled with oldcert and without private key
+- QUIC MSST: Fix tests on platforms with non-deterministic loopback interface behaviour (Apple)
+- Add the ability to set SSL_trace as the msg_callback in tserver
+- e_os2: add ossl_static_assert_type_eq
+- doc: Avoid usage of non-existing constant
+- Allow PKCS12 export to set arbitrary bag attributes
+- Fix potential NULL deref in ssl_old_test.c
+- Add "make help" option
+- Update GOST engine commit to deal with test failure
+- mem: do not produce usage counts when tsan is unavailable.
+- djgpp: Define WATT32_NO_OLDIES before including socket headers
+- pem: fix a memory leak in PEM_write_bio_PrivateKey_traditional
+- Coverity 1516624: Fix overrun memory access.
+- Fix DH_check() excessive time with over sized modulus
+- Checking __STDC_VERSION__ rather than __STRICT_ANSI__
+- Make DSA_sign() test for negative p,q,g values.
+- Revert "Put EdDSA back as approved algorithms."
+- Added paragraph to free objects alloced by X509V3_add1_i2d()
+- v3_sxnet: add a check for the return of i2s_ASN1_INTEGER()
+- speed: Always reset the outlen when calling EVP_PKEY_derive
+- Move the sequence number into the OSSL_RECORD_LAYER object
+- Fixed typo in inner_evp_generic_fetch() error handling
+- Extend the README to describe how to run the TLS demos
+- Fix incorrect check on RAND_bytes_ex() in generate_q_fips186_4()
+- changes: note about policy tree size limits and circumvention
+- Add provider documentation for the new open_ex
+- QUIC QRX: Initialise all RXE fields properly for non-encrypted packets
+- Make error reason for disallowed legacy sigalg more specific
+- QUIC CHANNEL: Add missing duplicate TPARAM handling cases
+- Change loops conditions to make zero loop risk more obvious.
+- Clean up use of GHASH macro
+- Add testcase for nc_match_single type confusion
+- Test that we generate a short private key for known DH prime
+- tls_write_records_default(): Remove unused variable
+- test: fetching proper signature provider for non-exportable keys
+- CMS_add0_cert.pod: various improvements of the description
+- speed: rework if condition to avoid empty statement
+- Update the tls13encryptiontest for new read record layer
+- always use the same perl in $PATH
+- Fix handling of the "0:" label in arm-xlate.pl
+- Fix memory leak in engine_cleanup_add_first()
+- Fix return value error in doc, and an error test
+- Maximum return value of BIO_ctrl_(w)pending is SIZE_MAX
+- Abstract out the record type processing
+- Makefile: Call mknum.pl on 'make ordinals' only if needed
+- Prevent an overflow if an application supplies a buffer that is too small
+- QUIC: Correct minimal frame encoding test
+- Documentation: X509_V_ERR_CERT_CHAIN_TOO_LONG is not unused
+- [design] Make it possible to pass AlgorithmIdentifier parameter data
+- QUIC CHANNEL: Introduce concept of (non-)addressed mode
+- CMS_add1_crl(): prevent double free on failure of CMS_add0_crl()
+- When exporting/importing decoded keys do not use 0 as selection
+- Coverity 1528492: Fix possible memory leak if t == NULL
+- Fix leakage when the cacheline is 32-bytes in CBC_MAC_ROTATE_IN_PLACE
+- Avoid potential OOB if width > sizeof(start)
+- Do not send the empty renegotiation info SCSV in QUIC
+- update documentation to note that EdDSA is not FIPS approved
+- property: use a stack to efficiently convert index to string
+- Do not include sparse_array.o in libssl with no-shared
+- test: update TLS PDF tests in line with pedantic FIPS policy
+- sm2_dupctx: Avoid potential use after free of the md
+- test/recipes/*.t: setup() doesn't play well with spaces in the argument
+- Extend the test_quic_write_read() test to include resumption
+- Do not use RLAYERfatal on NULL RLAYER
+- QUIC TSERVER: Use a random port in the tserver test
+- test/recipes/01-test_symbol_presence.t: check for duplicate symbols in static libs
+- Make link to RFC 1578 in CHANGES.md be a proper link
+- QUIC: Temporarily disable front-end API tests
+- QUIC: Update SSL_accept_stream manpage
+- Size of random output is now a long, also added option to select chunk size
+- provider_core: sort provider stack on find
+- README: add link to OpenSSL 3.2 manual pages
+- v2i_AUTHORITY_KEYID(): Improve error reporting on parsing config values/options
+- doc: document the event queue internal API
+- Ensure calling BIO_recvmmsg() with a dgram pair reports errors
+- adding -outpubkey option to genpkey
+- Fix documentation for provider-signature
+- Test new ossl_quic_rstream API calls
+- Fix Coverity 1503096: out-of-bounds access
+- Ignore the fetch error when a legacy algorithm is found
+- Add a HISTORY section in the docs about the new ERR_STATE functions
+- QUIC CHANNEL: Fix bug where time callback arg wasn't passed
+- Revert (most of) "Makefile: Generate crypto objects only as far as needed"
+- Fix early_data age calculation
+- Enable the ability to seed the test RNG without randomising test ordering
+- build.info: Introduce special syntax for dependencies on script modules
+- bn: Properly error out if aliasing return value with modulus
+- Allow RSA-PSS also in EVP_PKEY_assign() and EVP_PKEY_can_sign()
+- Fix possible null pointer dereference of evp_pkey_get_legacy()
+- Add a test quicserver utility
+- ensure that ossl_obj_nid_lock is allocated before use
+- Resolves some magic values that has a hello_retry_request enum type.
+- x509: handle returns from X509_TRUST_get_by_id() more consistently
+- Fix test_quic_write_read()
+- Avoid reusing the init_lock for a different purpose
+- QUIC DISPATCH/APL: Implement SSL_get0_connection
+- check-format.pl: improve whitespace reporting on <op>=
+- Remove old FIPS provider cross version check
+- Remove use of _Static_assert
+- Move more general parts of internal/cryptlib.h to new internal/common.h
+- Fix a crash in asn1_item_embed_new
+- apps/lib/http_server.c: improve diagnostics, e.g., on port number already in use
+- CMP test_verification.csv: add missing test case for -untrusted with non-matching cert
+- bio_enc.c: add memory allocation check
+- remove unused macro in common.h
+- doc: add HOWTO document about Documenting public Functions and Macros
+- Fix fixup postrelease scripts to avoid creating errors
+- Have legacy blake2 EVP structure use base blake2 implementation
+- APPS: Improve diagnostics on missing/extra args and unknown cipher/digest
+- Update the corpora files to include the new quic-client subdir
+- Fix error handling in pipelining test
+- Fix some documentation errors
+- QUIC CONFORMANCE: Wire the DATA_SENT state
+- fips-label.yml: Fix the script after actions/github-script upgrade
+- Use the same encryption growth macro consistently
+- Add a qtest_check_server_transport_err helper function
+- apps: Print out a proper message when a store cannot be opened
+- OSSL_HTTP_transfer.pod: Fix omission documenting the 'ok' parameter of OSSL_HTTP_close()
+- Add SSL_(CTX_)?get0_(verify|chain)_cert_store functions
+- QUIC MSMT: Add a basic multithreading test
+- Fix no-dtls1_2
+- QUIC: Update documentation for SSL_get_event_timeout
+- Fix wild pointer dereference in make_ocsp_response()
+- QUIC TLS: Ensure QUIC_TLS is ticked between each processed RX packet
+- Include the default iteration count in the help for the enc command
+- Remove redefinition of SSL_AD_NO_ALERT
+- Allow man7 pages to not have a DESCRIPTION section
+- Properly handling stream/crypto frames while tracing
+- 80-test_cmp_http: Make server diagnostics more verbose to aid debugging
+- Cleanse the SSLv3 MAC secret when we clean up the read record layer
+- QUIC QTX: Handle network errors explicitly
+- QUIC DEMUX: Handle network errors explicitly
+- APPS/cmp: make the -sans option support email addresses (type rfc822Name)
+- Do not build P10-specific Chacha20 assembler on AIX
+- feature: openssl req -verify output to stderr instead of stdout
+- Fix no-ssl-trace
+- ossl_quic_tx_packetiser_generate(): Always report if packets were sent
+- Fix the check of evp_pkey_ctx_set_params_strict
+- Objects: Add OIDs needed for CAdES-Processing
+- Move the QUIC_CONNECTION typedef to internal headers
+- Defer write buffer and WPACKET allocation/initialisation to protocol code
+- check-format.pl: fix statistics on whitespace and nesting issues
+- Propagate selection all the way on key export
+- Only take note of the ack deadline if we can actually issue an ack
+- test/crltest.c: Add check for glue2bio
+- QUIC QSM: Free unneeded stream buffers, calculate RESET_STREAM final size correctly
+- Fix -no-tls1_2 in tests
+- Move logic for figuring out the record version out of record layer
+- x509: Fix possible use-after-free when OOM
+- Fix no-thread-pool building
+- Make sure EVP_CIPHER_CTX_copy works with the dasync engine
+- When calling ossl_crypto_condvar_wait_timeout() we must use real time
+- If the loss detection timer has fired we may not have lost packets
+- Blake2b: Use OSSL_DIGEST_PARAM_SIZE as settable instead of XOFLEN
+- Ensure X509_STORE_CTX_purpose_inherit handles a 0 default purpose
+- Fix BIO_dgram_pair stochastic test failure
+- Pipeline output/input buf arrays must live until the EVP_Cipher is called
+- Fix compile issues in test/v3ext.c with no-rfc3779
+- Make DH_check_pub_key() and DH_generate_key() safer yet
+- Change HKDF to alloc the info buffer.
+- QUIC DISPATCH/APL: Add SSL_set_incoming_stream_reject_policy (unwired)
+- Add a test for a custom digest created via EVP_MD_meth_new()
+- Makefile: Add SRCS list of all .c (and any .cc and .cpp) files
+- X509V3_set_ctx(): Clarify subject/req parameter for constructing SAN email addresses from subject DN
+- Add a test for PEM_read_bio_Parameters()
+- Add note about Windows LONG
+- OSSL_CMP_SRV_process_request(): fix recipNonce on error in subsequent request of a transaction
+- rsa: add test for the option to disable implicit rejection
+- Added tests and updated help
+- Fix build on NonStop
+- README: add link to migration_guide manual page
+- QUIC: Fix multistream script 19 stochastic test failure
+- Add explanatory comments to say what happens during resizing of buffers
+- Move numwpipes in the write record layer
+- err_set_debug(): Prevent possible recursion on malloc failure
+- Remove unused server code
+- Fix nc_email to check ASN1 strings with NULL byte in the middle
+- crypto/err: expand on error code generation
+- Document the effect of SSL_OP_CLEANSE_PLAINTEXT on send stream data
+- Add return value NULL checks that were missing
+- Fix no longer implicitly refresh the cached TBSCertificate
+- Add error code for unsupported explicit parameters
+- test: add unit tests for integer overflow helpers
+- s390x: Fix keccak xofs via CPACF
+- [ssl] Add tests for Perfect Forward Secrecy criteria on SECLEVEL >= 3
+- Add missing include for DH_get0_priv_key()
+- ossl_qrl_enc_level_set_provide_secret(): Clear el->md on error
+- Add a test for an all 0 RSA key
+- Makefile: Generate crypto objects only as far as needed
+- openssl-dgst.pod.in: Fix documentation of -list option
+- Add a TLS test for name constraints with an EE cert without a SAN
+- Remove an unnecessary setup of the read buffer
+- More detailed explanation how do engines work in 3.0
+- 80-test_ssl_new.t: Test 14-curves.cnf depends on enabled DH now
+- prov: remove unused field flag_fallback and function ossl_provider_set_fallback
+- check the return of OPENSSL_sk_new_null
+- win32: Support condition variable broadcasting on XP
+- OSSL_STORE_open_ex(): Prevent spurious error: unregistered scheme=file
+- Put EdDSA back as approved algorithms.
+- Fix a potential memory leak in apps/s_server.c
+- Add the ability to send NewSessionTicket messages when we want them
+- Expand some comments in the header file
+- various kdfs: Always reset buflen after clearing the buffer
+- Remove debug and other outdated build targets.
+- add no-http
+- Keep sending datagrams while we have data to send
+- Add tests for ENGINE problems
+- Drop incorrect skipping of some evp_test testcases with no-gost
+- CI: Add enable-quic to some of the builds
+- adding provider_unload functions for cmp_ tests
+- Add missing OSSL_DECODER entry in NEWS.md and CHANGES.md
+- QUIC Front End I/O API: Remove __owur from man pages
+- Provide introduction/tutorial page for QUIC multi-stream
+- Remove further uses of __ARMEL__ in AArch64 assembly
+- Don't error if s_client receives exactly BUFSIZZ data
+- Fix Coverity 1498610 & 1498609: uninitised value
+- Fix coverity 1498607: uninitialised value
+- Fix Coverity 1498605 & 1498606: uninitialised value
+- QUIC DHS: (Server support) Add server state machine for DHS
+- QUIC TXP: Refactor status output to use an extensible structure
+- Make openVMS seeding less dependent of OpenVMS version
+- QUIC Front End I/O API: Change version string
+- Ignore ping deadline when calculating tick deadline if we can't send
+- Adding Control Flow guard to Windows Builds
+- OSSL_CMP_CTX: rename get/set function for trustedStore
+- apps.c: add comment to do_X509_sign() referring to question
+- openssl-ocsp.pod.in: state for options that they are flexible w.r.t.
+- prov: add a safe memdup function for context cloning
+- ec: Use .machine "any" explicitly in ecp_nistp521-ppc64
+- Fix for a segv interrupt that occurs when fix_dh_rfc5114 is called with
+- OSSL_STORE: Prevent spurious error during loading private keys
+- Windows CI: Continue on error during cpuinfo
+- When we're just reading EX_CALLBACK data just get a read lock
+- Implement packet type checks in the RX Depacketizer
+- QUIC Send Stream State: Transition to DATA_SENT
+- Fix the LCM computation in the RSA multiprime key check
+- Add test for DSA pubkey without param import and check
+- properly free the resource from CRYPTO_malloc
+- Have OSSL_PARAM_allocate_from_text() raise error on unexpected neg number
+- Do not build P10-specific AES-GCM assembler on macOS
+- Fix a possible memory leak in dane_tlsa_add
+- Added check for the return value of the RAND_bytes() function
+- Update alert to common protocol
+- Assert that a property definition cache entry is the first
+- test/ssl_old_test.c: Add check for OPENSSL_zalloc
+- test/ssl_old_test.c: Add check for OPENSSL_malloc
+- QUIC: Minimally handle version negotiation packets
+- apps.c: fix error messages (newline and needless text) in load_key_certs_crls()
+- CMP: fix status held in OSSL_CMP_CTX, in particular for genp messages
+- changes: add note saying the locale based strcasecmp has been replaced
+- Fix a leak in an error path in OSSL_DECODER_CTX_new_for_pkey()
+- Move the record padding callback fully into the record layer
+- DOC: OSSL_PARAM_{set,get,construct}_BN() currently only supports nonnegative numbers
+- The rsa_validate_keypair_multiprime() function return is not boolean
+- cms_sd.c: fix style/formatting nits reported check-format.pl
+- doc: fix description of mac "block-size" parameter
+- Add some documentation for X509_gmtime_adj()
+- add missing OSSL_CMP_CTX_reset_geninfo_ITAVs() function
+- QUIC: Implement SSL_rstate_string(_long)
+- Fix memory leak when freeing the DTLS record layer
+- QUIC QTX: Handle negative IV values correctly (coverity)
+- Fix file operations in c_rehash.
+- Initial congestion control API design
+- Fix test/quic_tserver_test.c for slow machines
+- Do not include sparse_array.o in libssl
+- QUIC Connection State Machine Design Document
+- Fix heading in random generator man7 page
+- APPS HTTP server: trace requests and responses when enabled
+- apps/x509.c: Remove legacy call to OBJ_create()
+- s390: Add new machine generation
+- ARM assembly pack: translate bit-sliced AES implementation to AArch64
+- Correct 50-nonstop.conf to support QUIC tests under SPT threading models.
+- Moving notify check after the no time check
+- evp: process key length and iv length early if present
+- Update Cloudflare Quiche to fix a build issue
+- evp_extra_test: Add SIPHASH MAC digestsign test with reinitialization
+- doc: Document outcome of multiple digestsign/digestverify calls
+- fips: update DSA security check to fix legacy verify strengths
+- Fix code format: BLOCK_CIPHER_custom
+- QUIC MSST: Rename SSL_set_incoming_stream_reject_policy
+- apps/cmp.c: fix coding style nits reported by check-format.pl
+- Update gost-engine to match new default nameopt
+- Add QUIC-TLS server support
+- KTLS: Handle TLS 1.3 in ssl3_get_record.
+- Add QUIC support to s_client
+- Ensure that MDs created via EVP_MD_meth_new() go down the legacy route
+- OSSL_HTTP_transfer.pod: Some clarifications on the BIO connect/disconnect callback function
+- Fix Coverity 1503218: negative loop bound
+- Correctly activate the provider in OSSL_PROVIDER_try_load
+- Fix a memory leak in tls_parse_stoc_key_share
+- Fix the checks of EVP_PKEY_public_check
+- Add a test for a corrupted packet
+- add locking around fake_now
+- Fix undefined behaviour in EC_GROUP_new_from_ecparameters
+- Actually implement UnsafeLegacyServerConnect as documented
+- Check that IV length is not less than zero
+- ossl_quic_new(): Fix a leak found by error injection
+- Use of sparse_array.c only in the shared libssl
+- Fix CertificateCompressionAlgorithm to be read as 2-octet-wide
+- Test the default key length of the Blowfish ciphers
+- Fix 'openssl speed' information printout
+- Handle the case where the read buffer is empty but we have received FIN
+- EVP_PKEY_fromdata(): Do not return newly allocated pkey on failure
+- Add an initial QUIC-TLS implementation
+- Don't wait in select if we have data to write
+- Add a test for public variants of bn2bin()
+- Fix Coverity 1493746: constant expression result
+- Remove the user_ssl field
+- TXT_DB_write: fix the return check
+- Fix new typos found by codespell in documentation
+- Make SSL_alloc_buffers() and SSL_free_buffers() work again
+- QUIC APL: Add missing unlock call (coverity)
+- mdl: Don't enforce one space after list markers
+- gcm_get_funcs(): Add missing fallback for ghash on x86_64
+- First working empty protocol test
+- Add a QUIC non-blocking demo
+- Fix another decoder mem leak on an error path
+- Add support for mac-less password-base PKCS12 files to PKCS12_parse API.
+- self_test.h: fix the C++ wrapping
+- aarch64: fix branch target indications in arm64cpuid.pl and keccak1600
+- Update GitHub actions as suggested by dependabot
+- Fix some no-comp compilation failures
+- Fix possible memory leak on error
+- Test whether decoded-from-explicit survives import/export
+- x509: fix double locking problem
+- Updates for OSSL_TIME changes
+- Socket now displays what address it is connecting to
+- Add test case for
+- Document the OPENSSL_TEST_RAND_SEED environment variable
+- Never use __atomic_* on macOS 10.7 and 10.8
+- cmp_client.c: fix handling of total_timeout for RR and GENM transactions
+- QUIC FIFD: Ensure QUIC_STREAM is updated after QUIC_SSTREAM loss
+- Put 3DES back into the FIPS provider as a non-approved algorithm
+- Use the record layer msg_callback not the SSL object msg_callback
+- check the return value of CRYPTO_strdup()
+- VMS: use selective search when linking with shareable images
+- Configuration: produce include/openssl/configuration.h when configuring
+- Move tls_pad.c into ssl/record/methods
+- Configurations/*.tmpl: overhaul assembler make rules.
+- cmp: fix --strict-warnings windows builds
+- Fix some memory leaks in the openssl app
+- Bad function definition
+- property: produce error if a name is duplicated
+- log actual NID causing the 'unknown message digest algorithm error'
+- QUIC TSERVER: Allow detection of new incoming streams
+- RSA keygen update: Raise an error if no prime candidate q is found.
+- Defer record header preparation to the protocol methods
+- document RRFC9000 10.1 MUST requirement
+- Provide an introduction to the OpenSSL libraries
+- Correct the documentation for SSL_set_num_tickets()
+- dgram_pair_read_inner(): Do not move buf pointer if it is NULL
+- Add some optional debug output to the noisy dgram BIO
+- QUIC APL: Refactor stream-related code into QUIC_XSO object
+- QUIC SSL: Prohibit early data functionailty
+- Add some more brainpool tests for TLSv1.3
+- cms: Create test for for purpose verification in cms application
+- Add SSL_get0_group_name() to get name of the group used for KEX
+- Fix the defective check of EVP_PKEY_get_params
+- REFCOUNT: Add support for querying refcount
+- RAND_bytes_ex: fix return check
+- QUIC CHANNEL: Handle any number of streams
+- apps/s_client: Add ktls option
+- Coverity 1545175: use after free
+- Coverity 1522032: use after free
+- QUIC QRX: Handle negative IV length values correctly (coverity)
+- QUIC TXP: Major refactor to handle padding correctly
+- Updated rsa_has() for correct validation
+- QUIC TSERVER: Allow reading from a stream after connection termination
+- tests: Add test for X509_dup with ENGINE based key
+- Enhance quic_tserver test to fully test thread assisted mode
+- speed: Fix memory leaks
+- poly1305: Properly copy the whole context on dup
+- Be more accurate about what we accept as a valid DTLS version
+- QUIC TEST: RESET_STREAM, STOP_SENDING
+- Add a TLS non-blocking demo
+- Fixed the date of changes of 1.1.1m
+- Add deferred datagram limit to QUIC Record Layer RX
+- Don't take a write lock to retrieve a value from a stack
+- rsa: add msvc intrinsic for non x64 platforms
+- DH_check: Emphasize the importance of return value check
+- rl->enc_ctx must be non-NULL and cipher must be set
+- Add some documentation for the BIO_s_mem() datagram capability
+- QUIC TXP: Fix bug relating to STREAM FIN generation
+- QUIC: Make QUIC_CHANNEL use newreno CC
+- Added a macro OSSL_DISPATCH_END as marker of the end of OSSL_DISPATCH arrays
+- Update troublesome copyright years of auto-generated files to 2022
+- remove DSA512 from speed testing
+- Add no-threads build to CI
+- Remove the SSL3_RECORD read field
+- Add CI to test old FIPS provider versions
+- demo: Fix makefile target
+- add note about retrieving error stack
+- Move freeing of BIOs as late as possible
+- Fix error handling in lhash contract
+- Don't call ossl_provider_free() without first setting refcnt
+- Correct the SSL_rstate_string*() APIs to match reality
+- ossl_x509_store_ctx_get_by_subject(): Check return value of X509_STORE_lock()
+- speed: Fix memory leak
+- Add notes about ignoring initialization failures on contexts
+- add checks for the return values of BN_new(), sk_RSA_PRIME_INFO_new_reserve(),
+- DH_check(): Do not try checking q properties if it is obviously invalid
+- util/find-doc-nits: improve error diagnostics on missing man section numbers in links
+- quic: use the safe fused multiply divide instead of a safe multiply then a normal division
+- add priority queue implementation
+- free the Post-Handshake Auth digest when there is an error saving the digest
+- CMP: introduce version 3, while version 2 stays the default
+- Handle non IO based retry errors in QUIC
+- Avoid crashing if CONF_modules_unload() is called after OPENSSL_cleanup()
+- Fix the symbol_presence test with a shlib_variant
+- ssl_cipher_process_rulestr: don't read outside rule_str buffer
+- Test the performance of OSSL_PARAM_allocate_from_text with arbitrary size ints
+- Add the ability to mutate QUIC packets before they are written
+- test/evp_test.c: Add check for OPENSSL_strdup
+- Add a test for converting OSSL_TIME to struct timeval
+- x509_att.c: improve error checking and reporting and coding style
+- kdf objects missing a return if malloc fails.
+- Test that we ignore a bad record version in a plaintext TLSv1.3 record
+- fix: reject adding a duplicity into STACK_OF(X509_ATTRIBUTE)
+- ec.h: Explain use of strstr() for EVP_EC_gen() and add #include <string.h>
+- Add test of FIPS provider from the master branch with 3.0 build
+- Add test of FIPS provider from the 3.0 branch with master build
+- test: check for properly raised errors during param conversion
+- Add a flag so finalised contexts are not reused
+- ossl_do_blob_header: fix return check
+- QUIC TEST: Fix double close of FD (coverity)
+- Fix multistream test script 18
+- Fix memory leaks in ssl_old_test.c
+- Fix mistake in ERR_peek_error_all documentation.
+- Fix strict client chain check with TLS-1.3
+- Remove include/internal/decoder.h, as it's superfluous
+- Update SSL options handling
+- [refactor] BIGNUM: Modify bin2bn() to work from least to most significant chunk
+- tsan: make detecting the need for locking when using tsan easier
+- list: add debug sanity checks
+- Fix Coverity 1520485: logically dead code
+- Fix Coverity 1494385 logically dead code.
+- Correct the CHANGES entry for CVE-2023-1255
+- Add "info" concatenation tests
+- Remove redundant RAND_get0_private() call
+- X509_cmp.pod: Point out that the X509_NAME_cmp() arguments may be NULL
+- fix Coverity 1494649: dead code
+- qtest: Run both client and server during connect
+- Change condition to avoid spurious compiler complaints.
+- QUIC CC: Move dummy method to test code
+- QUIC: Add ERR_raise() calls for EVP call failures
+- Fix potential infinite loops in ECDSA signing.
+- Adds separate configuration targets for intel i386/x86_64 and arm64 ios simulators
+- QUIC QSM: Allow QSM to know if we are in the server role
+- QUIC Front End I/O API: Don't allow EPW to be enabled during AON
+- Configurations/platform/Unix.pm: account for variants in sharedlib_simple()
+- X509 x509_req.c: Set 'modified' flag when X509_req_info_st member data updated
+- Document the list of RAND algorithms in the default and fips providers.
+- Fix EVP_PKEY_decrypt return check
+- QUIC Test Server Implementation
+- openssl-x509.pod.in: fix description of certificate serial number storage
+- QUIC CHANNEL: Set reason string for missing tparams extension
+- test/ssl_old_test.c: Fix potential leak
+- Add unit test for
+- QUIC tx record layer: use list.h
+- ec_kmgmt.c: check the return of BN_CTX_get() in time.
+- EVP_PKEY_derive_set_peer_ex: Export the peer key to proper keymgmt
+- Fix a potential memory leak in crypto/provider_child.c
+- async_posix: Make ASYNC_set_mem_functions threadsafe
+- QUIC: Note differences in SSL_want
+- apps/dgst.c: Set digestname from argv[0] if it is a builtin hash name
+- bn_lib.c: Change Endianess check to as a binary condition.
+- Coverity 1528496: remove assignment of unused value
+- dhtest.c: Add test of DH_check() with q = p + 1
+- QUIC: Test connection with large client and server cert chains
+- test: Fix memory leak of asynctest
+- Clarify dashes are required for openssl list command
+- QUIC Thread Assisted Mode: Support Windows XP
+- Fix a typo found by codespell in a variable name
+- APPS/{x509,req}: Fix description and diagnostics of -key, -in, etc.
+- Fix NULL deference when validating FFC public key.
+- fips selftest: avoid relying on a real RNG for self tests
+- c_rehash: Do not use shell to invoke openssl
+- Ensure that EXFLAG_INVALID_POLICY is checked even in leaf certs
+- Don't create an ack frame if one isn't wanted for this pn_space
+- Allow empty passphrase in PEM_write_bio_PKCS8PrivateKey_nid()
+- Add support for streams to the quic-client fuzzer
+- Free up space in the session cache before adding.
+- QUIC TXP: Make discard_enc_level match documentation
+- Fix KTLS with BIO_new_connect
+- test: add cipher context dup test
+- Avoid using union wrt.
+- Enhance the explanation of selector bits in provider-keymgmt(7)
+- Added Simple SSL Echo Client/Server to demos.
+- Compensate for UI method always adding NUL termination
+- macros.h: There are just 3.1 deprecations, no 3.2 deprecations
+- Allow sign extension in OSSL_PARAM_allocate_from_text()
+- Fix the checks of EVP_PKEY_private_check
+- Bump suisei-cn/actions-download-file from 1.3.0 to 1.4.0
+- punycode: add unit tests
+- changes: note that PVK KDF has moved to the legacy provider
+- list: add a doubly linked list type.
+- Add tests for trace_api.
+- QUIC APL: Fix incoming default stream popping
+- Remove duplicate code
+- Add OSSL_QUIC methods to headers and manual pages
+- X509V3_set_ctx(): Improve documentation
+- Properly limit the variable output size for BLAKE2
+- QUIC ACKM: Rework probe reporting to allow use for bookkeeping
+- Add tests for FIPS keygen self test failures.
+- Fix possible infinite loop in BN_mod_sqrt()
+- Check that sk_SSL_CIPHER_value returns non-NULL value.
+- Correct the UnsafeLegacyServerConnect docs
+- Add linux-x86-latomic target
+- Copy min/max_proto_version from SSL_CTX to SSL only for the same method types
+- Coverity 1529992: Check return value of sscanf()
+- trace_api_test.c: Separate tracing statements
+- Do not build P10-specific AES-GCM assembler on AIX
+- Fix a possible memleak in SRP_VBASE_new
+- coveralls: Drop no-shared and -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
+- Check record layer callbacks are non-null
+- QUIC APL: Correct implementation of time callback override
+- Fix output corruption in req command
+- QUIC: Note that we do not retransmit stream data for retransmitted streams
+- Amend NEWS.md to be more like release notes
+- CONF_modules_unload should fail if CONF_modules_finish fails
+- evp_test: fix rebase mistake with no_gost
+- PKCS7_dataVerify(): fix missing use of CRLs in PKCS message
+- x509_print_ex: Remove unused setting when XN_FLAG_COMPAT is set
+- QUIC: Complete the implementation of the RX depacketiser in terms of QUIC_CHANNEL
+- "Reserve" the method store when constructing methods
+- Use armv8 .quad instead of .dword
+- Incorporate the crypto man page into the OpenSSL guide
+- Add provider pre-fetching documentation
+- QUIC APL: Optimise write buffer sizes automatically
+- EVP_PKEY_keygen_init: fix return check
+- EVP_PKEY_paramgen_init: fix return check
+- Add unit test for event queue
+- fips: use seed source requested
+- Improve documentation of -no_ssl3, -no_tls1, -no_tls1_1, -no_tls1_2, -no_tls1_3 options
+- Add test for generating safeprime DH parameters
+- Remove OPENSSL_ia32cap overrides in various test scripts
+- QUIC Front End I/O API: Tweaks to handshake processing
+- check the return value of OSSL_PARAM_BLD_new in dsa_kmgmt.c:195
+- Fix Coverity 1201740 & 1201712: uninitialised values
+- Replace use of strstr with strchr
+- Fix a memory leak is ossl_provider_doall_activated
+- Optimize out unneeded up_ref/free of EVP_CIPHER
+- Address Coverity 1493387 Logically dead code
+- Add simple interoperability test with Cloudflare quiche
+- CMP: add support for genm/genp messages with id-it-caCerts
+- QUIC API: Rename want_net_read and want_net_write
+- Add a missing call to BIO_closesocket()
+- QUIC TSERVER: Add support for multiple streams
+- QUIC MSST: Revise SSL_get_conn_close_info API (char)
+- rsa: add check after calling BN_BLINDING_lock
+- QUIC CHANNEL: Allow ticking to be inhibited for testing purposes
+- c_rehash: Fix file extension matching
+- [doc] Sync documentation now that 3.0 honors OSSL_PKEY_PARAM_EC_POINT_CONVERSION_FORMAT
+- DRBG: restrict the digests that can be used with HMAC and Hash DRBGs.
+- QUIC: Add history section to SSL_inject_net_dgram()
+- Coverity 1545174: calling risky function
+- bio_dgram_test.c: Fix warning from older clang compilers
+- providers: Do not use global EVP_CIPHERs and EVP_MDs
+- CHANGES.md: Add entries for contributions to 3.1 by DDvO
+- params: add error messages for built in param conversions
+- Errors raised from OPENSSL_sk_set should have ERR_LIB_CRYPTO
+- Abstract out policy and extensions in CA.pl
+- OSSL_HTTP_REQ_CTX_nbio(): Fix parsing of responses with status code != 200
+- test: evp_extra: fix indentation error
+- Fix new typo found by codespell in demo
+- QUIC: Revise and add some TODO lines
+- Add information on the 'ias' port for OpenVMS
+- Fix a possible memleak in PKCS7_add_attrib_smimecap
+- properly free the resource from EVP_MD_CTX_new() at ssl3_record.c:1413
+- Add CODE-OF-CONDUCT.md
+- QUIC TXP: Add extra test
+- CRYPTO_THREAD_lock_new(): Avoid infinite recursion on allocation error
+- QUIC MULTISTREAM TEST: Add comment
+- crypto/asn1/a_time.c: Add check for OPENSSL_malloc
+- Use progress_cb in genrsa
+- APPS/req.c: Make -reqexts option an alias of -extensions option
+- quic_newcid_test: Add negative test case
+- Reference the non-"legacy" provider names directly from EVP_md5(3) &c.
+- feat: Add sm2 signature test case from GM/T 0003.5-2012
+- Remove redundant check
+- Fixes : Fixed double free bug in crypto/http/http_client.c
+- Add a DTLSv1_listen() test
+- [refactor] BIGNUM: Modify bn2binpad()'s setup to be more like bin2bn()'s
+- Don't forget we are doing QUIC if we clear the QUIC TLS data
+- evp_test: add digest xoflen support
+- Avoid duplicating symbols in legacy.a with some build options
+- improving tests for adding sigalg with empty digest
+- 80-test_cmp_http.t: fix server port and confusion client vs.
+- Allow to disable apps building with no-apps
+- openssl speed -multi -evp prints wrong algorithm name
+- Add a QUIC test for back pressure
+- Fix documentation of X509_VERIFY_PARAM_add0_policy()
+- Avoid putting ripemd_prov.c in libcommon otherwise it is regarded as fips source
+- Add Tests for RSA signatures using X931 padding.
+- Fix default padding regression against 3.0.0 FIPS provider
+- Add a comment to indicate ineffective macro
+- doc: Add hint to use EVP_PKEY_get_bn_param to retrieve big integers
+- DOC: Add a few previously documented functions
+- Support all NULL-syntax X.509v3 extensions
+- SM4 check should be for __aarch64__, not __ARM_MAX_ARCH__ >= 8
+- test_rstream_random(): Test adding final empty frame
+- Update gost-engine to the last changes
+- s_cb.c: check the return value of X509_get0_pubkey()
+- eckey_priv_encode(): Call ASN1_STRING_free() only on an ASN1_STRING
+- OSSL_trace_enabled.pod and OSSL_trace_set_channel.pod: improve doc
+- speed: Fix execution of EdDSA measurement
+- Add option to FIPS module to enforce EMS check during KDF TLS1_PRF.
+- QUIC CHANNEL, TXP: Discard INITIAL EL correctly
+- Correctly track the original length when generating a stream frame
+- params: add helper functions to allocate & copy params
+- Avoid dangling ptrs in header and data params for PEM_read_bio_ex
+- BIO_ctrl: Avoid spurious error being raised on NULL bio parameter
+- Fixed TLS1.3 handshake issue for legacy engine API.
+- internal/asn1.h: Add missing '#include <openssl/bio.h>'
+- OSSL_PROVIDER_load_ex tests
+- Generate some certificates with the certificatePolicies extension
+- Add support for compressed certificates (RFC8879)
+- cmp_http.c: extend comment in keep_alive()
+- apps/passwd.c: free before error exiting
+- QUIC TEST: STREAM, MAX_DATA and MAX_STREAM_DATA testing
+- QUIC CHANNEL: Tune RXFC default parameters
+- 04-test_encoder_decoder.t: Use algorithm that is non-fips also on 3.0.0
+- enable CMS sign/verify for provider-implemented PKEYs
+- CHANGES.md: Attribute the OPENSSL_LH_flush() fix properly
+- QUIC CONFORMANCE: Stop handling frames after termination
+- Don't keep creating CONNECTION_CLOSE frames
+- doc: Fix incorrect pairing of functions
+- Don't create an ECX key with short keys
+- use '__builtin_expect' to improve EVP_EncryptUpdate performance for gcc/clang.
+- QUIC Dispatch: Update ssl_lib.c frontend to use new dispatch style
+- Extend the test_multi_load() test
+- quic_txp_test.c: Cleanup use of WPACKET
+- fix documentation error caused by commit 6882652e65d39310c98ba506ceb55a87c702d419
+- QUIC: Do not discard the INITIAL el too early
+- ctrl_params_translate: Allow get_rsa_payload_x() also for RSA-PSS
+- link the pyca tests against the correct openssl
+- QUIC Test Server: Minor fixups
+- quic conformance: add comment about section 10.2.3 conformance
+- INSTALL: document shared library pinning for static builds
+- Correct some formatting errors in tls1_meth.c
+- apps & al : Fix various typos, repeated words, align some spelling to LDP.
+- tls1_set_groups_list: freeing *pext before overwriting
+- Introduce a step to prepare the BIO before writing
+- Fix formatting of NOTES-WINDOWS.md and doc-nits failure
+- Clear incorrectly reported errors in d2i_CMS_ContentInfo
+- Bugfix: unsafe return check of EVP_PKEY_fromdata
+- Enable extra Arm64 optimization on Windows for GHASH, RAND and AES
+- TLS Fuzzer: initial test infrastructure
+- Correct return type for BIO_ptr_ctrl
+- SSKDF with KMAC should return SIZE_MAX when EVP_KDF_CTX_get_kdf_size()
+- increase x509 code coverage metrics
+- CMS_add1_signer(): add missing ERR_raise() calls
+- cmp.c: Avoid dereference with negative index and use memcpy
+- QUIC FC: Rename stream count mode to reflect actual function
+- ssl_log_secret call in tls13_key_update
+- Document purpose and trust setting functions
+- CHANGES.md: Mention new features added after 3.2 alpha1
+- Workaround crash in atexit on NonStop platforms
+- OPENSSL_init_crypto load config into initial global default library context
+- Fix memory leak in BN_rand_range()
+- QUIC Dispatch: Refactor APL interface to use SSL pointers not QC pointers
+- Update the QUIC demos to accept hostname/port on the command line
+- Limit the size of various MAXCHUNK definitions
+- Move CPU detection to armcap.c
+- Enable tracing of datagrams we have sent
+- OSSL_HTTP_open(): Complete documentation of checks for server and proxy args
+- Added a 'saltlen' option to the openssl pkcs8 command line app.
+- OSSL_HTTP_REQ_CTX_nbio(): fix copy&paste glitch calling BIO_should_retry(rctx-rbio)
+- eng_dyn: Avoid spurious errors when checking for 1.1.x engine
+- Add support for KTLS zerocopy sendfile on Linux
+- Fix function signatures in aes-gcm-armv8 comments.
+- obj_xref.h: make update
+- OSSL_HTTP_get(): Fix timeout handling on redirection
+- Fix the signature newctx documentation
+- Fix memleak in test/provider_test.c
+- Validate the category in OSSL_trace_end()
+- Avoid loading of a dynamic engine twice
+- Add support for RNDRRS Provider
+- Raise the timeout in quic_client_test.c
+- cmp_mock_srv.c: improve comment on cert to be produced from request template
+- apps/speed.c: Lock buffer in memory
+- QUIC APL: Determine if an error is an I/O error dynamically
+- Add additional include
+- Correct a copy&paste error in a link URL
+- QUIC RSTREAM: Allow pointer to be NULL when calling free
+- cmp_client_test.c: Remove needless dependency on NDEBUG
+- QUIC Dispatch: Introduce the QUIC_XSO object
+- Refactor method construction pre- and post-condition
+- APPS/cmp: Simplify read_write_req_resp() - 'req' arg must not be NULL anyway
+- doc: update FIPS provider version information
+- Add missing assignment to EVP_get_digestbynid()
+- EC_POINT_hex2point: forget to free pt
+- QUIC Wire Encoding: Support Retry Integrity Tag Calculation
+- Distinguish between fatal and non-fatal errors when creating a record layer
+- Convert jdkTrustedKeyUsage to be a pkcs12 cmd line option
+- close_console: Always unlock as the lock is always held
+- Add the ability to drop datagrams in the noisy dgram BIO
+- QUIC TEST: Ensure bogus BLOCKED frames are ignored
+- Change PBES2 KDF default salt length to 16 bytes.
+- SSL_get_current_cipher() and SSL_get_pending_cipher() return 'const SSL_CIPHER *'
+- Added a short description of VC-WIN*-HYBRIDCRT to Windows notes
+- Fix Coverity 1503314 unchecked return value
+- Fix coverity 1504433: unchecked return value
+- Fix coverity 1493364 & 1493375: unchecked return value
+- QUIC TXP: Fix bug in send stream handling, cleanup
+- Test that SipHash_Final() fails on uninited context
+- Bugfix: unsafe return check of EVP_PKEY_fromdata_init
+- apps/speed.c: Wait for generated children
+- QUIC APL: Validate send stream state
+- Check return value of ossl_parse_property()
+- Fix type/legacy name
+- QUIC TXP: Fix missing OSSL_NELEM include
+- ossl_property_list_to_string: handle quoted strings
+- Update the desciption of shutdown in the QUIC client blocking tutorial
+- QUIC QSM: Correct the logic for determining stream count limits
+- Implement the QUIC Fault injector support for TLS handshake messages
+- QUIC: Add HTTP/3 demo using nghttp3
+- Clean up some SCTP releated issues
+- Fix incorrect ERR_raise() calls
+- Check whether buffers have actually been allocated/freed
+- Fix VMS installation - $config{pointer_size} -> $target{pointer_size}
+- evp_test: allow FIPS provider version based escapes in evp_test
+- Enable tracing of packets that have been sent
+- Avoid using a macro expansion in a macro when statically initialising
+- PKCS12_SAFEBAG_set0_attrs: Remove const from function signature
+- Modify test/quic_record_test.c to also depacketize
+- enc : add support for wrap mode
+- test: add sm4 xts test cases
+- Fix GENERAL_NAME_cmp for x400Address (master)
+- apps/cmp.c: make management of http_cb_arg pointer more robust
+- Minor fixes to thread assisted mode
+- Support different R_BITS lengths for KBKDF
+- Restore the meaning of EVP_PKEY_print_private()
+- test: update evprand tests in line with pedantic FIPS policy
+- QUIC err handling: Properly report network errors
+- Refactoring some operations to avoid repeated calls
+- Remove some miscellaneous references to SSL_CONNECTION
+- apps/cmp.c: Fix glitch in -newkeypass warning and extend warnings for genm
+- Increase the default security level to 2
+- QUIC MSMT TESTS: Add tests to exercise MAX_STREAMS
+- Fix a regression in X509_VERIFY_PARAM_add0_policy()
+- Extend custom extension testing
+- Fix incomplete error check on ASN1_item_i2d()
+- doc: Fix keymgmt functions parameters
+- EVP_PKEY_{en,de}capsulate.pod: fix glitches and add some detail and hints
+- x509/by_file.c: fix unreachable and redundant code
+- Test that swapping the first app data record with Finished msg works
+- Set protocol in init_client()
+- Add EVP demo for X25519 key exchange
+- s_server: Add check for OPENSSL_strdup
+- rsa: Add option to disable implicit rejection
+- property: reduce memory consumption when OPENSSL_SMALL_FOOTPRINT is defined.
+- crypto/dsa.h: fix include guard name
+- QUIC SSTREAM: Fix test which was not being executed fully
+- property: make cache flushing slight less deterministic
+- QUIC RX: Support reporting the key epoch a packet was received with
+- Remove unused internal functions
+- Fix error propagatation in BN_check_prime()
+- Coverity: fix 1506298: negative returns
+- Coverity: fix 1506297: negative returns
+- Remove some more redundant TODO(RECLAYER) comments
+- QUIC SSL: Version setting restrictions
+- QUIC: Wire SSL_net_(read|write)_desired for TLS/DTLS
+- Use USE_SWAPCONTEXT on IA64.
+- Update session timeout code with OSSL_TIME
+- list: rename internal fields
+- test: add digest context dup tests
+- Don't run the symbol presence test on windows
+- Add HPKE DHKEM provider support for EC, X25519 and X448.
+- Fix documentation where openssl-genrsa is listed as
+- Added CERTIFICATE_VERIFY_MAX_LENGTH constant
+- QUIC TEST: Connection closure reason testing
+- QUIC DISPATCH/APL: SSL_accept_stream, SSL_get_accept_queue_len
+- Add TFO support to socket BIO and s_client/s_server
+- Coverity 1528490: Avoid assignment of unused value of i
+- Coverity 1528487: Avoid assignment of unused value of i
+- Coverity 1528488: Avoid assignment of unused value rctx
+- QUIC FC: Modify RXFC to support use for enforcing MAX_STREAMS
+- augment man pages with information about PKCS12KDF in FIPS mode
+- Add FIPS build instructions
+- TEST: Enable and fix test_bn2padded() in test/bntest.c
+- test/helpers/handshake.c: Add check for OPENSSL_strdup
+- Update CMAC cipher algorithm list and test cases.
+- Ensure we up-ref the sbio before passing it to tserver
+- Print the duplicate symbols found in test
+- avoid a NULL dereference when getting digest
+- Tolerate a bad record version in TLSv1.3 plaintext records
+- optimize ossl_sm4_set_key speed
+- rand uniform: add comments outlining the algorithm
+- Dependabot configuration is not a workflow
+- Fix new typos found by codespell
+- Adapt our OSSL_FUNC_keymgmt_match() implementations to the EVP_PKEY_eq() fix
+- Drop FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION for some builds
+- Allow partially releasing a record for TLS
+- Fix bad HTML formatting in EVP_KEYEXCH-DH.html because of missing newline in pod file
+- Coverity 1528486: Avoid assignment of unused value of bags
+- Disable 82-test_tfo_cli if tfo is not enabled.
+- Avoid generating RSA keys with p < q
+- Remove restriction to only cross-sign self-signed certificates
+- OSSL_CMP_MSG_read(): Fix mem leak on file read error
+- Use %llx not %lx for uint64_t
+- Postponed further context duplication support for ciphers
+- QUIC CONFORMANCE: Validate RESET_STREAM final sizes correctly
+- CMS: add CMS_SignedData_verify(), a variant of CMS_verify() with extensions
+- Add some additional tests for the new fc "consumed" params
+- err: add additional errors
+- Update versions tested to include 3.1.1
+- Move need_empty_fragments inside the record layer
+- Add a test for the SSL_rstate_string*() APIs
+- sslapi: use correct fipsmodule.cnf
+- Fix a possible memleak in rsa_pub_encode
+- Update the SSL_CTX_set1_groups documentation
+- TX key update support, RX time and PN reporting, general refactoring
+- providers: add XOF support to blake2b
+- Don't try and do ossl_provider_find in ossl_provider_new
+- Don't compile quic_thread_assist.c on OPENSSL_NO_QUIC_THREAD_ASSIST
+- Test ocsp with invalid responses and the "-no_cert_checks" option
+- Work around relocation errors in the m68k cross-compilation builds
+- QUIC TXP: Don't send STREAM frames until handshake is complete
+- Add some additional comments to the demos
+- QUIC FC: Correct operation of stream count mode
+- Add support for --version and synonyms
+- apps/lib/http_server.{c,h}: clean up logging and move it to log.{c,h}
+- Test loading a PEM file from multiple threads
+- CI: add last run-checker fuzzing CIs to Actions
+- QUIC DDD: Allow target host:port to be set from command line
+- apps/s_server: Add ktls option
+- Avoid taking a write lock in RAND_get_rand_method()
+- Initial design for error handling in QUIC
+- Call post_process_record for dtls records
+- try_pkcs12(): cleanse passphrase so it is not left on the stack
+- Clarify flags argument of X509_check_ip
+- rsa exp: move declarations before code
+- CMS_add1_signer.pod: add missing info on CMS_SignerInfo_sign() return values
+- Remove unreachable code from SSL_use_certificate_file() as in SSL_CTX_use_certificate_file()
+- Fix compilation issues in the imported recordmethod.h
+- QUIC TXP: Allow caller to determine if an ACK-eliciting packet was sent
+- Update CHANGES and NEWS for new release
+- Update CHANGES/NEWS for new release
+- Update documentation on SSL_CTX_set_msg_callback() to match the actual functionality.
+- Update the OpenSSL Guide tutorials with changes to the demos
+- apps/req.c: properly report parse errors by duplicated(); simplify the function
+- check *libctx which is allocated by OSSL_LIB_CTX_new()
+- Document the return value of OSSL_LIB_CTX_load_config()
+- Don't raise an error on retryable read in a BIO_s_dgram_pair()
+- CMP app and API doc: add note on critical server auth on receiving trust anchor certs
+- QUIC CHANNEL: Fix idle timeout handling
+- Keep doing ossl_quic_tls_tick() even after handshake completion
+- Fix new typos found by codespell in man pages
+- Add a reference to the demos subfolder
+- dev/release.sh: Adjust release branch names to votes
+- QUIC wire format support
+- Add a test case for the engine crash with AES-256-CTR
+- Internaly declare the DSA type for no-deprecated builds
+- Add locking to QUIC front-end
+- Change strlen' argument name to strlength' to avoid c++ reserved words.
+- Add initial demo-driven design demos
+- crypto/cmp: fix clash of OSSL_CMP_CERTREQID_NONE with error result of ossl_cmp_asn1_get_int()
+- util/wrap.pl.in: If the subprocess died with a signal, let's re-signal it
+- QUIC FIN Support: Various fixes
+- openssl: dhparam: Print warning if -in argument is ignored
+- Remove redundant check for saltlen > UINT32_MAX
+- Add KMAC support to KBKDF.
+- QUIC TXP: Allow PATH_RESPONSE to force padding
+- Fix build of SHA3 on ARM64 with no-asm
+- fix Coverity 1506709: error handling
+- rand: fix seeding from a weak entropy source
+- QUIC Send Stream Management
+- Fix another memory leak reported in CIFuzz
+- Revise s_client and s_server verbiage re secure renegotiation.
+- Test a 0 return from the ticket key callback
+- Add initial QUIC support for the msg_callback
+- DH: Make padding always on when X9.42 KDF is used
+- QUIC TXP: Test packet size boundary cases
+- Make sure we remember how much data we sent in the event of a retry
+- des: prevent error when using two key triple DES with a random key
+- Remove duplicated values
+- QUIC TXP: Refactor TXP-related deadline handling into TXP
+- Add dupctx support to aead ciphers
+- demo: remove end of line whitespace
+- Fix documentation of BIO_FLAGS_BASE64_NO_NL
+- info.c: Fix typos in seed macro name and description string
+- quic compliance: 10.2.3 dropping instead of closing
+- Make sure the QRX and QTX are associated with a libctx
+- Fixup demo exit status magic numbers
+- HTTP client: Fix cleanup of TLS BIO via 'bio_update_fn' callback function
+- Fix IV length caching in EVP encryption code
+- QUIC test fix
+- QUIC: Fix multistream test 19
+- BIO_s_datagram: Support configuring non-blocking mode
+- libcrypto and test: rename asn1_string_to_time_t to ossl_asn1_string_to_time_t
+- Allow to pass a passprase callback at store open
+- Convert ssl3_get_record to tls_read_record
+- Fixed incorrect usage of vshuf.b instruction
+- Add fuzz test recipe for the quic client fuzzer
+- s390x: Fix Keccak implementation
+- The CC wake up deadline is now if we have TX allowance
+- QUIC UINT_SET: Fix null dereference (coverity)
+- Check for NULL when freeing the QUIC_TLS object
+- QUIC CHANNEL: Initialise max_ack_delay values properly
+- coverity: add a daily coverity build
+- Fix a UAF resulting from a bug in BIO_new_NDEF
+- default provider: include RIPEMD160
+- CMP check_transactionID_or_nonce(): fix reason code on unmatched recipNonce
+- Add fuzz test for v3name
+- Fix test failure when testing with Test::Harness
+- Move channel mutex out of QUIC_CHANNEL for init/teardown flexibility
+- QUIC FIFD: Add support for callback on frame ACK
+- QUIC TXP: Allow TXP to generate probes
+- Fix Coverity issues in HPKE
+- Fix coverity issues in X509v3_addr
+- CMP app: fix file output of certs and cert lists on non-existing cert(s)
+- QUIC API Overview: Add Q&A, minor fixes
+- COMP_expand_block: spelling (algorithm)
+- QUIC APL/CHANNEL: Wire up connection closure reason
+- Add a test for receiving a post-handshake CertificateRequest
+- test: add unit test for CVE-2023-5363
+- Don't run TLSFuzzer tests when it is not properly set
+- Don't set cancel state/type
+- rsa_signverify_init: Set the PARAMS after key is set
+- Check for EVP_MD being NULL inside ssl.
+- QUIC MSST: Further documentation fixes
+- Dont require CRT params on ossl_rsa_set0_all_params
+- Add loongarch64 target
+- Update further expiring certificates that affect tests
+- Fix missing null check
+- util/find-doc-nits: extend regex to match new OPT_INFORM A
+- Remove a spurious inclusion of the sparse array header file
+- Support trace for QUIC Frames
+- Fix a compilation failure in bio_comp_test.c
+- Fix copyright year issues
+- Remove an unused variable (clang 16 warning)
+- bn_nist: remove unused type-punning union u
+- tests: clear error queue before executing a testcase
+- Test TLS extension ordering
+- Add build note for win-arm64
+- Refactor OSSL_LIB_CTX to avoid using CRYPTO_EX_DATA
+- Fix the checks of EVP_PKEY_check
+- quic_new_record_layer(): Change TODO(QUIC) to QUIC FUTURE
+- Configurations/unix-Makefile.tmpl: Ensure that md-nits always works
+- APPS: dhparam: Support setting properties
+- APPS: genrsa: Support setting properties
+- APPS: ecparam: Support setting properties
+- APPS: pkeyparam: Support setting properties
+- APPS: dsaparam, gendsa: Support setting properties
+- Avoid an unneccessary lock if we didn't add anything to the store
+- obj: make the OBJ_ calls thread safe
+- QUIC DDD: Add unchanged copy of ddd-02-conn-nonblocking to serve as base for thread-assisted variant
+- TLS: Fix use of an uninitialized value
+- Update unix Makefile template to handle paths with spaces
+- Fix wrong default algorithm in openssl pkcs12 help
+- d2i_PKCS8PrivateKey_bio.pod: evp.h include is unnecessary
+- QUIC CONFORMANCE: Enforce minimal frame type encoding
+- Restructure the write code
+- Fix UWP builds by defining VirtualLock
+- quic_tserver_test: Raise the initial timeout limit
+- Remove redundant tests
+- x509: excessive resource use verifying policy constraints
+- CMP cert_response(): add missing rejection status on client rejecting new cert
+- stack: fix searching when the stack isn't sorted.
+- Fix conflicts between DH check flags and FFC check flags
+- fix_dh_paramgen_type: Avoid crash with invalid paramgen type
+- Clean up on failed BIO creation
+- QUIC CONFORMANCE: Test that CRYPTO frames with bad offsets/lengths are rejected
+- Revert "Move DES based test cases out of FIPS territory"
+- Avoid races in tserver test code
+- Disable test/timing_load_creds.c on VMS
+- include PVK KDF in legacy provider algorithm list
+- Ensure client to server datagrams are noisy too
+- Clarify documentation in regards to EC key parameters
+- Ensure the QUIC TLS SSL object is marked as shutdown
+- QUIC MSMT: Stress tests, support for repeating test opoerations
+- Fix error in LHASH documentation
+- Incorporate the ssl man page into the OpenSSL guide
+- X509_STORE_new: memory needs to be freed
+- Add config option OPENSSL_NO_UNIX_SOCK
+- rsa: fix bn_reduce_once_in_place call for rsaz_mod_exp_avx512_x2
+- fix the return check of EVP_PKEY_CTX_ctrl() in 5 spots
+- QUIC Front End I/O API: Minor doc fixes
+- EVENT QUEUE: Fix memory leak (coverity)
+- Address coverity 1493382 argument cannot be negative
+- Have set_dateopt() return 1 on success to make -dateopt work
+- bio_print.c: Delete unreachable code at lines 710 and 711
+- Avoid undefined behavior of provided macs on EVP_MAC reinitialization
+- UI: Check for NULL pointer after calling OPENSSL_memdup
+- PKCS12 - Add additional libctx and propq support.
+- QUIC QSM: Clean up SEND_STREAM/RECV_STREAM handling
+- trace.c: Add missing trace category entry
+- Add support for PBE using hmacWithSM3
+- ssl_lib: added pointer SSL_CONNECTION check to NULL before dereferencing it in ossl_ctrl_internal()
+- Fix SM4 test failures on big-endian ARM processors
+- Ensure the record layer is responsible for calculating record overheads
+- QUIC Stream Mapper: CSM-related changes, stream limits handling
+- Cleanse also the send stream data with SSL_OP_CLEANSE_PLAINTEXT
+- Apply the correct Apache v2 license
+- Add test for openssl ecparam with fips and base providers
+- Fix the checks of EVP_PKEY_CTX_get/set_rsa_pss_saltlen
+- Create internal/ssl.h
+- CMP: fix OSSL_CMP_MSG_http_perform() by adding option OSSL_CMP_OPT_USE_TLS
+- Add missing ')' to command help
+- Update the default macsaltlen and Add the configure for macsaltlen
+- Document the stack functions that are forgiving
+- pk7_doit.c: Check return of BIO_set_md() calls
+- DES_set_key(): return values as DES_set_key_checked() but always set
+- QUIC Record Layer: Allow INITIAL EL to be rekeyed
+- ssl/statem_srvr.c: clean up handling of EVP_PKEY_decrypt() outlen
+- crypto: Fix various typos, repeated words, align some spelling to LDP.
+- avoid sun as variable name
+- QUIC APL: Mask API operations when in shutdown flush
+- Fix faulty detail in BN_rand() manual
+- Fix a typo found by codespell in a Makefile variable
+- QUIC DISPATCH/APL: Add SSL_stream_reset and status query APIs
+- Statically link the legacy provider to endecode_test
+- doc: correct the SSL_CTX_set_info_callback(3) manual page
+- Connection ID processing
+- QUIC TSERVER: Allow STOP_SENDING/RESET_STREAM to be queried
+- QUIC TEST: Test malformed crypto stream data, excess buffering
+- Add an EVP signature demo using DSA
+- Front End for QUIC Thread Assisted Mode
+- QUIC: Version negotiation testing
+- QUIC WIRE: Allow encoding/decoding of reserved header bits
+- Add support for timeouts into quictestlib.c
+- Add empty migration guide for 3.1
+- context_init: Fix cleanup in error handling
+- QUIC: Back out version string change
+- QUIC APL: Validate receive stream state
+- Remove perror() usage in library
+- Configuration: support building for OpenVMS for x86_64
+- design proposal: fast param location outline
+- Ensure that SIZE_MAX is defined where OSSL_SSIZE_MAX is used.
+- doc: note the restriction on digests used by DRBGs in FIPS mode.
+- Document OSSL_get_thread_support_flags()
+- QUIC: Add support for datagram injection
+- rand: add set0 calls for the private and public DRBGs
+- providers: cipher: aes: add riscv64 zkn support
+- Remove some references to rlayer.rstate
+- QUIC TEST: Ensure PATH_RESPONSE is ignored
+- Move freeing of an old record layer to dtls1_clear_sent_buffer
+- QUIC WIRE: Refuse integer transport params with trailing body bytes
+- Move OPENSSL_strcasecmp() and related to o_str.c
+- Revise build.info
+- QUIC MULTISTREAM TEST: Correct trivial bug
+- Remove references to read_mac_secret and write_mac_secret
+- Documenting lack of error codes stability
+- Don't attempt a QUIC connection without specifying ALPN
+- crmf_lib.c: Make sure Ed signature for POPO is called without digest
+- Add the LibreOffice Draw source for the QUIC overview graph
+- QUIC CHANNEL: Correct timeout calculation for ACKs
+- QUIC CHANNEL: Apply flow control to CRYPTO streams
+- QUIC CHANNEL: Store TPs for initial flow control in TX direction
+- Clear away some unused fields and cruft in the record layer
+- Move ktls.c into the record layer
+- Remove dtls_write_records
+- Fix white space
+- cmp_vfy.c: Use verification callback if cert_acceptable() finds expired cert
+- dependabot: update config to include CLA: trivial, set branches etc
+- Github Actions: Enable building QUIC on Windows
+- Add dgram API discussion
+- Coverity 1545176: dereference before NULL check
+- Coverity 1507484: dereference before null check
+- VC++ 2010 x86 compilers do not have InterlockedOr64
+- Fix the checks of X509_LOOKUP_* functions
+- Fix a no-ecx failure in test_tls13hrr
+- Fix a leak in an error path when duplicating an OSSL_DECODER_CTX.
+- Fix stack corruption in ui_read
+- Refactor the DRBG implementations to manage locking themselves
+- QUIC: Test handling of post-connection session tickets
+- Add EVP demo for RSA key generation
+- QUIC: Rename SSL_set_initial_peer_addr to SSL_set1_initial_peer_addr
+- QUIC QRX: Don't process 1-RTT packets until handshake is complete
+- Fix various typos, repeated words, align some spelling to LDP.
+- Before we do anything the ping deadline is infinite
+- Fix a typo in the function name
+- Fix typo in function name
+- Add fallback in case of locale initialization failure
+- Return -1 properly from do_X509_REQ_verify and do_X509_verify
+- apps/cms.c: Fix unreachable code in cms_main()
+- Fix Coverity 1498611 & 1498608: uninitialised read
+- crypto/x509/x509_vfy.c: Improve coding style
+- crypto/x509/v3_purp.c: Improve coding style
+- Avoid double-free on unsuccessful getting PRNG seeding
+- lhash: Avoid 32 bit right shift of a 32 bit value
+- QUIC err handling: Save and restore error state
+- Configure: add thread-pool and default-thread-pool
+- QUIC: Automatically drain non-concluded streams, bugfixes
+- Add a separate README for the guide demos
+- Fix reported performance degradation on aarch64
+- pkeyutl: Fix regression with -kdflen option
+- EVP_KDF.pod: extend text on 'salt' and 'info' parameters
+- EVP_MD performance fix (refcount cache contention)
+- Fix timeouts in the quic_multistream test script 13
+- Improve Malloc Failure Test
+- kbkdf: Fix kbkdf_dup function pointer type
+- Test short buffers
+- Remove compress/expand fields from SSL_CONNECTION
+- Document remaining obsolete SSL_OP_NETSCAPE_*_BUG
+- Add quic client fuzzer.
+- QUIC MULTISTREAM TEST: Test backpressure on stream creation
+- Add a DTLS next epoch test
+- QUIC TLS: Report TLS errors properly as QUIC protocol errors
+- test/evp_extra_test.c: Add EVP_PKEY comparisons in test_EC_priv_pub()
+- Disable the test_afalg on cross compile targets
+- Clear ownership when duplicating sessions
+- Fix incorrect return check of BN_bn2binpad
+- Fix incorrect return check of BN_bn2nativepad
+- x509_lu.c and x509_vfy.c: improve coding style, comments, and related doc
+- Avoid duplication of OPENSSL_armcap_P on 32bit ARM
+- Add a test for OSSL_ERR_STATE_save_to_mark()
+- Include the e_os.h before string.h
+- x509: add the check for X509_STORE_lock
+- Fix incorrect parameter verification in EVP_MD_CTX_get_params
+- Building: For the FIPS module checksum, keep track of configuration,h
+- translation: EC legacy keys, handle OSSL_PKEY_PARAM_EC_PUB_X,Y requests
+- APPS: dgst: Support properties when signing
+- feat: add hmac-sm3 test cases from GM/T 0042-2015 Appendix D.3
+- Correct padding mode flag name for EVP_PKEY_decrypt/encrypt() examples
+- Fix build issue with aes-gcm-armv8-unroll8_64.S on older aarch64 assemblers
+- test/timing_load_creds.c: use OPENSSL_SYS_ macros
+- pvkkdf: Always reset buflen after clearing the buffer
+- Fix a possible memory leak in load_builtin_compressions
+- X509_NAME_cmp fix for empty name
+- Add Content Type OID for RPKI id-ct-signedTAL
+- QUIC APL: Allow DTLSv1 APIs to be used for compatibility
+- QUIC: Fix bugs where threading is disabled
+- endecode_test.c: Add tests for decoding with 0 selection
+- Add a helper function to prepend a frame to a packet
+- QUIC RXDP: Reuse allocations between ACK frame processing
+- Avoid erroneous diagnostics in speed measuring
+- APPS: Move load_csr_autofmt() from apps/cmp.c to apps.c and use it also for apps, too
+- Remove the read_iv/write_iv fields from SSL_CONNECTION
+- test/cmp_vfy_test.c: free before return
+- QUIC APL: Support waiting for peer-initiated shutdown
+- Configure: Add disablable for QUIC, disabled by default
+- Disable the policy tree exponential growth test conditionally
+- cms demos: print signingTime attributes
+- Check error return from cms_sd_asn1_ctrl() correctly.
+- Ensure the rrl object is set to NULL after it is freed
+- Fix broken links on asym_cipher manpages
+- Split out thread pool tests into threadpool_test
+- Fix dtls_get_max_record_overhead()
+- Add test for EVP_PKEY_sign_init_ex with RSA PSS padding
+- remove redundant free of NULL
+- Add a test for pkeyutl encrypt/decrypt using SM2
+- QUIC: Implement SSL_has_pending
+- SSL_conf_cmd: Allow DH Parameters at any position.
+- cmactest.c: Fix no-des and no-sm4 build failures
+- add support for SHA-3 based PRF to PBES2
+- djgpp: Use usleep() for ossl_sleep()
+- Don't bail out during provider deactivation if we don't have store
+- Resign test/certs/rootCA.pem to expire in 100 years
+- CMP check_msg_find_cert(): improve diagnostics on transactionID mismatch
+- Remove statistics tracking from LHASH
+- Still advance handshake even on an empty write
+- Revert "Give BIO_s_mem() the ability to support datagrams"
+- x509: sort stacks prior to searching
+- 80-test_cmp_http.t: Skip IPv6 address test if IPv6 is unavailable
+- Add note about RFC 9000 10.2 persist time
+- Remove enc_write_state
+- Fuzz checker CI: Use more generic include dir for fuzzer includes
+- Consolidate sequence counter incrementing code
+- Avoid potential memory leak
+- QUIC Receive Stream Management
+- test: add test case for deadlock reported in
+- dh_to_text: Print the dh->length if set
+- bn_local: remove unused PTR_SIZE_INT definition
+- QUIC CHANNEL: Handle ping deadlines differently
+- QUIC DEMUX: Refactor list manipulation
+- Call SSL_write() in the quic-client-fuzzer
+- Assert that we do not exceed the DTLS MTU
+- CMP: correct handling of fallback subject in OSSL_CMP_CTX_setup_CRM() and its doc
+- cmp_msg.c: free memory of certStatus before goto err
+- Fix BIO_sendmmsg/BIO_recvmmsg issues on FreeBSD
+- Fix a carry overflow bug in bn_sqr_comba4/8 for mips 32-bit targets
+- ENCODER PROV: Add encoders with EncryptedPrivateKeyInfo output
+- Don't empty the method store when flushing the query cache
+- BIO_read.pod: fix small typo
+- Move DES based test cases out of FIPS territory
+- Test that QUIC has the ciphersuites that we expect
+- Remove TODO(QUIC) about raising errors from ossl_quic_tls_tick()
+- Fix unsafe BIO_get_md_ctx check
+- Add testing of bitflips in packet headers
+- Fix engine cleanup error handling
+- get_ecdsa_sig_rs_bytes: free value of d2i_ECDSA_SIG() before return
+- Add for_comp flag when retrieving certs for compression
+- QUIC CHANNEL: Handle incoming remotely-created streams
+- KTLS: Check for unprocessed receive records in ktls_configure_crypto.
+- Fix: invoking X509_self_signed improperly
+- Unexpected QUIC post-handshake CertificateRequests are a PROTOCOL_VIOLATION
+- apps/rehash.c: avoid printf format warning [-Wformat]
+- QUIC RX: Refactor key update callback to provide PN
+- Use RSA CRT parameters in FIPS self tests.
+- Set VC win64 perlasm scheme during Configure
+- Update FIPS provider documentation to note that fips=yes is mandatory
+- fix documentation error caused by commit 9067cf6ccdce0a73922f06937e54c2fce2752038
+- Add missing copyright header
+- Fix style nits in crl_set_issuers
+- High level overview of QUIC Implementation
+- QUIC fault testing TODOs are changed into regular comments
+- Fix supported_groups handing in TLSv1.2
+- Enable QUIC by default
+- QUIC DEMUX: Ensure time field is always initialised
+- Use Perl to generate bsaes-armv8.S
+- OSSL_PARAM_BLD and BIGNUM; ensure at least one byte is allocated
+- ec_export: Other parameters are exportable with domain parameters
+- QUIC TXP: Handle non-inflight-eligible packets correctly
+- Add Arm Assembly (aarch64) support for RNG
+- New function EC_GROUP_to_params to convert an EC_GROUP to an array of OSSL_PARAM.
+- Fix windows builds
+- QUIC QSM: Handle STOP_SENDING correctly
+- Avoid including decoder/encoder/store headers into fips module
+- Don't attempt to deactive child providers if we don't need to
+- Fix a logic flaw in test_mod_exp_zero
+- Coverity 1503321 & 1503327: dereference after null check
+- coverity 1497107: dereference after null check
+- Coverity 1507376: Dereference after null check
+- 80-test_cms.t: Fix rsapssSaltlen check on MinGW
+- Update the comment on ssl3_write_pending()
+- Add a test for TLS pipelining
+- Add tests for RNDR and combine tests with RDRAND
+- Fix a misuse of NULL check
+- CMP+CRMF: fix formatting nits in crypto/, include/, and test/
+- coveralls.yml: Improve coverage mapping and remove 1.1.1
+- QUIC CC TEST: Fix memory leak
+- rename 90-test_traceapi.t to 90-test_trace_api.t for consistency
+- feat: add missing pki / pmi object identifiers
+- QUIC ACKM: Clarify probe types
+- pem_password_cb(3): References to other man pages
+- Fix more VMS inclusions
+- Fix a decoder mem leak on an error path
+- Add the missing check of BN_bn2hex return value
+- djgpp: Skip check for negative timeval
+- QUIC API: More minor tweaks
+- Detect arm64-*-*bsd and enable assembly optimizations
+- doc: add the migration guide to the new guide series
+- Don't call OPENSSL_init_crypto from inside a RUN_ONCE
+- Fix incorrect error branch in ossl_bn_rsa_fips186_4_derive_prime()
+- Add the recordmethod header from the draft design
+- QUIC: Add transport parameter and other constants
+- QUIC ACKM: Add support for psuedo-loss
+- Fix Configure variable spill
+- Add two missing entries to the OCSP CRLReason table
+- Fix small typo in X509v3_get_ext_by_NID() man page
+- test: evp_extra: EC, read affine coordinates
+- test_gendhparam: Drop expected error output
+- Add CVE-2023-4807 fix to CHANGES.md and NEWS.md
+- Fix quotes install_fips in Configurations/windows-makefile.tmpl
+- android-x86 target: Add -latomic
+- CI: Checkout submodules to make the regression fuzz tests run
+- Complete the cleanup of an algorithm in OSSL_METHOD_STORE
+- Note that SHA1 and MD5 x509 signatures are also forbidden at security level 1
+- Fix older clang warning on initialization
+- first cut at sigalg loading
+- QUIC I/O Architecture Design: Add block diagram, tweak wording
+- Stop the quicserver if the handshake or receiving the request fails
+- TEST: Add addition OSSL_PARAM tests for signed BIGNUMs
+- Enable some disabled __owurs
+- Add documentation for CPUID bit +17
+- Fix a memory leak in the afalg engine
+- When changing IV length invalidate previously set IV
+- Add openssl/pem.h inclusion for d2i_PKCS8PrivateKey
+- Fix the incorrect checks of EVP_CIPHER_CTX_rand_key
+- VMS: Compensate for x86_64 cross compiler type incompatibility
+- QUIC Front-End I/O API
+- QUIC APL: Fix a bug where incoming unidirectional streams weren't detected
+- rand: improve error message for rand pool overflows
+- TDES: fix test with old FIPS provider
+- Fix broken links in crypto manpage
+- OSSL_sleep(): Calling sleep() function if sleepTime > 1sec
+- quicapitest.c: Fix missing wait_until_sock_readable()
+- Let fipsinstall know about DRBG digiest limiting
+- Mention the concept of providers in NEWS.md and CHANGES.md
+- CMP app and app_http_tls_cb(): pick the right TLS hostname (also without port)
+- doc: include PVK KDFdocumentation in build.info
+- QUIC CHANNEL: Enforce the RX packet forgery limit
+- ossl_ffc_params_copy: Copy the keylength too
+- Fix many inconsistencies in doc of CMS_verify() and PKC7_verify() etc.
+- QUIC: Use ossl_assert
+- Remove remaining refs to enc_(write|read)_ctx/(read|write)_hash
+- Support trace for QUIC Packets
+- Changed the default value of the "ess_cert_id_alg" option
+- Finer grained error records for provider load/init failures
+- Add brotli compression support (RFC7924)
+- Don't wait in the tesrver idle testing every time around the loop
+- QUIC APL: Add stream creation APIs
+- Fix a crash in ssl_security_cert_chain
+- Fix a failure in sslapitest
+- Fix possible UB in init_info_strings
+- util/ctags.sh: a script for generating tags file with expanding macros
+- QUIC: Documentation fix
+- Remove unused libctx functions (runonce, onfree)
+- QUIC Dispatch: Enhance SSL object unwrapping functions (core)
+- X509_V_ERR_INVALID_PURPOSE: fix misleading text; Fix omission in X509_VERIFY_PARAM_clear_flags doc
+- Fix a memory leak reported in CIFuzz
+- Reset the rwstate before calling ASYNC_start_job()
+- QUIC Demuxer and Record Layer (RX Side)
+- s390xcap.c: Avoid copying structure on initialization
+- Update Paul's pgp key signature
+- Fix typo in variable name
+- Avoid freeing context on error
+- param dup: add errors to failure returns
+- QUIC QTX: Add ciphertext size calculation function
+- Fix a bug where the result of rehash is unstable
+- Fix the example SSH KDF code.
+- QUIC CHANNEL: Improve error reporting
+- Last minute NEWS and CHANGES entries for the 3.0 release
+- apps/lib/s_socket.c: Fix mem leak on host name in init_client()
+- QUIC TEST: Test NEW_CONN_ID frames
+- Add the capability to listen for datagrams
+- Fix bug in EVP_CIPHER_CTX_get_iv_length()
+- Fix after rebase
+- BIO_ssl: Make helper functions configure BIOs for QUIC correctly
+- evp_md_init_internal: Avoid reallocating algctx if digest unchanged
+- Fix test_tls13_encryption()
+- nit: fix some pointer comparisons
+- Sync changes between 3.2 and 3.1 branches
+- Fix Markdown links in SUPPORT.md
+- QUIC APL: Send STOP_SENDING/RESET_STREAM when XSO is freed
+- Add support for signed BIGNUMs in the OSSL_PARAM API
+- When requeueing deferred URXEs retain the order
+- Add checks for saltlen and trailerfield to rsa key writer.
+- Fix a gcc 11.2.0 warning
+- QUIC TXP: Re-enable accidentially disabled tests
+- QUIC STATM: Move max_ack_delay tracking out of STATM
+- doc: Document the type of label EVP_PKEY_CTX_set0_rsa_oaep_label properly
+- QUIC DEMUX: Allow MTU to vary over time and autodetect MTU
+- Add CHANGES.md and NEWS.md entry for CVE-2023-5678
+- QUIC BIO Poll Descriptors: simplify custom interface
+- Add documentation for the OPENSSL_gmtime functions
+- test: update to structure based atomics
+- Stop raising ERR_R_MALLOC_FAILURE in most places
+- ossl_quic_new(): Avoid dereferencing NULL qc during cleanup
+- err: fix crash in ERR_load_strings() when configured with no-err
+- If a ticket key callback returns 0 in TLSv1.3 don't send a ticket
+- Fix Coverity 1201763 uninitialised pointer read
+- doc: remove EdDSA from list of non-FIPS algorithms.
+- provider: cipher: aes: add riscv32 zkn (zbkb) support
+- Doc: Update history section of EC_GROUP API's.
+- QUIC APL: Handle modes correctly
+- QUIC: Add tests for datagram injection API
+- [crypto/bn] BN_consttime_swap: remove superfluous early exit
+- Remove the old Dummy Handshake code
+- QUIC TEST: Ensure PING causes ACK generation
+- Undeprecate OPENSSL_VERSION_NUMBER and OpenSSL_version_num()
+- Fix memory leak in cmp_calc_protection()
+- implement dupctx for aes_WRAP methods
+- time: move OSSL_TIME to libcrypto
+- Alternative fix for CVE-2022-4304
+- Import only named params into FIPS module
+- test: add verify test for EC cert signed with SHA3
+- Add BSD-armv4 target based on linux-armv4
+- Fix definitions of SHUT_RD and SHUT_WR
+- Fix the BIO_addr test
+- NEWS.md: Add missing empty line
+- Update X509 fuzzer to verify a chain
+- Add a test for CVE-2023-3446
+- Add a test for CVE-2022-4450
+- QUIC APL: Autoconfigure BIOs as non-blocking
+- providers/implementations/exchange/kdf_exch.c: fix unavailable SIZE_MAX
+- openssl-cmds.pod.in: add missing entry for cmp
+- Fix deref after null
+- Fix X509_REQ_print_ex bug
+- add build support for riscv64 aes zkn
+- add build support for riscv32 aes zkn
+- Revert "Skip DES based tests in FIPS mode"
+- Force macOS 10.15 or later to be 64-bit
+- Fix lock leak in evp_keymgmt_util_export_to_provider()
+- Move declarations out of record.h and record_local.h
+- Avoid calling into provider with the same iv_len or key_len
+- Fix parenthesis, use a colon
+- linux-x86-clang target: Add -latomic
+- Fix a key repointing in various ciphers
+- Ignore SIGPIPE if client closes connection abruptly
+- Implement the QUIC Fault injector support for plaintext packets
+- make inability to dup/clone ciphers an error
+- Coverity 1524619: unexpected control flow
+- Add a reference for HTTP/3
+- Remove duplicated #include headers
+- Allow OSSL_SIGNATURE_PARAM_NONCE_TYPE to be retrieved
+- QUIC: Update documentation to reflect compatibility of DTLS APIs
+- Add an EVP demo for AES key wrap
+- Add negative test for unquoted property string
+- test/smime-certs/{mksmime-certs.sh,ca.cnf}: simplify and speed up cert generation
+- QUIC FIN Support: Documentation fixups
+- Give BIO_s_mem() the ability to support datagrams
+- Add coverage test for ossl_rsa_sp800_56b_derive_params_from_pq
+- Create a noisy dgram test
+- OSSL_HTTP_proxy_connect(): Fix glitch in response HTTP header parsing
+- test//bio_dgram_test.c: Skip test when BIO_bind() fails
+- remove unused macro in cast_local.h and des_local.h
+- QUIC REACTOR: Move can-poll flags into reactor
+- return 0 if an error occurred
+- QUIC CFQ: Unreliable transmission for PATH_RESPONSE
+- OSSL_trace_enabled.pod: add missing synopsis for OSSL_TRACE()
+- VMS: Add a fallback definition of socklen_t
+- Extend the min/max protocol testing
+- fips: verify that the RNG was restored after the self tests
+- Resolve some of the TODO(QUIC) items
+- Fully initialise cipher/digest app handles
+- List also non-fetchable hashes in openssl dgst -list
+- Add documentation and test for EVP_PBE_alg_add
+- Don't try to make configuration leaner
+- Fix invalid handling of verify errors in libssl
+- QUIC Thread Assisted mode: miscellaneous fixes
+- remove unused macro in rc2_local.h and rc5_local.h
+- Update the min/max proto function documentation for QUIC
+- Fix regression of no-posix-io builds
+- QUIC APL: Better error reporting
+- rand: Add missing check for rand_get_global
+- Correct spelling of database
+- Fix small typo in EVP_KEYEXCH-ECDH.html doc example
+- crypto/cmp: fix CertReqId to use in p10cr transactions acc.
+- Do not call ossl_ffc_name_to_dh_named_group with NULL argument
+- sparse array: reduces the block size
+- Do not fail if ctx dup does not succeed
+- quic_record_test.c: For tests that require ChaCha require also Poly1305
+- Obtain PSS salt length from provider
+- Fix read pipelining
+- QUIC CHANNEL: Handle network errors as connection-fatal events
+- Adding some selected MS OIDs for added ms-corp alias for OID 1.3.6.1.4.1.311
+- s_socket.c: Avoid possible NULL pointer dereference
+- Fix memory leak in ossl_rsa_fromdata.
+- openssl-ca.pod.in: Minor grammar fix
+- Fix the checks of RAND_bytes
+- Update the provider documentation
+- Make OSSL_LIB_CTX_load_config thread safe
+- Back off on generating noise in the event of a PING frame
+- test: threads: replace test_thread_noreturn
+- Remove unnecessary define
+- Remove some unnecessary undefs in bn_asm.c
+- proverr: add PROV_R_{INVALID_MEMORY_SIZE,INVALID_THREAD_POOL_SIZE}
+- Restrict the size of OBJECT IDENTIFIERs that OBJ_obj2txt will translate
+- changes: note the banning of truncated hashes with DRBGs
+- BIO_s_connect(): Enable BIO_gets()
+- Add test for EVP_PKEY_Q_keygen
+- Add an SSL BIO test for QUIC
+- store_result: Add fallback for fetching the keymgmt from the provider of the store
+- CMP: fix gen_new() in cmp_msg.c checking wrong ITAVs
+- BIO_s_dgram: add documentation and hazard warnings
+- Fix VMS installation - Override the openssl logical name in descrip.mms.tmpl
+- CMP: support specifying certificate to be revoked via issuer and serial number
+- Further fix in bio_dgram_test for BIO_s_dgram_mem()
+- Fix Coverity 1498613: resource leak
+- Coverity: fix 272011 resource leak
+- CMP mock server: add -ref_cert option and corresponding ossl_cmp_mock_srv_set1_refCert()
+- apps/s_server.c: Add check for OPENSSL_strdup
+- Test SSL_shutdown() with async writes
+- QUIC: Echo PATH_CHALLENGE frames as PATH_RESPONSE frames
+- Fixed some grammar and spelling
+- refcnt: convert references counts to a structure
+- rsa: fix version of rsa implicit rejection introduction
+- QUIC TXP: Handle padding correctly for ACK_ONLY archetype
+- Added 'hybrid CRT' targets for the Windows platform
+- s390x: Hide internal cpuid symbol and function
+- Teach the quic-client fuzzer about time
+- CMP: add API functions OSSL_CMP_CTX_get0_libctx() and OSSL_CMP_CTX_get0_propq()
+- providers/implementations/kdfs/argon2.c: Don't use UINT64_C
+- Use proper KDF SS parameter name
+- doc: fix example in ssh KDF man page.
+- Move recordmethod.h to be an "internal" header
+- Test OSSL_ERR_STATE_save/restore()
+- doc: EVP_PKEY_get_utf8/octet_string_param() clarify NULL buffer behavior
+- QUIC MULTISTREAM TEST: Adjust spin behaviour
+- ssl_lib: added pointer SSL and SSL_CONNECTION check to NULL before dereferencing it in ossl_ctrl_internal()
+- ssl: better support TSAN operations
+- DH_check[_params]() use libctx of the dh for prime checks
+- Replaced '{ 0, NULL }' with OSSL_DISPATCH_END in OSSL_DISPATCH arrays
+- Add a packet splitting BIO
+- Fix a record layer mem leak
+- Coverity 1521557: Error handling issues
+- Avoid ifdefs in trace categories
+- Add ZSTD compression support (RFC8478bis)
+- Dual 1536/2048-bit exponentiation optimization for Intel IceLake CPU
+- doc: fix copy/paste error
+- Add translation for ECX group parameter
+- Fix indentation of tls13_hkdf_expand parameters
+- QUIC CHANNEL: Initialise state, FC credit for new streams correctly
+- List missing operations in provider(7)
+- Check for presence of 1.1.x openssl runtime
+- Fix SSL_pending() and SSL_has_pending() with DTLS
+- Add -quiet option to pkcs7 for -print_certs
+- QUIC TXP: Fix handling of FIN stream chunks
+- Make openssl check -rsa ...
+- evp_test: Skip testcase if r parameter is unsupported
+- evp_extra_test2: Test DH param checks with non-NULL libctx
+- Avoid having ecp_sm2p256-armv8.pl in fips.module.sources
+- Ensure we build ub sanitizer builds with -DPEDANTIC
+- Remove some outstanding TODOs
+- S390x: Support ME and CRT offloading
+- Tweak documentation for WAIT_PEER
+- dhparam: Correct the documentation of -dsaparam
+- QUIC CHANNEL, APL: Reject policy handling
+- Minor code cleanup in o_names_init
+- Improve performance of the encoder collection
+- Run the punycode-test over the fuzz corpora during test.
+- timing_load_creds: Fix typos in the timersub macro
+- QUIC TXP: Generate forced PINGs correctly
+- Address Coverity 1493362 resource leak
+- return immediately if namemap is NULL
+- EVP_PKEY_keygen_init has no argument named pkey
+- SMIME_crlf_copy(): check for NULL pointer arguments
+- QUIC SSL Behaviours: Allow detection of an SSL connection used for QUIC handshake
+- Fix DER encoder implementations for output structures "EC" and "SM2"
+- QUIC Congestion Control: Tests
+- doc: remove end of line whitespace
+- Add a CI workflow for no-rfc3779
+- Support decode SM2 parameters
+- Hold the flag_lock when calling child callbacks
+- Add HISTORY section to EVP_KEM-EC document.
+- QUIC CHANNEL: Only pump the demuxer once per tick
+- Fix memory leak with TLS1.2 compression
+- Change name of parameter in documentation from sigret to sig
+- Rename various functions OSSL_QUIC_FAULT -> QTEST_FAULT
+- Remove unused variable 'sctx'
+- crypto/sha/asm/sha512-ia64.pl: When checking assembler file names, ignore case
+- man: update missingcrypto.txt file
+- QUIC Thread Assist Core
+- Update SIV mode documentation
+- Remove some TODO(RECLAYER) comments now that DTLS has been moved
+- Don't call ossl_assert on the result of bn_wexpand
+- Update CHANGES.md and NEWS.md for new release
+- Fix a memory leak in X509_issuer_and_serial_hash
+- fips: document that the EdDSA algorithms are not-validated
+- QUIC: Update API table
+- quicserver.c: Use BIO_printf to stderr instead of plain printf
+- test/recipes/80-test_cms.t: Fix the "CAdES ko" test
+- Add Tomas Mraz key to release key fingerprints
+- QUIC Flow Control
+- doc: document that property names are unique
+- QUIC RX: Fix QRX packet handling refactor w.r.t.
+- Coverity 1508532: out of bounds access
+- Fix how util/wrap.pl is used in OpenSSL::Util::fixup_cmd()
+- Adjust test/endecoder_test.c
+- Add -static-libgcc to solaris-sparcv7-gcc shared_ldflag
+- QUIC: Fix multistream test on macOS
+- QUIC MSST: Fix test on macOS
+- fips: rework the option handling code
+- Add a test for a retry during the handshake
+- Remove empty_fragment_done
+- Fix typos in SSL_CTX_use_certificate.pod file
+- zero data in hm_fragment on alloc
+- Coverity 1513478: negative return
+- QUIC RXDP: Make ACK eliciting definition more resilient and centralised
+- Fix: invoking x509_name_cannon improperly
+- Add documentation for the function SSL_CONF_CTX_finish.
+- int_ctx_new(): Revert extra OPENSSL_init_crypto() call
+- Fix man page to indicate SHA256 MAC for PKCS12
+- Prevent 80-test_cmp_http from accidentally killing perl in error.
+- QUIC TLS: Rethink error handling
+- Fix errors in EVP_PKEY_fromdata examples
+- QUIC API Overview: Add SSL API triage list
+- Fix the checks of EVP_PKEY_pairwise_check
+- Update CHANGES/NEWS for CVE-2023-3446
+- fix clang-6,7,8 strict build
+- fips: use tsan counter instead of tsan_add to increment
+- changes and news entries for CVE-2023-5363
+- s_client: Support interactive reconnect command
+- Fix regression in evp_test for provider compat CI
+- Fix the return values of the aarch64 unroll8_eor_aes_gcm_*_*_kernel functions
+- Remove repeated words
+- remove sanity check from ossl_rsa_todata
+- Fix ChaCha assembly code on 32-bit HPUX itanium systems
+- QUIC Reactor: Allow a mutex to be released during waits
+- QUIC MULTISTREAM TEST: Synchronize script 20 correctly
+- cmp_ctx.c: Remove redundancy form the defs of many getters and setters
+- Add Windows VERSIONINFO resource to fips provider dll.
+- rsa: fix merge CI runs with old FIPS providers
+- QUIC: Remove RX depacketiser tests from QRL test suite
+- Clean up GCM_MUL and remove GCM_FUNCREF_4BIT
+- QUIC ACKM: Allow largest acked PN to be queried
+- Fix mem leak in ECDSA_sign().
+- Don't free the EVP_PKEY on error in set0_tmp_dh_pkey() functions
+- QUIC SSL: Forbid pipeline-related operations
+- OSSL_CRYPTO_ALLOC attribute introduction proposal.
+- QUIC CHANNEL: Only reprocess after an RX secret has been provisioned
+- Resolve a djgpp function name conflict
+- Avoid struct timeval in QUIC code
+- Don't declare SSL_CONNECTION twice
+- crypto/x509/x509_vpm.c: update format of X509_VERIFY_PARAM default_table
+- Fix the s_server psk_server_cb for use in DTLS
+- tparam_on_enc_ext(): Remove dead code in cleanup
+- x509: sort stacks before finds
+- Improve diagnostics on setting groups
+- doc: Fix include syntax
+- APPS/cmp: improve diagnostics for presence of TLS options
+- Don't take a write lock when freeing an EVP_PKEY
+- Rework dependencies between config files and build files
+- Fix regression in i2d_re_X509_REQ_tbs()
+- Add sanity test for OSSL_sleep()
+- Support all five EdDSA instances from RFC 8032
+- QUIC TXP/CHANNEL: Generate MAX_STREAMS using RXFC
+- Add 3.0.9 to list of FIPS releases
+- Document SSL_CTX_get_ssl_method
+- Fix corruption when searching for CRLs in hashed directories
+- Fix UEFI support on win32
+- tls_process_server_hello: Disallow repeated HRR
+- try_pkcs12(): Correct handling of NUL termination of passphrases
+- Add copyright headers
+- Fix builds with DJGPP
+- Fix internal memory leaks from OPENSSL_MALLOC_FAILURES
+- Clarify and correct the EVP_CTRL_AEAD_SET_TAG docs
+- Fix Configure test for -mips in CFLAGS
+- embed bio_dgram_data inside bio_dgram_sctp_data
+- Move Keccak rhotates tables to rodata
+- Update gost-engine to the latest version
+- bn_nist: fix strict aliasing problem
+- test/pkcs12_api_test.c: fix failure on MinGW
+- QUIC TEST: Fault Injection: PADDING
+- check the return value of OPENSSL_strdup(CRYPTO_strdup) in apps/lib/app_rand.c:32
+- ossl_kdf_ctx_create(): Check for NULL KDF being fetched
+- Don't do AES SIV tests with the FIPS provider
+- Fix usage of custom EVP_CIPHER objects
+- engine: update to structure based atomics
+- Optimize CMAC_Update for better performance.
+- doc: document the internal integer overflow helpers
+- Cleanse internal BN_generate_dsa_nonce() buffers used to generate k.
+- QUIC APL: Adjust expect_quic_conn_only
+- BIGNUM: Add a comment on chunk order in struct bignum_st
+- Replace BIO_free(bio_err) with BIO_free_all(bio_err)
+- Fix potential NULL pointer dereference
+- BN_gcd(): Avoid shifts of negative values
+- QUIC Probes Support: Minor tweaks
+- Add riscv scalar crypto extension capability
+- test: fix typo in test description
+- QUIC APL: Allow stream origin to be queried
+- Update COMP_METHOD
+- quicapitest: Enable test_ssl_trace with enable-zlib
+- X509_PUBKEY_dup: Do not just up-ref the EVP_PKEY
+- doc/man3: fix misnamed function name
+- Ensure that the ERR_STATE is left in a consistent state
+- Fix typos in CCM test vector titles
+- Minor fix during rebase
+- ticket_lifetime_hint may exceed 1 week in TLSv1.3
+- providers: Add SM4 XTS implementation
+- Add support for SHA256/192
+- Update the validity period of ed25519 cerificates
+- Fix outdated comments
+- LEGACY PROV: Reimplement the ERR building blocks in upcall terms
+- Fixed counter overflow
+- Improve the performance of d2i_AutoPrivateKey and friends
+- QUIC CONFORMANCE/APL: Handle FIN/reset retirement correctly
+- QUIC SSL: Prohibit readahead-related functions
+- Refactor build.info
+- Disable atomic refcounts with no-threads
+- replace ;; with ; as statement separator
+- Update fuzz corpora to latest commit
+- Add documentation for "NULL" cipher and digest algorithms.
+- EVP: Allow a fallback for operations that work with an EVP_PKEY
+- Create hierarchical demo Makefile.
+- providers: Add SM4 GCM implementation
+- rand: don't free an mis-set pointer on error
+- Stop receiving child callbacks in a child libctx when appropriate
+- Fix FFC mdprop setting bugs.
+- OpenSSL::config: Fix trivial bugs
+- Adding a separated build settings for BSD flavors
+- VMS: More header inclusion compensation for VMS C compiler
+- QUIC: Refine SSL_shutdown and begin to implement SSL_shutdown_ex
+- ssl: implement an event queue
+- Improve documentation of BIO_FLAGS_BASE64_NO_NL flag.
+- Force Nonstop to use fcntl(F_GETFL) in BIO_sock_nbio
+- Resolve assembler complains when including loongarch_arch.h
+- Exclude IPv6 code using OPENSSL_USE_IPV6 instead of AF_INET6
+- Store: API for deletion - tests
+- Remove no-{ssl|tls|tls1_3|dtls}-method in INSTALL.md
+- ctrl_params_translate: Allow RSA controls also for RSA-PSS
+- Fix PROV_RC5_CTX's original structure name
+- crypto/x509/v3_utl.c: Add missing check for OPENSSL_strndup
+- QUIC TXP: Fix drainage calculation
+- Some platforms don't have pthread_atfork
+- Add support for signed BIGNUMs in the OSSL_PARAM_BLD API
+- DOCS: provider-keymgmt(7) - params for EVP_PKEY_get_default_digest_{name,nid}()
+- Fix bug in scrypt KDF provider dup method
+- Revert "Use .s extension for ia64 assembler"
+- Fix SM4-XTS build failure on Mac mini M1
+- asn1/x_algor.c: add internal ossl_X509_ALGOR_from_nid() simplifying code
+- tls: ban SSL3, TLS1, TLS1.1 and DTLS1.0 at security level one and above
+- kdf test: restrict the version of the FIPS provider
+- QUIC: Ensure locking when injecting datagrams
+- Fixed default value of the "ess_cert_id_alg" option in man openssl-ts(1)
+- Fix PACKET_equal test with BUF_LEN+1 on -Wstringop-overread
+- ssl: replace ;; with ; as statement separator
+- crypto/bio/bss_bio.c/bio_write: improve border check
+- Check i2d_X509_NAME return in X509_NAME_hash_ex/old
+- Design document for the QUIC-TLS integration
+- cmp_http.c: Remove obsolete comment w.r.t.
+- Add support for the msg_callback
+- ci: add thread-pool and default-thread-pool
+- QUIC: Miscellaneous error handling updates
+- Fix Coverity 1503322, 1503324, 1503328 memory accesses
+- ssl: Correct comment for ssl3_read_bytes()
+- Avoid a race in init_thread_stop()
+- crypto/conf: gcc build warning fix
+- QUIC TXP: Correct an issue with an uninitialized variable
+- Postpone two TODO(QUIC) items appropriately
+- Change the SCT issuer key to RSA 2048
+- e_dasync: remove empty statement
+- Correct doubled OSSL_OSSL when documenting OSSL_FUNC_.._fn
+- Test client certificate authentication with QUIC
+- QUIC APL: Implement SSL_want
+- Release zero length handshake fragment records
+- Fix for the dasync engine
+- Fix big-endian issue in chacha20 SVE implementation on aarch64
+- Skip DES based tests in FIPS mode
+- Fix a possible memory leak of ssl->s3.tmp.psk
+- QUIC: Enable building with QUIC support disabled
+- EVP_PKEY_gettable_params.pod: Update argument names
+- async_posix: Allow custom stack allocation functions to be specified for POSIX contexts
+- For child libctx / provider, don't count self-references in parent
+- Added checking for buflen overflow due to MAX_MISALIGNMENT.
+- test_CMAC_keygen(): Avoid using ECB cipher with CMAC
+- Add CHANGES.md and NEWS.md entries for CVE-2023-3817
+- Add CHANGES.md and NEWS.md entries for CVE-2023-2975
+- QUIC CHANNEL: Cleanup poll descriptor management
+- Fix an SSL_trace bug
+- Fix build on cygwin
+- QUIC CONFORMANCE: Enforce packet header reserved bits
+- Use --release in dev/release.sh
+- Fix a crash in v2i_IPAddrBlocks()
+- nit: tidy-up code, and fix a typo.
+- Add support for Chacha20-Poly1305 to kernel TLS on FreeBSD.
+- store: update to structure based atomics
+- Fix a mem leak in evp_pkey_export_to_provider
+- QUIC TXP: Update tests for refactor
+- Update fipsinstall tests
+- Don't build the QUIC ssl trace when DH is disabled
+- QUIC CHANNEL: Minor cleanups and bug fix
+- Move ossl_deinit_casecmp to the end of OPENSSL_cleanup()
+- crypto/x509/by_store.c: Add check for OPENSSL_strdup
+- providers/implementations/kdfs/argon2.c: Include openssl/e_os2.h instead of stdint.h
+- QUIC: Make TLS1_FLAGS_QUIC private
+- Use .s extension for ia64 assembler
+- Add doc for EVP_ASYM_CIPHER-RSA and clean up OSSL_PROVIDER-FIPS.pod.
+- Refine the documents of several APIs
+- QUIC APL: Implement backpressure on stream creation
+- Ignore retry packets that arrive too late
+- Cross compiles CI: Disable stringop-overflow warning on s390x and m68k
+- QUIC QSM/STREAM: Refactor to use RFC stream states
+- Test usage of a custom EVP_CIPHER
+- Configurations/descrip.mms.tmpl: Fix a few typos
+- provider: update to structure based atomics
+- Fixed typos in documentation and comments
+- Extend tracing of frames to transmitted frames
+- If oaep_md is not initialized, correctly initialize it
+- Fix gcc 6.3 builds of aarch64 BSAES
+- apps/opt: refactor input format parsing
+- Update the documentation for SSL_version et al
+- Fix EC ASM flag passing
+- Rename ossl_sleep() to OSSL_sleep() and make it public
+- cms encrypt, better OBJ_nid2obj() return check
+- QUIC QRX: Test for 1-RTT processing restriction
+- bio_ssl.c: Support most ctrls with QUIC based BIO_SSL
+- QUIC SSTREAM: Fix bug in ossl_quic_sstream_is_totally_acked
+- test/recipes/05-test_rand.t: replace 'and' with '&&'
+- updated the end copyright year in README.md to 2023
+- QUIC CHANNEL: Incoming streams implicitly create lower-numbered streams
+- Configurations: mips64*-linux-*abin32 needs bn_ops SIXTY_FOUR_BIT
+- Don't include any TLSv1.3 ciphersuites that are disabled
+- QUIC MULTISTREAM TEST: Shutdown flush test
+- QUIC CHANNEL: Tweak crypto buffer sizes
+- doc: Fix KDF example for scrypt
+- Remove include/openssl/configuration.h from mandatory dependencies
+- [feat] SSL RTT in both client and server statem.
+- QUIC MULTISTREAM TEST: Test WAIT_PEER
+- EVP shake_ctrl(): add missing NULL evp_ctx check
+- Remove FIPS condition on SM2 test.
+- Update CHANGES.md and NEWS.md for the upcoming 3.2 release
+- Update copyright year
+- ec: Use static linkage on nistp521 felem_{square,mul} wrappers
+- QUIC MSMT: Revise tests to support multithreading
+- Revert "CI: cross-compile: riscv: Add RV64 machine with Zb* and Zk*"
+- Correction: uncompressed is the default value
+- ERR: exempt flags from fallback decimal reason code printing
+- All lh_stats functions were deprecated in 3.1
+- bss_dgram.c: Use BIO_ADDR_sockaddr() and BIO_ADDR_sockaddr_size()
+- Public API functions OPENSSL_str[n]casecmp
+- Print record version for DTLSv1_listen()
+- ERR: Make CRYPTO_malloc() and friends report ERR_R_MALLOC_FAILURE
+- params: provide a faster TRIE based param lookup.
+- Annotate functions needing locking
+- bn_ppc.c: Fix build failure on AIX with XLC/XLCLANG
+- Fix cast.
+- QUIC QRL: Fix bug in Handshake packet processing
+- sm2: fix {i2d,d2i}_PublicKey EC_KEY is EVP_PKEY_SM2
+- QUIC Channel: Add a mutex
+- Explicitly #include <synchapi.h> is unnecessary
+- test: test -pedantic option in fipsinstall
+- sleep.c: Limit the sleep time instead of sleeping for days or even years
+- Fix unrolled montgomery multiplication for POWER9
+- Add riscv64 asm_arch to linux64-riscv64 target
+- Fix misspelled deprecation macro name in comment
+- Coverity 1528485: Remove unused assignment of wvalue
+- Coverity 1528494 and 1528493: Remove unused assignment of wvalue
+- EVP_MD_CTX_copy_ex: Allow copying uninitialized digest contexts
+- BIO: Wire poll descriptor functions in BIO_s_sock
+- Revert unnecessary PKCS7_verify() performance optimization
+- Fix util/mkpod2html.pl to call pod2html with absolute paths
+- Fix the checks of X509_REVOKED_add1_ext_i2d
+- openssl-cmp.pod.in: tweak doc of -subject, -issuer, -keep_alive, and -untrusted
+- QUIC I/O Architecture Design: Minor updates
+- Fix no-cmac
+- fipsinstall: add -pedantic option
+- encoder: update to structure based atomics
+- Support signedAndEnveloped content in PKCS7_decrypt()
+- Redefine macro X509_http_nbio to avoid using ocsp.h
+- SSL_conf_cmd: add support for IgnoreUnexpectedEOF
+- Improve performance for 6x unrolling with vpermxor instruction
+- Potential null pointer reference
+- QUIC API: Shutdown handling, etc.
+- QUIC SSL: SSL_set_quiet_shutdown
+- convert tabs to spaces in two distributed Perl scripts
+- EVP demo for XOF digest using SHAKE256
+- http_server.c: allow clients to connect with IPv6
+- util/markdownlint.rb: Allow fenced code blocks
+- Rework options handling
+- fix some typos
+- Drop the optimisation level for ppc64le cross-compile
+- Update HMAC() documentation.
+- cmp_genm.c: Remove superfluous store_ctx != 0 check
+- rand: implement an unbiased random integer from a range
+- Cast socklen_t to size_t in assert comparison
+- BIO: Add BIO_dgram_detect_peer_addr API
+- QUIC QRX: Enforce PN monotonicity with key updates
+- QUIC APL: Shutdown Stream Flush Functionality
+- possible workaround
+- Remove pointless warning on pkcs12 import
+- Drop the last reference of SHLIB_EXT
+- Remove some TODO(RECLAYER) comments
+- QUIC API Overview Design Document
+- Improve the QUIC_RSTREAM implementation
+- crypto: add preemptive threading support
+- Always end BN_mod_exp_mont_consttime with normal Montgomery reduction.
+- QUIC: Add comments to HTTP/3 demo
+- Set RC4 defines on libcrypto/liblegacy
+- unbuffer stdin before get passwd from stdin
+- doc: fix macro name
+- Fix PKCS12_newpass() to work with PBES2.
+- Perturb the malloc output during tests
+- dh_ameth: Fix dh_cmp_parameters to really compare the params
+- doc: priority queue documentation
+- Add Tests for RSA_sign_ASN1_OCTET_STRING & RSA_verify_ASN1_OCTET_STRING
+- Removed unused member read_iv of ossl_record_layer_st
+- test_rsa: Test for PVK format conversion
+- QUIC RX: Support refcounted packets and eliminate wrapper
+- fuzz: make post handshake reachable
+- Add ED25519 Signature demo.
+- Use opt_int_arg() to parse integers in apps/speed.c
+- Avoid divide by 0 exception
+- Drop ariacbc demo binary
+- doc/fingerprints.txt: Add the OpenSSL OMC PGP key fingerprint
+- doc: note the default iteration count for PBKDF2 in the enc command
+- Add {lib}_R_{lib}_LIB, for our engines and other "external" modules
+- [DOCS] Fix table inconsistencies detected by mdl
+- QUIC: Multistream test fixes
+- check the return value of BN_new() and BN_dup()
+- EVP: Add the internal function evp_generic_fetch_from_prov()
+- QUIC TEST: Test ACK frame generation
+- Fix openssl storeutl to allow serial + issuer
+- Simpler square-root computation for Ed25519
+- Add linux32-riscv32/BSD-riscv32 target
+- fetch: convert a NULL property query to ""
+- rename OSSL_CMP_get{,1}_caCerts and improve OSSL_CMP_exec_certreq.pod
+- Updated X509v3_get_ext_by_NID.pod and X509_CRL_get0_by_serial.pod
+- FIPS and KTLS may interfere
+- Don't treat the Tserver as connected until the handshake is confirmed
+- Revert "Remove conditional FIPS dependence for 3DES"
+- Remove FIPS condition on IV gen test.
+- Provider-based KEM and SIG alg speed testing added
+- x509: remove dead call to strlen()
+- Copyright year updates
+- add tests for PBKDF2 with SHA-3
+- Convert the ENGINE struct_ref field to be an atomic
+- Update CMAC test cases.
+- QUIC Documentation: Rename SSL_tick, SSL_get_tick_timeout
+- Teach OpenSSL::ParseC about OPENSSL_EXPORT and OPENSSL_EXTERN
+- Separate handling of RX and TX enc level
+- test/evp_extra_test.c: Refactor test_fromdata()
+- Coverity: misuses of time_t
+- QUIC Conformance: Frame Handling Tests
+- remove redundant ERR_raise
+- Add hurd-x86_64 support
+- Don't delete the doc/html directories when cleaning
+- ec: 56-bit Limb Solinas' Strategy for secp384r1
+- CRYPTO_mem_debug_push() and CRYPTO_mem_debug_pop() should return 0
+- Revert "Fix Timing Oracle in RSA decryption"
+- test/param_build_test.c: test zero BIGNUM
+- openssl speed fails in FIPS mode
+- Round up nano secs when converting OSSL_TIME to struct timeval
+- Remove an old TODO from the code
+- pkcs12: Fix macsaltlen parameter type
+- /dev/crypto: Suppress warning when open /dev/crypto fails with ENXIO.
+- fix manpage of d2i_X509(3)
+- Fix coverity 1516095 deadcode
+- Fix coverity 1516094 uninit
+- Fix HPKE and DHKEM for X25519 and X448 on s390x
+- Fix coverity 1516101 deadcode
+- Cast values to match printf format strings.
+- Clear incorrectly reported errors in cms_io.
+- Document {SSL|SSL_CTX}_set_{purpose|trust}()
+- Enable AES optimisation on Apple Silicon M2-based systems
+- QUIC CHANNEL: Clarify role of RX TPs in preparation of storing TX TPs
+- Bump actions/setup-python from 4.7.0 to 4.7.1
+- Bump actions/setup-python from 4.6.1 to 4.7.0
+- Bump actions/setup-python from 4.3.1 to 4.4.0
+- Bump actions/setup-python from 4.6.0 to 4.6.1
+- Bump actions/setup-python from 4.4.0 to 4.5.0
+- Bump actions/setup-python from 4.3.0 to 4.3.1
+- Bump actions/setup-python from 4.5.0 to 4.6.0
+- threading: Add ossl_crypto_condvar_wait_timeout
+- QUIC Frame-in-Flight Manager Design
+- Remove ossl_rsa_pss_params_30_set_maskgenalg().
+- VMS: copy prologue/epilogue headers when header files are generated
+- doc: change "certifictes" to "certificates"
+- parse_unquoted: Check returned value from ossl_property_value()
+- Add EVP RSA key encode/decode demo
+- Don't report success from ec_export if OSSL_PARAM_BLD_to_param failed
+- QUIC ACK Manager, Statistics Manager and Congestion Control API
+- Disable QUIC if TLSv1.3 is disabled
+- ec: update to structure based atomics
+- Coverity 1515953: negative loop bound
+- QUIC DISPATCH/APL: Implement SSL_is_connection
+- Prepare for release of 3.2.0
+- fix: add fuzz oids
+- Remove conditional FIPS dependence for 3DES
+- OSSL_PROVIDER_load_ex
+- Don't fail on a bad dcid in the tranport params when fuzzing
+- Add CI to build with brotli and zstd
+- ci: Add djgpp build
+- evp_test: recondition cipher dupctx FIPS version check.
+- Partial revert and reimplement "Enable brainpool curves for TLS1.3"
+- der_writer: Use uint32_t instead of long.
+- KTLS: use EVP_CIPHER_is_a instead of nid
+- apps/x509: Improve doc fix for -CAserial anc -CAcreateserial
+- Remove duplicate declaration
+- Address coverity issue CID 1517105
+- QUIC DDD: ddd-01-conn-blocking: Planned changes
+- Clarify the change of enc -S behavior in 3.0
+- Added documentation for PEM_X509_INFO_read() and PEM_X509_INFO_read_bio()
+- rand: add callbacks to cleanup the user entropy resp.
+- bio: pass flags on BIO_ctrl to make flush retriable
+- cmp_ctx.c: fix wrong comments on OSSL_CMP_CTX_set1_{recipient,issuer}
+- Amend the TLS demos to accept hostname/port as an argument
+- Update OpenSSL logos
+- INSTALL.md: Remove trailing space
+- Workaround false positive warning of MSAN in eng_rdrand.c
+- Updated information for OSSL_SIGNATURE_PARAM_PSS_SALTLEN
+- Enable ARMv8.2 accelerated SHA3 on compatible Apple CPUs
+- Don't ask for an invalid group in an HRR
+- app_http_tls_cb() and tls_error_hint(): code cleanup
+- Erase temporary buffer in EVP_PKEY_get_bn_param()
+- aes_platform: add riscv64 zkn asm support
+- aes_platform: add riscv32 zkn asm support
+- Catch incorrect IPAddressFamily lengths
+- Fix GHASH-ASM implementation on s390x
+- x509: update to structure based atomics
+- quic: update to structure based atomics
+- SSL object refactoring using SSL_CONNECTION object
+- tsan: add an addition macro
+- QUIC Record Layer (Refactor and TX Side)
+- Cleanup record length checks for KTLS
+- Fix verify_callback in the openssl s_client/s_server app
+- X509_VERIFY_PARAM_set_flags.pod: fix typos
+- rsa: Accept NULL OAEP label for backward compatibility
+- Don't run the QUIC client fuzzer if QUIC is disabled
+- dtls: code cleanup and refactorization
+- Add test to confirm IPAddressFamily_check_len catches invalid len
+- Update OPENSSL_buf2hexstr() to use DEFAULT_SEPARATOR.
+- CMP app: fix deallocated host/port fields in APP_HTTP_TLS_INFO
+- s390x: Fix GCM setup
+- test: placate Clang's --Wbitwise-instead-of-logical
+- free oaep label-octet-string on error
+- QUIC: Update API overview document
+- Fix double free in EVP_PKEY_CTX_dup()
+- Adapt CRYPTO_secure_malloc() like CRYPTO_malloc()
+- Extend the corruption test to truncate a datagram
+- ecp_nistp256.c: Fix exponent in comment
+- Add AES implementation in generic riscv64 asm
+- QUIC_CHANNEL: Implementation
+- Disallow SSL2_VERSION record version in an SSLv3 record header
+- rsaz-*k-avx512.pl: fix wrong name of avx512 flag variable
+- PKCS7_SIGNER_INFO: point out confusing names of digest_enc_alg and enc_digest fields
+- hpke.h, thread.h: Add extern "C" for C++ inclusion
+- Add af_alg errors to the error queue
+- Send auxiliary messages to bio_err.
+- Add riscv64 asm_arch to BSD-riscv64 target
+- Add test for EVP_PKEY_eq
+- remove legacy VxWorks workaround
+- use #pragma comment(lib) with _MSC_VER only
+- Remove fuzz corpora data from the repository
+- Implement BIO_s_dgram_mem() reusing the BIO_s_dgram_pair() code
+- CMS: Export CMS_EnvelopedData and add CMS_EnvelopedData_decrypt()
+- doc: better description of KECCAK-KMAC XOF
+- Multi-Stream API
+- evp_test: Try computing MACs twice with reinitialization of EVP_MAC_CTX
+- vpaes: LoongArch: Use getauxval(AT_HWCAP) for LSX detection
+- QUIC: Fix CRYPTO_GET_REF
+- Occupy the rec_version field of a decoded dtls record
+- Add mutex to tserver
+- Add libctx to x931 keygen.
+- Add manpages
+- fips: Use salt >= 16 bytes in PBKDF2 selftest
+- Sync CHANGES.md and NEWS.md with 3.1 release
+- Sync CHANGES.md and NEWS.md with 3.0.8 release
+- coverity 1520506: error handling
+- coverity 1520505: error handling
+- allow to disable http
+- CMP: generalize ossl_cmp_calc_protection() to handle Edwards curves correctly
+- QUIC: Minor comment and editorial fixes
+- Implement deterministic ECDSA sign (RFC6979)
+- Update pyca-cryptography sub-module
+- Improving locale test
+- pvk: use PVK KDF
+- Add EVP demos for RSA-PSS signing and verification
+- QUIC: Harden ring buffer against internal misuse
+- evp_md: assert digest is provided for algctx reuse
+- QUIC: Prevent incoming oversize tokens
+- md5: add assembly implementation for aarch64
+- QUIC CHANNEL: Fix typo
+- Updates to the quic client fuzzer
+- aarch64: support BTI and pointer authentication in assembly
+- openssl-3.0 : Fixed typo in "config" man page
+- Prepare for release of 3.2 beta 1
+- QUIC Thread Assisted Mode: Refactor locking to be infallible
+- Coverity 1506566: unchecked return value
+- Add quotes around perl scripts
+- Fix pvk encoder to properly query for the passphrase
+- prov(legacy): update to structure based atomics
+- set MGF1 digest correctly
+- Fix SHA, SHAKE, and KECCAK ASM flag passing
+- Don't encrypt/decrypt packet data during fuzzing
+- QUIC RXDP: Handle PING correctly
+- rsa: Skip the synthethic plaintext test with old FIPS provider
+- QUIC: Test crypto stream FC limits
+- Update fuzz/corpora submodule to latest data
+- Avoid code duplication for locale initialization
+- QUIC MSST: Documentation updates
+- QUIC: Documentation updates
+- QUIC DDD: ddd-03-fd-blocking: Planned changes
+- Comment on internal flag
+- Fix IV length of DES EDE ECB implementations
+- doc: OPENSSL_CORE_CTX should never be cast to OSSL_LIB_CTX
+- req, x509: Allow printing modulus of RSA-PSS keys
+- enc: "bad decrypt" only in decryption
+- MD5.pod: Recommend SHA-2 or SHA-3 family hashes instead of legacy ones
+- ossl_namemap_name2_num: Avoid unnecessary OPENSSL_strndup().
+- Fix a mem leak in evp_pkey_copy_downgraded()
+- Add sparse array to libssl
+- Fix accumulated index comments in felem_inv for p521
+- QUIC QSM: Get rid of recv_fin_retired in favour of recv_state
+- The flag "decoded-from-explicit" must be imp/exportable
+- Configure: don't try to be clever when configuring afalgeng
+- Fix typo in migration guide
+- Don't write to the globals ossl_property_true and ossl_property_false
+- err: get rid of err_free_strings_int()
+- MUTEX: Assert on locking failure
+- header: add integer overflow helper functions
+- Fix a leak in ossl_encode_ctx_setup_for_pkey
+- QUIC CONFORMANCE: Packet handling fixes
+- Header file cleanup for C++20 header-units
+- VMS knows POSIX threads too!
+- quic http3 demo: minor updates
+- Test processing of a duplicated HRR
+- Add KEM dupctx test
+- QUIC DDD: Final report
+- Add documentation of BN_mod_sqrt()
+- Add test for d2i_PKCS7 NULL dereference
+- riscv: GCM: Use riscv.pm
+- djgpp: Skip test/rsa_complex.c
+- Fix signed integer overflow in evp_enc
+- augment quic demos to support ipv4/6 connections
+- Check the return of EVP_KDF_fetch()
+- fuzz/asn1.c: Add check for ASN1_item_i2d
+- doc: Fix misleading stucture info
+- QUIC MSST: Clarify default XSO transitions
+- add OSSL_TRACE_STRING(), OSSL_TRACE_STRING_MAX, and OSSL_trace_string()
+- Restrict the Arm 'LDR REG, =VALUE' pseudo instruction on Neon, to appease clang
+- Optimize AES-GCM for uarchs with unroll and new instructions
+- Update manual to reference the IANA TLS Cipher Suites Registry
+- drop unused callback variable
+- QUIC APL: Introduce addressed v.
+- Fix-up to f3090fc7
+- Fix a memleak in prepare_rsa_params
+- Always try locale initialization from OPENSSL_strcasecmp
+- Fix asan finding in bio_tfo_test
+- Workaround egd rand source deficiencies
+- pkcs7: Remove unused includes
+- QUIC APL: Defer default XSO creation
+- CI: cross-compile: riscv: Add RV64 machine with Zb* and Zk*
+- Run TLSfuzzer tests for CI
+- Store: API for deletion - documentation
+- Revert "Revert "bn: Add fixed length (n=6), unrolled PPC Montgomery Multiplication""
+- QUIC man(7) Documentation
+- doc: document digest and cipher dup functions
+- Ensure ciphers command honours -propquery
+- Fix typos found by codespell
+- Some cleanups in the quic-client fuzzer
+- Add static check in BN_hex2bn
+- Skip subdirectories in SSL_add_dir_cert_subjects_to_stack()
+- Include the modules directory in openssl.pc
+- Fix build on OPENSSL_SYS_TANDEM and older POSIXes
+- Fix sctp compile errors
+- KTLS: enable the CCM mode of ktls
+- Fix regression in default key length for Blowfish CFB and OFB ciphers
+- QUIC CHANNEL: Inform the ACKM when the handshake is confirmed
+- dsa/ec: update pairwise tests to account for 140-3 IG 10.3.A additiocal comment 1
+- Link libatomic on riscv32
+- Fix the checks of EVP_PKEY_param_check
+- Add missing header for memcmp
+- ASN1_OCTET_STRING_new() calls ASN1_STRING_type_new(V_ASN1_OCTET_STRING)
+- QUIC: Test missing/malformed/duplicate/etc.
+- Fix Timing Oracle in RSA decryption
+- Decoder resolution performance optimizations
+- Fix documented max.
+- Rearrange some CI jobs
+- QUIC SSL: Block SSL_clear
+- Use C locale in Bash scripts.
+- Revert "bn: Add fixed length (n=6), unrolled PPC Montgomery Multiplication"
+- kdf: avoid NULL dereference on malloc failure in sshkdf
+- QUIC CONFORMANCE: Validate preferred_addr transport parameter
+- doc: document the -pedantic option to fipsinstall.
+- QUIC Frame Encoding and Decoding Functions
+- Add a negative testcase for BN_mod_sqrt
+- Fix a crash in X509v3_asid_subset()
+- QUIC APL: Wire SSL_get_[rw]poll_descriptor for TLS/DTLS
+- evp_test: add a ctx dup operation to the KDF tests
+- QUIC QSM: Infrastructure for tracking shutdown flush eligible streams
+- bio_enc.c: add check for BIO_new_mem_buf
+- bin2bn(): When len==0, just return a zero BIGNUM
+- Configurations/10-main.conf: In the VC-common target, unquote $(CC)
+- CMP doc: various small corrections, mostly on PBM vs.
+- Include poll.h instead of incorrect sys/poll.h
+- http_test.c: Simplify constant init of 'server_args' struct for gcc-4.8.x
+- mkdef.pl: Add cmd-line flag to differentiate shared libs and DSO.
+- Fix documenation mistakes
+- Clarify the EVP_PKEY_decrypt manual page
+- Compensate for CMP-related TODOs removed by
+- enable hardware acceleration for sm4-ccm
+- Fix potential NULL pointer dereference in function evp_pkey_asn1_ctrl
+- obj_xref: ecdsa support sha3 hash function
+- doc: Update "SSL/TLS" old documentation description in openssl.pod
+- Fix util/wrap.pl.in for VMS usage
+- fix test failure on Kunpeng-920
+- Removed unnecessary brace in ktls_configure_crypto
+- apps/cmp.c: improve print_itavs()
+- DOC: TLS compression is disabled by default
+- CMP: implement optional hashAlg field of certConf CMPv3 message
+- Prepare for release of 3.2 alpha 1
+- Prepare for release of 3.2 alpha 2
+- Fix copyright disclaimer.
+- Further acceleration for SM4-GCM on ARM
+- QUIC Glossary: Add QCTX
+- Fix acvp_test sig_gen
+- bio: update to structure based atomics
+- Test for DANE cross cert fix
+- test: change pkey kdf dup fail test to a pkey kdf dup success test
+- OSSL_PARAM_get_*_ptr: Drop errors from ptr/string mismatch
+- Create the SSL object for QUIC-TLS
+- Fix typos in s_client
+- Clarify the documentation for the "byname" functions
+- crypto/evp/bio_b64.c: improve coding style
+- CMS, PKCS7, and CRMF: simplify use of EVP_PKEY_decrypt() by helper function
+- cmp_vfy.c, encoder_lib.c: Fix potential leak of a BIO
+- Modify 50-nonstop.conf to enable c99 extensions for uintptr_t.
+- Fix the parameter type of gf_serialize
+- Make ERR_str_reasons in err.c consistent again with err.h
+- Fix the padlock engine
+- Avoid divide-by-zero in kmac_prov.c's bytepad()
+- Switch to using ossl_crypto_mutex from CRYPTO_RWLOCK
+- Changes to resolve symbol conflict due to gf_mul
+- Fix test_CMAC_keygen
+- openssl-rsautl.pod: Add missing comma
+- Add context dup functions for digests and ciphers
+- Add RISC-V 32 cpuid support
+- CI: Replace windows-2016 with windows-2022
+- Improve FIPS RSA keygen performance.
+- CMS sign digest
+- Padlock: fix byte swapping assembly for AES-192 and 256
+- Fix OCSP_basic_verify signer certificate validation
+- apps/asn1parse: improve RFC7462 compliance
+- tls: update to structure based atomics
+- Add decoder fuzzer
+- Incorrect null pointer check
+- Don't truncate the input when decrypting in pkeyutl
+- Note RFC 9000 19.19 requirement
+- fips: setup the FIPS provider in pendantic mode for testing
+- [test/recipes] Add RFC6979 deterministic DSA KATs in evptest format
+- QUIC: Add QUIC reactor
+- perlasm/ppc-xlate.pl: Fix build on OS X
+- Add vpaes-loongarch64.pl module.
+- QUIC APL: Unlock mutex before freeing (clang tsan error)
+- Fix documentation of parameters for DH and ECDH KEX
+- riscv: Clarify dual-licensing wording for GCM and AES
+- updated (lib+)oqsprovider to latest releases
+- stack: increase the reallocation ratio
+- Support trace for QUIC datagrams
+- rsaz_exp_x2.c: Remove unused ALIGN64 macro
+- hpke: fix tests with disabled chacha20 or poly1305
+- Use the %llu format specifier for uint64_t
+- Revert "crypto/bio: fix build on UEFI"
+- demos/mac/cmac-aes256: Clarify the cipher algorithm used
+- Enable setting SSL_CERT_FLAG_TLS_STRICT with ssl config
+- Fix handshake locking
+- Bump actions/github-script from 6 to 7
+- rsaz_exp_x2.c: Avoid potential undefined behavior with strict aliasing
+- ERR: replace remnant ECerr() and EVPerr() calls in crypto/
+- Properly return error on EVP_PKEY_CTX_set_dh_nid and EVP_PKEY_CTX_set_dhx_rfc5114
+- fips: make installations FIPS compliant by default
+- Correctly handle a retransmitted ClientHello
+- Improve checks for invalid saltlen in DER writer.
+- rsa: update to structure based atomics
+- OSSL_PARAM_BLD_push_BN_pad(): Allow NULL BIGNUM
+- Add BIO poll descriptors
+- Update CHANGES.md and NEWS.md from 3.0.7
+- QUIC TLS: Prohibit SRTP-related calls for QUIC TLS
+- Reimplement brainpool TLSv1.3 support group support
+- QUIC DDD: ddd-02-conn-nonblocking-threads: Planned changes
+- rsa: add test vectors for the implicit rejection in RSA PKCS v1.5
+- Fix failures of OS Zoo CI
+- Clarify use of EGD for HPNS in rand/rand_egd.c comments.
+- Cast the argument to unsigned char when calling isspace()
+- Cast the argument to unsigned char when calling isdigit()
+- bn_nist: replace pointer bit-fiddling with ternary
+- Clarify the terminology in the noisy dgram BIO
+- Fix dh dupctx refcount error
+- quic conformance: section 10.2.2 requirements
+- quic conformance: section 10.2.1 requirements
+- crypto/http/http_client.c: Add the check for OPENSSL_strdup
+- rsa: Add SP800-56Br2 6.4.1.2.1 (3.c) check
+- Optimise locking in rsa_get_blinding()
+- asn1: update to structure based atomics
+- Fix the return check of OBJ_obj2txt
+- Define threads_lib.c functions only for OPENSSL_SYS_UNIX
+- QUIC MSST: Documentation fixes
+- Test that NULL BIGNUM is supported in OSSL_PARAM_BLD_push_BN()
+- Rename ossl_sleep calls to OSSL_sleep everywhere
+- PVK decoder: prompt for PVK passphrase and not PEM
+- QUIC: NewReno congestion controller
+- QUIC: Fix incompatible merges causing CI breakage
+- dh: update to structure based atomics
+- BIO_s_datagram: Wire capability negotiation for BIO_s_datagram
+- Bump coverallsapp/github-action from 2.2.0 to 2.2.1
+- Bump coverallsapp/github-action from 2.2.1 to 2.2.3
+- Bump coverallsapp/github-action from 1.2.4 to 2.1.0
+- Bump coverallsapp/github-action from 2.1.2 to 2.2.0
+- Bump coverallsapp/github-action from 1.1.3 to 1.2.3
+- Bump coverallsapp/github-action from 2.1.0 to 2.1.2
+- Bump coverallsapp/github-action from 1.2.3 to 1.2.4
+- fuzz: fix coverity warnings
+- QUIC SSL: Buffer Management
+- Update .gitignore with LSP files
+- Add test for copying uninitialized EVP_MD_CTX
+- QUIC CHANNEL: Revise inaccurate comments
+- BIO_sendmmsg/BIO_recvmmsg (API only)
+- QUIC: Update SSL_shutdown manpage
+- QUIC ACKM: Don't record non-inflight packets in CC
+- Further tweaks to the CI runs for fuzzing
+- Remove ssl/record/README.md
+- Add test for resetting SM2 dist ID
+- Move ALIGN32 and ALIGN64 into common.h, and fix for clang-cl.exe
+- Adjust mdl configuration
+- Revert "drop!
+- Runtime detect FIPS RNG usage in test
+- QUIC I/O Architecture Design Document
+- Clarify documentation of SSL_SESSION_dup
+- evp: update to structure based atomics
+- ci: add copyright header to CI scripts
+- Minor fixes
+- QUIC CSM: Minor style fixes
+- Resolve a TODO in ssl3_dispatch_alert
+- evp enc: cache cipher key length
+- Fix Coverity 1498612: integer overflow
+- Fix Coverity 1498612 & 1503221: integer overflow
+- QUIC CSM: Documentation for new APIs
+- Defer unknown QUIC ctrls to the SSL object for TLS
+- ecx: update to structure based atomics
+- Add signed bn2bin and bin2bn functions
+- doc: remove non-existent callbacks
+- app_http_tls_cb(): fix crash on inconsistency w.r.t.
+- Fix coverity 1516093 tainted scalar
+- crypto: thread: remove ossl_crypto_thread_native_terminate
+- Support SSL_OP_CLEANSE_PLAINTEXT on QUIC streams
+- QUIC RXDP: Strictly enforce ACK PNs with regard to TX key epochs
+- fuzz/fuzz_rand.c: Add check for OSSL_LIB_CTX_new
+- obj: add locking to the OBJ sigid calls
+- Better sorting of util/other.syms
+- quic ddd demos: update makefile and demo sources
+- tls/ccm8: reduce the cipher strength for CCM8 ciphers to 64 bits
+- Preemptively reflect the changes in
+- Replace __attribute__((malloc)) with __attribute__((__malloc__)) in macros.h
+- S390X: Fix Ed448ph
+- dsa: update to structure based atomics
+- QUIC RX: Refactor unsafe DCID consistency checking
+- Add a skeleton quicfaultstest
+- crypto/bio: fix build on UEFI
+- Makefile: Exclude dummy header asn1_mac.h from CRYPTOHEADERS
+- Coverity 1515538: resource leak
+- Coverity 1515540: resource leak
+- Coverity 1521490: resource leak
+- sha/asm/keccak1600-ppc64.pl: Load data in 8 byte chunks on little endian
+- Include <openssl/err.h> in include/refcount.h
+- doc: update ref count doc in light of refactoring
+- doc: fix EVP_SignInit.pod
+- FIPS provider modifications
+- Fix typo in SSL_CTX_set_dh_auto
+- QUIC SSL: Restrict SSL_CTX_set_ssl_version, SSL_set_ssl_method
+- Bump actions/checkout from 2 to 4
+- Fix AES-GCM on Power 8 CPUs
+- Allow OBJ_create() to create an OBJ and NID with a NULL OID
+- Bindhost/bindport should be freed
+- quic conformance: 10.2.1 rate limiting
+- Fix inadvertent NULL assignments in ternary ops
+- Rename x86-32 assembly files from .s to .S.
+- Update documentation for keymgmt export utils
+- Fix asan finding in bio_addr
+- OpenSSL::config: Fix VMS guesses
+- Fixes segfault occurrence in PEM_write()
+- Remove the isinited variable from child_prov_globals
+- djgpp: Set TZ=UTC to convert UTC timestamp to time_t
+- Store: API for deletion
+- Add QUIC README file
+- QUIC: Rename SSL_tick, SSL_get_tick_timeout
+- c_rehash: Drop the issuer_name_hash= prefix from the CRL hash
+- fix md5 bug on aarch64 big-endian plantform.
+- Fix size_t/int mismatch in cms_ec.c and rsa_sig.c
+- x86asm: Generate endbr32 based on __CET__.
+- conf/conf_sap.c: correct return of ossl_config_int() in UEFI system
+- QUIC: Add miscellaneous QUIC constants
+- Add SM2 support for EVP_PKEY_Q_keygen
+- Drop a spurious printf in evp_test.c
+- Improve the performance of EVP_PKCS82PKEY_ex
+- QUIC: Style fixes
+- fix for sslecho in demos echoing garbage
+- Minor updates
+- Minor updates 2
+- Resolve a TODO(RECLAYER) in the SSLv3 code
+- Convert serverinfo in SSL_CTX_use_serverinfo() to v2.
+- Updated CHANGES.md and NEWS.md for CVE-2023-0465
+- Sync CHANGES.md and NEWS.md with 3.1 branch
+- apps/ocsp: Add check for OPENSSL_strdup
+- Add AES implementation in riscv32 zkn asm
+- Add AES implementation in riscv64 zkn asm
+- d2i_ECPKParameters and i2d_ECPKParameters are not deprecated
+- Update .gitignore
+- update oqsprovider/liboqs to v0.7.2
+- QUIC CC: Major revisions to CC abstract interface
+- Replace references to s->wbio with rl->bio
+- INSTALL.md: Fix typo
+- param->ctrl translation: Fix fix_ec_paramgen_curve_nid()
+- Fix the check of EVP_PKEY_decrypt_init
+- Enable openssl req -x509 to create certificates from CSRs
+- Minor refactoring of the Argon2 derive function
+- Fix LLVM vs Apple LLVM version numbering confusion, for $avx512ifma
+- Add EVP demo for SIPHASH
+- Add an EVP demo for HMAC
+- Update GOST engine
+- Prepare for 3.2 beta 2
+- Disable printf format checking on MinGW
+- rsa: add implicit rejection in PKCS v1.5
+- QUIC CC: Update CC design document
+- riscv: GCM: dual-license under Apache + 2-clause BSD
+- Added a fuzzer for SMIME
+- Avoid clobbering non-volatile XMM registers
+- Fix incorrect comments in aes-gcm-armv8-unroll8_64.pl
+- Update the msg_callback documentation
+- ci: add GitHub token permissions for workflows
+- Add RSA encrypt demo
+- Add ROTATE inline asm support for SM3
+- Check for 0 modulus in BN_RECP_CTX_set.
+- enable VPSM4_EX_CAPABLE for sm4_gcm
+- Update pyca-cryptography submodule to fix CI
+- Add dupctx support to rc4_hmac_md5 algo
+- Correct property EBNF for unquoted strings
+- Don't use __ARMEL__/__ARMEB__ in aarch64 assembly
+- fips compatibility: update 3.1.1 to 3.1.2
+- Update VMS configurations
+- ERR: Move ERR_set_mark(), ERR_pop_to_mark() and ERR_clear_last_mark()
+- providers/implementations/exchange/kdf_exch.c: Fix kdf_derive()
+- Fixed EVP_PKEY_CTX_set_ec_paramgen_curve_nid() for SM2 in ENGINEs
+- strcasecmp: implement strcasecmp and strncasecmp
+- quic_trace.c: Fix typo in traces
+- sm2: Allow setting 0 length SM2 dist ID param
+- Documentation for EVP_PKEY_CTX_get0_pkey() and EVP_PKEY_CTX_get0_peerkey().
+- ChaCha20-Poly1305 no longer supports truncated IV's.
+- providers: add Argon2 KDF
+- Improve documentation for BIO_s_mem
+- Design for the Fault Injector
+- Don't incorrectly skip the multiblock test
+- Enable brainpool curves for TLS1.3
+- update pyca cryptography to 38.0.2
+- QUIC TXP: Allow callbacks on ACK transmission
+- apps/openssl.cnf: fix reference to insta.ca.crt
+- doc: note that out ChaCha20 isn't standard compliant.
+- QUIC API: Minor tweaks
+- check the return value of BN_dup() in rsa_lib.c:1248
+- riscv: aes: dual-license under Apache + 2-clause BSD
+- Update to latest fuzz corpora
+- Remove DES cipher from the FIPS provider
+- Don't include sys/select.h on HP-UX as it doesn't exist
+- Update AES documentation excluding AES SIV from the FIPS provider
+- dso: update to structure based atomics
+- fuzz: add punycode decoder fuzz test
+- ossl_quic_wire_encode_pkt_hdr(): Assign ptrs only on static buf wpkt
+- crmf_lib.c: clean up coments on OSSL_CRMF_CERTTEMPLATE*()
+- Remove redundant assignment in felem_mul_ref in p521
+- QUIC DDD: ddd-04-fd-nonblocking: Planned changes
+- Apply the AES-GCM unroll8 optimization patch to Neoverse N2
+- QUIC RXDP: Remove non-actionable TODOs
+- QUIC: Add TODO for CCM support
+- riscv: aes: Move reusable Perl code into Perl module
+- doc: add page for PVK KDF
+- aes-gcm-avx512.pl: fix non-reproducibility issue
+- CMP app and doc: improve texts on (un-)trusted certs, srvCert, etc.
+- ctrl_params_translate: Fix leak of BN_CTX
+- rand_lib: RAND_poll: Reseed in non-"no-deprecated" builds.
+- QUIC CC: Safe multiplication
+- Correct documentation for PKCS5_PBKDF2_HMAC
+- BIO_s_dgram_pair
+- QUIC DDD: ddd-05-mem-nonblocking: Planned changes
+- siphash: Fail finalization on uninitialized siphash context
+- remove unused Appveyour config
+- [test/recipes] RFC6979 deterministic ECDSA KATs in evptest format
+- Don't send ciphersuites twice in QUIC
+- VMS: Fix descrip.mms template
+- Fix undefined ipi_spec_dst for cygwin build.
+- Fix incomplete check on EVP_CIPHER_param_to_asn1()
+- Fix the null pointer dereference
+- fix indentation
+- indentation fix
+- QUIC DDD: ddd-02-conn-nonblocking: Planned changes
+- Remove a redundant TODO
+- Fix a leak in EVP_DigestInit_ex()
+- prevent HPKE sender setting seq unwisely
+- performance: improve ossl_lh_strcasehash
+- Fix typo in PKCS12_SAFEBAG_set0_attrs
+- QUIC APL: De-publicise SSL_attach_stream/SSL_detach_stream
+- Fix aes_gcm_siv dupctx function
+- Fix copyrights
+- pem_password_cb: Clarify the documentation on passphrases
+- Refactor: a separate func for provider activation from config
+- The canonical localhost IPv6 address is [::1] not [::]
+- Test that PEM_BUFSIZE is passed into pem_password_cb
+- Prepare for 3.1
+- PKCS7: add notes to pkcs7.h.in and minor code cleanup in crypto/{pkcs7,cms}/
+- Add basic RISC-V cpuid and OPENSSL_riscvcap
+- Fix documentation for OFB/OCB in the FIPS provider
+- Miscellaneous updates
+- Fix regression from GCM mode refactoring
+- Update expired SCT issuer certificate
+- Fix verbosity of CMP client diagnostics
+- Fix BIO_f_cipher() flushing
+- Standardize progress callback for dhparam, dsaparam, etc.
+- Add clmul-based gmult for riscv64 with Zbb, Zbc
+- Doc: be explicit about NUL in max_identity_len
+- AES-GCM performance optimzation with stitched method for p9+ ppc64le
+- QUIC MSST: Tests
+- Fixup tests
+- Resove some outstanding TODOs
+- Update to the demos README file
+- LoongArch64 assembly pack: add ChaCha20 modules
+- X509_dup: Avoid duplicating the embedded EVP_PKEY
+- crypto/bio: drop float formating for UEFI
+- Remove unused dtls1_bitmap.c
+- SM4 optimization for non-asm mode
+- Simplify QUIC API masking
+- crypto/pem/pem_lib.c: Add check for BIO_read
+- evp: Simplify ARIA aead cipher definition
+- Rationalize FIPS sources
+- s_client -proxy / -starttls shouldn't be mutually exclusive
+- Remove the separation betweeen enc_read_ctx and enc_write_ctx
+- QUIC ACKM: Clarify the role of is_inflight
+- trivial code nit
+- Testcase for regression by PPC64 fixed length montgomery multiplication
+- ecp_sm2p256-armv8.pl: Copy the argument handling from ecp_nistz256-armv8.pl
+- QUIC CSM: Tweak docs for tick functions, add DTLSv1 docs
+- Add SM3 implementation in RISC-V Zksh asm
+- Avoid unchecked string concatenation
+- Add BSWAP4/BSWAP8 routines for riscv64 with Zbb
+- SM3 acceleration with SM3 hardware instruction on aarch64
+- thread: remove remnants of ossl_crypto_mem_barrier
+- OSSL_CMP_CTX_setup_CRM(): Fix handling of defaults from CSR and refcert
+- Fix Decoder, Encoder and Store loader fetching
+- fuzz-checker.yml: Revert inadvertent change from fac61ea
+- Prepare for 3.2 alpha 3
+- Prepare for 3.2 alpha 2
+- ch_init(): Add braces to appease older clang compilers
+- dh_exch.c: Correct gettable parameters for DH key exchange
+- imporve documentation
+- Documentation for RNDR and RNDRRS
+- EVP_PKEY_eq: regain compatibility with the 3.0.0 FIPS provider
+- apps/ocsp.c etc.: rename 'multi' to 'n_responders' for clarity
+- openssl rehash: add check for OPENSSL_strdup
+- A static const variable is implicitly zero initialized
+- s390x: fix ecx derive
+- Correct the documentation for OPENSSL_MALLOC_FD
+- Fix sm3ss1 translation issue in sm3-armv8.pl
+- QUIC: Forbid non-QUIC ciphers
+- test_fipsinstall: Fallback to config(FIPSKEY) for the FIPSKEY
+- ec: powerpc64le: Add asm implementation of felem_{square,mul}
+- Don't free the prev BIO prematurely
+- Include supported branches in coveralls
+- CMS_decrypt*(): fix misconceptions and mem leak
+- Fix AES-GCM-SIV endian issues
+- Add OSSL_CMP_CTX_get0_validatedSrvCert(), correcting OSSL_CMP_validate_msg()
+- libcrypto: remove reliance on struct timeval
+- djgpp: Inherit config from BASE_unix
+- SM4 optimization for ARM by HW instruction
+- crypto/sm2/sm2_sign.c: Add BN_CTX_end
+- Fix incomplete checks for EVP_CIPHER_asn1_to_param
+- Fix SM4-CBC regression on Armv8
+- QUIC RXDP/QSM: Enforce MAX_STREAMS
+- Generate the preprocessed .s files for chacha and poly 1305 on ia64
+- powerpc: ecc: Fix stack allocation secp384r1 asm
+- aes-gcm-avx512.pl: Fix the clang version detection on Apple Oses
+- Fix declaration inconsistency (Camellia)
+- disable 5x interleave on buffers shorter than 512 bytes: 3% speedup on Graviton2
+- Fixes OSCP->OCSP typo in ocsp command line
+- Add d2i_PUBKEY_ex_fp and d2i_PUBKEY_ex_bio.
+- Fix typos in doc/man3/EVP_EncryptInit.pod
+- aes: add AES-GCM-SIV modes to the FIPS provider
+- QUIC: Dummy Handshake Layer for Prototyping
+- OSSL_CMP_certConf_cb(): fix regression on checking newly enrolled cert
+- Segmentation fault in parent rng cleanup
+- Apply SM4 optimization patch to Kunpeng-920
+- Fix markdown
+- doc: add note for sm4 xts
+- ssl/t1_enc: Fix kTLS RX offload path
+- scrypt: implement ctx dup operation
+- pbkdf1: implement ctx dup operation
+- hkdf: implement ctx dup operation
+- pbkdf2: implement ctx dup operation
+- kbkdf: implement ctx dup operation
+- Revert "Limit size of modulus for BN_mod_exp_mont_consttime()"
+- Fix check of EVP_CIPHER_CTX_ctrl
+- OBJ_nid2obj(): Return UNDEF object instead of NULL for NID_undef
+- Create setter functions for the msg_callback and msg_callback_arg
+- Add demo for ARIA-256-CBC.
+- QUIC MSMT: macOS robustness fixes
+- QUIC DDD: ddd-06-mem-uv: Planned changes
+- BIO: Emphasise API contract for BIO_sendmmsg/BIO_recvmmsg
+- QUIC QSM: Update API documentation
+- doc: Refactored the example in crypto.pod
+- riscv: GCM: Implement GHASH()
+- Add -verbose/-queit flags to dhparam
+- aes/asm/bsaes-armv7.pl: Replace adrl with add
+- doc: replace "symmetric cipher" phrase in EVP_MD manpages
+- Rename SSL3_RECORD to TLS_RL_RECORD
+- QUIC CC: Minor fixes
+- dhtest: Add testcase for EVP_PKEY_CTX_set_dh_nid
+- crypto/params: drop float for UEFI
+- Updating ifdefs to account for xlclang compiler frontend on AIX.
+- Add zlib oneshot compression
+- Fix CVE-2022-3786 in punycode decoder.
+- Fix CVE-2022-3602 in punycode decoder.
+- quic: process stateless resets
+- Fix typo in Ordinals.pm from
+- Remove AES SIV ciphers from the FIPS provider
+- quic: documentation and demo nits
+- Compute RSA-PSS algorithm params in libcrypto for legacy
+- Convert ZLIB defines to OPENSSL_NO_ZLIB
+- Add OID for RPKI id-ct-ASPA
+- QUIC MSST: Minor fixes and cleanups
+- Fix bug in OPENSSL_LH_flush
+- changes opensssl typos to openssl
+- QUIC: Minor cleanup
+- No EtM for GOST ciphers in TLS 1.2
+- Fix typo in ssl_ciph.c
+- QUIC CFQ Fixes
+- Revert "win-onecore: Build with /APPCONTAINER for UWP compat"
+- providers/implementations/keymgmt/rsa_kmgmt.c: refactor gen_init
+- QUIC QSM: Stream garbage collection
+- Standardise type for epoch
+- Clarify the deprecation warnings in the docs
+- Apply aes-gcm unroll8+eor3 optimization patch to Neoverse V2
+- QUIC: Add to threads sanitizer CI
+- tls1 prf: implement ctx dup operation
+- Fix for OSSL_PARAM sample code referencing OSSL_PARAM_UTF8_PTR
+- fips: make EdDSA unapproved for FIPS
+- QUIC SSL: SSL_set_fd for BIO_s_datagram
+- QUIC QTLS: Fix NULL dereference (coverity)
+- QUIC: Fix nit
+- PKCS12 app: Improve readability w.r.t.
+- Make IV/buf in prov_cipher_ctx_st aligned
+- Limit size of modulus for BN_mod_exp_mont_consttime()
+- Removed unused struct ssl3_comp_st
+- RISC-V support for the SHA256
+- RISC-V support for the SHA512
+- QUIC: Prohibit post-handshake auth
+- Fix the RC4-MD5 cipher
+- evp enc: cache cipher IV length
+- Add Argon2 KDF demo.
+- fix aes-xts bug on aarch64 big-endian env.
+- coveralls: Fix invocation of lcov
+- Fix typo
+- Add Demos for DSA params/DSA keygen.
+- Fix typos in doc/designs/ddd/README.md
+- SM4 optimization for ARM by ASIMD
+- ssl/tls_srp.c: Add check for BN_dup
+- Implement the RX Depacketizer
+- design: TX Packetiser
+- fips prov: remove 3DES from list of inclusions
+- apps/cmp.c: fix cleanup of CMP_CTX vs.
+- S390X: Accelerate keccak XOF
+- Update pyca-cryptography submodule to 38.0.4
+- QUIC CC: Use OSSL_PARAM
+- Rename "RX Frame Handler" to "RX Depacketizer" in the overview
+- aesv8-armx.pl: Avoid buffer overrread in AES-XTS decryption
+- Refresh the README.md file
+- Minor fixups
+- QUIC: Minor fixups
+- Fix typos
+- kdf: Add PVK KDF to providers.
+- BIO_dgram support for BIO_sendmmsg/BIO_recvmmsg
+- Coverity 1507372: explicit null dereference
+- Coverity: explicit null dereference
+- Fix NULL pointer dereference for BN_mod_exp2_mont
+- AES OCB test vectors
+- Reorganize runchecker jobs
+- Crypto/evp: Fix null pointer dereference
+- Fix typo in EVP_MD-BLAKE2(7)
+- QUIC DDD: ddd-03-fd-blocking: Unplanned changes
+- CI: add GCC 11
+- CI: add GCC 13
+- "foo * bar" should be "foo *bar"
+- Cleanup EBCDIC string defintions
+- QUIC DDD: Update makefile
+- add cygwin CI
+- Fix URI handling in SSL_CERT_DIR/introduce SSL_CERT_URI env
+- aes-gcm-avx512.pl: Fixed mingw64 build
+- Add an EVP demo for CMAC
+- OSSL_CMP_CTX_reinit(): fix missing reset of ctx->genm_ITAVs
+- Update the pipelining docs
+- Add support for BSD-ppc, BSD-ppc64 and BSD-ppc64le configurations
+- Openssl fails to compile on Debian with kfreebsd kernels
+- Update the ssltraceref.txt
+- QUIC DDD: ddd-01-conn-blocking: Unplanned changes
+- Remove redefinition of macros
+- Add EVP demo for Poly1305 demonstrating Poly1305-AES
+- QUIC SSL: HelloRetryRequest
+- Add PEM fuzzer
+- BIO: Document BIO_sendmmsg and BIO_recvmmsg callbacks
+- crypto: thread: serialize concurrent joins
+- CI: Upgrade to Ubuntu 22.04 to add GCC 12, Clang 13, Clang 14
+- Fix doc-nits
+- Implement dupctx for chacha20 cipher
+- aarch64: Fix async_fibre_swapcontext() on clang BTI builds
+- ecc: Remove extraneous parentheses in secp384r1
+- Update the corpora
+- chacha20 performance optimizations for ppc64le with 8x lanes,
+- dh_exch.c: Add check for OPENSSL_strdup
+- Fix typo in openssl-x509.pod.in
+- [ssl] Prefer SSL_k(EC)?DHE to the SSL_kE(EC)?DH alias
+- Plug the QUIC_RSTREAM to the RX depacketizer
+- Rename msg_callback_s to msg_callback_ssl for greater clarity
+- Prevent a fuzzing timeout in the conf fuzzer
+- Avoid NULL+X UB in bss_mem.c
+- [refactor] BIGNUM: collapse BN_bin2bn() and BN_lebin2bn() into one
+- bn2bin(): Don't accept len < 0
+- RFC7250 (RPK) support
+- check the return value of EVP_MD_fetch in ecdh_exch.c:285 & dh_exch.c:347
+- doc: crypto(7) - fix typo
+- Rename SSL3_BUFFER to TLS_BUFFER
+- QUIC FC: TEST: Coverity
+- s390x: Optimize kmac
+- doc: Fix typo in EVP_EncryptInit.pod
+- evp_test: Add testcases for DH KEX with X9.42 KDF
+- apps/{dsa,ec,rsa,pkey}.c: harmonize coding w.r.t.
+- Fix an init-deadlock in OPENSSL_init_crypto(OPENSSL_INIT_LOAD_CRYPTO_STRINGS)
+- Replace the AES-128-CBC-HMAC-SHA1 cipher in e_ossltest.c
+- Modified OSSL_parse_url to initialize pport_num to 0.
+- EVP_PKEY_CTX_dup segmentation fault fix
+- riscv: GCM: Simplify GCM calculation
+- ssl: Correct filename in README
+- armcap: skip probing _armv7_tick()
+- Remove duplicates of EVP_aes_xxx_wrap() from EVP_aes_128_gcm.pod
+- pvk kdf: implement ctx dup operation
+- krb5kdf: implement ctx dup operation
+- k942 kdf: implement ctx dup operation
+- Add ROTATE inline RISC-V zbb/zbkb asm for DES
+- rename MIN() macro
+- Fix typo in openssl-pkeyutl(1)
+- Doc: replace NULL terminated with NUL
+- QUIC: Rename SSL_tick etc.
+- ss KDF: implement ctx dup operation
+- Clarify the int param getter documentation
+- QUIC WIRE: RFC 9000 s.
+- Update README-QUIC.md
+- OCSP_sendreq_bio: Avoid doublefree of mem BIO
+- doc: document that the "info" KDF param concatenates
+- implement dupctx for chacha20_poly1305
+- Fix AES OCB encrypt/decrypt for x86 AES-NI
+- Typos fixing
+- Update the FIPS checksums
+- RSA keygen fixes
+- Fix openssl.txt
+- QUIC DDD: Fix bug in ddd-06-mem-uv
+- crypto/dso/dso_vms.c: Better definition of DSO_MALLOC()
+- CI: add Clang 16
+- CI: add Clang 15
+- Update 15-ios.conf
+- Add ROTATE inline RISC-V zbb/zbkb asm for chacha
+- Prioritise DANE TLSA issuer certs over peer certs
+- QUIC DDD: ddd-02-conn-nonblocking-threads: Unplanned changes
+- [ssl] Add SSL_kDHEPSK and SSL_kECDHEPSK as PFS ciphersuites for SECLEVEL >= 3
+- Add deprecation macro for 3.1 and deprecate OPENSSL_LH_stats
+- QUIC SSL: Block SSL_dup
+- cms_enc.c: Include crypto/asn1.h for struct asn1_object_st
+- ssh kdf: implement ctx dup operation
+- Fix memleak in PKCS12_pbe_crypt_ex()
+- hpke_aead_enc/dec(): Refactor to pass in OSSL_HPKE_CTX *
+- pkcs12 kdf: implement ctx dup operation
+- Add LoongArch64 cpuid and OPENSSL_loongarchcap_P
+- Update FIPS KATs for 140-3
+- CI: Add Alpine (musl)
+- param->ctrl translation: Fix evp_pkey_ctx_setget_params_to_ctrl()
+- aes-gcm-armv8_64 asm support bigdian
+- Limit size of modulus for bn_mul_mont and BN_mod_exp_mont_consttime
+- Replace "a RSA" with "an RSA"
+- QUIC DDD: ddd-04-fd-nonblocking: Unplanned changes
+- Clarify the PEM docs
+- Fix typo in manpage SSL_CONF_cmd(3)
+- quic docs: update ddd README.md
+- signature: Clamp PSS salt len to MD len
+- Coverity 1524597: null pointer dereference
+- Add openssl/fuzz-corpora repository as submodule
+- Update the corpora submodule
+- update doc: BN_bn2lebinpad() and BN_bn2nativepad()
+- SM4 AESE optimization for ARMv8
+- QUIC DDD: ddd-06-mem-uv: Unplanned changes
+- os zoo ci
+- Implement AES-GCM-SIV (RFC8452)
+- Optimize SM2 on aarch64
+- Fix crypto/dso/dso_vms.c
+- EVP: Add evp_keymgmt_fetch_from_prov()
+- Formatting cleanups
+- QUIC DDD: ddd-05-mem-nonblocking: Unplanned changes
+- QUIC: Forbid NPN
+- QUIC Glossary
+- EVP_PKEY_Q_keygen: Call OPENSSL_init_crypto to init strcasecmp
+- QUIC DDD: ddd-02-conn-nonblocking: Unplanned changes
+- Update EVP_KDF-X942-ASN1.pod
+- Don't (re-)initialize the FFC_PARAMs in dh_init and dsa_init
+- smime/pkcs7: disable the Bleichenbacher workaround
+- coverity: NULL dereference
+- Coverity 1515415: NULL dereference
+- QUIC TX Packetiser and Streams Mapper
+- test/chacha: replace CPUID_OBJ with OPENSSL_CPUID_OBJ
+- Fixes ECX keygen
+- Optimise PKEY decoders
+- obj: Add SM4 XTS OID
+- QUIC CC: Tweaks
+- obj: Add SM4 GCM/CCM OID
+- QUIC Glossary: TXKU, RXKU, KU
+- Rename DTLS1_BITMAP to DTLS_BITMAP
+- Align util/libcrypto.num with the openssl-3.0 branch
+- AES-GCM enabled with AVX512 vAES and vPCLMULQDQ.
+- Acceleration of chacha20 on aarch64 by SVE
+- Improve chacha20 perfomance on aarch64 by interleaving scalar with SVE/SVE2
+- Optimize chacha20 on aarch64 by SVE2
+- QUIC CONFORMANCE: RFC 9000 s.
+- QUIC: CID conformance
+- str[n]casecmp => OPENSSL_strncasecmp
+- Emit rev8 on __riscv_zbkb as on __riscv_zbb
+- Allocate EVP_PBE_CTL with OPENSSL_zalloc.
+- QUIC QSM: Minor bugfixes
+- RX depacketizer (QUIC)
+- QUIC ACKM: RFC 9000 s.
+- RFC 9000 s.
+- FFC cleanups
+- TLSfuzzer: submodules
+- QUIC FIFD
+- QUIC FIFD: Coverity
+- QUIC CFQ
+- QUIC TXPIM
+- DLTS → DTLS

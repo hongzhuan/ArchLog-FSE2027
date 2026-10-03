@@ -1,0 +1,61 @@
+- Added `-saltlen` option to `enc` and `pkcs8` commands to configure PBES2 salt length, with the default changed from 8 to 16 bytes.
+- Added `-outpubkey` option to `genpkey` to extract the public key separately.
+- Added `SSL_get0_group_name()` to retrieve the name of the key exchange group.
+- Added support for SHA-256/192 for signature and hash algorithms.
+- Enabled QUIC transport protocol by default, including stream management, flow control, key update, version negotiation, and new SSL APIs.
+- Added QUIC support to `s_client` with FIN transmission and advanced command mode.
+- Added Raw Public Key (RPK) support for TLS 1.3 authentication.
+- Added support for TLS compressed certificates (RFC 8879) using Brotli, ZSTD, and ZLIB.
+- Added support for Hybrid Public Key Encryption (HPKE) as per RFC9180.
+- Added deterministic ECDSA and DSA signing per RFC 6979.
+- Added Ed25519ctx and Ed25519ph (pre-hash) signing modes.
+- Added SM2 key generation via `EVP_PKEY_Q_keygen` and automatic curve type selection.
+- Added SM4-GCM cipher and hardware acceleration for ARM.
+- Added AES-GCM-SIV cipher support (RFC8452) with AVX512 acceleration.
+- Added Kernel TLS (KTLS) acceleration with `-ktls` option for `s_client` and `s_server`.
+- Added TCP Fast Open support for client connections.
+- Added Argon2 key derivation function with Argon2d, Argon2i, and Argon2id modes.
+- Added Keccak SHA-3 digest support (224/256/384/512) and Keccak XOF digests.
+- Added BLAKE2b and BLAKE2s hash functions with configurable output size.
+- Added LoongArch64 and RISC-V 32/64-bit architecture support with AES acceleration.
+- Added Arm64 optimizations for GHASH, RAND, AES, and SM3 with BTI and pointer authentication.
+- Added `BIO_sendmmsg()` and `BIO_recvmmsg()` for batch datagram I/O.
+- Added `OSSL_PROVIDER_load_ex()` and `OSSL_PROVIDER_get0_default_search_path()` APIs.
+- Added `SSL_set1_initial_peer_addr()` for QUIC initial peer address.
+- Added `SSL_get0_iana_groups()` and `SSL_client_hello_get_extension_order()` functions.
+- Added `SSL_CERT_URI` environment variable for specifying certificate locations via URI.
+- Added support for loading root CA certificates from the Windows certificate store.
+- Added code signing as a new purpose for X.509 certificate verification.
+- Added the `-no_ems` option to disable extended master secret.
+- Added the `-list` option to `openssl list` to list all available algorithms.
+- Added `-pedantic` and `-self_test_oninstall` options to `fipsinstall`.
+- Raised the default security level to 2, strengthening certificate validation.
+- Changed default name output format to UTF-8 with comma-space separator.
+- Enabled Brainpool curves for TLS 1.3.
+- Fixed excessive time in `DH_check()` with oversized modulus (CVE-2023-3446).
+- Fixed `DH_check()` and `DH_generate_key()` safety issues (CVE-2023-5678).
+- Fixed buffer overflow vulnerabilities in the punycode decoder (CVE-2022-3786, CVE-2022-3602).
+- Fixed a timing oracle vulnerability in RSA decryption (CVE-2022-4304).
+- Fixed potential denial of service by limiting policy tree nodes during certificate validation (CVE-2023-0464).
+- Fixed implicit rejection for RSA PKCS#1 v1.5 padding to prevent Bleichenbacher-style attacks.
+- Fixed regression in `X509_VERIFY_PARAM_add0_policy()`.
+- Fixed `enc` command to show "bad decrypt" only on actual decryption failure.
+- Fixed `X509_REQ_print_ex` bug affecting certificate request printing.
+- Fixed `PKCS#12` creation error with auxiliary data and `PKCS12_newpass()` with PBES2 files.
+- Fixed `SMIME_crlf_copy()` to check for NULL pointer arguments.
+- Fixed memory leaks in `CMS_ContentInfo_free()`, `SRP_VBASE_new()`, `PEM_write_bio_PrivateKey_traditional`, and many other functions.
+- Fixed use-after-free in `custom_exts_free()` and `qrx_proces_pkt()`.
+- Fixed segmentation fault in `EVP_PKEY_CTX_dup` and `PEM_write()`.
+- Fixed strict client certificate chain validation in TLS 1.3.
+- Fixed `OCSP_basic_verify()` signer certificate validation.
+- Fixed infinite verification loops caused by name constraints with SANs.
+- Fixed `EVP_PKEY_eq()` to work with strictly private keys.
+- Fixed `CMS_final()` ignoring the result of `CMS_dataFinal()`.
+- Fixed `DH_check()` and `DH_generate_key()` for safer operation with oversized modulus.
+- Disabled SSL 3.0, TLS 1.0, TLS 1.1, and DTLS 1.0 at security level 1 and above.
+- Deprecated `OPENSSL_LH_stats`.
+- Added new demo applications for QUIC multi-stream, HTTP/3 with nghttp3, and Ed25519 signatures.
+- Added FIPS build instructions with compliant installations by default.
+- Updated documentation with new guide series for OpenSSL libraries and migration guide.
+- Added support for Windows on Arm builds using clang-cl.
+- Added Alpine Linux (musl) to CI test matrix.

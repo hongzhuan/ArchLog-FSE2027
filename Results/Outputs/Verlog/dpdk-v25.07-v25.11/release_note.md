@@ -1,0 +1,52 @@
+- Added new network drivers: Nebulamatrix (nbl), HiSilicon hinic3, ENETC4, XSC, ZXDH, and NBL.
+- Added HiSilicon SoC accelerator DMA driver (hisi_acc).
+- Added support for BlueField-4 DPU, ConnectX-9 SuperNIC, Amber-Lite 25G/40G NICs, Intel E835, Cobalt-100 SoC, TXGBE AML/AML40/SP, and Intel Ice E825/E830 controllers.
+- Added CN20K cryptographic processor support.
+- Added cryptographic support for ML-KEM, ML-DSA, SM2, ECDSA (P192–P521), ECDH, and ECPM on QAT hardware.
+- Added post-quantum cryptography algorithms ML-KEM and ML-DSA to OpenSSL PMD.
+- Added dictionary-based compression and 3GPP PDCP UDC checksum in compressdev.
+- Added IPsec ESP matching in flow rules.
+- Added age and count actions on root flow table (group 0).
+- Added mlx5 flow metadata between E-Switch and VM, PF representor suppression, and send-to-kernel action.
+- Added bnxt TruFlow: promiscuous mode, GRE key, MPLS, hot upgrade, Socket Direct, multi-instance, flow meter statistics, and TCAM priority update.
+- Added QinQ strip and VLAN extend in testpmd, plus QinQ insertion offload for IAVF and ice.
+- Added symmetric Toeplitz RSS hashing on i40e.
+- Added flow director (FDIR) and FEC capabilities on txgbe; module EEPROM dump and FW version query on xsc.
+- Added TSO on xsc and r8169.
+- Added 800 Gbps link speed, 200G and 400G speeds on ARK devices.
+- Added per-queue Ethernet statistics via basic stats API; per-queue checksum error stats on ngbe and txgbe.
+- Added telemetry for register content, RSS configuration, and option to hide zero-valued registers.
+- Added pcapng output with explicit Ethernet link type.
+- Added BPF support for loading from ELF files and Rx/Tx filtering.
+- Added lcore remapping, core masks with indices > RTE_MAX_LCORE, and CPU set‑based configuration.
+- Added argparse enhancements: core list parsing, short options, ignoring non-flag arguments.
+- Added NUMA‑aware configuration for netvsc devices.
+- Added DPNI hotplug for DPAA2 devices.
+- Added ice source prune, PFC, DCB, and IEEE 1588 PTP timesync.
+- Added cnxk: link mode configuration, IPv4 fragmentation offload, LSO format, per‑packet SQ count update, dynamic send queue resizing, traffic manager on SDP, backpressure on pool.
+- Added mlx5: flex parser objects, E‑Switch vport context for cross‑GVMI metadata, starting device in steering‑disabled mode.
+- Added timing‑safe memory comparison for digest/authentication tags across multiple PMDs.
+- Added DMA enqueue/dequeue with virtual channel in CNXK; burst capacity query in HiSilicon ACC.
+- Added XDP attachment mode configuration in AF_XDP.
+- Added IEEE 1588 PTP timestamping for DPAA and DPAA2; hardware timestamping for ENA.
+- Added out‑of‑order completion support for GVE.
+- Added support for external and linear buffer modes in VDUSE; VDUSE now waits for all virtqueues before starting.
+- Added multi‑process support for packet dump and TX direction capture.
+- Added vectorized FIB lookup for AVX512 and RISC‑V; RISC‑V LPM lookup for 4 IPs.
+- Added RCU‑based safe recycling and deferred deletion for IPv6 FIB entries.
+- Added multi‑core TC and DCB forwarding in testpmd.
+- Added MTU reporting per port.
+- Improved QAT symmetric crypto performance with aligned buffers.
+- Improved DPAA2 mempool buffer allocation/free performance.
+- Enhanced link status reporting with autonegotiation mode and connector type.
+- Fixed IPv6 link‑local address generation to comply with RFC 4291.
+- Fixed null pointer dereference in IPsec SA AES‑8B IV setting, RSA verify, and ECDH validation.
+- Fixed Tx packet prepare to allow external mbufs in bnxt; fixed RSS hash type for IPv6 in bnxt.
+- Fixed TCAM entry freeing, out‑of‑bounds access, and vport state handling in various drivers.
+- Fixed VLAN tag reporting on Rx for ice; fixed Rx vector path selection.
+- Fixed flow rule crash during device stop/close; fixed race condition in HWS aging check.
+- Fixed flow rule creation returning invalid pointers; fixed modify header error codes.
+- Fixed MAC address configuration failure for VF and duplicate MAC detection.
+- Fixed incorrect TCP flag setting when merging TCP packets.
+- Fixed race conditions in packet dump disabling; fixed highest bits handling in IPv6 routing table.
+- Updated documentation with tested platforms and driver guides.

@@ -1,0 +1,49 @@
+- Added Block-Level Sequence Producer API (formerly External Matchfinder) for custom sequence generation per block.
+- Added new compression parameters: `maxBlockSize`, `prefetchCDictTables`, `enableSeqProducerFallback`, `searchForExternalRepcodes`, and `fastExternalSequenceParsing`.
+- Added `ZSTD_CCtx_setCParams()` to set compression parameters on an existing context.
+- Added support for in-place decompression using `ZSTD_decompressionMargin()`.
+- Added asynchronous I/O (`--asyncio`) for compression and decompression to improve performance.
+- Added `--pass-through` option to enable pass-through mode during decompression.
+- Added `--trace-file-stat` option for tracing file operations.
+- Added `--asyncio` and `--no-asyncio` CLI options to control asynchronous I/O.
+- Added parameter `ZSTD_d_disableHuffmanAssembly` to disable Huffman assembly decoder.
+- Added `ZSTD_c_maxBlockSize` parameter to configure maximum block size.
+- Added new benchmark utility `seqBench` for testing sequence compression API.
+- Added speed output mode selection (fastest or median) and CSV export to largeNbDicts benchmark.
+- Display zlib, lz4, and lzma library versions in verbose `--version` output.
+- Improved compression ratio for small alphabets and literals by optimizing Huffman table depth and minimum literal cost.
+- Improved gzip compatibility: copy file permissions and ownership, preserve source with `-c`/`--stdout`, default compression level 6, `--best` and `--no-name` options.
+- Improved CLI help output readability and formatting.
+- Suppressed progress status updates when stderr is not a console.
+- Improved benchmark error codes and messages for compression failures.
+- Improved Huffman decoding performance with fast C loops.
+- Improved lazy matching performance by replacing indirect function calls with switch statements.
+- Added prefetching of CDict tables to accelerate dictionary-based compression.
+- Added short cache optimization for compression levels 1–4 with dictionary.
+- Improved decompression performance on aarch64 with prefetch for matched sequences.
+- Fixed reversed `--[no-]row-match-finder` CLI options.
+- Fixed `--rm` option: now ignored when writing to stdout, and fails when input files are erased with `-o`.
+- Fixed 32-bit decoding with large dictionaries.
+- Fixed empty block decompression.
+- Fixed long offset resolution bug.
+- Fixed bufferless API with attached dictionary.
+- Fixed required decompression memory reporting with `-vv --long`.
+- Fixed legacy decoder security issues (v0.1–v0.7) with additional bounds checks.
+- Fixed off-by-one error in superblock mode.
+- Fixed decompression of blocks exactly `ZSTD_BLOCKSIZE_MAX`.
+- Fixed Windows thread translation layer race condition.
+- Fixed MSVC C4267 error on ARM64.
+- Fixed AIX compiler flags and bugs.
+- Fixed invalid assert in 32-bit decoding.
+- Fixed corruption rarely occurring in 32-bit mode with wlog=25.
+- Fixed performance regression for small files with async I/O.
+- Fixed infinite loop when loading empty input for dictionary training.
+- Fixed crash when no input files for benchmark or training.
+- Fixed assertion failure when reading file names without trailing newline.
+- Fixed seekable format 32-bit build errors and empty string compression.
+- Fixed static analysis false positives.
+- Fixed overflow and over-read bugs in legacy decoders.
+- Deprecated advanced streaming functions (e.g., `ZSTD_copyCCtx`, `ZSTD_getDecompressedSize`).
+- Updated man pages with more details for `--train` mode and other options.
+- Updated documentation links to HTTPS.
+- Fixed typos in documentation.

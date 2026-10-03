@@ -1,0 +1,67 @@
+# VerLog-style TextRank Release Note
+
+- Repository: jemalloc
+- Version pair: 5.2.0 -> 5.2.1
+- Pair id: jemalloc-5.2.0-5.2.1
+- Input commits: 56
+- Candidate sentences: 55
+- GT-length budget: 26
+- Extracted entries: 55
+
+## Extracted Entries
+
+- Update manual for opt.retain (new default on Windows).
+- Limit to exact fit on Windows with retain off.
+- remove compare and branch in fast path for c++ operator delete[]
+- Safety checks: Add a redzoning feature.
+- Fix incorrect macro use.
+- Fix test/unit/prof_log
+- Safety checks: Indirect through a function.
+- Safety checks: Expose config value via mallctl and stats.
+- Ensure page alignment on extent_alloc.
+- Avoid blocking on background thread lock for stats.
+- Add missing safety_check.c to MSBuild projects
+- Implement retain on Windows.
+- Move extra size checks behind a config flag.
+- Safety checks: Run tests by default
+- Fix assert in free fastpath
+- Quick fix for prof log printing
+- extent_dalloc instead of leak when register fails.
+- Enable opt.retain by default on Windows.
+- Add an autoconf feature test for format_arg and a jemalloc-specific
+- Add indent to individual options for confirm_conf.
+- Remove best fit
+- Fix posix_memalign with input size 0.
+- Lower nthreads in test/unit/retained on 32-bit to avoid OOM.
+- Sanity check on prof dump buffer size.
+- Improve size class header
+- Optimize max_active_fit in first_fit.
+- Add confirm_conf option
+- Fix logic in printing
+- Add max_active_fit to first_fit
+- Fix GCC-9.1 warning with macro GET_ARG_NUMERIC
+- Workaround to address g++ unused variable warnings
+- Avoid leaking extents / VM when split is not supported.
+- Improve memory utilization tests
+- Fix redzone setting and checking
+- Separate tests for extent utilization API
+- Convert the format generator function to an annotated format function,
+- configure.ac: Add an option to disable doc
+- Track the leaked VM space via the abandoned_vm counter.
+- Enforce TLS_MODEL attribute.
+- Fix a bug in prof_dump_write
+- Add memory utilization analytics to mallctl
+- Track nfills and nflushes for arenas.i.small / large.
+- Add experimental.arenas.i.pactivep.
+- Invoke arena_dalloc_promoted() properly w/o tcache.
+- Fix typo derived from tcmalloc's pprof
+- Add nonfull_slabs to bin_stats_t.
+- Update Changelog for 5.2.1.
+- Revert "Refactor prof log"
+- Remove prof_accumbytes in arena
+- Revert "Refactor profiling"
+- Improve macro readability in malloc_conf_init
+- Reorder the configs for AppVeyor.
+- Refactor prof log
+- Refactor profiling
+- Refactor arena_dalloc() / _sdalloc().

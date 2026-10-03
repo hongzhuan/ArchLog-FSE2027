@@ -1,0 +1,23 @@
+You are polishing a batch of release-note entries.
+
+Use the input text as the fact source. Return exactly one polished English sentence for each
+input entry_id. Preserve the input order within each group. Keep any architecture label at
+the end exactly if one is already present. Do not output Markdown bullets. Do not output
+source commits, commit hashes, PR numbers, links, or source-mapping text.
+
+section_type meanings:
+- "important": entries with architecture labels that appear under "Important Changes".
+- "changelog": routine entries without architecture labels that appear under "Routine Changes".
+
+Input JSON:
+{{composition_input_json}}
+
+Return only JSON:
+{
+  "entries": [
+    {
+      "entry_id": "same entry_id from input",
+      "text": "polished English entry text"
+    }
+  ]
+}

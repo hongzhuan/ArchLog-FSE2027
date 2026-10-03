@@ -1,0 +1,54 @@
+- Released Ceph 20.2.1 with new features, improvements, and bug fixes for NVMe‑oF, Dashboard, RGW, CephFS, OSD, and monitoring.
+- Dashboard: Added NVMe‑oF gateway group management, multiple namespace support, multi‑cluster support, and oAuth2 integration.
+- Dashboard: Redesigned forms using the Carbon design system for multisite zones, zonegroups, realms, service creation, SMB shares, and the administration module.
+- Dashboard: Added a new landing page, overview navigation, and a full‑page tearsheet component.
+- Dashboard: Added CRUD API endpoints for consistency group snapshots and management.
+- Dashboard: Added support for fetching all namespaces in a gateway group and improved the NS list command with an NSID parameter.
+- Dashboard: Fixed bugs including the RBD mirror usage bar, secure monitoring stack credentials, oauth2 service creation, user edit errors, and Prometheus API errors.
+- Dashboard: Improved alert display: hide suppressed alerts on the landing page, group similar alerts, and enhanced search/pagination behavior.
+- Dashboard: Allowed deletion of non‑default zones and zonegroups; fixed zone update API that forced the STANDARD storage class.
+- RGW: Added multisite automation, sync policies, tiering with rate limiting, and account management.
+- RGW: Added `max‑entries` and `marker` parameters to `radosgw‑admin bucket list` for pagination.
+- RGW: Added support for conditional headers (If‑Match, If‑Unmodified‑Since, If‑None‑Match) in multipart upload completion and multi‑object delete operations.
+- RGW: Fixed multi‑object delete for versioned objects to skip unnecessary OLH updates except for the last deletion.
+- RGW: Cloud‑tier restore now processes asynchronously, persistently stores restore state, allows updating the restoration period, and continues even if the source object or bucket no longer exists.
+- RGW: Added support for deleting objects in the DBStore backend.
+- RGW: Added a metric for messages sent via Kafka and AMQP.
+- RGW: Fixed `radosgw‑admin user check` to include the display name when checking bad owner bucket mappings.
+- RGW: Updated bucket ownership change (chown) to also update the owner’s display name.
+- RGW: Lifecycle expiration rules now evaluate delete markers based on their modification time instead of immediately expiring them.
+- CephFS: Added clone source information to the `subvolume info` command output.
+- CephFS: Added Unicode normalization support for subvolume group creation.
+- CephFS: Added an SMB share provider option with Samba VFS plugins.
+- CephFS: Added file record locking via `ceph_setlk` and `ceph_getlk` in libcephfs.
+- CephFS: `statfs` now supports querying statistics for a specific path.
+- CephFS: Fixed MDS authorization for multi‑filesystem setups and fixed readdir when an OSD is full.
+- CephFS: Fixed snapshot diff calculation where entries with the same name could be skipped.
+- CephFS: Fixed large sync I/O writes causing data corruption by clamping sizes to INT_MAX.
+- CephFS: Fixed MDS rank incorrectly marked as damaged after stopping with ELid flush.
+- CephFS: Removed the journal reset functionality.
+- CephFS: Fixed an issue where objects with partial writes could be incorrectly removed during divergent log merging.
+- OSD: Added a benchmark during OSD creation (via `--run‑benchmark`) to measure IOPS and bandwidth.
+- OSD: Restored the `bdev_async_discard` configuration parameter for asynchronous discard.
+- OSD: Fixed fast EC truncation to operate on whole stripe boundaries and fixed erasure coding shard extent map cleanup.
+- OSD: Fixed scrub size mismatch detection for EC objects with optimized EC.
+- OSD: Fixed stats mismatch during scrubbing and fixed recovery reservation for full OSDs.
+- OSD: Fixed incorrect missing object tracking during recovery for EC pools.
+- BlueStore: Updated volume selector after recovering WAL in envelope mode and introduced an allocator lookup policy option.
+- BlueStore: Fixed dirty range in object removal and reshard on spanning blobs.
+- Monitoring: Improved PG autoscaling with dynamic threshold reduction and added device class to the PG imbalance alert.
+- Monitoring: Upgraded Grafana to 12.3.1, switched Loki DB to persistent volume, and fixed MTU mismatch alert.
+- Monitoring: Added Cephadm `orch ps` output metric to Prometheus and fixed Filesystem dashboard units.
+- EC: Denied enabling fast EC for pools with non‑4k‑aligned chunk sizes.
+- Objecter: Adjusted subscription priority to reduce unnecessary OSD map requests.
+- librados: Added `list_lockers()` and `break_lock()` to the Python interface.
+- RBD: Introduced exclusive transient lock mode (`RBD_LOCK_MODE_EXCLUSIVE_TRANSIENT`).
+- RBD: Fixed mirror schedule inheritance in pool and image APIs and fixed incomplete demote snapshot sync on daemon restart.
+- RBD: Added cluster FSID to the remote meta cache key in rbd‑mirror to correctly distinguish metadata from different remote clusters.
+- NVMe‑oF: Implemented beacon diff for fast failover and automatic removal of unresponsive gateways.
+- NVMe‑oF: Added the `nvme‑gw listeners` command; increased maximum subsystem count to 512 and default max hosts per namespace to 16.
+- Cephadm: Added support for custom distros via `ID_LIKE` fallback and fixed nvmeof daemon stray marking.
+- Ceph‑volume: Refactored to use udev data instead of LVM subprocess and added support for additional dmcrypt parameters.
+- Authentication: Fixed incorrect allowed modes in the `AuthBadMethod` response.
+- Telemetry: Added the `ec_optimizations` flag to the `basic_pool_flags` collection.
+- Documentation: Updated OS recommendations (added Tentacle, removed Octopus/CentOS 7); added docs for bucket list pagination, name mangling, SMB provider, and clone settings.

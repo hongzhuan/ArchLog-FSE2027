@@ -1,0 +1,28 @@
+- Fixed a bug in the educational decoder where it incorrectly read extra bits after the last sequence.
+- Improved decompression safety by ensuring the bitstream returns zero bits after overflow, preventing undefined behavior on corrupted data.
+- Fixed handling of Huffman repeat tables in dictionaries.
+- Fixed `ZSTD_generateSequences` to properly report errors when encountering incompressible blocks and handling unsupported parameters.
+- Fixed a nullptr dereference in `ZSTD_createCDict_advanced2()`.
+- Fixed decoding of sequence headers to detect extraneous data and validate reserved fields, enhancing corruption detection.
+- Fixed the decoder behavior when `nbSeqs == 0` is encoded using two bytes.
+- Fixed bugs in the legacy v05 decoder, including proper handling of zero-sequence counts.
+- Fixed corner case decoder behaviors for more robust decompression.
+- Fixed the erroneous exclusion of hidden files and folders in the `--output-dir-mirror` functionality.
+- Fixed a bug in the AsyncIO module that caused incorrect seed queueing when reading files.
+- Reduced streaming decompression memory usage by up to 128KB with the new `ZSTD_d_maxBlockSize` parameter.
+- Promoted `ZSTD_c_targetCBlockSize` to the stable API, allowing users to set a target compressed block size for more regular output blocks.
+- Added the `ZSTD_d_maxBlockSize` decompression parameter to control the maximum block size during decompression, reducing memory usage.
+- Added support for decoding zstd frames without magic numbers (magicless format) with a one-shot fallback.
+- Added support for using an external sequence producer with a statically allocated compression context (`ZSTD_initStaticCCtx`).
+- Added a compile-time option to exclude specific compression strategies and the fast Huffman decoder to reduce binary size.
+- Improved compression ratio for files with high compression levels (e.g., arrays of integers) by optimizing the optimal parser.
+- Improved Huffman decoding speed on small data and in the Linux kernel via conditional fast Huffman decoding.
+- No longer reject dictionaries with Huffman tables whose maximum symbol value is less than 255.
+- Saves one byte on the frame epilogue.
+- Improved high compression ratio for specific file patterns (issue #3793).
+- The benchmark tool now generates lorem ipsum synthetic data by default, providing more realistic compressible data for testing.
+- The datagen tool now generates lorem ipsum text by default instead of random data.
+- Added the `--exclude-compressed` CLI option to skip files with common compressed extensions.
+- Verbose mode no longer truncates file names in the output.
+- Improved error messages in the CLI to display the specific invalid parameter.
+- Added documentation for using the library with CMake's `FetchContent`.

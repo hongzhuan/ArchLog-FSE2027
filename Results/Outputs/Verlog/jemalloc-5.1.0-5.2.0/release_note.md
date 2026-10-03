@@ -1,0 +1,22 @@
+- Added an oversize threshold feature: allocations larger than the threshold are redirected to a dedicated arena with eager purging, configurable via `opt.oversize_threshold` or mallctl. Low threshold values disable the feature.
+- Added sharded bins within arenas to reduce contention during deallocation, configurable via `opt.bin_shards`. New statistics `arenas.bin.i.nshards` report per-bin shard counts.
+- Added an experimental hooks API for monitoring and intercepting allocation, deallocation, and reallocation events, with install/remove via mallctl `experimental.hooks`.
+- Added an experimental `smallocx` API that returns the allocated size along with the pointer.
+- Added support for zero-size allocations.
+- Added dynamic slab sizes configurable via `MALLOC_CONF` or page size detection, allowing customization of size classes.
+- Added profiling logging: start and stop logging of sampled allocations, output in JSON format via mallctl `prof_log_start` and `prof_log_stop`.
+- Added rate counters to statistics output, showing per-second rates for allocation counts and mutex metrics.
+- Added extents information to malloc stats output: per-arena counts and bytes for dirty, muzzy, and retained extents.
+- Added configurable maximum number of background threads (default 4), and made background threads independent of `libdl` via the `--disable-libdl` configure option.
+- Added `--enable-static` and `--enable-shared` configure options for building static and shared libraries.
+- Added FreeBSD-specific optimizations: improved mmap handling, use of `pthread_set_name_np`, and compatibility fixes.
+- Improved allocation performance with fastpath optimizations for `free`, `sdallocx`, batch filling from slabs, reduced branches, and optimized size class computation.
+- Eagerly purge oversized merged extents to reduce memory footprint.
+- Disabled muzzy decay by default.
+- Fall back to the default `pthread_create` if `RTLD_NEXT` fails for loading symbols.
+- Fixed incorrect stats merging with sharded bins.
+- Fixed missing unlock in the error path of extent registration.
+- Fixed tcache flush and tcaches flush issues.
+- Fixed background thread index and `max_background_threads` handling to fall back to default when exceeded.
+- Fixed memory regression in profiling.
+- Fixed various other bugs: stats output for `opt.lg_extent_max_active_fit`, arena locking in `tcache_bin_flush_large`, syntax error in `configure.ac`, and incorrect assertions.

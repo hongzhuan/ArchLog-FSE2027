@@ -1,0 +1,203 @@
+- Added support for V4000 Krackan2e devices in the axgbe driver.
+- Added 100 Mbps MAC speed selection in SGMII mode.
+- Fixed SGMII auto-negotiation status bits and capabilities in the axgbe driver.
+- Added support for the Marvell M88E1512 PHY in the axgbe driver.
+- Fixed a crash on BCM57608 devices in the bnxt driver.
+- Fixed statistics reporting for high queue counts in the bnxt driver.
+- Added multi-doorbell page support for bnxt NICs.
+- Added IEEE 1588 PTP timestamping on received packets in the bnxt driver.
+- Added flow steering and flow rule operations in the GVE driver.
+- Added support for new SPx series NICs in the hinic3 driver.
+- Added Flow Director support for new SPx series NICs in the hinic3 driver.
+- Added Compact CQE support for new SPx series NICs in the hinic3 driver.
+- Added jumbo frame and Rx scatter support to the af_packet driver.
+- Added support for Snow 5G and ZUC 256 cryptographic algorithms in the cnxk crypto driver.
+- Added support for SHAKE128 and SHAKE256 authentication algorithms in the OpenSSL crypto PMD.
+- Added configurable flow count for txonly forwarding mode in testpmd.
+- Added dynamic share group assignment in testpmd.
+- Added DCB forwarding traffic class list and core count display in testpmd.
+- Fixed file descriptor leak in testpmd mbuf history command parsing.
+- Fixed memory leak in testpmd queue job cleanup.
+- Fixed DCB forwarding traffic class mismatch handling in testpmd.
+- Added command to set the number of flows for txonly forwarding mode in testpmd.
+- Added support for flushing an async flow operations queue in testpmd.
+- Fixed variable shadowing across multiple applications and drivers.
+- Fixed reversed CPU memory copy in the dma-perf test.
+- Fixed buffer overflow with high core count in the dma-perf test.
+- Hash library now frees replaced data on overwrite when RCU is configured.
+- Added support for NPA diagnostic counters on CN20K platform.
+- Added configurable WQE and PB caching for CNXK receive queues.
+- Added support for NPA Halo pools on CN20K platforms.
+- Added support for non-in-place security offload in flow rules for CNXK NICs.
+- Added support for inbound packet injection into the security inline RX path for CN20K.
+- Fixed burst mode info reporting for DPAA2 driver.
+- Fixed incorrect L3/L4 checksum offload flags for DPAA2 devices.
+- Added configurable Rx taildrop via devargs for DPAA2 driver.
+- Fixed spurious VLAN insertion on non-VLAN packets for DPAA2 driver.
+- Fixed devargs not propagated on hotplug for FSLMC bus.
+- Added IP reassembly support on CN20K devices.
+- Fixed AES-XTS operations in the OpenSSL crypto PMD.
+- Fixed SM2 public key buffer overflow in the OpenSSL crypto PMD.
+- Fixed EC session crash on missing key in the QAT crypto PMD.
+- Fixed modular exponentiation and modular inverse result length in the QAT crypto PMD.
+- Fixed crash on CN10K event device.
+- Fixed MAC deletion on Linux for the mlx5 driver.
+- Added RSS TIR registration API for the mlx5 driver.
+- Fixed memory leak after device spawn failure for the mlx5 driver.
+- Fixed VLAN strip info for CQE compression in the mlx5 driver.
+- Fixed VXLAN and NVGRE encapsulation in the async flow API for the mlx5 driver.
+- Fixed heap buffer overflow in sample group match for the mlx5 driver.
+- Fixed meter ASO action leak on release to pool in the mlx5 driver.
+- Fixed NAT64 hardware registers calculation for the mlx5 driver.
+- Fixed redundant control rules in promiscuous mode for the mlx5 driver.
+- Fixed shared Rx queue limitations for the mlx5 driver.
+- Fixed flow mark reading after reconfigure for the mlx5 driver.
+- Added QinQ offload in i40e, iavf, and ice drivers.
+- Added IPsec hooks to common Tx function for Intel drivers.
+- Removed SSE vector path for i40e, iavf, and ice drivers.
+- Added L2TPv2 RSS hash and flow pattern matching in the ice driver.
+- Fixed IPv6 GTPU handling in the i40e driver.
+- Fixed memory leak in FDIR flow parsing for the ice driver.
+- Fixed memory leak in DCF QoS bandwidth config for the ice driver.
+- Fixed IPv4 flow subscription in the iavf driver.
+- Fixed deletion of primary MAC address in the iavf driver.
+- Fixed reported max Tx and Rx queues in the iavf driver.
+- Fixed PTP negotiation before reporting Rx timestamping in the iavf driver.
+- Fixed QinQ stripping in the i40e driver.
+- Fixed TSO feature status in documentation for i40e, iavf, and ice drivers.
+- Fixed RSS LUT access when using global LUT in the ice driver.
+- Fixed link status updates via admin queue message for the ice driver.
+- Added timesync and PTP support in the idpf driver.
+- Added AVX2 Tx/Rx paths for split queue config in the idpf driver.
+- Fixed resource leaks in the nfb driver.
+- Fixed bad pointer access in queue stats for the nfb driver.
+- Added VDEV as alternative device probe method for the nfb driver.
+- Added support for RTL8125K, RTL9151, and RTL8168KD in the r8169 driver.
+- Fixed crash in RTL8168FP init for the r8169 driver.
+- Fixed link down handling for the dpaa2 driver.
+- Fixed resource leak on soft parser failure for the dpaa2 driver.
+- Fixed Rx error queue memory leaks for the dpaa2 driver.
+- Fixed queue block memory leak on port close for the dpaa2 driver.
+- Fixed crash with telemetry in the eth_rx eventdev adapter.
+- Fixed resource leak on driver registration failure in vhost.
+- Fixed use-after-free in fdset during vhost shutdown.
+- Fixed use-after-free race during vhost cleanup.
+- Fixed descriptor chain bounds check in the vhost control queue.
+- Fixed virtqueue array size for the vhost control queue.
+- Fixed multi-segment Rx corruption in the memif driver.
+- Fixed descriptor Tx flags corruption in the memif driver.
+- Fixed external mbuf transmit in the af_xdp driver.
+- Fixed receive buffer overflow in the af_packet driver.
+- Fixed MTU set data size calculation in the af_packet driver.
+- Fixed event callback leak on Rx filter failure in the netvsc driver.
+- Fixed resource leak on init failure in the netvsc driver.
+- Fixed double-free of primary Rx queue on uninit in the netvsc driver.
+- Fixed subchannel leak on device removal in the netvsc driver.
+- Fixed resource leaks on MTU change in the netvsc driver.
+- Fixed race conditions on VF add/remove events in the netvsc driver.
+- Fixed devargs memory leak on hotplug in the netvsc driver.
+- Fixed PD resource leak on device close in the mana driver.
+- Fixed CQE suppression handling on error completions in the mana driver.
+- Fixed fast-path ops setup in secondary process for mlx4, mlx5, and mana drivers.
+- Fixed multi-process VF device removal for the netvsc driver.
+- Fixed resource leaks in secondary process probe for the tap driver.
+- Fixed resource leaks on creation failure for the tap driver.
+- Fixed use-after-free on remote flow creation failure for the tap driver.
+- Fixed use-after-free on implicit rule creation for the tap driver.
+- Fixed IPC reply buffer leak on queue count mismatch for the tap driver.
+- Fixed Rx descriptor vs scatter segment confusion for the tap driver.
+- Fixed handling of queue stats for the tap driver.
+- Added software MAC address filtering for the tap driver.
+- Added Qdisc deferral for flow rules in the tap driver.
+- Added multi-process support for the zxdh driver.
+- Added GENEVE TSO and outer UDP Rx checksum support for the zxdh driver.
+- Added configurable RxC time step for the cnxk driver.
+- Added plain packet reassembly support for CN20K.
+- Added inbound IPsec SA expiry events for the cn20k security driver.
+- Added support for Snow 5G and ZUC 256 cipher algorithms for PDCP in the cnxk crypto driver.
+- Added modular exponentiation and modular inverse operations in the OpenSSL crypto PMD.
+- Added unit test suites for 256-bit NEA, NIA, and NCA cryptographic algorithms.
+- Added test suite support for Snow 5G, AES NEA5, and ZUC 256 cryptographic algorithms.
+- Added support for ML-DSA and ML-KEM asymmetric crypto operations.
+- Added support for calling external functions from BPF programs via JIT.
+- Fixed x86 call stack alignment for external calls in BPF.
+- Added support for atomic exchange operations in BPF.
+- Added support for custom memory allocation hooks in ACL contexts.
+- Added support for LoongArch architecture in byte-order tests and RCU QSBR auto-test.
+- Updated tests to run without huge pages and with AddressSanitizer.
+- Removed SSE vector paths for i40e, iavf, and ice drivers.
+- Improved Rx descriptor ring size checks for Intel Ethernet drivers.
+- Improved handling of shared Rx queue group assignment in testpmd.
+- Fixed VFIO device resource leak on error during secondary process resource mapping.
+- Fixed cipher key length validation for DES and 3DES in IPsec SA configuration.
+- Fixed meta buffer size validation in the CNXK platform.
+- Fixed CPT completion queue processing in inline IPsec.
+- Fixed error logging for queue modify in the mlx5 driver.
+- Fixed flow control settings to apply as configured when autonegotiation is disabled.
+- Fixed the indication of requestable FEC flags when controlling the link.
+- Fixed DPAA2 SEC crypto device removal to use the correct device name.
+- Fixed in-place buffer alignment in the QAT crypto driver.
+- Fixed checksum flag handling in bnxt V3 completion parsing.
+- Fixed MAC stats DMA allocation per xstats call in the DPAA2 driver.
+- Fixed SG table walk upper bound in DPAA2 Rx.
+- Fixed L4 packet type in slow parse path for DPAA2.
+- Fixed error packet dump for DPAA2.
+- Fixed link after port stop/start for DPAA2.
+- Fixed receive offload flags being overwritten in the bnxt driver.
+- Fixed slow queue Rx configuration in the bonding driver.
+- Added VXLAN IPv4 hardware flow director support for new SPx series NICs in the hinic3 driver.
+- Added ethertype filter support for new SPx series NICs.
+- Added TSO fragment count validation in the hinic3 driver.
+- Added non-TSO packet pre-processing with segment copying for new SPx series NICs.
+- Added GENEVE and IPIP tunnel offloading support in the hinic3 driver.
+- Added RSS indirection table retrieval and configuration for new SPx series NICs.
+- Added support for modifying service VLAN configuration.
+- Cached the mbuf pool for fast release for shared Tx and Rx mempool.
+- Fixed auto-negotiation status reporting for e1000 and igc drivers when link is down.
+- Fixed RSS hash key length retrieval for Intel IGB devices.
+- Fixed launch time calculation and context descriptor allocation for IGC devices.
+- Fixed outer VLAN stripping being incorrectly disabled.
+- Added GTP flow pattern support for the i40e driver.
+- Added ARM NEON and LoongArch vector support for the i40e driver.
+- Added PTP timestamping support for IAVF devices.
+- Added tracking of the primary MAC address state for IAVF devices.
+- Added pre- and post-reset callbacks for IAVF device reset validation.
+- Added inline IPsec egress flow support for IAVF devices.
+- Added IPsec offload with TCP segmentation offload support for IAVF devices.
+- Added mbuf fast free offload support in the iavf driver.
+- Fixed incorrect inner/outer VLAN tag assignment for QinQ offload in the IAVF driver.
+- Added LLDP filter control support on E830 NICs.
+- Fixed double hardware reinitialization in the ice driver.
+- Added support for refining RSS hash configuration for Ethernet and PPPoE session ID on ice NICs.
+- Added support for Intel E610 NIC with 100Mbps, 2.5Gbps, and 5Gbps link speeds and outer IPv4 checksum offload.
+- Added E-tag support for Intel E610 NICs.
+- Added security flow action support in the ixgbe driver.
+- Added jumbo frame support in IOV mode for E610 devices.
+- Added LoongArch architecture support for the ixgbe driver.
+- Fixed CQE suppression handling for error completions.
+- Fixed potential data corruption in multi-segment Tx in the memif driver.
+- Fixed reference counting logic in SRH flex parser cleanup.
+- Fixed a crash when using a tag action with an invalid register index.
+- Added support for NAT64 actions in hardware steering on mlx5 NICs.
+- Added support for popping and pushing VLAN tags using hardware steering actions.
+- Added support for flow actions that send packets to the kernel.
+- Added support for creating tag actions in mlx5 flow rules.
+- Added support for runtime MTU changes on ports using shared Rx queues.
+- Fixed MAC address ownership tracking on the Windows mlx5 driver.
+- Added retry mechanism for VF hotplug on device stop for the netvsc driver.
+- Added per-port device configuration via devargs for the nfb driver.
+- Added querying and configuring Forward Error Correction capabilities on Netcope NFB devices.
+- Added firmware version retrieval support for Netcope NFB devices.
+- Added new RTL8125D, RTL8126A, RTL8127A, and RTL9151A hardware configurations in the r8169 driver.
+- Added jumbo frame support up to 16K in the r8169 driver.
+- Fixed reporting of autonegotiation status in the Solarflare NIC driver.
+- Added software checksum verification for the TAP virtual device.
+- Added querying port speed modes in the zxdh driver.
+- Added link speed configuration support for the zxdh driver.
+- Added support for SM4-CBC cipher algorithm in the IPsec Security Gateway example.
+- Added cfgfile parsing improvements for longer configuration lines.
+- Added support for clearing the screen in the command-line interface.
+- Added function to find a cryptodev by name.
+- Added an API to list loaded driver paths.
+- Added HPET initialization for high-precision timer support.
+- Added support for SHA3 authentication algorithms.

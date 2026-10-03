@@ -1,0 +1,450 @@
+# VerLog-style TextRank Release Note
+
+- Repository: zstd
+- Version pair: v1.5.6 -> v1.5.7
+- Pair id: zstd-v1.5.6-v1.5.7
+- Input commits: 530
+- Candidate sentences: 438
+- GT-length budget: 85
+- Extracted entries: 438
+
+## Extracted Entries
+
+- add a check, to return an error if Sequence validation is enabled
+- fullbench can run a verification function
+- rewrite fingerprint storage to no longer need 64-bit members
+- fixing minor formatting issue in 32-bit mode with logs enabled
+- zlib-wrapper: separate test components to better understand what is failing
+- measure if -O2 makes the test complete faster
+- Specify that decoders may reject non-zero probabilities for larger offset codes than implementation supports
+- enable proper type
+- expose new parameter ZSTD_c_blockSplitter_level
+- minor: use BitContainerType when appropriate
+- Use _M_X64 only without mixing with _M_AMD64
+- minor: more accurate parameter for ZSTD_ldm_insertEntry()
+- add internal compression parameter preBlockSplitter_level
+- add dedicated error code for special case
+- Specify that decoders may reject non-zero probabilities for larger offset codes than supported by the implementation
+- Remove text specifying probability overflow as invalid, the variable-size value encoding scheme makes this impossible.
+- fixed minor static function declaration issue
+- fix make-external-compressors "only-lzma" test
+- minor +10% speed improvement for scalar ZSTD_get1BlockSummary()
+- fixes static state allocation check
+- decompression errors always display the full origin filename
+- fixed single file library test
+- clarify doc on Frame-level methods when invoked on a skippable frame
+- update results from the --long mode
+- fixed cmake-build-and-test-check
+- optimization: instantiate specialized version without Sequence checking code
+- formatString_u() can display numbers > 100
+- do not use new as variable name
+- Modify benchmark to load sources only once
+- Modify benchmark to only load sources once
+- add faster block splitting heuristic, suitable for dfast strategy
+- no need for specialized variant
+- Do not vary row matchfinder selection based on availability of SSE2/Neon
+- enable regression tests at pull request time
+- Added faster block splitter variants for levels 3-7
+- fix speed of --patch-from mode at high compression levels
+- added compilation-time checks to ensure AVX2 code is valid
+- introduce memory barrier to force test order
+- Improve MSBuild search; add latest option
+- clarify when to use '--single-thread' with '--patch-from'
+- should check defined(_M_X64) not defined(_M_X86) when building with MSVC.
+- Fixed all memory leaks and almost all undefined behaviour
+- [fix] Add check on failed allocation in legacy/zstd_v06
+- changed loop exit condition so that there is no need to assert() within the loop.
+- Support for libc variants without fseeko/ftello
+- update hrlog rule to favor compression ratio a bit more at low levels
+- changed variable name to ZSTD_c_blockSplitterLevel
+- elevated ZSTD_getErrorCode() to stable status
+- Update VERSION_LESS usage to VERSION_GREATER_THAN
+- update documentation to specify that Dictionary can be used for benchmark
+- update documentation: specify that Dictionary can be used for benchmark
+- move Sequences definition to zstd_compress_internal.h
+- fix speed of --patch-from at high compression mode
+- fixed minor error in preparation of one fullbench scenario
+- tests: fix non-regular file test on GNU/Hurd
+- change name to ZSTD_convertSequences*()
+- fix minor visual conversion warning
+- Fixed warning when compiling pzstd with CPPFLAGS=-Wunused-result and CXXFLAGS=-std=c++17
+- fix proper type for .forceNonContiguous
+- update test for 32-bit mode
+- fixed workspace alignment on non 64-bit systems
+- fix one minor alignment warning
+- small dictionary compression speed improvement
+- change advanced parameter name: ZSTD_c_repcodeResolution
+- make visual studio tests error out on warnings
+- change to BitContainerType
+- Use _bzhi_u32 for 32-bit builds when building with STATIC_BMI2
+- minor: more accurate variable scope
+- Improve compression speed on small blocks
+- Test: remove extern C from some lib/common files
+- return error if block delimiter is not found
+- meson: Do not export private headers in libzstd_dep to avoid name clash
+- fixed memory leaks and almost all undefined behaviour
+- add one valid test case
+- clarify documentation for Frame-level methods invoked on a skippable frame
+- fix out-of-bounds array index access
+- no longer limit automated BMI2 detection to x64
+- short-test-1: separate tests, giving each a name
+- ensure lastBlock is correctly determined
+- Limit range of operations on Indexes in 32-bit mode
+- use ZSTD_memset()
+- made initialize out char array with all elements set to 0
+- fixed minor conversion warning
+- control long length within AVX2 implementation
+- update ZSTD_splitBlock() documentation
+- Throw error if Huffman weight initial states are truncated
+- apply limit conditions for all splitting strategies
+- [fix] Add newline when file exceeds 128KB
+- fixed minor conversion warnings on Visual
+- added ascending order example
+- [opt] Fix too short of match getting generated
+- Use md5sum rather than gmd5sum for FreeBSD
+- tests/decodecorpus: add more advanced options
+- complete sample11 with reduced fingerprint size
+- improve man page on benchmark mode
+- derive hashratelog from hashlog when only hashlog is set
+- enable DYNAMIC_BMI2 by default on x86 (32-bit mode)
+- minor conversion warning fix
+- fix minor conversion warning
+- Fix building on windows-x86 if clang already includes
+- attempt to make 32-bit tests faster
+- minor: cleaner function parameter repcodeResolution
+- fix overlap write scenario in presence of incompressible data
+- Make zstd.h compatible with -Wzero-as-null-pointer-constant
+- Improve dictionary compression speed
+- ZSTD_splitBlock_4k() uses externally provided workspace
+- prevent possible segfault when creating seek table
+- change experimental parameter name
+- changed code compilation test to employ ZSTD_ARCH_X86_AVX2
+- [docs] Add instruction how to install zstd using Conan
+- skips the need to create a temporary cdict for --patch-from
+- also add -mbmi2 to the compilation test
+- [zstd][leak] Avoid memory leak on early return of ZSTD_generateSequence
+- Unit test for external sequence producer + static CCtx + streaming ( )
+- added a faster block splitter variant
+- minor: more accurate parameter
+- Bump actions/setup-java from 3 to 4
+- bench: better result alignment
+- minor: better variable naming
+- made search strategy switchable
+- rewrote ZSTD_cwksp_initialAllocStart() to be easier to read
+- added a cygwin install test to check
+- inform manual users that it's automatically generated
+- Use vswhere to find MSBuild; add VS2022 support
+- Added a human-readable final success message at end of tests
+- reduced memory usage
+- ZSTD_entropyCompressSeqStore_internal() can accept an externally defined literals buffer
+- minor optimization: only track seqPos->posInSrc when validateSequences is enabled
+- improved speed of the Sequences converter
+- fix minor alignment warning
+- [MSVC] Wrong define checked when building for 64bit with Visual Studio
+- minor:doc: specify decompression behavior in presence of multiple concatenated frames
+- stricter limits to ensure expansion factor with blind-split strategy
+- fixed extraneous return
+- made ZSTD_isPower2() an inline function
+- added benchmark for ZSTD_convertBlockSequences_wBlockDelim()
+- Improve compression ratio of the --patch-from mode
+- fix minor artifact error in single_file_lib
+- fullbench: preparation functions are now in charge of allocating buffers
+- CI: replaced shortest target by check
+- Fix printing of filesize if >4GB
+- dynamically adjust hratelog and ldmml based on strategy
+- visual studio compilation tests: error out on warnings
+- fixed another invalid scenario
+- minor: generalize BitContainerType
+- fix alignment test
+- fix minor printf argument limitation on older mingw
+- fix missing include folder for resource compiler
+- more ZSTD_memset() to apply
+- make __asm__ a __GNUC__ specific
+- Move #includes out of extern "C" blocks
+- fixed minor error in one benchmark scenario
+- handle 32bit size_t when building for x64
+- fix dependency for nightly github actions tests
+- AVX2 version of ZSTD_get1BlockSummary()
+- improve ZSTD_getFrameHeader on skippable frames
+- minor arm64 test script clarification
+- only split full blocks
+- rewrite code in the manner suggested by
+- added block splitter variant for greedy & lazy (levels 5 to 7)
+- Remove specification text stating that probability overflow is invalid
+- update type names
+- ultra automatically triggered with --long and --patch-from
+- refactor documentation of the FSE decoding table build process
+- ensure that srcSize is controlled
+- store dummy bytes within ZSTD_match4Found_cmov()
+- ZSTD_compressSequencesAndLiterals() now supports multi-blocks frames.
+- split all full 128 KB blocks
+- [riscv] Enable support for weak symbols
+- Move sanitizer CI jobs back to ubuntu-latest
+- added UNAME_TARGET_SYSTEM build flag to configure shared lib flags
+- remove unrelated changes
+- removed erroneous #includes
+- new block splitting variant _fromBorders
+- minor improvement to level 3 dictionary compression ratio
+- Drop support for FreeBSD 13.2 CI
+- Added a final success message at end of tests
+- [zstd][dict] Ensure that dictionary training functions are fully reentrant
+- minor: simplify ZSTD_selectSequenceCopier
+- gen_html: Fix build error in windows
+- fixed single-library build
+- reduce splitBlock arguments
+- fixed an obvious macro name typo
+- meson: Fix contrib and tests build
+- Add fastest block-splitter variant
+- Move STATIC_BMI2 block as-is to portability_macros.h
+- scope: ZSTD_copySequencesToSeqStore*() are private to ZSTD_compress.c
+- removed fullbench-dll project from visual solutions
+- Improve speed of ZSTD_compressSequencesAndLiterals() using AVX2
+- [contrib/pzstd] Prevent hangs when there are errors
+- refactor search into an inline function
+- update test name
+- fix minor conversion warnings
+- restore full equation
+- Add support for Apple framework builds
+- attempt parallel test running with -j
+- ZSTD_SequenceCopier_f no returns the nb of bytes consumed from input
+- Instructions for Apple Framework builds
+- Revert "pass dictionary loading method as parameter"
+- added __clang__ to compiler-specific alignment attribute
+- codemod: ZSTD_sequencePosition -> ZSTD_SequencePosition
+- Update cmake minimum requirement to 3.10
+- Build: Add support for Apple frameworks
+- fix boundary condition
+- update type naming convention
+- faster aarch64 test execution
+- added benchmark for get1BlockSummary()
+- added unit tests to ZSTD_compressSequencesAndLiterals()
+- fixed minor strict pedantic C90 issue
+- publish new symbol ZSTD_compressSequencesAndLiterals()
+- init out char array with all members as 0 x2
+- Fix typos not found by codespell
+- update arm64 test
+- fix meson-linux build test
+- fix: quote include directory for resource compiler
+- initial implementation (incomplete)
+- Increase x-compatibility
+- removing nightly tests built on circleci
+- fix test
+- gen_html: Fix build error with mingw
+- new variant, sampling by 11
+- Update comment for STATIC_BMI2 macro
+- Fix new typos found by codespell
+- update Visual Studio solutions
+- cmake: Remove duplicated line
+- fix c90 comment style
+- fixed c90 comment style
+- fixed strict C90 semantic
+- attempt to silence Visual Studio warning about fopen()
+- fixed kernel build
+- BMI2 detection in 32-bit mode
+- updated compression results
+- always free .cdictLocal
+- Move STATIC_BMI2 define to portability_macros.h
+- [fuzz] Turn off -Werror by default
+- add the compressSequences() benchmark scenario
+- splitter workspace is now provided by ZSTD_CCtx*
+- Ignore generated framework artifacts
+- added cygwin install test
+- Alignment instruction ZSTD_ALIGNED() in common/compiler.h
+- organize specialization at recordFingerprint level
+- minor boundary change
+- Remove extern C blocks from lib/* internal APIs (except xxhash.h)
+- update sizeof check
+- new Makefile target mesonbuild
+- Optimize compression by avoiding unpredictable branches
+- disable --max in 32-bit mode
+- added a CI test for x86 32-bit + avx2 combination
+- fixed RLE detection test
+- fixed VS2010 solution
+- ensure cdict is properly reset to NULL
+- doc: add mention of frame checksum incompatibility
+- Improve compression ratio of levels 3 & 4
+- revert FSE_readNCount_body attribute
+- create new compilation macro ZSTD_ARCH_X86_AVX2
+- Build: Revert min version to 3.10
+- meson: don't add -pthread to static linking flags on Windows
+- fixed macro name typo
+- minor code doc update
+- Block splitter control parameter
+- fix incorrect pointer manipulation
+- add prerelease option
+- XP: add a pre-splitter
+- Provide variant pkg-config file for multi-threaded static lib
+- updated documentation on validateSequence
+- harden github actions script Android NDK Build
+- minor: assert that state is not null
+- Check DYNAMIC_BMI2 instead of DYNAMIC_BMI2 != 0
+- added fuzzer test for compressSequencesAndLiterals()
+- added a test for ZSTD_compressSequencesAndLiterals
+- updated regression test results
+- Refactor dictionary matchfinder index safety check ( )
+- [zstd][dict] Ensure that dictionary training functions are fully reen…
+- Update dev-short-tests.yml
+- add man entry for --max
+- slightly improved compression ratio at levels 3 & 4
+- codemod: symbolEncodingType_e -> SymbolEncodingType_e
+- CI: build with CMake on source directory with spaces to reproduce
+- added a test
+- added --max to test suite
+- minor split optimization
+- fixed incorrect assert
+- Disallow 32-bit mode in clang section
+- reinforce man page warning
+- minor refactor zstd_fast
+- minor: use MEM_writeLE24()
+- Check STATIC_BMI2 instead of STATIC_BMI2 == 1
+- Change CLI to employ multithreading by default ( )
+- fullbench: new scenario: compressSequencesAndLiterals()
+- Fix zstd-pgo run error
+- added parameter litCapacity
+- Improve support for IAR compiler with attributes and intrinsics
+- ZSTD_getFrameHeader() for skippable frames
+- codemod: ZSTD_defaultPolicy_e -> ZSTD_DefaultPolicy_e
+- updated regression tests results
+- fixed parameter ordering in dfast
+- Oopsie with fileio_common.h
+- Update FreeBSD VM image to 14.1
+- Expose size estimation helpers for Linux ( )
+- removed unused variable
+- added tests
+- [zstd][android] Fix build with NDK r27
+- fixed zlib test
+- minor: test reordering
+- dynamic bucket sizes
+- codemod: ZSTD_sequenceFormat_e -> ZSTD_SequenceFormat_e
+- rename variable name
+- removed trace left over
+- produced ZSTD_compressSequencesAndLiterals() as a separate pipeline
+- removing x32 tests
+- fix more %zu warnings
+- added android-ndk-build
+- adding a Visual + ClangCL + AVX2 compilation test
+- Drop FreeBSD 13.2 CI
+- added avx2 (x64) compilation test
+- fixed zstreamtest
+- update regression results
+- added a new --max command
+- minor variable renaming
+- update ldm compression results
+- reverted the addition of free at the gz_init()
+- codemod: ZSTD_sequenceLength -> ZSTD_SequenceLength
+- ZSTD_compressSequencesAndLiterals requires srcSize as parameter
+- conservatively estimate over-splitting in presence of incompressible loss
+- Separate xxhash includes from extern C blocks
+- Bump ossf/scorecard-action from 2.3.1 to 2.4.0
+- Remove unnecessary extern C declarations from programs/ and contrib/
+- created ZSTD_storeSeqOnly()
+- fix ci tests
+- fix nodejs deprecation warning
+- added -DSTATIC_BMI2=1 for the -mavx2 test
+- cmake: Fix MacOS target older OS and SDK versions
+- benchmark mode specifies nb of threads with -v
+- specification update
+- rewrite penalty update
+- fix missing fclose()
+- fixed meson build
+- more %zu warnings fixes
+- Implement ZSTD_ALIGNED for ms compiler
+- Included suggestion from
+- Bump github/codeql-action from 3.24.7 to 3.24.9
+- Bump github/codeql-action from 3.25.1 to 3.26.2
+- Bump github/codeql-action from 3.24.9 to 3.24.10
+- Bump github/codeql-action from 3.28.1 to 3.28.9
+- Bump github/codeql-action from 3.24.10 to 3.25.1
+- Bump github/codeql-action from 3.26.2 to 3.27.1
+- Bump github/codeql-action from 3.27.1 to 3.28.1
+- CI: enable Intel LLVM C compiler (icx) check
+- Bump msys2/setup-msys2 from 2.23.0 to 2.24.0
+- Bump msys2/setup-msys2 from 2.24.0 to 2.24.1
+- Bump msys2/setup-msys2 from 2.25.0 to 2.26.0
+- Bump msys2/setup-msys2 from 2.22.0 to 2.23.0
+- Bump msys2/setup-msys2 from 2.24.1 to 2.25.0
+- update installed lib64gcc version
+- fix assert
+- changed C11 keyword to _Alignas
+- blind fix for QNX
+- move qemu tests to ubuntu24
+- fix formatting
+- bench: nb threads specified with -v
+- Remove unused ZSTD_decompressSequences_t typedef
+- Improved Github Actions scorecards
+- [linux] Expose ZSTD_compressSequences*() in the kernel
+- renamed: FingerPrint => Fingerprint
+- Fix zlibWrapper build
+- Bump cygwin/cygwin-install-action from 4 to 5
+- minor doc update
+- removed unused branch
+- update documentation of ZSTD_decompressStream()
+- generalize validation function
+- codemod: ZSTD_matchState_t -> ZSTD_MatchState_t
+- [cmake] Fix -z noexecstack portability
+- update hrlog comment
+- codemod: ZSTD_cParamMode_e -> ZSTD_CParamMode_e
+- fixed ISO C incompatibility
+- fix macos build
+- spec update: huffman prefix code paragraph
+- minor optimization for ZSTD_compressSequencesAndLiterals()
+- [linux] Expose ZSTD_compressSequencesAndLiterals() in the kernel
+- Fix $filter and Msys/Cygwin
+- Fix $filter operants and Msys/Cygwin
+- created ZSTD_entropyCompressSeqStore_wExtLitBuffer()
+- updated benchmarks for v1.5.6
+- update changelog for v1.5.7
+- Update MANDIR for FreeBSD
+- updated FreeBSD VM to 14.2
+- modifies command echoing for macos / linux compatibility
+- minor simplification
+- replaced uasan32 test by asan32 test
+- Revert "Remove unnecessary extern C declarations from xxhash.h"
+- PR feedback
+- Fix typo in ZSTD_compressBound docs
+- codemod: ZSTD_blockCompressor -> ZSTD_BlockCompressor_f
+- restore invocation of ZSTD_entropyCompressSeqStore()
+- refactor huffman prefix code paragraph
+- updated LDM documentation
+- minor: cosmetic, indentation
+- fix clang-pgo test
+- prepare fullbench for a refactor
+- Remove unnecessary extern C declarations from xxhash.h
+- Fix Visual + ClangCL + AVX2 compilation
+- better MT fluidity
+- removed debug echos
+- codemod: ZSTD_sequenceCopier -> ZSTD_SequenceCopier_f
+- Block splitter
+- [asm] Enable x86_64 asm for windows builds
+- Revert "Pin tsan and msan CI jobs to ubuntu-20.04 ( )"
+- codemod: ZSTD_buildSeqStore_e -> ZSTD_BuildSeqStore_e
+- removed freeing of the ptr
+- disabled BTI test
+- minor C++-ism
+- Fixed CI
+- fullbench: switch default generator to lorem ipsum
+- chore: indentation alignment
+- pinned dependency hash
+- max command
+- Reorder __BMI2__ check
+- codemod: rawSeqStore_t -> RawSeqStore_t
+- ZSTD_compressSequencesAndLiterals
+- ubuntu 20 is being deprecated
+- codemod: ZSTD_paramSwitch_e -> ZSTD_ParamSwitch_e
+- Add noexecstack flag for gcc/clang C and CPP in Meson
+- adjust mml
+- fix doc nit: ZDICT_DICTSIZE_MIN
+- lib/libzstd.mk: fix typo in the definition of LIB_BINDIR
+- Add Conan to readme
+- adjusted mml heuristic
+- codemod: seqStore_t -> SeqStore_t
+- Oopsie with threading.h
+- Oopsie with huf.h, debug.h
+- codemod: seqDef -> SeqDef
+- Oopsie with fse.h
+- Oopsie with util.h
+- Oopsie with zstd.h
+- refactor fullbench
+- Oopsie with zdict.h
+- codemod: repcodes_t -> Repcodes_t
+- Oopsie with xxhash.h [1/?]

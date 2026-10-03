@@ -1,0 +1,329 @@
+# VerLog-style TextRank Release Note
+
+- Repository: zstd
+- Version pair: v1.5.5 -> v1.5.6
+- Pair id: zstd-v1.5.5-v1.5.6
+- Input commits: 418
+- Candidate sentences: 317
+- GT-length budget: 91
+- Extracted entries: 317
+
+## Extracted Entries
+
+- Makes it possible to use the lib through FetchContent or ExternalProject_Add
+- add line number to debug traces
+- Add common file extensions to --exclude-compressed ( )
+- [pzstd]: Fix DESTDIR handling to allow setting BINDIR
+- fix msbuild action version number
+- Add target_include_directories because windows and macos need it for me
+- internal benchmark: can select size of generated synthetic sample
+- Export a zstd::libzstd target if only static or dynamic linkage is specified.
+- Export a zstd::libzstd CMake target if only static or dynamic linkage is specified.
+- Fix UBSAN issue (zero addition to NULL)
+- Clarify that a stream containing too many Huffman weights is invalid
+- Add new line + [no-] to mmap-dict help output ( )
+- Adjust Strategy in CParams to Avoid Using Excluded Block Compressors
+- Allow Build-Time Exclusion of Individual Compression Strategies
+- improve high compression ratio for file like
+- Fix pzstd Makefile to allow setting DESTDIR and BINDIR separately
+- cmake refactor: move HP-UX specific logic into its own function
+- make the bitstream generate only 0-value bits after an overflow
+- Clean up a false error message in the LDM debug log
+- Define Macros for Possibly-Present Functions; Use Them Rather than Ifdef Guards
+- update targetCBlockSize documentation
+- fix datagen size control
+- Easy: Move Helper Functions Up
+- no longer truncate file name in verbose mode
+- Change to use strategy.matrix
+- Clarify that the log2 of the largest possible symbol is the maximum number of bits consumed
+- minor: fix incorrect debug level
+- Fix a nullptr dereference in ZSTD_createCDict_advanced2()
+- Revert "Work around nullptr-with-nonzero-offset warning"
+- fix version of actions/checkout
+- Clarify that decoding too many Huffman weights is a failure condition
+- targetCBlockSize: modified splitting strategy to generate blocks of more regular size
+- fix: ZSTD_BUILD_DECOMPRESSION message
+- Changed the decoding loop to detect more invalid cases of corruption sooner
+- fix include order
+- Also Allow/Document/Test Excluding dfast and Up
+- fileio_asyncio: handle malloc fails in AIO_ReadPool_create
+- playTests.sh does no longer needs grep -E
+- Do not truncate file name in verbose mode
+- fix : unused attribute for FORCE_INLINE functions
+- use ZSTD_memcpy()
+- Add definition of "log2sup" function
+- minor : update streaming_compression example
+- Make zstd::libzstd an imported interface target.
+- pzstd: use c++14 without conditions
+- new method to deal with offset==0 erroneous edge case
+- Clarify that probability tables must not contain non-zero probabilities for invalid values
+- fix long sequences (> 64 KB)
+- speed optimized version of targetCBlockSize
+- Use ZSTD_LEGACY_SUPPORT=5 in make test ( )
+- sizeBlockSequences() also tracks uncompressed size
+- benchmark more can test targetCBlockSize
+- Updated Makefiles for full MSYS2 and Cygwin installation and testing support.
+- Clarify that the presence of a value with weight 1 is required
+- new method to deal with offset==0
+- [cmake] Remove code for compatibility with CMake < 3.0
+- Work around nullptr-with-nonzero-offset warning
+- More regular block sizes with targetCBlockSize
+- fixed some regressionTests
+- Add doc on how to use it with cmake FetchContent
+- Document the process for adding a new fuzzer
+- Modernize macros to use do { } while (0)
+- [huf] Improve fast C & ASM performance on small data
+- baby-step towards solving flexArray issue
+- Fix state table formatting
+- Improve speed of ZSTD_c_targetCBlockSize
+- fix minor visual static analyzer warning
+- NULL Out Block Compressor Table Entries When Excluded
+- default targets of lib/ and programs/ have different names
+- changed (partially) the decodeSequences flow logic
+- Clarify that there must be at least 2 weights, i.e.
+- fix partial block uncompressed
+- Remove Erroneous Exclusion of Hidden Files and Folders in --output-dir-mirror
+- No longer reject dictionaries with literals maxSymbolValue < 255
+- Improve macro guards for ZSTD_assertValidSequence
+- Implement one-shot fallback for magicless format ( )
+- Unpoison Workspace Memory Before Custom-Free
+- Update Dependency in Intel CET Test; Re-Enable Test
+- added some documentation on ZSTD_estimate*Size() variants
+- add makefile entry to build fat binary on macos
+- made playTests.sh more compatible with older versions of grep
+- Allow ZSTD_selectBlockCompressor() to Return NULL
+- runtime weight distribution table
+- [cmake] Require CMake version 3.5 or newer
+- add same .gitignore rule in golden-decompression/
+- Abort if Unsupported Parameters Used
+- [oss-fuzz] Fix simple_round_trip fuzzer with overlapping decompression
+- Add a Few Tests
+- reduced minimum compressed block size
+- Fail on errors when building fuzzers
+- Define the unified target inside the CMake project, and export it.
+- Exercise ZSTD_findDecompressedSize() in the simple decompression fuzzer ( )
+- minor: playTests.sh more compatible with older versions of grep
+- fix Visual Studio solutions
+- [cmake] Always create libzstd target
+- Update FreeBSD CI images to latest supported releases
+- update license text
+- fix uasan dictionary_stream_round_trip fuzz test
+- Specify offset 0 as invalid and specify required fixup behavior
+- Update fileio.c: fix build failure with enabled LTO
+- Get zstd working with ARM64EC on Windows
+- Updated Makefiles for full MSYS2 and Cygwin installation and testing …
+- [cmake] Fix up
+- removed FlexArray pattern from CCtxPool
+- Remove FlexArray pattern from ZSTDMT
+- Avoid Ratio Regression Tests When Compressors are Excluded
+- extended the fix to ZSTDMT's Buffer Pool
+- fix c89 compatibility by removing snprintf()
+- minor: fix overly cautious conversion warning
+- optimization: bail out faster in presence of incompressible data
+- fix issue 5921623844651008
+- added golden file for the new decompressor erratum
+- Add docs on how to add a new fuzzer
+- Make offload API compatible with static CCtx ( )
+- Unpoison Workspace Memory Before Freeing to Custom Free
+- reduce the amount of includes in "cover.h"
+- added or updated code comments
+- Re-Order Lazy Declarations; Minimize ifndefs
+- Macro-Exclude Block Compressors from Declaration/Definition
+- Reorder Definitions in zstd_opt.c to Group Under Macro Guards (Slightly)
+- fixed decoder behavior when nbSeqs==0 is encoded using 2 bytes
+- fixed incorrect test in Win32 pthread wrapper
+- fixed static analyzer false positive regarding initialization
+- Correct FSE probability bit consumption in specification
+- changed ZSTD_decompressSequences_bodySplitLitBuffer() decoding loop
+- Fix new typos found by codespell
+- add tests inspired from
+- reduce the amount of #include in cover.h
+- Fixed a bug in the educational decoder
+- Fix & fuzz ZSTD_generateSequences
+- Fixed zstd cmake shared build on windows
+- prevent XXH64 from being autovectorized by XXH512 by default
+- fixed MEM_STATIC already defined in Linux Kernel mode
+- [Zstd] Less verbose log for patch mode.
+- add a paragraph on UB DCtx state after error
+- Add SECURITY.md File
+- [CI] Run tests with CMake on Windows
+- Disable unused variable warning in msan configurations
+- update compression results
+- Promote ZSTD_c_targetCBlockSize Parameter to Stable API
+- fix cmakebuild test
+- fix fuzz issue 5131069967892480
+- Add options in Makefile to cmake
+- Bitstream produces only zeroes after an overflow event
+- adapted long decoder to new decodeSequences
+- Improve dual license wording in README
+- add question marks
+- finally, a version that generalizes well
+- fix Visual Studio datagen recipe
+- cli: better errors on argument parsing
+- Fix a very small formatting typo in the lib/README.md file
+- removed unused macro constant
+- increase word dictionary
+- Fix malformed state table
+- fix cmake build
+- increase vocabulary size
+- Add ZSTD_d_maxBlockSize parameter
+- removed sprintf usage from zstdcli.c
+- minor optimization, mostly for clarity
+- Add ZSTD_LIB_EXCLUDE_COMPRESSORS_DFAST_AND_UP Build Variable
+- suppress false error message in LDM mode
+- fix issue with incompressible sections
+- Update FreeBSD CI: drop 12.4 (nearly EOL)
+- Update FreeBSD CI: drop 12.4 as it is nearly EOL
+- Remove blockCompressor NULL Checks
+- Bump microsoft/setup-msbuild from 1.3.1 to 1.3.2
+- Bump microsoft/setup-msbuild from 1.3.2 to 2.0.0
+- Reorder Definitions in zstd_lazy.c to Group Under Macro Guards
+- Improve compression of Arrays of Integers (High compression mode)
+- Fix bugs in simple decompression fuzzer ( )
+- update compression results for regression tests
+- hide asm functions on apple platforms
+- Save one byte on the frame epilogue
+- fixes suggested by
+- Export ZSTD_LEGACY_SUPPORT in tests/Makefile ( )
+- solving flexArray issue in fse
+- [linux] Remove usage of deprecated function
+- Reduce scope of variables
+- Fix AsyncIO reading seed queueing ( )
+- removed trace control
+- cli: better errors on arguent parsing
+- Bump actions/cache from 3 to 4
+- fixed wrong assert
+- lib/decompress: check for reserved bit corruption in zstd
+- Stop Hardcoding the POSIX Version on BSDs
+- updated setup-msys2 to v2.22.0
+- add include guards
+- Add win32 to windows-artifacts.yml
+- produced golden sample for the offset==0 decoder test
+- [cmake] Emit warnings for contradictory build settings
+- modification: differentiate literal update at pos+1
+- Reduce streaming decompression memory by 128KB
+- Use utimensat() on FreeBSD
+- add sparc64 compilation test
+- Add CI Test for Excluding Matchfinders
+- try to silence some scorecard warnings
+- improve cmake test
+- Also Reorganize Zstd Opt Declarations
+- Bump actions/upload-artifact from 3.1.2 to 3.1.3
+- Bump actions/upload-artifact from 4.3.0 to 4.3.1
+- Bump actions/upload-artifact from 3.1.3 to 4.0.0
+- Bump actions/upload-artifact from 4.1.0 to 4.2.0
+- Bump actions/upload-artifact from 4.2.0 to 4.3.0
+- Bump actions/upload-artifact from 4.0.0 to 4.1.0
+- Updates ZSTD_RowFindBestMatch comment ( )
+- Do not test WIN32, instead test _WIN32
+- Added qnx in the posix test section of platform.h
+- Fix & refactor Huffman repeat tables for dictionaries
+- minor man page clarification
+- Clarify that a non-zero probability for an invalid symbol is invalid
+- zdictlib: fix prototype mismatch
+- Hide ASM symbols on Apple platforms
+- [huf] Improve fast huffman decoding speed in linux kernel
+- detect extraneous bytes in the Sequences section
+- [huf] Fix null pointer addition
+- Fix : mixing -c, -o and --rm
+- updated API manual
+- fix clangbuild
+- fix 5921623844651008
+- fix meson datagen build
+- Specify offset 0 as invalid
+- Advertise Availability of Security Vulnerability Notifications
+- fix ZSTD_TARGETCBLOCKSIZE_MIN test
+- fix duplicated paragraph
+- fix msan warnings
+- revert to manually defining DTable
+- update -V documentation
+- update documentation
+- Move offload API params into ZSTD_CCtx_params
+- fix -Werror=pointer-arith in fuzzers ( )
+- added tests
+- minor: reformulate nbSubBlocks assignment
+- Stop suppressing pointer-overflow UBSAN errors
+- Bump ossf/scorecard-action from 2.2.0 to 2.3.1
+- Bump ossf/scorecard-action from 2.1.3 to 2.2.0
+- Bump ossf/scorecard-action from 2.1.2 to 2.1.3
+- Convert the CircleCI workflow to a GitHub Actions workflow
+- updated version to v1.5.6
+- disable Intel CET Compatibility tests
+- minor simplification for dependency generation
+- chore: fix some typos ( )
+- Update windows-artifacts.yml
+- fix paramgrill Makefile recipe
+- fix cmake recipe
+- updated documentation
+- Bump actions/checkout from 4.0.0 to 4.1.0
+- Bump actions/checkout from 4.1.0 to 4.1.1
+- Bump actions/checkout from 3.5.2 to 3.5.3
+- Bump actions/checkout from 3.5.0 to 3.5.2
+- Bump actions/checkout from 3.5.3 to 4.0.0
+- Bump github/codeql-action from 2.3.0 to 2.3.2
+- Bump github/codeql-action from 2.21.4 to 3.23.0
+- Bump github/codeql-action from 3.24.5 to 3.24.6
+- Bump github/codeql-action from 3.23.0 to 3.24.5
+- Bump github/codeql-action from 3.24.6 to 3.24.7
+- Bump github/codeql-action from 2.3.2 to 2.20.1
+- Bump github/codeql-action from 2.20.1 to 2.20.3
+- Bump github/codeql-action from 2.2.8 to 2.2.9
+- Bump github/codeql-action from 2.2.9 to 2.2.11
+- Bump github/codeql-action from 2.20.3 to 2.21.4
+- Bump github/codeql-action from 2.2.11 to 2.3.0
+- Fix Intel Xcode builds with assembly
+- enriched vocabulary again
+- update API documentation
+- changed LLU suffix into ULL for Visual 2012 and lower
+- fuzz: control debuglevel from Makefile
+- added ZSTD_decompressDCtx() benchmark option to fullbench
+- add RISC-V emulation tests to Github CI
+- Add the zeroSeq sample
+- [x-compile] Fix cross-compiling for AArch64 with lld
+- removed _old variant from splitLit
+- minor refactor for clarity
+- Bump cygwin/cygwin-install-action from 3 to 4
+- fix a minor inefficiency in compress_superblock
+- Cirrus-CI: Add FreeBSD 14
+- fix x32 tests on Github CI
+- Fix building xxhash on AIX 5.1
+- Fixed typo
+- Tweak Ultra/Opt Guards
+- update xxhash library to v0.8.2
+- Remove duplicate and incorrect docs in zstd_decompress.c ( )
+- add doc on CCtx UB state
+- added RISC-V emulation tests on Github CI
+- [debug] Don't define g_debuglevel in the kernel
+- update CHANGELOG for v1.5.6
+- update xxhash to v0.8.2
+- [doc] add decoder errata paragraph
+- added decoder errata paragraph
+- [linux] Backport intptr_t removal
+- CI: meson: use builtin handling for MSVC
+- removed golden-decompression/.gitignore
+- Add Bazel module instructions to README.md
+- Fix building on HP-UX 11.11 PA-RISC
+- Fix typographical error in README.md
+- removed travis & appveyor scripts
+- Refactor ZSTD_sequenceProducer_F typedef to ZSTD_sequenceProducer_F*
+- Add Documentation to lib/README.md
+- fix extraneous semicolon ';'
+- fix the copyright linter
+- Merge Ultra and Ultra2 Exclusion
+- fix typo
+- [cpu] Backport fix for rbx clobbering on Windows with Clang
+- Doc update
+- minor Makefile refactoring
+- Pin tsan and msan CI jobs to ubuntu-20.04 ( )
+- Fuzzing and bugfixes for magicless-format decoding ( )
+- refactor optimal parser
+- nit: comment indentation
+- add a lorem ipsum generator
+- datagen generates lorem ipsum by default
+- zlibWrapper: convert to C89 / ANSI C
+- Lorem Ipsum generator update
+- blindfix meson recipe
+- [asm][aarch64] Mark that BTI and PAC are supported
+- fix LLU->ULL
+- renamed STATLIB into STATICLIB
+- define LIB_SRCDIR and LIB_BINDIR

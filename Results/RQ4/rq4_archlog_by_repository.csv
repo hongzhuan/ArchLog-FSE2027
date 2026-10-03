@@ -1,0 +1,6 @@
+Repository,Runtime,LLM Calls,Total Tokens,Avg. Call Time
+ceph,6126.74s,"5,952",30.21M,10.23s
+dpdk,30395.87s,"11,291",70.36M,25.22s
+jemalloc,17210.92s,"4,203",24.00M,28.07s
+openssl,19798.98s,"18,581",112.41M,21.98s
+zstd,13721.83s,"3,175",16.72M,26.37s

@@ -1,0 +1,109 @@
+- Added the staged ordered ring (soring) API for multi-stage ordered packet processing.
+- Added `rte_power_monitor` and `rte_power_monitor_wakeup` functions for CPU power state monitoring.
+- Added `rte_ffs32` and `rte_ffs64` functions to find the first set bit in 32-bit and 64-bit values.
+- Added support for IPv6 addresses in Toeplitz hash calculations.
+- Added hardware-accelerated CRC computation using AVX512, SSE42, and NEON instructions.
+- Added `rte_net_crc_set_alg_v25` function for CRC algorithm selection with RISC-V vector support.
+- Added raw mbuf allocation and bulk freeing functions with built-in sanity checks.
+- Added a boolean token parser for command-line parsing.
+- Added support for registering transmit callbacks in the pdump library to capture transmitted packets.
+- Added support for disabling and enabling power management on specific Ethernet device queues.
+- Added telemetry command to retrieve device information for eventdev devices.
+- Added per-queue Rx statistics (xstats) retrieval for mlx5 devices, including hairpin counters.
+- Added a new ring dump function to display head-tail synchronization state.
+- Added support for the `--xstats` option in the proc-info application, including hiding zero-valued extended port statistics.
+- Added echo mode to testpmd, allowing command output to be displayed when commands are read from a file.
+- The DTS framework now supports dynamic configuration, packet type, MTU/jumbo frame, dual VLAN, and softnic test suites.
+- Added support for building DPDK drivers without building DPDK in DTS.
+- Added support for ZSDA compression devices with ZLIB and GZIP formats.
+- Added support for ZXDH network devices with RSS, VLAN filtering, MAC filtering, promiscuous/allmulticast modes, link operations, meter, and extended statistics.
+- Added the Realtek r8169 Ethernet driver supporting RTL8168KB and RTL8125A/B.
+- Added the XSC network driver with RSS, VLAN filtering, MAC filtering, checksum offload, TSO, and VFIO support.
+- Added support for the M10 N6000 device type.
+- Added support for Intel I225 Ethernet controllers with LED blink, link detection, NVM operations, LTR, and 2.5G auto-negotiation.
+- Merged the igc driver into e1000, adding support for more I219 and I225 devices.
+- Added support for E610 VF on ixgbe.
+- Added PTP timestamping, Flow Director, and LED identification support for E610 devices.
+- Added support for inline IPsec on Marvell CN20K platforms, including reassembly, session management, and flow operations.
+- Added support for CN20K packet reassembly, flow rules, and flow counters.
+- Added support for 100G link management on NVIDIA NTNIC, including FEC, loopback, LED, and QSFP28 module control.
+- Added NT400Dxx FPGA initialization support for the ntnic driver.
+- Added VF representor support for the XSC network driver.
+- Added packet drop statistics and configurable fanout mode to the AF_PACKET driver.
+- Added TCP segmentation offload (TSO) support for the AMD XGBE (axgbe) network adapter.
+- Added support for asymmetric RSA cryptographic operations (encrypt, decrypt, sign, verify) in the crypto performance test application and vhost/crypto example.
+- The virtio crypto driver now supports vDPA backend, packed ring, and asymmetric RSA operations.
+- The QAT crypto driver now supports DOCSIS security sessions and fixes the SM3 state size.
+- The mlx5 driver now supports FDB RSS and unified FDB domain.
+- The mlx5 driver added support for ESP in non-template RSS expansion and MPLSoGRE/eCPRI matching with hardware steering.
+- The mlx5 driver added NAT64 actions and VLAN pop/push per-table-type in hardware steering.
+- The mlx5 driver added per-queue hairpin out-of-buffer counters and the ability to disable statistics.
+- The mlx5 driver added support for modifying the counter set ID of a receive queue object.
+- The mlx5 driver added support for dropping packets in mirror clone actions.
+- The bnxt driver now uses optimized Rx/Tx functions based on device capabilities and configures Rx burst threshold based on link speed.
+- The bnxt driver allows configurable Rx burst size using per-queue rx_free_thresh in vector receive path.
+- The bnxt driver added statistics cache management for improved batch statistics processing.
+- The bonding driver now logs errors when enabling/disabling promiscuous mode on slave ports and fixes dedicated queue setup in mode 4.
+- The ENA driver updated to version 2.12.0 and supports a mutable RSS table size.
+- The netvsc driver improved device removal and scanning for all net devices under the PCI device.
+- The nfp driver now supports loading firmware for cards without DDR and changed to try disk first, then flash.
+- The ngbe driver added comprehensive VF device support with PF-VF mailbox, MAC/VLAN filtering, interrupts, and stats.
+- The Intel ice driver added support for IPv4 fragments in ACL and flow director filters.
+- The Intel ice driver added AVX2 vector receive and transmit support for IDPF single queue mode.
+- The virtio PMD added support for hash reporting and mergeable buffers in packed ring mode.
+- The enetfec driver now allows deferred start for receive queues and removed the restriction on deferred start for Tx queues.
+- Added multicast address filtering, flow control, LED control, firmware version, EEPROM read/write, and power management for Intel e1000/IGB devices.
+- Added support for secondary process protection across Intel NIC drivers.
+- Added support for ixgbe VF features: MAC address, allmulticast, promiscuous mode, MTU, firmware version, module EEPROM, priority flow control.
+- Added burst mode query support for NFP devices.
+- Added support for per-channel pending request count for CNXK DMA devices.
+- Enabled batch queue addition, default WQE stashing, and PTP timestamping in the SSO Rx adapter.
+- Added meter action and validation for RSS action in flow rules on CNXK NICs.
+- Notified users about link status changes during representor start/stop and updated representor link info reporting.
+- Adjusted RSS redirection table size to the actual adapter size in the ENA driver.
+- Added `probe_opt` device argument for mlx5 devices to enable probing optimizations.
+- Added support for RISC-V architecture in the vhost library.
+- Added offload processing support for the legacy vhost dequeue path.
+- Improved packet type detection to support VXLAN, VXLAN-GPE, GTP-C, GTP-U, and GENEVE tunnels from UDP packets.
+- Improved epoll event processing to handle more ready events in a single call.
+- The dmadev, stack, and bbdev libraries are now buildable with MSVC.
+- The devbind tool now allows changing UID/GID for VFIO.
+- The EAL added the `RTE_PACKED` macro for MSVC compatibility.
+- pdump now clears statistics when enabled.
+- Enhanced Rx descriptor dump with per-platform parse header for CN10K and CN20K.
+- Improved PHY reset reliability for Intel I225/I226 by adding polling and retry.
+- Fixed VLAN parsing in testpmd's checksum engine to correctly extract the ethertype across multiple VLAN headers.
+- Testpmd corrected DCB info display to properly show the priority-to-TC mapping.
+- Fixed a crash in the Intel iavf driver on application exit on FreeBSD.
+- Fixed a crash in the Intel ice driver's Rx function.
+- Fixed mbuf release in the Intel iavf driver for Arm multi-process.
+- Fixed incorrect minimum Rx/Tx descriptor values for ixgbe.
+- Fixed crashes in secondary processes for ixgbe and e1000 drivers.
+- Fixed dropped packets issue when using VRRP on Intel ice.
+- Fixed epoch bit calculation and packet completion handling in bnxt to improve packet reception reliability.
+- Prevented application crashes from invalid flow rules in the BNXT driver by using error logging instead of assertions.
+- Fixed incorrect RSS behavior in non-template flows and validation of actions in mlx5.
+- Fixed LACP packet handling in isolated mode for mlx5.
+- Fixed incorrect NUMA socket ID reporting when NUMA is off.
+- Fixed PTP client sync message handling by correctly comparing transmitter clock ID.
+- Fixed a null pointer check in the compress device private transform free function.
+- Fixed a boundary check in device arguments layer parsing to prevent array overflow.
+- Fixed NUMA node detection on systems with more CPUs than `RTE_MAX_LCORE`.
+- Fixed a null pointer check when retrieving module information from an Ethernet device.
+- Fixed a bug in aggregate TX affinity mapping that always returned an unsupported error.
+- Fixed a crash when setting multicast address list on devices that do not support it.
+- Fixed a null pointer check when stopping transmit queues.
+- Fixed a potential crash when adjusting time synchronization for Ethernet devices.
+- Fixed a null pointer check in security packet metadata setting.
+- Fixed the pop operation in the C11 stack implementation.
+- Fixed a double-free bug in log cleanup and closed previously opened internal log files when setting a custom log stream.
+- Fixed IPv4 matching in the flow filtering example to use correct fields and mask.
+- Fixed validation to prevent async packed virtio transmission with invalid buffer length.
+- Fixed GCC 15 build issues in examples and various drivers.
+- Fixed the systemd journal socket opening for log output.
+- Fixed undetected NUMA nodes not properly handled by EAL.
+- Fixed `rte_eth_xstats_get_names` to properly request the correct number of registers.
+- Ethdev now checks for deferred start support.
+- Skip device close for secondary process in cryptodev PMD release to avoid crashes.
+- Removed support for meter configuration on CN10K devices.
+- Removed support for Intel IGC (I225/I226) network adapters.

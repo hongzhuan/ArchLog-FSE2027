@@ -1,0 +1,721 @@
+# VerLog-style TextRank Release Note
+
+- Repository: ceph
+- Version pair: v20.2.0 -> v20.2.1
+- Pair id: ceph-v20.2.0-v20.2.1
+- Input commits: 722
+- Candidate sentences: 709
+- GT-length budget: 220
+- Extracted entries: 709
+
+## Extracted Entries
+
+- tentacle: mgr/dashboard: remove not needed 'cli_version' field from gw info com…
+- tentacle: mgr/dashboard: fix zone update API forcing STANDARD storage class
+- tentacle: ceph-volume: use udev data instead of LVM subprocess in get_devices()
+- ceph-volume: use udev data instead of LVM subprocess in get_devices()
+- tentacle: mgr/dashboard : Fix secure-monitoring-stack creds issue
+- tentacle: mgr/dashboard: rgw accounts form group mode disable option is not working
+- mgr/dashboard: remove not needed 'cli_version' field from gw info command
+- mgr/dashboard: Form retains old data when switching from edit to create mode
+- mgr/dashboard: Local storage class creation via dashboard doesn't handle creation of pool.
+- python-common/cryptotools: move internal crypto caller to new file
+- mgr/dashboard: fix zone update API forcing STANDARD storage class
+- mgr/dashboard: rgw accounts form group mode disable option is not working
+- tentacle: ceph-volume: fix UdevData initialisation from empty /run/udev/data/* file
+- tentacle: Form retains old data when switching from edit to create
+- mgr/dashboard : Fix secure-monitoring-stack creds issue
+- tentacle: mgr/dashboard : Skip calls until secure_monitoring_stack is enabled
+- mds: fix test that directory has no snaps
+- tentacle: mgr/dashboard: Blank entry for Storage Capacity in dashboard under Cluster > Expand Cluster > Review
+- tentacle: mgr/dashboard: fix the separation between CLI and API only commands
+- script/build-with-container: optionally source WITH_CRIMSON from env file
+- tentacle: mgr/dashboard: service creation fails if service name is same as sevice type
+- python-common/cryptotools: fix error path in verify tls function
+- tentacle: mgr/dashboard: change the default max namespace from 4096 to None in subsystem add command
+- ceph-volume: fix UdevData initialisation from empty /run/udev/data/* file
+- install-deps.sh: let FOR_MAKE_CHECK variable take precedence
+- mgr/dashboard: change the default max namespace from 4096 to None in subsystem add command to take gw default.
+- mgr/dashboard: Blank entry for Storage Capacity in dashboard under Cluster > Expand Cluster > Review
+- tentacle: mgr/dashboard: fix prometheus API error when not configured
+- tentacle: common: Allow PerfCounters to return a provided service ID
+- tentacle: mgr/dashboard: raise exception if both size and rbd_image_size are being passed in ns add
+- tentacle: mgr/dashboard: fix typo in error when gw does not exist
+- tools: handle get-attr as read-only ops in ceph_objectstore_tool
+- mgr/dashboard: fix the separation between CLI and API only commands
+- tentacle: mgr/cephadm: Add some new fields to the cephadm NVMEoF spec file
+- mgr/dashboard: allow deletion of non-default zone and zonegroup
+- tentacle: mgr/dashboard: add text-label-list component
+- python-common: Correct typo in private_key naming field.
+- mgr/dashboard: Carbonize the Change Password Form
+- src/test: test sync/async i/o code paths with huge (4GiB) buffers
+- mgr/dashboard: Add new landing page component
+- mgr/dashboard: add text-label-list component
+- mgr/dashboard: Add productive card component
+- tentacle: encode: Fix bad use of DENC_DUMP_PRE
+- tentacle: monitoring: fix "Total gateway" and "Ceph Health NVMeoF WARNING" grafana graphs
+- python-common/cryptotools: use a main function
+- mgr/dashboard : Skip calls until secure_monitoring_stack is enabled
+- mgr/cephadm: bump monitoring stack versions
+- librbd: fix RequestLockPayload log message in ImageWatcher
+- qa: add test for subvolume rm with retained snapshots when cluster is full
+- mgr/dashboard: add GET API endpoint for consistency groups
+- mgr/dashboard: raise exception if both size and rbd_image_size are being passed in ns add
+- bluestore/BlueFS: fix bytes_written_slow counter with aio_write
+- tentacle: mgr/dashboard: Fix table width expansion on manager module dropdown selection
+- qa: use correct upgrade order
+- tentacle: RGW: multi object delete op; skip olh update for all deletes but the last one
+- qa/cephfs: add test to check clone source info's present in...
+- mgr/dashboard: Adding QAT Compression dropdown on RGW Service form
+- mgr/dashboard: add an option to control the dashboard crypto caller
+- tentacle: mgr/dashboard: Add productive card component
+- tentacle: mgr/dashboard: Handle pool creation in tiering local storage class creation.
+- mgr/dashboard: fix prometheus API error when not configured
+- tentacle: mgr/dashboard: fix None force param handling in ns add_host so it won't raise exceptions
+- python-common/cryptotools: create CrytpoCaller interface class
+- tentacle: mgr/dashboard: allow deletion of non-default zone and zonegroup
+- tentacle: mgr/dashboard : fix - about model tooltip issue
+- os/bluestore: Debug code to make reshard fail faster
+- tentacle: client: fix async/sync I/O stalling due to buffer list exceeding INT_MAX
+- encode: Fix bad use of DENC_DUMP_PRE
+- tentacle: mgr/dashboard: --no-group-append default value to False, aligned with old cli"
+- tentacle: mgr/dashboard: ns list now support not passing nqn param
+- mgr/dashboard: --no-group-append default value to False, aligned with old CLI
+- pybind/mgr: Hack around the 'ImportError: PyO3 modules may only be initialized once per interpreter process' issue.
+- qa/suites/upgrade: update ignorelist with cephfs specific warnings (under stress-split)
+- tentacle: doc/radosgw: change all intra-docs links to use ref (2 of 6)
+- tentacle: doc/radosgw: change all intra-docs links to use ref (1 of 6)
+- monitoring: fix rgw_servers filtering in rgw sync overview grafana
+- doc/radosgw: change all intra-docs links to use ref (2 of 6)
+- doc/radosgw: change all intra-docs links to use ref (1 of 6)
+- mgr/dashboard:[NFS] add Subvolume Groups and Subvolumes in "Edit NFS Export" form
+- mgr/cephadm: Add some new fields to the cephadm NVMEoF spec file.
+- tentacle: bluestore/BlueFS: fix bytes_written_slow counter with aio_write
+- mgr/dashboard: add API endpoint to list consistency groups
+- mgr/dashboard: fix typo in error when gw does not exist
+- mgr/dashboard: service creation fails if service name is same as service type
+- mgr/dashboard: add get_subsystem nvme command
+- tentacle: cephadm: support custom distros by falling back to ID_LIKE
+- tentacle: mds/FSMap: fix join_fscid being incorrectly reset for active MDS during filesystem removal
+- RGW | fix conditional MultiWrite
+- common: Allow PerfCounters to return a provided service ID
+- tentacle: mgr/dashboard: Adding QAT Compression dropdown on RGW Service form
+- tentacle: mgr/dashboard: add get_subsystem nvme command
+- tentacle: mgr:python: avoid pyo3 errors by running certain cryptographic functions in a child process
+- script/build-with-container: add more detailed variants
+- cephadm: fix zip_root_entries population in version command
+- client: get quota root based off of provided inode in statfs
+- tentacle: os/bluestore: cumulative patch to fix extent map resharding and around
+- script/build-with-container: add ubuntu 20.04 (focal)
+- tentacle: mgr/dashboard: fix data mismatch in Advance section in Tiering.
+- tentacle: osd/ECUtil: Fix erase_after_ro_offset length calculation and add tests
+- script/build-with-container: add build image variants
+- mgr/dashboard : Remove subalerts details for multiple subalerts
+- tentacle: mgr/dashboard: server side table rendering improvements
+- mgr/dashboard: fix some linting issues.
+- doc: Update os-recommendations.rst to remove empty rows
+- mgr/dashboard: add API endpoint for consistency group name update
+- python-common/cryptotools: Always encode, Err via stderr and signal the exit.
+- tentacle: monitoring: fix rgw_servers filtering in rgw sync overview grafana
+- tentacle: mgr/dashboard: Carbonize the Change Password Form
+- RGW: multi object delete op; skip olh update for all deletes but the last one
+- mds: Fix readdir when osd is full.
+- tentacle: mds: Fix readdir when osd is full.
+- tentacle: monitoring: upgrade grafana version to 12.3.1
+- tentacle: auth: msgr2 can return incorrect allowed_modes through AuthBadMethodFrame
+- python-common/cryptotools: move actual crypto opts into a class
+- mgr/dashboard: Allow FQDN in Connect Cluster form -> Cluster API URL
+- tentacle: osd: Do not remove objects with divergent logs if only partial writes.
+- mds: rollback the snapdiff fragment entries with the same name if needed.
+- mgr/dashboard: add API endpoint to add images to consistency groups
+- mgr/dashboard: fix None force param handling in ns add_host so it won't raise exceptions
+- tentacle: libcephfs: New feature - add ceph_setlk and ceph_getlk functions
+- src: Move the decision to build the ISA plugin to the top level make file
+- cephadm: support custom distros by falling back to ID_LIKE
+- tentacle: mgr/dashboard:[NFS] add Subvolume Groups and Subvolumes in "Edit NFS Export form"
+- mgr/cephadm: always use the internal cryptocaller
+- mds/FSMap: fix join_fscid being incorrectly reset for active MDS during filesystem removal
+- osd/ECUtil: Fix erase_after_ro_offset length calculation and add tests
+- osd: Make scrub determine the correct object size.
+- os/bluestore: enable dummy db/txc in ExtentMap::reshard_action.
+- python-common/cryptotools: add caller module for base class
+- os/bluestore: Fix dirty_range in BlueStore::_do_remove
+- tentacle: monitoring: fix "In" OSDs in Cluster-Advanced grafana panel.
+- mgr/dashboard: fix data mismatch in Advance section in Tiering.
+- mgr/dashboard: add API endpoint to delete images from consistency groups
+- tentacle: mgr/dashboard: Allow FQDN in Connect Cluster form -> Cluster API URL
+- tentacle: mgr/dashboard: Set max subsystem count to 512 rather than 4096
+- rpm: default to gcc-toolset-13, not just for crimson
+- tentacle: mgr/cephadm: bump monitoring stack versions
+- osd: Do not remove objects with divergent logs if only partial writes.
+- auth: msgr2 can return incorrect allowed_modes through AuthBadMethodFrame
+- mgr/dashboard : fix - about model tooltip issue
+- tentacle: cephadm, debian/rules: Use system packages for cephadm bundled dependencies
+- python-common/cryptotools: catch all failures to read cert
+- monitoring: Fix Filesystem grafana dashboard units
+- mgr/dashboard: Edit user via UI throwing multiple server errors
+- mgr/dashboard: add API endpoint to create consistency groups
+- script/build-with-container: improve error handling for invalid distros
+- tentacle: monitoring: Fix Filesystem grafana dashboard units
+- python-common/cryptotools: create module for selecting crypto caller
+- monitoring: upgrade grafana version to 12.3.1
+- tentacle: mgr/dashboard: fix total capacity value in dashboard
+- tentacle: client: use path supplied in statfs
+- mgr/dashboard: replace direct use of bcrypt in dashboard
+- qa: Add Teuthology test for BlueStore ESB assertion failure
+- pybind/mgr/dashboard/tox.ini: use up-to-date rstcheck invocations
+- mgr/dashboard: ns list now support not passing nqn param
+- tentacle: mgr/dashboard: Edit user via UI throwing multiple server errors
+- tentacle: qa/tests: wait for module to be available for connection
+- tentacle: mgr/dashboard : Remove subalerts details for multiple subalerts
+- nvmeofgw: prevent map corruption while processing beacons from deleted gws
+- mgr/vol: fix subvolume removal with retained snapshots when osd is full
+- script/build-with-container: be consistent with naming in distro kinds
+- rgw: Record the service_unique_id , if present, in the SrviceMap
+- doc/cephfs: update docs since "subvolume info" cmd output can also...
+- test/encoding: print context on diff failure
+- client: use path supplied in statfs
+- monitoring: make cluster matcher backward compatible for pre-7.1 metrics
+- librbd: add ExclusiveLock::accept_request() overload
+- tentacle: mgr/DaemonState: Minimise time we hold the DaemonStateIndex lock
+- mds: fix rank 0 marked damaged if stopping fails after Elid flush and log trimmed
+- Revert "PrimeryLogPG: don't accept ops with mixed balance_reads and rwordered flags"
+- mgr/dashboard: fix RBD mirror schedule inheritance in pool and image APIs
+- python-common/cryptotools: use json for structured output
+- cephadm: enable test case for centos10 cephadm rpm build
+- release note: add a note that "subvolume info" cmd output can also...
+- tentacle: rgw/lc: LCOpAction_CurrentExpiration checks mtime for delete markers
+- tentacle: mgr/dashboard: replace usage or progress bar with carbon meter chart
+- tentacle: mgr/dashboard: fix command alias help message
+- os/bluestore: add free space spatial histogram to adminsock
+- mgr/dashboard: fix multi-cluster route reload logic
+- python-common/cryptotools: use one single dir for cryptotools
+- doc/dev: check off telemetry release requirement
+- os/bluestore: Refactor ExtentMap::reshard() into separate decision and action phases
+- tentacle: qa/tasks/workunit: fix no module named 'pipes'
+- mgr/telemetry: add 'ec_optimizations' flag to 'basic_pool_flags' collection
+- tentacle: mgr/dashboard: Tiering form - Placement Target in Advanced Section
+- cmake/BuildArrow: Use AUTO mode for xsimd dependency detection
+- qa/tasks/qemu: adjust NFS service name for Rocky 10
+- cephadm: add centos 10 container images for cephadm build tests
+- client: bring client_lock out of statfs helper method
+- tentacle: mgr/dashboard: Fix display of IP address in host page
+- tentacle: tasks/cbt_performance: Tolerate exceptions during performance data up…
+- mgr/dashboard: Tiering form - Placement Target in Advanced Section
+- tentacle: mgr/dashboard: fix multi-cluster route reload logic
+- tentacle: rpm: default to gcc-toolset-13, not just for crimson
+- cephadm: fix some issues running existing cephadm build tests
+- tentacle: monitoring: update NVMeoFTooManyNamespaces to 4096 ns
+- os/bluestore: rename/repurpose bluefs_check_volume_selector_on_umount setting.
+- pybind/mgr: add name mangling options to subvolume group creation
+- doc: remove redundant note about tested container hosts
+- rgw/lc: LCOpAction_CurrentExpiration checks mtime for delete markers
+- tentacle: monitoring: fix CephPgImbalance alert rule expression
+- qa: test unmount hang using high/low level APIs
+- tentacle: qa/tasks/ceph_manager: population must be a sequence
+- qa/tests: wait for module to be available for connection
+- tentacle: mgr/dashboard: fix RBD mirror schedule inheritance in pool and image APIs
+- tentacle: mgr/telemetry: add 'ec_optimizations' flag to 'basic_pool_flags' collection
+- tasks/cephfs: Use different errmsg for invalid dir
+- mgr/dashboard: Set max subsystem count to 512 rather than 4096
+- tentacle: monitoring: make cluster matcher backward compatible for pre-reef metrics
+- common: properly convert frag_t to net/store endianness
+- qa/tasks/workunit: fix no module named 'pipes'
+- mgr/dashboard: fix total capacity value in dashboard
+- cephadm: set default image for tentacle release
+- tentacle: mgr/dashboard: Carbonize Administration module > Create Realm/Zone group/zone
+- tentacle: mds: fix rank 0 marked damaged if stopping fails after Elid flush.
+- osd: Fix fast EC truncate to whole stripe
+- tentacle: mgr/dashboard: fix missing schedule interval in rbd API
+- mgr/volumes: Add test for mon caps if auth key has remaining mds/osd caps
+- libcephfs: New test file for high-level record locking
+- mgr/dashboard: Carbonize Administration module > Create Realm/Zone group/Zone
+- tentacle: mgr/dashboard: fix ns add and resize commands help
+- monitoring: fix CephPgImbalance alert rule expression
+- tentacle: monitoring: fix MTU Mismatch alert rule and expr
+- mgr/dashboard: fix missing schedule interval in rbd API
+- mgr/dashboard: add API endpoint to delete consistency group
+- debian/control: Add libxsimd-dev build dependency for vendored Arrow
+- qa/workunits/nvmeof/basic_tests: use nvme-cli 2.13
+- ceph-object-corpus: pick up 20.2.0-380-gdbcbbd3f281
+- qa/tasks/ceph_manager: population must be a sequence
+- qa/workunits: add Rocky Linux support to librados tests
+- tentacle: mgr/dashboard: fix oauth2-service creation UI error
+- tentacle: qa/workunits: add Rocky Linux support to librados tests
+- osd: Add counter to peering so we can see how often we would try invalidating the stats.
+- osd: Fix issue where it is possible for stats to be recovered incorrectly during merge operations.
+- monitoring: fix MTU Mismatch alert rule and expr
+- test/libcephfs: use more entries to reproduce snapdiff fragmentation
+- tentacle: mgr/dashboard: Maintain sentence case consistency in side nav bar titles
+- qa/workunits/rbd: moving mirror_image_snapshot to wait_for_replay_complete
+- tasks/cbt_performance: Tolerate exceptions during performance data updates
+- tentacle: osd: Fix stats mismatch cluster error seen during scrubbing occasionally
+- debian: Use system packages for cephadm bundled dependencies
+- mgr/dashboard : Fixed labels issue
+- qa/standalone/availability.sh: retry after feature is turned on
+- qa: Fix validation of client_version
+- qa/tasks/rbd_mirror_thrash: don't use random.randrange() on floats
+- qa/rgw: Include rgw_restore_processor_period in s3tests
+- mgr/dashboard: start node virtual-env after starting ceph cluster
+- mgr/dashboard: fix command alias help message
+- mgr/dashboard: add customizations to table-actions
+- mgr/dashboard: fix ns add and resize commands help
+- tentacle: backports variants improvements and Dockerfile.build changes
+- 'mgr/dashboard: Fix display of IP address in host page
+- scripts/build/ceph.spec.in: fix rhel version checks
+- qa: add tests for name mangling in subvolume group creation
+- mgr/dashboard: Maintain sentence case consistency in side nav bar titles
+- client: clamp sizes to INT_MAX in sync i/o code paths
+- script/build-with-container: add a pair of fedora distro versions
+- mgr/DaemonState: Minimise time we hold the DaemonStateIndex lock
+- cephadm: add ubuntu 24.04 container build test for completeness
+- tentacle: mgr/dashboard : Fixed labels issue
+- cephadm/tests: fix _dist_info function logic error
+- mgr/dashboard: Change side navigation to Overview
+- tentacle: build-with-container: add argument groups to organize options
+- tentacle: mgr/dashboard: support gw get_stats and listener info
+- pybind/rados: Add list_lockers() and break_lock() to Rados Python interface.
+- os/bluestore/bluefs: Fix stat() for WAL envelope mode
+- mgr/dashboard: Add generic wizard component
+- mgr/dashboard: Use a persistent volume to store Loki DB
+- mgr/dashboard: Add Archive zone configuration to the Dashboard
+- cephadm: support cephadm rpm based builds without top_level.txt
+- valgrind: update rocksdb ObjectLibrary leak suppression for gcc-13
+- client: move mref_reader check in statfs out of helper
+- pybind/mgr: pin cheroot version in requirements-required.txt
+- mgr/dashboard: fix oauth2-service creation UI error
+- mon: Deny EC optimizations (fast EC) for non-4k-aligned chunk-sizes.
+- mgr/dashboard: carbonize service form
+- mgr/dashboard: replace usage or progress bar with carbon meter chart
+- tentacle: osd/PeeringState: re-evaluate full OSDs while waiting for recovery re…
+- tentacle: install-deps: Replace apt-mirror
+- tentacle: debian/control: Add libxsimd-dev build dependency for vendored Arrow
+- tentacle: mgr/dashboard : Fixed usage bar for secondary site in rbd mirroing
+- osd/PeeringState: re-evaluate full OSDs while waiting for recovery reservation
+- mgr/dashboard: add multiple ceph users deletion
+- tentacle: test/ceph_assert.cc: Disable core files
+- build-with-container: add argument groups to organize options
+- tentacle: mds/MDSDaemon: unlock mds_lock while shutting down Beacon and others
+- tentacle: mgr/dashboard: empty-data-message
+- tentacle: pybind/mgr/pg_autoscaler: Introduce dynamic threshold to improve scal…
+- tentacle: mgr/dashboard: Add overview page and change 'Dashboard' to 'Overview'
+- test/ceph_assert.cc: Disable core files
+- cephadm/build: Add Debian package support for bundled dependencies
+- mgr/dashboard : Fixed usage bar for secondary site in rbd mirroing
+- tentacle: mgr/dashboard: Add Archive zone configuration to the Dashboard
+- include/frag.h: un-inline methods to reduce header dependencies
+- build-with-container: ensure npm dir is set up before configure
+- mon/MonClient: add get_monmap_required_features() helper
+- tentacle: librbd: fix ExclusiveLock::accept_request() when !is_state_locked()
+- tentacle: mgr/vol: keep and show clone source info
+- tentacle: mgr/dashboard : fix css for carbon input fields
+- mgr/dashboard : fix css for carbon input fields
+- mgr/dashboard: empty-data-message
+- tentacle: mgr/dashboard: carbonize service form
+- osd: Fix stats mismatch cluster error seen during scrubbing
+- script/build-with-container: lightly organize the distro kind aliases
+- monitoring: update NVMeoFTooManyNamespaces to 4096 ns
+- qa: Test cross fs access by single client in multifs
+- tentacle: mgr/volumes: Keep mon caps if auth key has remaining mds/osd caps
+- python-common/cryptotools: give the parsers more sensible names
+- tentacle: pybind/rados: Add list_lockers() and break_lock() to Rados Python interface
+- python-common/cryptotools: unify and organize all endpoint functions
+- python-common: remove unused dir
+- tentacle: qa/tasks/rbd_mirror_thrash: don't use random.randrange() on floats
+- tentacle: mds: wrong snap check for directory with parent snaps
+- mgr/volumes: remove unnecessary log error lines from earmark handling
+- tentacle: pybind/mgr: pin cheroot version in requirements-required.txt
+- librbd: amend error message in lock_acquire()
+- rpm: remove special cases for gts_version < 13
+- debian/control: record python3-packaging dependency for ceph-volume
+- mon/MgrMonitor: add a space before "is already disabled"
+- tentacle: sync build-with-container patches from main
+- qa/multisite: use boto3's ClientError in place of assert_raises from tools.py.
+- test/test_bluefs: make a standalone test case to reproduce bug
+- tentacle: mgr/dashboard : Fixed warning icon colour issue with carbon colour
+- mgr/dashboard: support gw get_stats and listener info
+- client: restrict bufferlist to total write size
+- Dockerfile.build: make FOR_MAKE_CHECK a build argument
+- rgw/tentacle: clean up .rgw_op.cc.swn file
+- tentacle: qa: Fix test_with_health_warn_with_2_active_MDSs
+- mgr/dashboard : Fixed warning icon colour issue with carbon colour
+- mgr/dashboard: show loader while changing pages
+- tentacle: mgr/dashboard: FS - Attach Command showing undefined for MountData
+- tentacle: mgr/dashboard : Fixed mirrored image usage info bar
+- mgr/volumes: Keep mon caps if auth key has remaining mds/osd caps
+- mgr/dashboard: fix SMB custom DNS button and linked_to_cluster col
+- mgr/dashboard: FS - Attach Command showing undefined for MountData
+- mgr/vol: keep clone source info even after cloning is finished
+- debian/control: add iproute2 to build dependencies
+- qa/tasks: fix import error
+- rgw: clean up .rgw_op.cc.swn file
+- mgr/dashboard: Remove the time dropdown from grafana iframe.
+- mds/MDSDaemon: unlock mds_lock while shutting down Beacon and others
+- tentacle: mgr/dashboard: add multiple ceph users deletion
+- rbd-mirror: add cluster fsid to remote meta cache key
+- workunits/rados: remove cache tier test
+- tentacle: mgr/dashboard: add customizations to table-actions
+- tentacle: mgr/dashboard: Add generic wizard component
+- osd/scrub: do not reduce min chunk on preemption
+- tentacle: osd: Fix for num_bytes mismatch occurring from snapshot workloads with partial writes in fast_ec
+- doc: Remove sphinxcontrib-seqdiag Python package from RTD builds
+- ceph-volume: support additional dmcrypt params
+- mgr/dashboard : Fixed mirrored image usage info bar
+- librbd: prepare lock_acquire() for changing between policies
+- tentacle: ceph-volume: support additional dmcrypt params
+- mon/FSCommands: avoid unreachable code triggering compiler warning
+- tentacle: client: fix dump_mds_requests to valid json format
+- doc: add name mangling documentation for subvolume group creation
+- doc/radosgw: Cosmetic improvements and ref links in account.rst
+- tentacle: debian/control: add iproute2 to build dependencies
+- tentacle: build-with-container: build image variants
+- tentacle: cephadm: set default image for tentacle release
+- mgr/dashboard: fetch all namespaces in a gateway group
+- tentacle: Add normalization and casesensitive options to the subvolume group creation command
+- systemd services: fix installing ceph-volume@
+- qa/upgrade/squid-x: ignore pool quota warnings
+- tentacle: mon/FSCommands: avoid unreachable code triggering compiler warning
+- tentacle: mgr/dashboard: Add full page tearsheet component
+- common: simplify fragment printing
+- librbd: fix ExclusiveLock::accept_request() when !is_state_locked()
+- tentacle: doc/radosgw: Cosmetic improvements and ref links in account.rst
+- script/build-with-container: add debian 13 (trixie)
+- tentacle: mgr/dashboard: fetch all namespaces in a gateway group
+- tentacle: osd: Fix fast EC truncate to whole stripe
+- tentacle: mgr/cephadm: Use a persistent volume to store Loki DB
+- mds: include sysinfo in status command output
+- doc: add format option in docs
+- client: Fix the multifs auth caps check
+- RGW | fix conditional Delete and MultiDelete
+- pybind/mgr: Correct code to ensure cephadm/tests/test_certmgr.py passes.
+- mgr/volumes: Fix json.loads for test on mon caps
+- mgr/dashboard : Hide suppressed alert on landing page
+- qa/workunits/rbd: use the same qemu-iotests version throughout
+- mgr/dashboard: fix dashboard freeze on missing smb permissions
+- RGW | Added debugs in cases where precondition check fails
+- client: fix dump_mds_requests to valid json format
+- tentacle: mgr/dashboard : Hide suppressed alert on landing page
+- tentacle: osd: Relax missing entry assert for partial writes.
+- tentacle: mgr/dashboard: fix dashboard freeze on missing smb permissions
+- doc: Update dashboard pending release notes
+- mgr/dashboard: fix misaligned text links on login page
+- rbd-mirror: allow incomplete demote snapshot to sync after rbd-mirror daemon restart
+- tentacle: mgr/dashboard : fix - CephFS Authorize Modal Update issue
+- common/frag: produce valid fragments for test instances
+- client: check if inode ref is dir before proceeding with lookup
+- monitoring/ceph_mixin: fix Cluster - Advanced OSD grafana panel
+- tentacle: debian/control: record python3-packaging dependency for ceph-volume
+- tentacle: osd/scrub: do not reduce min chunk on preemption
+- tentacle: mds: dump export_ephemeral_random_pin as double
+- tentacle: client: fix unmount hang after lookups
+- install-deps: Replace apt-mirror
+- qa: remove extraneous directory from test
+- mgr/dashboard : fix - CephFS Authorize Modal Update issue
+- mgr/dashboard: improve search and pagination behavior
+- test: disable known flaky tests in run-rbd-unit-tests
+- tentacle: rbd-mirror: add cluster fsid to remote meta cache key
+- mgr/dashboard: fix-table-width
+- mgr/dashboard: add CRUD API endpoints for consistency group snapshots 2/2
+- mgr/dashboard: add CRUD API endpoints for consistency group snapshots
+- tentacle: qa: ignore cluster warning (evicting unresponsive ...) with tasks/mgr-osd-full
+- qa: ignore cluster warning (evicting unresponsive ...) with tasks/mgr-osd-full
+- tentacle: rgw/account: bucket acls are not completely migrated once the user is migrated to an account
+- librbd: introduce RBD_LOCK_MODE_EXCLUSIVE_TRANSIENT
+- mgr/dashboard: Add full page tearsheet component
+- tentacle: mgr/dashboard: fix misaligned text links on login page
+- mgr/prometheus: Handle empty/invalid JSON from orch get-security-config
+- qa/cephfs: fix test_subvolume_group_charmap_inheritance test
+- pybind/mgr/pg_autoscaler: Introduce dynamic threshold to improve scaling sensitivity
+- mgr/dashboard: bump validator package to address vulnerability
+- qa: Run test_admin with the squid client
+- mgr/dashboard: carbonize smb service custom_dns input
+- mgr/dashboard: add nsid param to ns list command
+- osd: Relax missing entry assert for partial writes.
+- rpm: require gcc >= 13.3 regardless of gts_version
+- qa: Add test for subvolume_ls on osd full
+- nvmeofgw: fast-failover changes
+- mgr/dashboard: Group similar alerts
+- mon: ceph pg repeer should propose a correctly sized pg temp.
+- tentacle: mgr/dashboard: add nsid param to ns list command
+- cephfs-journal-tool:: Don't reset the journal trim position
+- tentacle: mon: ceph pg repeer should propose a correctly sized pg temp.
+- tentacle: rbd-mirror: allow incomplete demote snapshot to sync after rbd-mirror daemon restart
+- rgw/account: bucket acls are not completely migrated once the user is migrated to an account
+- tentacle: mgr/dashboard: fix smb button and table column
+- tentacle: qa/suites: wait longer before stopping OSDs with valgrind
+- qa: test for child dir with first beyond parent snaps
+- Dockerfile.build: Make sccache repo configurable
+- qa, ec-esb-fio: Add flag for easier replication
+- tentacle: mgr/prometheus: Handle empty/invalid JSON from orch get-security-config
+- src/test/mds: Fix TestMDSAuthCaps
+- mdstypes: Dump export_ephemeral_random_pin as double
+- tentacle: qa: Disable OSD benchmark from running for tests.
+- rgw/admin: Add max-entries and marker to bucket list
+- qa: Fix test_with_health_warn_with_2_active_MDSs
+- [rgw][tentacle] backport of cloud-restore related PRs
+- qa: fix device name in workunits/nvmeof/fio_test.sh
+- mgr/dashboard: add nsid param to ns add command
+- qa/multisite: zone files use boto3 resource api
+- tentacle: mgr/dashboard: Rename side-nav panel items
+- doc/dev: add os-recommendations.rst to release checklist
+- mds: include auth credential in session dump
+- tentacle: rgw: add metric when send message with kafka and ampq
+- mgr/dashboard: Rename side-nav panel items
+- doc: fetch releases from main branch
+- qa/valgrind.supp: make gcm_cipher_internal suppression more resilient
+- qa: Validate cephfs-journal-tool reset trim
+- tentacle: mgr/dashboard: Group similar alerts
+- tentacle: mgr/cephadm: Change the default of max hosts per namespace in NVMEoF to 16
+- rgw: add metric when send message with kafka and ampq
+- mgr/vol: show clone source info in "subvolume info" cmd output
+- doc: remove os recommendations for eol releases
+- python-common/cryptotools: Remove ascii and utf-8 references from encode/decode.
+- qa: Disable OSD benchmark from running for tests.
+- tentacle: mgr/dashboard: update teuth_ref hash in api test
+- tentacle: rgw/admin: Add max-entries and marker to bucket list
+- tentacle: qa/suites/rados/thrash-old-clients: Add OSD warnings to ignore list
+- tentacle: install-deps.sh: install proper compiler version on Debian/Ubuntu
+- blk/kernel: improve DiscardThread life cycle.
+- tentacle: mgr/dashboard: add nsid param to ns add command
+- install-deps.sh: install proper compiler version on Debian/Ubuntu
+- rgw/qa: Move admin pagination tests
+- doc/mgr/smb: document the 'provider' option for smb share
+- tentacle: doc/mgr/smb: document the 'provider' option for smb share
+- doc: add Tentacle to os recommendations
+- tentacle: mgr/dashboard: Remove the time dropdown from grafana iframe.
+- mgr/dashboard: rename 'Zone Group' labels to 'Zonegroup'
+- tentacle: mgr/dashboard: bump validator package to address vulnerability
+- nvmeofgw: beacon diff implementation in the monitor and in the MonClient.
+- rgw/restore: Persistently store the restore state for cloud-s3 tier
+- doc: remove old distros from os recommendations
+- qa/workunits/rbd: drop randomized sleeps in "big image" tests
+- rgw: fix 'bucket rm --bypass-gc' for copied objects
+- qa/suites: wait longer before stopping OSDs with valgrind
+- client: do not open dir for a non-dir inode
+- mgr/cephadm: Change the default of max hosts per namespace in NVMEoF to 16.
+- test/test_bluefs: reproduce volume selector inconsistency after
+- src/script: add bookworm to build-with-container.py
+- tentacle: mgr/dashboard: rename 'Zone Group' labels to 'Zonegroup'
+- Client: Add Client::setlk and Client::getlk functions
+- mgr/dashboard: update teuth_ref hash in api test
+- doc/dev: update release checklist ceph-object-corpus
+- tentacle: mds: include auth credential in session dump
+- mgr/dashboard: fix multisite wizard realm configuration mode
+- tentacle: mgr/dashboard: fix icon alignment in navigation header
+- mgr/dashboard: Carbonize multisite sync policy forms
+- test: Add test for libcephfs statfs
+- qa/suites/upgrade/reef-x: remove leftover conflict markers
+- tentacle: nvmeof: refactor beacon timer for exact frequency timing with drift correction
+- mgr/dashboard: fix icon alignment in navigation header
+- pybind/mgr/dashboard/requirements-lint.txt: re-pin rstcheck
+- mon/OSDMonitor.cc: optionally display availability status in json
+- rgw/restore: Fixing teuthology restore tests
+- libcephfs: Update the .organizationmap and .mailmap files
+- qa/workunits/rgw: drop netstat usage
+- mgr/dashboard : Carbonize -> Report an issue modal
+- qa/suites/rados/thrash-old-clients: Add OSD warnings to ignore list
+- tentacle: mgr/dashboard : Carbonize -> Report an issue modal
+- tentacle: mds: fix snapdiff result fragmentation
+- mgr/dashboard: Rename Alerts tab to All Alerts
+- monitoring: Fixes for smb overview
+- tentacle: rgw: fix 'bucket rm --bypass-gc' for copied objects
+- test/bluestore_types: reproduce extent spanning over shard boundary.
+- test/libcephfs: Polisihing SnapdiffDeletionRecreation case
+- osd: stop scrub_purged_snaps() from ignoring osd_beacon_report_interval
+- cephadm: remove centos 8 from the cephadm build suite containers
+- tentacle: mgr/dashboard: fix multisite wizard realm configuration mode
+- rgw/restore: increase read_thorugh restore period
+- os/bluestore: update volume selector after recovering BlueFS WAL in
+- nvmeof: refactor timer for exact frequency timing with drift correction
+- tentacle: mgr/vol: handling the failed non-atomic operation
+- qa: correct test description
+- os/bluestore: enforce extent split on shard boundary
+- tentacle: qa/workunits/rgw: drop netstat usage
+- qa/workunits/rbd: avoid unnecessary sleeping in stop_mirror()
+- rgw/restore: Mark the restore entry status as None first time
+- tentacle: blk/kernel: improve DiscardThread life cycle.
+- tentacle: mon/OSDMonitor.cc: optionally display availability status in json
+- monitoring: use ceph_cephadm_daemon_status in ceph-nvmeof
+- tentacle: mgr/cephadm: don't mark nvmeof daemons without pool and group in name as stray
+- radosgw-admin: Pass max_entries for bucket list
+- doc/dev: update release checklist with things we've completed
+- tentacle: mgr/dashboard: Rename Alerts tab to All Alerts
+- tentacle: osd: stop scrub_purged_snaps() from ignoring osd_beacon_report_interval
+- tentacle: src/ceph_osd, osd: Implement running benchmark during OSD creation - Phase 1
+- vstart.sh: revert unintended allocator type change
+- mgr/cephadm: don't mark nvmeof daemons without pool and group in name as stray
+- qa/tasks/qemu: install genisoimage package
+- tentacle: qa/rgw: bucket notifications use pynose
+- tentacle: qa: krbd_blkroset.t: eliminate a race in the open_count test
+- cephadm/tests: Add tests for deb bundled dependencies
+- blk/kernel: bring "bdev_async_discard" config parameter back.
+- qa: Add CEPHADM_FAILED_DAEMON to nvmeof ignorelist
+- mds: Fix multifs auth caps check
+- include: detect corrupt frag from byteswap
+- tentacle: cephadm: fix building rpm-sourced cephadm zippapp on el10
+- tentacle: osd: Fix memory leak of ECDummyOp
+- mgr/dashboard: type the rbd mirror modes
+- tentacle: mgr/dashboard: Carbonize multisite sync policy forms
+- qa: allow overrides for nvmeof task
+- qa/tests: added messages to the whitelist
+- mgr/dashboard: fix rbd form mirroring toggle
+- osd: Fix memory leak of ECDummyOp
+- tentacle: mgr: avoid explicit dropping of ref
+- tentacle: qa/workunits/rados: remove cache tier test
+- mds: add ceph.dir.subvolume get vxattr
+- tentacle: monitoring: Fixes for smb overview
+- qa: Add nvmeof:upgrade suite
+- Dockerfile.build: improve docker compatibility
+- qa/workunits/rbd: reduce randomized sleeps in live import tests
+- os/bluestore: introduce allocator lookup policy
+- doc/cephfs: fix doc for config option pause_cloning
+- tentacle: qa/suites/upgrade: add "Replacing daemon mds" to ignorelist
+- os/bluestore: Fix reshard on spanning blobs
+- tentacle: Generalize error handling for angular forms
+- RGW | fixed enqueueing the overwritten object for gc
+- tentacle: qa/workunits/rbd: reduce randomized sleeps in live import tests
+- qa/suites/upgrade: add "Replacing daemon mds" to ignorelist
+- tentacle: qa/suites/nvmeof: add upgrade sub-suite
+- mgr/dashboard: fixes for quick-bootstrap script
+- tentacle: doc: add Tentacle to os recommendations
+- rgw: fix radosgw-admin object unlink ...
+- ceph_release, doc/dev: update tentacle as a stable release
+- qa: krbd_blkroset.t: eliminate a race in the open_count test
+- pybind/mgr: update mgr_util to use cryptotools CryptoCaller class
+- pybind/mgr: fix test case in test_tls.py
+- mgr/dashboard: carbonize-delete-zone-modal
+- mgr: avoid explicitly dropping ref of MgrOpRequest.request
+- valgrind: wildcard glibc version for dlopen() leak suppression
+- rgw/restore: Update expiry-date of restored copies
+- tentacle mgr/dashboard: replace bootstrap badges with carbon tags
+- qa: add "osds down" to nvmeof:thrash ignorelist
+- tentacle: cephfs-journal-tool: Journal trimming issue
+- tentacle: Relax scrub of shard sizes for upgraded EC pools
+- tentacle: blk/kernel: bring "bdev_async_discard" config parameter back.
+- monc: synchronize tick() of MonClient with shutdown()
+- tentacle: mgr/dashboard: fix rbd form mirroring toggle
+- mgr/dashboard: add indentation to the json output of nvmeof cli commands
+- doc: remove Octopus and Centos7 from os recommendations
+- src/ceph_osd, osd: Implement running benchmark during OSD creation
+- tentacle: qa: Improve scalability test
+- tentacle: test/neorados: Catch timeouts in Poll test
+- os/bluestore: move RocksDBBlueFSVolumeSelector to BlueFS.cc
+- tentacle: mgr/dashboard: fixes for quick-bootstrap script
+- rpm: remove _lto_cflags logic for older distros
+- qa: Disable a test for kernel mount
+- ceph.spec.in: use rpm macro for python shebang pathfix
+- rgw: update keystone repo stable branch to 2024.2
+- tentacle: pickup object corpus 20.2.0 380 gdbcbbd3f281
+- rgw/doc: Add doc for admin bucket list pagination
+- ceph-volume: lvm.Lvm.setup_metadata_devices refactor
+- libcephfs: Add ceph_setlk and ceph_getlk wrapper functions
+- tentacle: mgr/dashboard: add indentation to the json output of nvmeof cli commands
+- qa: reduce radosbench runs
+- tentacle: mgr/dashboard: carbonize-delete-zone-modal
+- qa: Improve scalability test
+- osd/scrub: fix blocked scrub accounting
+- doc/rbd/rbd-config-ref: add clone settings section
+- Objecter: respect higher epoch subscription in tick
+- mgr/dashboard: Generalized errors and validations in forms
+- test/neorados: Catch timeouts in Poll test
+- tentacle: qa: Run RADOS suites with ec optimizations on and off
+- qa: Run RADOS suites with ec optimizations on and off
+- qa: suppress OpenSSL valgrind leaks
+- tentacle: rgw: update keystone repo stable branch to 2024.2
+- mon: Add command "nvme-gw listeners"
+- tentacle: Objecter: respect higher epoch subscription in tick
+- qa/tests: added inital draft for tentacle-p2p
+- tentacle: qa: suppress OpenSSL valgrind leaks
+- doc/cephfs: fix doc for pause_purging config option
+- tentacle: osd/scrub: fix blocked scrub accounting
+- mgr/dashboard: Remove illegible texts from the dashboard
+- tentacle: rgw: fix radosgw-admin object unlink ...
+- tentacle: ceph-volume: lvm.Lvm.setup_metadata_devices refactor
+- qa: test for charmap handling on reintegration
+- tentacle: monc: synchronize tick() of MonClient with shutdown()
+- Test failure: LibCephFS.SnapdiffDeletionRecreation
+- tentacle: mgr/dashboard: Remove illegible texts from the dashboard
+- osd/scrub: new/modified perf counters for scrub preemption
+- tentacle: doc/rbd/rbd-config-ref: add clone settings section
+- refs/pull/66991/head:
+- refs/pull/66839/head:
+- refs/pull/66611/head:
+- refs/pull/66584/head:
+- refs/pull/67296/head:
+- refs/pull/67319/head:
+- refs/pull/67279/head:
+- refs/pull/67226/head:
+- refs/pull/67765/head:
+- refs/pull/66452/head:
+- refs/pull/67283/head:
+- refs/pull/67282/head:
+- refs/pull/67281/head:
+- refs/pull/67002/head:
+- refs/pull/66877/head:
+- refs/pull/66861/head:
+- refs/pull/64687/head:
+- refs/pull/65761/head:
+- refs/pull/67285/head:
+- refs/pull/66865/head:
+- refs/pull/66537/head:
+- refs/pull/67333/head:
+- refs/pull/67318/head:
+- refs/pull/67425/head:
+- refs/pull/65949/head:
+- refs/pull/65358/head:
+- refs/pull/66540/head:
+- refs/pull/67559/head:
+- refs/pull/67449/head:
+- refs/pull/67750/head:
+- refs/pull/67894/head:
+- mds: skip charmap handler check for MDS requests
+- tentacle: osd/scrub: new/modified perf counters for scrub preemption
+- mgr/dasboard : Carbonize pools form
+- tentacle: mds: skip charmap handler check for MDS requests
+- mgr/DaemonServer: fixed mistype for mgr_osd_messages
+- tentacle: mgr/dashboard: rbd consistency group and snapshot APIs
+- tentacle: mgr/dashboard: Remove nx folder
+- tentacle: qa/workunits/rbd: adapt rbd_mirror.sh for trial nodes
+- tentacle: mgr/cephadm: update grafana conf for disconnected environment
+- qa: Remove multiple gateway conf from nvmeof thrasher
+- tentacle: mgr/DaemonServer: fixed mistype for mgr_osd_messages
+- pybind/mgr: Appropriately rename function.
+- mgr/dashboard: Reverting server_addr to traddr
+- mds: dump frag_t as an object
+- mgr/alerts: enforce ssl context to SMTP_SSL
+- tentacle: mgr/alerts: enforce ssl context to SMTP_SSL
+- tentacle: mgr/dashboard: Add .nx in gitignore
+- qa/suites/rbd/valgrind: don't hardcode os_type in memcheck.yaml
+- mgr/dashboard: carbonized-multisite-export-realm-token-modal
+- tentacle: mgr/dasboard : Carbonize pools form
+- tentacle: qa/suites/rbd/valgrind: don't hardcode os_type in memcheck.yaml
+- mgr/dashboard: Fix timestamps in APIs
+- qa/multisite: switch to boto3 in multisite test libraries
+- prometheus: Add Cephadm orch ps output metric to prometheus
+- mgr/cephadm: update grafana conf for disconnected environment
+- rpm: reenable lto for gcc-toolset-13 by requiring 13.3
+- mon: add NVMEOF_BEACON_DIFF to mon_feature_t and mon CompatSet
+- tentacle: prometheus: Add Cephadm orch ps output metric to prometheus
+- tentacle: mgr/dashboard: Fix timestamps in APIs
+- qa/multisite: test fixes
+- tentacle: mgr/dashboard: carbonized-multisite-export-realm-token-modal
+- mgr/dashboard: carbonize-delete-zonegroup-modal
+- ceph-mixin: reset auto_count to 10
+- tentacle: Fast failover
+- tentacle: mgr/dashboard: removes nx folder
+- tentacle: mgr/dashboard: carbonize-delete-zonegroup-modal
+- mgr/dashboard: Carbonize - Multisite Zone
+- tentacle: doc: Pin pip to <25.3 for RTD as a workaround for pybind in admin/doc-read-the-docs.txt
+- .github: pin GH Actions to SHA-1 commit
+- qa: preload isa ec module
+- ceph.spec.in: conditionalize crimson gts version on el10
+- ceph-mixin: Update monitoring mixin
+- tentacle: mgr/dashboard: Carbonize - Multisite Zone
+- tentacle: ceph-mixin: Update monitoring mixin
+- doc: Pin pip to <25.3 for RTD as a workaround for pybind
+- tentacle: mds: Return ceph.dir.subvolume vxattr
+- tentacle: qa: don't assume that /dev/sda or /dev/vda is present in unmap.t
+- qa: don't assume that /dev/sda or /dev/vda is present in unmap.t
+- Revert "Merge from Hezko/wip-74413-tentacle"
+- tentacle: Beacon diff
+- qa/multisite: boto3 in tests.py

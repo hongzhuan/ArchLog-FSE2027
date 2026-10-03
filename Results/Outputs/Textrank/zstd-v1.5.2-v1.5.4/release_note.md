@@ -1,0 +1,539 @@
+# VerLog-style TextRank Release Note
+
+- Repository: zstd
+- Version pair: v1.5.2 -> v1.5.4
+- Pair id: zstd-v1.5.2-v1.5.4
+- Input commits: 669
+- Candidate sentences: 527
+- GT-length budget: 148
+- Extracted entries: 527
+
+## Extracted Entries
+
+- fix small error in format documentation example
+- fix nits and add new error code for invalid external sequences
+- additional tests and documentation updates + allow maxBlockSize to be set to 0 (goes to default)
+- ensure that benchmark mode can only be invoked with zstd format
+- use .ignore for stderr output in window-resize test case
+- Bug fix redzones by unpoisoning only the intended buffer and not the followup redzone.
+- meson: fix warning for using too-new features
+- [largeNbDicts] Second try at fixing decompression segfault to always create compressInstructions
+- Fix 32-bit build errors in zstd seekable format
+- Fix make variable
+- fix extended case combining stableInBuffer with continue() and flush() modes
+- [easy] add a few comments to the optimal parser code base for improved clarity
+- Move NEON version to a separate function and fix indentation
+- add simple test for maxBlockSize expected functionality
+- Fix race condition in the Windows thread / pthread translation layer
+- Feature parity with original shell script; needs further testing
+- Fix required decompression memory usage reported by -vv + --long
+- Add back check to prevent Win32 static analysis issues
+- Minor simplication: no longer need to check src size if using cardinality for minTableLog
+- enforce a hard fail when input files are set to be erased
+- Add warning when multi-thread decompression is requested ( )
+- make ZSTD_DECOMPRESSBOUND() compatible with input size 0
+- AsyncIO performance regression for small files fix ( )
+- [contrib][linux] Use ZSTD_CCtx_setPledgedSrcSize() instead of ZSTD_CCtx_reset()
+- [programs] Fix infinite loop when empty input is passed to trainer
+- Set threshold to use optimal table log
+- update external sequence error to fit error naming scheme
+- Provide more accurate error codes for busy-loop scenarios
+- [lazy] Use switch instead of indirect function calls.
+- record long offsets in ZSTD_symbolEncodingTypeStats_t + add test case
+- Remove hasStep variant (not enough wins to justify the code size increase)
+- fix maxBlockSize resolution + add test cases
+- Fix 32-bit decoding with large dictionary
+- [zdict] Fix static linking only include guards
+- ZSTD_fast_noDict: Minimize Checks When Writing Hash Table for ip1
+- meson: avoid rebuilding some libzstd files in the test programs
+- remove explicit standard setting from cmake script
+- adding traces to better track processing of literals
+- escape glob pattern special characters in subject string before generating search patterns in combine.sh list_has_item
+- fix bound check for ZSTD_copySequencesToSeqStoreNoBlockDelim()
+- Keep original file if -c or --stdout is given
+- [cli-tests] Add tests that use --trace-file-stat
+- compress:check more bytes to reduce ZSTD_count call
+- Update threshold to use optimal depth
+- Update logic when stderr is not the console
+- Add explicit --pass-through flag and default to enabled for *cat ( )
+- Fix corruption that rarely occurs in 32-bit mode with wlog=25
+- AsyncIO compression part 2 - added async read and asyncio to compression code ( )
+- Fix off-by-one error in superblock mode ( )
+- some additional comments, remove apt-get from clang jobs, better test titles
+- Fix the wrong check for buffer overrun in UTIL_mergeFileNamesTable
+- updated man page, providing more details for --train mode
+- calloc dictionary in sequence compression fuzzer rather than generating a random buffer
+- Fix CI failures by adding apt-get update to Github Actions ( )
+- ZSTD_fast_noDict: Avoid Safety Check When Writing ip1 into Table
+- add error message for the (rare) compression error scenario
+- Split help in long and short version, cleanup formatting
+- [legacy] Remove FORCE_MEMORY_ACCESS and only use memcpy
+- fix 32bit build errors in zstd seekable
+- change logic when stderr is not console : don't update progress status
+- Add new CLI testing platform
+- Add missing parens around macro definition
+- Move deprecated annotation before static to allow C++ compilation for clang
+- Automatically update GitHub Actions in the future
+- [zstdcli] Fix option detection for --auto-threads
+- Cap hashLog & chainLog to ensure that we only use 32 bits of hash
+- [easy] fixed missing include
+- Update tests to expect new CLI help output
+- simple fix
+- Add sequenceBound(srcSize) method
+- Fix CLI Handling of Permissions and Ownership (Again)
+- meson: valgrind wrapper should return correct errors
+- [cli-tests] Add --set-exact-output to update the expected output
+- [test] Add new CLI testing platform
+- meson: add support for running both fast and slow version of tests
+- Fix for MSVC C4267 warning on ARM64 (which becomes error C2220 with /WX)
+- do not recover pointer overflow for testing
+- more usage of new error code stabilityCondition_notRespected
+- common: apply two stage copy to aarch64
+- Support advanced API so forceCopy/forceAttach works properly
+- [contrib][largeNbDicts] Fix decompression segfault; Add additional benchmark metrics
+- Fixes two bugs in the Windows thread / pthread translation layer
+- converted checks into user validation generating error codes
+- Improve help/usage ( -h , -H ) formatting
+- Fix Meson-Windows CI test by pulling a more recent version msvc-dev-cmd
+- meson: Fix Windows CI test by pulling a more recent version msvc-dev-cmd
+- add sequence bound function
+- Handle newer less versions in zstdless testing
+- Add support for in-place decompression
+- added zstreamtest_ubsan to make file + added ubsan zstreamtest job for CI tests
+- fix sequence validation and bounds check in ZSTD_copySequencesToSeqStore()
+- fix for error message in recursive mode for an empty folder
+- resolve max block value in cctx and use when calculating the max block size
+- free memory in test case
+- add requested check for legacy decoder v0.1
+- simplify clean target maintenance within programs/
+- No longer pass srcSize to minTableLog
+- Only run playTests.sh cmake test if in unix shell environment.
+- [largeNbDicts] Fix decompression segfault in createCompressInstructions
+- fix the assertion in readLinesFromFile ( )
+- display a warning message when using C90 clock_t for MT speed measurements.
+- lib: add hint to generate more pipeline friendly code ( )
+- add explanation about new test
+- On more mistake (Node -> Note)
+- Complete migration of ZSTD_c_enableLongDistanceMatching to ZSTD_paramSwitch_e framework
+- Enable if == 1 rather than if == 0
+- Support decompression of compressed blocks of size ZSTD_BLOCKSIZE_MAX exactly
+- modify cli-test logic : ignore stderr message by default
+- updated documentation regarding build systems
+- added test that exposes zero offset to null pointer error when built with clang
+- fix long offset resolution
+- improved compression of literals in specific corner cases
+- [CI] Re-enable versions-test
+- meson: zstreamtests should now pass on Windows
+- display a warning message when using C90 clock_t
+- [fileio] Separate parameter adaption from display update rate
+- return error code when benchmark fails
+- Streaming decompression can detect incorrect header ID sooner
+- Software pipeline for ZSTD_compressBlock_fast_dictMatchState ( )
+- Work-in-progress; annotated types, added docs, parsed and resolved excluded files
+- [dibio] Fix assertion triggered by no inputs
+- Make fuzzing work without ZSTD_MULTITHREAD ( )
+- Fix empty-block.zst golden decompression file
+- restore combine.sh bash performance while still sticking to POSIX
+- just add some comments to zstd_opt for improved clarity
+- zstd.1: Remove superfluous *not* in description of --long[=#]
+- Remove superfluous *not* in description of --long[=#] in zstd(1)
+- Rename "External Matchfinder" to "Block-Level Sequence Producer" ( )
+- fix: upgrade scorecard action to 2.0.6
+- added helper function inBuffer_forEndFlush()
+- add ZSTD_c_fastExternalSequenceParsing cctxParam
+- Optimize repcode predicate, hardcode hasStep == 0 scenario, cosmetic fixes
+- Allow tests to fake stdin/stdout/stderr is a console
+- pretend consuming input to provide a sense of forward progress
+- Coalesce Almost All Copyright Notices to Standard Phrasing
+- slightly shortened compression status update line
+- Fix ZSTD_BUILD_TESTS=ON with MSVC
+- stdin multiple file fixes ( )
+- Print checksum value for single frame files in cli with -v -l options
+- Add GitHub Action Checking that Zstd Runs Successfully Under CET
+- Simplify 32-bit long offsets decoding logic
+- Use helper function for bit manipulations.
+- meson: for internal linkage, link to both libzstd and a static copy of it
+- AsyncIO compression part 1 - refactor of existing asyncio code ( )
+- [version-test] Work around bugs in v0.7.3 dict builder
+- [largeNbDicts] Add an option to print out median speed
+- [cli-tests] Test file stat read/write
+- added ZSTD_compressStream2() + ZSTD_c_stableInBuffer test
+- Pull out software fallbacks
+- fix minor bug in sequence_compression_api tester
+- [easy] added a few documentation words about dictionary training
+- Document pass-through behavior ( )
+- Fix action error by upgrading Scorecard GHA to 2.0.6
+- Don't attempt playTests.sh cmake test if running on Windows.
+- fix 44122 test error
+- update minimum threshold for max block size
+- [contrib][linux] Fix a warning in zstd_reset_cstream()
+- fix zero offset to nullpointer errors
+- Fix make clangbuild & add CI
+- fix window resizing edge case
+- meson: fix resource file compilation on Windows
+- minor: proper pledgedSrcSize trace
+- added unit tests for compressBound()
+- Refactor progress bar & summary line logic
+- remove big test around large offset with small window size
+- Fix sequence validation and seqStore bounds check
+- slightly shortened status and summary lines in very verbose mode
+- only declare debug functions in debug mode
+- change the offset|repcode sumtype format to match offBase
+- added streaming test starting from non-0 pos
+- Rewrite check *bufStart condition
+- ternary operator instead of if statement
+- rewrite legacy v0.7 bound checks to be independent of address space overflow
+- [versions-test] Work around bug in dictionary builder for older versions
+- Make the producer use the same amount of entropy
+- Use proper unaligned access attributes
+- seekable_format no header when compressing empty string to stream
+- streamline make clean list maintenance
+- CI: build programs on meson-windows too
+- added more accurate error messages
+- Fixed bugs found in other projects
+- Again unused error warning.
+- "Short cache" optimization for level 1-4 DMS (+5-30% compression speed) ( )
+- update sequence_compression_api fuzzer test
+- Fix ZSTD_BUILD_TESTS=ON build with MSVC
+- Rough draft speed optimization
+- spec update : require minimum nb of literals for 4-streams mode
+- Fix FILE handle leak
+- Remove expensive assert in --rsyncable hot loop
+- More descriptive exclusion error; updated docs and copyright
+- Easy: Print Mode as Octal in chmod() Trace
+- fix issue ( )
+- fix issue 44108
+- Fix bufferless API with attached dictionary
+- copy fix for v0.3 to v0.4
+- make -C programs zstd.1
+- [largeNbDicts] Print more metrics into csv file
+- meson: avoid rebuilding some libzstd sources in the programs
+- [lazy] Optimize ZSTD_row_getMatchMask for level 8-10
+- Random edit to re-run the CI
+- fixed minor compression difference in btlazy2
+- [pzstd] Fixes for Windows build
+- Support decompression of compressed blocks of size ZSTD_BLOCKSIZE_MAX
+- [api][visibility] Make the visibility macros more consistent
+- improve compression ratio of small alphabets
+- Replace Huffman boolean args with flags bit set
+- [tests] Fix version test determinism
+- [tests] Remove deprecated function from longmatch.c test
+- minor: fix conversion warnings
+- Add rails for huffman table log calculation ( )
+- Correct and clarify repcode offset history logic
+- remove 32-bit ubsan clang test (bug in clang that produces an error)
+- added a few documentation words about dictionary training
+- Detect multiple dictIDs in one file
+- Fix invalid assert in 32-bit decoding
+- Fix small file passthrough ( )
+- [lazy] Optimize ZSTD_row_getMatchMask for levels 8-10 for ARM
+- fixed minor c89 warning
+- Bugfix: --[no-]row-match-finder do the opposite of what they are supposed to
+- Hoist Hash Table Writes Up into Each Match Found Block
+- make stableSrc compatible with regular streaming API
+- meson: mark a known test failure on Windows
+- minor: fix missing newline character in help page
+- [contrib][linux] Add zstd_common module
+- huf log speed optimization: unidirectional scan of logs + break when regressing
+- Benchmark program for sequence compression API
+- meson: get version up front
+- ZSTD CLI: Use buffered output for improved performance
+- updated all names to offBase convention
+- fix sequence compression API in Explicit Delimiter mode
+- Fuzz large offsets through sequence compression api
+- Add tests
+- Trigger Release Artifact Generation on Publish
+- Fix static analysis false-positives
+- Update documentation link to html format
+- Signal parameter change during MT compression
+- [huf] Add generic C versions of the fast decoding loops
+- removed explicit compilation standard from cmake script
+- restore support of clock_gettime() for POSIX systems
+- removed new huffman depth heuristic
+- [util] Add traces enabled by --trace-file-stat
+- [trace] Add aarch64 to supported architectures for zstd_trace
+- [Bugfix] CLI row hash flags set the wrong values
+- [contrib][linux-kernel] Fix stack detection for newer gcc
+- Implement more gzip compatibility ( )
+- Disable unused variable warning
+- move ZSTD_BLOCKSIZE_MAX_MIN to static linking only section
+- check potential overflow of compressBound()
+- Fix ZSTD_getOffsetInfo() when nbSeq == 0
+- Manually Update VS Code Copyright Definitions
+- skip flush operation in case where op is NULL
+- [build][cmake] Fix cmake with custom assembler
+- enforce a minimum price of 1 bit per literal in the optimal parser
+- cleanup double word in comment.
+- More traces to improved debugging of literals compression
+- updated --single-thread man
+- fix root cause of
+- missing #include for Windows
+- fix leaking thread handles on Windows
+- meson: partial fix for building pzstd on MSVC
+- Rewrite checking condition bufStart pointer NULL
+- Use Existing Src File Stat in *_dstFile() Funcs
+- Fix for MSVC C4267 error
+- fuzzer error fix
+- proper max limit to 11
+- [cli-tests] Fix zstd symlinks
+- Enable OpenSSF Scorecard Action
+- Guard against invalid sequences from external matchfinders ( )
+- meson: never require a libm
+- [AIX] Fix Compiler Flags and Bugs on AIX to Pass All Tests ( )
+- Rewrite help output to improve readability
+- Update GitHub Actions
+- update levels.sh test
+- Pin Remaining Action Dependencies (Except OSS-Fuzz)
+- minor : fixed missing include
+- Reduce external matchfinder API overhead by 25%
+- New xp library symbol : ZSTD_CCtx_setCParams()
+- Fix fuzzer failure
+- fix for -r on empty directory
+- Pin actions/checkout Dependency to Specific Commit Hash
+- [contrib][linux] Make zstd_reset_cstream() functionally identical to ZSTD_resetCStream()
+- ZSTD_CCtx_setCParams
+- updated CHANGELOG in preparation for v1.5.4 release
+- Revert "Hardcode repcode safety check, fix cosmetic nits"
+- Pass stat_t into *_dstFile() Functions
+- update ZSTD_CCts_setCParams() inline documentation
+- Fix for zstd CLI accepts bogus values for numeric parameters ( )
+- fixed bug 44168
+- Use faster Python script to amalgamate
+- Replace "windows-latest" with "windows-2019" in CI workflows
+- build:cmake: enable ZSTD legacy support by default
+- Select legacy level for cmake
+- [opt] minor compression ratio improvement
+- Lazy parameters adaptation (part 1 - ZSTD_c_stableInBuffer)
+- fix oss-fuzz case 55714
+- Update Copyright Year ('2021' -> 'present')
+- Copy Permissions from Source File
+- [decompress] Fix nullptr addition & improve fuzzer
+- build(cmake): improve pkg-config generation
+- Fix Comments Slightly
+- meson: fix broken commit that broke the build
+- new Formulation
+- zstd-pgo: also clean zstd binary from objects
+- Bump microsoft/setup-msbuild from 1.0.2 to 1.1.3
+- modify sequence compression api fuzzer
+- Rewrite Copyright Date Ranges from -present to -2022
+- Add transparency and optimize logo ( )
+- Refactor timefn, restore support for clock_gettime()
+- Hardcode repcode safety check, fix cosmetic nits
+- Suggestion from code review
+- refactored fuzzer tests for sequence compression api
+- Move zstdgrep and zstdless tests to cli-tests ( )
+- Converge sumtype (offset | repcode) numeric representation towards offBase
+- Completely overhaul Windows CI ( )
+- better consistency in accessing
+- Fix m68k CI tests on Github Actions
+- use ZSTD_sequenceBound in seqBench
+- Disallow empty string as argument for --output-dir-flat and --output-dir-mirror
+- [datagen] Remove extra newline printed
+- Fix -Wstringop-overflow warning
+- Move ZSTD_DEPRECATED before ZSTDLIB_API/ZSTDLIB_STATIC_API
+- Update playTests.sh
+- streaming compression : lazy parameter adaptation with stable input
+- Update regression results and better variable naming for HUF_cardinality
+- [circleci] Try to re-enable aarch64build
+- added c89 build test to CI
+- Using faster Python script to amalgamate
+- Bugfix and new features for largeNbDicts benchmark
+- Disable visual-2015 tests ( )
+- null decompress buffer test and ubsan flag added
+- Fix undefined behavior in ZSTD_decompressStream()
+- Change threshold for benchmarking
+- assert externalRepSearch != ZSTD_ps_auto
+- Bump skx/github-action-publish-binaries from release-1.3 to 2.0
+- Seekable format empty string
+- [build] Fix ZSTD_LIB_MINIFY build option
+- decompressBound tests and fix
+- Disallow empty output directory
+- Software pipeline for ZSTD_compressBlock_fast_extDict
+- fix some typos
+- Update .github/workflows/dev-long-tests.yml
+- Clean up welcome message
+- minor : reorder --help
+- Change zstdless behavior to align with zless ( )
+- revert change
+- Optimal huff depth speed improvements
+- Bump actions/upload-artifact from 3.1.1 to 3.1.2
+- Bump actions/upload-artifact from 1 to 3
+- Travis CI: fix by installing pip compatible with python 3.6 ( )
+- Fix big endian ARM NEON path
+- fixed incorrect assert
+- fixed incorrect comment
+- Fix C90 compat
+- fix 44239
+- Don't Even Declare Poisoning Functions if Poisoning is Disabled
+- adapt v0.3 fix to v0.1
+- added test to cli-tests
+- added cygwin tests to github actions
+- updated man pages
+- Python style change
+- Add prefetchCDictTables CCtxParam (+10-20% cold dict compression speed)
+- Windows MT layer bug fixes
+- update regression tests
+- Add tests for bitwise intrinsics
+- [docs] Clarify dictionary loading documentation
+- meson: don't require valgrind tests
+- update man
+- Update Copyright Headers 'Facebook' -> 'Meta Platforms'
+- ZSTD CLI: Use buffered output
+- Reserve two fields in ZSTD_frameHeader
+- Delete unused Huffman functions
+- [huf] Fix bug in fast C decoders
+- minor: refactor publication of ZSTD_copyCCtx()
+- fileio_types.h : avoid dependency on mem.h
+- Deprecate advanced streaming functions ( )
+- Removed unused variable ( )
+- 1.5.3 version bump
+- cmake build: fix nit
+- Add Additional Flags to PGO Build
+- Debug Windows CI failures
+- Update regression results
+- Fix typos found by codespell
+- [contrib] largeNbDicts bugfix + improvements
+- largeNbDicts bugfix + improvements
+- Move bitwise builtins into bits.h
+- Additional ratio optimizations
+- make man
+- Bump ossf/scorecard-action from 2.1.0 to 2.1.2
+- Bump ossf/scorecard-action from 2.0.6 to 2.1.0
+- [T124890272] Mark 2 Obsolete Functions(ZSTD_copy*Ctx) Deprecated in Zstd
+- updated regression results
+- FIO_openSrcFile() Returns File Stat
+- Add description for ZSTD_decompressStream and ZSTD_initDStream
+- Update test-license.py
+- introduced LitHufLog constant
+- [fse] Delete unused functions
+- Man Page Tweaks, Edits, Formatting Fixes
+- remove zstream_ubsan from git and add to gitignore
+- initialize long offsets in decodecorpus
+- initial commit
+- fix legacy decoders v0.4, v0.5 and v0.6
+- Improve LDM cparam validation logic
+- Minor lint fix
+- Fix ZSTD_estimate* and ZSTD_initCStream() docs
+- Fuzz on maxBlockSize
+- Re-Use stat_t in FIO_compressFilename_srcFile()
+- add prefetchCDictTables to largeNbDicts
+- port fix for v0.3 to v0.6
+- port fix for v0.3 to v0.5
+- Make ZSTD_getDictID_fromDDict() Read DictID from DDict
+- Async write for decompression ( )
+- Simplify HUF_decompress4X2_usingDTable_internal_bmi2_asm_loop
+- Deprecate ZSTD_getDecompressedSize() ( )
+- Block splitter : minor reformatting
+- fix CI errors
+- [contrib][linux-kernel] Generate SPDX license identifiers ( )
+- add clang jobs for ubsan in github workflow
+- [cmake] Add noexecstack to compiler/linker flags
+- Bump github/codeql-action from 2.1.39 to 2.2.1
+- Bump github/codeql-action from 1.0.26 to 2.1.37
+- Bump github/codeql-action from 2.1.38 to 2.1.39
+- Bump github/codeql-action from 2.1.37 to 2.1.38 ( )
+- Bugfix for huge dictionaries
+- Bump actions/checkout from 3.2.0 to 3.3.0
+- Add PGO Build Jobs to CI
+- [CI] Hook cli-tests up to CI
+- External matchfinder API ( )
+- CI failure fixes
+- implement suggestions
+- Migrate other test usages of boolean LDM flag to paramSwitch enum
+- Update Copyright Comments
+- x86-64: Enable Intel CET
+- Cleaner threadPool initialization
+- for testing
+- Speed optimizations with macro
+- minor behavior refinements
+- x86: Append -z cet-report=error to LDFLAGS
+- added mention of compilation flags
+- Restrict from Running on Forks
+- update regression results.csv
+- [doc] Add decompressor errata document
+- Update results.csv
+- Test and tidy
+- replaced Zstandard by zstd in man page
+- CI: build contrib directory on meson-windows
+- Update zstdcli.c
+- dec: adjust seqSymbol load on aarch64
+- fix indentation
+- Port noDict pipeline
+- fix for v0.3 blindly ported to v0.2
+- removed gnu99 statement from meson recipe
+- meson: add Windows CI
+- decompressBound() tests
+- travis CI: update meson image to one with a python that isn't EOL
+- Create scorecards.yml
+- Fix fuzzer.c nits and replace CLZ fallback
+- build: harden GitHub Workflow permissions
+- Print zlib/lz4/lzma library versions in verbose version output
+- Fuzz the external matchfinder API
+- meson: make backtrace dependency on execinfo
+- GitHub Workflows security hardening
+- release v1.5.4
+- ci: test pkg-config file
+- Update zstd_compress.c
+- ZSTD_decompressStream() fuzz fix
+- bits.h refactor and bugfix
+- zstd -lv <file> to show dictID
+- Prepare v1.5.3
+- Typo (and missing commit)
+- Enable STATIC_BMI2 for gcc/clang
+- Add docs
+- Fix fuzzing with ZSTD_MULTITHREAD
+- renamed HufLog into ZSTD_HUFFDTABLE_CAPACITY_LOG
+- Test PGO Builds
+- fixed zstd-pgo target for GCC
+- Fix hash4Ptr for big endian ( )
+- minor reformatting
+- Convert references to https from http
+- Intial commit to address 3090.
+- drop -E flag in sed
+- Unbreak FreeBSD CI
+- minor nit updates to README.md
+- fix typo
+- Fix nits
+- Bugfixes for the External Matchfinder API ( )
+- minor simplification refactoring for timefn
+- minor refactor to blocksplit
+- Fix typos
+- meson: add Linux CI
+- Fix buffer underflow for null dir1
+- decomp: add prefetch for matched seq on aarch64 ( )
+- minor refactoring for timefn
+- minor refactoring
+- fix msys2 symlink breakage in CI ( )
+- Optimal huf depth
+- Clarify benchmark chunking docstring
+- disable --rm on -o command
+- Clarify -B docstring
+- Meson fixups for Windows
+- Typo in man
+- Add prefetchCDictTables CCtxParam
+- Commit for benchmarking
+- Updated README
+- Replace XOR with subtraction for readability
+- CR fixes
+- refactor : --rm ignored with stdout
+- refactor : --rm is ignored with stdout
+- Typo and grammar fixes
+- Disable Custom ASAN/MSAN Poisoning on MinGW Builds
+- update CI
+- Meson test fixups
+- [contrib][linux] Disable ASM in the kernel
+- Update lib/compress/zstd_compress.c
+- Update README.md for fuzzers ( )
+- Macos playtest envvars fix ( )
+- Final nit
+- Fix gcc-7 and gcc-8 CI breakages
+- Revert "T119975957"
+- zlibWrapper: Update for zlib 1.2.12 ( )
+- moved HufLog to lib/decompress
+- merge dev
+- Bump ilammy/msvc-dev-cmd from 1.12.0 to 1.12.1
+- Mimic gzip chown(gid), chmod(), chown(uid) Behavior
+- Refactor bitwise intrinsics
+- Bugfix redzone unpoisoning
+- T119975957
+- refactor timefn

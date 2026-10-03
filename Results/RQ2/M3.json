@@ -1,0 +1,5129 @@
+{
+  "method_id": "M3",
+  "variant": "w/o Attribution Evidence",
+  "generated_entries": [
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "entry_id": "brief_non_functional_changes_documentation_brief_e8909de",
+      "in_scope": true,
+      "sampling_weight": 84.25,
+      "matched_gt_ids": [
+        "GT-CEPH-18.2.8-183"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "entry_id": "functional_changes_bug_fixes_0210f57",
+      "in_scope": true,
+      "sampling_weight": 84.25,
+      "matched_gt_ids": [
+        "GT-CEPH-18.2.8-003"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "entry_id": "brief_non_functional_changes_documentation_brief_2b4e3a2",
+      "in_scope": true,
+      "sampling_weight": 84.25,
+      "matched_gt_ids": [
+        "GT-CEPH-18.2.8-159"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "entry_id": "functional_changes_bug_fixes_e9d3225",
+      "in_scope": true,
+      "sampling_weight": 84.25,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "entry_id": "brief_functional_changes_refactorings_brief_32a9595",
+      "in_scope": true,
+      "sampling_weight": 98.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "entry_id": "functional_changes_bug_fixes_ac6f659",
+      "in_scope": true,
+      "sampling_weight": 98.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "entry_id": "functional_changes_bug_fixes_07dc1c5",
+      "in_scope": true,
+      "sampling_weight": 98.0,
+      "matched_gt_ids": [
+        "GT-CEPH-19.2.1-281"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "entry_id": "non_functional_changes_performance_f940622",
+      "in_scope": true,
+      "sampling_weight": 94.8,
+      "matched_gt_ids": [
+        "GT-CEPH-19.2.3-008"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "entry_id": "brief_others_brief_3192cf0",
+      "in_scope": true,
+      "sampling_weight": 94.8,
+      "matched_gt_ids": [
+        "GT-CEPH-19.2.3-128",
+        "GT-CEPH-19.2.3-129"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "entry_id": "brief_others_brief_e217009",
+      "in_scope": true,
+      "sampling_weight": 94.8,
+      "matched_gt_ids": [
+        "GT-CEPH-19.2.3-175"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "entry_id": "functional_changes_refactorings_0c9809c",
+      "in_scope": true,
+      "sampling_weight": 94.8,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "entry_id": "functional_changes_refactorings_04a52df",
+      "in_scope": true,
+      "sampling_weight": 94.8,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "entry_id": "functional_changes_bug_fixes_36bc8e4",
+      "in_scope": true,
+      "sampling_weight": 74.66666666666667,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "entry_id": "brief_functional_changes_refactorings_brief_590b713",
+      "in_scope": true,
+      "sampling_weight": 74.66666666666667,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "entry_id": "non_functional_changes_build_ci_01434ad",
+      "in_scope": true,
+      "sampling_weight": 74.66666666666667,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "entry_id": "non_functional_changes_documentation_901b522",
+      "in_scope": true,
+      "sampling_weight": 70.5,
+      "matched_gt_ids": [
+        "GT-CEPH-20.2.1-037"
+      ]
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "entry_id": "functional_changes_bug_fixes_aa33967",
+      "in_scope": true,
+      "sampling_weight": 70.5,
+      "matched_gt_ids": [
+        "GT-CEPH-20.2.1-057"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "brief_non_functional_changes_performance_brief_8c8bbb1",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": [
+        "GT-DPDK-24.11-0386"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "functional_changes_bug_fixes_2543483",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "MERGED-G-003",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "functional_changes_new_features_19bd7cc",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "non_functional_changes_security_b805c83",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "brief_functional_changes_bug_fixes_brief_db830c4",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": [
+        "GT-DPDK-24.11-0493"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "functional_changes_bug_fixes_4e08d33",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": [
+        "GT-DPDK-24.11-0507"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "functional_changes_bug_fixes_265daac",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": [
+        "GT-DPDK-24.11-0435"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "entry_id": "functional_changes_new_features_8195eb0",
+      "in_scope": true,
+      "sampling_weight": 104.88888888888889,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "entry_id": "non_functional_changes_performance_51fb5c4",
+      "in_scope": true,
+      "sampling_weight": 93.33333333333333,
+      "matched_gt_ids": [
+        "GT-DPDK-25.03-0459"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "entry_id": "brief_functional_changes_bug_fixes_brief_feed1d0",
+      "in_scope": true,
+      "sampling_weight": 93.33333333333333,
+      "matched_gt_ids": [
+        "GT-DPDK-25.03-0392"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "entry_id": "brief_functional_changes_tests_brief_4b522ef",
+      "in_scope": true,
+      "sampling_weight": 93.33333333333333,
+      "matched_gt_ids": [
+        "GT-DPDK-25.03-0455"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "entry_id": "functional_changes_new_features_839d753",
+      "in_scope": true,
+      "sampling_weight": 93.33333333333333,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "entry_id": "functional_changes_bug_fixes_daff117",
+      "in_scope": true,
+      "sampling_weight": 93.33333333333333,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "entry_id": "brief_non_functional_changes_maintenance_brief_5dc68f2",
+      "in_scope": true,
+      "sampling_weight": 93.33333333333333,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "entry_id": "brief_non_functional_changes_build_ci_brief_0f1faed",
+      "in_scope": true,
+      "sampling_weight": 93.83333333333333,
+      "matched_gt_ids": [
+        "GT-DPDK-25.07-0541"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "entry_id": "functional_changes_bug_fixes_ae68b5d",
+      "in_scope": true,
+      "sampling_weight": 93.83333333333333,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "entry_id": "brief_non_functional_changes_maintenance_brief_e42334e",
+      "in_scope": true,
+      "sampling_weight": 93.83333333333333,
+      "matched_gt_ids": [
+        "GT-DPDK-25.07-0407"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "entry_id": "functional_changes_new_features_5c3bd01",
+      "in_scope": true,
+      "sampling_weight": 93.83333333333333,
+      "matched_gt_ids": [
+        "GT-DPDK-25.07-0105"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "entry_id": "MERGED-G-001",
+      "in_scope": true,
+      "sampling_weight": 93.83333333333333,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "entry_id": "brief_others_brief_e229d1c",
+      "in_scope": true,
+      "sampling_weight": 93.83333333333333,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "functional_changes_new_features_d265a24",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": [
+        "GT-DPDK-25.11-0059"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "non_functional_changes_build_ci_102a72d",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "brief_functional_changes_bug_fixes_brief_a06140b",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "functional_changes_bug_fixes_387b6e0",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "functional_changes_bug_fixes_7aa71d3",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "functional_changes_bug_fixes_cf454a5",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "architecture_changes_changed_modules_23e0dc6",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "entry_id": "functional_changes_bug_fixes_f4ef899",
+      "in_scope": true,
+      "sampling_weight": 99.625,
+      "matched_gt_ids": [
+        "GT-DPDK-25.11-0497"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "entry_id": "brief_functional_changes_refactorings_brief_7630aa3",
+      "in_scope": true,
+      "sampling_weight": 106.4,
+      "matched_gt_ids": [
+        "GT-DPDK-26.03-0503"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "entry_id": "functional_changes_bug_fixes_4743815",
+      "in_scope": true,
+      "sampling_weight": 106.4,
+      "matched_gt_ids": [
+        "GT-DPDK-26.03-0227"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "entry_id": "brief_non_functional_changes_build_ci_brief_5bde94b",
+      "in_scope": true,
+      "sampling_weight": 106.4,
+      "matched_gt_ids": [
+        "GT-DPDK-26.03-0235",
+        "GT-DPDK-26.03-0478"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "entry_id": "brief_functional_changes_tests_brief_93450f1",
+      "in_scope": true,
+      "sampling_weight": 106.4,
+      "matched_gt_ids": [
+        "GT-DPDK-26.03-0323"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "entry_id": "functional_changes_bug_fixes_093b145",
+      "in_scope": true,
+      "sampling_weight": 106.4,
+      "matched_gt_ids": [
+        "GT-DPDK-26.03-0329"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "entry_id": "functional_changes_refactorings_740bdd6",
+      "in_scope": true,
+      "sampling_weight": 51.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "entry_id": "brief_non_functional_changes_maintenance_brief_efa4053",
+      "in_scope": true,
+      "sampling_weight": 51.5,
+      "matched_gt_ids": [
+        "GT-JEMALLOC-5.1.0-0070"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "entry_id": "brief_functional_changes_refactorings_brief_c7a87e0",
+      "in_scope": true,
+      "sampling_weight": 59.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "entry_id": "functional_changes_new_features_5112d9e",
+      "in_scope": true,
+      "sampling_weight": 59.0,
+      "matched_gt_ids": [
+        "GT-JEMALLOC-5.2.0-0067"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "entry_id": "functional_changes_new_features_e13cf65",
+      "in_scope": true,
+      "sampling_weight": 44.0,
+      "matched_gt_ids": [
+        "GT-JEMALLOC-5.2.1-0021"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "entry_id": "functional_changes_new_features_ea32060",
+      "in_scope": true,
+      "sampling_weight": 105.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "entry_id": "functional_changes_refactorings_ba0e354",
+      "in_scope": true,
+      "sampling_weight": 105.5,
+      "matched_gt_ids": [
+        "GT-JEMALLOC-5.3.0-0365"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "entry_id": "functional_changes_new_features_cdae670",
+      "in_scope": true,
+      "sampling_weight": 105.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "entry_id": "brief_others_brief_d5031ea",
+      "in_scope": true,
+      "sampling_weight": 105.5,
+      "matched_gt_ids": [
+        "GT-JEMALLOC-5.3.0-0237"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "entry_id": "brief_functional_changes_new_features_brief_ddb8dc4",
+      "in_scope": true,
+      "sampling_weight": 105.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "entry_id": "functional_changes_new_features_b75822b",
+      "in_scope": true,
+      "sampling_weight": 105.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "entry_id": "non_functional_changes_build_ci_734f29c",
+      "in_scope": true,
+      "sampling_weight": 95.66666666666667,
+      "matched_gt_ids": [
+        "GT-JEMALLOC-5.3.1-0169"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "entry_id": "non_functional_changes_build_ci_ea5b7be",
+      "in_scope": true,
+      "sampling_weight": 95.66666666666667,
+      "matched_gt_ids": [
+        "GT-JEMALLOC-5.3.1-0006"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "entry_id": "brief_functional_changes_tests_brief_0fa27fd",
+      "in_scope": true,
+      "sampling_weight": 95.66666666666667,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_new_features_19cb088",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_new_features_ff54094",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_new_features_90cecc4",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_bug_fixes_7260709",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-1004"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_new_features_d0b17ea",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "architecture_changes_changed_modules_d5ab48a",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-1552"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_bug_fixes_8263749",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-1131"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_new_features_96e6780",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "non_functional_changes_security_7c33270",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-2157"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_new_features_c2ee608",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-0070"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_bug_fixes_6b5c7ef",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-1042"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "brief_functional_changes_bug_fixes_brief_71bc497",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-1442"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "non_functional_changes_build_ci_d362db7",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-2414"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_bug_fixes_eaee176",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-0791"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "brief_others_brief_fba0206",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "brief_functional_changes_tests_brief_843f6e2",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "brief_functional_changes_bug_fixes_brief_3ebcb2f",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-1027"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "brief_others_brief_4d5cfb2",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-2559"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "brief_functional_changes_refactorings_brief_e7cbb09",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-2186"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_bug_fixes_4832099",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-1001",
+        "GT-OPENSSL-3.2.0-2515"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "brief_others_brief_07c5465",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_bug_fixes_c6010d1",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "entry_id": "functional_changes_bug_fixes_ad7e0fd",
+      "in_scope": true,
+      "sampling_weight": 115.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.2.0-0614"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "entry_id": "functional_changes_bug_fixes_d2e7855",
+      "in_scope": true,
+      "sampling_weight": 107.8,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "entry_id": "brief_functional_changes_tests_brief_9b35ce2",
+      "in_scope": true,
+      "sampling_weight": 107.8,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.3.0-0363"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "entry_id": "brief_functional_changes_tests_brief_3920283",
+      "in_scope": true,
+      "sampling_weight": 107.8,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.3.0-0329",
+        "GT-OPENSSL-3.3.0-0369"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "entry_id": "brief_others_brief_5bf7b79",
+      "in_scope": true,
+      "sampling_weight": 107.8,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.3.0-0412"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "entry_id": "brief_non_functional_changes_maintenance_brief_407bcc8",
+      "in_scope": true,
+      "sampling_weight": 107.8,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.3.0-0145"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "entry_id": "brief_functional_changes_bug_fixes_brief_4169d58",
+      "in_scope": true,
+      "sampling_weight": 96.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "entry_id": "brief_non_functional_changes_documentation_brief_c06f596",
+      "in_scope": true,
+      "sampling_weight": 96.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.4.0-0483"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "entry_id": "brief_functional_changes_tests_brief_ba97722",
+      "in_scope": true,
+      "sampling_weight": 96.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.4.0-0372",
+        "GT-OPENSSL-3.4.0-0375"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "entry_id": "non_functional_changes_performance_dda1635",
+      "in_scope": false,
+      "sampling_weight": 96.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "entry_id": "non_functional_changes_security_4514e02",
+      "in_scope": true,
+      "sampling_weight": 96.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "entry_id": "brief_non_functional_changes_security_brief_fc8ff75",
+      "in_scope": true,
+      "sampling_weight": 96.0,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.4.0-0362"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "entry_id": "brief_non_functional_changes_maintenance_brief_511c37b",
+      "in_scope": true,
+      "sampling_weight": 108.14285714285714,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.5.0-0726"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "entry_id": "functional_changes_bug_fixes_2a53df6",
+      "in_scope": true,
+      "sampling_weight": 108.14285714285714,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "entry_id": "brief_functional_changes_refactorings_brief_de578a8",
+      "in_scope": true,
+      "sampling_weight": 108.14285714285714,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.5.0-0470"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "entry_id": "brief_functional_changes_bug_fixes_brief_c81ff97",
+      "in_scope": false,
+      "sampling_weight": 108.14285714285714,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "entry_id": "brief_non_functional_changes_documentation_brief_bbd1811",
+      "in_scope": true,
+      "sampling_weight": 108.14285714285714,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "entry_id": "functional_changes_bug_fixes_f1a4f03",
+      "in_scope": true,
+      "sampling_weight": 108.14285714285714,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "entry_id": "brief_others_brief_6812bbc",
+      "in_scope": true,
+      "sampling_weight": 108.14285714285714,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.5.0-0661"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "entry_id": "brief_others_brief_1f000a4",
+      "in_scope": true,
+      "sampling_weight": 107.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "entry_id": "brief_functional_changes_tests_brief_da585e2",
+      "in_scope": true,
+      "sampling_weight": 107.5,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.6.0-0452"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "entry_id": "brief_functional_changes_refactorings_brief_215167f",
+      "in_scope": true,
+      "sampling_weight": 107.5,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.6.0-0580"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "entry_id": "functional_changes_bug_fixes_ea7b971",
+      "in_scope": true,
+      "sampling_weight": 107.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "entry_id": "functional_changes_bug_fixes_95af148",
+      "in_scope": true,
+      "sampling_weight": 107.5,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "entry_id": "functional_changes_new_features_dd266b4",
+      "in_scope": true,
+      "sampling_weight": 107.5,
+      "matched_gt_ids": [
+        "GT-OPENSSL-3.6.0-0025"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "entry_id": "brief_others_brief_8250faa",
+      "in_scope": true,
+      "sampling_weight": 28.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "entry_id": "functional_changes_new_features_e58a39f",
+      "in_scope": true,
+      "sampling_weight": 76.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "entry_id": "brief_functional_changes_tests_brief_d64d5dd",
+      "in_scope": true,
+      "sampling_weight": 76.0,
+      "matched_gt_ids": [
+        "GT-ZSTD-v1.5.4-0096"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "entry_id": "brief_non_functional_changes_documentation_brief_bb4a3c7",
+      "in_scope": true,
+      "sampling_weight": 76.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "entry_id": "functional_changes_bug_fixes_97aabc4",
+      "in_scope": true,
+      "sampling_weight": 76.0,
+      "matched_gt_ids": [
+        "GT-ZSTD-v1.5.4-0002"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "entry_id": "functional_changes_bug_fixes_6313a58",
+      "in_scope": false,
+      "sampling_weight": 30.0,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "entry_id": "brief_functional_changes_tests_brief_4b9e3d1",
+      "in_scope": true,
+      "sampling_weight": 30.0,
+      "matched_gt_ids": [
+        "GT-ZSTD-v1.5.5-0017"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "entry_id": "functional_changes_bug_fixes_9987d2f",
+      "in_scope": true,
+      "sampling_weight": 62.666666666666664,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "entry_id": "brief_non_functional_changes_documentation_brief_98d8ad2",
+      "in_scope": true,
+      "sampling_weight": 62.666666666666664,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "entry_id": "non_functional_changes_build_ci_4502ca5",
+      "in_scope": true,
+      "sampling_weight": 62.666666666666664,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "entry_id": "non_functional_changes_performance_6326775",
+      "in_scope": true,
+      "sampling_weight": 87.66666666666667,
+      "matched_gt_ids": [
+        "GT-ZSTD-v1.5.7-0010"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "entry_id": "brief_non_functional_changes_build_ci_brief_d7a84a6",
+      "in_scope": true,
+      "sampling_weight": 87.66666666666667,
+      "matched_gt_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "entry_id": "brief_non_functional_changes_build_ci_brief_bf4a43f",
+      "in_scope": true,
+      "sampling_weight": 87.66666666666667,
+      "matched_gt_ids": []
+    }
+  ],
+  "gt_entries": [
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-042",
+      "category": "important",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "functional_changes_new_features_23a110b"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-377",
+      "category": "important",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "functional_changes_new_features_8ac23fd"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-036",
+      "category": "important",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_security_brief_6e9983e"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-358",
+      "category": "important",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_d578ab0"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-291",
+      "category": "important",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "functional_changes_new_features_c642834"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-229",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "non_functional_changes_documentation_66c5146"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-202",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_f1ef88a"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-067",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_others_brief_5a0f5f9"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-298",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_cdce7df"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-184",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "non_functional_changes_documentation_eea9d42"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-161",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_7210906"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-279",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_411f041"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-158",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-014",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_performance_brief_95c0293"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-261",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-127",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_others_brief_c1c51cb"
+      ]
+    },
+    {
+      "version_pair": "ceph-v18.2.7-v18.2.8",
+      "gt_id": "GT-CEPH-18.2.8-168",
+      "category": "routine",
+      "sampling_weight": 24.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_bdc22ba"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-148",
+      "category": "important",
+      "sampling_weight": 5.6,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-159",
+      "category": "important",
+      "sampling_weight": 5.6,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-006",
+      "category": "important",
+      "sampling_weight": 5.6,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-237",
+      "category": "important",
+      "sampling_weight": 5.6,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_38380a3"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-009",
+      "category": "important",
+      "sampling_weight": 5.6,
+      "matched_entry_ids": [
+        "functional_changes_new_features_2d56165",
+        "functional_changes_refactorings_32d0549"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-010",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-216",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-067",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": [
+        "brief_others_brief_16e20a5"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-184",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-038",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-248",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-286",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_9f8c1d6"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-217",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-043",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-099",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_1d02e2d"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.0-v19.2.1",
+      "gt_id": "GT-CEPH-19.2.1-027",
+      "category": "routine",
+      "sampling_weight": 22.90909090909091,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_f882fa8"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-418",
+      "category": "important",
+      "sampling_weight": 10.2,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_0a67cd2",
+        "brief_functional_changes_refactorings_brief_28e802e",
+        "functional_changes_new_features_79d3d6f"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-019",
+      "category": "important",
+      "sampling_weight": 10.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-427",
+      "category": "important",
+      "sampling_weight": 10.2,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_40c8735"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-226",
+      "category": "important",
+      "sampling_weight": 10.2,
+      "matched_entry_ids": [
+        "functional_changes_new_features_841ec94"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-400",
+      "category": "important",
+      "sampling_weight": 10.2,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_7749bba"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-268",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-253",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-158",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "non_functional_changes_documentation_bb84237"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-191",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "non_functional_changes_documentation_b72f917"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-284",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-386",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-147",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_f5dd9e7"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-289",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-227",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_97f2434"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-232",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-120",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-221",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_2af5800"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-124",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "brief_others_brief_f090a2e"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.2-v19.2.3",
+      "gt_id": "GT-CEPH-19.2.3-040",
+      "category": "routine",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_b333c18"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-185",
+      "category": "important",
+      "sampling_weight": 9.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-015",
+      "category": "important",
+      "sampling_weight": 9.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-128",
+      "category": "important",
+      "sampling_weight": 9.2,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_8826727"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-045",
+      "category": "important",
+      "sampling_weight": 9.2,
+      "matched_entry_ids": [
+        "brief_others_brief_c27259a"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-001",
+      "category": "important",
+      "sampling_weight": 9.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-280",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_83e895a"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-097",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_a17d51e"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-068",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_4f2c86d"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-305",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_e5272b6"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-148",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-033",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-127",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-198",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_c504c85"
+      ]
+    },
+    {
+      "version_pair": "ceph-v19.2.3-v19.2.4",
+      "gt_id": "GT-CEPH-19.2.4-189",
+      "category": "routine",
+      "sampling_weight": 20.333333333333332,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-044",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_5f17115"
+      ]
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-006",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-050",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-051",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-055",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-169",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-194",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_cdd5bd5"
+      ]
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-099",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-128",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-139",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-241",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-071",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_2d227ab"
+      ]
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-195",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "ceph-v20.2.0-v20.2.1",
+      "gt_id": "GT-CEPH-20.2.1-132",
+      "category": "routine",
+      "sampling_weight": 21.666666666666668,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0331",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_5c9b07e"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0046",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0082",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0750",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0053",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0056",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0083",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0020",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0827",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_4025e36"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0608",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_89b5642"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0856",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "non_functional_changes_maintenance_e0bf217"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0045",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0079",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0141",
+      "category": "important",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0276",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_new_features_30d7102"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0891",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_93e41cb"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0301",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "brief_functional_changes_new_features_brief_0d187ba"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0877",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0422",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_e4a4087"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0732",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0378",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_c4636d3"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0647",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_221a3d8"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0720",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_acab7f3"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0840",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_7f93264",
+        "non_functional_changes_documentation_dfef829"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0578",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_e900205"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0255",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_new_features_03b8c84"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0711",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_99ed5e9"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0779",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "non_functional_changes_security_126cc1b"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0445",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_db92f4e"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0938",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0452",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_fae5c63"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0716",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_367fa35"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.07-v24.11",
+      "gt_id": "GT-DPDK-24.11-0539",
+      "category": "routine",
+      "sampling_weight": 29.789473684210527,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0100",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": [
+        "functional_changes_new_features_7e278cb"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0069",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0112",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0491",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0168",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0107",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": [
+        "functional_changes_new_features_7eaa499"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0173",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0091",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0561",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": [
+        "non_functional_changes_maintenance_3cd0547"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0102",
+      "category": "important",
+      "sampling_weight": 21.2,
+      "matched_entry_ids": [
+        "MERGED-G-005"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0546",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_4c0db9c"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0128",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "functional_changes_new_features_6b32462"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0454",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_9d619f8"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0254",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_f19ffdb"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0440",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_78c2c96"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0433",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_3197a1f",
+        "functional_changes_refactorings_e4251ab"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0405",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_e7133f8",
+        "functional_changes_bug_fixes_e931818"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0132",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "functional_changes_new_features_186f8e8"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0307",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_d6de990"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0282",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_8465e44"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0378",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_b2ff5f6"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0473",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_performance_brief_b4f996b"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0278",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_c8b3833"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v24.11-v25.03",
+      "gt_id": "GT-DPDK-25.03-0543",
+      "category": "routine",
+      "sampling_weight": 25.714285714285715,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_84fbc5b"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0520",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_085fe09"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0031",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0442",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0039",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0153",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_4934953"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0194",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_1c0bad3"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0515",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": [
+        "brief_others_brief_9622222"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0371",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_4597715"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0032",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": [
+        "functional_changes_new_features_191c637"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0525",
+      "category": "important",
+      "sampling_weight": 23.1,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_d6cb19c"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0397",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_0d99ea4"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0015",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0543",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_4031a5f"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0395",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0239",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_6c1844d"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0483",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_a09b561"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0108",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0409",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_9a40f9e"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0430",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_d135d7c"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0219",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_fc3106f"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0322",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_4cd8c72"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0350",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_26bf499"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0363",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "brief_others_brief_f8d5ce2"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.03-v25.07",
+      "gt_id": "GT-DPDK-25.07-0306",
+      "category": "routine",
+      "sampling_weight": 25.357142857142858,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_8d10841"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0081",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_8d0c3e3"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0575",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0266",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_96b1a23"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0109",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "functional_changes_new_features_7e18be9",
+        "functional_changes_new_features_7eef710"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0255",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_8bc72d9"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0573",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_2863cbd"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0289",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0572",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0295",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_c71e3fb"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0587",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_99c05ce"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0033",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0042",
+      "category": "important",
+      "sampling_weight": 23.25,
+      "matched_entry_ids": [
+        "architecture_changes_changed_modules_9d99641"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0622",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_1755f9d",
+        "brief_non_functional_changes_maintenance_brief_3daa94b"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0220",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "non_functional_changes_maintenance_e044839"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0624",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_aff44ad"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0376",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_143115b"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0368",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_f8c8505"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0658",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_performance_brief_2001c8e"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0537",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_24288ec"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0202",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0359",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0379",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_2262fc2"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0501",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0338",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0403",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0447",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_112facb"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0491",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_970309c"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0228",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_new_features_8c77a97"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0370",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_84350b1"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.07-v25.11",
+      "gt_id": "GT-DPDK-25.11-0200",
+      "category": "routine",
+      "sampling_weight": 28.27777777777778,
+      "matched_entry_ids": [
+        "functional_changes_new_features_8e5eac7"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0146",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0521",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0058",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0522",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0103",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_6d0e6b5"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0113",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0145",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0136",
+      "category": "important",
+      "sampling_weight": 20.625,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0201",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_6528c61"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0391",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_567ec7e"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0286",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_performance_brief_69226df"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0451",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_4fd8a79"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0169",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_0da95cc"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0279",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_da1fcd9"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0076",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_new_features_420ba6a"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0089",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_new_features_a3ccdf1"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0174",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_45f435d"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0334",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_c22ce68"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0220",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_aa65682"
+      ]
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0253",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0290",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "dpdk-v25.11-v26.03",
+      "gt_id": "GT-DPDK-26.03-0367",
+      "category": "routine",
+      "sampling_weight": 26.642857142857142,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0024",
+      "category": "important",
+      "sampling_weight": 9.666666666666666,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0060",
+      "category": "important",
+      "sampling_weight": 9.666666666666666,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0067",
+      "category": "important",
+      "sampling_weight": 9.666666666666666,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0049",
+      "category": "important",
+      "sampling_weight": 9.666666666666666,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0048",
+      "category": "important",
+      "sampling_weight": 9.666666666666666,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0018",
+      "category": "important",
+      "sampling_weight": 9.666666666666666,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_8da69b6",
+        "non_functional_changes_maintenance_0975b88"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0091",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_21eb0d1"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0086",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_cb3b72b"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0068",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "brief_others_brief_3bcaede"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0065",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_5f51882"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.0.1-5.1.0",
+      "gt_id": "GT-JEMALLOC-5.1.0-0063",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_26b1c13"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0038",
+      "category": "important",
+      "sampling_weight": 10.333333333333334,
+      "matched_entry_ids": [
+        "non_functional_changes_maintenance_be0749f"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0019",
+      "category": "important",
+      "sampling_weight": 10.333333333333334,
+      "matched_entry_ids": [
+        "architecture_changes_changed_modules_2db2d2e"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0046",
+      "category": "important",
+      "sampling_weight": 10.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0001",
+      "category": "important",
+      "sampling_weight": 10.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0043",
+      "category": "important",
+      "sampling_weight": 10.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0078",
+      "category": "important",
+      "sampling_weight": 10.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0056",
+      "category": "routine",
+      "sampling_weight": 8.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_59d9891"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0091",
+      "category": "routine",
+      "sampling_weight": 8.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_performance_brief_d1e11d4"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0061",
+      "category": "routine",
+      "sampling_weight": 8.0,
+      "matched_entry_ids": [
+        "functional_changes_new_features_e13400c"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0099",
+      "category": "routine",
+      "sampling_weight": 8.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.1.0-5.2.0",
+      "gt_id": "GT-JEMALLOC-5.2.0-0058",
+      "category": "routine",
+      "sampling_weight": 8.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0002",
+      "category": "important",
+      "sampling_weight": 4.5,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0018",
+      "category": "important",
+      "sampling_weight": 4.5,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0024",
+      "category": "important",
+      "sampling_weight": 4.5,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0021",
+      "category": "important",
+      "sampling_weight": 4.5,
+      "matched_entry_ids": [
+        "functional_changes_new_features_e13cf65"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0006",
+      "category": "routine",
+      "sampling_weight": 1.75,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0013",
+      "category": "routine",
+      "sampling_weight": 1.75,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_1a71533"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0011",
+      "category": "routine",
+      "sampling_weight": 1.75,
+      "matched_entry_ids": [
+        "brief_others_brief_ae124b8"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.0-5.2.1",
+      "gt_id": "GT-JEMALLOC-5.2.1-0012",
+      "category": "routine",
+      "sampling_weight": 1.75,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0337",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "architecture_changes_changed_modules_7bb6e2d"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0316",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0356",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_6e848a0"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0218",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0235",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0101",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0009",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0006",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "functional_changes_new_features_fe71083"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0229",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0040",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_a943172"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0208",
+      "category": "important",
+      "sampling_weight": 25.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0269",
+      "category": "routine",
+      "sampling_weight": 16.857142857142858,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_f81341a"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0292",
+      "category": "routine",
+      "sampling_weight": 16.857142857142858,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_f669980"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0415",
+      "category": "routine",
+      "sampling_weight": 16.857142857142858,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_912324a"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0391",
+      "category": "routine",
+      "sampling_weight": 16.857142857142858,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_28ed9b9"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0010",
+      "category": "routine",
+      "sampling_weight": 16.857142857142858,
+      "matched_entry_ids": [
+        "functional_changes_new_features_99c2d6c"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0287",
+      "category": "routine",
+      "sampling_weight": 16.857142857142858,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_a9aa6f6"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.2.1-5.3.0",
+      "gt_id": "GT-JEMALLOC-5.3.0-0363",
+      "category": "routine",
+      "sampling_weight": 16.857142857142858,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0148",
+      "category": "important",
+      "sampling_weight": 13.571428571428571,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0053",
+      "category": "important",
+      "sampling_weight": 13.571428571428571,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_a10ef3e"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0059",
+      "category": "important",
+      "sampling_weight": 13.571428571428571,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0014",
+      "category": "important",
+      "sampling_weight": 13.571428571428571,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0006",
+      "category": "important",
+      "sampling_weight": 13.571428571428571,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_ea5b7be"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0097",
+      "category": "important",
+      "sampling_weight": 13.571428571428571,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0087",
+      "category": "important",
+      "sampling_weight": 13.571428571428571,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0062",
+      "category": "routine",
+      "sampling_weight": 13.5,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_323ed2e"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0165",
+      "category": "routine",
+      "sampling_weight": 13.5,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_3025b02"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0136",
+      "category": "routine",
+      "sampling_weight": 13.5,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0142",
+      "category": "routine",
+      "sampling_weight": 13.5,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_87f9938"
+      ]
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0019",
+      "category": "routine",
+      "sampling_weight": 13.5,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "jemalloc-5.3.0-5.3.1",
+      "gt_id": "GT-JEMALLOC-5.3.1-0118",
+      "category": "routine",
+      "sampling_weight": 13.5,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1718",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2346",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0793",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0767",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_945fde5"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2464",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0282",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_new_features_5e3b845"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0663",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_9351f67"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2130",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "non_functional_changes_security_7bf2e4d"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0473",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_283938f"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0076",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0509",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_0ce8271"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0190",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0476",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "non_functional_changes_security_96fa10f"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0648",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_709d4be"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2142",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2351",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_9b9c42d"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0739",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0028",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "MERGED-G-009"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0487",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0506",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0639",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_186be8e"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0169",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "functional_changes_new_features_50e7684"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0159",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0158",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0634",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_e0e338c"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0058",
+      "category": "important",
+      "sampling_weight": 31.46153846153846,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2533",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1829",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_3fd255a",
+        "brief_functional_changes_tests_brief_919adfc"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1309",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0438",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_new_features_brief_0295364"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1132",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_ed9c6f3"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0324",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_new_features_brief_03ee2e5"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2601",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1622",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_e32fc5a"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0846",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_251e941"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2436",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_6497ad5"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2632",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1706",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_256eee3"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0353",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_new_features_2b2b267"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2396",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_a1c8edc"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1624",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1343",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1981",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_9ff8161"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1922",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_a3fcafb"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2604",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1240",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_2b2eedf"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1672",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1450",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_cf06f34"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2273",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_33478ae"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1374",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_a024ab9"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0372",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_new_features_9f679bd"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2545",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_c2212dc"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2305",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "non_functional_changes_documentation_b71784f"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1087",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1688",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_1735531",
+        "brief_functional_changes_tests_brief_23e6556"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2686",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1871",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_tests_de60deb"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2663",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1423",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1573",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_4ad3a44"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2664",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2017",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_1ee0a9d"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0373",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_new_features_9f679bd"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1286",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1196",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1752",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_f087ebc"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2594",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2751",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1110",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_3f968ec"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2689",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0928",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_e04c2c0"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1937",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_d49c6ca"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1789",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_3469282"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1747",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_security_brief_61cab65"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2514",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_5f4b3db"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1778",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_43332e4"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2031",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_7ee992a"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1482",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_abc4345"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-0063",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_4f428e8"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-1627",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_88bf978"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.1.0-3.2.0",
+      "gt_id": "GT-OPENSSL-3.2.0-2286",
+      "category": "routine",
+      "sampling_weight": 33.836363636363636,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_2ee2b74"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0114",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0140",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0019",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0043",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": [
+        "functional_changes_new_features_ef9d8f2"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0127",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0088",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_ae643b3"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0003",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0125",
+      "category": "important",
+      "sampling_weight": 16.875,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_20ddfe7"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0371",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_37cd49f"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0520",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_2cd09e0"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0317",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "functional_changes_refactorings_a5d16ac"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0222",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_bac7e68"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0356",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_563f4be"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0525",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0434",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_cad48c5"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0382",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_b119f8b"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0509",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_d1fe573"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0558",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0559",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0082",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_1184157"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0410",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0491",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_496f0be"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.2.0-3.3.0",
+      "gt_id": "GT-OPENSSL-3.3.0-0557",
+      "category": "routine",
+      "sampling_weight": 26.533333333333335,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0034",
+      "category": "important",
+      "sampling_weight": 18.571428571428573,
+      "matched_entry_ids": [
+        "brief_architecture_changes_changed_modules_brief_eaf577c"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0027",
+      "category": "important",
+      "sampling_weight": 18.571428571428573,
+      "matched_entry_ids": [
+        "functional_changes_new_features_00231a6"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0118",
+      "category": "important",
+      "sampling_weight": 18.571428571428573,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_663dbc9"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0143",
+      "category": "important",
+      "sampling_weight": 18.571428571428573,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_2d75993"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0011",
+      "category": "important",
+      "sampling_weight": 18.571428571428573,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0406",
+      "category": "important",
+      "sampling_weight": 18.571428571428573,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_25f5d7b"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0169",
+      "category": "important",
+      "sampling_weight": 18.571428571428573,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0580",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0273",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_797691f"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0178",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_82a13a1"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0435",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "non_functional_changes_security_7638f40"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0278",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_01eaf20"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0462",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_b1e7bc5"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0441",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_22e08c7"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0075",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_others_brief_f4b4a18"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0228",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0329",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_2b6f307"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0272",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_9432935"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0394",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_0b97a55"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0358",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_abe05fd"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.3.0-3.4.0",
+      "gt_id": "GT-OPENSSL-3.4.0-0515",
+      "category": "routine",
+      "sampling_weight": 27.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_0fff6a2"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0214",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0159",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0084",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0032",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0196",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0207",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0022",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0600",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": [
+        "non_functional_changes_security_2ea9903"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0137",
+      "category": "important",
+      "sampling_weight": 21.88888888888889,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_4450171"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0276",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_4af6bcd"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0633",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "non_functional_changes_documentation_1b114e3"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0509",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0637",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "non_functional_changes_documentation_5c82588"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0657",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_5f9814d"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0782",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0389",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_aa52ec9"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0096",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_c90451d"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0306",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0459",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "architecture_changes_added_modules_51921b8"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0273",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0748",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0363",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0585",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_76d8bf6"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0367",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_c152a94"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0529",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0469",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_c85c572"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0313",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_fe07cbf"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.4.0-3.5.0",
+      "gt_id": "GT-OPENSSL-3.5.0-0127",
+      "category": "routine",
+      "sampling_weight": 29.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_build_ci_brief_78d2528"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0464",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0027",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": [
+        "functional_changes_new_features_21f1b67"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0034",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": [
+        "functional_changes_new_features_b561837"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0097",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_1eee02d"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0150",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_9bb53c7"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0116",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0468",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": [
+        "non_functional_changes_security_3b66c97"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0014",
+      "category": "important",
+      "sampling_weight": 19.25,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0409",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_0b00e23"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0373",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_others_brief_1dc52b4"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0419",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_2dbcae3"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0258",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_48e3fe0"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0558",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0393",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_837592d"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0199",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_5ee8248"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0572",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_60f2a71"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0499",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_20fb5dc"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0284",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_874f768"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0635",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0523",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0064",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_3f5561a"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0515",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_maintenance_brief_289dcbe"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0398",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "brief_functional_changes_tests_brief_2b76895"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0481",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": [
+        "non_functional_changes_security_651abe1"
+      ]
+    },
+    {
+      "version_pair": "openssl-3.5.0-3.6.0",
+      "gt_id": "GT-OPENSSL-3.6.0-0623",
+      "category": "routine",
+      "sampling_weight": 28.176470588235293,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0004",
+      "category": "important",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": [
+        "brief_others_brief_6211bfe"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0018",
+      "category": "important",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": [
+        "brief_others_brief_46ad937"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0003",
+      "category": "important",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0016",
+      "category": "important",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_4bd96a6"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0008",
+      "category": "routine",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_308a11b"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0001",
+      "category": "routine",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_41ad733",
+        "non_functional_changes_performance_8c53e52"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0007",
+      "category": "routine",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": [
+        "brief_others_brief_4d8a213"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.1-v1.5.2",
+      "gt_id": "GT-ZSTD-v1.5.2-0010",
+      "category": "routine",
+      "sampling_weight": 2.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_321583c",
+        "functional_changes_refactorings_b77fcac"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0128",
+      "category": "important",
+      "sampling_weight": 14.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0119",
+      "category": "important",
+      "sampling_weight": 14.333333333333334,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_423a749"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0123",
+      "category": "important",
+      "sampling_weight": 14.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0121",
+      "category": "important",
+      "sampling_weight": 14.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0085",
+      "category": "important",
+      "sampling_weight": 14.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0137",
+      "category": "important",
+      "sampling_weight": 14.333333333333334,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0114",
+      "category": "routine",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_bda947e"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0106",
+      "category": "routine",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0126",
+      "category": "routine",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "non_functional_changes_performance_51da2d2"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0095",
+      "category": "routine",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "brief_others_brief_8b46895"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0007",
+      "category": "routine",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_cd1f582"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.2-v1.5.4",
+      "gt_id": "GT-ZSTD-v1.5.4-0097",
+      "category": "routine",
+      "sampling_weight": 10.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0029",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": [
+        "brief_non_functional_changes_documentation_brief_f4563d8"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0016",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0033",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0011",
+      "category": "important",
+      "sampling_weight": 5.0,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0013",
+      "category": "routine",
+      "sampling_weight": 2.5,
+      "matched_entry_ids": [
+        "brief_functional_changes_refactorings_brief_a7de1d9"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0001",
+      "category": "routine",
+      "sampling_weight": 2.5,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_395a2c5"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0007",
+      "category": "routine",
+      "sampling_weight": 2.5,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_c4c3e11"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.4-v1.5.5",
+      "gt_id": "GT-ZSTD-v1.5.5-0023",
+      "category": "routine",
+      "sampling_weight": 2.5,
+      "matched_entry_ids": [
+        "functional_changes_tests_fcaf06d"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0085",
+      "category": "important",
+      "sampling_weight": 9.4,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0067",
+      "category": "important",
+      "sampling_weight": 9.4,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0034",
+      "category": "important",
+      "sampling_weight": 9.4,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0019",
+      "category": "important",
+      "sampling_weight": 9.4,
+      "matched_entry_ids": [
+        "architecture_changes_changed_modules_5059618",
+        "non_functional_changes_build_ci_dcd713c"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0022",
+      "category": "important",
+      "sampling_weight": 9.4,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_b1a30e2"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0053",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_4b51526"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0041",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0014",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_86b8e39"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0087",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.5-v1.5.6",
+      "gt_id": "GT-ZSTD-v1.5.6-0083",
+      "category": "routine",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_a261375"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0020",
+      "category": "important",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_b3035b3"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0029",
+      "category": "important",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0025",
+      "category": "important",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": [
+        "functional_changes_new_features_3242ac5"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0036",
+      "category": "important",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0062",
+      "category": "important",
+      "sampling_weight": 6.8,
+      "matched_entry_ids": []
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0043",
+      "category": "routine",
+      "sampling_weight": 7.2,
+      "matched_entry_ids": [
+        "brief_functional_changes_bug_fixes_brief_01cea2e",
+        "brief_functional_changes_bug_fixes_brief_4f41631"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0045",
+      "category": "routine",
+      "sampling_weight": 7.2,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_71def59"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0049",
+      "category": "routine",
+      "sampling_weight": 7.2,
+      "matched_entry_ids": [
+        "functional_changes_bug_fixes_89451ca"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0074",
+      "category": "routine",
+      "sampling_weight": 7.2,
+      "matched_entry_ids": [
+        "non_functional_changes_build_ci_fd5f810"
+      ]
+    },
+    {
+      "version_pair": "zstd-v1.5.6-v1.5.7",
+      "gt_id": "GT-ZSTD-v1.5.7-0048",
+      "category": "routine",
+      "sampling_weight": 7.2,
+      "matched_entry_ids": []
+    }
+  ]
+}

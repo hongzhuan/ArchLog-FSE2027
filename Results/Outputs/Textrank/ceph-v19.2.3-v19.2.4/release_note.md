@@ -1,0 +1,819 @@
+# VerLog-style TextRank Release Note
+
+- Repository: ceph
+- Version pair: v19.2.3 -> v19.2.4
+- Pair id: ceph-v19.2.3-v19.2.4
+- Input commits: 853
+- Candidate sentences: 807
+- GT-length budget: 229
+- Extracted entries: 807
+
+## Extracted Entries
+
+- ceph-volume: use udev data instead of LVM subprocess in get_devices()
+- squid: ceph-volume: use udev data instead of LVM subprocess in get_devices()
+- squid: tools: handle get-attr as read-only ops in ceph_objectstore_tool
+- squid: mgr/dashboard: fix zone update API forcing STANDARD storage class
+- install-deps.sh: let FOR_MAKE_CHECK variable take precedence
+- tools: handle get-attr as read-only ops in ceph_objectstore_tool
+- script/build-with-container: handle failure to find source rpm better
+- script/build-with-container: fix rpm build step when using an overlay
+- squid: mds: fix heap-use-after-free in C_Flush_Journal
+- squid: mgr/dashboard: use system packages when running tox
+- squid: cephadm: add ability to continue on failure when applying multiple specs
+- common/options: add missing runtime flag
+- squid: common: Allow PerfCounters to return a provided service ID
+- squid: RGW: multi object delete op; skip olh update for all deletes but the last one
+- script/build-with-container: optionally source WITH_CRIMSON from env file
+- qa/cephfs: add test to check clone source info's present in...
+- squid: ceph-volume: fix UdevData initialisation from empty /run/udev/data/* file
+- squid: rgw: make keystone work without admin token(service ac requirement)
+- mgr/dashboard: use system packages when running tox
+- squid: mgr/dashboard: add .nvmrc so ci can pick the node version
+- mds: fix issues with use-after-free in C_Flush_Journal
+- squid: doc: Fix links to mClock config reference
+- script/build-with-container: fix rpmbuild when no rpm build args are set
+- squid: qa: do read checks with non-empty file
+- squid: osd/scrub: do not limit operator-initiated repairs
+- mgr/dashboard: add .nvmrc so ci can pick the node version
+- ceph-volume: fix UdevData initialisation from empty /run/udev/data/* file
+- ceph-volume: single lvs call to speed up exclude_lvm_osd_devices
+- mds: print the path depth to help debug mds issue
+- pybind/mgr: Hack around the 'ImportError: PyO3 modules may only be initialized once per interpreter process' issue.
+- doc/cephadm: remove sections not apply to Squid in rgw.rst
+- qa: add test checking 'journal import' from empty dump file
+- Revert "pybind/mgr: Hack around the 'ImportError: PyO3 modules may only be initialized once per interpreter process' issue."
+- librbd/cache/pwl: WriteLogOperationSet::cell can be garbage
+- bluestore/BlueFS: fix bytes_written_slow counter with aio_write
+- squid: doc: Clarify the status of MS Windows client support
+- squid: run-make-check.sh: handle sudo and command that may not run in container
+- os/bluestore: Fix dirty_range in BlueStore::_do_remove
+- client: get quota root based off of provided inode in statfs
+- mgr/dashboard: fix zone update API forcing STANDARD storage class
+- squid: rgw: fix v2 topics radosgw-admin output in test
+- script/build-with-container: add more detailed variants
+- mgr/telemetry: add stretch_mode information
+- cephadm: add ability to continue on failure when applying multiple specs
+- script/build-with-container: add log line with time taken
+- qa: do the set/get attribute on the remote filesystem
+- qa: some test set refuse_client_session , so the cluster log is expected
+- squid: qa: increase the wait time to prevent check_counter failing
+- doc: Fix links to mClock config reference
+- squid: doc/cephadm: remove sections that do not not apply to Squid in rgw.rst
+- install-deps: Add Rocky 9, combine if statements
+- squid: test/libcephfs: copy DT_NEEDED entries from input libraries
+- squid: suites/rados/cephadm: typo in ignore list for still running message
+- monitoring: add user-agent headers to the urllib
+- librbd: fix RequestLockPayload log message in ImageWatcher
+- RGW: multi object delete op; skip olh update for all deletes but the last one
+- squid: bluestore/BlueFS: fix bytes_written_slow counter with aio_write
+- squid: qa: use a larger timeout for kernel_untar_build workunit
+- Update install.rst to point to ~ instead of /home/
+- osd/scrub: do not limit operator-initiated repairs
+- mds: implement new asok command for dumping stray folder
+- squid: src/common: add guidance for mon_warn_pg_not_scrubbed
+- qa: do read checks with non-empty file
+- squid: HealthMonitor: Add topology-aware netsplit detection and warning
+- squid: mgr/dashboard: Blank entry for Storage Capacity in dashboard under Cluster > Expand Cluster > Review
+- Revert "mgr/dashboard: pin lxml to fix run-dashboard-tox-make-check failure"
+- squid: mds: add more debug logs and log events
+- common: Allow PerfCounters to return a provided service ID
+- run-make-check.sh: handle sudo and command that may not run in container
+- squid: auth: msgr2 can return incorrect allowed_modes through AuthBadMethodFrame
+- script/build-with-container: add build image variants
+- squid: qa/cephfs: ignore warning that pg is stuck peering for upgrade jobs
+- squid: doc/dev/release-process.rst: document new Jenkins job for containers
+- squid: mgr/dashboard: fix health popover not showing
+- qa/suites/upgrade: update ignorelist with cephfs specific warnings (under stress-split)
+- squid: deb: use glob match to support systemd unit dir changes
+- qa/cephfs: ignore when specific OSD is reported down during upgrade
+- squid: mds,client: correct last_issue struct fields and consistently send last_issue in cap messages
+- doc/cephfs: update docs since "subvolume info" cmd output can also...
+- squid: qa/tasks/workunit: fix no module named 'pipes'
+- squid: mgr/orchestrator: allow passing group to apply/add nvmeof commands
+- os/bluestore: print the first RocksDB level which doesn't fit into fast
+- script/build-with-container: detect when cached build images need rebuilding
+- qa: use a larger timeout for kernel_untar_build workunit
+- client: do not check file size when inode does not have Fc caps
+- squid: cephfs-journal-tool: fix segfault during 'journal import' from invalid dump file
+- messages/MClientCaps: use correct ceph_seq_t for cap sequence types
+- OSDMonitor: Make sure pcm is initialised
+- qa/standalone: fix bluefs expand test case
+- squid: mgr/DaemonState: Minimise time we hold the DaemonStateIndex lock
+- squid: client: use path supplied in statfs
+- src/common: add guidance for mon_warn_pg_not_scrubbed
+- tools: respect set features when adding addresses
+- squid: mgr/cephadm: mgr orchestrator module raise exception if there is trailing tab in yaml file
+- script/build-with-container: improve error handling for invalid distros
+- squid: pybind/mgr/dashboard: Use teuthology's actual requirements
+- mds: rollback the snapdiff fragment entries with the same name if needed.
+- rgw/notification: fix reserved_size drift in 2pc_queue causing ENOSPC errors
+- rgw: make keystone work without admin token(service ac requirement)
+- qa: Add data read/write test for nfs-ganesha
+- squid: rgw/lc: stop using merge_and_store_attrs in remove_bucket_config
+- doc/dev/config: Document how to use :confval: directive for config options
+- squid: rgw/lc: LCOpAction_CurrentExpiration checks mtime for delete markers
+- qa/tasks/workunit: fix no module named 'pipes'
+- Use system-defined location for home directories
+- squid: monitoring: add user-agent headers to the urllib
+- mds: add the event when creating the batch head
+- squid: qa/tasks/ceph_manager: population must be a sequence
+- squid: rbd-mirror: prevent image deletion if remote image is not primary
+- qa/tests: v19.2.0 lacks the fix from tracker which causes NeoRadosCls.RemoteReads
+- mds: add issue_seq to all cap messages
+- squid: mgr/cephadm: allow disabling rgw_run_sync_thread through spec
+- test/client: add ll_walk test with cwd and root path
+- qa: krbd_rxbounce.sh: do more reads to generate more errors
+- release note: add a note that "subvolume info" cmd output can also...
+- client: bring client_lock out of statfs helper method
+- HealthMonitor: Add topology-aware netsplit detection and warning
+- mgr/dashboard: service creation fails if service name is same as service type
+- script/build-with-container: be consistent with naming in distro kinds
+- qa/tasks/cephfs: add test for dump stray comamnd
+- squid: mgr/dashboard: allow deletion of non-default zone and zonegroup
+- mgr/Mgr.cc: clear daemon health metrics instead of removing down/out osd from daemon state
+- pybind/rados: fix the incorrect order of offset,length in WriteOp.zero
+- qa: use actual sqlite3 blob instead of string
+- squid: doc/radosgw/s3: Document delete-if-unmodified-since
+- squid: mds: do not schedule quiesce for non-head imported inodes
+- squid: rgw-testing: fix unexpected keyword argument 'expected_sizes' for kafka test
+- qa/tests: ignore 'pg stuck peering' during upgrade tests
+- client: use path supplied in statfs
+- squid: librbd: fix ExclusiveLock::accept_request() when !is_state_locked()
+- squid: deb/cephadm: add explicit --home for cephadm user
+- squid: msg/async: Encode message once features are set
+- mgr/nfs: make sure sectype is a list when parsed
+- debian: radosgw: add media-types packages as alternative for mime-support
+- doc/cephfs: add note about change in format of name of volume pool...
+- squid: debian: radosgw: add media-types packages as alternative for mime-support
+- squid: monitoring: fix "In" OSDs in Cluster-Advanced grafana panel.
+- squid: rgw-test: fix bug kafka unexpected keyword argument 'expected_sizes'
+- squid: monitoring: fix MTU Mismatch alert rule and expr
+- qa/suites/upgrade: ignore "osd down" cluster log variations
+- librbd: add ExclusiveLock::accept_request() overload
+- auth: msgr2 can return incorrect allowed_modes through AuthBadMethodFrame
+- squid: mgr/vol: add command to get snapshot path
+- client: Fix signed comparison warning
+- squid: qa/tasks: generalize stuck pg ignorelist entry
+- mgr/dashboard: Blank entry for Storage Capacity in dashboard under Cluster > Expand Cluster > Review
+- squid: tasks/cbt_performance: Tolerate exceptions during performance data up…
+- rgw/lc: stop using merge_and_store_attrs in remove_bucket_config
+- rbd-mirror: prevent image deletion if remote image is not primary
+- script/build-with-container: cache git branch result
+- mgr/cephadm: mgr orchestrator module raise exception if there is trailing tab in yaml file
+- The compilation of ISAL compress in the current code depends on the macro HAVE_NASM_X64_AVX2.
+- qa/cephfs: move tests for "snapshot getpath" cmd to a separate class
+- qa: ignore expected OSD_ROOT_DOWN
+- librbd: Clean up usage of IoCtx
+- os/bluestore:fix bluestore_volume_selection_reserved_factor usage
+- qa/cephfs: add tests for confirmationn required to change max_mds
+- qa/tests: added initial test for client-upgrade-squid-tentacle
+- mgr/orchestrator: allow passing group to apply/add nvmeof commands
+- script/build-with-container: add ubuntu 20.04 (focal)
+- test: multi client file read/write test for extending writes
+- doc/cephfs: Improve mount-using-fuse.rst
+- squid: msg: drain stack before stopping processors to avoid shutdown hang
+- doc/dev/release-process.rst: document new Jenkins job for containers
+- test: remove unit tests about cache tiering
+- test/fs: only add libcephfs as library dependency
+- squid: build-with-container: add argument groups to organize options
+- qa: increase the wait time to prevent check_counter failing
+- squid: mon,cephfs: require confirmation when changing max_mds on unhealthy cluster
+- script/build-with-container: add workarounds for older python versions
+- client: move mref_reader check in statfs out of helper
+- monitoring: fix rgw_servers filtering in rgw sync overview grafana
+- squid: mgr/cephadm: add "allow_set_io_flusher_fail = true;" to ganesha conf
+- cephfs-journal-tool: check the headers in dump file after journal recovery
+- rados/valgrind-leaks: add timeout value for stop command
+- squid: mgr/nfs: make sure sectype is a list when parsed
+- mgr/vol: add command to get snapshot path
+- test/pybind/test_rados.py: add test for reversed arguments offset,length in WriteOp.zero
+- msg/async: Encode message once features are set
+- test/libcephfs: copy DT_NEEDED entries from input libraries
+- squid: qa/suites/krbd: use a standard fixed-1 cluster in unmap subsuite
+- cephfs-shell: Add the option to remove xattr
+- mgr/dashboard: allow deletion of non-default zone and zonegroup
+- rgw: Record the service_unique_id , if present, in the SrviceMap
+- qa/cephfs: use "snapshot getpath" cmd instead of constructing...
+- squid: Revert "pybind/mgr: Hack around the 'ImportError: PyO3 modules may on…
+- doc/mgr/crash.rst: remove outdated module enabling instructions
+- squid: common/options: fix typo in description
+- mds: do not schedule quiesce for non-head imported inodes
+- common: properly convert frag_t to net/store endianness
+- msg: drain stack before stopping processors to avoid shutdown hang
+- cephfs-journal-tool: fix segfault during 'journal import' from invalid dump file
+- qa/suites: Make fixed-4 an option for verify tests
+- release note: add note for change in format of name of pool...
+- qa/cephfs: ignore warning that pg is stuck peering for upgrade jobs
+- script/build-with-container: lightly organize the distro kind aliases
+- build-with-container: ensure npm dir is set up before configure
+- doc: add note admonitions in two files
+- mgr/cephadm: add "allow_set_io_flusher_fail = true;" to ganesha conf
+- monitoring: upgrade grafana version to 12.3.1
+- squid: doc: add note admonitions in two files
+- squid: os/bluestore: compact patch to fix extent map resharding
+- squid: mds: dump next_snap when checking dentry corruption
+- doc/cephfs: update about changing max_mds FS setting variable
+- squid: monitor: Enhance historic ops command output and error handling
+- make-debs.sh: use ID instead of NAME for workdir
+- Squid: OSDMonitor: Make sure pcm is initialised
+- qa: add test case for remove xattr
+- deb: use variable expansion to support systemd unit dir changes
+- qa/cephfs: add a helper method to construct the snapshot path
+- mgr/vol: keep clone source info even after cloning is finished
+- include/ceph_fs: correct ceph_mds_cap_item field name
+- qa/tasks/ceph_manager: population must be a sequence
+- Dockerfile.build: make FOR_MAKE_CHECK a build argument
+- test/client: do not depend on libcephfs
+- squid: doc/mgr/crash.rst: remove outdated module enabling instructions
+- test/rbd-mirror: eliminate a race in ResyncRequestedRemoteNotPrimary
+- squid: test/rbd: remove unit tests about cache tiering
+- mgr/dashboard: disable saml2 tests when the dep is not there
+- qa/tasks/cephadm: don't fail if we've already cleaned up conf/keyring
+- squid: doc/cephfs: Improve mount-using-fuse.rst
+- squid: mds/MDSDaemon: unlock mds_lock while shutting down Beacon and others
+- qa: test unmount hang using high/low level APIs
+- squid: client: cephfs user-space client fixes
+- test/encoding/readable: Add backward incompat checks
+- build-with-container: improve source rpm detection
+- qa/tasks/mgr: test_module_selftest set influx hostname to avoid warnings
+- squid: mds: nudge log for unstable locks after early reply
+- doc: Clarify the status of MS Windows client support
+- squid: test/common: unittest_fault_injector omits unit-main target
+- qa/suites/upgrade: ignore temporary OSD_HOST_DOWN health warning
+- doc/radosgw/s3: Document delete-if-unmodified-since
+- make-debs.sh: Don't use ccache if using sccache
+- mon/MgrMonitor: add a space before "is already disabled"
+- squid: client: ll_walk will process absolute paths as relative
+- mds: remove dead code
+- dashboard: ensure nodeenv downloaded content is owned by current user
+- rgw: enhanced java s3-tests change setting of JAVA_HOME
+- mgr/dashboard: fix health popover not showing
+- build-with-container: add argument groups to organize options
+- squid: osd: Access/Modify epoch maps under mutex in OSDSuperblock class
+- mgr/cephadm: allow disabling rgw_run_sync_thread through spec
+- monitoring: make cluster matcher backward compatible for pre-7.1 metrics
+- doc: add dump stray folder command to the docs
+- pybind/mgr/dashboard: Use teuthology's actual requirements
+- squid: rgw: fix empty storage class on display of multipart uploads
+- qa/tasks/cephfs/mount: use 'ip r' instead 'route'
+- test/libcephfs: use more entries to reproduce snapdiff fragmentation
+- qa/tasks/cephfs/mount: introduce _default_gateway method
+- tasks/cephfs: Use different errmsg for invalid dir
+- squid: backports variants improvements and Dockerfile.build changes
+- mgr/DaemonState: Minimise time we hold the DaemonStateIndex lock
+- osd/scrub: do not reduce min chunk on preemption
+- qa/suites/krbd: use a standard fixed-1 cluster in unmap subsuite
+- script/build-with-container: support --build-arg arguments
+- ceph-volume: avoid RuntimeError on ceph-volume raw list with non-existent loop devices
+- rgw: make sure max_objs_per_shard is appropriate in debugging scenarios
+- squid: rgw: check all JWKS for STS
+- squid: cephfs-top: exception when terminal size greater than PAD_WIDTH
+- squid: osd/scrub: do not reduce min chunk on preemption
+- squid: doc/cephfs: add a note about estimated replay completion time
+- mon,cephfs: require confirmation when changing max_mds on unhealthy cluster
+- test/common: unittest_fault_injector omits unit-main target
+- qa/tasks/rbd_mirror_thrash: don't use random.randrange() on floats
+- squid: cephfs-shell: add option to remove xattr
+- make-debs.sh: make "skip debug packages" conditional
+- squid: doc/dev/config: Document how to use :confval: directive for config op…
+- rgw: check all JWKS for STS
+- qa/tasks: generalize stuck pg ignorelist entry
+- squid: mgr/dashboard: Fixed incorrect snapshot scheduled date for rbd block in GUI
+- qa: do not fail cephfs QA tests for slow bluestore ops
+- squid: client: fix unmount hang after lookups
+- squid: cmake: remove _FORTIFY_SOURCE define
+- script/build-with-container: add a pair of fedora distro versions
+- qa: Restrict rados api tests to large clusters and increase timeout
+- qa/workunits/cephtool: add extra privileges to cephtool script
+- test: use json_extract instead of awkward json_tree
+- squid: rgw: don't use merge_and_store_attrs() when recreating a bucket
+- librbd: don't complete ImageUpdateWatchers::shut_down() prematurely
+- deb/cephadm: add explicit --home for cephadm user
+- qa: Add libcephfs client test with objectcacher disabled
+- mds: dump next_snap when checking dentry corruption
+- qa/suites/upgrade/telemetry-upgrade: ignore expected health warning
+- mds/MDSDaemon: unlock mds_lock while shutting down Beacon and others
+- squid: mgr/vol: keep and show clone source info
+- script/build-with-container: remove unused build arg
+- squid: memory lock issues causing hangs during connection shutdown
+- test/client: Fix aio nonblocking test
+- squid: rgw: discard olh_ attributes when copying object from a versioning-suspended bucket to a versioning-disabled bucket
+- rgw: fix empty storage class on display of multipart uploads
+- qa/workunits/rbd: moving mirror_image_snapshot to wait_for_replay_complete
+- squid: doc: do not depend on typed-ast
+- monitoring: fix MTU Mismatch alert rule and expr
+- suites/rados/cephadm: typo in ignotr list for still running message
+- mds: nudge log for unstable locks after early_reply
+- make-debs.sh: Optionally take debian version
+- squid: tasks/cephfs/mount: use 192.168.144.0.0/20 for brxnet
+- common/options: fix typo in description
+- cmake: remove _FORTIFY_SOURCE define
+- script/build-with-container: Add Rocky 9
+- rgw: discard olh_ attributes when copying object from a versioning-suspended bucket to a versioning-disabled bucket
+- mgr/dashboard: fix access control permissions for roles
+- librbd: fix ExclusiveLock::accept_request() when !is_state_locked()
+- squid: mgr/telemetry: add stretch cluster data
+- cephfs-top: exception when terminal size greater than PAD_WIDTH
+- squid: qa/tasks/cephfs/mount: use 'ip route' instead 'route'
+- squid: mds: Fix invalid access of mdr->dn[0].back()
+- qa: reconfigure only the appropriate client auth caps
+- mds: move MDSContext completion handling to finish method
+- rgw: don't use merge_and_store_attrs() when recreating a bucket
+- tasks/cbt_performance: Tolerate exceptions during performance data updates
+- buildcontainer-setup.sh: Fix curl package conflict
+- mds: the assert should be before the journal entry submit otherwise it's racy
+- squid: pybind/mgr: pin cheroot version in requirements-required.txt
+- client: fix memory leak in Client::CRF_iofinish::complete
+- librbd: prepare lock_acquire() for changing between policies
+- squid: sync build-with-container patches from main
+- squid: qa/tasks/rbd_mirror_thrash: don't use random.randrange() on floats
+- squid: cephfs: fix monclient not subscribed monmap/config
+- monitoring: fix CephPgImbalance alert rule expression
+- doc: do not depend on typed-ast
+- squid: doc: update mgr modules notify_types
+- buildcontainer-setup.sh: allow testing with various ELish bases
+- librbd: amend error message in lock_acquire()
+- messages/MClientCaps: dump issue_seq for debugging
+- rgw: java s3-tests change setting of JAVA_HOME
+- doc: Remove sphinxcontrib-seqdiag Python package from RTD builds
+- qa/suites/upgrade: ignore undersized PG during stress splits
+- script/build-with-container: add debian 13 (trixie)
+- test: disable known flaky tests in run-rbd-unit-tests
+- squid: mds: dump export_ephemeral_random_pin as double
+- doc: update mgr modules notify_types
+- cephfs: make sure mon authenticate before objecter start
+- os/bluestore: Fix default base size for histogram
+- qa: fix test_cephfs_mirror_stats failure
+- rgw/lc: LCOpAction_CurrentExpiration checks mtime for delete markers
+- qa: ignore variant of down fs
+- make-srpm.sh: Skip make-dist if tarball is present
+- include/ceph_fs: correct ceph_mds_cap_peer field name
+- common: take string_view for strict_tobool
+- squid: mds: session in the importing state cannot be cleared if an export subtree task is interrupted while the state of importer is acking
+- rgw/notification: Prevent reserved_size leak by decrementing overhead on commit/abort.
+- install-deps.sh: add a temporary repo for missing el10 deps
+- qa/workunits/rbd: short-circuit status() if "ceph -s" fails
+- mgr/dashboard: add types for mgr-module list
+- qa/suites/upgrade: use common ignorelist
+- debian/control: add iproute2 to build dependencies
+- squid: qa: ignore variant of down fs
+- squid: install-deps: Replace apt-mirror
+- monitor: Enhance historic ops command output and error handling
+- doc/cephfs: add a note about estimated replay completion time
+- qa: add test for importer's unexpected client eviction after an export subtree task is interrupted
+- include/frag.h: un-inline methods to reduce header dependencies
+- build-with-container.py: Add --ceph-version
+- squid: rgw: add metric when send message with kafka and ampq
+- rgw: add metric when send message with kafka and ampq
+- qa: make test_progress atomically capture OSD marked in/out events
+- client: Fix aio zerobyte file read
+- mgr/dashboard: catch protobuf error due to mismatch in version
+- osd: Access/Modify epoch maps under mutex in OSDSuperblock class
+- PendingReleaseNotes: add a release note about confirm flag for max_mds
+- qa/suites/upgrade: add expected filesystem warnings to ignorelist
+- squid: qa/cephfs: override testing kernel with -k option
+- squid: rgw/account: bucket acls are not completely migrated once the user is migrated to an account
+- mgr/dashboard: Fixed incorrect snapshot scheduled date for rbd block in GUI
+- squid: rgw: allow specifying ssl certificate for radosgw-admin operations
+- osd/PrimaryLogPG: encode an empty data_bl for empty sparse reads
+- mds: fix dump stray command
+- common: drop stack singleton object of temp messenger for foreground ceph daemons
+- tasks/cephfs/mount: use 192.168.144.0.0/20 for brxnet
+- CephContext: acquire _fork_watchers_lock in notify_post_fork()
+- squid: CephContext: acquire _fork_watchers_lock in notify_post_fork()
+- qa: add test for importer's session cleanup after an export subtree task is interrupted
+- squid: build-with-container: build image variants
+- squid: ceph-fuse: Improve fuse mount usage message
+- squid: test-rgw-multisite: create default realm in multisite test script
+- Squid: mgr/dashboard: Changing placement of a mds to label - creates a new mds-service, mds.label
+- test/bluestore: add volume selector tests
+- test: Add statfs test case for mixed quotas
+- squid: debian/control: add iproute2 to build dependencies
+- qa/workunits/fs/misc: remove data pool cleanup
+- mdstypes: Dump export_ephemeral_random_pin as double
+- Allow passing ssl_certificate as an rgw_frontend_extra_arg.
+- client: asynchronous fsync can decrement request ref twice
+- rgw: scale shards based on versioned() to cover suspended buckets
+- tests: add a test case for cephfs SingletonClient
+- mds: session in the importing state cannot be cleared if an export subtree task is interrupted while the state of importer is acking
+- common/frag: produce valid fragments for test instances
+- qa/suites/upgrade: use tagged versions of reef
+- client: check if inode ref is dir before proceeding with lookup
+- rbd-mirror: add cluster fsid to remote meta cache key
+- rgw/account: bucket acls are not completely migrated once the user is migrated to an account
+- make-srpm.sh: don't shell out redundantly to pwd
+- squid: mgr/dashboard: 72409 : Fixed parsing error in grafana for host overall performance iframe
+- install-deps: Replace apt-mirror
+- squid: mgr/dashboard : Fixed usage bar for secondary site in rbd mirroing
+- qa/tasks/backfill_toofull.py: Fix assert failures with & without compression
+- squid: mds: include auth credential in session dump
+- squid: rbd-mirror: add cluster fsid to remote meta cache key
+- rgw/frontend: fix typo in function name
+- release note: add a note for "snapshot getpath" command
+- squid: mgr/cephadm: Use a persistent volume to store Loki DB
+- mds: add importing_count to session dump
+- mgr/dashboard: Use a persistent volume to store Loki DB
+- squid: rgw/s3: remove 'aws-chunked' from Content-Encoding response
+- qa/rgw: bucket notifications use pynose
+- squid: rbd-mirror: allow incomplete demote snapshot to sync after rbd-mirror daemon restart
+- build-with-container.py: Add --env-file
+- make-debs.sh: Optionally avoid make-dist
+- doc: fetch releases from main branch
+- pybind/mgr: pin cheroot version in requirements-required.txt
+- qa: test 'journal import' recognizes invalid headers post journal recovery
+- script/build-with-container: add rocky10 to built-in distros
+- pybind/mgr: Fix missing empty lines in mgr_module.py
+- mds: include sysinfo in status command output
+- squid: qa: krbd_blkroset.t: eliminate a race in the open_count test
+- script/buildcontainer-setup: set JENKINS_HOME while building image
+- squid: doc/rados/operations: Improve health-checks.rst
+- test/rgw/kafka: fix kafka relase to more recent one
+- squid: cephadm: stop sidecar systemd units when restarting main units
+- cephfs-journal-tool:: Don't reset the journal trim position
+- squid: doc/radosgw: add rgw_enable_lc_threads & rgw_enable_gc_threads
+- script/build-with-container: fix building on docker
+- build-with-container.py: Pass version to make-debs
+- squid: doc/rados: document section absent in release < T
+- squid: mon/OSDMonitor: call no_reply() on ignored osd alive
+- src/script: add bookworm to build-with-container.py
+- client: do not open dir for a non-dir inode
+- qa/cephfs: test that group name is included in pool namespace name
+- squid: pybind/mgr: Fix missing empty lines in mgr_module.py
+- client: Fix caps_ref[c]<0 assert
+- client: process path without inode anchor
+- rgw/s3: remove 'aws-chunked' from Content-Encoding response
+- squid: mgr/vol: make "snapshot getpath" cmd work with v1 and legacy
+- squid: mon: Track and process pending pings after election
+- mds: MDCache: check validity of mdr requests before dispatching
+- Dockerfile.build: Make sccache repo configurable
+- script/buildcontainer-setup: set WITH_CRIMSON to support crimson builds
+- squid: rgw/admin: Add max-entries and marker to bucket list
+- squid: librbd: images aren't closed in group_snap_*_by_record() on error
+- qa: ignore cluster warning (evicting unresponsive ...) with tasks/mgr-osd-full
+- common: simplify fragment printing
+- squid: ceph-volume: drop udevadm subprocess calls
+- pybind/rados: add note for reversed arguments to WriteOp.zero()
+- rbd-mirror: allow incomplete demote snapshot to sync after rbd-mirror daemon restart
+- qa/workunit: update telemetry quincy/reef workunits with "basic_stretch_cluster" collection
+- qa/workunits/rbd: drop randomized sleeps in "big image" tests
+- qa/valgrind.supp: make gcm_cipher_internal suppression more resilient
+- qa: Disable OSD benchmark from running for tests.
+- install-deps: extract SUDO variable logic into a reusable function
+- qa/suites/upgrade: use tagged versions of quincy
+- squid: mds: fix snapdiff result fragmentation
+- squid: mgr/dashboard : Fixed mirrored image usage info bar
+- mgr/dashboard : Fixed usage bar for secondary site in rbd mirroing
+- client: Gracefully handle empty pathname for statxat()
+- client: Gracefully handle empty pathname for chownat()
+- mgr/orchestrator: make group parameter optional for nvmeof (squid)
+- rgw: make jwks url verification configurable
+- mds: include auth credential in session dump
+- mon/HealthMonitor: avoid MON_DOWN for freshly added Monitor
+- qa/cephfs: override testing kernel with -k option
+- build-with-container.py: Add --rpmbuild-extra-args
+- qa/workunits/rbd: avoid unnecessary sleeping in stop_mirror()
+- ceph-fuse: Improve fuse mount usage message
+- squid: doc: Fixed a spelling error.
+- ceph-volume: drop udevadm subprocess calls
+- msg/async: race condition between reset_recv_state and shutdown_connections
+- squid: backport build-with-container patches from main
+- qa/tasks/thrashosds-health: whitelist PG_BACKFILL_FULL
+- qa: set column for insertion
+- squid: qa/workunits/rgw: drop netstat usage
+- monitoring/ceph_mixin: fix Cluster - Advanced OSD grafana panel
+- squid: qa: relocate subvol creation overrides and test
+- qa: rbd_mirror_fsx_compare.sh doesn't error out as expected
+- test: Add test for libcephfs statfs
+- rgw: asio/beast add ssl hot-reload
+- workunits/dencoder: use readable.sh script instead of python script
+- make-debs.sh: invoke tar with --no-same-owner
+- rgw: fix 'bucket rm --bypass-gc' for copied objects
+- mds: use strict_strtobool for parsing bools
+- doc/radosgw: add rgw_enable_lc_threads & rgw_enable_gc_threads
+- squid: rgw: fix 'bucket rm --bypass-gc' for copied objects
+- qa/tests: added 19.2.3 to the mix
+- squid: osd: stop scrub_purged_snaps() from ignoring osd_beacon_report_interval
+- squid: mgr/dashboard: Fix inline markup warning in API documentation
+- qa: Validate cephfs-journal-tool reset trim
+- mgr/vol: show clone source info in "subvolume info" cmd output
+- qa/cephfs: add tests for "snapshot getpath" cmd against v1 and...
+- squid: qa/cephadm: stop cephadm mgr module during cleanup
+- squid: mgr: avoid explicit dropping of ref
+- squid: osd: add clear_shards_repaired command
+- doc/rados/operations: Improve health-checks.rst
+- mds: Fix invalid access of mdr->dn[0].back()
+- squid: doc/rados/ops: add caps restore command
+- squid: common/ceph_context: use std::atomic<std::shared_ptr<T>>
+- squid: Handle failures in metric parsing
+- qa/cephadm: stop cephadm mgr module during cleanup
+- Handle failures in metric parsing
+- qa/suites/rados/verify: Allow selection of 2 or 4 node cluster
+- squid: doc: Document ceph-mgr module configuration options
+- rgw/admin: Add max-entries and marker to bucket list
+- mds: MDCache request cleanup handles potential null mdr
+- mgr/dashboard: 72409 : Fixed parsing error in grafana for host overall performance iframe
+- squid: blk/kernel: improve DiscardThread life cycle.
+- qa: test fetching foreign config item
+- doc/radosgw: remove cloud-restore from squid
+- rgw: allow specifying ssl certificate for radosgw-admin operations
+- mds: client is evicted when an export subtree task is interrupted
+- rgw/qa: Move admin pagination tests
+- squid: client: account for mixed quotas in statfs
+- qa/workunits/rgw: drop netstat usage
+- squid: install-deps.sh: install proper compiler version on Debian/Ubuntu
+- blk/kernel: improve DiscardThread life cycle.
+- include: detect corrupt frag from byteswap
+- librbd: introduce RBD_LOCK_MODE_EXCLUSIVE_TRANSIENT
+- squid: mgr/dashboard: update teuth_ref hash in api test
+- qa/workunits/rbd: reduce randomized sleeps in live import tests
+- Dockerfile.build: make WITH_CRIMSON a build arg
+- cephadm: stop sidecar systemd units when restarting main units
+- mon/OSDMonitor: call no_reply() on ignored osd alive
+- qa/standalone: increase WAL volume size to 1GB
+- squid: mgr/cephadm: open ceph-exporter when firewalld is enabled
+- squid: qa/workunits/rbd: reduce randomized sleeps in live import tests
+- qa/cephfs: minor improvement for a helper method
+- doc: Fixed a spelling error.
+- osd: add clear_shards_repaired command
+- dashboard: fix the workaround for unpacking node sources
+- script/buildcontainer-setup: add dependency for llvm.sh to buildcontainer script
+- squid: doc/rados: repair short underline
+- client: resolve bogus self-assignment
+- qa/suites/upgrade: add "OBJECT_UNFOUND" to ignorelists
+- mgr/dashboard: Fix inline markup warning in API documentation
+- doc: Document ceph-mgr module configuration options
+- doc/rados: document section absent in release < T
+- squid: cephadm: rgw: allow specifying the ssl_certificate by filepath
+- squid: mgr/snap_schedule: correctly fetch mds_max_snaps_per_dir from mds
+- src/script: add seastar deps to ubuntu container image
+- install-deps.sh: enable crb repository for centos 10 stream
+- mgr/dashboard : Fixed mirrored image usage info bar
+- qa/tasks: make rbd_mirror_thrash inherit from ThrasherGreenlet
+- librbd: images aren't closed in group_snap_*_by_record() on error
+- qa/suites/rados/thrash-old-clients: ignore warnings about peering PGs
+- common/ceph_context: use std::atomic<std::shared_ptr<T>>
+- mgr/vol: move reusable parts from async_cloner
+- squid: client: prohibit unprivileged users from setting sgid/suid bits
+- squid: rgw: beast add ssl hot-reload
+- common/ceph_context: Fix std::atomic<std::shared_ptr> compatibility
+- client: account for mixed quotas in statfs
+- squid: qa: fix multi-fs tests in test_mds_metrics.py
+- install-deps.sh: install proper compiler version on Debian/Ubuntu
+- doc/cephfs: edit disaster-recovery.rst
+- squid: mds: add MDS asok command for dumping stray directories
+- make-debs.sh: Optionally rm version from build dir
+- doc/radosgw: Improve rgw-cache.rst
+- squid: cephfs-journal-tool: Journal trimming issue
+- test/libcephfs: Polisihing SnapdiffDeletionRecreation case
+- os/bluestore: rename row names in RocksDBBlueFSVolumeSelector.
+- qa: krbd_blkroset.t: eliminate a race in the open_count test
+- qa/suites/upgrade: ignore PG_DAMAGED
+- doc/rados/ops: add caps restore command
+- qa: test charmap changes with dir and snaps
+- squid: src/ceph_osd, osd: Implement running benchmark during OSD creation - Phase 1
+- osd: stop scrub_purged_snaps() from ignoring osd_beacon_report_interval
+- squid: mgr/vol: include group name in subvolume's pool namespace name
+- squid: doc/cephfs: edit disaster-recovery.rst
+- qa/suites/fs/upgrade/mds_upgrade_sequence: replace "reef" with "v18.2.8"
+- radosgw-admin: Pass max_entries for bucket list
+- squid: mgr/dashboard: fix bucket replication disable
+- install-deps.sh: enable crb for rocky 10
+- squid: doc/radosgw: Improve rgw-cache.rst
+- mon: Track and process pending pings after election
+- common/options: chomp whitespace
+- mgr/snap_schedule: correctly fetch mds_max_snaps_per_dir from mds
+- squid: doc/src/common/options: mgr.yaml.in edit
+- mgr/dashboard: add a cobertura xml file workaround variable
+- qa: bail sqlite3 on any error
+- mds: allow disabling batch ops
+- squid: qa: ignore warnings variations
+- qa: relocate subvol creation overrides and test
+- qa: ignore cephadm failed daemon warnings during thrashing
+- squid: client: Handle empty pathnames for ceph_chownat() and ceph_statxat()
+- client: prohibit unprivileged users from setting sgid/suid bits
+- mgr/cephadm: open ceph-exporter when firewalld is enabled
+- squid: src/pybind/mgr/pg_autoscaler/module.py: fix 'pg_autoscale_mode' output
+- client: Fix libcephfs aio metadata corruption.
+- RGW:fix obj by multipart upload cant get tag
+- mgr/vol: include group name in subvolume's pool namespace name
+- squid: doc/man/8: Improve mount.ceph.rst
+- qa: add MDS_INSUFFICIENT_STANDBY to ignorelist
+- squid: qa: suppress OpenSSL valgrind leaks
+- squid: mds: check for snapshots on parent snaprealms
+- squid: mgr/cephadm: fix typo with vrrp_interfaces in keepalive setup
+- qa: ignore expected MON_DOWN
+- doc/rados: repair short underline
+- qa/suites/upgrade: add "Replacing daemon mds" to ignorelist
+- mds: check for snapshots on parent snaprealms
+- squid: qa: ignore pg availability/degraded warnings
+- librbd/mirror: detect trashed snapshots in UnlinkPeerRequest
+- mgr/dashboard: fix bucket replication disable
+- monc: synchronize tick() of MonClient with shutdown()
+- Dockerfile.build: Install sccache
+- mgr/dashboard: update teuth_ref hash in api test
+- squid: rgw: update keystone repo stable branch to 2024.2
+- qa/workunits/rbd: fix unbound variable in status()
+- os/bluestore: enforce extent split on shard boundary
+- squid: qa: add missing .qa links
+- squid: doc/radosgw: remove cloud-restore from squid
+- qa: ignore fs offline warning
+- qa: fix multi-fs tests in test_mds_metrics.py
+- squid: rgw: fix radosgw-admin object unlink ...
+- build-with-container.py: Pass distro to make-debs
+- doc/src/common/options: mgr.yaml.in edit
+- mgr: avoid explicitly dropping ref of MgrOpRequest.request
+- qa/cephfs: add tests for "subvolume snapshot getpath" cmd
+- squid: osd/scrub: avoid using moved-from auth_n_errs
+- os/bluestore: Fix reshard on spanning blobs
+- Dockerfile.build: improve docker compatibility
+- qa/rbd/iscsi: ignore MON_DOWN warning in logs
+- qa: ignore warnings variations
+- squid: qa/rbd/iscsi: ignore MON_DOWN warning in logs
+- squid: qa: multiple fixes in test_mirroring.py
+- Remove git clean -fdx
+- squid: doc/rados/configuration: Mention show-with-defaults and ceph-conf
+- qa/suites/fs/upgrade/mds_upgrade_sequence: replace "quincy" with "v17.2.8"
+- doc/man/8: Improve mount.ceph.rst
+- refs/pull/67294/head:
+- refs/pull/66838/head:
+- refs/pull/68116/head:
+- refs/pull/67884/head:
+- refs/pull/67278/head:
+- refs/pull/67001/head:
+- refs/pull/66480/head:
+- refs/pull/66985/head:
+- refs/pull/61302/head:
+- refs/pull/66915/head:
+- refs/pull/62454/head:
+- refs/pull/69057/head:
+- refs/pull/64686/head:
+- refs/pull/67527/head:
+- refs/pull/67704/head:
+- refs/pull/68227/head:
+- refs/pull/67280/head:
+- refs/pull/67761/head:
+- refs/pull/67580/head:
+- refs/pull/66990/head:
+- refs/pull/67582/head:
+- refs/pull/67454/head:
+- refs/pull/67392/head:
+- refs/pull/66884/head:
+- refs/pull/66126/head:
+- refs/pull/66829/head:
+- refs/pull/66964/head:
+- refs/pull/60391/head:
+- refs/pull/63026/head:
+- refs/pull/67356/head:
+- refs/pull/66897/head:
+- refs/pull/67501/head:
+- refs/pull/67623/head:
+- refs/pull/67066/head:
+- refs/pull/67497/head:
+- refs/pull/67558/head:
+- refs/pull/64815/head:
+- refs/pull/68517/head:
+- refs/pull/68528/head:
+- refs/pull/69058/head:
+- refs/pull/63018/head:
+- refs/pull/61417/head:
+- refs/pull/65298/head:
+- refs/pull/59688/head:
+- refs/pull/65758/head:
+- refs/pull/67994/head:
+- refs/pull/66541/head:
+- refs/pull/67794/head:
+- refs/pull/68526/head:
+- refs/pull/61894/head:
+- refs/pull/67800/head:
+- refs/pull/62061/head:
+- refs/pull/67575/head:
+- refs/pull/67796/head:
+- refs/pull/67324/head:
+- refs/pull/67322/head:
+- refs/pull/69127/head:
+- refs/pull/66973/head:
+- refs/pull/67398/head:
+- refs/pull/63344/head:
+- refs/pull/67450/head:
+- refs/pull/68119/head:
+- refs/pull/68323/head:
+- refs/pull/66335/head:
+- refs/pull/69059/head:
+- refs/pull/68451/head:
+- squid: mds: skip charmap handler check for MDS requests
+- src/pybind/mgr/pg_autoscaler/module.py: fix 'pg_autoscale_mode' output
+- rgw/doc: Add doc for admin bucket list pagination
+- squid: qa/standalone/scrub: fix "scrubbed in 0ms" in osd-scrub-test.sh
+- osd/scrub: avoid using moved-from auth_n_errs
+- doc/cephfs: add mds_allow_batched_ops to conf ref
+- libcephfs.h: Fix API documentation for ceph_statxat
+- ceph-volume: avoid Device() instantiation in lvm OSD filtering
+- mon/MonMap: Dump addr in backward compatible format
+- mds: skip charmap handler check for MDS requests
+- qa/standalone/scrub: fix "scrubbed in 0ms" in osd-scrub-test.sh
+- squid: mgr/dashboard: Dashboard nfs export editor rejects ipv6 addresses
+- qa: suppress OpenSSL valgrind leaks
+- squid: os/bluestore: In BlueFS::truncate accept wierd alloc_unit
+- squid: os/bluestore: Disable invoking unittest_deferred
+- squid: doc/cephfs: edit troubleshooting.rst (Slow MDS)
+- doc/rbd/rbd-config-ref: add clone settings section
+- squid: doc/radosgw: edit "Lifecycle Settings"
+- test/multisite: create default realm in multisite config
+- squid: doc/rados/configuration: Small improvements in ceph-conf.rst
+- rgw: fix radosgw-admin object unlink ...
+- qa/cephfs: lua to respect missing kernel in yaml
+- mgr/cephadm: fix typo with vrrp_interfaces in keepalive setup
+- rgw: update keystone repo stable branch to 2024.2
+- doc/cephfs: edit troubleshooting.rst (Slow MDS)
+- qa: ignore pg availability/degraded warnings
+- squid: doc/rbd/rbd-config-ref: add clone settings section
+- squid: Rocky 9/10 support backports
+- qa: test for charmap handling on reintegration
+- rgw: trigger resharding of versioned buckets sooner
+- qa/suites/fs/thrash: add convolve operator for overrides
+- squid: qa: correct daemon for warning conf
+- qa: whitelist slow requests progress.yaml
+- mon: add time_added to mon_info_t
+- squid: Revert "doc: mgr/dashboard: add OAuth2 SSO documentation"
+- qa/standalone: shorten bluefs test durations
+- pybind/mgr/dashboard/frontend: add NPM_CACHEDIR envvar, use in bwc
+- doc: update docs for 'fs snapshot mirror ls' command
+- os/bluestore: In BlueFS::truncate accept wierd alloc_unit
+- squid: doc/cephfs: Update quota.rst
+- qa: test 'ceph fs snapshot mirror ls' command
+- doc/cephfs: Update quota.rst
+- squid: rgw: trigger resharding of versioned buckets sooner
+- squid: Recent pipeline backports
+- pybind/mgr/orchestrator/module.py: NvmeofServiceSpec service_id
+- squid: cephfs: MDCache request cleanup
+- doc/radosgw: edit "Lifecycle Settings"
+- squid: mgr/dashboard: fix nvmeof mtls
+- squid: doc/rados: remove clonedata command
+- squid: qa/workunits/rbd: adapt rbd_mirror.sh for trial nodes
+- src/ceph_osd, osd: Implement running benchmark during OSD creation
+- mgr/dashboard: Dashboard nfs export editor rejects ipv6 addresses
+- doc/rados/configuration: Small improvements in ceph-conf.rst
+- doc/rados/configuration: Mention show-with-defaults and ceph-conf
+- squid: doc: Fixes a typo in balancer operations
+- qa: simplify postmerge construction
+- squid: cephfs_mirror: 'ceph fs snapshot mirror ls' command
+- squid: mgr/cephadm: update grafana conf for disconnected environment
+- doc/rados: remove clonedata command
+- os/bluestore: Disable invoking unittest_deferred
+- Test failure: LibCephFS.SnapdiffDeletionRecreation
+- doc: Revert "doc: mgr/dashboard: add OAuth2 SSO documentation"
+- doc: Fixes a typo in balancer operations
+- mds: dump frag_t as an object
+- squid: doc/dev:update blkin.rst doc for lttng trace
+- mgr/dashboard: fix nvmeof mtls
+- qa: correct daemon for warning conf
+- cephfs_mirror: ceph fs snapshot mirror ls command
+- squid: mgr/alerts: enforce ssl context to SMTP_SSL
+- squid: doc/radosgw: edit metrics.rst
+- doc/cephfs: add doc for "snapshot getpath" cmd
+- squid: doc: Fix unterminated inline literal in ceph-conf.rst
+- squid: doc: Pin pip to <25.3 for RTD as a workaround for pybind in admin/doc-read-the-docs.txt
+- doc/dev:update blkin.rst doc for lttng trace
+- squid: doc/cephfs: edit troubleshooting.rst
+- mgr/DaemonServer: fixed mistype for mgr_osd_messages
+- squid: doc/dev/crimson: Update docs
+- squid: qa/rgw: remove hadoop-s3a subsuite
+- doc/radosgw: edit metrics.rst
+- mgr/cephadm: update grafana conf for disconnected environment
+- doc/radosgw: Fix frontends.rst typo
+- doc/cephfs: edit troubleshooting.rst
+- doc: Fix unterminated inline literal in ceph-conf.rst
+- qa/cephfs: update ignorelist
+- mgr/dashboard: sitepackages only for py3
+- mgr/alerts: enforce ssl context to SMTP_SSL
+- qa/rgw: remove hadoop-s3a subsuite
+- .github: pin GH Actions to SHA-1 commit
+- doc/dev/crimson: Update docs
+- squid: deb/mgr: remove deprecated distutils from ceph-mgr.requires
+- squid: doc/radosgw: edit config-ref.rst
+- mon/MonMap: cleanup initialization
+- squid: doc/rados/ops: edit cache-tiering.rst
+- squid: mgr/nfs: scrape nfs monitoring endpoint
+- squid: doc/mgr: edit telemetry.rst
+- squid: qa: don't assume that /dev/sda or /dev/vda is present in unmap.t
+- mgr/nfs: scrape nfs monitoring endpoint
+- doc: Pin pip to <25.3 for RTD as a workaround for pybind
+- doc/rados/ops: edit cache-tiering.rst
+- doc/radosgw: edit config-ref.rst
+- doc/mgr: edit telemetry.rst
+- deb/mgr: remove deprecated distutils from ceph-mgr.requires
+- qa/suites/orch/cephadm: replace "reef" with "v18.2.8"
+- qa: don't assume that /dev/sda or /dev/vda is present in unmap.t
+- squid: doc/cephfs: edit ceph-dokan.rst (2 of x)
+- squid: doc/cephfs: edit ceph-dokan.rst (1 of x)
+- squid: doc/cephfs: edit ceph-dokan.rst (3 of x)
+- qa/suites/orch/cephadm: replace "quincy" with "v17.2.8"
+- doc/cephfs: edit ceph-dokan.rst (1 of x)
+- doc/cephfs: edit ceph-dokan.rst (2 of x)
+- doc/cephfs: edit ceph-dokan.rst (3 of x)
+- squid: qa/cephfs: randomize configs in fs:thrash:workloads
+- mgr/dashboard: bump cheroot to > 10.0
+- squid: Wip trackers 50371 67352 67489 69639 squid
+- mgr/dashboard: unpin grpcio deps
+- qa/cephfs: s/prefetch_dirfrags/prefetch_oft_dirfrags

@@ -1,0 +1,63 @@
+Generate one release-note-style English change summary from the evidence below.
+Use only the provided evidence and do not guess.
+
+==============================
+Commit Information
+
+Commit ID: {commit_id}
+
+Commit Message:
+{commit_message}
+
+Inferred change type (reference only):
+{inferred_change_category}
+
+Evidence granularity:
+{evidence_granularity}
+
+Change detection status:
+{change_detection_status}
+
+==============================
+Related PR Information (optional)
+
+{pr_context_text}
+
+Notes:
+- PR title/body is only supporting context for understanding intent.
+- If PR information conflicts with commit message or diff evidence, follow the
+  commit message and diff evidence.
+- Do not include PR claims that are not supported by this commit's diff.
+
+==============================
+Changed Methods
+
+If this section is none, the commit has no detected function-body changes. You must
+still summarize the commit using commit message and file-level diff evidence, such as
+API declarations, build files, configuration, documentation, CI, release scripts,
+packaging files, or test resources.
+
+{changed_methods_text}
+
+==============================
+Diff Evidence
+
+Key diff evidence follows. file_level diffs are real change evidence.
+
+{changed_statements_text}
+
+==============================
+Call Context
+
+{graph_text}
+
+==============================
+Task
+
+Write one concise English change summary. Describe only what this commit changed.
+Prefer user- or developer-understandable behavior, API, fix, feature, build,
+configuration, documentation, CI, or maintenance changes. If evidence_granularity is
+file_level, do not describe it as a function implementation change.
+
+Output only the final summary text. Use one sentence when possible and at most two
+sentences. Do not output a title, label, prefix, bullet, JSON, or Markdown.

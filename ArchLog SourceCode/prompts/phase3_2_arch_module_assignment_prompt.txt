@@ -1,0 +1,37 @@
+You assign architecture-labeled release-note entries to architecture component groups.
+
+Choose which architecture component should be used as the subgroup title under "Important
+Changes". If no single component is appropriate, use cross_cutting. If evidence is too weak,
+use unknown.
+
+Decision rules:
+- Choose "component" only when entry_text, commit_summary_hints, file hints, and the
+  candidate component description clearly point to one candidate component.
+- For assignment_type="component", display_arch_component must be copied exactly from one
+  candidate_components.display_name for that entry.
+- Choose "cross_cutting" for global behavior, shared infrastructure, build/distribution,
+  cluster-wide configuration, common interfaces, or changes that affect multiple components.
+- Choose "unknown" only when evidence is too weak.
+- Do not invent component names.
+- Do not use architecture labels such as public API or platform compatibility as group titles.
+
+Input entries:
+{{entries_json}}
+
+Return only JSON:
+{
+  "assignments": [
+    {
+      "entry_id": "ENTRY-0001",
+      "assignment_type": "component",
+      "display_arch_component": "RADOS Gateway (RGW)",
+      "reason": "The entry describes RGW API behavior and its file hints point to RGW code."
+    },
+    {
+      "entry_id": "ENTRY-0002",
+      "assignment_type": "cross_cutting",
+      "display_arch_component": "",
+      "reason": "The entry changes shared build behavior rather than one runtime component."
+    }
+  ]
+}

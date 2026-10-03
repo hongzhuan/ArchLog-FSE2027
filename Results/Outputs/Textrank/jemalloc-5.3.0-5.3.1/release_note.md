@@ -1,0 +1,406 @@
+# VerLog-style TextRank Release Note
+
+- Repository: jemalloc
+- Version pair: 5.3.0 -> 5.3.1
+- Pair id: jemalloc-5.3.0-5.3.1
+- Input commits: 395
+- Candidate sentences: 394
+- GT-length budget: 178
+- Extracted entries: 394
+
+## Extracted Entries
+
+- Add config detection for JEMALLOC_HAVE_PTHREAD_SET_NAME_NP.
+- Remove build-time configuration 'config_limit_usize_gap'
+- jemalloc_internal_types.h: Use alloca if __STDC_NO_VLA__ is defined
+- Fix frame pointer based unwinder to handle changing stack range
+- Add one more check to double free validation.
+- Remove --enable-limit-usize-gap for cirrus CI since the config-time option is removed.
+- Use a local variable to set the alignment for this particular allocation
+- Fix wrong type for malloc_read_fd return value in prof_stack_range
+- Use compiler-provided assume builtins when available
+- Fix extra size argument in edata_init call in extent_alloc_dss
+- Update safety check message to remove --enable-debug when it's already on.
+- add a size check when declare a stack array to be less than 2048 bytes
+- Allow setting default ncached_max for each bin through malloc_conf
+- Remove an incorrect use of the address operator
+- Check if the huge page size is expected when enabling HPA.
+- Fix wrong fallback value in os_page_detect when sysconf fails
+- Move extern "C" specifications for C++ to where they are needed
+- Fix a missing init value warning caught by static analysis.
+- Define SBRK_INVALID instead of using a magic number
+- When safety_check_fail, also embed hint msg in the abort function name
+- [process_madvise] Use process_madvise across multiple huge_pages
+- Unlike prof_sample which is supported only with profiling mode active, prof_threshold is intended to be an always-supported allocation callback with much less overhead.
+- [HPA] Add ability to start page as huge and more flexibility for purging
+- Add double free detection using slab bitmap for debug build
+- Add GitHub action which runs static analysis
+- fix assertion error in huge_arena_auto_thp_switch() when b0 is deleted in unit test
+- Fix: Adjust CACHE_BIN_NFLUSH_BATCH_MAX size to prevent assert failures
+- Disable psset test when hugepage size is too large.
+- Check for 0 input when setting max_background_thread through mallctl.
+- Fix remaining static analysis warnings
+- More conservative setting for /test/unit/background_thread_enable.
+- Stop over-reporting memory usage from sampled small allocations
+- Fix large alloc nrequests under-counting on cache misses
+- Remove pidfd_open call handling and rely on PIDFD_SELF
+- Use a for-loop to fulfill flush requests that are larger than CACHE_BIN_NFLUSH_BATCH_MAX items
+- Fix missing negation in large_ralloc_no_move usize_min fallback
+- Fix bitmap_ffu out of range read
+- Change stack_size assertion back to the more compatabile one.
+- Better handle burst allocation on tcache_alloc_small_hard
+- Enable a few additional warnings for CI and fix the issues they uncovered
+- Make headers self-contained by fixing #include s
+- Add unit tests for conf parsing and its helpers
+- test/unit/psset.c: fix SIGSEGV when PAGESIZE is large
+- Set dependent as false for all rtree reads without ownership
+- Updated jeprof with more symbols to filter.
+- Add double free detection in thread cache for debug build
+- Do not release the hpa_shard->mtx when inserting newly retrieved page from central before allocating from it
+- Define PROF_TCTX_SENTINEL instead of using magic numbers
+- Fixed type error with allocated that caused incorrect printing on 32bit
+- Make eligible functions static
+- Fix exception specification error for hosts using musl libc
+- [thread_event] Add support for user events in thread events when stats are enabled
+- Fix test_retained on boxes with a lot of CPUs
+- Ensure short read(2) s/ write(2) s are properly handled by IO utilities
+- Always use pthread_equal to compare thread IDs
+- Leverage new Windows API TlsGetValue2 for performance
+- Add a mallctl for users to get an approximate of active bytes.
+- Add configure check for gettid() presence
+- Making jemalloc max stack depth a runtime option
+- Add unit test coverage for bin interfaces
+- Fix out-of-bounds write in malloc_vsnprintf when size is 0
+- Fix safety_check segfault in double free test
+- Fix test/unit/prof_threshold when !config_stats
+- Print test error messages in color when stderr is a terminal
+- build: Make autogen.sh accept quoted extra options
+- Fix array bounds false warning in gcc 12.3.0
+- Renaming limit_usize_gap to disable_large_size_classes
+- Add configuration option controlling DSS support
+- Make JEMALLOC_CXX_THROW definition compatible with newer C++ versions
+- Do not support hpa if HUGEPAGE is too large.
+- Fix the compilation check for process madvise
+- Improve the failure message upon opt_experimental_infallible_new.
+- Optimize fast path to allow static size class computation.
+- Optimize edata_cmp_summary_compare when __uint128_t is available
+- Allow zero sized memalign to pass.
+- Remove unused options in the batched madvise unit tests.
+- Add a test to check the output in JSON-based stats is consistent with mallctl results.
+- Add experimental option force using SYS_process_madvise
+- Remove an unused function and global variable
+- Change macOS mmap tag to fix conflict with CoreMedia
+- [SEC] Make SEC owned by hpa_shard, simplify the code, add stats, lock per bin
+- Add support for clock_gettime_nsec_np()
+- Revert "Remove an unused function and global variable"
+- Fix the include path of "jemalloc_internal_overrides.h".
+- Remove dead code: extent_commit_wrapper, large_salloc, tcache_gc_dalloc event waits
+- Fix the lock owner sanity checking during background thread boot.
+- Fix inconsistent parameter names between definition/declaration pairs
+- Include the unrecognized malloc conf option in the error message.
+- move fill/flush pointer array out of tcache.c
+- Fix reading CPU id using rdtscp.
+- Add a runtime option opt_experimental_tcache_gc to guard the new design
+- Add a test-case for small profiled allocations
+- Define malloc_{write,read}_fd as non-inline global functions
+- Pre-generate ncached_max for all bins for better tcache_max tuning experience.
+- Modify .clang-format to make it more aligned with current freebsd style
+- Fix typo in prof_log_rep_check: use != instead of || for alloc_count
+- increase the ncached_max in fill_flush test case to 1024
+- Issue a warning upon directly accessing an arena's bins
+- Fix the VM over-reservation on aarch64 w/ larger pages.
+- Avoid assuming the arena id in test when percpu_arena is used.
+- Experimental calloc implementation with using memset on larger sizes
+- [EASY] Encapsulate better, do not pass hpa_shard when hooks are enough, move shard independent actions to hpa_utils
+- Replace unsigned induction variable with size_t in background_threads_enable
+- Add the missing descriptions in AC_DEFINE
+- Add mallctl to set and get ncached_max of each cache_bin.
+- Add output argument to hpa_purge_begin to count dirty ranges
+- Turn clang-format off for codes with multi-line commands in macros
+- Emit long string values without truncation
+- Allow a range for the nfill passed to arena_cache_bin_fill_small
+- Add LOGs when entrying and exiting free and sdallocx.
+- Remove Travis Windows CI for now since it has infra failures.
+- Fix mutex state tracking around pthread_cond_wait().
+- Add a script to generate github actions instead of Travis CI and Cirrus
+- Change the default page size to 64KiB on Aarch64 Linux
+- Reduce the memory overhead of sampled small allocations
+- Ensure that the root of a heap is always the best element.
+- Add safe frame-pointer backtrace unwinder
+- Make eligible global variables static and/or const
+- Do not maintain root->prev in ph_remove.
+- Update ChangeLog for release 5.3.1
+- Separate out the configuration code from initialization
+- if process_madvise is supported, call it when purging hpa
+- rallocx path: only set errno on the realloc case.
+- Add vcpkg installation instructions
+- Avoid eager purging on the dedicated oversize arena when using bg thds.
+- fix nstime_update_mock in arena_decay unit test
+- Add the missing opt.cache_oblivious handling.
+- If ptr present check if alloc_ctx.edata == NULL
+- When extracting from central, hugify_eager is different than start_as_huge
+- Make ctl_arena_clear slightly more efficient
+- Fix a bug in C++ integration test.
+- Only enable -Wstrict-prototypes in CI to unbreak feature detection
+- [process_madvise] Make init lazy so that python tests pass.
+- Fix static analysis warnings.
+- Add a configure option --enable-force-getenv.
+- Explicit arena assignment in test_thread_idle.
+- background_thread: add fallback for pthread_create dlsym
+- Enable fast thread locals for dealloc-only threads.
+- Fix read of uninitialized data in prof_free
+- Allow overriding LG_PAGE
+- Extract the calculation of psset heap assignment for an hpdata into a common function
+- Run single subtest from a test file
+- Fix background_thread creation for the oversize_arena.
+- Refactor hpa purging to prepare for vectorized call across multiple pages
+- jemalloc: fix PowerPC definitions in quantum.h
+- Makefile.in: link with g++ when cxx enabled
+- Fix missing release of acquired neighbor edata in extent_try_coalesce_impl
+- Revert "Experimental configuration option for fast path prefetch from cache_bin"
+- Refactor: use the cache_bin_sz_t typedef instead of direct uint16_t
+- Remove dead stores detected by static analysis
+- Fixes to prevent static analysis warnings.
+- Update the default value for opt_experimental_tcache_gc and opt_calloc_madvise_threshold
+- Better trigger race condition in bin_batching unit test
+- Fix comments about malloc_conf to enable logging.
+- Add missing thread_event_registry.c to Visual Studio projects
+- Adding trace analysis in preparation for page allocator microbenchmark.
+- Fix opt.max_background_threads default in docs
+- Fix initialization of pop_attempt_results in bin_batching test
+- Add experimental support for usdt systemtap probes
+- Determine the page size on Android from NDK header files
+- Remove strict_min_purge_interval option
+- [thread_event] Remove macros from thread_event and replace with dynamic event objects
+- Experimental configuration option for fast path prefetch from cache_bin
+- Use the BRE construct \{1,\} for one or more consecutive matches
+- Remove unreachable() macro as c23 already defines it.
+- Avoid implicit conversion in test/unit/prof_threshold
+- Fix pac_mapped stats inflation on allocation failure
+- print out all malloc_conf settings in stats
+- Fix the prof thread_name reference in prof_recent dump.
+- Fix possible NULL pointer dereference in VERIFY_READ
+- Add the prof_sys_thread_name feature in the prof_recent unit test.
+- Add opt.limit_usize_gap to stats
+- Fix the rdtscp detection bug and add prefix for the macro.
+- [EASY] Extract hpa_central component from hpa source file
+- Test on more FreeBSD versions
+- Add nstime_ms_since to get time since in ms
+- Remove errant #include s in public jemalloc.h header
+- Add experimental_enforce_hugify
+- Regulate GC frequency by requiring a time interval between two consecutive GCs
+- Implement C23's free_sized and free_aligned_sized
+- EASY - be explicit in non-vectorized hpa tests
+- Running clang-format on two files
+- Reduce nesting in phn_merge_siblings using an early return.
+- Address compiler warnings in the unit tests
+- Fix binshard.sh by specifying bin_shards for all sizes.
+- Modify Travis tests to use frameptr when profiling
+- Fix integer overflow in test/unit/hash.c
+- Introducing a new usize calculation policy
+- Enabled -Wstrict-prototypes and fixed warnings.
+- Fix possible "nmalloc >= ndalloc" assertion
+- Save and restore errno when calling process_madvise
+- Take locality into consideration when doing GC flush
+- Update building for Windows instructions
+- Limit maximum number of purged slabs with option
+- Remove errant assert in arena_extent_alloc_large
+- Add malloc_open() / malloc_close() reentrancy safe helpers
+- Fix background thread initialization race
+- Enable limit-usize-gap in CI tests.
+- Fix missing cleanup message for collected profiles.
+- Fix bug where hpa_shard was not being destroyed
+- Disable FreeBSD on Travis CI since it's not working.
+- Tcache: Split up small/large handling.
+- Fix arenas.i.bins.j.mutex link id in manual.
+- Extend purging algorithm with peak demand tracking
+- Add arena-level name.
+- Fix memory leak of old curr_reg on san_bump_grow_locked failure
+- Simplify the logic when bumping lg_fill_div.
+- Ensured sampled allocations are properly deallocated during arena_reset
+- Fix dividing 0 error in stress/cpp/microbench
+- OpenBSD build fix.
+- Fix the tcache flush sanity checking around ncached and nstashed.
+- Add support for the deprecated attribute
+- Update the configure cache file example in INSTALL.md
+- Add an explicit name to the dedicated oversize arena.
+- Guard os_page_id against a NULL address
+- Add TODO to benchmark possibly better policy
+- New configure option '--enable-pageid' for Linux
+- Add an override for the compile-time malloc_conf to jemalloc_internal_overrides.h
+- Revert "Echo installed files via verbose 'install' command"
+- To improve reuse efficiency, the maximum coalesced size for large extents
+- Simplify hpa_shard_maybe_do_deferred_work
+- Fix duplicate "nactive_huge" JSON key in HPA shard stats output
+- Fix psset_pick_purge when last candidate with index 0 dirtiness is ineligible
+- Do not dehugify when purging
+- Stop concealing pointer provenance in phn_link_get
+- Remove duplicated words in documentation
+- Run clang-format on test/unit/conf_parse.c
+- Revert "Extend purging algorithm with peak demand tracking"
+- Use relaxed atomics to access the process madvise pid fd
+- Fix the sized-dealloc safety check abort msg.
+- Enable large hugepage tests for arm64 on Travis
+- Add malloc_mutex_is_locked() sanity checks.
+- Use MSVC __declspec(thread) for TSD on Windows
+- Print colorful reminder for failed tests.
+- Fix several spelling errors in comments
+- Fix ehooks assertion for arena creation
+- Add support for namespace pids in heap profile names
+- Inline the value of an always false boolean local variable
+- Remove Travis CI macOS configs (not supported anymore).
+- Revert "Do not dehugify when purging"
+- configure: add --with-cxx-stdlib option
+- Replace an instance of indentation with spaces with tabs
+- Fix hpa_strict_min_purge_interval option logic
+- Run clang-format on test/unit/tcache_max.c
+- Fix profiling sample metadata lookup during xallocx
+- Cache extra extents in the dirty pool from ecache_alloc_grow
+- Fix thread_name updating for heap profiling.
+- Remove age_counter from hpa_central
+- Remove prof_threshold built-in event.
+- Remove unreachable code.
+- Add autoconf options to enable sanitizers
+- Fix segfault in extent_try_coalesce_impl
+- HPA: Allow frequent reused alloc to bypass the slab_max_alloc limit, as long as
+- [sdt] Add some tracepoints to sec and hpa modules
+- Fix arena 0 deferral_allowed flag init
+- Print the failed assertion before aborting in test cases
+- Fix NSTIME_MONOTONIC for win32 implementation
+- Remove unnecessary parameters for cache_bin_postincrement.
+- Avoid forced purging during thread-arena migration when bg thd is on.
+- error: implicit declaration of function 'pthread_create_fptr_init' is invalid in C99
+- Add util.c into vs project file.
+- Use asm volatile during benchmarks.
+- Implement process_madvise support.
+- Suppress verbose frame address warnings
+- Fix off-by-one in arenas_bin_i_index and arenas_lextent_i_index bounds checks
+- Remove experimental.thread.activity_callback
+- Modify .clang-format to have declarations aligned
+- Fix the bug in dalloc promoted allocations.
+- Disable config from file or envvar with build flag
+- Rearrange the bools in prof_tdata_t to save some bytes.
+- Remove locked flag set in malloc_mutex_trylock
+- Fix the gettid() detection caught by .
+- Fix all optimization-inhibiting integer-to-pointer casts
+- Inline free and sdallocx into operator delete
+- Handle interruptions and retries of read(2) and write(2)
+- Refactor the remote / cross thread cache bin stats reading
+- Option to guard hpa_min_purge_interval_ms fix
+- Make edata_cmp_summary_comp 30% faster
+- Add usize to prof_sample_hook_t
+- Fix conf_handle_char_p zero-sized dest and remove unused conf_handle_unsigned
+- Add a multithreaded test for prof_sys_thread_name.
+- Add several USDT probes for hpa
+- Ignore the clang-format changes in the git blame.
+- [EASY][BUGFIX] Spelling and format
+- Update doc to reflect muzzy decay is disabled by default.
+- Add travis tests for arm64.
+- Fix a zero-initializer warning on macOS.
+- Adjust the value width in stats output.
+- Fix the locked flag for malloc_mutex_trylock().
+- Fix off-by-one in stats_arenas_i_bins_j and stats_arenas_i_lextents_j bounds checks
+- Bin batching: add some stats.
+- Simplify the logic in ph_remove
+- Implement prof sample hooks "experimental.hooks.prof_sample(_free)".
+- Mark jemalloc.h as system header to resolve header conflicts.
+- fix build for non linux/BSD platforms.
+- Fix possible NULL pointer dereference from mallctl("prof.prefix", ...)
+- Fix the arena selection for oversized allocations.
+- Explicit arena assignment in test_tcache_max.
+- detect false failure of strerror_r
+- Split stats_arena_hpa_shard_print function
+- Fix wrong loop variable for array index in sz_boot_pind2sz_tab
+- Add batcher module.
+- Update acitons/checkout and actions/upload-artifact to v4
+- Move je_cv_thp logic closer to definition
+- Add experimental prefix to hpa_strict_min_purge_interval
+- Expose psset state stats
+- gitignore: Start ignoring clangd dirs.
+- Update the ratio display in benchmark
+- Fix nfill = 0 bug when ncached_max is 1
+- Sample format on tcache_max test
+- improve hpdata_assert_consistent()
+- Add npurges and npurge_passes to output of pa_benchmark
+- Refactor init_system_thp_mode and print it in malloc stats.
+- Implement pvalloc replacement
+- Update config.guess and config.sub to the latest versions
+- Tcache flush: Partition by bin before locking.
+- [MSVC] support for Visual Studio 2019 and 2022
+- Enable retain by default on macOS.
+- [EASY] Spelling in the comments
+- CI update FreeBSD version.
+- Simplify the logic in tcache_gc_small.
+- Ignore formatting commit in blame.
+- Enable per-tcache tcache_max
+- Inline the storage for thread name in prof_tdata_t.
+- Update the Ubuntu version used by Travis CI
+- Simplify the logic in ph_insert
+- Move bin inline functions from arena_inlines_b.h to bin_inlines.h
+- [pa-bench] Add clock to pa benchmark
+- Fix segfault in rb *_tree_remove
+- Remove vestigial TCACHE_STATE_* macros
+- Update appveyor settings.
+- Move tsd implementation details into tsd_internals.h
+- configure: Handle *-linux-musl* hosts properly
+- Enable heap profiling on MacOS
+- Fix compilation with MSVC 2022
+- Fix downloading LLVM in GitHub Action
+- Check for equality instead of assigning in asserts in hpa_from_pai.
+- Respect hpa_min_purge_interval_ms option
+- Remove unused mutex from hpa_central
+- Improve the portability of grep patterns in configure.ac
+- Fix wrong mutex stats in json-formatted malloc stats
+- Remove tests for ppc64 on Travic CI.
+- enabled percpu_arena settings on macOs.
+- Cleanup cache_bin_info_t* info input args
+- Disallow decay during reentrancy.
+- Fix compiling edata.h with MSVC
+- Assert the mutex is locked within malloc_mutex_assert_owner().
+- Add clang static analyzer suppression macro.
+- Remove an orphaned comment
+- Export hugepage size with arenas.hugepage
+- Move bin functions from arena.c to bin.c
+- Prune je_malloc_default and do_rallocx in jeprof
+- Add a page-allocator microbenchmark.
+- Documentation updates ( )
+- Benchmark operator delete
+- Explicitly cast to unsigned for MALLOCX_ARENA and _TCACHE defines.
+- Remove validation for HPA ratios
+- Handle tcache init failures gracefully
+- metadata usage breakdowns: tracking edata and rtree usages
+- Implement malloc_getcpu for amd64 and arm64 macOS
+- HPA: Fix infinite purging loop
+- Fix infinite purging loop in HPA
+- Add a header in HPA stats for the nonfull slabs.
+- Some nits in cache_bin.h
+- Set errno to ENOMEM on rallocx() OOM failures
+- Expose private library dependencies via pkg-config
+- Support THP with Huge Arena in PAC
+- Optimize mutex and bin alignment / locality.
+- switch to https
+- skip tcache GC for tcache_max unit test
+- Allocate tcache stack from base allocator
+- Add opt hpa_hugify_sync to hugify synchronously
+- Include HPA ndirty into page allocator ndirty stat
+- Remove trailing whitespace
+- Revert : Manually revert commits 70c94d..f9c0b5
+- Introduce getters for page allocator shard stats
+- Add batching to arena bins.
+- update PROFILING_INTERNALS.md
+- Expose jemalloc_prefix via pkg-config
+- Disable builtin malloc in tests
+- Nest HPA SEC stats inside hpa_shard JSON
+- Emit retained HPA slab stats in JSON
+- Rename fallback_impl to fallbackNewImpl and prune in jeprof
+- Make arenas_lookup_ctl triable
+- update travis
+- Remove Cirrus CI
+- Conditionally remove unreachable for C23+
+- Silence the uninitialized warning from clang.
+- Limit Cirrus CI to freebsd 15 and 14
+- Fix Cirrus CI.
+- Remove unsupported Cirrus CI config
+- Reformat the codebase with the clang-format 18.
+- Tcache batching: Plumbing
+- Refactor the tcache initiailization

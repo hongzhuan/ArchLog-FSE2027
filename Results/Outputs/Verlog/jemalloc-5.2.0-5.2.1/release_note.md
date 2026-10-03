@@ -1,0 +1,12 @@
+- Added safety checks with redzoning to detect memory corruption (buffer overflows/underflows) on deallocation, configurable at build time and via mallctl.
+- Added memory utilization analytics: new mallctl interfaces for fill and flush counts of small/large allocations, non-full slabs per bin, active pages per arena, abandoned virtual memory, and batch query for multiple pointers.
+- Added the `confirm_conf` option to allow runtime confirmation of configuration settings.
+- Enabled memory retention (`opt.retain`) by default on Windows to reduce virtual memory fragmentation.
+- Limited extent allocation to exact fit on Windows when retain is disabled to avoid memory leaks.
+- Removed the best-fit algorithm and optimized first-fit allocation to reduce fragmentation by avoiding splitting large extents for small sizes.
+- Fixed `posix_memalign` to correctly handle an input size of 0.
+- Fixed a bug in profiling dump writing that could cause buffer overflow or incomplete output.
+- Fixed memory leak on extent registration failure by properly deallocating or tracking abandoned virtual memory.
+- Optimized C++ `operator delete[]` by removing an unnecessary compare and branch in the fast path.
+- Updated documentation for the `opt.retain` option, noting the new default on Windows.
+- Added safety check source files to MSBuild projects for Windows builds.

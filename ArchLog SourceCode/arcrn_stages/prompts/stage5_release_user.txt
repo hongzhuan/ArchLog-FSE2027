@@ -1,0 +1,31 @@
+Generate the final English release-note JSON from the ordered section summaries below.
+
+Project:
+- repository: {{repo_name}}
+- version_range: {{base_ref}} -> {{new_ref}}
+- output_language: English
+
+Document Constraints:
+- preserve_section_order: true
+- preserve_section_ids: true
+- architecture_first: true
+
+Release Plan Stats:
+{{release_plan_stats_json}}
+
+Ordered Section Summaries:
+{{section_summaries_json}}
+
+Return only JSON:
+{
+  "overview": "short English overview paragraph",
+  "highlights": ["English highlight"],
+  "sections": [
+    {
+      "section_id": "same section_id from input",
+      "title": "section title",
+      "summary": "English summary",
+      "key_points": ["English key point"]
+    }
+  ]
+}

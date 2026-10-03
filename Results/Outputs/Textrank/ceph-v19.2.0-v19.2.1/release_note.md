@@ -1,0 +1,884 @@
+# VerLog-style TextRank Release Note
+
+- Repository: ceph
+- Version pair: v19.2.0 -> v19.2.1
+- Pair id: ceph-v19.2.0-v19.2.1
+- Input commits: 887
+- Candidate sentences: 872
+- GT-length budget: 280
+- Extracted entries: 872
+
+## Extracted Entries
+
+- ceph-volume: switch over to new disk sorting behavior by default
+- squid: ceph-volume: switch over to new disk sorting behavior
+- squid: ceph-volume: do source devices zapping if they're detached.
+- ceph-volume: do source devices zapping if they're detached.
+- squid: mgr/dashboard: fix setting compression type while editing rgw zone
+- squid: docs/rados/operations/stretch-mode: warn device class is not supported
+- squid: crimson/os/seastore/lba_manager: do batch mapping allocs when remapping multiple mappings
+- node-proxy: fix a regression when processing the RedFish API
+- squid: doc: Document which options are disabled by mClock.
+- os/bluestore: Small fix to check_or_set_bdev_label
+- crimson/os/seastore: disable crc calculation if end to end data protection is enabled
+- squid: doc/install: Keep the name field of the created user consistent with …
+- crimson/os/seastore/btree: add copy_source->pending links to FixedKVNode
+- squid: rgw/lc: Fix lifecycle not working while bucket versioning is suspended
+- crimson/os/seastore: add nvme_read and nvme_write to be used when end to end data protection is enabled
+- squid: cephfs: Fixed a bug in the readdir_cache_cb function that may have us…
+- os/bluestore: Fix unbalanced new[]/delete[] in read_bdev_label functions
+- squid: node-proxy: fix a regression when processing the RedFish API
+- tools/ceph-bluestore-tool: Allow show-label even if OSD is running
+- squid: blk/KernelDevice: using join() to wait thread end is more safe
+- squid: mgr/dashboard: Changes for Sign out text to Login out
+- librbd/crypto/LoadRequest: clone format for migration source image
+- squid: mgr/dashboard: Zone details showing incorrect data for data pool values and compression info for Storage Classes
+- squid: ceph.spec.in: we need jsonnet for all distroes for make check
+- os/bluestore: Fix _check_or_set_main_bdev_label
+- squid: librbd/crypto/LoadRequest: clone format for migration source image
+- squid: mgr/dashboard: provide option to enable pool based mirroring mode while creating a pool
+- os/bluestore: Add fsck procedure for bdev multi labels
+- Squid: mgr/dashboard: Wrong(half) uid is observed in dashboard when user created via cli contains $ in its name
+- docs/rados/operations/stretch-mode: warn device class is not supported
+- os/bluestore: Add read/write_bdev_label functions
+- squid: doc/radosgw: Improve archive-sync-module.rst more
+- squid: mgr/dashboard: add restful api for creating crush rule with type of 'erasure'
+- crimson/os/seastore/rbm: add handle_exception() to pass_through_io()
+- blk/KernelDevice: using join() to wait thread end is more safe
+- mgr/dashboard: fix setting compression type while editing rgw zone
+- mgr/dashboard: allow sending back error status code fetching clients fails
+- os/bluestore: minor fix in _check_or_set_main_bdev_label
+- squid: qa/tasks/nvme_loop: update task to work with new nvme list format
+- librbd/migration: make FormatInterface::read() void again
+- doc/radosgw: Improve archive-sync-module.rst more
+- squid: mgr/dashboard: fix gateways section error:”404 - Not Found RGW Daemon not found: None”
+- doc: Document which options are disabled by mClock.
+- crimson/.../object_context_loader: remove impossible branch in get_or_load_obc
+- os/bluestore: Add ability to upgrade into multi label
+- squid: test/rgw/notifications: don't check for full queue if topics expired
+- os/bluestore: Create read_bdev_main_label function
+- squid: ceph-volume: pass self.osd_id to create_id() call
+- squid: os/bluestore: Fix BlueFS allocating bdev label reserved location
+- squid: ceph-volume: do not convert LVs's symlink to real path
+- upgrade/cephfs/mds_upgrade_sequence: ignore osds down
+- mgr/nfs: add additional tests for cmount_path & user_id deletion
+- squid: ceph-volume: add new class UdevData
+- squid: test/rgw/notification: use real ip address instead of localhost
+- osdmon: Remove any pg_upmap_primary mapping during remove a pool
+- os/bluestore: Fix problem with marking unavailable bdev label positions
+- os/bluestore: Fix _main_bdev_label_try_reserve
+- os/bluestore: Fix bdev_label_main_try_reserve
+- librbd/migration/NativeFormat: do pool lookup instead of creating io_ctx
+- Squid: cephadm: bootstrap should not have "This is a development version of cephadm" message
+- doc/install: Keep the name field of the created user consistent with the node name in the Start RADOSGW service command
+- doc/glossary: add "object storage"
+- Squid: mgr/dashboard: The subvolumes are missing from the dropdown menu on the "Create NFS export" page
+- squid: doc/cephfs: add cache pressure information
+- mgr/dashboard: provide option to enable pool based mirroring mode while
+- os/BlueStore: NCB fix for leaked space when bdev_async_discard is enabled
+- librbd/migration/HttpClient: fix some error messages in handle_receive()
+- squid: os/bluestore: Multiple bdev labels on main block device
+- squid: doc/start: add vstart install guide
+- squid: doc/cephfs: improve "layout fields" text
+- squid: cephadm: emit warning if daemon's image is not to be used
+- ceph-volume: do not convert LVs's symlink to real path
+- squid: rgw/notifications: free completion pointer using unique_ptr
+- squid: doc/rgw/account: Handling notification topics when migrating an existing user into an account
+- mgr/dashboard: Zone details showing incorrect data for data pool values and compression info for Storage Classes
+- squid: doc/cephadm: how to get exact size_spec from device
+- osd/OSDMap: require CRUSH_MSR if any rule is msr, even if used by no pool
+- crimson/os/seastore/rbm: turn on end-to-end-data-protection during mkfs if possible
+- squid: mon: Remove any pg_upmap_primary mapping during remove a pool
+- node-proxy: do not fail when empty data is received
+- squid: qa/upgrade: fix checks to make sure upgrade is still in progress
+- mgr/dashboard: fix gateways section error:”404 - Not Found RGW Daemon not found: None”
+- ceph.spec.in: we need jsonnet for all distroes for make check
+- squid: mgr/cephadm: use host address while updating rgw zone endpoints
+- os/bluestore: Modify read/write_bdev_label functions
+- squid: doc: Update "Getting Started" to link to start not install
+- librbd/migration/HttpClient: socket isn't shut down on some state transitions
+- mgr/dashboard: add restful api for creating crush rule with type of 'erasure'
+- ceph-volume: add new class UdevData
+- Squid: mgr/dashboard: zonegroup level policy created at master zone did not sync to non-master zone
+- rgw/lc: Fix lifecycle not working while bucket versioning is suspended
+- squid: doc: explain the consequence of enabling mirroring through monitor co…
+- doc/start: add vstart install guide
+- squid: bluestore/bluestore_types: avoid heap-buffer-overflow in another way to keep code uniformity
+- cephadm: emit warning if daemon's image is not to be used
+- doc/cephfs: add cache pressure information
+- librbd/migration: make ImageDispatch handle encryption for non-native formats
+- qa/upgrade: use staggered upgrade features for reef-x/stress-split
+- test/librbd: add TestInternal.FlattenInconsistentObjectMap
+- Squid: mgr/dashboard: sync policy's in Object >> Multi-site >> Sync-policy, does not show the zonegroup to which policy belongs to
+- squid: mgr/dashboard: show non default realm sync status in rgw overview page
+- doc/ceph-volume: add spillover fix procedure
+- squid: mgr/dashboard: Nvme mTLS support and service name changes
+- os/bluestore: Fix read_main_bdev_label
+- squid: mgr/dashboard: ignore exceptions raised when no cert/key found
+- doc/cephadm: how to get exact size_spec from device
+- squid: mgr/dashboard: use grafana server instead of grafana-server in grafana 10.4.0
+- squid: mgr/cephadm: Update multi-site configs before deploying daemons on rgw service create
+- squid: RGW|Bucket notification: fix for v2 topics rgw-admin list operation
+- squid: doc: update Key Idea in cephfs-mirroring.rst
+- mon/AuthMonitor: update MDS caps even if other caps need no update
+- squid: crimson/os/seastore/transaction_manager: consider inconsistency between backrefs and lbas acceptable when cleaning segments
+- squid: mgr/dashboard: Add group field in nvmeof service form
+- squid: rgw: add s3select usage to log usage
+- blk/KernelDevice: React to bdev_enable_discard changes in handle_conf_change()
+- squid: librbd/crypto: fix issue when live-migrating from encrypted export
+- squid: mgr/rgwam: use realm/zonegroup/zone method arguments for period update
+- squid: doc/rados: edit "Placement Groups Never Get Clean"
+- squid: doc: Document the Windows CI job
+- doc/rbd: add namespace information for mirror commands
+- squid: doc/dev/release-process.rst: New container build/release process
+- ceph-bluestore-tool: Fix set-label-key and rm-label-key
+- squid: [RGW] Fix the handling of HEAD requests that do not comply with RFC standards
+- mds: do not use item item_caps in two different lists
+- Squid: mgr/dashboard: Cloning subvolume not listing _nogroup if no subvolume
+- container/make-manifest-list.py: use LOCALMANIFEST throughout
+- librbd/migration/HttpClient: log ec details in handle_{issue,receive}()
+- squid: qa/standalone/scrub: increase status updates frequency
+- test/rgw/notification: replace calls to get_ip_http with get_ip
+- doc/rgw/account: Handling notification topics when migrating an existing user into an account
+- squid: mgr/dashboard: Fix adding listener and null issue for groups
+- crimson/os/seastore: remove multistream related codes
+- squid: suites: adding ignore list for stray daemon
+- squid: qa: load all dirfrags before testing altname recovery
+- squid: os/bluestore: Warning added for slow operations and stalled read
+- librbd/migration: make SourceSpecBuilder::parse_source_spec() static
+- squid: doc/ceph-volume: add spillover fix procedure
+- squid: rgw/multipart: use cls_version to avoid racing between part upload and multipart complete
+- mgr/dashboard: Fixed bug in service form
+- squid: RGW|BN: fix lifecycle test issue
+- bluestore/bluestore_types: avoid heap-buffer-overflow in another way to keep code uniformity
+- doc: explain the consequence of enabling mirroring through monitor commands
+- crimson/.../object_context_loader: add missing dpp argument to debug statement
+- test/rgw: include --rgw-realm/zonegroup/zone args for 'account create'
+- os/bluestore: Fix write_meta; increase epoch with each write
+- squid: doc/dev: add "activate latest release" RTD step
+- squid: client: calls to _ll_fh_exists() should hold client_lock
+- squid: mgr/rgw: Adding a retry config while calling zone_create()
+- ceph-volume: add "packaging" to install_requires
+- test/rgw/notification: use real ip address instead of localhost
+- os/bluestore: Only accept bdev labels with our UUID
+- squid: cephfs_mirror: provide metrics for last successful snapshot sync
+- squid: rgw/beast: optimize for accept when meeting error in listenning
+- blk/aio: fix compile issue when HAVE_LIBURING isn't defined
+- ceph-volume: pass self.osd_id to create_id() call
+- qa/tasks/nvme_loop: update task to work with new nvme list format
+- squid: osd: fix require_min_compat_client handling for msr rules
+- crimson/.../object_context: drop unused maybe_get_excl
+- rgw: add s3select usage to log usage
+- rgw/http: async_wait() uses async_initiate
+- os/bluestore: Move reservation of bdev label to proper place.
+- ceph-volume: add call to ceph-bluestore-tool zap-device
+- rgw/notifications: free completion pointer using unique_ptr
+- squid: ceph-volume: add call to ceph-bluestore-tool zap-device
+- librbd/migration/HttpClient: ignore stream_truncated when shutting down SSL
+- tool/bluestore-tool: add zap_device command support
+- squid: os/bluestore: Improve documentation introduced by
+- os/bluestore: Give label multiple positions to replicate to
+- squid: rgwlc: fix typo in getlc (ObjectSizeGreaterThan)
+- os/bluestore: Split check* and set* _main_bdev_label
+- test/rgw/notifications: don't check for full queue if topics expired
+- squid: suites: test should ignore osd_down warnings
+- suites: adding ignore list for stray daemon
+- qa: add test_cephfs_mirror_remote_snap_corrupt_fails_synced_snapshot
+- squid: mgr/cephadm: add --no-exception-when-missing flag to cert-store cert/key get
+- squid: mgr/dashboard: fix group name bugs in the nvmeof API
+- rgw/d3n: async_read() uses async_initiate
+- mgr/dashboard: use grafana server instead of grafana-server in grafana
+- os/bluestore: Small fix to mkfs
+- squid: mgr/nfs: generate user_id & access_key for apply_export(CephFS)
+- squid: librbd: avoid data corruption on flatten when object map is inconsistent
+- squid: Modify container/ software to support release containers and the promotion of prerelease containers
+- squid: cls/user: reset stats only returns marker when truncated
+- tools/ceph-bluestore-tool: fix "--yes-i-really-really-mean-it" option
+- mgr/cephadm: bump monitoring stacks versions
+- squid: mgr/dashboard: Show which daemons failed in CEPHADM_FAILED_DAEMON healthcheck
+- squid: cephadm: update default image and latest stable release
+- squid: cephadm: update latest stable release and default image
+- crypto/qat: use async_initiate and any_completion_handler
+- librbd/crypto/LoadRequest: rename m_is_current_format_cloned
+- mgr/dashboard: Add group field in nvmeof service form
+- RGW|Bucket notification: fix for v2 topics rgw-admin list operation
+- mgr/dashboard: zonegroup level policy created at master zone did not sync to non-master zone
+- doc/dev/release-process.rst: New container build/release process
+- mgr/dashboard: Changes for Sign out text
+- squid: client: check mds down status before getting mds_gid_t from mdsmap
+- squid: rgw: ignore zoneless default realm when not configured
+- mgr/dashboard: fix group name bugs in the nvmeof API
+- mgr/dashboard: sync policy's in Object >> Multi-site >> Sync-policy, does not show the zonegroup to which policy belongs to
+- crimson/osd: convert remaining IOInterruptCondition users to specify epoch
+- mgr/dashboard: Cloning subvolume not listing _nogroup subvolumegroup if there are no subvols in _nogroup
+- squid: librbd/migration/HttpClient: avoid reusing ssl_stream after shut down
+- doc/rados: edit "Placement Groups Never Get Clean"
+- squid: rgw: revert account-related changes to get_iam_policy_from_attr()
+- librbd: don't make an extra copy of image_extents in C_ImageReadRequest ctor
+- doc/cephfs: improve "layout fields" text
+- mgr/rgwam: use realm/zonegroup/zone method arguments for period update
+- squid: mon/MonClient: handle ms_handle_fast_authentication return
+- squid: mgr/dashboard: Forbid snapshot name "." and any containing "/".
+- mgr/dashboard: ignore exceptions raised when no cert/key found
+- doc: mention the peer status failed when snapshot created on the remote filesystem.
+- squid: doc/rbd: add namespace information for mirror commands
+- squid: doc/glossary: add "object storage"
+- mds: print quiesce message name in debug log
+- squid: mgr/cephadm: redeploy when some dependency daemon is add/removed
+- squid: doc/cephfs: use 'p' flag to set layouts or quotas
+- cephfs: Fixed a bug in the readdir_cache_cb function that may have used freed memory after the _getattr operation returned
+- squid: ceph-volume: drop unnecessary call to get_single_lv()
+- squid: common/options: Change HDD OSD shard configuration defaults for mClock
+- qa/upgrade: fix checks to make sure upgrade is still in progress
+- squid: Test: osd-recovery-space.sh extends the wait time for "recovery toofull"
+- squid: doc:update e-mail addresses governance
+- squid: crimson/osd/pg_recovery: push the iteration forward after finding unfound objects when starting primary recoveries
+- librbd/migration/HttpClient: don't shut down socket in resolve_host()
+- squid: crimson/os/seastore: track transactions/conflicts/outstanding periodically
+- os/bluestore: Modify bdev-label functions operate on bdev
+- doc: Update "Getting Started" to link to start not install
+- crimson/os/seastore: replace record_group_data_bytes with data_bytes
+- squid: mds: CInode::item_caps used in two different lists
+- squid: qa/task: update alertmanager endpoints version
+- common: add discard threads option, descriptions and flags
+- mds: add new item item_to_flush
+- blk/aio: fix incomplete patch to get rid off aio_size
+- squid: doc/rados: correct "full ratio" note
+- squid: mgr/rest: Trim requests array and limit size
+- rgwlc: fix typo in getlc (ObjectSizeGreaterThan)
+- doc: update Key Idea in cephfs-mirroring.rst
+- squid: os/bluestore: Fix ceph-bluestore-tool allocmap command
+- cephadm: bootstap should not have "This is a development version of cephadm" message
+- mgr/cephadm: use host address while updating rgw zone endpoints
+- mgr/cephadm: add --no-exception-when-missing flag to cert-store cert/key get
+- crimson/os/seastore/lba_manager: batch alloc mappings when doing remaps
+- qa: load all dirfrags before testing altname recovery
+- os/bluestore: fix fsck fixing multiple bdev label (superblock)
+- test/store_test: add a case for reading an object with 64+K extents.
+- rgw: decrypt multipart get part when encrypted
+- rgw/multipart: use cls_version to avoid racing between part upload and multipart complete
+- cephadm: add a test case to cover reading apparmor profiles
+- doc: documenting the feature that scrub clear the entries from damage table on repair
+- rgw: load copy source bucket attrs in putobj
+- Squid: mgr/dashboard: service form hosts selection only show up to 10 entries
+- squid: test/neorados: remove depreciated RemoteReads cls test
+- squid: RADOS: Generalize stretch mode pg temp handling to be usable without stretch mode
+- Squid: mgr/dashboard: unable to edit pipe config for bucket level policy of bucket
+- squid: mgr/dashboard: mgr/dashboard: Select no device by default in EC profile
+- squid: qa/cephfs: fix TestRenameCommand and unmount the clinet before failin…
+- mgr/dashboard: show non default realm sync status in rgw overview page
+- doc: document earmark option for subvolume and new commands
+- rbd-mirror: use correct ioctx for namespace
+- mgr/cephadm: redeploy when some dependency daemon is add/removed
+- qa/standalone/scrub: increase status updates frequency
+- squid: suites/upgrade/quincy-x: update the ignore list
+- rgw: ignore zoneless default realm when not configured
+- librbd/migration/HttpClient: avoid reusing ssl_stream after shut down
+- crimson/os/seastore: track transactional read/write/flush
+- squid: rgw: decrypt multipart get part when encrypted
+- common/async: SharedMutex uses async_initiate
+- squid: doc/start: update os-recommendations.rst
+- PendingReleaseNotes: Adding note about rest module change and adding max_request option
+- squid: doc,mailmap: update my email / association to ibm
+- crimson/.../tri_mutex: lock() methods return normal future
+- qa/tasks/ceph_manager: set-require-min-compat-client to squid for msr profiles
+- librbd: avoid data corruption on flatten when object map is inconsistent
+- squid: qa/cephfs: ignore variant of MDS_UP_LESS_THAN_MAX
+- RGW|BN: fix lifecycle test and http server issue
+- blk/KernelDevice: Fix several issues with stopping discard threads
+- os/bluestore: Fix repair for multi label
+- qa: cover a custom object size in krbd_discard_granularity.t
+- Fix the handling of HEAD requests that do not comply with RFC standards
+- mgr/cephadm: add systemd unit to stored info about daemons
+- squid: doc/cephfs: edit "Layout Fields" text
+- doc/rados: add "pgs not deep scrubbed in time" info
+- squid: rgw/rados: don't rely on IoCtx::get_last_version() for async ops
+- rgw/beast: optimize for accept when meeting error in listenning
+- squid: doc/radosgw/multisite: fix Configuring Secondary Zones -> Updating the Period
+- mgr/rgw: Adding a retry config while calling zone_create()
+- squid: rgw: optimize bucket listing to skip past regions of namespaced entries
+- doc/dev: add "activate latest release" RTD step
+- squid: rgw: switch back to boost::asio for spawn() and yield_context
+- squid: doc/start: separate package chart from container chart
+- crimson: use get instead of deprecated get0
+- crimson/.../object_context: remove loading_mutex
+- os/bluestore: Bluefs, expand api for getting BlockDevice on BD/WAL
+- squid: os/bluestore: enable async manual compactions
+- ceph-volume: drop unnecessary call to get_single_lv()
+- mon/MonClient: handle ms_handle_fast_authentication return
+- doc/cephfs: use 'p' flag to set layouts or quotas
+- os/bluestore: Fix fsck() for multi label
+- squid: doc/rados: add "pgs not deep scrubbed in time" info
+- squid: doc/cephfs: improve cache-configuration.rst
+- squid: mgr/cephadm: bump monitoring stacks version
+- doc/cephfs: improve cache-configuration.rst
+- rgw: switch back to boost::asio for spawn() and yield_context
+- rgw/multisite: in order to sleep between mdlog polling events, we check if the mdlog_marker is not modified by comparing
+- mgr/rest: Trim request array and limit size
+- squid: mgr/dashboard: update period after migrating to multi-site
+- test/store_test: Add double check for repair
+- qa: add test for fix of client/session evict command
+- librbd/migration: close source image in OpenSourceImageRequest
+- ceph-volume: fix generic activation with raw osds
+- osd: Remove aios_size argument from submit_batch
+- squid: cephfs_mirror: use snapdiff api for incremental syncing
+- squid: qa/rgw: fix s3 java tests by forcing gradle to run on Java 8
+- crimson/.../pg_interval_interrupt_condition: allow specifying epoch
+- doc: document balancer configurable "update_pg_upmap_activity"
+- squid: ceph-volume: fix generic activation with raw osds
+- os/bluestore: Fix write_bdev_label
+- squid: mgr/dashboard: fix handling NaN values in dashboard charts
+- mon/OSDMonitor: check crush features in crush_rule_create_erasure
+- crimson/.../pg_interval_interrupt_condition: clarify member, add comments
+- ceph-volume: fix TestMigrate tests
+- cmake/ec: use ExternalProject to build isal library
+- mds: try to choose a new batch head in request_clientup()
+- rgw: realm create only sets default realm on --default
+- librados/asio: add version_t to completion signatures
+- mailmap: add my ibm email
+- mgr/dashboard: unable to edit pipe config for bucket level policy of a bucket
+- cmake/crypto: use ExternalProject to build isal crypto library
+- squid: common,osd: Use last valid OSD IOPS value if measured IOPS is unrealistic
+- os/bluestore: Tests for multi bdev label feature
+- crimson/os/seastore/cached_extent: add the "refresh" ability to lba
+- squid: rgw: load copy source bucket attrs in putobj
+- squid: qa: remove all bluestore signatures on devices
+- suites: test should ignore osd_down warnings
+- qa/cephfs: ignore variant of MDS_UP_LESS_THAN_MAX
+- squid: doc/governance: add Zac Dover's updated email
+- librbd/api: clean up leftovers in Migration::prepare_import()
+- squid: mgr/dashboard: add gw_groups support to nvmeof api
+- doc: Document the Windows CI job
+- client: calls to _ll_fh_exists() should hold client_lock
+- squid: os/bluestore: Fix repair of multilabel when collides with BlueFS
+- common/options: Change HDD OSD shard configuration defaults for mClock
+- tools/ceph-bluestore-tool: Added zap-device documentation
+- squid: doc/rados: make sentences agree in health-checks.rst
+- squid: mds: only authpin on wrlock when not a locallock
+- rgw: RGWAccessKey::decode_json() preserves default value of 'active'
+- squid: rgw: RGWAccessKey::decode_json() preserves default value of 'active'
+- squid: doc: update tests-integration-testing-teuthology-workflow.rst
+- container/build.sh: don't require repo creds on NO_PUSH
+- test/neorados: remove depreciated RemoteReads cls test
+- cls/user: reset stats only returns marker when truncated
+- squid: AsyncMessenger: Don't decrease l_msgr_active_connections if it is negative
+- mgr/dashboard: Show which daemons failed in CEPHADM_FAILED_DAEMON
+- Test: osd-recovery-space.sh extends the wait time for "recovery toofull".
+- log: thread name save/fetch infra
+- doc/rgw/notification: add missing admin commands
+- squid: doc/cephfs: rearrange subvolume group information
+- On graceful shutdown we will wait for discard queue to drain before storing the allocator.
+- squid: msg: insert PriorityDispatchers in sorted position
+- crimson: eliminate lock promotion from object_context and tri_mutex
+- cephfs_mirror: provide metrics for last successful snapshot sync
+- squid: crimson: access coll_map under alien tp with a lock
+- squid: mgr/dashboard: Dashboard not showing Object/Overview correctly.
+- container/Containerfile fix boolean IS_RELEASE usage
+- rgw: optimize bucket listing to skip past regions of namespaced entries
+- doc/rados/operations/pools.rst: Added docs for stretch pool set|unset|show
+- os/bluestore: Make bdev multi label compatible with !bdev->supported_bdev_label()
+- container/{Containerfile,build.sh}: use a secret to pass secrets
+- Squid: mgr/dashboard: RGW multisite sync remove zones fix
+- squid: doc/cephadm: Clarify "Deploying a new Cluster"
+- qa/standalone/scrub: fix the searched-for text for snaps decode errors
+- containers/make-manifest.py: Add --promote
+- squid: rgw/http: finish_request() after logging errors
+- mgr/dashboard: service form hosts selection only show up to 10 entries
+- squid: qa: suppress __trans_list_add valgrind warning
+- doc: update current_syncing_snap in peer status
+- squid: cephfs_mirror: update peer status for invalid metadata in remote snapshot
+- mgr/nfs: ensure user_id for create_export_from_dict
+- os/bluestore: Adapt multi bdev label tests for !bdev->supported_bdev_label()
+- crimson/.../alien_store: add comment explaining coll_map
+- squid: mgr/dashboard: add cephfs rename REST API
+- ceph-volume: tests shouldn't require lvm2 to pass
+- crimson/os/seastore: rename PhysicalNodeMapping::is_parent_valid() to
+- squid: doc/rgw/notification: persistent notification queue full behavior
+- cephadm: black-format the file test_enclosure.py
+- squid: rbd-mirror: use correct ioctx for namespace
+- squid: crimson/os/seastore/cached_extent: add the "refresh" ability to lba mappings
+- client: check mds down status bofore getting mds_gid_t from mdsmap
+- squid: ceph-volume: add TPM2 token enrollment support for encrypted OSDs
+- doc/cephfs: rearrange subvolume group information
+- squid: librados: use CEPH_OSD_FLAG_FULL_FORCE for IoCtxImpl::remove
+- doc/start: separate package chart from container chart
+- mgr/dashboard: mgr/dashboard: Select no device by default in EC profile
+- os/bluestore: Update test for resilience of bdev label against bad UUID
+- squid: qa/standalone/scrub: fix the searched-for text for snaps decode errors
+- doc/cephfs: edit "Layout Fields" text
+- crimson/.../internal_client_request: record epoch at construction and use for interruption
+- os/bluestore: Fix repair of multilabel when collides with BlueFS
+- os/bluestore: Made read/write_meta bdev aware
+- crimson/osd/pg_recovery: push the iteration forward after finding
+- rgw: revert account-related changes to get_iam_policy_from_attr()
+- mds: require filter for client/session evict command
+- doc: update 'sync_bytes' in peer status
+- os/bluestore: Fix ceph-bluestore-tool allocmap command
+- mds/MDSAuthCaps: allow updating root_squash in entity's MDS cap
+- squid: mgr/cephadm: add command to expose systemd units of all daemons
+- squid: mgr/dashboard: add gw_groups to all nvmeof endpoints
+- squid: mds/QuiesceDbManager: get requested state of members before iterating…
+- squid: doc/radosgw: Improve archive-sync-module.rst
+- qa: avoid a non-standard shell construct in rbd/iscsi_client.t
+- container/Containerfile: allow failure from curl to stop build
+- cephfs_mirror: use snapdiff api for incremental syncing
+- librados: use CEPH_OSD_FLAG_FULL_FORCE for IoCtxImpl::remove
+- qa: remove all bluestore signatures on devices
+- qa: suppress __trans_list_add valgrind warning
+- squid: cephadm: fix apparmor profiles with spaces in the names
+- container/build.sh: fix arm architecture tagging
+- os/bluestore: Improve documentation introduced by
+- squid: mds: fix session/client evict command.
+- librbd/migration/HttpClient: don't call disconnect() in handle_handshake()
+- squid: doc: documenting the feature that scrub clear the entries from damage…
+- ceph-volume: address test_activate_dmcrypt_tpm
+- crimson/.../object_context: drop recovery_read_marker
+- test/rgw: test_multi.py creates realm with --default
+- doc/rados: correct "full ratio" note
+- squid: qa/rgw/multisite: specify realm/zonegroup/zone args for 'account create'
+- squid: doc/dev/release-checklist: check telemetry validation
+- squid: mgr/dashboard: fix bucket get for s3 account owned bucket
+- mgr/cephadm: RGW service deployment defaults to 'default' realm/zonegroup/zone despite non-default spec in service
+- librbd/migration/HttpClient: propagate ec to handle_handshake()
+- common/dout: fix FTBFS on GCC 14
+- crimson/.../pg_interval_interrupt_condition: remove IOInterruptCondition(Ref<PG>& pg); constructor
+- doc/start: update os-recommendations.rst
+- test/store_test: add a simplified test for readv.
+- Squid: mgr/dashboard: NFS Export form fixes
+- mds/QuiesceDbManager: get requested state of members before iterating through each quiesce set members
+- mgr/dashboard: Allow adding all listeners unders a subsystems
+- librbd/migration: massage some error messages
+- squid: crimson/os/seastore: add writer level stats to RBM
+- mds: only authpin on wrlock when not a locallock
+- squid: qa/suites: drop --show-reachable=yes from fs:valgrind tests
+- crimson/.../tri_mutex: use hobject_t for tri_mutex::name debug value
+- common,osd: Use last valid OSD IOPS value if measured IOPS is unrealistic
+- test/crimson/seastore/test_seastore.cc: should not return a value
+- Squid: mgr/dashboard: remove orch required decorator from host UI router (list)
+- doc/rgw/d3n: pass cache dir volume to extra_container_args
+- librbd/migration: don't include ImageState.h in formats
+- container/Containerfile, build.sh: Add PRERELEASE_USERNAME/PASSWORD
+- container/make-manifest-list.py
+- mgr/dashboard: Adding group and pool name to service name
+- librados/asio: functions use async_initiate
+- cephfs_mirror: show 'sync_bytes' in peer status
+- qa/task: update alertmanager endpoints version
+- squid: blk/aio: fix long batch (64+K entries) submission
+- doc/rados: make sentences agree in health-checks.rst
+- squid: doc/cephadm: link to "host pattern" matching sect
+- squid: mgr/dashboard: Rephrase dedicated pool helper in rbd create form
+- Warning added for slow operations and stalled read in BlueStore.
+- doc/start: add supported Squid distros
+- mgr/dashboard: Rephrase dedicated pool helper in rbd create form
+- Limit private discarded queue for threads to a small items count.
+- squid: mgr/dashboard: fix lifecycle issues
+- squid: test/rgw/notifications: fix test regression
+- blk: add threaded discard support to kernel devices
+- doc: cmount_path documentation for CEPHFS nfs exports
+- crimson/common/tri_mutex: avoid hobject_t formatting
+- doc/cephadm: Clarify "Deploying a new Cluster"
+- squid: mgr/client: validate connection before sending
+- squid: qa/tasks/mgr/test_progress.py: deal with pre-exisiting pool
+- msg: insert PriorityDispatchers in sorted position
+- doc/radosgw: Improve archive-sync-module.rst
+- crimson/os/seastore/btree: drop unused lines
+- common: remove lingering bdev_async_discard option
+- squid: mgr/cephadm: add "original_weight" parameter to OSD class
+- mgr/dashboard: remove orch required decorator from host UI router (list)
+- rgw/dmclock: async_request() uses async_initiate
+- squid: cephfs,mon: fix bugs related to updating MDS caps
+- doc/radosgw/multisite: fix Configuring Secondary Zones -> Updating the Period
+- mgr/dashboard: NFS Export form fixes
+- os/bluestore: multiple bdev label (superblock) fixes
+- crimson/.../background_recovery: use epoch_started for interruption
+- squid: cmake: use ExternalProjects to build isa-l and isa-l_crypto libraries
+- squid: doc/rgw/d3n: pass cache dir volume to extra_container_args
+- mgr/dashboard: fix bucket get for s3 account owned bucket
+- os/bluestore: Adapt unittest for multi bdev label
+- doc:update e-mail addresses governance
+- mgr/dashboard: Dashboard not showing Object/Overview correctly.
+- squid: mds: find a new head for the batch ops when the head is dead
+- doc/radosgw/qat-accel: Update and Add QATlib information
+- mds/MDSAuthCaps: allow adding multiple caps via "fs auth" cmd
+- squid: doc/radosgw/qat-accel: Update and Add QATlib information
+- doc/governance: update my CSC email
+- rbd: drop --pool option from "rbd group image {add,rm}"
+- rbd: handle --{group,image}-namespace in "rbd group image {add,rm}"
+- squid: doc/README.md - add ordered list
+- mgr/dashboard: add cephfs rename REST API
+- squid: doc: SubmittingPatches-backports - remove backports team
+- squid: log: save/fetch thread name infra
+- squid: qa/rgw: force Hadoop to run under Java 1.8
+- squid: doc/dev: remove "Stable Releases and Backports"
+- rgw/aio: YieldingAioThrottle::async_wait() uses async_initiate
+- crimson/.../alien_store: access coll_map under coll_map_lock
+- container/Containerfile: replace CEPH_VERSION var for backward compat
+- ceph-volume: add TPM2 token enrollment support for encrypted OSDs
+- librbd/migration/HttpClient: avoid hitting an assert in advance_state()
+- mgr/dashboard: add gw_groups support to nvmeof api
+- cephadm: update hosts_facts to read apparmor profile names with spaces
+- squid: PeeringState.cc: Only populate want_acting when num_osds < bucket_max
+- squid: rbd: handle --{group,image}-namespace in "rbd group image {add,rm}"
+- squid: common/dout: fix FTBFS on GCC 14
+- doc: update tests-integration-testing-teuthology-workflow.rst
+- crimson/.../alien_store: clear coll_map on stop()
+- os/bluestore: enable async manual compactions
+- librbd/migration: don't instantiate NativeFormat, handle it via dispatch
+- squid: doc/rados/operations: Improve health-checks.rst
+- os/bluestore: Fix of bdev label fsck
+- crimson/os/seastore: add writer level stats to RBM
+- qa/rgw/multisite: add optional --default arg to 'realm pull'
+- mgr/dashboard: fix handling NaN values in dashboard charts
+- doc/cephadm: link to "host pattern" matching sect
+- mgr/dashboard: add gw_groups to all nvmeof endpoints
+- librbd/migration/NativeFormat: refactor source spec parsing
+- radosgw-admin: add 'realm default rm' command
+- crimson/os/seastar: report transaction iops/conflicts/outstanding
+- squid: ceph-bluestore-tool: Fixes for multilple bdev label
+- qa/rgw/multisite: specify realm/zonegroup/zone args for 'account create'
+- squid: src/mon/ConnectionTracker.cc: Fix dump function
+- mgr/dashboard: RGW multisite sync remove zones fix
+- squid: osd/scrub: reduce osd_requested_scrub_priority default value
+- mgr/dashboard: expose gw_groups list api
+- crimson/.../alien_store: factor out get_alien_coll_ref
+- qa/cephfs: fix TestRenameCommand and unmount the clinet before failing fs
+- squid: mgr/dashboard: introduce server side pagination for osds
+- doc: SubmittingPatches-backports - remove backports team
+- Allow setting peering_crush_bucket_{count|target|barrier}
+- qa/cephfs: update tests for test_volumes & unit-test for earmarking
+- rgw/http: finish_request() after logging errors
+- doc/governance: add Zac Dover's updated email
+- squid: doc/rados: add osd_deep_scrub_interval setting operation
+- common/async: context_pool satisfies ExecutionContext
+- mon: validate everybody understands MSR on set-require-min-compat-client
+- doc/rgw/notification: persistent notification queue full behavior
+- container/build.sh: fix up org vs.
+- cephfs_mirror: update peer status for invalid metadata in remote snapshot
+- doc/dev/release-checklist: check telemetry validation
+- squid: Add Containerfile and build.sh to build it.
+- os/bluestore: Make read_meta / write_meta cached
+- blk/kernel: always use ceph_assert
+- squid: librbd/migration: prune snapshot extents in RawFormat::list_snaps()
+- ceph-volume: address mypy errors in disk.py
+- squid: qa: ignore container checkpoint/restore related selinux denials for c…
+- librbd/migration: prune snapshot extents in RawFormat::list_snaps()
+- doc/rados: add osd_deep_scrub_interval setting operation
+- node-proxy: fix util.get_logger()
+- squid: rgw/notify: visit() returns copy of owner string
+- doc/dev: remove "Stable Releases and Backports"
+- os/bluestore: Review fixes
+- crimson/.../scrub_events: use epoch at which operation was scheduled for interruption
+- tools/ceph-bluestore-tool: remove param zap_size
+- crimson/os/seastore: report outstanding ios for each shard
+- crimson/os/seastore/transaction_manager: consider inconsistency between
+- squid: doc/rados: add confval directives to health-checks
+- squid: test/rgw/notification: fixing backport issues in the tests
+- rgw/notification: fix segmentation fault and topic listing logic
+- squid: doc/cephfs: edit 3rd 3rd of mount-using-kernel-driver
+- suites/upgrade/quincy-x: update the ignore list
+- qa/standalone/scrub: remove TEST_recovery_scrub_2
+- mgr/cephadm: add command to list systemd units of dameons
+- mgr/cephadm: add "original_weight" parameter to OSD class
+- qa/rgw: the rgw/verify suite runs java tests last
+- cephadm/services/ingress: fixed keepalived config bug
+- crimson/.../object_context_loader: consolidate obc loading
+- qa/s3tests: configure tenant name for 's3 tenant' section
+- qa/suites: drop --show-reachable=yes from fs:valgrind tests
+- squid: cephadm/services/ingress: fixed keepalived config bug
+- squid: qa/standalone/scrub: remove TEST_recovery_scrub_2
+- squid: doc/rados: fix sentences in health-checks (3 of x)
+- squid: doc/rados: fix sentences in health-checks (2 of x)
+- PeeringState.cc: Only populate want_acting when num_osds < bucket_max
+- crimson/.../object_context_loader: simplify obc loading
+- os/bluestore: fix DB_SUPER_RESERVED->SUPER_RESERVED
+- osd/scrub: reduce osd_requested_scrub_priority default value
+- qa/rgw: force s3 java tests to run gradle on Java 8
+- librbd/migration/HttpClient: drop SslHttpSession::m_ssl_enabled
+- squid: doc: fix email
+- doc/rgw/notification: clarified the notification_v2 behavior upon upgrade
+- qa/cephfs: minor adjustment in test_admin.TestFsAuthorize
+- mon/OSDMonitor: rename get_lower_bound to get_lower_bound_by_pool
+- doc/cephadm: add malformed-JSON removal instructions
+- mgr/balancer: tie update_pg_upmap_activity to a configurable
+- mgr/cephadm: stop running "true" before every command
+- squid: mgr/dashboard: rm nvmeof conf based on its daemon name
+- squid: doc/mds: improve wording
+- doc: fix email
+- qa: update test for last_sync_duration
+- qa/cephfs: handle case where mntpt is '/' in caps_helper.py
+- squid: ceph-volume: fix dmcrypt activation regression
+- squid: doc/cephadm: add malformed-JSON removal instructions
+- qa/rgw: force Hadoop to run under Java 1.8
+- doc/rados/operations: Improve health-checks.rst
+- ceph-volume: refactor device path handling for LVM lookups
+- crimson/os/seastore: improve store stats
+- blk/KernelDevice: Unify discard thread management
+- osd: use CEPH_FEATUREMASK_CRUSH_MSR, not CEPH_FEATURE_CRUSH_MSR
+- qa/tasks/mgr/test_progress.py: deal with pre-exisiting pool
+- squid: mgr/dashboard: fix doc links in rgw-multisite
+- crimson/os/seastore/btree_lba_manager: allow _alloc_extents to alloc
+- qa/tasks/ceph_iscsi_client: don't use mpathconf
+- squid: doc/dev/peering: Change acting set num
+- os/bluestore: Modify read_meta()
+- doc/README.md - add ordered list
+- rgw/pubsub: Waiter uses async_initiate
+- CMakeLists: Crimson - remove Seastar_STD_OPTIONAL_VARIANT_STRINGVIEW
+- squid: doc/cephadm: correct "ceph orch apply" command
+- squid: mgr/dashboard: handle infinite values for pools
+- squid: orch: refactor boolean handling in drive group spec
+- squid: mgr/dashboard: Increase maximum namespace count to 1024
+- squid: doc/cephadm: Update operations.rst
+- rbd: mention namespace in "rbd mirror pool" command descriptions
+- squid: node-proxy: make the daemon discover endpoints
+- qa: adjust expected io_opt in krbd_discard_granularity.t
+- mgr/client: validate connection before sending
+- squid: qa: adjust expected io_opt in krbd_discard_granularity.t
+- crimson/os/seastore: track shard io stats below transaction manager
+- mgr/dashboard: Add mTLS support
+- qa: ignore container checkpoint/restore related selinux denials for centos9
+- qa/rgw: pull Apache artifacts from mirror instead of archive.apache.org
+- squid: qa/rgw: pull Apache artifacts from mirror instead of archive.apache.org
+- squid: mon/OSDMonitor: fix get_min_last_epoch_clean()
+- squid: qa/suites/rbd/iscsi: enable all supported container hosts
+- Add Containerfile and build.sh to build it.
+- squid: qa/suites/rados/thrash-old-clients: test with N-2 releases on centos 9
+- qa: check last successful snapshot sync metrics in perf counters
+- squid: doc/README.md: create selectable commands
+- kv/RocksDBStore: add more perf counters to track compactions.
+- squid: doc/start: add supported Squid distros
+- doc/rados: add confval directives to health-checks
+- librbd/migration/OpenSourceImageRequest: rename io_ctx -> dst_io_ctx
+- os/bluestore: Fix read_meta and write_meta
+- mgr/dashboard: fix lifecycle issues
+- rgw: Don't crash on exceptions from pool listing
+- squid: doc: s/Whereas,/Although/
+- squid: doc/README.md: edit "Build Prerequisites"
+- squid: osd/scrub: exempt only operator scrubs from max_scrubs limit
+- qa/suites/rbd/iscsi: enable all supported container hosts
+- os/bluestore: Remove bluestore_debug_prefill
+- squid: doc/cephfs: edit "Disabling Volumes Plugin"
+- rbd: "rbd bench" always writes the same byte
+- squid: global: Call getnam_r with a 64KiB buffer on the heap
+- os/bluestore: Adapt read_meta / write_meta
+- squid: qa/suites/rados/verify/validater: increase heartbeat grace timeout
+- doc: s/Whereas,/Although/
+- squid: mgr/dashboard: fix ceph-users api doc
+- os/bluestore: Fix of funny constructor misuse
+- doc/man: edit ceph-bluestore-tool.rst
+- mgr/dashboard: handle infinite values for pools
+- Squid: mgr/dashboard: multisite sync policy improvements
+- squid: crimson: audit and correct epoch captured by IOInterruptCondition
+- squid: doc/governance: add exec council responsibilites
+- os/bluestore: Hack for fsck with multi label
+- rados/test: Remove cls_remote_reade since gather deprecated
+- squid: doc/man: edit ceph-bluestore-tool.rst
+- doc/cephadm: Update operations.rst
+- squid: rbd: "rbd bench" always writes the same byte
+- crimson/.../alien_store: update coll_map from alien tp
+- qa/workunits/rbd: perform cleanup in test_clone_encryption()
+- crimson/.../tri_mutex: no need to store waiter_name on waiter_t
+- squid: crimson: simplify obc loading by locking excl for load and demoting to needed lock
+- mgr/dashboard: introduce server side pagination for osds
+- rgw/notify: visit() returns copy of owner string
+- container/Containerfile: purge .repo files with secrets before commit
+- CMakeLists: Seastar_DEPRECATED_OSTREAM_FORMATTERS OFF
+- cephadm: rename test_enclosure to test_host_facts
+- os/bluestore: Minor fixes
+- osd/scrub: exempt only operator scrubs from max_scrubs limit
+- squid: cephadm: Support Docker Live Restore
+- osd/scrub: decrease default deep scrub chunk size
+- crimson/os/seastore/onode: add hobject_t into Onode
+- squid: mon/OSDMonitor: Add force-remove-snap mon command
+- mgr/nfs: adopt API & unit tests for nfs exports
+- squid: orch: disk replacement enhancement
+- doc/rados: fix sentences in health-checks (3 of x)
+- doc/rados: fix sentences in health-checks (2 of x)
+- doc: Correct link to Prometheus docs
+- node-proxy: make the daemon discover endpoints
+- doc/cephfs: edit "Disabling Volumes Plugin"
+- squid: doc/start: fix "are are" typo
+- squid: crimson/os/seastore/onode: add hobject_t into Onode
+- ceph-volume: fix dmcrypt activation regression
+- doc/cephfs: add doc for disabling mgr/volumes plugin
+- squid: osd/scrub: decrease default deep scrub chunk size
+- squid: doc/cephfs: add doc for disabling mgr/volumes plugin
+- cephfs: disallow removing root_squash via "fs authorize" cmd
+- doc/cephfs: edit 3rd 3rd of mount-using-kernel-driver
+- squid: doc/radosgw: update rgw_dns_name doc
+- mgr/nfs: add cmount_path
+- doc/cephadm: correct "ceph orch apply" command
+- qa/suites/rados/thrash-old-clients: test with N-2 releases on centos 9
+- doc/dev/peering: Change acting set num
+- doc/mds: improve wording
+- squid: mgr/orchestrator: fix encrypted flag handling in orch daemon add osd
+- mon/OSDMonitor: osd_epochs to store only UP osds
+- squid: doc: Correct link to Prometheus docs
+- orch: disk replacement enhancement
+- qa/rgw/multisite: fix spelling of is_default in realm configs
+- mgr/dashboard: rm nvmeof conf based on its daemon name
+- squid: corpus: update submodule with mark cls_rgw_reshard_entry forward_inco…
+- crimson/os/seastore/cbj: skip crc calculation for cbj header if device supports the checksum offload
+- qa: don't hardcode podman in rbd/gwcli_{create,delete}.t
+- corpus: update submodule with mark cls_rgw_reshard_entry forward_incompat
+- rgw/rados: rgw_rados_operate() takes version_t*
+- squid: doc/README.md: improve formatting
+- global: Call getnam_r with a 64KiB buffer on the heap
+- qa/workunits/rbd: no need to chmod in luks-encryption.sh
+- squid: osd/scheduler: add mclock queue length perfcounter
+- mon/OSDMonitor: Add force-remove-snap mon command
+- rgw/beast: spawn a cancellable coroutine for the accept loop
+- mgr/dashboard: Wrong(half) uid is observed in dashboard
+- mgr/orchestrator: fix encrypted flag handling in orch daemon add osd
+- src/ceph_release, doc: mark squid stable
+- mgr/dashboard: fix ceph-users api doc
+- squid: rbd: amend "rbd {group,} rename" and "rbd mirror pool" command descriptions
+- squid: mgr/dashboard: custom image for kcli bootstrap script
+- doc/dev/release-checklists.rst: enable rtd for squid
+- mgr/dashboard: fix doc links in rgw-multisite
+- debian pkg: record python3-packaging dependency for ceph-volume
+- qa: Added mon connection score tests
+- doc/README.md: create selectable commands
+- squid: rgw/multisite: metadata polling event based on unmodified mdlog_marker
+- squid: doc/rgw/notification: clarified the notification_v2 behavior upon upg…
+- mgr/dashboard: update period after migrating to multisite
+- squid: src/crimson/osd/scrub: fix the null pointer error
+- squid: src/ceph_release, doc: mark squid stable
+- squid: debian pkg: record python3-packaging dependency for ceph-volume
+- qa/suites/netsplit/tests/2-dc-1-arbiter-stretch-cluster-netsplit.yaml
+- mds: encode quiesce payload on demand
+- squid: os/bluestore: Mute warnings
+- orch: refactor boolean handling in drive group spec
+- squid: mds: encode quiesce payload on demand
+- mgr/dashboard: Increase maximum namespace count to 1024
+- style changes requested by Igor
+- librbd: factor out prune_extents() from prune_parent_extents()
+- ceph-volume: docstring and typing corrections
+- squid: doc/glossary.rst: add "Dashboard Plugin"
+- mon/ElectionLogic: tie-breaker ignore proposal from marked down mon
+- squid: a series of optimizations for kerneldevice discard
+- qa: delete the symbolic link 1-mds-2-client.yaml
+- cephadm: pull container images from quay.io
+- mon/OSDMonitor: fix osd_epochs insertion on prepare_beacon()
+- squid: cephfs-shell: excute cmd 'rmdir_helper' reported error
+- doc/glossary.rst: add "Dashboard Plugin"
+- squid: doc/rados: add blaum_roth coding guidance
+- cephfs-shell: excute cmd 'rmdir_helper' reported error
+- squid: Make mon addrs consistent with mon info
+- mgr/dashboard: update translations for squid
+- squid: mgr/dashboard: Fix listener deletion
+- osd/scheduler: add mclock queue length perfcounter
+- squid: rgw/kafka: refactor topic creation to avoid rd_kafka_topic_name()
+- squid: mgr/cephadm: make ssh keepalive settings configurable
+- squid: mon/ElectionLogic: tie-breaker mon ignore proposal from marked down mon
+- doc/governance: add exec council responsibilites
+- AsyncMessenger: l_msgr_active_connections numerical anomaly
+- doc/radosgw: update rgw_dns_name doc
+- rbd: clarify "rbd {group,} rename" command description
+- squid: doc/dev/release-checklists.rst: enable rtd for squid
+- src/crimson/osd/scrub: fix the null pointer error
+- squid: doc/rados: add link to messenger v2 info in mon-lookup-dns.rst
+- cephfs_mirror: revert sync_duration to seconds
+- doc/start: fix "are are" typo
+- os/bluestore: Mute warnings
+- doc/README.md: edit "Build Prerequisites"
+- doc: document labelled perf metrics for mds/cephfs-mirror
+- squid: qa/suites/rados/thrash-old-clients: Add noscrub, nodeep-scrub to ignorelist
+- crimson/.../peering_event: use peering event epoch for interruption
+- squid: doc/rados: document unfound object cache-tiering scenario
+- squid: mgr/cephadm/services/ingress Fix HAProxy to listen on IPv4 and IPv6
+- squid: doc/radosgw: s/Poliicy/Policy/
+- qa/suites/rados/verify/validater: increase heartbeat grace timeout
+- crimson/osd: report the average reactor utilization
+- squid: doc/radosgw: Improve config-ref.rst
+- bli/aio: replace inappropriate aio_read() with aio_write for POSIXAIO
+- squid: doc/rados/troubleshooting: Improve log-and-debug.rst
+- doc/rados: add link to messenger v2 info in mon-lookup-dns.rst
+- cephadm: Support Docker Live Restore
+- src/mon/ConnectionTracker.cc: fix dump
+- squid: cephadm: pull container images from quay.io
+- blk/kernel: Fix uninitialized discard_stop
+- squid: mgr/dashboard: update translations for squid
+- mgr/cephadm: make ssh keepalive settings configurable
+- mgr/dashboard: Fix listener deletion
+- squid: doc/glossary: add "PLP" to glossary
+- squid: qa/cephadm: extend iscsi teuth test
+- rgw/kafka: refactor topic creation to avoid rd_kafka_topic_name()
+- doc: revert sync_duration to seconds
+- Make mon addrs consistent with mon info
+- squid: qa/suites/rados: Cancel injectfull to allow cleanup
+- qa/suites/rados/thrash-old-clients: Add noscrub, nodeep-scrub to ignorelist
+- doc/rados: document unfound object cache-tiering scenario
+- squid: mgr/dashboard: Update nvmeof microcopies
+- squid: doc/rados: standardize markup of "clean"
+- doc/rados: add blaum_roth coding guidance
+- mgr/dashboard: multisite sync policy improvements
+- doc/glossary: add "PLP" to glossary
+- doc/README.md: improve formatting
+- doc/rados/troubleshooting: Improve log-and-debug.rst
+- squid: ceph-volume: fix OSD lvm/tpm2 activation
+- mgr/cephadm/services/ingress Fix HAProxy to listen on IPv4 and IPv6
+- mon/OSDMonitor: add comments
+- doc/glossary: add "flapping OSD"
+- container/build.sh:
+- doc/radosgw: s/Poliicy/Policy/
+- doc/radosgw: Improve config-ref.rst
+- mgr/volumes: add earmarking for subvol
+- squid: doc/glossary: add "flapping OSD"
+- squid: crimson/os/seastore: add checksum offload to RBM
+- doc/rados: standardize markup of "clean"
+- squid: mgr/volumes: add earmarking for subvol
+- squid: doc/cephfs: s/mountpoint/mount point/
+- Revert "qa/config/crimson_qa_overrides: adjust mgr_stats_period"
+- squid: doc: fix typo
+- rgw/pubsub: Waiter unlocks before suspend
+- qa/cephadm: extend iscsi teuth test
+- squid: doc/cephadm: clean "Adv.
+- qa/suites/rados: Cancel injectfull to allow cleanup
+- squid: rgw/notifications: fixing radosgw-admin notification json
+- blk: support bdev_async_discard_threads == 0
+- doc/mgr/restful: update max_request config
+- squid: doc/glossary: add "ceph-ansible"
+- squid: mgr/balancer: optimize 'balancer status detail'
+- doc/glossary: add "ceph-ansible"
+- osd/scheduler: fix unittest_mclock_scheduler failed
+- doc: Update pendingreleasenotes for CephFS NFS exports
+- ceph-volume: fix OSD lvm/tpm2 activation
+- squid: doc/mgr/dashboard: fix TLS typo
+- orch: Fix daemon add osd boolean param handling
+- squid: doc: update nfs doc for Kerberos setup of ganesha in Ceph
+- mgr/balancer: optimize 'balancer status detail'
+- qa/suites/rados/singleton/all: init mon-stretch-pool.yaml
+- doc/cephadm: clean "Adv.
+- crimson/os/seastore: replace rbm_metadata_header_t with rbm_superblock_t
+- doc: fix typo
+- qa/suites/rados: 3-az-stretch-cluster-netsplit test
+- rgw/notifications: fixing radosgw-admin notification json
+- mgr/dashboard: Update nvmeof microcopies
+- doc/cephfs: s/mountpoint/mount point/
+- doc: update nfs doc for Kerberos setup of ganesha in Ceph
+- squid: qa/suites/crimson-rados/perf: add ssh keys
+- doc/mgr/dashboard: fix TLS typo
+- mgr/dashboard: adapt dashboard e2e for grafana
+- squid: mgr/dashboard: remove cherrypy_backports.py
+- qa/suites/crimson-rados/perf: add ssh keys
+- squid: doc/radosgw: improve qat-accel.rst
+- mgr/dashboard: rm unnecessary classmethods
+- spawn: remove spawn submodule
+- doc: nit fixes for nfs doc
+- doc/radosgw: improve qat-accel.rst
+- squid: doc: Harmonize 'mountpoint'
+- mgr/dashboard: remove cherrypy_backports.py
+- squid: qa/distros: reinstall nvme-cli on centos 9 nodes
+- squid: rgw: decrement qlen/qactive perf counters on error
+- squid: seastar: update submodule
+- qa: generate valgrind suppressions
+- squid: objclass: deprecate cls_cxx_gather
+- doc: Harmonize 'mountpoint'
+- qa/distros: reinstall nvme-cli on centos 9 nodes
+- squid: doc/dev: instruct devs to backport
+- rgw: decrement qlen/qactive perf counters on error
+- seastar: update submodule
+- labeler: label seastar submodule as crimson
+- qa/rgw: bump keystone/barbican from 2023.1 to 2024.1
+- doc/dev: instruct devs to backport
+- objclass: deprecate cls_cxx_gather

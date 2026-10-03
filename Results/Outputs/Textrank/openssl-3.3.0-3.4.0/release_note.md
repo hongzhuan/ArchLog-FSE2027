@@ -1,0 +1,927 @@
+# VerLog-style TextRank Release Note
+
+- Repository: openssl
+- Version pair: openssl-3.3.0 -> openssl-3.4.0
+- Pair id: openssl-3.3.0-3.4.0
+- Input commits: 930
+- Candidate sentences: 915
+- GT-length budget: 414
+- Extracted entries: 915
+
+## Extracted Entries
+
+- fipsinstall: use correct macro for no drbg trunc digest option
+- Fix potential memory leak in OSSL_IETF_ATTR_SYNTAX_add1_value()
+- Fix possible double-free in pkcs7 add_attribute function
+- Fix potential double free through SRP_user_pwd_set1_ids()
+- check_format.pl: fix detection of 'if' with single stmt in braces without 'else'
+- fix(stylecheck): Take advantage of check-format-commit.sh's new capability
+- Fix windows ci to use proper OSSL_WINCTX define
+- Add a unit test to validate the functionality of our reg key lookups
+- fix sending error when no root CA cert update available
+- Add reason codes with the correct offset for two alerts
+- test: update fipsinstall tests to cover signature_digest_check option
+- Return SSL_AD_UNEXPECTED_MESSAGE alert when receiving any other change_cipher_spec value(RFC 8446)
+- Update BN_add.pod documentation so it is consistent with header declarations
+- Change existing evp_test KeyGen Ctrls to use provider algorithm
+- Revert "test: omit failing test when using a FIPS provider that supports eddsa_no_verify_digested"
+- test: add negative tests for KBKDF key size check under FIPS
+- Update modulepath test for provider config to skip if not present
+- Add Windows build with enable-fips no-thread-pool no-quic
+- test: omit failing test when using a FIPS provider that supports eddsa_no_verify_digested
+- [Docs] SSL_*_use will increment reference counter
+- Add enable-weak-ssl-ciphers to full_featured CI job
+- Add additional test cases for Single Step KDF.
+- JITTER: excercise all tests in CI with JITTER seed source under certain build configuration
+- changes: add no_short_mac entry
+- test: add a default greeting to avoid printing a null pointer.
+- EVP_CIPHER_CTX_get_algor_params() may attempt to access params array
+- {CMS,PKCS7}_verify(): use 'certs' parameter ('-certfile' option) also for chain building
+- test: add command line indicator option checking to fipsinstall
+- Enable ipv6 use if available
+- Speed up SSL_add_{file,dir}_cert_subjects_to_stack
+- Add Test for Verification Failure on Incorrect X509 Version
+- fipsinstall: add kbkdf key check option
+- Add "no-fips-post" configure option.
+- Update new FIPS indicator evp_tests to use FIPSversion + Availablein options.
+- test/threadstest.c: Add checks for CRYPTO_THREAD_lock_new()
+- QUIC QSM: Add function to determine if data is waiting
+- apps/pkcs12: Not writing the private key file until the import password is verified
+- fuzz/decoder.c: Limit the key sizes on which checks are run
+- Add error return value information for EVP_MD_get_size()
+- Avoid type errors in EAI-related name check logic.
+- doc: add note about the configuration option for the jitter source.
+- fips: add kbkdf key check checking function
+- tls13_meth.c: Check for negative return from EVP_CIPHER_CTX_get_iv_length()
+- OSSL_CMP_validate_msg(): fix check such that OSSL_CMP_OPT_PERMIT_TA_IN_EXTRACERTS_FOR_IR becomes usable again
+- fips: install with the kbkdf key check option set
+- kdfs: implement key length check in X9.42
+- fips: wire in the no-short-mac option
+- cms: fix tests in light of PKCS version 1.5 padding check
+- posix_async: FreeBSD also defines {make|swap|get|set}context
+- Adjust FIPS EC/DSA self test data for different nonce generation
+- x509/x509_set.c: Add the check for the EVP_MD_CTX_get_size()
+- Remove configuration targets and related documentation for Guardian builds.
+- DEFINE_STACK_OF.pod: Fix prototypes of sk_TYPE_free/zero()
+- bio_ssl.c: Do not call SSL_shutdown if not inited
+- x509_acert: Add simple API tests
+- Add Version Check for CSR Verification
+- fipsmodule.cnf: set the signature digest checks option on installation
+- Add IETFAttrSyntax type support
+- Add new configurable item pbkdf2-lower-bound-check
+- Use OSSL_TIME instead of using arithmetic directly on time_t
+- Add test for OSSL_PROVIDER_load with module path set
+- Add signature digest check option to fipsinstall
+- test: add unit tests for no-short-mac
+- Add Changes entry
+- test: add error reasons to Single Step KDF tests
+- check-format-commit: call fewer unneeded processes
+- test/bad_dtls_test.c: Add checks for the EVP_MD_CTX_get_size()
+- prov: add no-short-mac code to KMAC
+- Add note for non-interactive use of s_client
+- Fix Edge Cases in Password Callback Handling
+- Fix SSL_CTX_set1_groups documentation on preference orders
+- Modify check-format to match line length coding style
+- Revert "fipsinstall: add ed_no_verify_digested option"
+- check-format.pl: do checks regarding statement/block after for() also on {OSSL_,}LIST_FOREACH{,_*}
+- make_addressPrefix(): Fix a memory leak in error case
+- evp_test: Added the special private key that triggers bug (CVE-2011-4354)
+- Add processing by chunks to digest, sign, verify tests
+- test: update SSL old test in light of PKCS version 1.5 padding change under FIPS
+- test/provider_fallback_test.c: Add OSSL_PROVIDER_unload() to avoid memory leak
+- s_client: use the full buffer for reads
+- Add Changes entry for debuginfo generation
+- Limit the number of commands that can be used in the quic-lcidm fuzzer
+- test: userNotice X.509v3 extension
+- update windows_comp ci run to use new registry reads
+- Don't compile in support for DSA speed testing if not needed
+- OSSL_LIB_CTX_load_config() must not be called concurrently on same libctx
+- test/hmactest: Add further tests for HMAC with multiple update calls
+- test: add error reasons to TLS 1.3 KDF tests
+- test: update SSL API test in light of PKCS version 1.5 padding change under FIPS
+- Add a test mode to the speed app
+- RSA decoder should check also sanity of p, q, e, d ...
+- Fix up path generation to use OPENSSL_MODULES
+- CHANGES.md: add an entry about newly deprecated time-related functions
+- FIPS: Add EDDSA public key validation.
+- Do not use bit fields for context data flag variables
+- Call key_check_passed in set_ctx_params
+- Fix the alert used on a missing key_share
+- Augment version.c to not display -w options on non-windows
+- Fix signal handling in saccept for windows
+- Add a test for a missing supported_versions extension in the HRR
+- apps/req: avoid needless hint on using -help on duplicate extensions added via -addext
+- fipsinstall: add ed_no_verify_digested option
+- fix: extension critical definition to default false
+- o_fopen: fix coding style and build error with VS2010
+- ossl_print_attribute_value(): use a sequence value only if type is a sequence
+- Correct Alert Handling for Missing Compression Methods
+- x509_acert: Add, remove and get attribute certificate attributes
+- Document that SHAKE-128 and SHAKE-256 have no default digest length
+- Do not implicitly start connection with SSL_handle_events() or SSL_poll()
+- x509_acert: Add more parsing and printing tests
+- VMS: Move defining _XOPEN_SOURCE and _XOPEN_SOURCE_EXTENDED to config target
+- apps: ca,req,x509: Add explicit start and end dates options
+- fix: in RC2 implementation, handle both old and new AID.params keys
+- extend x86_64-xlate.pl perlasm so it can handle .rodata sections properly
+- Add a test for the nonce-type sigopt
+- X509at_add1_attr*(): extend error entry on duplicate attribute
+- paramnames: add params for no-short-mac option
+- fipsinstall: add no_short_mac option
+- Document that DH and DHX key types cannot be used together in KEX
+- Use the correct length value for input salt
+- Change all existing FIPS configurable checks to use FIPS indicators.
+- apps: add missing entry to tls extension label list
+- apps/rehash.c: Add the check for the EVP_MD_get_size()
+- Revert evp_test change that made "FIPSversion" skip the default provider.
+- doc/fingerprints.txt: Add the future OpenSSL release key
+- Fix unpredictible refcount handling of d2i functions
+- 80-test_cmp_http_data/test_connection.csv: disable localhost test as not supported on some hosts
+- Fix a minor typo in the documentation of RAND_set_seed_source_type()
+- s390x: Fix s390x_shake_squeeze() when MSA 12 is available
+- BIO_s_connect: Do not set keepalive on dgram sockets
+- Make ossl_ht_delete use read-once semantics
+- s390x: Fix s390x_sha3_absorb() when no data is processed by KIMD
+- ssl_cipher_get_overhead(): Replace size_t with int and add the checks
+- Fix decoder error on SM2 private key
+- fix: let util/mkbuildinf.pl use SOURCE_DATE_EPOCH, even if it's zero
+- test/provider_test.c: Add OSSL_PROVIDER_unload() to avoid memory leak
+- Restrict the length of key-derivation key used in KDFs
+- APPS: Add missing OPENSSL_free() and combine the error handler
+- fix: Have util/mkerr.pl comply better with our coding style
+- Add option for setting size of processed data chunks
+- OpenSSL::Test: Avoid running IPv6 related tests if IPv6 was explicitly disabled
+- make update
+- Adjust ci to only use major.minor when setting reg keys
+- Implement functionality for direct use of composite signature algorithms
+- Add test for ASN1_item_verify()
+- s390x: Add defines for new CPACF functions
+- Add support for integrity-only cipher suites for TLS v1.3
+- Add a test for SSL_select_next_proto
+- Add Missing Error Messages for AES-OCB Tag Length Validation
+- CMP app: fix combination of -certout and -chainout with equal filename argument
+- Apply the FIPS_eddsa_no_verify_digested indicator on prehash EdDSA only
+- s390x: Disable HMAC hardware acceleration when an engine is used for the digest
+- Removed hard coded value for cap in function ossl_rsa_multip_cap
+- test: add FIPS version check for EC cofactor derive tests
+- doc: add documentation for -eddsa_no_verify_digested fipsinstall option
+- Allow an empty NPN/ALPN protocol list in the tests
+- Allow openssl version to function in the absence of a config file
+- test: auditIdentity X.509v3 extension decoding and display
+- Add error checking to CRYPTO_atomic_[load|store] calls
+- test: fix 20-test_dgst.t to use hexkey
+- run-checker-merge.yml: Combine no-ec2m with enable-fips
+- Add a check-format-commit.sh script
+- Revert "Apply the FIPS_eddsa_no_verify_digested indicator on prehash EdDSA only"
+- ossl_provider_new(): Fix memory leak on error
+- prov-compat-label.yml: Do not test fips provider from master
+- Fix potential memory leak in save_statusInfo()
+- doc: document -signature_digest_check option to fipsinstall
+- ASYNC_start_job: more readable documentation for handling ASYNC* APIs
+- Revert "doc: add documentation for -eddsa_no_verify_digested fipsinstall option"
+- Convert check-format-commits.sh to use allowlist
+- feat: enhance util/check-format-commit.sh to be able to handle a commit range
+- Fix no-thread-pool build on Windows
+- Document the new -testmode option to the speed command
+- Add processing by chunks to mac tests
+- fix demos/sslecho/main.c so it builds on OpenBSD too
+- Add a style-check workflow
+- test: add error reasons to TLS 1.2 PRF tests
+- test: add error reasons to TLS 1 PRF tests
+- Add a test recipe for testing the speed command
+- Optimization of ossl_ec_key_public_check()
+- jitter: add a new provider containing a jitter entropy source alone
+- Allow group methods to customize initialization for speed
+- Add some documentation to describe the encap/decap requirements
+- doc: document the fipsintsall option to disallow PKCS version 1.5 padding for key agreement & transport
+- x_attrib.c: Fix print_hex() function
+- Check DSA parameters for excessive sizes before validating
+- Add design document about handing some MAX defines
+- Add tests for long configuration lines with backslashes
+- Restrict FIPS EC Keygen to only allow curves with a security strength
+- fix: for exporters to work for build config, there may be two include dirs
+- Fix error handling in OBJ_add_object
+- Add support for targetingInformation X.509v3 extension
+- ci: add 3.4 to the provider compatibility test
+- Use the new hashtable for core_namemap
+- Add test for BIO password callback functionality
+- Fix data race between SSL_SESSION_list_add and ssl_session_dup
+- Move docker files to test
+- params: add kbkdf key check param
+- Remove the event queue code
+- Add an indicator for AES GCM that returns if the iv has been generated
+- Make counters in rcu/rw threads torture test 64 bit
+- list_tls_signatures(): Avoid leak with zero length builtin_sigalgs
+- Fix typing on call to interlockedExchange for windows
+- EVP_DigestUpdate(): Check if ctx->update is set
+- Add 'openssl info' item for the Windows install context
+- Add logging support for early data
+- Add a CHANGES.md/NEWS.md entry for the unbounded memory growth bug
+- Add 'documentation policy' link to CONTRIBUTING guide.
+- Use parent directory instead of index.html
+- CMS_get1_crls(): Remove redundant check for NULL crls
+- Add a test for session cache handling
+- Add FIPS KMAC key check
+- do_print_ex(): Avoid possible integer overflow
+- Add CHANGES.md entry for the EC/DSA nonce generation fixes
+- When calling ASN1_item_i2d () check both returned length and allocated pointer
+- fips: add kbkdf key length check as per SP 800-131a revision 2
+- Extend TLSv1.3 record layer padding API calls
+- Remove SSL_ENC_FLAG_EXPLICIT_IV which is only set and never read.
+- feat: support userNotice X.509v3 extension
+- CMP: add support for requesting cert template using genm/genp
+- blank line required to display code in openssl-ts.pod.in
+- Check range of RSA plaintext and ciphertext when using no padding.
+- Add failed entropy continuous test error
+- docs: Document the new signature interface for providers
+- Configure: make absolutedir() use rel2abs() on Windows too
+- Update fips-label.yml to make 'Cleanup artifact' conditional
+- Make rcu_thread_key context-aware
+- Add a test for an empty NextProto message
+- Allow short reads in asn1_d2i_read_bio()
+- Correct OSSL_sleep for NonStop PUT model by introducing sleep().
+- Document that private and pairwise checks are not bounded by key size
+- test: the basicAttConstraints X.509v3 extension
+- Fix a memory leak in the speed app
+- Clarify Tag Length Setting in OCB Mode
+- Only free the read buffers if we're not using them
+- Fix handling of NULL sig parameter in ECDSA_sign and similar
+- Clarify in-place encryption behavior in documentation
+- Add a test for debuginfo generation
+- Use correctly formatted ALPN data in tserver
+- doc: document kbkdf key check argument for fipsinstall
+- apps/req.c: No warning reading from stdin if redirected
+- Add ALPN validation in the client
+- Unit test for switching from KMAC to other MAC in kbkdf.
+- test: add error reasons to X9.42 test
+- test: add error reasons to X9.63 test
+- Refactor OpenSSL 'EdDSA' EVP_SIGNATURE to allow use with EVP_PKEY functions
+- Do not overwrite conf diagnostics in OSSL_LIB_CTX if not set in config file
+- Fix undefined behaviour in the event of a zero length session id
+- Check EC_GROUP_get0_order result before dereference
+- Replace size_t with int and add the check for the EVP_MD_get_size()
+- OPENSSL_hexstr2buf_ex(): Handle zero-length input correctly
+- Update documentation for SSL_SESSION_set_time_ex()
+- crypto/riscvcap: fix function declaration for hwprobe_to_cap
+- Remove double engine reference in ossl_ec_key_dup()
+- Restrict digest algorithm used in KDFs
+- evp_pkey_ctx_setget_params_to_ctrl(): Always properly set ctx.action_type
+- docs: Correct bad link to provider-keymgmt(7) in provider-signature(7)
+- kdfs/hmacdrbg_kdf.c: Add checks for the EVP_MD_get_size()
+- Add FIPS indicator support for Triple-DES encryption.
+- Added check for __QNX__ define when using in_pktinfo.ipi_spec_dst
+- EVP_CIPHER_CTX_get_key_length(): Add null check of ctx->cipher
+- Setup padding mode correctly in acvp_test
+- Add FIPS self test updates
+- Fix potential memory leak in test_bad_dtls
+- Remove all references to FLOSS for NonStop Builds.
+- fix potential memory leak in PKCS12_add_key_ex()
+- Set down_load factor on hash table when culling items in doall
+- Fix usage of deallocated EVP_RAND_CTX after execution of FIPS on-demand self tests
+- Change approach to SSL_pending API
+- Incorporate more review feedback
+- add static analysis workflow for on-premise Coverity Connect
+- list_provider_info(): Fix leak on error
+- Fix missing NULL check in prov_config_test
+- Link to the place where signature options are defined
+- Further extend the SSL_free_buffers testing
+- Move artifact upload code into the shell script
+- For lockless reads use the whole hashtable for colliding entries
+- Check that a supported_versions extension is present in an HRR
+- Update krb5 to latest master to pick up CVE fixes
+- RAND_write_file(): Avoid potential file descriptor leak
+- Add processing by chunks to encoding tests
+- [Docs] Default value for verification flags is 'SSL_VERIFY_NONE'
+- test: add error reasons to PBKDF2 tests
+- test: add error reasons to KMAC tests
+- test: add error reasons to SSHKDF tests
+- test: add error reasons to KBKDF tests
+- test: add error reasons to HKDF tests
+- Downgrade also the download-artifact action
+- ctr-drbg: always use the DF for OpenSSL's DRBGs
+- threads_win: fix build error with mingw64
+- Fix evp_test HKDF failure in crosstest 3.1.2 FIPS provider with master
+- Clarify the SSL_select_next_proto() documentation
+- hkdf: when HMAC key is all zeros, still set a valid key length
+- test: add tests for acceptable policies exts
+- fix all the warnings in our demos and make them enableable
+- Add an Apple privacy info file for OpenSSL
+- Fix unconstrained session cache growth in TLSv1.3
+- Document the SSL_set_session_secret_cb() function
+- Updated CHANGES and NEWS for CVE-2024-6119 fix
+- OSSL_HTTP_open(): fix completion with default port for IPv6 host addresses
+- riscv: Provide a vector only implementation of Chacha20 cipher
+- CMS_get1_{certs,crls}(): make sure they return NULL only on error
+- ossl_print_attribute_value(): Multiple minor fixes for style and other errors
+- doc: document no_short_mac option to fipsinstall
+- Alter the check
+- fix: util/check-format-commit.sh to handle one-line diff hunks
+- Add and Update Documentation for TS_VERIFY_CTX Functions
+- Correct top for EC/DSA nonces if BN_DEBUG is on
+- For Unix, refactor OSSL_sleep() to use nanosleep() instead of usleep()
+- Fix SSL_select_next_proto
+- Set SSL_CONF_FLAG_SHOW_ERRORS when conf_diagnostics is enabled
+- replace various calls to sprintf() by BiO_snprintf() to avoid compiler warnings, e.g., on MacOS
+- Introduce new internal hashtable implementation
+- Align 'openssl req' string_mask docs to how the software really works
+- Fix fragile explicit cert date tests.
+- Fix potential divide by zero error
+- Revert "test: update EdDSA tests for FIPS and no pre-hashing"
+- convert users of build time defaults to use new defaults api
+- signature/ecdsa_sig.c: Add checks for the EVP_MD_get_size()
+- test: add positive FIPS indicator failure tests for DRBGs
+- test: add error reasons to RSA tests
+- fips: add PKCS version 1.5 padding check option
+- signature/dsa_sig.c: Add checks for the EVP_MD_get_size()
+- Add OIDs id-kp-wisun-fan-device and id-on-hardwareModule
+- Make a failure in ktls_sendfile a syscall error
+- Add EDDSA FIPS self tests.
+- Fix "Error finalizing cipher loop" when running openssl speed -evp -decrypt
+- Add NULL check before accessing PKCS7 encrypted algorithm
+- fix: exporters/cmake/OpenSSLConfig.cmake.in to work for build config
+- Add processing by chunks to cipher tests in evp_test
+- signature/rsa_sig.c: Add checks for the EVP_MD_get_size()
+- adds TLS signature algorithms list feature
+- fuzz/decoder.c: Lower the limits on key checks
+- Fix line continuation check in config parser
+- Fix memory leak in x509_req_test
+- Update code to use EVP_MD_xof()
+- fix: openssl speed: RSA encryption is on the pubkey, not the privkey
+- Fix compile err when building VC-CLANG-WIN64-CLANGASM-ARM target
+- OSSL_STORE: Add reference docs for the built-in Windows store implementation
+- ssl/t1_lib.c: Add checks for the EVP_MD_get_size()
+- Disable 70-test_quic_multistream.t when building with PUT threads.
+- Fix smime-type for AuthEnvelopedData
+- Fix kbkdf bug if MAC is set to KMAC and then something else
+- Build: Fix circular object deps with old GCC
+- test: fix failing KDF tests with changed behaviour
+- We can't check policy if we got an empty stack of certs
+- Extend test case for reused PEM_ASN1_read_bio
+- ecdh_cofactor_derive_test(): Skip the test if the curve is not supported
+- Move the ability to load the dasync engine into ssltestlib.c
+- ssl/statem: Replace size_t with int and add the checks
+- doc: Document EVP_{TYPE}_CTX_get_algor etc
+- Make BN_generate_dsa_nonce() constant time and non-biased
+- More correctly handle a selected_len of 0 when processing NPN
+- Do not falsely start the connection through SSL_pending()/_has_pending()
+- Return SSL_AD_DECRYPT_ERROR alert on PSK binder validation failure (RFC 8446)
+- test: remove the just added, but now unrealistic, shake128 OAEP tests
+- Add CVE-2024-5535 to CHANGES and NEWS
+- Add a test for session cache overflow
+- Avoid memory leak in x509_test error path
+- Ensure cmd from fuzz buffer is always valid
+- Fix memleak in rsa_cms_sign error path
+- Check for excess data in CertificateVerify
+- doc/man{1,3}: fix details on IPv6 host addresses and of whitespace in no_proxy
+- Add OPENSSL_free to avoid mem leak
+- Update rsasve_recover to properly store outlen on success
+- fips: add lots of potentially missing ossl_prov_is_running checks
+- Raise an error on syscall failure in tls_retry_write_records
+- Fix intermittent sslapitest early data related failures
+- Add a stroul test
+- cmp_hdr_test.c: Fix leaks in error cases
+- Refactor Callback Tests for Improved Memory Management
+- SSL_alert_desc_string_long(): Delete unnecessary underline
+- Add check for public key presence on sm2 signing
+- ossl_store.pod: Correct the example of OSSL_STORE API usage
+- fix: remove some odd empty lines
+- Fix migration guide mappings for i2o/o2i_ECPublicKey
+- fips: continuous random bit generator tests
+- Fix duplicate mutex allocation in threads_win.c
+- read lock store on ossl_method_store_do_all
+- drbg: streamline test for allowed digests
+- core_namemap.c: 2048 hashtable buckets should be sufficient
+- Fix potential memory leak in PKCS7_signatureVerify()
+- Make x509_req_test ANSI Compatible
+- http_server.c: fix checks of error return code in http_server_init()
+- doc/man3/OSSL_PARAM.pod: Correct the type of data_type
+- ts/ts_rsp_sign.c: Add the check for the EVP_MD_CTX_get_size()
+- OSSL_HTTP_adapt_proxy(): fix handling of escaped IPv6 host addresses and of whitespace in no_proxy
+- Recycle the TLS key that holds thread_event_handler
+- Fix handling of max_fragment_length extension for PSK
+- p12_npas.c: Remove call with unused return value
+- Add demo for ECDH key exchange
+- coveralls.yml: Do not run tests in parallel
+- Added an explicit yield (OP_SLEEP) to QUIC testing for cooperative threading.
+- docs: document options added in openssl-fipsinstall 3.1+
+- docs: document options added in openssl-fipsinstall 3.4+
+- docs: document options added in openssl-fipsinstall 3.2+
+- Fix PBMAC1 MAC verification in FIPS mode
+- Add Provider compatibility on PR CI job
+- OSSL_CMP_{validate_msg,CTX_new}.pod: add warning notes on OSSL_CMP_OPT_PERMIT_TA_IN_EXTRACERTS_FOR_IR
+- open brace '{' following struct go on the same line
+- ignore various files in commit checker
+- Add docs noting requirements for SM2 signing
+- docs: document that *_free(NULL) does nothing
+- Allow provider sigalgs in SignatureAlgorithms conf
+- rands/drbg_hash.c: Add checks for the EVP_MD_get_size()
+- alternate collision checking support
+- test: update EdDSA tests for FIPS and no pre-hashing
+- Enhance documentation for BN_mask_bits()
+- [DOC] Document the OPENSSL_WINCTX type for OpenSSL_version()
+- 90-test_sslapi.t: Fix execution of sslapitest with fips provider
+- Use RFC 5869 test case for HKDF self-test
+- Set rl->packet to NULL after we've finished using it
+- Add KeyManagement keygen parameter getter/gettable functions.
+- CI: Fix GCM IV check in acvp_test for crosstest
+- endecode_test.c: Fix !fips v3.0.0 check
+- Make conf_diagnostics apply also to the SSL conf errors
+- Fix test_cms recipe
+- NonStop: Do not call sleep() with a 0 value
+- x509_acert: Add and retrieve certificate extensions
+- s390x: Add hardware acceleration for HMAC
+- Adapt all the exporter files to the new vars from util/mkinstallvars.pl
+- Convert demos to primary build system
+- Fix error handling in CMS_EncryptedData_encrypt
+- Drop the aid field of the signature prov ctx
+- dh_kmgmt.c: Avoid expensive public key validation for known safe-prime groups
+- endecode_test.c: Avoid running the SM2 tests with 3.0.0 FIPS provider
+- Don't fall back to pre-defined constants on windows
+- Add explicit indicator for PBKDF2
+- test: add unit tests for disallowed XOF digests
+- Fix inaccurate comment about default nonce length in demos/cipher/aesccm.c
+- Disallow SHAKE when using PBKDF2 and X9.42 KDF
+- fix crash in ecp_nistz256_point_add_affine()
+- x509_acert: Load attributes from config file section
+- Add RFC 5755 attribute certificate support
+- x509_acert: Add API to sign and verify attribute certificates
+- evp_test: check MAC FIPS approved flag
+- QUIC TXP: Fix reserve calculations for PING frames
+- Configure: Remove -Wswitch-default from strict warnings
+- Add ossl_bn_priv_rand_range_fixed_top() and use it for EC/DSA
+- Add a test for the session_secret_cb
+- Fix '--strict-warnings' build breakage
+- Extend mask of ssl_method_st to 64-bit
+- Unable to run asm code on OpenBSD (amd64)
+- chacha-riscv64-v-zbb.pl: add comment about vector register allocation
+- fix: wrong name for OID -> auditIdentity
+- extend X509_REQ_add_extensions_nid() and thuis APPS/req to support augmenting/overriding existing extensions
+- Document change of -verify behavior in crl and req apps
+- Drop redundant non-negative checks on unsigned values
+- threads_win: fix build error with VS2010 x86
+- threads_win: fix build error with VS2010
+- Clarify supported curves in the s_client/s_server documentation
+- CI: Update upload-artifact action to be compatible
+- Add negative tests for SHAKE with PBKDF2 and X9.42 KDF
+- Remove check for RSA encryption allowing X9.31 padding.
+- Fix NULL ptr dereference on EC_POINT *point
+- man EVP_PKEY_CTX_set_params: document params is a list
+- Add RSA Signature restrictions for X9.31 padding in the FIPS provider.
+- Augment README.md in top level to indicate Makefile presence
+- JITTER: implement error handling from jitter library
+- When defining ossl_ssize_t = ssize_t, remember to include sys/types.h
+- Adjust tests that were depending on X25519 and X448 in fips
+- fix coding style
+- ecdsa: add verify_message param support
+- Revert "fips: add no digested option to FIPS provider"
+- feat: support the basicAttConstraints X.509v3 extension
+- Invoke tear_down when exiting test_encode_tls_sct() prematurely
+- CMP: add support for genm with crlStatusList and genp with crls
+- Fix Coverity issues 1596850, 1596851 and 1596852
+- ssl_sess.c: deprecate SSL_SESSION_get_time/SSL_SESSION_set_time
+- that open brace { should be on the previous line
+- Add locking to atomic operations in rw/rcu tests
+- Use empty renegotiate extension instead of SCSV for TLS > 1.0
+- acvptest: add positive and negative tests for verify message param
+- ossl_ht_insert(): Allow for 4 iterations of grow_hashtable()
+- fix sm2 encryption implementation bug.
+- test: Improve coverage for the PBKDF2 unit tests
+- Fix some small typos
+- VMS: Redefine _XOPEN_SOURCE_EXTENDED with the value 1
+- Ensure proper memory barriers around ossl_rcu_deref/ossl_rcu_assign_ptr
+- Update FIPS 140-3 self tests
+- Extend the SSL_free_buffers testing
+- test/prov_config_test.c: Cleanup and fix potential leaks
+- Update X509V3_get_d2i.pod returned pointer needs to be freed
+- Add new test types in test/evp_test.c, and a test for RSA sigalgs
+- aarch64: fix BTI in bsaes assembly code
+- Fix regression of EVP_PKEY_CTX_add1_hkdf_info() with older providers
+- speed.c: Return success with -testmode -async_jobs if not ASYNC_is_capable()
+- Fix parameter types int -> integer changes
+- Move ossl_asn1_string_to_time_t() to libtestutil
+- Be more explicit about RSAES-PKCS#1v1.5 error handling
+- Add badges for daily checks and provider compat
+- Update defaults to install keys against major.minor
+- rsa-pss: add tests checking for SHAKE usage in RSA-PSS
+- Add M1 macOS runner to some workflows
+- fips: add no digested option to FIPS provider
+- Fix list appending in win ossl_rcu_call
+- Add Attribute Certificate suport comments to CHANGES and NEWS
+- Fix socket descriptor checks on Windows
+- threads_win: fix improper cast to long * instead of LONG *
+- Add debuginfo build target
+- fipsinstall: add option to disable RSA PKCS version 1.5 padding
+- Fix FIPS indicator defines for larger indicies.
+- .ctags.d is previous, include it in our tarballs
+- Correct return values for tls_construct_stoc_next_proto_neg
+- rands/drbg_hmac.c: Add checks for the EVP_MD_get_size()
+- Fixed typo in CRYPTO_THREAD_run_once.pod
+- openssl-crl(1): The -verify option is implied by -CA* options
+- ssl: factorize and improved hex conversion code
+- Add fips indicator requirements doc
+- Free appname if it was set after initializing crypto.
+- adding a multithreaded hashtable test
+- rsa: add verify_message param support
+- refactor and constify X509_REQ_get_extensions()
+- Remove receiving of unused return value
+- evp_get_digest/cipherbyname_ex(): Try to fetch if not found
+- Update FIPS hmac key documentation
+- riscv: use hwprobe syscall for capability detection
+- Add OPENSSL_riscvcap man page
+- riscv: Fix remaining asm checks
+- Add unit tests for the TEST-RAND FIPS indicator
+- Update perl-actions/install-with-cpanm version in CI
+- macs/kmac_prov.c: Add checks for the EVP_MD_get_size()
+- Return infinity time from SSL_get_event_timeout when the connection is not started
+- hashtable.c: Code style fixes
+- Set the server sig algs before calling the session_secret_cb
+- FIPS: Change fips tests to use SHA2 for corruption test.
+- Add ED25519 and ED448 support for EVP_PKEY_{sign,verify}_init_ex2()
+- Allow shared iOS builds
+- docs: Document the implemented composite signature+hash algorithms
+- rsa/rsa_ameth.c: Add the check for the EVP_MD_get_size()
+- ssl: remove stdio.h and sprintf use from libssl.
+- Skip newly added blocked OAEP SHAKE testcases with old fips providers
+- Explicitly state what -keys does
+- sslapitest: add meaningful skip messages
+- FIPS: Remove ability to bypass the FIPS self tests
+- signature/sm2_sig.c: Add the check for the EVP_MD_CTX_get_size()
+- add X509v3_add_extensions()
+- Fix second error from Coverity-161057
+- Adding missing NULL pointer check
+- Fix big-endian Power10 chacha20 implementation
+- feat: add delegatedNameConstraints and holderNameConstraints exts
+- rehash.c: handle possible null pointer returned by OPENSSL_strdup
+- ffc/ffc_params_generate.c: Add the check for the EVP_MD_get_size()
+- Add CHANGES.md and NEWS.md updates for the 3.4 release
+- Support subjectDirectoryAttributes and associatedInformation exts
+- tls_provider_init(): Fix leaks in error cases
+- Fix race for X509 store found by thread sanitizer
+- test: add unit tests for fips CRNG tests
+- store/store_lib.c: Add the checks for the EVP_MD_CTX_get_size()
+- threads_pthread, threads_win: improve code consistency
+- Drop the old PGP key fingerprint
+- Remove duplicate colon in otherName display
+- fips: fix locking issues
+- Fix EVP_PKEY_CTX_add1_hkdf_info() behavior
+- fips: allow to customize provider vendor name
+- s390x: Fix HMAC digest detection
+- Add workflow to do nightly build of interop container and push to quay
+- ecstresstest.c: Fix memory leak on error
+- dsa/dsa_pmeth.c: Add the checks for the EVP_MD_CTX_get_size()
+- gitignore: ignore newly generated header
+- Allow calling OPENSSL_INIT_free() with NULL argument
+- Dependabot update: Bump coverallsapp/github-action
+- Add documentation for OSSL_LIB_CTX_set/get_conf_diagnostics
+- feat: support auditIdentity X.509v3 extension
+- fips: add option to disable PKCS version 1.5 padding
+- feat: Implement EVP_CIPHER_CTX_{set,get}_algor_params() and EVP_CIPHER_CTX_get_algor()
+- set module path from template
+- Add FIPS indicator tests for KDFs
+- Add FIPS indicator documentation
+- Update configurable sigalgs documentation for providers
+- Incorporate review feedback
+- argon2: Fixed an thread availability error string
+- Some minor nit corrections in the thread code for rcu
+- rand: remove unused field in DRBG structure
+- util/mkinstallvars.pl: replace List::Util::pairs with out own
+- Improve clarity and readability of password input documentation
+- quic_multistream_test: fix undefined symbol snprintf with VS2010
+- 82-test_ocsp_cert_chain.t: Terminate the server after 1 connection
+- Explicitly include e_os.h for close()
+- Change WININSTALLCONTEXT to OSSL_WINCTX
+- docs: fix SSL_CTX_set_tlsext_ticket_key_cb typos
+- docs: add HISTORY section to openssl-fipsinstall (3.0+)
+- JITTER: add documentation
+- replace static declarations
+- Break the if statement up into 2 if statements
+- Update provider-compatibility.yml
+- doc: document no-short-mac param
+- Move stack of compression methods from libssl to OSSL_LIB_CTX
+- feat: add support for issuedOnBehalfOf X.509v3 extension
+- Refactor and Enhance Compression Field Testing
+- Correct use of workflow ENV vars on windows
+- feat: Implement EVP_PKEY_CTX_{set,get}_algor_params() and EVP_PKEY_CTX_get_algor()
+- dont fall back to build time defaults on windows
+- Print CPUINFO also for riscv processors
+- crypto/threads_pthread.c: refactor all atomics fallbacks for type safety
+- Unlock only when lock was successful
+- Fix the provider compatibility CI
+- Don’t use the recvmmsg dgram method on Android <5
+- fips: change from function call to macro in rsa_enc.c
+- Rearrange code examples in docs for clarity
+- fips: support signature-digest-checks in FIPS provider
+- NEWS.md: Add missing link to 3.4 section
+- Remove the dead store in EVP_DecryptFinal_ex
+- document provider dependency handling
+- Fix mem leak in threadpool_test.c
+- Enable demos in select builds
+- evp_libctx_test: fix provider compat CI regression
+- rsa/rsa_pmeth.c: Add the checks for the EVP_MD_CTX_get_size()
+- fix small footprint builds on arm
+- Add provider fuzzer
+- fix: ossl_digest_get_approved_nid() returns NID_undef on invalid digest
+- Add linux-arm64ilp32-clang target
+- signal.h included two times
+- crypto/provider_core.c: Allocate activatecnt_lock
+- Improve base64 BIO correctness and error reporting
+- Enhance s_client Output
+- Disable default case checks on clang 18
+- fuzz: Add attribute certificate fuzz test
+- Refactor OpenSSL 'ECDSA' EVP_SIGNATURE to also include ECDSA+hash composites
+- Fix alignment errors in hashtable fuzzer
+- sha512.c: Grammar Fixes and Spell Checks in Implementation Notes
+- Attribute certificate printing functions
+- Fix memory leak in quic_trace.c
+- Fix a copy & paste error in the EVP_RAND docs
+- build(deps): bump actions/download-artifact in /.github/workflows
+- Add HMAC FIPS keysize check.
+- Increase limit for CRL download
+- Security hardening: Expose Build flags for Position Independed Execution (PIE)
+- Give util/mkinstallvars.pl more fine grained control over var dependencies
+- ssl_evp_cipher_fetch(): Avoid using 3DES from the FIPS provider
+- Updated list formatting, added hyperlinks, modernized syntax
+- ssl/tls13_enc.c: Replace size_t with int and add the checks
+- Add installation documentation and notes on ANSI C and POSIX
+- MASM: Need to strip arguments after .pdata or .xdata
+- Fix sed/awk usage in windows ci jobs
+- Change strnlen() to OPENSSL_strnlen() in fuzz/provider.
+- x_attrib: fix a memory leak
+- Complain about a missing digest when doing deterministic ECDSA
+- Extend the multi_resume test for simultaneous resumptions
+- apps/req,crl: exit with 1 on verification failure
+- ssl/ssl_lib.c: Add the check before cast from int to unsigned
+- Detect MinGW 32 bit for NO_INTERLOCKEDOR64
+- Add explicit testing of ALN and NPN in sslapitest
+- Sync up CHANGES.md with 3.3 branch
+- ASN1_item_verify_ctx(): Return -1 on fatal errors
+- doc: the basicAttConstraints X.509v3 extension
+- Fix threadstest wrapping again
+- libcrypto/libssl.num: Set the numbers for 3_4_0 symbols
+- Make ossl_gen_deterministic_nonce_rfc6979() constant time
+- Fix invalid expression syntax
+- Add CRYPTO_atomic_store api
+- Update NOTES-WINDOWS.md
+- Add (void) cast to result of ossl_quic_rxfc_on_retire()
+- Restrict digest in set_ctx_params
+- feat: add acceptablePrivilegePolicies and acceptableCertPolicies exts
+- s390x: Fix memory leak in s390x_HMAC_CTX_copy()
+- rsa-oaep: block SHAKE usage in FIPS mode
+- apps/cms.c, apps/smime.c: Fix -crlfeol help messages
+- Add FIPS indicator for TEST-RAND
+- Fix Potential NULL pointer dereference
+- some performance improvements
+- 80-test_cmp_http.t: fix handling of IPv6 server host (localhost '::1')
+- Avoid chicken and egg problem with reg setting
+- Add CHANGES.md and NEWS.md entries for CVE-2024-9143
+- speed: Fix regression of measuring shake with -evp
+- Fix typo in openssl-verification-options documentation.
+- Add FIPS indicators to evp_test
+- QUIC APL: Revise SSL_pending and SSL_has_pending handling for s_client compat
+- windows_comp.yml: Run openssl after it is built
+- improve and move text on OPENSSL_TRACE from doc/man1/openssl.pod to doc/man7/openssl-env.pod
+- Make thread sanitizer cope with rcu locks
+- Revert API change of OPENSSL_version()
+- Remove repetitive words
+- updated to oqs-provider 0.6.0
+- cmp_vfy_test.c: Avoid NULL pointer dereference
+- Exclude X25519 and X448 from capabilities advertised by FIPS provider
+- Update documentation
+- Coverity found the following issues:
+- Prefer ARRAY_SIZE(...)
+- openssl-info.pod.in: Add windowscontext option to synopsis in doc
+- Alter the variable name
+- Reduce footprint of Windows CI
+- Suppress a spurious error from the sysdefault test
+- hashtable: Support lockless reads
+- Fixed typos in ossl_ht_new.pod, EVP_PKEY_decrypt.pod, and RSA_public_encrypt.pod
+- dont include unistd.h on windows for sslecho
+- Amend the design of AlgorithmIdentifier parameter passing
+- fips: zeroization of public security parameters (PSPs)
+- param: add OSSL_SIGNATURE_PARAM_FIPS_VERIFY_MESSAGE parameter name
+- Fixes for defaults code
+- Hardening around not_resumable sessions
+- OpenSSL 3.2.0, QUIC, macOS, error 56 on connected UDP socket
+- Update evp_test KeyGen
+- Fix Coverity-1604641
+- fix Coverity 1604662
+- Fix coverity-1610057
+- Fix coverity-993406
+- Fix coverity-1604661
+- Fix coverity-1510058
+- Fix coverity-1604665
+- Fix coverity-1604666
+- Fix coverity 1596617
+- Fix coverity-1596616
+- Adding hashtable fuzzer
+- test: issuedOnBehalfOf X.509v3 extension
+- doc: EVP_KDF document the semantic meaning of output
+- Fix syntax of dependabot.yml
+- Update CHANGES.md and NEWS.md for the upcoming release
+- doc: document the health test EVP_RAND
+- Remove a statement saying 3.4 is in development in NEWS.md
+- cipher_null.c: add NULL check
+- Update Documentation for EVP_DigestSign, EVP_DigestVerify.
+- [Docs] Notes about freeing objects
+- downgrade upload-artifact action to v3
+- Reject setting invalid CSR versions
+- doc: document the OSSL_SIGNATURE_PARAM_FIPS_VERIFY_MESSAGE parameter
+- XOF / EVP_MD_size() changes.
+- 82-test_ocsp_cert_chain.t: kill -HUP the server after client quits
+- os-zoo.yml: Cleanup unnecessary -Wno-switch-default
+- document the format of DSA signature
+- Add defaults api to openssl build
+- Fix GCC compilation -Waggressive-loop-optimizations
+- sslapitest.c: With fips skip tests depending on X25519 and X448
+- Fix incorrect sentence
+- doc: docment key-check param for kbkdf
+- crypto/threads_pthread.c: Fix typos found by codespell
+- Add support for elf_aux_info() on OpenBSD
+- Workaround the relocation truncated to fit problem on m68k builds
+- rand: remove unimplemented librandom stub code
+- fix: refactor the EVP_PKEY_OP checks
+- Copyright year updates
+- fix vs2019 warning
+- 3DES ciphersuites are not allowed in FIPS anymore
+- Ensure the msg_callback is called on CCS receipt in TLSv1.3
+- Fix CRYPTO_atomic_store
+- http_server.{c,h}: make clear that IPv4 or IPv6 is used by http_server_init()
+- gitignore: add .DS_Store
+- doc: clarify SSL_CIPHER_description allocation
+- Fix examples in EVP_PKEY_encapsulate/decapsulate documentation
+- Fix cmake generator
+- Improve the EVP_PKEY_CTX_set_kem_op() documentation
+- ci: add 3.4 to prov-compat-label tests
+- Refactor OpenSSL 'DSA' EVP_SIGNATURE to also include DSA+hash composites
+- [DOCS] Correct history in doc/man3/OSSL_STORE_LOADER.pod
+- make addr_len the right sign in sslecho
+- uefi: move variables
+- Test vectors from rfc9579 and creation tests
+- BIO_f_base64.pod and openssl-enc.pod.in: improve description on newline handling
+- constify ossl_x509at_add1_attr()
+- Update NOTES-WINDOWS for typos/grammar
+- Revert "EdDSA: disallow verification from a pregenerated hash when in FIPS"
+- Intentionally break EVP_DigestFinal for SHAKE128 and SHAKE256
+- rsa_pss_compute_saltlen(): Avoid integer overflows and check MD and RSA sizes
+- fuzz/decoder.c: Limit the EVP_PKEY_param_check on DHX keys as well
+- fips provider: explicitly setup cpuid when initializing
+- fix: style nits
+- Handle empty param in EVP_PKEY_CTX_add1_hkdf_info
+- Bump actions/setup-python from 5.0.0 to 5.1.0
+- hashtable.c: Avoid infinite loop in ossl_ht_insert()
+- i2d_name_canon(): Check overflow in len accumulation
+- Fix openssl req with -addext subjectAltName=dirName
+- Fix typos found by codespell
+- fix uploading artifacts for paramertrized jobs
+- Prepare for release of 3.4.0
+- s390x: support CPACF sha3/shake performance improvements
+- Reduce optimization in hppa builds
+- Revert "doc: add verify-digested param for EdDSA"
+- Clarify EVP_CipherUpdate() authenticated bytes behavior
+- Restrict salt length for RSA-PSS in the FIPS provider
+- Fix warnings found by clang in CI
+- Refactor OpenSSL 'RSA' EVP_SIGNATURE to also include RSA+hash composites
+- EdDSA: disallow verification from a pregenerated hash when in FIPS
+- Remove handling of NULL sig param in ossl_ecdsa_deterministic_sign
+- Fixes for potential deadlock
+- poly1305.c: fix typo on POLY1305_BLOCK_SIZE
+- Avoid duplicate default CApath lookups
+- [Docs] 'SSL_CTX_set_cert_store' ownership of 'store'
+- EVP_MD_size() updates
+- Add FIPS indicators to X25519 and X448.
+- Optimizated calculation of shared power of 2 in bn_gcd
+- Add FIPS DSA Keygen tests
+- limit bignums to 128 bytes
+- Prepare for release of 3.4 beta 1
+- crypto/pkcs12/p12_mutl.c: Add check and EVP_MD_free() for EVP_MD_fetch()
+- Add 3.2 and 3.3 branches to Provider compat CI
+- Convert hashtable to using ossl_rcu_deref on lookup
+- Enable RSA-SM3 in the default provider
+- Make X25519 and X448 FIPS unapproved
+- Release pkey_ctx on initialization failure
+- Adjust tests to fetch the output len for EVP_PKEY_[en|de]cap
+- fix: alias auditEntity OID
+- Allow OPENSSLDIR/ENGINESDIR/MODULESDIR to be NULL
+- BIO_s_accept.pod: fix whitespace nits: '<=0' -> '<= 0'
+- signatures: disallow XOF digests when doing signatures
+- Don't include unistd.h in sconnect for windows
+- Documenting CRL download usage and restrictions
+- Experimental support for uploading qlog artifacts
+- Prepare for release of 3.4 alpha 1
+- Add documentation for deprecated CMAC_CTX functions
+- s390x: Fix prehash-by-caller handling for ED25519 and ED448
+- CMP: Improvements of the support for requesting CRL
+- Update gost-engine submodule to fix the CI
+- Fix grammar in certificates.txt
+- mem: Don't use posix_memalign() and friends with custom wrapper
+- Dependabot update
+- Add dockerfile for generation of a quic interop container
+- Add tests for conf_diagnostics
+- Add FIPS indicator helpers
+- Refactor Password Variables to Use const char[] Arrays
+- Update links in CONTRIBUTING.md
+- Avoid undefined behaviour with the <ctype.h> functions.
+- Add FIPS indicator callback.
+- doc: add verify-digested param for EdDSA
+- Fix bugs in ECDH cofactor FIPS indicator.
+- Handle PBMAC1 with absent PBKDF2 PRF
+- Fix memory leak on error in crypto/conf/conf_mod.c
+- Free fetched digest in show_digests
+- github: fix quoting in github workflow for jitter tests
+- Fix strtoul test on alpine/musl
+- disable http3 demo on windows
+- Replace and Deprecate TS_VERIFY_CTX Functions
+- Disable DSA signing in the FIPS provider.
+- unnecessary whitespace before a quoted newline
+- Document Internal EVP_MD_CTX_ Flags
+- Remove appveyor badge and replace it with os zoo badge
+- Rename list macros
+- Sync CHANGES.md and NEWS.md with 3.3 branch
+- fuzz/hashtable.c: rc == -1 on insert is OK when fuzzing
+- exporters for pkg-config: align with the changes for CMake
+- Fix memory leak in tls_parse_ctos_psk()
+- Diverse small VMS build fixups
+- Prepare for 3.4 beta 2
+- Prepare for 3.4 beta 1
+- Work on ANSI C compatibility: modifying the github workflow
+- chacha-riscv64-v-zbb.pl: better format
+- Fix typo in CONTRIBUTING.md
+- Update the version to 3.4.0-dev
+- Replace getline with fgets in sslecho demo
+- rsa: disallow PKCS version 1.5 padding for encrpytion under FIPS.
+- Add FIPS indicator to CMAC.
+- Avoid leaking *ba_ret on reconnections
+- Revert "param: add OSSL_SIGNATURE_PARAM_EDDSA_VERIFY_DIGESTED"
+- Test PBMAC1 with absent PBKDF2 PRF
+- archive artifacts before upload
+- Add comp.h to gitignore
+- Avoid NULL pointer dereference
+- Use scalar ALU and vector ALU together for chacha20 stream cipher
+- util/perl/OpenSSL/ParseC.pm: correctly parse OSSL_DEPRECATEDIN_..._FOR
+- MVP demo TLS server
+- fix: util/mkinstallvars.pl mistreated LDLIBS on Unix (and Windows)
+- deploy docs.openssl.org on doc changes
+- Clarify DRBG seeding.
+- Add 3.3 and 3.2 branches to Coveralls builds
+- uefi: add typedef for uintptr_t
+- crypto: factorize to hex chars conversion code.
+- Add FIPS Indicator for ECDH cofactor.
+- Document the fips-indicator param for the test RNG
+- ssl_sess.c: deprecate SSL_CTX_flush_sessions in favour of _ex() replacement
+- EVP_PKEY-DH.pod: Clarify the manpage in regards to DH and DHX types
+- Support of en/decapsulation in the pkeyutl command
+- Define KU_ constants via corresponding X509v3_KU_
+- param: add OSSL_SIGNATURE_PARAM_EDDSA_VERIFY_DIGESTED
+- fix: drop DSA <=> dsaWithSHA1 aliasing
+- Additional testcases for bn_gcd
+- Attribute certificate getter and setter API
+- typo fix
+- drbg: Fix typo
+- Update docs
+- Rename BN_generate_dsa_nonce() to ossl_bn_gen_dsa_nonce_fixed_top()
+- Cleanups for FIPS indicator documentation
+- threads_pthread.c: change inline to ossl_inline
+- deactivate failing Cloudflare PQ interop tests
+- Fixed a typo and grammar in openssl-ts.pod
+- Replace PKCS v1.5 encryption in RSA PCT
+- Implementation of the RFC 9579, PBMAC1 in PKCS - documentation
+- include/openssl/macros.h: define deprecation macros for 3.4
+- doc: Fix description of EVP_CIPHER_CTX_dup
+- Update openssl-smime.pod.in
+- Add an OPENSSL_strtoul wrapper
+- Replace PKCS v1.5 padding in RSA PCT
+- disable rwlocks on nonstop klt model
+- Remove trailing whitespace
+- doc: document pkcs15-padding-disabled param for RSA
+- doc: fix typos
+- fips: Prohibit SHA1 in DH & ECDH exchange
+- Replace unsigned with int
+- fips: correctly initialise FIPS indicator settables
+- Cleanups for FIPS options..
+- doc: Document properties param for Argon2 KDF
+- Don't restrict the ECDSA settable ctx params unnecessarily
+- jitter: retry intermittent failures
+- Implement riscv_vlen_asm for riscv32
+- openssl fipsinstall: fix cosmetic wart
+- Remove macos-11 from CI
+- crypto/threads_pthread.c: Cleanup misaligned preprocessor directives
+- param: add ASYM_CIPHER_PARAM_PKCS15_PADDING_DISABLED
+- Typo fixes
+- Disallow DSA Keygen in the FIPS provider
+- zeroize rsa->p,rsa->q on error
+- enable AES-XTS optimization for AIX
+- Fix grammar in srp_verifier.txt
+- Fix typo in mk-fipsmodule-cnf.pl
+- Add aix-clang and aix64-clang configuration
+- Encap/decap in pkeyutl - tests
+- Implementation of the RFC 9579, PBMAC1 in PKCS
+- riscv: Fix cpuid_obj asm checks for sm4/sm3
+- Harden BN_GF2m_poly2arr against misuse.
+- Enable SHA3 unrolling and EOR3 optimization for Ampere
+- Sync libcrypto.num and libssl.num with 3.3 branch
+- Encap/decap in pkeyutl - documentation
+- stricter parser for ipv4_from_asc
+- tls_provider_init(): Rename prov_ctx to xor_prov_ctx to clarify
+- Missing .rodata for AVX2/AVX512 codepaths
+- updating fuzz-corpora submodule
+- ess_lib.c: Changed ERR_LIB_CMS to ERR_LIB_ESS

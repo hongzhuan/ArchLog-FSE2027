@@ -1,0 +1,216 @@
+- Added support for Realtek R8169 (RTL8125A/B/BP/D, RTL8126A) Ethernet controllers.
+- Added support for ZXDH (E310, E312 series) network interface cards.
+- Added support for GDTC (GDMA) raw device driver.
+- Added support for CNXK RVU LF raw device driver.
+- Added EdDSA (Ed25519, Ed448), SM4-XTS, and SM2 cryptographic algorithm support across crypto drivers.
+- Added queue pair reset and priority configuration for crypto devices.
+- Added LDPC decoder k0 parameter and enqueue depth statistics for baseband devices.
+- Added link speed lanes configuration and traffic manager node query for Ethernet devices.
+- Added frequency adjustment support for PTP in Ethernet devices.
+- Added ability to query and filter register names via telemetry.
+- Added jump to flow table index action and STE array matcher for mlx5.
+- Added dynamic unicast flow rule management for mlx5.
+- Added buffer split Rx offload to bnxt driver.
+- Added 200G link speed support to ice driver.
+- Added custom search path for DDP package files in ice driver.
+- Added outer VLAN and general tunnel flow matching for hns3.
+- Added flow rule priority support for hns3.
+- Added LED and EEPROM operations for nfp driver.
+- Added per-queue statistics for fewer queues in ixgbe.
+- Added support for loading firmware from flash in nfp driver.
+- Added reconnection support for VDUSE in vhost.
+- Added colorized log output, systemd journal logging, and log timestamp option.
+- Added static per-lcore memory allocation facility (lcore variables).
+- Fixed potential crash in app/testpmd when destroying aged flows.
+- Fixed deadlock in vhost Rx async path.
+- Fixed missing VF PCI ID for ixgbe.
+- Fixed link status delay on FreeBSD for ixgbe.
+- Fixed possible infinite loop in bnx2x startup.
+- Fixed memory corruption in dpaa2 traffic manager.
+- Fixed use-after-free in several drivers (nfb, ifpga, sfc, nfp, e1000, cpfl, cnxk, etc.).
+- Fixed overflow in descriptor count.
+- Fixed buffer overflow in memif zero-copy Rx.
+- Fixed issue with VLAN filter disabling when Trusted Flow is enabled in bnxt.
+- Fixed LRO offload capability reporting in bnxt.
+- Fixed flow rule validation with flex parsers in mlx5.
+- Fixed miniCQEs number calculation in mlx5.
+- Fixed counter query loop getting stuck in mlx5.
+- Fixed Tx trace script for multiple burst completion in mlx5.
+- Fixed MAC address initialization with GCC 15 in mlx5.
+- Fixed link status crash in secondary process for e1000.
+- Fixed race on ports in telemetry endpoints.
+- Fixed interrupt lost in ngbe legacy/MSI mode.
+- Fixed SWFW mbox and VF-PF mbox interrupt in txgbe.
+- Fixed crash when link is unstable in iavf.
+- Fixed RSS on VXLAN inner layer in nfp.
+- Fixed using Tx queue higher than Rx queues in netvsc.
+- Fixed issue with large TSO segment size in DPDK apps.
+- Fixed FEC setting return value in nfp.
+- Fixed wrong check for pause frame setting in nfp.
+- Fixed memory leak in nfp VF initialization.
+- Fixed incorrect handling of SFF-8436 SFP EEPROMs in bnxt.
+- Fixed bad action offset in Tx BD for bnxt.
+- Fixed TCP/UDP checksum flags in bnxt.
+- Fixed crash after configuration failure in vmxnet3.
+- Fixed potential out-of-bounds stats access in vmxnet3.
+- Fixed duplicate branch and always true expression in bnx2x (internal, removed).
+- Fixed ECDSA session handling and modexp/inv length in QAT crypto.
+- Fixed string overflow in openssl crypto.
+- Fixed 3DES-CTR with big endian CPUs in openssl.
+- Fixed TLS zero-length record check in crypto tests.
+- Fixed memory leak in metering (mlx5).
+- Fixed non-template flow action validation in mlx5.
+- Fixed flow matcher mask translation in mlx5.
+- Fixed release order of compatible matcher in mlx5.
+- Fixed NVGRE item validation for template API in mlx5.
+- Fixed Rx queue reference count in flushing flows for mlx5.
+- Fixed default RSS flows creation order in mlx5.
+- Fixed dangling pointer to flow params in mlx5.
+- Fixed shared queue port number in vector Rx for mlx5.
+- Fixed error CQE handling for 128 bytes CQE in common/mlx5.
+- Fixed misalignment in common/mlx5 (removed, internal).
+- Fixed RX queue control management in mlx5.
+- Fixed indirect list flow action callback in mlx5.
+- Fixed raw encap validation in mlx5.
+- Fixed flex item header length field translation and other flex item issues.
+- Fixed number of supported flex parsers and flex item tunnel mode.
+- Fixed init failure handling in octeon_ep.
+- Fixed double free of flow aging resources in common/cnxk.
+- Fixed eswitch multi-segment in cnxk.
+- Fixed MAC address change with active VF in cnxk.
+- Fixed Rx timestamp handling in cnxk and event/cnxk.
+- Fixed OOP handling in event mode and for inbound packets in cnxk.
+- Fixed build on Ubuntu 24.04 for net/cnxk and common/cnxk.
+- Fixed 32-bit pointer copy in AVX-512 for idpf, iavf, ice, i40e.
+- Fixed reading invalid PHY timestamp in ice.
+- Fixed handling empty DDP search path in ice.
+- Fixed stopping a flow director queue twice in ice.
+- Fixed alarm cancel and improved reliability of alarm tests.
+- Improved thread creation performance in EAL.
+- Added node xstats for the graph library.
+- Optimized activation of fast path tracepoints.
+- Optimized stats counters performance in netvsc and vhost-user.
+- Enhanced flow scale in bnxt.
+- Added RSS flow query for bnxt.
+- Enhanced Tx scheduler hierarchy support in ice.
+- Increased maximum Rx/Tx descriptors in ice and ixgbe.
+- Enhanced PTP support in iavf.
+- Updated documentation for security protocols.
+- Updated mlx5 limitations for match with compare item.
+- Updated recommended firmware versions for ice and i40e.
+- Added tested Intel platforms to release notes.
+- Added DTS capability documentation.
+- Added long command-line options and low priority queue pair mask configuration in the crypto performance test application.
+- Added scatter-gather mode with external buffer attachment and per-device DMA configuration in DMA performance test application; removed mem2dev/dev2mem transfer directions.
+- Added event pre-scheduling support and independent enqueue capability for event devices (DLB2, DSW, and generic).
+- Added forward latency measurement for DMA adapter events in eventdev test applications.
+- Fixed IPv6 route parsing in FIB test; updated FIB and LPM IPv6 APIs to use structured `rte_ipv6_addr` type instead of raw byte arrays.
+- Added RCU support for safe concurrent access to FIB tables with synchronous and deferred reclamation modes.
+- Added testpmd commands for configuring and displaying speed/lanes per port, setting LED and EEPROM, detailed port info, Traffic Manager node parameters, hairpin queue mapping, and RSS config reuse for DCB.
+- Fixed use-after-free error in testpmd flow aging; added destination TCP port to verbose packet dump.
+- Added new bit manipulation API with atomic operations, volatile pointer support, and bitset library (set, clear, assign, flip, test, shift).
+- Added configurable RSA padding types and asymmetric operation capability check API.
+- Added support for event port profile switching and per-lcore variables for thread-safe per-core data storage.
+- Enhanced mempool performance test to automatically run sub-tests with 1, 2, and all available cores.
+- Added IPv6 utility functions: multicast-to-MAC conversion, address masking, link-local address generation from MAC.
+- Fixed pcapng capture of jumbo frames to use actual packet length.
+- Fixed infinite loop in IPv6 extension header processing.
+- Extended maximum number of services in the service core library.
+- Added `rte_thash_gen_key` function for Toeplitz hash key generation.
+- Added support for VRB2 baseband device variant with FFT, de-windowing, frequency resampling, and depadded output; added interrupt support for ACC100 baseband device.
+- Fixed use-after-free in LA12xx baseband configuration; added FFT and MLDTS operation support for LA12xx.
+- Added support for offline (OH) and oNIC network interfaces, hash-based MAC filtering, and transmit initial credit on DPAA FMan driver.
+- Added multi-process support for DPAA2 bus and enhanced DMA mapping with overlapping memory detection.
+- Added support for Marvell OCTEON CN20K hardware platform across event, crypto, DMA, and network drivers, including pre-scheduling, PTP, and flow control.
+- Added support for Marvell CN10K network interface controllers.
+- Added PDCP control plane support for SNOW-AES and ZUC-AES encryption.
+- Added Virtual Channel operations for SYNCE clock control, GNSS I2C, and HQoS management.
+- Added AVX512-accelerated Tx buffer free path for IDPF driver.
+- Improved error handling in IPsec SA creation: graceful error reporting instead of abort on context flush failure.
+- Added IPsec UDP encapsulation (NAT-T) and extended sequence numbers support to DPAA SEC driver.
+- Added support for SM3 and HMAC-SM3 authentication algorithms in IPsec-MB driver.
+- Added queue pair statistics retrieval (encrypted/decrypted packets and bytes) for CNXK crypto devices.
+- Added scatter-gather DMA copy support, silent mode, and error checking for DPAA QDMA driver.
+- Removed single event enqueue/dequeue operations from DPAA and software eventdev drivers; only burst operations supported.
+- Added asymmetric quantization with zero point in ML dequantization and API to retrieve ML operation error information.
+- Added receive timestamp offloading and real link status reporting for af_packet driver.
+- For bnxt driver: added Thor2/P7 platform support with buffer split, flow group priority, RSS flow query, Rx profile selection, flow counter stats cache, improved VFR cleanup, and fixed stats lockup, VF cleanup, and VXLAN counter accumulation.
+- Fixed result length fields for modular exponentiation and modular inverse in QAT asymmetric crypto driver.
+- Added support for reading and clearing action table entries via MPC commands in bnxt driver.
+- Added support for static and dynamic VXLAN port configuration in the bnxt driver.
+- Added set TTL, set IPv6 source/destination flow actions in the bnxt driver.
+- Added support for VXLAN-GPE, GENEVE tunnels, and wildcard TCAM entries in the bnxt driver.
+- Optimized Thor2 stats cache performance in the bnxt driver.
+- Added support for software-only flow database operations and freeing exact match entries in bnxt.
+- Added TCAM allocation/deallocation and validation of header fields for flow classification in bnxt.
+- Added support for setting mirror ID on a physical port and parsing Geneve/VXLAN-GPE headers in bnxt.
+- Added PTP timestamp support for VF burst mode and inline IPsec device submit on CN10K.
+- Added support for creating IPsec security sessions and multi-segment Rx inject on Marvell CNXK devices.
+- Added CN20K network device support with PTP timestamping, security offload, and traffic management.
+- Added IP reassembly configuration, packet type detection, and DSCP/ECN/DEI marking on CN20K devices.
+- Added mark and RSS actions for flow rules and MCAM dump on Marvell CNXK.
+- Added IEEE 1588 PTP support, BMI RX extended statistics, and offline/ONIC MAC type handling in DPAA.
+- Added PTP time adjustment, timestamping, checksum offload fixes, and packet type classification in DPAA.
+- Added flow item support for ESP, AH, VXLAN, eCPRI, GTP, IPv6, TCP in the DPAA2 driver.
+- Added one-step PTP timestamping, QoS table configuration, and taildrop support for DPAA2.
+- Added PTP initialization to system time and fixed use-after-free in e1000/igb driver.
+- Simplified LLQ policy configuration for ENA devices.
+- Added SR-IOV VF packet filtering and MAC address management in enic driver.
+- Added DQO queue format, TSO, and packet-type classification in GVE driver.
+- Added flow director tuple/index configuration, outer VLAN matching, and PTYPE tunnel matching in HNS3.
+- Added module-specific register dump and queue head/tail pointer dump in HNS3.
+- Added PTP initialization to system time on i40e, ice, and ixgbe.
+- Fixed NVM write timeout, rx error counter in i40e; added AVX512 Tx buffer free and FEC disable in iavf.
+- Added 200Gbps link speed support, custom DDP package, and PTP frequency adjustment in ice.
+- Added Tx scheduling level configuration, dynamic traffic manager hierarchy commit, and traffic management node query in ice.
+- Added receive packet support for Intel IGC (I225) and fixed media detection, NVM checksum, RSS, loopback, MSI-X for E610.
+- Fixed memif zero-copy RX overflow and added link status error logging.
+- Added bandwidth control configuration, vport action to wire, packet type matching, range-based matching, and jump-to-table-index action in mlx5 hardware steering.
+- Added flow meter creation, policy, profile, mirror, and copy actions in mlx5.
+- Added NVGRE default mask support and real-time timestamps to Tx trace points in mlx5.
+- VLAN filter set operations now update flows without traffic interruption in mlx5.
+- Added Windows support for Mellanox ConnectX-5/6/7 adapters.
+- Added multiple PF representors, multi-queue, LED control, EEPROM read/write, module info retrieval, firmware reload, and speed configuration in NFP flower driver.
+- Added port MAC address configuration via NSP, VF link speed update, and configurable flow limit in NFP.
+- Added VLAN strip offload (requires port stopped), packet error validation, and Ethernet padding for transmitted packets in ngbe.
+- Added flow API support (create, destroy, dump, aged flows, templates) for NTNIC devices.
+- Added statistics collection, timestamp-at-end-of-frame, RPF maturing delay, and MAC port blocking via RPF in ntnic.
+- Added flow memory version monitoring and flushing of flow tables (PST, RCP, scrub, match status) in ntnic.
+- Added support for retrieving FPGA firmware version string in the ntnic driver.
+- Added interrupt relay mode and software fallback for live migration in NFP vDPA devices.
+- Added support for big-endian (network byte order) IPv4 lookups in the FIB library.
+- Added support for EdDSA asymmetric algorithm in the FIPS validation example application.
+- The flow filtering example now supports template and non-template flow rules via command-line arguments.
+- The l3fwd, l3fwd-power, and l2fwd-event examples now support command-line options for Rx burst size, mbuf cache size, and CPU resume latency.
+- Extended the service framework to support more than 64 service instances.
+- Improved TSC frequency estimation accuracy.
+- The `rte_bbdev_dequeue_mldts_ops` function is now stable and no longer experimental.
+- Added the `rte_eth_speed_lanes_get` API to retrieve the number of speed lanes for an Ethernet device.
+- Added the `rte_eth_timesync_adjust_freq` function to adjust PTP timesync frequency.
+- Fixed an issue causing excessive interrupts in the txgbe driver.
+- Fixed a potential use-after-free when deleting a MAC address in the sfc driver.
+- Fixed a memory leak on device close in the NFP vDPA driver.
+- Reworked kvargs processing to return error for invalid key-value pairs and -1 for NULL input.
+- Added support for logging to systemd journal and syslog with colored output, configurable color modes, and timestamp formats (none, time, delta, relative, ctime, ISO8601).
+- Fixed custom log stream printing by setting print function in rte_openlog_stream.
+- Added ESP (Encapsulating Security Payload) packet type identification.
+- Updated NEON-based ML quantization functions to support asymmetric quantization with zero-point offset.
+- Removed deprecated IPv6 UDP/TCP checksum functions and added new IPv4 and IPv6 checksum calculation and verification APIs with multi-segment mbuf support and RFC 768 zero-checksum handling.
+- Added `rte_raw_cksum_mbuf` function for raw checksum over multi-segment mbufs.
+- Migrated IPv6 addressing APIs to use `struct rte_ipv6_addr`; added functions to check link-local, loopback, multicast, site-local, IPv4-compatible, and IPv4-mapped addresses.
+- Deprecated `rte_rib6_copy_addr` and `rte_rib6_is_equal`; new APIs use direct struct assignment and `rte_ipv6_addr_eq`.
+- Automated power management environment detection, removing need for `rte_power_set_env`.
+- Added functions to enable/disable turbo frequency and scale CPU frequency per lcore.
+- Added functions to retrieve current, available, and maximum CPU frequencies per lcore.
+- Added CPPC power management support for both core and uncore.
+- Refactored uncore power management to support multiple drivers (Intel, CPPC) with dynamic detection.
+- Added functions to query maximum uncore frequency and number of uncore domains per package.
+- Added asynchronous receive and transmit support for split and packed virtio queues in vhost.
+- Added virtio-net control queue processing.
+- Added DMA error handling for packed virtio-net.
+- Fixed vhost-user log base memory mapping bug.
+- Added NEON- and SSE-accelerated IPv4 lookup node processing and IPv4 reassembly node for graph framework.
+- Added user-defined argument support for telemetry command callbacks.
+- Added API to get number of queue pairs for a machine learning device.
+- Added support for configuring syslog facility using symbolic names.
+- Removed `rte_power_check_supported_env` and `rte_power_unset_env` functions.

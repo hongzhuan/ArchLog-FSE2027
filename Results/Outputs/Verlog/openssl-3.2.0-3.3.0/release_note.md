@@ -1,0 +1,79 @@
+- Added `-profile` option to CMP client for setting certProfile request message header.
+- Added `-reqout_only` option to CMP client to dump or save only the initial CMP request message.
+- Added `-no_cache_extracerts` option to CMP client to disable caching of extra certificates.
+- Added delayed delivery support for all CMP response types, enabling polling scenarios in the mock server.
+- Added `-rand` option to `openssl genpkey` command.
+- Added `-set_issuer` and `-set_subject` options to `openssl x509` to override issuer and subject names.
+- Added `-prefer_no_dhe_kex` option to `s_server` for preferring non-DHE PSK key exchange.
+- Added support for KMAC128, KMAC256, and CMAC to `openssl speed` command.
+- Added the `EVP_DigestSqueeze` API for incremental output from XOF digests (e.g., SHAKE).
+- Added `SSL_write_ex2` with `SSL_WRITE_FLAG_CONCLUDE` flag for efficient QUIC stream termination.
+- Added `SSL_poll` API for non-blocking polling of QUIC connections and streams.
+- Added `SSL_VALUE_EVENT_HANDLING_MODE` API for controlling event handling in QUIC.
+- Added QLOG (QUIC event logging) support for debugging QUIC connections.
+- Added `SSL_OP_PREFER_NO_DHE_KEX` option to prefer non-DHE PSK key exchange on the server.
+- Added ability to ignore unknown signature algorithms and groups in configuration by marking them with `?`.
+- Added bandwidth limitation support in the `noisydgram` BIO filter for testing.
+- Added support for building on RISC-V 64-bit Android targets.
+- Added `atexit` configuration option to control use of `atexit()` in libcrypto.
+- Added BLAKE2b and BLAKE2s variable output size support via `OSSL_DIGEST_PARAM_SIZE`.
+- Added the Kerberos 5 Key Derivation Function (KRB5KDF) provider implementation.
+- Added provider-based DSA key generation.
+- Added support for configuring QUIC idle timeout.
+- Added automatic ticking for QUIC non-blocking handshake and polling.
+- Added Remote and Local Connection ID Management (RCIDM, LCIDM) for QUIC connections.
+- Added stateless reset token generation and management for QUIC connections.
+- Added QUIC server support with handling of incoming connections, stateless resets, and network errors.
+- Added QUIC port abstraction to manage multiple connections per UDP socket.
+- Added ability to set a diagnostic title for QUIC connections used in qlog output.
+- Added APIs to query available local and remote stream counts for QUIC connections.
+- Added stream write buffer size, used, and available query APIs for QUIC connections.
+- Added `SSL_SESSION_dup` function to duplicate SSL sessions.
+- Added `SSL_SESSION_get_time_ex` and `set_time_ex` for time_t support.
+- Added `X509_load_cert_file_ex` function to load multiple PEM certificates from a file into an X509_STORE.
+- Added `X509_STORE_get1_objects` to retrieve all objects in a certificate store.
+- RSA key import now automatically derives CRT coefficients when prime factors p and q are provided via `derive_from_pq`.
+- Added time_t parameter support in the OSSL_PARAM API.
+- The CMP client now reads the fallback public key from the first request message file when using `-reqin`.
+- Added vectorized ChaCha20 implementation for RISC-V platforms.
+- Added optimized AES-GCM and other AES mode implementations using RISC-V vector cryptographic extensions.
+- Added RISC-V vector-optimized implementations for SHA-256, SHA-512, SM3, and SM4.
+- The `openssl rand` command now accepts size suffixes (K, M, G, T) and the keyword `max`.
+- The `openssl engine` command now lists EC among its capabilities.
+- `pkcs12` no longer forcibly loads the configuration file.
+- CMS now allows duplicate attributes.
+- ECDSA_sign, DSA_sign, and SM2_sign now accept a NULL sig parameter to return the required signature length.
+- Improved error handling: unrecognized algorithm names now raise a clear error instead of returning NULL.
+- Improved error reporting in EVP_PKEY_sign, verify, and verify_recover.
+- `OPENSSL_sk_push` now returns only 0 or 1 (0 on failure).
+- Provider configuration boolean settings now accept intuitive values (yes/no/true/false).
+- SSL configuration now continues applying all settings even if some commands encounter errors.
+- The HMAC provider now ignores `OSSL_MAC_PARAM_DIGEST_NOINIT` and `OSSL_MAC_PARAM_DIGEST_ONESHOT` parameters.
+- Fixed an issue where the `asn1parse` command incorrectly read PEM input when using `-genstr` or `-genconf`.
+- The `openssl crl` and `openssl req` commands now exit with a non-zero status upon verification failure.
+- Fixed the `openssl errstr` command to correctly detect invalid error code arguments.
+- Fixed the `-addext subjectAltName=dirName` option and made `openssl req` exit with status 1 on self-signature verification failure.
+- Fixed an error when using the `-rev` option with DTLS in `s_server`.
+- Prevented integer overflow in ASN.1 time conversion when handling large year or month values.
+- Added appropriate lower bound checks for GeneralizedTime and UTCTime string lengths.
+- Hardened the ASN.1 OID loader to reject invalid inputs.
+- Prevented an infinite loop in `BN_GF2m_mod_inv` when an invalid modulus is provided.
+- Fixed segmentation faults when copying or using a CMAC context before initialization.
+- Added NULL checks in EVP_CIPHER functions to prevent crashes when no cipher is set.
+- Limited the number of HTTP response headers to prevent unbounded memory growth.
+- Fixed URL port parsing to properly detect invalid port numbers.
+- Fixed an off-by-one error in hex string conversion on EBCDIC systems.
+- `OSSL_PARAM_allocate_from_text` now rejects hex strings with an odd number of digits.
+- Fixed a crash when processing PKCS12 files with missing encrypted ContentInfo.
+- Fixed PowerPC macro detection in Poly1305 initialization.
+- Added overflow checks to property string parsing.
+- Prevented recursive configuration parsing.
+- RSA-OAEP operations now return an error when used with non-RSA keys.
+- Enhanced RSA public key validation by limiting modulus size and increasing Miller-Rabin rounds.
+- Validated configuration options when creating CRL distribution point extensions.
+- Fixed a use-after-free in `X509v3_asid_add_id_or_range` and `custom_exts_free`.
+- Fixed unbounded TLS session cache growth in TLSv1.3.
+- Fixed error state restoration in QUIC when the connection port is not running.
+- Fixed `SSL_export_keying_material` to work correctly for QUIC connections.
+- PBKDF1 now validates the requested key length and returns an error if it exceeds the digest output size.
+- The `openssl rehash` command now handles memory allocation failures properly and no longer relies on `NAME_MAX` for portability.

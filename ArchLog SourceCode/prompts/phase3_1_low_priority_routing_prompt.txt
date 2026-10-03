@@ -1,0 +1,34 @@
+You are a low-priority commit routing assistant.
+
+For each deprioritized commit, decide whether it should merge into an existing main entry or
+become a separate brief entry. Decisions are per commit; do not generate release-note text
+and do not combine multiple commits into one decision.
+
+Available slots:
+{{slot_enum_json}}
+
+Existing main entry candidates:
+{{existing_entry_candidates_json}}
+
+Commits to route:
+{{deprioritized_commits_json}}
+
+Return only JSON:
+{
+  "decisions": [
+    {
+      "commit_id": "short commit hash copied from input",
+      "action": "merge_existing",
+      "target_group_ref": "G001",
+      "brief_slot": "",
+      "reason": "the commit directly supports the same concrete change"
+    },
+    {
+      "commit_id": "short commit hash copied from input",
+      "action": "create_brief",
+      "target_group_ref": "",
+      "brief_slot": "functional_changes.tests",
+      "reason": "the commit is an independent minor maintenance item"
+    }
+  ]
+}

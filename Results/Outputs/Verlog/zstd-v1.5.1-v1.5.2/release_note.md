@@ -1,0 +1,14 @@
+- Version 1.5.2 released.
+- Fixed a bug in the optimal parser that could cause incorrect compression or crashes when the literal length reaches the block size maximum.
+- Fixed stderr progress logging for decompression to avoid displaying progress when outputting to stdout.
+- Improved command-line behavior by no longer updating timestamps on output files when the destination is stdout.
+- Built with non-executable stack on all architectures for enhanced security.
+- Added a compile option to explicitly disable assembly, providing flexibility for compatibility or debugging.
+- Fixed MSVC support in the Meson build system.
+- Fixed the output name of the static library when building with MinGW/Clang.
+- Fixed MSVC source file inclusion in CMake builds.
+- Restored the ability to select library optimization flags via the command line during builds.
+- Inlined the xxHash dependency, reducing external dependencies.
+- Updated the Swift Package definition to reflect file moves.
+- Updated the Module Map file for better module support.
+- Fixed a performance issue in compression scenario #2966, potentially improving compression speed or ratio.

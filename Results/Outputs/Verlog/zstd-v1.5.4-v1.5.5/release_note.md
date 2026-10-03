@@ -1,0 +1,40 @@
+- Added ZSTD_CCtx_setFParams(), ZSTD_CCtx_setCParams(), and ZSTD_CCtx_setParams() helper functions to conveniently set frame and compression parameters.
+- Added ZSTD_compressEnd() and ZSTD_getBlockSize() to the public API.
+- Added memory-mapped dictionary support (--mmap-dict and --no-mmap-dict) for efficient handling of large dictionaries, including on Windows.
+- Added salt into row hash to improve compression ratio and efficiency.
+- Added init-once memory workspace to reduce compression overhead by initializing workspace memory only once.
+- Added ability to skip over incompressible data in lazy mode for faster compression.
+- Added file descriptor usage for stat operations to improve file I/O reliability.
+- Disabled sparse file support when output is not a regular file to prevent issues with block devices.
+- Added detection and selection of maximum available C++ standard in pzstd.
+- Added CI tests for Clang-CL on Windows, external compressor dependencies, and generation of Win64 artifacts.
+- Added instructions for building Universal2 on macOS via CMake.
+- Added documentation for the seekable format and for LDM + dictionary compatibility.
+- Added support for specifying compression level in the seekable compression example.
+- Improved seekable format ingestion speed for small frame sizes.
+- Improved seekable decompression to prevent rereading frames when seeking forward to the same or earlier offset.
+- Reduced memory usage of row hash by halving the tag space.
+- Fixed a rare corruption bug affecting the block splitter.
+- Fixed potential over-reads in decompression when input is too short or when reading skippable frames.
+- Fixed decompression when writing to a block device (e.g., -o /dev/sda).
+- Fixed an off-by-one error in workspace buffer ownership check that could lead to memory corruption.
+- Fixed ZSTD_CCtx_setCParams() not correctly updating parameters after initialization.
+- Fixed window update issue.
+- Fixed zstd-dll build missing dependencies.
+- Fixed all MSVC warnings.
+- Fixed setvbuf segfault when file pointer is null.
+- Fixed Python 3.6 incompatibility in CLI tests.
+- Fixed test timeout issues.
+- Fixed permission on publish release artifacts job.
+- Fixed fullbench not resetting benchNb when benchmarking two files.
+- Fixed 32-bit test issues and cli-tests issues.
+- Fixed typos found by codespell.
+- Deprecated bufferless and block-level APIs (including ZSTD_compressBlock and ZSTD_decompressBlock), encouraging use of streaming APIs.
+- Updated version number to v1.5.5.
+- Updated changelog and README.
+- Pinned dependency hashes for security.
+- Avoid linker flag detection on MSVC/ClangCL.
+- Clarified dstCapacity requirements and sizes of compressed Huffman blocks and streams.
+- Use correct types in LZMA compression/decompression.
+- Refactored dictionary file stat and memory-mapped loading.
+- Made Github workflows permissions read-only by default.

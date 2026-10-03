@@ -1,0 +1,24 @@
+- Added support for post-quantum algorithms: ML-KEM (key encapsulation), ML-DSA (digital signatures), and SLH-DSA (digital signatures), including key generation, encoding/decoding, and TLS hybrid groups with ECDH curves
+- Added QUIC server functionality with listener API, connection acceptance, address validation via retry packets, and session resume support
+- Added SSL key logging via the `SSLKEYLOGFILE` environment variable for debugging TLS connections
+- Added the EVP_SKEY symmetric key API and `openssl skeyutl` command for handling opaque symmetric keys
+- Added EVP cipher pipeline API (EVP_CIPHER_pipeline) for parallel cipher operations
+- Added support for multiple key shares in TLS 1.3
+- Added support for X.509v3 extensions: roleSpecCertIdentifier and authorityAttributeIdentifier
+- Added support for PKCS#7 inner contents verification
+- Added an internal jitter entropy source for the FIPS provider, configurable via `fips_jitter` option
+- Prohibited SHA-1 in Diffie-Hellman and ECDH key exchanges in FIPS mode
+- Added continuous random bit generator (CRNG) tests for FIPS compliance
+- Added hardware acceleration for full AES-XTS on s390x platforms
+- Added the `EVP_get_default_properties()` function for retrieving default algorithm properties
+- Added support for TCG (Trusted Computing Group) platform certificate OIDs
+- Added support for composite signature+hash algorithms
+- Changed default cipher for `openssl req`, `cms`, and `smime` to AES-256-CBC
+- Fixed timing side-channel vulnerability (Minerva) for P-384 curve on PPC
+- Fixed potential double-free with duplicated hybrid ML-KEM keys
+- Fixed memory leaks in KTLS, CMS, and EC components
+- Fixed segmentation fault in `openssl pkeyutl` command
+- Fixed bug where using the same file for input and output in multiple `openssl` commands could cause data loss
+- Fixed QUIC non-blocking writes to correctly return SSL_ERROR_WANT_WRITE
+- Fixed handling of IPv6 host addresses in HTTP client and server
+- Fixed a bug in CMS encryption with key agreement when originator certificate is set

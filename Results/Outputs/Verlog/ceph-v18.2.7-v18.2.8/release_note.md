@@ -1,0 +1,71 @@
+- Added read-only mode for ceph-kvstore-tool and ceph-objectstore-tool, allowing access to corrupted stores with `--no-superblock` option for pg export.
+- Added pool name specification with the `fs volume create` command.
+- Added `auth rotate` command to rotate authentication keys.
+- Added `clear_shards_repaired` command for OSD repair.
+- Added `snapshot getpath` command to retrieve snapshot paths.
+- Added pause and resume mechanism for asynchronous jobs in the volume manager.
+- Added support for the `partNumber` parameter in S3 GetObject requests.
+- Added force option to `radosgw-admin object rm` for deleting objects with broken heads.
+- Added configurable JWKS URL verification for STS and improved RSA JWT signature validation using modulus and exponent.
+- Ensured ETag format is consistent with AWS S3 API (double quotes included).
+- Added ARN-based condition evaluation for IAM policies.
+- Added option to disable batched operations in MDS via `mds_allow_batched_ops`.
+- Added admin socket command to dump MDS export states.
+- Added prometheus read permission to the cluster manager role.
+- Added support for creating NVMe-oF services via the dashboard.
+- Added support for removing extended attributes (xattr) via `cephfs-shell`.
+- Added OAuth2 SSO support to the dashboard.
+- Introduced configurable cap on pending discards (`bdev_async_discard`) and dynamic adjustment of asynchronous discard threads.
+- Added `mds_allow_async_dirops` option to allow or disable asynchronous directory operations in MDS.
+- Added dmclock-based priority queue scheduling with push and pull models for OSD request handling.
+- Added `mgr status` command to check manager module status.
+- Enabled object lock on existing buckets via PutObjectLockConfiguration.
+- Added support for disabling always-on MGR modules with `ceph mgr module force disable`.
+- Added support for disabling stretch mode; monitors now auto-disable stretch mode when no longer configured.
+- Added health check `NONEXISTENT_MON_CRUSH_LOC_STRETCH_MODE` and ignore non-existent CRUSH buckets in stretch mode.
+- Exclude destroyed OSDs from `ceph node ls` output.
+- Added read-only mount and unmount support for BlueStore, enabling safer diagnostic and recovery access to corrupted stores.
+- Introduced new B-tree based allocator (Btree2) and hybrid variants (HybridAvl, HybridBtree2) for BlueStore to improve allocation performance.
+- Added `--data-path` and `--op` aliases for ceph-objectstore-tool options.
+- Added OSD recovery sleep settings for degraded PGs (`osd_recovery_sleep_degraded`, `osd_recovery_sleep_degraded_ssd`, `osd_recovery_sleep_degraded_hdd`).
+- Added tracking of repaired shard count in OSD statistics.
+- Improved OSD scrub scheduling with timer-based sleep, longer replica wait times, and reservation timeout handling.
+- Added support for IPv6 zone identifiers in URLs.
+- Added `last_modified` field to Swift API bucket listing.
+- Added modification time tracking for buckets.
+- Bucket notifications can now be sent to Kafka with multiple brokers.
+- Improved handling of pool full conditions: object deletion succeeds with 507 InsufficientCapacity; garbage collection and writes return immediate errors when pool is full.
+- Lifecycle tiering now includes null version ID in non-current object transitions.
+- Fixed bucket attribute updates in DBStore backend; bucket delete, policy deletion, CORS deletion, tag deletion now correctly persist attributes.
+- Fixed regression in radoslist with SLO manifests and improved handling of missing head objects.
+- Adjusted resharding thresholds for versioned buckets.
+- Optimized bucket listing performance by skipping versioned entry regions.
+- Changed storage class encoding to canonical form in bucket entry dumps.
+- Improved detection and cleanup of incomplete multipart uploads in bucket index.
+- Copy operations now follow object link headers.
+- Added support for retrieving supported connection modes from the authentication server.
+- Drop support for cache tiering (deprecated).
+- CephFS: FS fail now only allowed when client sets `client_refuse_session`. FS rename requires the filesystem to be offline.
+- MDS: fixed invalid memory access in getattr handling.
+- MDS: improved client eviction and session cleanup when export subtree task is interrupted.
+- MDS: added `importing_count` to session dump for debugging.
+- Client: fixed `d_reclen` for readdir; gracefully handle empty pathnames for `statxat` and `chownat`; return `EOPNOTSUPP` for `fallocate` with mode 0.
+- ceph-fuse: improved usage message to document `--client_fs` and clarify `--client_mountpoint`.
+- cephfs-top: fixed exception when terminal size exceeds PAD_WIDTH.
+- mgr/volumes: warning emitted when deleting volume with active snap-schedules; handle dangling symlinks gracefully.
+- mgr/snap_schedule: properly handle volume deletion.
+- mon: emit warning during filesystem removal (`fs rm`).
+- mgr: process map updates before notifying clients for improved consistency.
+- mgr/cephadm: fixed unfound progress events.
+- ceph-volume: do not convert LV symlink to real path, fixing multipath device handling.
+- BlueStore: fix race condition between truncate and unlink.
+- BlueStore: fix assertion failure when allocation size changes.
+- BlueStore: validate compression and checksum options when setting collection options.
+- RBD: added "creating" state for mirror images.
+- RBD: improved error message when trashing an image that belongs to a group.
+- RBD: honor resync only when remote primary.
+- RBD: refresh remote image before local.
+- RBD: prevent image deletion when remote not primary.
+- RBD: group snapshot creation now respects `rbd_default_snapshot_quiesce_mode`.
+- RBD: fixed image close failure when group snapshot removal fails.
+- RBD: fixed migration from QCOW2 format that could hang or crash.

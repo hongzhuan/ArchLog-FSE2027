@@ -1,0 +1,23 @@
+- Added transparent huge page support for metadata (`opt.metadata_thp` with disabled/auto/always modes) and for all allocations (`opt.thp`), improving large memory management efficiency.
+- Introduced a new emitter module for structured statistics output, enabling JSON and table formats for easier parsing and readability.
+- Added the `arenas.lookup` mallctl interface to retrieve the arena index associated with a given pointer.
+- Added the `arena.i.retain_grow_limit` option to control the maximum growth of retained memory per arena.
+- Added `max_background_threads` runtime configuration to limit the number of background threads (defaults to CPU count).
+- Added a logging facility for debugging and diagnostics, with unit tests and log control functions.
+- Added control of heap profiling dumps (`idump` and `gdump`) with the `prof_active` setting, allowing dynamic enabling/disabling without locking.
+- Added `pages_dontdump` and `pages_dodump` functionality to exclude memory extents from core dumps via a dumpable flag.
+- Added a fast division computation module (`div_info_t`) to improve performance of arena size class calculations.
+- Added runtime detection of lazy purging (MADV_FREE) support on platforms that provide it.
+- Added the `opt.lg_extent_max_active_fit` configuration option to control extent fitting behavior and reduce fragmentation.
+- Added support for additional CPU architectures: aarch64 ILP32, m68k, nios2, and SH3.
+- Added configure options `--with-lg-vaddr` (for larger virtual address space) and `--disable-initial-exec-tls`.
+- Added statistics for metadata transparent huge page (THP) usage.
+- Fixed a deadlock in multithreaded `fork()` on OS X by reinitializing mutexes in the child process.
+- Fixed an unbounded increase in stashed decayed extents by limiting the number of pages purged per decay sweep.
+- Fixed `abort_conf` processing to validate all configuration options before aborting, preventing partial error handling.
+- Fixed extent coalesce bugs and resource leaks along extent split failure paths.
+- Fixed an addressing bug on aarch64 when retrieving extent pointers.
+- Fixed MSVC build and enhanced Visual Studio project support (2015/2017 solutions).
+- Removed the internal `preserve_lru` feature from extent management, simplifying recycling behavior.
+- Removed the `config.thp` option (replaced by runtime detection and `opt.thp`).
+- Miscellaneous improvements: output all counters for bin mutex stats; apply better fit for aligned allocations; improve FreeBSD support by using `getpagesize`; add tests for multi-threaded forking behavior; fix const qualifier and type warnings.

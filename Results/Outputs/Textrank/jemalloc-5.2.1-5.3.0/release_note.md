@@ -1,0 +1,892 @@
+# VerLog-style TextRank Release Note
+
+- Repository: jemalloc
+- Version pair: 5.2.1 -> 5.3.0
+- Pair id: jemalloc-5.2.1-5.3.0
+- Input commits: 881
+- Candidate sentences: 880
+- GT-length budget: 446
+- Extracted entries: 880
+
+## Extracted Entries
+
+- psset: Use fit/insert/remove as basis functions.
+- fix opt.thp:never still use THP with base_new
+- Add some comments to the batch allocation logic flow
+- Add option to fetch system thread name on each prof sample
+- Verify that HPA is used before calling its functions
+- bitset test: Pull NBITS_TAB into its own file.
+- Only replace the dump file opening function in test
+- hpdata: Use addr/size instead of begin/npages.
+- Avoid calculating size of size class twice & delete sc_data_global.
+- Make test/unit/background_thread_enable more conservative.
+- Make maps file opening replaceable in test
+- Make dump file writing replaceable in test
+- Ehooks: Add some debug zero and addr checks.
+- Extract utility function for opening maps file
+- Remove beginning define in source files
+- stress/sizes: Fix an off-by-one issue.
+- Add -Wimplicit-fallthrough checks if supported
+- Emphasize no modification through thread.allocatedp allowed.
+- Avoid arena->offset_state when tsd not available for prng.
+- Do not bump to large size for page aligned request
+- Modify mallctl output length when needed
+- Pull out edata_t caching into its own module.
+- Fix base_ehooks_get_for_metadata
+- bit_util: Add fls_ functions; "find last set".
+- No need to record all nodes in ctl_lookup()
+- TSD: Put all fast-path data together.
+- Move thread name handling to prof_data module
+- Add a default page size when cross-compile for Apple M1.
+- Push error handling logic out of core dumping logic
+- Do not create size class tables for non-prof builds
+- Make use of assert_* in test/unit/thread_event.c
+- Clean up some minor data structure inconsistencies
+- HPA batch dalloc: Just do one deferred work check.
+- Add a small program to print data structure sizes.
+- Make the default option of zero realloc match the system allocator.
+- Decay: move in some background_thread accesses.
+- Extent: Get rid of extent-specific pre/post reentrancy calls.
+- Do not disable SEC by default for 64k pages platforms
+- PA: Have large expands use it.
+- Improve naming for prof system thread name option
+- Add safety check on sdallocx slow / sampled path.
+- Decay: Add a (mostly stub) test case.
+- Use posix_madvise to purge pages when available
+- Edata: split up different list linkage uses.
+- MADV_DO[NOT]DUMP support equivalence on FreeBSD.
+- Add stress test for last-N profiling mode
+- Move bg thread activity check out of purging core.
+- Implement use-after-free detection using junk and stash.
+- Fix an interaction between the oversize_threshold test and bgthds.
+- Fix failed assertion due to racy memory access
+- SEC: Use batch fills.
+- Tcache flush: keep common path state in registers.
+- Add more documentation to decay.c
+- Decay: Take current time as an argument.
+- Add rtree_write_range(): writing the same content to multiple leaf elements.
+- Add nstime_ns_since which obtains the duration since the input time.
+- Arena: Make more derived stats non-atomic/locked.
+- Threshold is no longer updated before prof_realloc()
+- Make use of assert_* in test/unit/prof_recent.c
+- Update config.{sub,guess} to support support-aarch64-apple-darwin as a target
+- PA: have expand take sizes instead of new usize.
+- Simplify time setting and getting for prof log
+- Let opt.zero propagate to core allocation.
+- Move extent stats to the PA module.
+- Change tsdn to tsd for thread name allocation
+- check GNU make exists in path
+- Add a tool to examine random number distributions
+- Makefile.in: make sure doc generated before install
+- PA: Move in some more internals accesses.
+- Get rid of custom iterator for last-N records
+- Pages: Statically detect if pages_huge may succeed
+- Fix the extent state checking on the merge error path.
+- configure.ac: Put public symbols on one line.
+- Make use of assert_* in test/unit/inspect.c
+- Split the core logic of tcache flush into a separate function.
+- Handle ending gap properly for HPA stats
+- HPA: Do deferred operations on background threads.
+- Add SEC module: a small extent cache.
+- PA: Move in remaining page allocation functions.
+- Move the edata mergeability related functions to extent.h.
+- Move size inspections to test/analyze
+- Fix warnings when using autoheader.
+- Initialize prof idump counter once rather than once per arena
+- Use the isb instruction instead of yield for spin locks on arm
+- Split out locality checking in batch allocation tests
+- No need to pass usize to prof_tctx_set()
+- Add assert_* functionality to tests
+- Move cache index randomization out of extent.
+- Extract restore and async cleanup functions for prof last-N list
+- Move hpdata bitmap logic out of the psset.
+- Edata: Move sn into its own field.
+- Get rid of lock overlap in prof_recent_alloc_reset
+- Verify output space before doing heavy work in mallctl
+- Add quiescence sync before deleting base during arena_destroy.
+- Allow opt.tcache_max to accept small size classes.
+- Add tiny batch size to batch allocation stress test
+- Only compute thread event threshold once per trigger
+- Track per size class internal fragmentation
+- Fix: prof_recent_alloc_max_ctl_read() does not take tsd
+- Relocate a few prof utilities to the right modules
+- Add background thread sleep retry in test/unit/hpa_background_thread
+- HPA stats: Allow some derived stats.
+- Track low_water == -1 case explicitly.
+- Fix tcaches mutex pre- / post-fork handling.
+- Fix doc large size 54 KiB error
+- Remove mallctl test for zero_realloc
+- hpdata: count active pages instead of free ones.
+- Do not reset sample wait time when re-initing tdata
+- base_structs.h: Remove some mid-line tabs.
+- Extent -> Ehooks: Move over default hooks.
+- Move thread event wait time update to local
+- Add zero option to arena batch allocation
+- Make use of assert_* in test/unit/buf_writer.c
+- Cache bin: Write the unit test in terms of the API
+- Add fxp: A fixed-point math library.
+- Tcache: split up fast and slow path data.
+- Remove redundant declaration, pac_retain_grow_limit_get_set was declared twice in pac.h
+- Edata: Pull out comparison fields into a summary.
+- Extent: Clean up a comma
+- Add alignment stress test for rallocx
+- Slight changes to cache bin internal functions
+- PA: Move in the ecache_t objects.
+- Add branch hints to free_fastpath.
+- Add a stress test for batch allocation
+- PA: Move in retain growth limit setting.
+- Add support for 'make uninstall'
+- Check for large size first in the uncommon case of malloc.
+- Optimize away the tsd_fast() check on free fastpath.
+- Add prof_leak_error option
+- PAC: Move in decay rate setting.
+- Add a hard limit on tcache max size class.
+- Set is_head in extent_alloc_wrapper w/ retain.
+- psset: Add insert/remove functions.
+- PA: Move in arena large allocation functionality.
+- Background thread: take base as a parameter.
+- Ehooks: Fix a build warning.
+- Avoid the release & re-acquire of the ecache locks around the merge hook.
+- Make jemalloc.c use the emap interface.
+- Extent -> Eset: Move extent fit functions.
+- Mallctl stress test: fix a type.
+- Fix the time-since computation in HPA.
+- Add sized-delete size-checking functionality.
+- Add a mallctl speed stress test.
+- Report the correct and wrong sizes on sized dealloc bug detection.
+- extent_may_dalloc -> ehooks_dalloc_will_fail
+- Move bg inactivity check out of purge inner loop.
+- PA: Have expand take szind and slab.
+- Create prof_sys module for reading system thread name
+- Ehooks: Further optimize default merge case.
+- use SYS_openat when available
+- PA: Move edata_avail stat in, make it non-atomic.
+- Add empty test and concat for typed list
+- Add debug check outside of the loop in hpa_alloc_batch.
+- SEC: Reduce lock hold times.
+- Optimize stats print using partial name-to-mib
+- Arena stats: Give it its own "mapped".
+- Rtree: Pull leaf contents into their own struct.
+- PA: Remove public visibility of some internals.
+- Fast path: allow low-water mark changes.
+- HPA: Manage whole hugepages at a time.
+- Fix index type for cache_bin_alloc_easy.
+- Only invoke malloc_cpu_count_is_deterministic() when necessary.
+- Fix an used-uninitialized warning (false positive).
+- hpdata: Add state changing helpers.
+- PRNG: Allow a a range argument of 1.
+- Cache bin: rewrite to track more state.
+- Allow setting custom backtrace hook
+- Add opt.experimental_infallible_new.
+- PA: Add ehook-getting support.
+- Introduce decay module and put decay objects in PA
+- Wake up background threads on demand
+- Add a dependency checking step at the end of malloc_conf_init.
+- Properly detect background thread support on Darwin.
+- Move relevant index into the ehooks_t itself.
+- TSD: Move in some of the tcache fields.
+- Restructure and correct sleep utility for testing
+- Rename full_position to low_bound in cache_bin.h.
+- Do not fail on partial ctl path for ctl_nametomib()
+- PA: Have slab allocations use it.
+- PA: Move in full stats merging.
+- Delete tdata states used for cleanup
+- Add unit tests for decay
+- FreeBSD also needs the OS-X "don't declare system functions as
+- Fix large.nflushes in the merged stats.
+- extent_can_acquire_neighbor typo fix
+- stress/sizes: Add a couple more types.
+- Remove extent knowledge of arena.
+- Add psset: a set of pageslabs.
+- Add sample interval to prof last-N dump
+- PA: Move in basic stats merging.
+- TSD: Make rtree_ctx a slow-path field.
+- Add partial name-to-mib functionality
+- Update ChangeLog for 5.3.0.
+- Update INSTALL.md about the default doc build.
+- Stats, CTL: Expose new tcache settings.
+- Clean up background thread sleep computation
+- Redefine functions with test hooks only for tests
+- flat_bitmap unit test: Silence a warning.
+- Add surplus reading API for thread event lookahead
+- Add JEMALLOC_COLD, and mark some functions cold.
+- HPA: Use psset fit/insert/remove.
+- Move extent ehook calls into ehooks
+- Do not repeat reentrancy test in profiling
+- Mutex: Make spin count configurable.
+- Do not fallback to auto arena when manual arena is requested
+- Extent refactor: Introduce ecache module.
+- Move n_search outside of assert as reported by static analyzer
+- Increase dump buffer for prof last-N list
+- Eagerly detect double free and sized dealloc bugs for large sizes.
+- Ehooks: Add head tracking.
+- Correct thread event unit test
+- Break down event init and handler functions
+- Bug fix for prof_active switch
+- psset: Do first-fit based on slab age.
+- Remove unnecessary source files
+- Move unbias data to prof_data
+- Cache-bin: Make flush modifications internal
+- Decay: Add comments for the public API.
+- Fix two conversion warnings in tcache.
+- Get rid of locks in prof recent test
+- Move junking out of arena/tcache code.
+- Pull thread_(de)allocated out of config_stats
+- Cache bin: set low-water internally.
+- Ehooks: Add a "zero" ehook.
+- Allow setting a dump hook
+- Add forking handling for counter module
+- Optimize away the tsd_fast() check on fastpath.
+- Optimize away a branch on the free fastpath.
+- Mutex: Tweak internal spin count.
+- Add thread name in prof last-N records
+- Fix unnecessary returns in san_(un)guard_pages_two_sided.
+- Add unit tests for usize in prof recent records
+- Separate out dumping for each prof recent record
+- Reduce prof dump buffer size in debug build
+- hpdata: Add a comment for hpdata_consistent.
+- cache_bin: Don't allow direct internals access.
+- HPA unit test: skip if unsupported.
+- Passing down the original edata on the expand path.
+- No need to intercept prof_dump_header() in tests
+- Avoid overflow warnings in test/unit/safety_check.
+- Fix the HELP_STRING of --enable-doc.
+- Add lock to protect prof last-N dumping
+- Arena: Add helper function arena_get_from_extent.
+- Allow PAI to calculate time until deferred work
+- Add "default" option to slab sizes.
+- Add emap, for tracking extent locking.
+- Remove outdated comments in thread event
+- NetBSD specific changes:
+- Omit bin stats rows with no data
+- Remove extent_can_coalesce arena dependency.
+- Store edata->state in rtree leaf and make edata_t 128B aligned.
+- Extract out per event new wait time fetching
+- Disallow merge across mmap regions to preserve SN / first-fit.
+- Extent -> Ehooks: Move split hook.
+- Inspect test: Reduce checks when profiling is on.
+- Add a simple utility to detect profiling bias.
+- ph: Add aux-list counting and pre-merging.
+- Fix a conversion warning.
+- Limit # of iters of test_bitmap_xfu.
+- Extract alloc/dalloc utility for last-N nodes
+- Increase column width for global malloc/free rate
+- Test on all supported release of FreeBSD
+- Disable percpu arena in case of non deterministic CPU count
+- Arena stats: Move retained to PA, use plain ints.
+- Fix unlikely condition in arena_prof_info_get()
+- PA: Move in decay_to_limit
+- PA: Move in all modifications of mapped.
+- Put extent_state_t into ecache as well as eset.
+- Edata cache: add a unit test.
+- Extents: Have extent_dalloc_gap take ehooks.
+- Extent -> Ehooks: Move dalloc hook.
+- Extent -> Ehooks: Move alloc hook.
+- Track the initialized state of nstime_t on debug build.
+- psset unit test: fix a bug.
+- Introduce NEITHER_READ_NOR_WRITE in ctl.
+- Lower the num_threads in the stress test of test/unit/prof_recent
+- Stats: Fix edata_cache size merging.
+- Base: Remove some unnecessary reentrancy guards.
+- Fix size class calculation for sec
+- PA: Move in decay-all pathway.
+- Get rid of TSD -> thread event dependency
+- Extent -> Eset: Move fork handling.
+- Delay the atexit call to prof_log_start().
+- Update TUNING.md to include the new tcache_max option.
+- Make prof last-N dumping non-blocking
+- Rtree: Clean up compact/non-compact split.
+- Avoid abort() in test/integration/cpp/infallible_new_true.
+- Break commit functions' arena dependence
+- Add stats counters for number of zero reallocs
+- Build a general purpose thread event handler
+- Emap: Move over metadata splitting logic.
+- Implement PAGE_FLOOR macro
+- Add ctl interface for experimental_infallible_new.
+- No tdata creation for backtracing on dying thread
+- PA -> PAC: Move in destruction functions.
+- Add thread.peak.[read|reset] mallctls.
+- Always adjust thread_(de)allocated
+- ARC: add Minimum allocation alignment
+- Unify zero flag reading and setting
+- Properly handle tdata deletion race
+- Move arena_decay_extent to extent module.
+- Emap: Move over deregistration functions.
+- Use rtree tracked states to protect edata outside of ecache locks.
+- PA: Simple decay test.
+- Tell edatas their creation arena immediately.
+- hpdata: track per-page dirty state.
+- Extent -> Ehooks: Move merge hook.
+- FB: Add range iteration support.
+- Flat bitmap: Add longest-range computation.
+- Extent -> Ehooks: Move destroy hook.
+- Add mallctl for dumping last-N profiling records
+- Route batch allocation of small batch size to tcache
+- Make edata pointer on prof recent record an atomic fence
+- Extent.c: Avoid an rtree NULL-check.
+- Emap: Move out remaining edata modifications.
+- Config: safety checks don't imply size checks.
+- Stop checking head state in the merge hook.
+- Extent: Stop passing an edata_cache everywhere.
+- Support C++17 over-aligned allocation
+- PA->PAC: Move in decay functions.
+- Edata: Reserve some space for hugepages.
+- HPA: Pull out a hooks type.
+- Add witness_assert_positive_depth_to_rank().
+- Fix doc build with install-suffix.
+- Push event handlers to constituent modules
+- Fix possible "nmalloc >= ndalloc" assertion.
+- Add a logo to doc_internal.
+- Purge all if the last thread migrated away from an arena.
+- PAI/SEC: Add a dalloc_batch function.
+- Extent: Remove szind/slab knowledge.
+- Allow narenas:default.
+- Ecache: Should know its arena_ind.
+- Android build fix proposal.
+- Eset: take opt_lg_max_active_fit as a parameter.
+- Tcache: Make size computation configurable.
+- cache_bin: Don't let arena see empty position.
+- Don't do reentrant testing in junk tests.
+- Remove the unnecessary arena_ind_set in base_alloc_edata().
+- Make extent module hermetic.
+- Add the profiling settings for tests explicit.
+- Mac: don't declare system functions as nothrow.
+- Emap: Move over deregistration boundary functions.
+- Rtree: Remove the per-field accessors.
+- Extent -> Ehooks: Move purge_forced hook.
+- hpdata: Add a test.
+- Fix the alloc_ctx check in free_fastpath.
+- Migrate counter to use locked int
+- cpu instruction spin wait for arm32/64
+- Fix: assertion could abort on past failures
+- Edata: zero stack edatas before initializing.
+- Add alignment tests for prof stats
+- Nbits: Add a couple more interesting sizes.
+- Cache mallctl mib for batch allocation stress test
+- San: Create a function for committing and zeroing
+- Tcache: Make an integer conversion explicit.
+- Extent -> Ehooks: Move commit and decommit hooks.
+- Use the edata_cache_small_t in the HPA.
+- Remove opt_background_thread_hpa_interval_max_ms
+- HPA: Add central mutex contention stats.
+- Rename zero_realloc option "strict" to "alloc".
+- Track extent is_head state in rtree leaf.
+- Change assert_* to expect_* in tests
+- Geom_grow: Move in advancing logic.
+- Tcache: Remove some unused gc constants.
+- Get rid of redundant logic in prof
+- SEC: Allow arbitrarily many shards, cached sizes.
+- Add hint in the bogus version string.
+- Use ql for prof last-N list
+- Fix large bin index accessed through cache bin descriptor.
+- Remove _externs from prof internal header names
+- HPA stats: report retained instead of inactive.
+- PA: Add a stats type.
+- Move file handling logic in prof_data to prof_sys
+- Record request size in prof recent entries
+- Add experimental.thread.activity_callback.
+- Optimize cache_bin_alloc_easy for malloc fast path
+- atomic: add atomic_load_sub_store
+- PAC: Move in decay.
+- Define prof dump buffer size centrally
+- Implement guard pages.
+- Extract out per event postponed wait time fetching
+- Cache bin: Move in initialization code.
+- PA: Move in decay stats.
+- SC: use SC_LG_NGROUP instead of its value.
+- flat bitmap: Add a bitwise and/or/not.
+- Last-N profiling mode
+- Enable ctl on partial mib and partial name
+- Arena: fill in terms of cache_bins.
+- Use __forceinline for JEMALLOC_ALWAYS_INLINE on msvc
+- Extent -> Ehooks: Move purge_lazy hook.
+- Simplify / refactor tcache_dalloc_large.
+- Fix FreeBSD system jemalloc TSD cleanup
+- Simplify arena_migrate() to take arena_t* instead of indices.
+- Expose prof testing internal functions
+- Edata: add an "age" field.
+- Define general purpose tsd_thread_event_init()
+- Tcaches: Fix a subtle race condition.
+- Geom_grow: Don't keep the mutex internal.
+- Prefer getaffinity() to detect number of CPUs.
+- Pull HPA options into a containing struct.
+- Add new architecture loongarch.
+- Use volatile to workaround buffer overflow false positives.
+- Extents: Split out introspection functionality.
+- Remove commit parameter to ecache functions.
+- Break extent split dependence on arena.
+- Add a batch mode for cache_bin_alloc()
+- Record request size in prof info
+- Eset: Add a source file.
+- Move empty slab tracking to the psset.
+- Safety check: Don't directly abort.
+- Decay: Introduce a stub .c file.
+- Add ASSURED_WRITE in mallctl
+- Pass write callback explicitly in prof_data
+- Expose prof_data testing internals only in prof tests
+- Move extent2 -> extent.
+- PA: Move in nactive counter.
+- Allow dallocx and sdallocx after tsd destruction.
+- Witness: Make ranks an enum.
+- Add typed-list module.
+- Fetch time after tctx and only for samples
+- Check prof_active in addtion to opt_prof during batch_alloc().
+- Add a benchmark of large allocations.
+- fb: implement assign in terms of a visitor.
+- Initialize deferred_work_generated
+- Add a batch allocation interface to the PAI.
+- Enforce page alignment for sampled allocations.
+- Arena: remove redundant bg inactivity check.
+- cache_bin: Separate out local and remote accesses.
+- Avoid variable length array with length 0.
+- Cache bin: Don't reverse flush order.
+- Remove --with-slab-maxregs options from INSTALL.md
+- flat bitmap: add scount / ucount functions.
+- Echo installed files via verbose 'install' command
+- PA: Move in rest of purging.
+- Fix thread.name/prof_sys_thread_name interaction
+- Correct opt.prof_leak documentation
+- Unify the signature of tcache_flush small and large.
+- PA->PAC: Make extent.c forget about PA.
+- Change tsdn to tsd for profiling code path
+- Define structures for prof dump parameters
+- Eset: Pull per-pszind data into structs.
+- Cache bin: simplify names and argument ordering.
+- Simplify signatures for prof dump functions
+- Fix an assertion on extent head state with dss.
+- Do not rollback prof idump counter in arena_prof_promote()
+- Extents: Split out extent struct.
+- Extent -> Eset: Move insertion and removal.
+- Don't purge huge extents when decay is off.
+- HPA: add size-exclusion functionality.
+- Optimize for prof_active off
+- Report the offending pointer on sized dealloc bug detection.
+- Redesign the cache bin metadata for fast path.
+- Make compact json format as default
+- IO: Support 0-padding for unsigned numbers.
+- Refactor destroy code path for prof_tctx
+- hpdata: Return the number of pages to be purged.
+- PA: Move in arena extent_sn counter.
+- Tcache: Hold cache bin allocation explicitly.
+- Small doc tweak of opt.trust_madvise.
+- Remove thread_event_boot().
+- edata_cache: Allow unbounded fast caching.
+- Rename test/unit/decay -> test/unit/arena_decay.
+- PA: Move in mutex stats reading.
+- Stats: Fix a printing bug when hpa_dirty_mult = -1
+- Emap: Move out last edata state touching.
+- Fix a prof_recent/prof_sys_thread_name interaction
+- Cache bin: Make ncached_max a query on the info_t.
+- Fix the initialization of last_event in thread event init.
+- Add forking handling for prof idump counter
+- Fix amd64 MSVC warning
+- Document 'make uninstall'
+- Fix incorrect usage of cassert.
+- Make buffered writer an independent module
+- psset: Move in stats.
+- Add a script to check for clang-formattedness.
+- Darwin malloc_size override support proposal.
+- hpdata: early bailout for longest free range.
+- Fix duration in prof log
+- Cache bin: Add a debug method for init checking.
+- Implement opt.cache_oblivious.
+- Fix prof_backtrace() reentrancy level
+- Edata cache small: rewrite.
+- Add last-N mutex stats
+- Disable TravisCI jobs generation for Windows
+- Emap: Move extent boundary registration in.
+- HPA: Fix typos with big performance implications.
+- Emap: Internal rtree context setting.
+- Edata cache: atomic fetch-add -> load-store.
+- Remove the unnecessary alloc_ctx on free_fastpath.
+- Set reentrancy to 1 for tsd_state_purgatory.
+- Edata: Add a ranged bit.
+- Enforce abort_conf:true when malloc_conf is not fully recognized.
+- PA: move in ecache_grow.
+- PA: Move in decay_stashed.
+- Add runtime detection for MADV_DONTNEED zeroes pages (mostly for qemu)
+- Tcache: treat small and large cache bins uniformly
+- Tcache: Add tcache gc delay option.
+- Add a fill/flush microbenchmark.
+- Remove merge dependence on the arena.
+- Break extent_coalesce arena dependence
+- Fix tcache bin stack alignment.
+- PH: Insert-below-min fast-path.
+- PA: Get rid of arena_ind_get calls.
+- Fix warnings when compiled with clang
+- Add peak_t, for tracking allocator net max.
+- Remove thread_event_rollback()
+- Get rid of old indentation style for prof
+- Encapsulate buffer allocation failure in buffered writer
+- Buffer prof_log_stop
+- Extents -> Eset: move extents_state_get.
+- Tcache fluhing: increase cache miss parallelism.
+- SEC: Expand option configurability.
+- Extents: Silence the "potentially unused" warning.
+- PAC: Add an init function.
+- San: Avoid running san tests with prof enabled
+- Reject --enable-prof-libunwind without --enable-prof
+- HPA: Don't disable shards that were never started.
+- Fix shadowed variable usage.
+- Extent: Break [de]activation's arena dependence.
+- San: Bump alloc frequently reused guarded allocations
+- freebsd 14 build fix proposal.
+- Implement opt.stats_interval and the _opts options.
+- Unify alignment flag reading and computation
+- Avoid a -Wundef warning on LG_SLAB_MAXREGS.
+- Define JEMALLOC_HAS_ALLOCA_H for QNX
+- Mark slab as true on sized dealloc fast path.
+- Remove redundant enable-debug definition in configure.
+- San: Implement bump alloc
+- Un-force-inline do_rallocx.
+- Fix MSVC 2015 build, as proposed by -foundry.
+- Cache bin: Only take the relevant cache_bin_info_t
+- Update INSTALL.md to mention 'autoconf'
+- Refactor the locking in extent_recycle().
+- edata_cache: Remember the associated base_t.
+- Add narenas_ratio.
+- Add batch allocation API
+- Add mallctl for batch allocation API
+- Fix je_ prefix issue in test
+- Add hpa_central module
+- Emap: Move in write_acquired from extent.
+- Decay: Move in arena decay functions.
+- Bin: Move stats closer to the mutex.
+- Reorganize cpp APIs and suppress unused function warnings
+- Unify extent_alloc_wrapper with the other wrappers.
+- Remove declaration of an undefined function
+- Add a .clang-format file.
+- Correct the name of stats.mutexes.prof_thds_data in doc.
+- SEC: Implement thread affinity.
+- Fix syntax errors in doc for thread.idle.
+- Implement deallocation events.
+- PA: Move in decay initialization.
+- utrace support with label based signature.
+- Add inspect.c to MSVC filters
+- psset: Relegate alloc/dalloc to test code.
+- Tcache: make slot sizing configurable.
+- HPA: Add min_purge_interval_ms option
+- HPA: Use dirtiest-first purging.
+- Pairing heap: inline functions instead of macros.
+- Arena stats: mark edata_avail as derived.
+- Red-black tree: add summarize/filter.
+- HPA: Make purging/hugifying more principled.
+- Realloc: Make behavior of realloc(ptr, 0) configurable.
+- include <features.h> as requested
+- Corrections for prof_log_start()
+- Remove the undefined extent_size_quantize declarations.
+- Add comments and use meaningful vars in sz_psz2ind.
+- PAC: Move in ecache_grow.
+- Tcache: Make flush fractions configurable.
+- PA: Add pa_extra.c and put PA forking there.
+- Remove prof -> thread_event dependency
+- PA: Add a stats comment.
+- Fix locking on arena_i_destroy_ctl().
+- Small refactors around 7bb05e0.
+- PAC: Move in edata_cache accesses.
+- Add a per-arena oversize_threshold.
+- Add max_per_bg_thd stats for per background thread mutexes.
+- PA: Move in the arena edata_cache.
+- Add "thread.idle" mallctl.
+- Ehooks: avoid touching arena_emap_global in tests.
+- Add batch allocation from fresh slabs
+- Benchmarks: Also print ns / iter.
+- Rtree: take the base allocator as a parameter.
+- Make prof_tctx_t pointer a true prof atomic fence
+- Move percpu_arena_update.
+- Handle log_mtx during forking
+- add experimental.arenas_create_ext mallctl
+- bit_util: Change ffs functions indexing.
+- HPA: Tie components into a PAI implementation.
+- Add ehooks module
+- fxp: Add FXP_INIT_PERCENT
+- Cleanup tcache allocation logic
+- Better structure ql module
+- Cache bin: Remove last internals accesses.
+- Tcache flush: Add an emap "batch lookup" path.
+- Minor update to locked int
+- Break prof and tcache knowledge of b0.
+- HPA: Correctly calculate retained pages
+- mpsc_queue: Add module.
+- Edata cache: add edata_cache_small_t.
+- configure: add --with-lg-slab-maxregs configure option.
+- HPA: Track dirty stats.
+- Fix a cache bin test
+- Move extent hook getters/setters to arena.c
+- Update visual studio projects
+- Unify printing for prof counts object
+- Correct usize in prof last-N record
+- Add forking handling for stats
+- bit_util: Guarantee popcount's presence.
+- Treat postponed prof sample event as new event
+- psset stats: Simplify handling.
+- Clear tcache prof_accumbytes in tcache_flush_cache
+- Fix Undefined Behavior in hash.h
+- Enable ctl_lookup() to start from arbitrary node
+- Cache bin: improve comments.
+- Fix test config of lg_san_uaf_align.
+- Base: Pull into a single header.
+- Forbid spaces in install suffix
+- Introduce hpdata_t.
+- Remove duplicate logging in malloc.
+- prof_recent: cassert(config_prof) more often.
+- Cirrus: fix build.
+- Deduplicate entries in witness error message
+- DragonFlyBSD build support.
+- psset: keep aggregate stats.
+- Extract node lookup given mib input
+- Remove unused header base_structs.h.
+- Shorten wait time for peak events
+- Add concat and split functionality to ql module
+- HPA: Use a whole-shard purging heuristic.
+- Unify tcache flag reading and selection
+- Update FreeBSD image to 12.3 for cirrus ci.
+- Emap: Move in slab interior registration.
+- Stats: Fix tcache_bytes reporting.
+- Extents: Break extent-struct/arena interactions
+- Move page quantization to sz module.
+- PA: Make mapped stat atomic.
+- Add Windows to TravisCI
+- PRNG: Remove atomic functionality.
+- Move file handling logic in prof to prof_sys
+- Delete the mutex_pool module.
+- Enable TravisCI for Windows
+- fix some typos
+- Bail out early for muzzy decay.
+- Buffer stats printing
+- Appveyor: fix 404 errors.
+- Add FreeBSD to TravisCI
+- HPA: Some minor reformattings.
+- Use ticker_geom_t for arena tcache decay.
+- PA: Move in stash_decayed.
+- Unify arena flag reading and selection
+- Introduce lockedint module.
+- Emap: Drop szind/slab splitting parameters.
+- HPA: Don't track inactive pages.
+- Pass 'frequent_reuse' hint to PAI
+- HPA: Add an nevictions counter.
+- Arena: Loosen arena_may_have_muzzy restrictions.
+- CTL, Stats: report HPA empty slab stats.
+- Tcache: Make incremental gc bytes configurable.
+- Extent: Take "bool zero" over "bool *zero".
+- Make cache_bin_sz_t unsigned.
+- Store ncached_max * ptr_size in tcache_bin_info.
+- narenas_ratio: Accept fractional values.
+- PA->PAC: Move in stats.
+- Added --debug-syms-by-id option
+- Consolidate struct definitions for prof dump parameters
+- Cirrus-CI: test on new freebsd releases.
+- Emap: Move in szind and slab modifications.
+- HPA: make the hugification threshold configurable.
+- HPA: Make dehugification threshold configurable.
+- Unify write callback signature
+- Emap: Move in merge functionality.
+- Generalize prof_cnt_all() for testing
+- HPA: Remove unused malloc_conf options.
+- HPA: Implement batch allocation.
+- PA->PAC: Move in extent_sn.
+- Add flat_bitmap.
+- Rework the bin locking around tcache refill / flush.
+- Introduce unsafe reentrancy guards.
+- LQ_QUANTUM should be 4 on mips64 hardware.
+- RB unit tests: don't test reentrantly.
+- Move arena decay getters to PA.
+- Pull prof_accumbytes into thread event handler
+- Add move constructor to ql module
+- Configure: Get rid of LG_QUANTA.
+- Don't assume initialized arena in the default alloc hook.
+- Makefile: alphabetize stress/analyze utilities.
+- CPU affinity on BSD platforms support.
+- Add compact json option for emitter
+- Emap: Move edata modification out of emap_remap.
+- Update config.{guess,sub} to 2020-11-07
+- Mark head state during dss alloc.
+- Cache_bin: Shouldn't know about tcache.
+- Rewrite profiling thread event
+- Rearrange slab data and constants
+- Arena: share bin offsets in a global.
+- Fix uninitialized nstime reading / updating on the stack in hpa.
+- Fix szind computation in profiling
+- Add Cirrus CI testing matrix
+- psset: Add stats
+- PA: Take zero as a bool rather than as a bool *.
+- High Resolution Timestamps for Profiling
+- Reoreder TravisCI jobs to optimize CI time
+- Add "prof.dump_prefix" to override filename prefixes for dumps.
+- Cache bin: Add an emptiness assertion.
+- Suppress tdata creation in reentrancy
+- Refactor arena_bin_malloc_hard().
+- Extract bin shard selection out of bin locking
+- Add PAC: Page allocator classic.
+- Fix stats for "tcache_max" (was "lg_tcache_max")
+- Backport jeprof --collapse for flamegraph generation
+- Fix size miscalculation bug in reallocation
+- Reduce footprint of bin_t.
+- psset: Purge empty slabs first.
+- Consolidate prof inline function headers
+- Better naming buffered writer
+- Pass tsd down to prof_backtrace()
+- Workaround the stringop-overflow check false positives.
+- HPA: Add purge stats.
+- Add a stub PA module -- a page allocator.
+- Add rotate functionality to ql module
+- Geom_grow: Don't take tsdn at init.
+- Fix symbol conflict with musl libc
+- Fallback to unbuffered printing if OOM
+- Tcache: Unify bin flush logic.
+- Add PROFILING_INTERNALS.md
+- Disable some spuriously-triggering warnings
+- Remove hpa_central.
+- Remove unused prof_accum field from arena
+- Fix typo in configure.ac: experimetal -> experimental
+- PA->PAC: Move in PAI implementation.
+- Emap: Remove direct access to emap internals.
+- Pull tcache GC events into thread event handler
+- Inline malloc fastpath into operator new.
+- Add emptiness checking to ql module
+- Enforce realloc sizing stability
+- Don't warn on uniform initialization.
+- Revert "Fix bug in prof_realloc"
+- Rename extent_t to edata_t.
+- Rename extent.h -> edata.h.
+- deduplicate insert and delete logic in qr module
+- PA -> PAC: Move in decay_purge enum.
+- Pass prof dump parameters explicitly in prof_sys
+- Output prof stats in stats print
+- PA: Minor cleanups and comment fixes.
+- Rename tsd->offset_state to tsd->prng_state.
+- Move delay_coalesce from the eset to the ecache.
+- Emap: Take (and propagate) a zeroed parameter.
+- Migrate prof dumping to use buffered writer
+- Switch from opt.lg_tcache_max to opt.tcache_max
+- Make prof_idump_accum() non-inline
+- Guard prof_active reset by opt_prof
+- Cache bin: expose ncached_max publicly.
+- PA: Move mapped into pa stats.
+- Add HPA deferral functionality.
+- SC: Name the max lookup constant.
+- HPA: Implement batch deallocation.
+- Guard prof related mallctl with opt_prof.
+- Ehooks: remove arena_ind parameter.
+- prof_log: cassert(config_prof) in public functions
+- Tcache: Privatize opt_lg_tcache_max default.
+- Config: Warn on void * pointer arithmetic.
+- San: Unguard guarded slabs during arena destruction
+- Introduce PAI: Page allocator interface
+- Extents -> Eset: Convert some stats getters.
+- HPA: Make dirty_mult configurable.
+- Add piping API to buffered writer
+- Rename san_enabled() to san_guard_enabled().
+- Eset: Remove temporary declaration.
+- PA: move in shard initialization.
+- Put szind_t, pszind_t in sz.h.
+- Add --with-lg-page=16 to CI.
+- Emap: Add emap_assert_not_mapped.
+- Extent -> Eset: Rename arena members.
+- Detect pthread_getname_np explicitly.
+- HPA: Make slab sizes and maxes configurable.
+- Sized deallocation: fix a typo.
+- Edata: rename "ranged" bit to "pai".
+- Edata: Fix a couple typos.
+- Add stats for stashed bytes in tcache.
+- Tcache flush: Unify edata lookup path.
+- Define constructor for buffered writer argument
+- SEC: Fix a comment typo.
+- Cache an arena's index in the arena.
+- Fix recursive malloc during bootstrap on QNX
+- Forbid spaces in prefix and exec_prefix
+- Ehooks comments and cleanup.
+- Update the tsd description.
+- Encapsulate buffer allocation in buffered writer
+- HPA: Track pending purges/hugifies in the psset.
+- Mac OS: Tag mapped pages.
+- Correction on geometric sampling
+- hpdata: Strengthen assertions.
+- Fix bug in prof_realloc
+- Restructure setters for profiling info
+- Properly dalloc prof nodes with idalloctm.
+- hpdata: Rename "dirty" to "touched".
+- Eset: Cache summary information for heap edatas.
+- QL, QR: Add documentation.
+- HPA: Introduce a redesigned hpa_central_t.
+- Add buffered writer
+- Tcache: Tweak nslots_max tuning parameter.
+- psset: Reconceptualize insertion/removal.
+- HPA: Purge across retained extents.
+- Rework and fix the assertions on malloc fastpath.
+- Guard C++ aligned APIs
+- Correct tsd layout graph
+- Port gen_run_tests.py to python3
+- Pass nstime_t pointer for profiling
+- Add prof stats mutex stats
+- PA: Use an SEC in fron of the HPA shard.
+- CI support for PPC64LE architecture
+- Minor typo fix in doc.
+- Use the flat bitmap for eset and psset bitmaps.
+- Add mallctl for prof stats fetching
+- Restructure profiling
+- Rename ecache_grow -> geom_grow.
+- Abbreviate thread-event to te.
+- Rename edata_tree_t -> edata_avail_t.
+- Tcache flush: prefetch edata contents.
+- Travis: Don't test "clang" on OS X.
+- PAC: move in emap
+- Extents: Eagerly initialize extent hooks.
+- Merge realloc and rallocx pathways.
+- Rename emap_split_prepare_t -> emap_prepare_t.
+- malloc_conf: Clarify HPA options.
+- Guard slabcur fetching in extent_util
+- Rename geom_grow -> exp_grow.
+- Initialization utilities for nstime
+- Correct prof header macro namings
+- Add ticker_geom_t.
+- Unify buffered writer naming
+- Emap: Move in iealloc.
+- Fix prof timestamp conf reading
+- Support AutoConf for posix_madvise and POSIX_MADV_DONTNEED
+- Emap: Move in alloc_ctx lookup functionality.
+- Split macros for initializing stats headers
+- Emap: Comments and cleanup
+- Optimize meld in qr module
+- enabling mpss on solaris/illumos.
+- Always initialize TE counters in TSD init
+- Chagne prof_accum_t to counter_accum_t for general purpose.
+- Add const qualifier in assert_cmp()
+- Fix a typo in Makefile.
+- Refactor and optimize prof sampling initialization.
+- Refactor prof_tctx_t creation
+- Add malloc_conf_2_conf_harder
+- SC: Simplify SC_NPSIZES computation.
+- San: Rename 'guard' to 'san'
+- Initialize prof_leak during prof init.
+- cache_bin nflush -> n.
+- Rename prof.dump_prefix to prof.prefix
+- Move unwind to prof_sys
+- Refactor profiling headers
+- Emap: Standardize naming.
+- Appveyor: don't update msys2 keyring.
+- HPA: Add stats for the hpa_shard.
+- Refactor prof log
+- Report stats for tdatas_mtx and prof_dump_mtx
+- PRNG test: cleanups.
+- Prof: Add prof_unbias.
+- PAI: Fix a typo.
+- Ehooks: Assert alloc isn't NULL
+- Rename 'arena_decay' to 'arena_util'
+- Extents -> Eset: rename/move extents_init.
+- Travis: Unbreak the builds.
+- Refactor profiling
+- Arena: rename arena_structs_b.h -> arena_structs.h
+- Eset: Parameterize last globals accesses.
+- FXP: add fxp_mul_frac.
+- Disable JEMALLOC_TLS for QNX
+- CI: Update keyring.
+- psset: Rename "bitmap" to "pageslab_bitmap".
+- Rename extents -> ecache.
+- HPA: Generalize purging.
+- Rename prof_tctx to alloc_tctx in prof_info_t
+- Rename "prof_dump_seq_mtx" to "prof_dump_filename_mtx".
+- HPA: Hugification hysteresis.
+- PA: Parameterize emap.
+- Rename extents_t -> eset_t.
+- CI: Refactor gen_travis.py

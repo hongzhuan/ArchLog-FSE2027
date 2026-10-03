@@ -1,0 +1,130 @@
+- Added graph feature arcs for dynamic feature-based routing, FIB-based IPv4/IPv6 route addition and lookup, and node freeing.
+- Added event vector adapter support to the event device library, including a default software vector adapter and performance testing.
+- Added RSA decryption support to the crypto performance test application.
+- Added a new ZSDA crypto device driver supporting symmetric cipher, authentication, and AEAD operations (AES-XTS, SM4-XTS, SHA, etc.).
+- Added support for Marvell CN20K cryptographic accelerator, including asymmetric session-less operations, TLS/DTLS offload, IPsec, and event adapter.
+- Switched UADK crypto and compression drivers to asynchronous mode for improved performance.
+- Added support for RSA 8K modulus operations in the virtio crypto device.
+- Added support for AMD Solarflare X4 (Medford4) network adapter family with 200 Gbps link speed and new FEC types.
+- Added initial support for rnp (Raysharp) network devices with RSS, VLAN, checksum offload, TSO, and multicast.
+- Added support for RTL8127, RTL8125CP, and RTL8168 series in the r8169 driver, along with jumbo frames, 10 Gbps link speed, fiber mode, and TX completion cleanup.
+- Added support for CN20K network device platform with RSS, RoCEv2, and ESP-based hashing.
+- Added support for gVNIC PCI revision 1 and later (GVE driver) and FreeBSD support.
+- Added support for PF mode in MANA driver and MAC address probing.
+- Added support for E31X series in ZXDH driver and a new ZXDH network processor driver with agent channel and security engine.
+- Added support for physical port lane count control and 200G link ability on Solarflare adapters.
+- Added support for clock read, send-on-timestamp, and per-packet transmit timestamp on Intel ice and E830.
+- Added support for multi-TC configuration and DCB info retrieval for HNS3 VF.
+- Added RSS offload for SCTP port in ngbe and txgbe drivers.
+- Added flow filter support for txgbe VF, including 5-tuple filter.
+- Added LRO support in txgbe driver.
+- Added deferred queue start and queue start/stop in ntnic driver, plus extended statistics.
+- Added fragment bypass mode in ena driver.
+- Added Rx/Tx burst mode info in virtio, iavf, ixgbe, ice, e1000, and igb drivers.
+- Added IP-in-IP tunnel support for all combinations in mlx5, including IPv6 outer layer detection.
+- Added non-template flow sample action, multi-host LAG probing, mirror and sample flow action in mlx5 HWS.
+- Added NUMA node fallback in mlx5 for queue allocation.
+- Added flow template match on IPv6 fragment extension in mlx5 and general IPv6 fragment extension matching in flow rules.
+- Added PMU library for reading CPU performance events on ARM64 and x86_64.
+- Added secure free and secure memory zero APIs for sensitive data.
+- Added repeated command-line options and boolean/string value types in argparse library.
+- Added human-readable size formatting (IEC/binary) in the EAL library.
+- Added support for DPAA2 SEC simple IPsec sessions and PDCP user-plane with 12-bit SN.
+- Added support for AES-CTR encryption in outbound IPsec and segment count validation in cnxk.
+- Added support for SM2 signing and signature verification in cnxk crypto driver.
+- Added support for virtio user-space crypto device.
+- Added secondary process datapath support for DLB2 event device.
+- Enhanced credit management in DLB2 event driver to improve dequeue performance and stability.
+- Added LoongArch architecture support for DLB2, HNS3, and IAVF drivers.
+- Added support for configuring history list size and inflight control for DLB2.5 and CQ inflight state control in DLB2.
+- Added Rx/Tx queue support for AF_XDP driver with separate Rx and Tx queue configurations.
+- Improved RSS RETA update logic to skip synchronization in flow isolation mode.
+- Added force tail drop mode on CNXK NICs, doubling completion queue size.
+- Added RSS hashing support for ESP and ROCEv2 traffic in multiple network drivers.
+- Added per-queue priority flow control (PFC) configuration for CNXK NICs.
+- Added support for configuring LLQ policy via device argument.
+- Fixed ENA device initialization when control path interrupt fails.
+- Added CRC recalculation for small packets when keep CRC is enabled.
+- Added ARM NEON and PowerPC AltiVec vectorized Rx queue rearm for Intel NIC drivers.
+- Enabled AVX2 support for single queue Rx/Tx in cpfl driver.
+- Added ICH8 LAN hardware initialization support in e1000 driver.
+- Added Malicious Driver Detection (MDD) support for ixgbe and E610 VF Tx paths.
+- Added VF link status retrieval from PF for ixgbe.
+- Added multicast mode update support for ixgbe VFs.
+- Added ethertype filter support for Intel E610 devices.
+- Added vectorized Rx burst and Tx mbuf recycling for ixgbe driver.
+- Added MTU setting support for mlx5 devices.
+- Added support for querying supported packet types in mlx5.
+- Added PORT_ID flow item support in mlx5.
+- Added RSS hash algorithm reporting and configuration (Toeplitz, XOR, CRC32) for NFP.
+- Added SCTP protocol RSS hashing for NFP.
+- Added flow control configuration for ngbe NIC.
+- Added 200 Gbps link speed support for sfc driver.
+- Added flow filter support for txgbe VF (includes 5-tuple).
+- Changed metering direction from ingress to egress.
+- Updated CNXK GPIO driver to use GPIO v2 character device interface (ioctl-based) replacing sysfs and interrupt mode.
+- Added string and boolean argument types, `--` separator support, and return value for number of parsed arguments in the argparse library.
+- Renamed EAL options `--socket-mem` and `--socket-limit` to `--numa-mem` and `--numa-limit` (old names retained as aliases); added service core list parameter.
+- Added option to securely zero memory before freeing to prevent data leakage.
+- Added support for memory reservation at a fixed address without replacing existing mappings.
+- Added `rte_str_to_size` public API for converting human-readable size strings to bytes.
+- Added `getdelim` and `getline` functions on Windows.
+- Added `rte_pcapng_close` function to safely close pcapng handles.
+- Added support for Neoverse V3 ARM processor.
+- Fixed RSS hash key update to preserve existing RSS hash types in testpmd.
+- Fixed tunnel inner info parsing in testpmd.
+- Fixed crash in auxiliary bus device cleanup.
+- Fixed VMBus interrupt page mapping to use Hyper-V page size.
+- Fixed resource management issue in mlx5 where destroying a consecutive send queue could free shared memory resources.
+- Fixed out-of-order completions in ordinary Rx burst in mlx5.
+- Fixed queue length check and VLAN stripping on hairpin queue in mlx5.
+- Fixed VLAN strip disabling for ADQ v2 capability in iavf.
+- Fixed inconsistency in Rx queue VLAN tag placement in ice.
+- Fixed RSS on plain IPv4 in i40e.
+- Fixed device statistics and MAC control frame forwarding in ngbe and txgbe.
+- Fixed FDIR operations and packet type parsing in txgbe.
+- Fixed packet type parsing and GENEVE offset in testpmd and net library.
+- Fixed Rx packet without CRC data in hns3.
+- Fixed divide by zero, memory leaks, and interrupt rollback in hns3.
+- Fixed use after free in qede and fslmc bus.
+- Fixed buffer refill in octeon_ep.
+- Fixed overflow in per-lcore trace buffer.
+- Fixed lockup on address space shortage in memory allocation.
+- Fixed link status for E610 in ixgbe base.
+- Fixed crash on age query with indirect conntrack in mlx5.
+- Fixed error notification for large flow patterns in mlx5.
+- Fixed maximal queue size query and flex tunnel flow validation in mlx5.
+- Fixed GRE flow item validation and header modify action on group 0 in mlx5.
+- Fixed flow rule freeing and RSS algorithm configuration in nfp.
+- Fixed crash with null RSS hash key in nfp.
+- Fixed use after free in zero-copy Tx in af_xdp.
+- Fixed support for 3 scheduler levels in ice and flow creation failure.
+- Fixed Rx of large packets in ice.
+- Fixed EEPROM dump and xstats name in e1000, including boundary check to allow reading last word.
+- Fixed truncation of constant value in idpf.
+- Fixed DER encoding of RSA public key in virtio crypto.
+- Fixed out-of-place header bytes in QAT AEAD raw API.
+- Fixed CQ tail drop in cnxk and descriptor count update on reconfig.
+- Fixed reconfiguring MAC address and buffer size in lookup memory in cnxk.
+- Fixed lock for security session operations in cnxk.
+- Fixed out-of-bound access in cnxk GPIO raw driver.
+- Fixed driver cleanup and driver ID in virtio crypto.
+- Fixed uninitialized variable in dpaa2_sec crypto.
+- Fixed PDCP key command race condition in dpaax.
+- Fixed flag types consistency in eventdev.
+- Fixed credit initialization and race condition in DLB2 event driver.
+- Fixed per-queue statistics overwriting in netvsc driver.
+- Fixed Hyper-V page size usage in netvsc driver.
+- Fixed byte order handling in NFP flower control vNIC.
+- Fixed endianness handling in NFP receive and transmit paths.
+- Fixed FEC configuration overwrite for QSFP28 modules.
+- Fixed promiscuous and allmulticast mode disable logic: device state now updates only after a successful driver call.
+- Fixed IPv4-mapped and IPv4-compatible IPv6 address detection (correct prefix length to 96 bits).
+- Fixed driver event mapping access in packed virtqueues to read-only for security; fixed control virtqueue ring wrapping.
+- Fixed ipsec-secgw example crash in event vector mode with invalid destination ports and IPv6.
+- Fixed race conditions in latency statistics collection; switched to integer-based calculations with scaling.
+- Latency statistics initialization no longer accepts user-provided flow type callback (user_cb must be NULL).
+- Removed support for ZUC-256 cipher and authentication algorithms in QAT symmetric crypto driver.
+- Removed unsupported flow meter action in mlx5 HWS.
+- Deprecated coremask-based EAL parameters (`-c`); use core lists (`-l` or `--lcores`) instead.
+- Removed EAL journal logging option.

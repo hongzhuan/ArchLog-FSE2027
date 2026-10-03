@@ -1,0 +1,55 @@
+- Added `-not_before` and `-not_after` options to the `ca`, `req`, and `x509` commands for explicit certificate validity dates, and warned when `-days` is combined with `-enddate`.
+- Added support for using "today" as a date value for certificate start and end dates.
+- Added `-windowscontext` option to `openssl info` to display Windows install directories, and changed default paths to be retrieved dynamically from the Windows registry.
+- Added support for listing TLS signature algorithms with the `openssl list` command.
+- Added key encapsulation/decapsulation (KEM) operations to the `pkeyutl` command.
+- Added a test mode (`-testmode`) to the `openssl speed` command.
+- Enhanced `openssl s_client` output to show ALPN negotiation, early data status, and peer RPK information.
+- Added `openssl debuginfo` build target.
+- Added support for requesting certificate templates and CRL updates via CMP genm/genp messages.
+- Added support for saving and managing CRLs and key specifications received via CMP.
+- Added support for the CRL storage format (PEM/DER) in the CMP application.
+- Improved CMP validation error handling to skip trust anchor warning when a secret is provided.
+- Fixed a crash when extracting Root CA Key Update information from CMP messages.
+- Fixed the combination of `-certout` and `-chainout` with equal filenames in the CMP app.
+- Added support for augmenting or overriding existing extensions in CMP request messages via `X509v3_add_extensions()`.
+- New FIPS configuration options now control signature digest verification, KBKDF key checks, HMAC and KMAC key sizes, short MAC disabling, PKCS#1 v1.5 padding disabling, EdDSA verification control, DSA signing, and Triple-DES encryption.
+- Added FIPS indicator support for CMAC, random number generation, and a generic FIPS indicator callback to notify applications of FIPS approval status.
+- In FIPS mode, Triple-DES (3DES) is restricted to decryption-only operations.
+- In FIPS mode, ECDH must use cofactor mode for curves with a non‑one cofactor.
+- In FIPS mode, PKCS#1 v1.5 padding is disallowed for RSA encryption, and SHAKE digests are blocked in RSA-OAEP.
+- Added public key validation for Ed25519, Ed448, and EC keys for FIPS compliance.
+- Made DSA nonce generation constant-time and non-biased, and added validation to reject excessive modulus sizes and invalid combinations.
+- Added validation of DSA public key parameters to reject excessively large sizes.
+- Reject certificate signing requests (CSRs) with an invalid version upon verification.
+- Added PBMAC1 support in PKCS#12 operations, enabling PBKDF2-based MAC computation and key derivation.
+- Added support for composite signature algorithms (RSA+hash, ECDSA+hash, DSA+hash, EdDSA) and new `sign_message`/`verify_message` operations.
+- Added support for EdDSA (Ed25519 and Ed448) signatures, including pre-hashed variants (Ed25519ph, Ed448ph), via the EVP_PKEY API.
+- Added incremental message signing and verification (sign/verify_init/update/final) for RSA, DSA, ECDSA, EdDSA, and composite signature algorithms.
+- `EVP_DigestFinal` now fails for XOF digests (SHAKE-128/256); use `EVP_DigestFinalXOF` instead. SHAKE digests must have their output length explicitly set.
+- Added support for incremental squeeze operations on XOF algorithms (e.g., SHAKE) via `EVP_DigestSqueeze`.
+- Changed `EVP_PKEY_CTX_add1_hkdf_info` to append HKDF info instead of replacing, and to correctly handle empty input.
+- Added `SSL_CTX_flush_sessions_ex` and `SSL_SESSION_set_time_ex` functions, replacing the deprecated `SSL_CTX_flush_sessions` and `SSL_SESSION_set_time`.
+- Added support for integrity-only cipher suites for TLS v1.3.
+- Added support for empty NPN/ALPN protocol lists and fixed protocol selection in `SSL_select_next_proto`.
+- Added `CMS_add1_signer` function.
+- Added `ENGINE_get_last()` function.
+- Added support for the `OPENSSL_WINCTX` type in `OpenSSL_version()`.
+- Added support for attribute certificates as defined in RFC 5755, including creation, signing, verification, and management of attributes and extensions.
+- Added a jitter entropy source provider for enhanced random number generation.
+- Added configuration diagnostics to enable or disable the display of configuration error information.
+- Allowed customization of the FIPS provider vendor name.
+- Fixed a memory leak in `EVP_Digest_loop` by freeing the digest context on error.
+- Fixed incorrect digest size check in BIO to reject zero-length digests.
+- Fixed handling of `OPENSSL_INIT_free()` with a NULL argument.
+- Fixed a memory leak in `CMS_EncryptedData_encrypt` when setting the encryption key fails.
+- Fixed a file descriptor leak in `RAND_write_file()` when `fdopen()` fails.
+- Fixed a potential double-free vulnerability through `SRP_user_pwd_set1_ids()`.
+- Fixed a data race between SSL session list management and session duplication.
+- Fixed an SM2 encryption bug where the derived key could be all zeros, ensuring regeneration for security.
+- Fixed a bug in KBKDF where switching the MAC algorithm from KMAC to another could produce incorrect results.
+- Fixed null pointer check for the elliptic curve group order in ECDSA signing.
+- Fixed handling of IPv6 host addresses in `OSSL_HTTP_open`, including proper default port handling and proxy detection for escaped IPv6 addresses.
+- Improved TLSv1.3 session cache security and memory stability.
+- Updated HTTP server to accept both IPv4 and IPv6 connections (dual-stack).
+- Added an Apple privacy info file for OpenSSL.

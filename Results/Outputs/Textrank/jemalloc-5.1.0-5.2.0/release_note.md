@@ -1,0 +1,175 @@
+# VerLog-style TextRank Release Note
+
+- Repository: jemalloc
+- Version pair: 5.1.0 -> 5.2.0
+- Pair id: jemalloc-5.1.0-5.2.0
+- Input commits: 164
+- Candidate sentences: 163
+- GT-length budget: 104
+- Extracted entries: 163
+
+## Extracted Entries
+
+- SC: Make some key size classes static.
+- TSD: Make all state access happen through a function.
+- Move quantum detection into its own file.
+- Allow low values of oversize_threshold to disable the feature.
+- Add unit test for opt.huge_threshold.
+- Allow the use of readlinkat over readlink.
+- Fix tcache_flush (follow up cd2931a).
+- Make background_thread not dependent on libdl.
+- Fix stats output for opt.lg_extent_max_active_fit.
+- Avoid check_min for opt_lg_extent_max_active_fit.
+- add test for zero-sized alloc and aligned alloc
+- Hooks: add an early-exit path for the common no-hook case.
+- Add experimental API: smallocx_return_t smallocx(size, flags)
+- Avoid touching all pages in extent_recycle for debug build.
+- TSD: Add the ability to enter a global slow path.
+- Fall back to the default pthread_create if RTLD_NEXT fails.
+- FreeBSD build changes and allow to run the tests.
+- Set the default number of background threads to 4.
+- Add the missing unlock in the error path of extent_register.
+- Hide smallocx even when enabled from the library API
+- Output message before aborting on tcache size-matching check.
+- Use iallocztm instead of ialloc in prof_log functions.
+- Make use of pthread_set_name_np(3) on FreeBSD.
+- Only read arena index from extent on the tcache flush path.
+- Remove the --with-lg-page-sizes configure option.
+- check return value of malloc_read_fd
+- Detect if 8-bit atomics are available.
+- add extent_nfree_sub
+- Translate size class computation from bash shell into C.
+- Add unit tests for logging
+- Add unit test for sharded bins.
+- Set commit properly for FreeBSD w/ overcommit.
+- Revert "Customize cloning to include tags so that VERSION is valid."
+- Add --{enable,disable}-{static,shared} to configure script
+- Avoid potential issues on extent zero-out.
+- Add support for sharded bins within an arena.
+- rtree: add rtree_szind_slab_read_fast
+- Hooks: hook the pure-expand function.
+- Add test for remote deallocation.
+- Hooks: move the "extra" pointer into the hook_t itself.
+- Mallctl: Add experimental.hooks.[install|remove].
+- Customize cloning to include tags so that VERSION is valid.
+- Suppress -Wmissing-field-initializer warning only for compilers with buggy implementation
+- move bytes until sample to tsd.
+- Add unit test for producer-consumer pattern.
+- Hide size class computation behind a layer of indirection.
+- Fix the max_background_thread test.
+- Fix the binshard unit test.
+- add a check for SC_LARGE_MAXCLASS
+- SC: Remove global data.
+- Add build_doc by default.
+- Set huge_threshold to 8M by default.
+- Add stats for the size of extent_avail heap
+- Make smallocx symbol name depend on the JEMALLOC_VERSION_GID
+- Tweak the spacing for the total_wait_time per second.
+- Add ctl and stats for opt.huge_threshold.
+- Fix stats output (rate for total # of requests).
+- Remove some unused comments.
+- Remove JE_FORCE_SYNC_COMPARE_AND_SWAP_[48].
+- Bypass extent_dalloc when retain is enabled.
+- Implement huge arena: opt.huge_threshold.
+- Move tsd link and in_hook after tcache.
+- mutex: fix trylock spin wait contention
+- drop bump_empty_alloc option.
+- Rename huge_threshold to experimental, and tweak documentation.
+- Add "hook" module.
+- Fix arena locking in tcache_bin_flush_large().
+- Add a free() and sdallocx(where flags=0) fastpath
+- Add extents information to mallocstats output
+- Tests: Shouldn't be able to change global slowness.
+- Fix MSVC build
+- Do not use #pragma GCC diagnostic with gcc < 4.6.
+- refactor prof accum, so that tdata is not loaded if we aren't going to sample.
+- TSD: Make state atomic.
+- Hooks: hook the pure-allocation functions.
+- Avoid taking large_mtx for auto arenas.
+- Bit_util: Use intrinsics for pow2_ceil, where available.
+- Un-experimental the huge_threshold feature.
+- SC module: Add a note on style.
+- Fix background thread index issues with max_background_threads.
+- Restore a FreeBSD-specific getpagesize(3) optimization.
+- Rework the way jemalloc uses mmap(2) on FreeBSD.
+- Add hook microbenchmark.
+- Mention different mmap(2) behaviour with retain:true.
+- Force purge on thread death only when w/o bg thds.
+- Hooks: hook the realloc paths that act as pure malloc/free.
+- Hooks: Add a hook exhaustion test.
+- Bootstrapping: Parse MALLOC_CONF before using slab sizes.
+- sz: Support 0 size in size2index lookup/compute
+- Hooks: hook the realloc pathways that move/expand.
+- Add rate counters to stats
+- restrict bytes_until_sample to int64_t.
+- Explicitly use arena 0 in alignment and OOM tests.
+- Document opt.oversize_threshold.
+- Optimize large deallocation.
+- Tweak the wording about oversize_threshold.
+- Add configure option --disable-libdl.
+- Remove a branch from cache_bin_alloc_easy
+- implement malloc_getcpu for windows
+- Tweak the format of the per arena summary section.
+- Avoid creating bg thds for huge arena lone.
+- malloc: Add a fastpath
+- Properly trigger decay on tcache destory.
+- Add opt.bin_shards to specify number of bin shards.
+- Restrict lwsync to powerpc64 only
+- Revert "Remove --branch=${CIRRUS_BASE_BRANCH} in git clone command."
+- Kill size_classes.sh.
+- Hooks: hook the pure-deallocation functions.
+- remove malloc_init() off the fastpath
+- Add valgrind build bots to CI
+- Remove --branch=${CIRRUS_BASE_BRANCH} in git clone command.
+- Disable runtime detection of lazy purging support on FreeBSD.
+- Fallback to 32-bit when 8-bit atomics are missing for TSD.
+- TSD: Add a tsd_nominal_list death assertion.
+- SC: Add page customization functionality.
+- refactor tcache_dalloc_small
+- Add logging for sampled allocations
+- Fix tcaches_flush.
+- Add MALLOC_CONF parsing for dynamic slab sizes.
+- Add the Seq module, a simple seqlock implementation.
+- arena: Refactor tcache_fill to batch fill from slab
+- Optimize ixalloc by avoiding a size lookup.
+- Add sc.c to the MSVC project
+- Hooks: Protect against reentrancy.
+- Add a fastpath for arena_slab_reg_alloc_batch
+- Add --disable-libdl to travis.
+- TSD: Pull name mangling into a macro.
+- Rename huge_threshold to oversize_threshold.
+- Sanity check szind on tcache flush.
+- Fix a syntax error in configure.ac
+- Tweak the spacing for nrequests in stats output.
+- Rename hooks module to test_hooks.
+- TSD: Add fork support to tsd_nominal_tsds.
+- Atomics: Add atomic_u8_t, force-inline operations.
+- Clean compilation -Wextra
+- Adapts mallocx integration tests for smallocx
+- Add stats for arenas.bin.i.nshards.
+- bit_util: Don't use __builtin_clz on s390x
+- Fix incorrect stats mreging with sharded bins.
+- Add Cirrus-CI config for FreeBSD builds
+- Fix comment on SC_NPSIZES.
+- Update copyright dates.
+- Fix an incorrect assertion.
+- prof: Fix memory regression
+- Tolerate experimental features for abort_conf.
+- Avoid taking extents_muzzy mutex when muzzy is disabled.
+- Test that .travis.yml has been produced by gen_travis.py on CI
+- Replace -lpthread with -pthread
+- Update Changelog for 5.2.0.
+- Simplify output of gen_travis.py script
+- Add lg_ceil to bit_util.
+- Store the bin shard selection in TSD.
+- Small refactoring of emitter
+- Disable muzzy decay by default.
+- ticker: add ticker_trytick
+- Eagerly purge oversized merged extents.
+- Guard libgcc unwind init with opt_prof.
+- Test smallocx on Travis-CI
+- Avoid redefining tsd_t.
+- Bootstrapping: don't overwrite opt_prof_prefix.
+- Refactor arena_is_auto.
+- Deprecate OSSpinLock.
+- Stringify tls_callback linker directive

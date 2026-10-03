@@ -1,0 +1,60 @@
+- Added QUIC server support with stream acceptance, configurable acceptance policies, and handshake retry request handling
+- Added KEMRecipientInfo (RFC 9629) support in CMS
+- Added TLS 1.3 OCSP multi-stapling for server certificates
+- Added LMS (Leighton-Micali Signature) support including verification and key generation
+- Added ML-DSA and SLH-DSA post-quantum signature algorithm support
+- Added hybrid ML-KEM key exchange support in CMS
+- Added EVP_SKEY (symmetric key object) support with new functions for KDF and key derivation operations
+- Added `SSL_OP_SERVER_PREFERENCE` option replacing the misnamed `SSL_OP_CIPHER_SERVER_PREFERENCE`
+- Added `EVP_PKEY_get_security_category()` function and security category support for public key algorithms
+- Added `-in` option to the `openssl prime` command for reading numbers from a file
+- Added `i2d_PKCS8PrivateKey` function for PKCS#8 private key encoding
+- Added AES-CBC-HMAC-SHA512 cipher support on aarch64
+- Added x86-64 SHA-512, SM3, and SM4 ISA extensions for hardware acceleration
+- Added RISC-V optimized implementations of MD5, SHA-256, SHA-512, and SM3
+- Added `SSL_CTX_set_ec_point_formats()` and `SSL_set_ec_point_formats()` functions
+- Added `-multi` option to the `x509` command to output all certificates in input
+- Added `-status_all` option to `s_server` to request OCSP status for all certificates
+- Added an `openssl config` utility for dumping and expanding configuration files
+- Added option to initialize secure memory at startup with the `-sec-mem` flag
+- Added FIPS 140-3 pairwise consistency tests for DH and RSA key import and generation
+- Added deterministic ECDSA support in FIPS mode
+- Added fixed-digest HKDF algorithms as new KDF options
+- Added support for multiple signatures in CMS verification
+- Added SBOM template in CycloneDX format
+- Added Windows ARM64 (MINGW) target support
+- Fixed incorrect key size check in `kek_unwrap_key()`
+- Fixed out-of-bounds read vulnerability in AVX-512 XTS decryption
+- Fixed double-free and memory leaks in OCSP, CMS, X509, SM2, PKCS12 and other components
+- Fixed integer overflow in `BIO_f_reliable` record parser leading to out-of-bounds read
+- Fixed DH private key size being one bit too large
+- Fixed SHAKE AlgorithmIdentifier encodings
+- Fixed SM2 private key decoding from PEM format
+- Fixed DTLS handling of no_renegotiation alert
+- Fixed `SSL_poll()` to not incorrectly report writable streams
+- Fixed `SSL_accept()` errors and connection state handling for QUIC
+- Fixed race condition in `X509_STORE` subject lookups
+- Fixed Minerva timing side-channel for P-384 curve on PPC
+- Fixed potential double-free with duplicated hybrid ML-KEM keys
+- Fixed `SSL_get_app_data()` to continue working during `SSL_free()`
+- Fixed CCM ciphersuites with QUIC TLS API
+- Fixed `pkeyutl` segfault
+- Fixed `SSL_CTX_set0_tmp_dh_pkey` crash with malformed key
+- Fixed multiline output bug in the `crl` command
+- Fixed exit code of `s_time` when not performing session reuse
+- Fixed potential crashes from very long strings in `DES_string_to_2keys`
+- Fixed ChaCha20 IV update and counter increment bug
+- Fixed `EVP_PKEY_CTX_dup()` to properly copy the keymanager
+- Fixed `EVP_SealInit` output buffer size allocation
+- Fixed `OBJ_create` thread safety and return value
+- Fixed URL parsing for missing ports and ISO 8601 timestamps
+- Improved AES-CBC-128 decryption performance on RISC-V
+- Improved SHA-256/SHA-512 performance on LoongArch
+- Improved AES-CFB128 performance with Intel AVX-512/VAES
+- Improved AES-GCM unroll8/unroll12 performance for Neoverse N3/V3
+- Improved OSSL_sleep to accurately sleep for requested duration even if interrupted
+- Improved documentation for environment variables, function histories, and configuration options
+- Deprecated `ASN1_METH` and `EVP_PKEY_ASN1_METHOD` functions
+- Removed support for legacy key generation engines in `openssl req`
+- Removed support for DSA SHA224, ECDSA SHA-1, RSA SHA1, and RSA RIPEMD160 signature verification
+- Removed the KRB5 KDF implementation

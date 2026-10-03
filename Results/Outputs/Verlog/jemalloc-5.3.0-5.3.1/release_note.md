@@ -1,0 +1,27 @@
+- Added double-free detection in debug builds using slab bitmaps and thread cache checking.
+- Added optional abort callback for customizable heap corruption handling.
+- Added support for C23's `free_sized` and `free_aligned_sized` functions.
+- Added mallctl interface to retrieve approximate count of active bytes in use.
+- Added per-bin cache bin maximum capacity configurable via `malloc_conf` and `mallctl` for fine-grained thread cache tuning.
+- Added runtime options to disable large size classes, set maximum profiling backtrace depth, and control process_madvise batch size.
+- Added support for the `process_madvise` system call for efficient batch memory page purging with fallback to individual purges.
+- Added HPA shard statistics, including slab-level metrics, hugify failure counts, and SEC performance counters, accessible via `mallctl` and JSON output.
+- Added experimental profiling sample hooks (`experimental.hooks.prof_sample` and `experimental.hooks.prof_sample_free`) for custom callbacks.
+- Added support for user-defined event callbacks on allocation and deallocation, replacing the built-in `prof_threshold` event.
+- Added Transparent Huge Pages (THP) support with a dedicated huge arena, including auto-switching and the `opt.huge_arena_pac_thp` mallctl option.
+- Added thread profiling with PID namespace awareness.
+- Added experimental options to start HPA pages as huge, enforce hugification with `experimental.enforce_hugify`, and control purging behavior.
+- Added per-arena metadata usage breakdown statistics for `edata` and `rtree` structures.
+- Added mallctl interfaces to set and get per-bin `ncached_max` and per-thread tcache maximum (`thread.tcache.max`).
+- Added arena-level naming for improved debugging.
+- Added support for system thread names in heap profiling with truncation of overly long names.
+- Improved memory reuse efficiency by limiting maximum coalesced size for large extents in the dirty ecache.
+- Improved mutex acquisition performance with adaptive spin-waiting before blocking.
+- Realloc now correctly sets `errno` to `ENOMEM` on failure.
+- Fixed out-of-range read in the `bitmap_ffu` function.
+- Fixed off-by-one errors in `arenas.lextent.i.index` and `arenas.bin.i.index` bound checks.
+- Fixed HPA shard not being properly destroyed during cleanup.
+- Fixed out-of-bounds write in `malloc_vsnprintf` when size is 0.
+- Fixed various bugs including memory leaks, segfaults, incorrect statistics, and other out-of-bounds writes.
+- Updated thread profile dump filenames to include the PID namespace when enabled.
+- Removed the `experimental.thread.activity_callback` feature.

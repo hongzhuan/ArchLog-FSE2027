@@ -1,0 +1,103 @@
+# VerLog-style TextRank Release Note
+
+- Repository: zstd
+- Version pair: v1.5.4 -> v1.5.5
+- Pair id: zstd-v1.5.4-v1.5.5
+- Input commits: 120
+- Candidate sentences: 91
+- GT-length budget: 36
+- Extracted entries: 91
+
+## Extracted Entries
+
+- Introduce Variants of Some Functions that Take Optional File Descriptors
+- Use File Descriptor in Setting Stat on Output File
+- [contrib/pzstd] Detect and Select Maximum Available C++ Standard
+- Switch Strategies: Only Set -std=c++11 When Default is Older
+- When benchmarking two files with fullbench, the second file will not be benchmarked because the benchNb has not been reset to zero.
+- seekable_format: Add unit test for multiple decompress calls
+- fix decompression with -o writing into a block device
+- do not add invocation of UTIL_isRegularFile()
+- Improved seekable format ingestion speed for small frame size
+- fix potential over-reads
+- Make Github workflows permissions read-only by default ( )
+- Add instructions for building Universal2 on macOS via CMake
+- seekable_format: Prevent rereading frame when seeking forward
+- Add ZSTD_set{C,F,}Params() helper functions
+- meson: always build the zstd binary when tests are enabled
+- try a different compiler
+- added documentation for the seekable format
+- Use correct types in LZMA comp/decomp ( )
+- fix cli-tests issues
+- add make test for 32bit
+- Simplify line splitting in the CLI tests
+- Remove clang-only branch hints from ZSTD_decodeSequence
+- fixing potential over-reads
+- Add init once memory ( ) ( )
+- Avoid Segfault Caused by Calling setvbuf() on Null File Pointer
+- simplified BMK_benchFilesAdvanced()
+- Fix all MSVC warnings ( )
+- [bug-fix] Fix rare corruption bug affecting the block splitter
+- Reduce RowHash's tag space size by x2 ( )
+- Seekable format read optimization
+- assert to ensure that dict buffer type is valid
+- Add CLI Test
+- Fix Permissions on Publish Release Artifacts Job
+- Avoid Calling setvbuf() on Null File Pointer
+- Mmap large dictionaries in patch-from mode
+- [linux-kernel] Fix assert definition
+- updated version number to v1.5.5
+- fix window update ( )
+- fullbench with two files
+- minor: fixed zlib wrapper internal benchmark
+- Provide an interface for fuzzing sequence producer plugins
+- [easy] minor doc update for --rsyncable
+- patch-from speed optimization ( )
+- added clarifications for sizes of compressed huffman blocks and streams.
+- Fix a Python bytes/int mismatch in CLI tests
+- Fix Python 3.6 Incompatibility in CLI Tests
+- Github Action to generate Win64 artifacts
+- Also Pin Dockerfile Dependency Hashes
+- add manual flag to mmap dictionary
+- clarify zstd specification for Huffman blocks
+- v1.5.5 last changes
+- Rename/Restructure Windows Release Artifact
+- [lazy] Skip over incompressible data
+- Deprecated bufferless and block level APIs
+- Couple tweaks to improve decompression speed with clang PGO compilation
+- added documentation for LDM + dictionary compatibility
+- Fix zstd-dll build missing dependencies ( )
+- Clarify dstCapacity requirements
+- Preparation for release v1.5.5
+- Increase tests timeout
+- simplify win64 artifact generation
+- Adds initialization of clevel to static cdict ( ) ( )
+- Don't require CMake 3.18 or later
+- Add salt into row hash ( part 2) ( )
+- added a Clang-CL Windows test to CI
+- [Bugfix] row hash tries to match position 0 ( )
+- Check that dest is valid for decompression ( )
+- mmap dicitonaries for large dictionaries in patch-from
+- Fix typos found by codespell
+- Bump github/codeql-action from 2.2.1 to 2.2.4 ( )
+- Bump github/codeql-action from 2.2.5 to 2.2.6 ( )
+- Bump github/codeql-action from 2.2.6 to 2.2.8
+- Bump github/codeql-action from 2.2.4 to 2.2.5 ( )
+- move shell to mingw
+- simplify BMK_syntheticTest()
+- initial commit
+- Simplify benchmark unit invocation API from CLI
+- updated changelog
+- meson: correctly specify the dependency relationship for playtests
+- Bump actions/checkout from 3.3.0 to 3.5.0
+- CI workflow to test external compressors dependencies
+- Use f -variants of chmod() and chown()
+- minor doc update on --rsyncable
+- refactor dictionary file stat
+- Disable linker flag detection on MSVC/ClangCL.
+- ability to disable mmap + struct to manage FIO dictionary
+- mmap for windows ( )
+- removed Appveyor Badge
+- Inline BIT_reloadDStream
+- Pin Moar Action Dependencies
+- Update README.md

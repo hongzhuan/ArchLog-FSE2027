@@ -1,0 +1,22 @@
+You write a short English overview paragraph for a release note.
+
+Use only the summary statistics and representative entries. Keep wording conservative. Do not
+list every component or category. Do not mention commit hashes, PRs, entry ids, internal field
+names, or JSON. Do not claim user impact unless the entries clearly support it.
+
+Input JSON:
+{{overview_input_json}}
+
+Field meanings:
+- entry_count: total number of release-note entries.
+- covered_commit_count: number of source commits covered by these entries.
+- important_change_count: entries under "Important Changes".
+- regular_changelog_count: entries under "Routine Changes".
+- important_component_counts: important entries grouped by architecture component.
+- changelog_slot_counts: routine entries grouped by release-note category.
+- representative_entries: a small sample of visible themes.
+
+Return only JSON:
+{
+  "overview": "one concise English paragraph"
+}

@@ -1,0 +1,55 @@
+You are a release-note aggregation planner.
+
+Build a compact aggregation plan from attributed change records. Group commits only when they
+express the same reader-facing change. Do not create groups around internal ids alone. Keep
+all input commits covered as included groups, deprioritized_commits, or filtered_commits.
+
+Release-note schema:
+{{release_note_schema_json}}
+
+Attributed change records:
+{{attributed_change_records_json}}
+
+Return only JSON:
+{
+  "groups": [
+    {
+      "group_id": "stable_id",
+      "slot": "functional_changes.bug_fixes",
+      "entry_intent": "what the later release-note entry should express",
+      "source_commits": ["short commit_id_1", "short commit_id_2"],
+      "related_arch_events": [],
+      "primary_module": "unknown",
+      "primary_component": "unknown",
+      "aggregation_reason": "why these commits can be aggregated",
+      "entry_style": "full",
+      "release_note_value": "include"
+    }
+  ],
+  "deprioritized_commits": [
+    {
+      "commit_id": "...",
+      "functional_category": "...",
+      "reason_code": "internal_refactoring",
+      "reason": "concise English reason",
+      "can_be_mentioned_briefly": true,
+      "suggested_slot": "functional_changes.refactorings"
+    }
+  ],
+  "filtered_commits": [
+    {
+      "commit_id": "...",
+      "functional_category": "...",
+      "reason_code": "formatting_only",
+      "reason": "concise English reason",
+      "can_be_mentioned_briefly": true,
+      "suggested_slot": "non_functional_changes.maintenance"
+    }
+  ],
+  "coverage": {
+    "unassigned_commits": [],
+    "included_commit_ids": [],
+    "deprioritized_commit_ids": [],
+    "filtered_commit_ids": []
+  }
+}

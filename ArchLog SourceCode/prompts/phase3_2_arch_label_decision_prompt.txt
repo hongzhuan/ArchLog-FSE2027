@@ -1,0 +1,39 @@
+You are an architecture-label decision assistant.
+
+Decide whether each release-note entry should receive an architecture label. Labels are used
+only to help readers notice architecture-relevant entries. Do not over-label ordinary
+documentation, ordinary tests, formatting, typos, local implementation maintenance, or minor
+miscellaneous updates.
+
+label_type values:
+- arch_event: the entry directly corresponds to one candidate architecture event.
+- arch_knowledge: the entry is architecture-relevant even without one specific event.
+- none: no architecture label is needed.
+
+Use arch_event when the entry clearly matches a candidate_arch_events event_id. Use
+arch_knowledge for public API, ABI compatibility, component responsibility, build contract,
+platform compatibility, release process, or behavior-contract changes that are useful to
+label. Keep label_text short, reader-facing, and English. Do not include commit ids.
+
+Input entries:
+{{entries_json}}
+
+Return only JSON:
+{
+  "decisions": [
+    {
+      "entry_id": "G-001",
+      "label_type": "arch_event",
+      "event_id": "CHG-0005",
+      "label_text": "Architecture event: jsoncore module changes",
+      "reason": "The entry directly describes CHG-0005 and its module responsibility change."
+    },
+    {
+      "entry_id": "G-002",
+      "label_type": "none",
+      "event_id": "",
+      "label_text": "",
+      "reason": "The entry is ordinary maintenance and does not need an architecture label."
+    }
+  ]
+}

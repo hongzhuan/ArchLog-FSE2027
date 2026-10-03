@@ -1,0 +1,8 @@
+repo_path: /path/to/target/repository
+base_ref: v1.0.0
+new_ref: v1.1.0
+output_dir: outputs/example
+llm_provider: siliconflow
+api_key_env_var: SILICONFLOW_API_KEY
+external_analysis_enabled: true
+external_analysis_reuse_existing: true
